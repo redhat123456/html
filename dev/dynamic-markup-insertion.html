@@ -1,0 +1,217 @@
+<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Standard, Developer's Edition</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/dev/styles.css crossorigin=""><script>
+   function toggleStatus(div) {
+     div.parentNode.classList.toggle('wrapped');
+   }
+   function setLinkFragment(link) {
+     link.hash = location.hash;
+   }
+  </script><body>
+  <script async="" src=/dev/search.js></script>
+  
+  
+  
+  <header id=head class="head with-buttons">
+   <a href=https://whatwg.org/ class=logo><img width=100 alt=WHATWG crossorigin="" src=https://resources.whatwg.org/logo.svg height=100></a>
+   
+   <hgroup><h1><a rel=home href=/dev/>HTML: The Living Standard</a></h1><h2 id="developer's-edition-—-last-updated-date:-01-jan-1901" class="no-num no-toc">Developer's Edition — Last Updated <span class=pubdate>6 November 2020</span></h2><div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/developers-edition-mdash-last-updated-date-01-jan-1901.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/developers-edition-mdash-last-updated-date-01-jan-1901.zh.html></div></hgroup>
+   
+   <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-91053840-1', 'auto');
+      ga('send', 'pageview');
+   </script>
+  </header>
+
+  
+
+  
+
+
+  
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/table-of-contents.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/table-of-contents.zh.html></div>
+  
+
+
+  
+<div data-en-date="Sat Aug 11 2018 08:00:56 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/full-table-of-contents.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/full-table-of-contents.zh.html></div>
+  
+
+  
+
+  
+
+
+  <h2 id=about-dev-edition class="no-num no-toc">关于本标准</h2>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/about-this-specification.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/about-this-specification.zh.html></div>
+
+  <p>本标准与其他标准不同，它的处理完全考虑到了 Web 开发者。</p>
+
+  <p>本标准关注可读性和可访问性，不像 <a href=/multipage/>完整的 HTML 标准</a>，"开发者版本" 移除了
+  只有浏览器厂商需要知道的信息。它个版本是用我们的构建工具从完整的规范自动产出的，
+  因此总会与最新开发的 HTML 保持同步。</p>
+
+  <p>其概念、构造，以及未来可参考 <a href=http://web.archive.org/web/20150220020906/http://archive.germanforblack.com:80/articles/html5-for-web-developers>
+  原始出版发行</a>，以及 <a href=https://blog.whatwg.org/developers-edition-comeback>关于重启该版本的博文</a>。</p>
+
+  <p>最后，欢迎 <a href=https://github.com/whatwg/html/labels/dev%20edition>在 GitHub 贡献</a> 来改进该版本！</p>
+
+  
+
+
+  <nav><a href=webappapis.html>← 8 Web 应用 API</a> — <a href=./>Table of Contents</a> — <a href=timers-and-user-prompts.html>8.6 Timers →</a></nav><ol class=toc><li><ol><li><a href=dynamic-markup-insertion.html#dynamic-markup-insertion><span class=secno>8.4</span> Dynamic markup insertion</a><ol><li><a href=dynamic-markup-insertion.html#opening-the-input-stream><span class=secno>8.4.1</span> Opening the input stream</a><li><a href=dynamic-markup-insertion.html#closing-the-input-stream><span class=secno>8.4.2</span> Closing the input stream</a><li><a href=dynamic-markup-insertion.html#document.write()><span class=secno>8.4.3</span> <code>document.write()</code></a><li><a href=dynamic-markup-insertion.html#document.writeln()><span class=secno>8.4.4</span> <code>document.writeln()</code></a></ol><li><a href=dynamic-markup-insertion.html#dom-parsing-and-serialization><span class=secno>8.5</span> DOM parsing</a></ol></ol><h3 id=dynamic-markup-insertion><span class=secno>8.4</span> <dfn>Dynamic markup insertion</dfn><a href=#dynamic-markup-insertion class=self-link></a></h3>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/web-application-apis/dynamic-markup-insertion/index.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/web-application-apis/dynamic-markup-insertion/index.zh.html?filename=index.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fweb-application-apis%2Fdynamic-markup-insertion%2Findex.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  <p class=note>APIs for dynamically inserting markup into the document interact with the parser,
+  and thus their behavior varies depending on whether they are used with <a id=dynamic-markup-insertion:html-documents href=https://dom.spec.whatwg.org/#html-document data-x-internal=html-documents>HTML
+  documents</a> (and the <span>HTML parser</span>) or <a id=dynamic-markup-insertion:xml-documents href=https://dom.spec.whatwg.org/#xml-document data-x-internal=xml-documents>XML documents</a> (and the
+  <span>XML parser</span>).</p>
+
+  
+
+
+
+
+  <h4 id=opening-the-input-stream><span class=secno>8.4.1</span> Opening the input stream<a href=#opening-the-input-stream class=self-link></a></h4>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/web-application-apis/dynamic-markup-insertion/opening-the-input-stream.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/web-application-apis/dynamic-markup-insertion/opening-the-input-stream.zh.html?filename=opening-the-input-stream.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fweb-application-apis%2Fdynamic-markup-insertion%2Fopening-the-input-stream.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  <dl class=domintro><dt><var>document</var> = <var>document</var> . <code id=dom-document-open>open</code>( )<div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Document/open title="The Document.open() method opens a document for writing.">Document/open</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>1+</span></span><span class="chrome yes"><span>Chrome</span><span>45+</span></span><hr><span class="opera yes"><span>Opera</span><span>12.1+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>4+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>45+</span></span><span class="webview_android yes"><span>WebView Android</span><span>45+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>5.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>12.1+</span></span></div></div></div><dd>
+    <p>Causes the <code id=opening-the-input-stream:document><a href=dom.html#document>Document</a></code> to be replaced in-place, as if it was a new
+    <code id=opening-the-input-stream:document-2><a href=dom.html#document>Document</a></code> object, but reusing the previous object, which is then returned.</p>
+
+    <p>The resulting <code id=opening-the-input-stream:document-3><a href=dom.html#document>Document</a></code> has an HTML parser associated with it, which can be given
+    data to parse using <code id=opening-the-input-stream:dom-document-write><a href=#dom-document-write>document.write()</a></code>.</p>
+
+    <p>The method has no effect if the <code id=opening-the-input-stream:document-4><a href=dom.html#document>Document</a></code> is still being parsed.</p>
+
+    <p>Throws an <a id=opening-the-input-stream:invalidstateerror href=https://heycam.github.io/webidl/#invalidstateerror data-x-internal=invalidstateerror>"<code>InvalidStateError</code>"</a> <code id=opening-the-input-stream:domexception><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code> if the
+    <code id=opening-the-input-stream:document-5><a href=dom.html#document>Document</a></code> is an <a href=https://dom.spec.whatwg.org/#xml-document id=opening-the-input-stream:xml-documents data-x-internal=xml-documents>XML document</a>.</p>
+
+    <p>Throws an <a id=opening-the-input-stream:invalidstateerror-2 href=https://heycam.github.io/webidl/#invalidstateerror data-x-internal=invalidstateerror>"<code>InvalidStateError</code>"</a> <code id=opening-the-input-stream:domexception-2><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code> if the
+    parser is currently executing a <a id=opening-the-input-stream:custom-element-constructor href=custom-elements.html#custom-element-constructor>custom element constructor</a>.</p>
+   <dt><var>window</var> = <var>document</var> . <code>open</code>( <var>url</var>, <var>name</var>, <var>features</var> )<dd><p>Works like the <code id=opening-the-input-stream:dom-open><a href=window-object.html#dom-open>window.open()</a></code> method.</dl>
+
+  
+
+
+
+
+  <h4 id=closing-the-input-stream><span class=secno>8.4.2</span> Closing the input stream<a href=#closing-the-input-stream class=self-link></a></h4>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/web-application-apis/dynamic-markup-insertion/closing-the-input-stream.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/web-application-apis/dynamic-markup-insertion/closing-the-input-stream.zh.html?filename=closing-the-input-stream.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fweb-application-apis%2Fdynamic-markup-insertion%2Fclosing-the-input-stream.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  <dl class=domintro><dt><var>document</var> . <code id=dom-document-close>close</code>()<div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Document/close title="The Document.close() method finishes writing to a document, opened with Document.open().">Document/close</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>1+</span></span><span class="chrome yes"><span>Chrome</span><span>45+</span></span><hr><span class="opera yes"><span>Opera</span><span>12.1+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>4+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>45+</span></span><span class="webview_android yes"><span>WebView Android</span><span>45+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>5.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>12.1+</span></span></div></div></div><dd>
+    <p>Closes the input stream that was opened by the <code id=closing-the-input-stream:dom-document-open><a href=#dom-document-open>document.open()</a></code> method.</p>
+
+    <p>Throws an <a id=closing-the-input-stream:invalidstateerror href=https://heycam.github.io/webidl/#invalidstateerror data-x-internal=invalidstateerror>"<code>InvalidStateError</code>"</a> <code id=closing-the-input-stream:domexception><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code> if the
+    <code id=closing-the-input-stream:document><a href=dom.html#document>Document</a></code> is an <a href=https://dom.spec.whatwg.org/#xml-document id=closing-the-input-stream:xml-documents data-x-internal=xml-documents>XML document</a>.</p>
+
+    <p>Throws an <a id=closing-the-input-stream:invalidstateerror-2 href=https://heycam.github.io/webidl/#invalidstateerror data-x-internal=invalidstateerror>"<code>InvalidStateError</code>"</a> <code id=closing-the-input-stream:domexception-2><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code> if the
+    parser is currently executing a <a id=closing-the-input-stream:custom-element-constructor href=custom-elements.html#custom-element-constructor>custom element constructor</a>.</p>
+   </dl>
+
+  
+
+
+
+
+  <h4 id=document.write()><span class=secno>8.4.3</span> <code id=document.write():dom-document-write><a href=#dom-document-write>document.write()</a></code><a href=#document.write() class=self-link></a></h4>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/web-application-apis/dynamic-markup-insertion/document-write.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/web-application-apis/dynamic-markup-insertion/document-write.zh.html?filename=document-write.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fweb-application-apis%2Fdynamic-markup-insertion%2Fdocument-write.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  <dl class=domintro><dt><var>document</var> . <code id=dom-document-write>write</code>(<var>text</var>...)<div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Document/write title="The Document.write() method writes a string of text to a document stream opened by document.open().">Document/write</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>1+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>3+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>4+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>1+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span></div></div></div><dd>
+    <p>In general, adds the given string(s) to the <code id=document.write():document><a href=dom.html#document>Document</a></code>'s input stream.</p>
+
+    <p class=warning>This method has very idiosyncratic behavior. In some cases, this method can
+    affect the state of the <span>HTML parser</span> while the parser is running, resulting in a DOM
+    that does not correspond to the source of the document (e.g. if the string written is the string
+    "<code>&lt;plaintext></code>" or "<code>&lt;!--</code>"). In other cases,
+    the call can clear the current page first, as if <code id=document.write():dom-document-open><a href=#dom-document-open>document.open()</a></code> had been called. In yet more cases, the method
+    is simply ignored, or throws an exception. Users agents are <a href=#document-written-scripts-intervention>explicitly allowed to avoid executing
+    <code>script</code> elements inserted via this method</a>. And to make matters even worse, the
+    exact behavior of this method can in some cases be dependent on network latency, which can lead to failures that are very hard to debug. <strong>For all these reasons, use
+    of this method is strongly discouraged.</strong></p>
+
+    <p>Throws an <a id=document.write():invalidstateerror href=https://heycam.github.io/webidl/#invalidstateerror data-x-internal=invalidstateerror>"<code>InvalidStateError</code>"</a> <code id=document.write():domexception><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code> when
+    invoked on <a id=document.write():xml-documents href=https://dom.spec.whatwg.org/#xml-document data-x-internal=xml-documents>XML documents</a>.</p>
+
+    <p>Throws an <a id=document.write():invalidstateerror-2 href=https://heycam.github.io/webidl/#invalidstateerror data-x-internal=invalidstateerror>"<code>InvalidStateError</code>"</a> <code id=document.write():domexception-2><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code> if the
+    parser is currently executing a <a id=document.write():custom-element-constructor href=custom-elements.html#custom-element-constructor>custom element constructor</a>.</p>
+   </dl>
+
+  
+
+
+
+  <h4 id=document.writeln()><span class=secno>8.4.4</span> <code id=document.writeln():dom-document-writeln><a href=#dom-document-writeln>document.writeln()</a></code><a href=#document.writeln() class=self-link></a></h4>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/web-application-apis/dynamic-markup-insertion/document-writeln.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/web-application-apis/dynamic-markup-insertion/document-writeln.zh.html?filename=document-writeln.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fweb-application-apis%2Fdynamic-markup-insertion%2Fdocument-writeln.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  <dl class=domintro><dt><var>document</var> . <code id=dom-document-writeln>writeln</code>(<var>text</var>...)<div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Document/writeln title="Writes a string of text followed by a newline character to a document.">Document/writeln</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>1+</span></span><span class="chrome yes"><span>Chrome</span><span>45+</span></span><hr><span class="opera yes"><span>Opera</span><span>12.1+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>4+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>45+</span></span><span class="webview_android yes"><span>WebView Android</span><span>45+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>5.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>12.1+</span></span></div></div></div><dd>
+    <p>Adds the given string(s) to the <code id=document.writeln():document><a href=dom.html#document>Document</a></code>'s input stream, followed by a newline
+    character. If necessary, calls the <code id=document.writeln():dom-document-open><a href=#dom-document-open>open()</a></code> method
+    implicitly first.</p>
+
+    <p>Throws an <a id=document.writeln():invalidstateerror href=https://heycam.github.io/webidl/#invalidstateerror data-x-internal=invalidstateerror>"<code>InvalidStateError</code>"</a> <code id=document.writeln():domexception><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code> when
+    invoked on <a id=document.writeln():xml-documents href=https://dom.spec.whatwg.org/#xml-document data-x-internal=xml-documents>XML documents</a>.</p>
+
+    <p>Throws an <a id=document.writeln():invalidstateerror-2 href=https://heycam.github.io/webidl/#invalidstateerror data-x-internal=invalidstateerror>"<code>InvalidStateError</code>"</a> <code id=document.writeln():domexception-2><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code> if the
+    parser is currently executing a <a id=document.writeln():custom-element-constructor href=custom-elements.html#custom-element-constructor>custom element constructor</a>.</p>
+   </dl>
+
+  
+
+
+  
+
+  <h3 id=dom-parsing-and-serialization><span class=secno>8.5</span> DOM parsing<a href=#dom-parsing-and-serialization class=self-link></a></h3><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/DOMParser title="The DOMParser interface provides the ability to parse XML or HTML source code from a string into a DOM Document.">DOMParser</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>3.2+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>8+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>9+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>2+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>1+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span></div></div></div>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/web-application-apis/dom-parsing.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/web-application-apis/dom-parsing.zh.html?filename=dom-parsing.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fweb-application-apis%2Fdom-parsing.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  <p>The <code id=dom-parsing-and-serialization:domparser><a href=#domparser>DOMParser</a></code> interface allows authors to create new <code id=dom-parsing-and-serialization:document><a href=dom.html#document>Document</a></code> objects
+  by parsing strings, as either HTML or XML.</p>
+
+  <dl class=domintro><dt><var>parser</var> = new <code id=dom-domparser-constructor>DOMParser</code>()<dd>
+    <p>Constructs a new <code id=dom-parsing-and-serialization:domparser-2><a href=#domparser>DOMParser</a></code> object.</p>
+   <dt><var>document</var> = <var>parser</var> . <code id=dom-domparser-parsefromstring>parseFromString</code>( <var>string</var>, <var>type</var> )<dd>
+    <p>Parses <var>string</var> using either the HTML or XML parser, according to <var>type</var>,
+    and returns the resulting <code id=dom-parsing-and-serialization:document-2><a href=dom.html#document>Document</a></code>. <var>type</var> can be "<code>text/html</code>"
+    (which will invoke the HTML parser), or any of "<code id=dom-parsing-and-serialization:text/xml><a href=indices.html#text/xml>text/xml</a></code>",
+    "<code id=dom-parsing-and-serialization:application/xml><a href=indices.html#application/xml>application/xml</a></code>", "<code>application/xhtml+xml</code>", or
+    "<code id=dom-parsing-and-serialization:image/svg+xml><a href=indices.html#image/svg+xml>image/svg+xml</a></code>" (which will invoke the XML parser).</p>
+
+    <p>For the XML parser, if <var>string</var> cannot be parsed, then the returned
+    <code id=dom-parsing-and-serialization:document-3><a href=dom.html#document>Document</a></code> will contain elements describing the resulting error.</p>
+
+    <p>Note that <code id=dom-parsing-and-serialization:the-script-element><a href=scripting.html#the-script-element>script</a></code> elements are not evaluated during parsing, and the resulting
+    document's <a href=https://dom.spec.whatwg.org/#concept-document-encoding id="dom-parsing-and-serialization:document's-character-encoding" data-x-internal="document's-character-encoding">encoding</a> will always be
+    <span>UTF-8</span>.</p>
+
+    <p>Values other than the above for <var>type</var> will cause a <code id=dom-parsing-and-serialization:typeerror><a data-x-internal=typeerror href=https://tc39.es/ecma262/#sec-native-error-types-used-in-this-standard-typeerror>TypeError</a></code> exception
+    to be thrown.</p>
+   </dl>
+
+  <p class=note>The design of <code id=dom-parsing-and-serialization:domparser-3><a href=#domparser>DOMParser</a></code>, as a class that needs to be constructed and
+  then have its <code id=dom-parsing-and-serialization:dom-domparser-parsefromstring><a href=#dom-domparser-parsefromstring>parseFromString()</a></code> method called,
+  is an unfortunate historical artifact. If we were designing this functionality today it would be a
+  standalone function.</p>
+
+  <pre><code class=idl>[Exposed=Window]
+interface <dfn id=domparser>DOMParser</dfn> {
+  <a href=#dom-domparser-constructor id=dom-parsing-and-serialization:dom-domparser-constructor>constructor</a>();
+
+  [NewObject] <code id=dom-parsing-and-serialization:document-4><a href=dom.html#document>Document</a></code> <a href=#dom-domparser-parsefromstring id=dom-parsing-and-serialization:dom-domparser-parsefromstring-2>parseFromString</a>(DOMString <var>string</var>, <a href=#domparsersupportedtype id=dom-parsing-and-serialization:domparsersupportedtype>DOMParserSupportedType</a> <var>type</var>);
+};
+
+enum <dfn id=domparsersupportedtype>DOMParserSupportedType</dfn> {
+  "<span>text/html</span>",
+  "<span>text/xml</span>",
+  "<span>application/xml</span>",
+  "<span>application/xhtml+xml</span>",
+  "<span>image/svg+xml</span>"
+};</code></pre>
+
+  
+
+
+
+  <nav><a href=webappapis.html>← 8 Web 应用 API</a> — <a href=./>Table of Contents</a> — <a href=timers-and-user-prompts.html>8.6 Timers →</a></nav>

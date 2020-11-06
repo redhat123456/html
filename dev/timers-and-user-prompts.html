@@ -1,0 +1,273 @@
+<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Standard, Developer's Edition</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/dev/styles.css crossorigin=""><script>
+   function toggleStatus(div) {
+     div.parentNode.classList.toggle('wrapped');
+   }
+   function setLinkFragment(link) {
+     link.hash = location.hash;
+   }
+  </script><body>
+  <script async="" src=/dev/search.js></script>
+  
+  
+  
+  <header id=head class="head with-buttons">
+   <a href=https://whatwg.org/ class=logo><img width=100 alt=WHATWG crossorigin="" src=https://resources.whatwg.org/logo.svg height=100></a>
+   
+   <hgroup><h1><a rel=home href=/dev/>HTML: The Living Standard</a></h1><h2 id="developer's-edition-—-last-updated-date:-01-jan-1901" class="no-num no-toc">Developer's Edition — Last Updated <span class=pubdate>6 November 2020</span></h2><div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/developers-edition-mdash-last-updated-date-01-jan-1901.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/developers-edition-mdash-last-updated-date-01-jan-1901.zh.html></div></hgroup>
+   
+   <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-91053840-1', 'auto');
+      ga('send', 'pageview');
+   </script>
+  </header>
+
+  
+
+  
+
+
+  
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/table-of-contents.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/table-of-contents.zh.html></div>
+  
+
+
+  
+<div data-en-date="Sat Aug 11 2018 08:00:56 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/full-table-of-contents.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/full-table-of-contents.zh.html></div>
+  
+
+  
+
+  
+
+
+  <h2 id=about-dev-edition class="no-num no-toc">关于本标准</h2>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/about-this-specification.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/about-this-specification.zh.html></div>
+
+  <p>本标准与其他标准不同，它的处理完全考虑到了 Web 开发者。</p>
+
+  <p>本标准关注可读性和可访问性，不像 <a href=/multipage/>完整的 HTML 标准</a>，"开发者版本" 移除了
+  只有浏览器厂商需要知道的信息。它个版本是用我们的构建工具从完整的规范自动产出的，
+  因此总会与最新开发的 HTML 保持同步。</p>
+
+  <p>其概念、构造，以及未来可参考 <a href=http://web.archive.org/web/20150220020906/http://archive.germanforblack.com:80/articles/html5-for-web-developers>
+  原始出版发行</a>，以及 <a href=https://blog.whatwg.org/developers-edition-comeback>关于重启该版本的博文</a>。</p>
+
+  <p>最后，欢迎 <a href=https://github.com/whatwg/html/labels/dev%20edition>在 GitHub 贡献</a> 来改进该版本！</p>
+
+  
+
+
+  <nav><a href=dynamic-markup-insertion.html>← 8.4 Dynamic markup insertion</a> — <a href=./>Table of Contents</a> — <a href=system-state.html>8.9 System state and capabilities →</a></nav><ol class=toc><li><ol><li><a href=timers-and-user-prompts.html#timers><span class=secno>8.6</span> Timers</a><li><a href=timers-and-user-prompts.html#microtask-queuing><span class=secno>8.7</span> Microtask queuing</a><li><a href=timers-and-user-prompts.html#用户提示><span class=secno>8.8</span> 用户提示</a><ol><li><a href=timers-and-user-prompts.html#simple-dialogs><span class=secno>8.8.1</span> Simple dialogs</a><li><a href=timers-and-user-prompts.html#printing><span class=secno>8.8.2</span> Printing</a></ol></ol></ol><h3 id=timers><span class=secno>8.6</span> Timers<a href=#timers class=self-link></a></h3>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/web-application-apis/timers.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/web-application-apis/timers.zh.html?filename=timers.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fweb-application-apis%2Ftimers.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  <p>The <code id=timers:dom-settimeout><a href=#dom-settimeout>setTimeout()</a></code> and <code id=timers:dom-setinterval><a href=#dom-setinterval>setInterval()</a></code> methods allow authors to schedule timer-based
+  callbacks.</p>
+
+  <dl class=domintro><dt><var>handle</var> = self . <code id=dom-settimeout>setTimeout</code>( <var>handler</var> [, <var>timeout</var> [, <var>arguments</var>... ] ] )<div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout title="The setTimeout() method of the WindowOrWorkerGlobalScope mixin (and successor to Window.setTimeout()) sets a timer which executes a function or specified piece of code once the timer expires.">WindowOrWorkerGlobalScope/setTimeout</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>1+</span></span><span class="chrome yes"><span>Chrome</span><span>30+</span></span><hr><span class="opera yes"><span>Opera</span><span>4+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>4+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>30+</span></span><span class="webview_android yes"><span>WebView Android</span><span>4.4+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>3.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span></div></div><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout title="The setTimeout() method of the WindowOrWorkerGlobalScope mixin (and successor to Window.setTimeout()) sets a timer which executes a function or specified piece of code once the timer expires.">WindowOrWorkerGlobalScope/setTimeout</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>1+</span></span><span class="chrome yes"><span>Chrome</span><span>30+</span></span><hr><span class="opera yes"><span>Opera</span><span>4+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>4+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>30+</span></span><span class="webview_android yes"><span>WebView Android</span><span>4.4+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>3.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span></div></div></div><dd>
+    <p>Schedules a timeout to run <var>handler</var> after <var>timeout</var>
+    milliseconds. Any <var>arguments</var> are passed straight through to the <var>handler</var>.</p>
+   <dt><var>handle</var> = self . <code id=timers:dom-settimeout-2><a href=#dom-settimeout>setTimeout</a></code>( <var>code</var> [, <var>timeout</var> ] )<dd>
+    <p>Schedules a timeout to compile and run <var>code</var> after <var>timeout</var> milliseconds.</p>
+   <dt>self . <code id=dom-cleartimeout>clearTimeout</code>( <var>handle</var> )<div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout title="The clearTimeout() method of the WindowOrWorkerGlobalScope mixin cancels a timeout previously established by calling setTimeout().">WindowOrWorkerGlobalScope/clearTimeout</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>4+</span></span><span class="chrome yes"><span>Chrome</span><span>45+</span></span><hr><span class="opera yes"><span>Opera</span><span>4+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>4+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>45+</span></span><span class="webview_android yes"><span>WebView Android</span><span>45+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>5.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span></div></div><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout title="The clearTimeout() method of the WindowOrWorkerGlobalScope mixin cancels a timeout previously established by calling setTimeout().">WindowOrWorkerGlobalScope/clearTimeout</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>4+</span></span><span class="chrome yes"><span>Chrome</span><span>45+</span></span><hr><span class="opera yes"><span>Opera</span><span>4+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>4+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>45+</span></span><span class="webview_android yes"><span>WebView Android</span><span>45+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>5.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span></div></div></div><dd>
+    <p>Cancels the timeout set with <code id=timers:dom-settimeout-3><a href=#dom-settimeout>setTimeout()</a></code> or <code id=timers:dom-setinterval-2><a href=#dom-setinterval>setInterval()</a></code> identified by <var>handle</var>.</p>
+   <dt><var>handle</var> = self . <code id=dom-setinterval>setInterval</code>( <var>handler</var> [, <var>timeout</var> [, <var>arguments</var>... ] ] )<div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval title="The setInterval() method, offered on the Window and Worker interfaces, repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.">WindowOrWorkerGlobalScope/setInterval</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>1+</span></span><span class="chrome yes"><span>Chrome</span><span>30+</span></span><hr><span class="opera yes"><span>Opera</span><span>4+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>4+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>30+</span></span><span class="webview_android yes"><span>WebView Android</span><span>4.4+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>3.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span></div></div><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval title="The setInterval() method, offered on the Window and Worker interfaces, repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.">WindowOrWorkerGlobalScope/setInterval</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>1+</span></span><span class="chrome yes"><span>Chrome</span><span>30+</span></span><hr><span class="opera yes"><span>Opera</span><span>4+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>4+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>30+</span></span><span class="webview_android yes"><span>WebView Android</span><span>4.4+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>3.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span></div></div></div><dd>
+    <p>Schedules a timeout to run <var>handler</var> every <var>timeout</var>
+    milliseconds. Any <var>arguments</var> are passed straight through to the <var>handler</var>.</p>
+   <dt><var>handle</var> = self . <code id=timers:dom-setinterval-3><a href=#dom-setinterval>setInterval</a></code>( <var>code</var> [, <var>timeout</var> ] )<dd>
+    <p>Schedules a timeout to compile and run <var>code</var> every <var>timeout</var> milliseconds.</p>
+   <dt>self . <code id=dom-clearinterval>clearInterval</code>( <var>handle</var> )<div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval title="The clearInterval() method of the WindowOrWorkerGlobalScope mixin cancels a timed, repeating action which was previously established by a call to setInterval().">WindowOrWorkerGlobalScope/clearInterval</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>4+</span></span><span class="chrome yes"><span>Chrome</span><span>4+</span></span><hr><span class="opera yes"><span>Opera</span><span>4+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>4+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>1+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span></div></div><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval title="The clearInterval() method of the WindowOrWorkerGlobalScope mixin cancels a timed, repeating action which was previously established by a call to setInterval().">WindowOrWorkerGlobalScope/clearInterval</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>4+</span></span><span class="chrome yes"><span>Chrome</span><span>4+</span></span><hr><span class="opera yes"><span>Opera</span><span>4+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>4+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>1+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span></div></div></div><dd>
+    <p>Cancels the timeout set with <code id=timers:dom-setinterval-4><a href=#dom-setinterval>setInterval()</a></code> or <code id=timers:dom-settimeout-4><a href=#dom-settimeout>setTimeout()</a></code> identified by <var>handle</var>.</p>
+   </dl>
+
+  <p class=note>Timers can be nested; after five such nested timers, however, the interval is
+  forced to be at least four milliseconds.</p>
+
+  <p class=note>This API does not guarantee that timers will run exactly on schedule. Delays due
+  to CPU load, other tasks, etc, are to be expected.</p>
+
+  
+
+  <div class=example>
+
+   <p>To run tasks of several milliseconds back to back without any delay, while still yielding back
+   to the browser to avoid starving the user interface (and to avoid the browser killing the script
+   for hogging the CPU), simply queue the next timer before performing work:</p>
+
+   <pre><code class=js>function doExpensiveWork() {
+  var done = false;
+  // ...
+  // this part of the function takes up to five milliseconds
+  // set done to true if we're done
+  // ...
+  return done;
+}
+
+function rescheduleWork() {
+  var handle = setTimeout(rescheduleWork, 0); // preschedule next iteration
+  if (doExpensiveWork())
+    clearTimeout(handle); // clear the timeout if we don't need it
+}
+
+function scheduleWork() {
+  setTimeout(rescheduleWork, 0);
+}
+
+scheduleWork(); // queues a task to do lots of work</code></pre>
+
+  </div>
+
+
+
+  <h3 id=microtask-queuing><span class=secno>8.7</span> Microtask queuing<a href=#microtask-queuing class=self-link></a></h3><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/queueMicrotask title="The queueMicrotask() method, which is exposed on the Window or Worker interface, queues a microtask to be executed at a safe time prior to control returning to the browser's event loop.">WindowOrWorkerGlobalScope/queueMicrotask</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>69+</span></span><span class="safari yes"><span>Safari</span><span>12.1+</span></span><span class="chrome yes"><span>Chrome</span><span>71+</span></span><hr><span class="opera yes"><span>Opera</span><span>58+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android no"><span>Firefox Android</span><span>No</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>12.2+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>71+</span></span><span class="webview_android yes"><span>WebView Android</span><span>71+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>10.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>50+</span></span></div></div></div>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/web-application-apis/microtask-queuing.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/web-application-apis/microtask-queuing.zh.html?filename=microtask-queuing.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fweb-application-apis%2Fmicrotask-queuing.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  <dl class=domintro><dt><var>self</var> . <code id=dom-queuemicrotask>queueMicrotask</code>(<var>callback</var>)<dd><p><span>Queues</span> a <span>microtask</span> to run the given
+   <var>callback</var>.</dl>
+
+  
+
+  <p>The <code id=microtask-queuing:dom-queuemicrotask><a href=#dom-queuemicrotask>queueMicrotask()</a></code> method allows authors to schedule
+  a callback on the <span>microtask queue</span>. This allows their code to run after the
+  currently-executing <span>task</span> has run to completion and the
+  <a id=microtask-queuing:javascript-execution-context-stack href=https://tc39.es/ecma262/#execution-context-stack data-x-internal=javascript-execution-context-stack>JavaScript execution context stack</a> is empty, but without yielding control back to the
+  <span>event loop</span>, as would be the case when using, for example, <code id=microtask-queuing:dom-settimeout><a href=#dom-settimeout>setTimeout(<var>f</var>, 0)</a></code>.</p>
+
+  <p>Authors ought to be aware that scheduling a lot of microtasks has the same performance
+  downsides as running a lot of synchronous code. Both will prevent the browser from doing its own
+  work, such as rendering or scrolling. In many cases, <code id=microtask-queuing:dom-animationframeprovider-requestanimationframe><a href=imagebitmap-and-animations.html#dom-animationframeprovider-requestanimationframe>requestAnimationFrame()</a></code> or
+  <code id=microtask-queuing:requestidlecallback()><a data-x-internal=requestidlecallback() href=https://w3c.github.io/requestidlecallback/#the-requestidlecallback-method>requestIdleCallback()</a></code> is a better choice. In particular, if the goal is to run code
+  before the next rendering cycle, that is the purpose of <code id=microtask-queuing:dom-animationframeprovider-requestanimationframe-2><a href=imagebitmap-and-animations.html#dom-animationframeprovider-requestanimationframe>requestAnimationFrame()</a></code>.</p>
+
+  <p>As can be seen from the following examples, the best way of thinking about <code id=microtask-queuing:dom-queuemicrotask-2><a href=#dom-queuemicrotask>queueMicrotask()</a></code> is as a mechanism for rearranging synchronous
+  code, effectively placing the queued code immediately after the current task's worth of non-queued
+  JavaScript.</p>
+
+  <div class=example>
+   <p>The most common reason for using <code id=microtask-queuing:dom-queuemicrotask-3><a href=#dom-queuemicrotask>queueMicrotask()</a></code> is
+   to create consistent ordering, even in the cases where information is available synchronously,
+   without introducing undue delay.</p>
+
+   <p>For example, consider a custom element firing a <code>load</code> event, that also
+   maintains an internal cache of previously-loaded data. A naïve implementation might look
+   like:</p>
+
+   <pre><code class=js>MyElement.prototype.loadData = function (url) {
+  if (this._cache[url]) {
+    this._setData(this._cache[url]);
+    this.dispatchEvent(new Event("load"));
+  } else {
+    fetch(url).then(res => res.arrayBuffer()).then(data => {
+      this._cache[url] = data;
+      this._setData(data);
+      this.dispatchEvent(new Event("load"));
+    });
+  }
+};</code></pre>
+
+   <p>This naïve implementation is problematic, however, in that it causes its users to
+   experience inconsistent behavior. For example, code such as</p>
+
+   <pre><code class=js>element.addEventListener("load", () => console.log("loaded"));
+console.log("1");
+element.loadData();
+console.log("2");</code></pre>
+
+   <p>will sometimes log "1, 2, loaded" (if the data needs to be fetched), and sometimes log "1,
+   loaded, 2" (if the data is already cached). Similarly, after the call to <code>loadData()</code>, it will be inconsistent whether or not the data is set on the
+   element.</p>
+
+   <p>To get a consistent ordering, <code id=microtask-queuing:dom-queuemicrotask-4><a href=#dom-queuemicrotask>queueMicrotask()</a></code> can be
+   used:</p>
+
+   <pre><code class=js>MyElement.prototype.loadData = function (url) {
+  if (this._cache[url]) {<strong>
+    queueMicrotask(() => {
+      this._setData(this._cache[url]);
+      this.dispatchEvent(new Event("load"));
+    });</strong>
+  } else {
+    fetch(url).then(res => res.arrayBuffer()).then(data => {
+      this._cache[url] = data;
+      this._setData(data);
+      this.dispatchEvent(new Event("load"));
+    });
+  }
+};</code></pre>
+
+   <p>By essentially rearranging the queued code to be after the currently-executing task, this
+   ensures a consistent ordering and update of the element's state.</p>
+  </div>
+
+  <div class=example>
+   <p>Another interesting use of <code id=microtask-queuing:dom-queuemicrotask-5><a href=#dom-queuemicrotask>queueMicrotask()</a></code> is to
+   allow uncoordinated "batching" of work by multiple callers. For example, consider a library
+   function that wants to send data somewhere as soon as possible, but doesn't want to make multiple
+   network requests if doing so is easily avoidable. One way to balance this would be like so:</p>
+
+   <pre><code class=js>const queuedToSend = [];
+
+function sendData(data) {
+  queuedToSend.push(data);
+
+  if (queuedToSend.length === 1) {
+    queueMicrotask(() => {
+      const stringToSend = JSON.stringify(queuedToSend);
+      queuedToSend.length = 0;
+
+      fetch("/endpoint", stringToSend);
+    });
+  }
+}</code></pre>
+
+   <p>With this architecture, multiple subsequent calls to <code>sendData()</code> within
+   the same turn of the event loop will be batched together into one <code id=microtask-queuing:fetch()><a data-x-internal=fetch() href=https://fetch.spec.whatwg.org/#dom-global-fetch>fetch()</a></code> call, but
+   with no intervening event loop tasks preempting the fetch (as would have happened with similar
+   code that instead used <code id=microtask-queuing:dom-settimeout-2><a href=#dom-settimeout>setTimeout()</a></code>).</p>
+  </div>
+
+
+
+  <h3 id=用户提示><span class=secno>8.8</span> 用户提示<a href=#用户提示 class=self-link></a></h3>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Wed Feb 28 2018 16:23:38 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/web-application-apis/user-prompts/index.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/web-application-apis/user-prompts/index.zh.html></div>
+
+  
+
+
+  <h4 id=simple-dialogs><span class=secno>8.8.1</span> Simple dialogs<a href=#simple-dialogs class=self-link></a></h4>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/web-application-apis/user-prompts/simple-dialogs.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/web-application-apis/user-prompts/simple-dialogs.zh.html?filename=simple-dialogs.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fweb-application-apis%2Fuser-prompts%2Fsimple-dialogs.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  <dl class=domintro><dt><var>window</var> . <code id=dom-alert>alert</code>(<var>message</var>)<div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Window/alert title="The Window.alert() method displays an alert dialog with the optional specified content and an OK button.">Window/alert</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>1+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>3+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>4+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>1+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span></div></div></div><dd>
+    <p>Displays a modal alert with the given message, and waits for the user to dismiss it.</p>
+   <dt><var>result</var> = <var>window</var> . <code id=dom-confirm>confirm</code>(<var>message</var>)<div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm title="The Window.confirm() method displays a modal dialog with an optional message and two buttons: OK and Cancel.">Window/confirm</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>1+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>3+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>4+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>1+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span></div></div></div><dd>
+    <p>Displays a modal OK/Cancel prompt with the given message, waits for the user to dismiss it,
+    and returns true if the user clicks OK and false if the user clicks Cancel.</p>
+   <dt><var>result</var> = <var>window</var> . <code id=dom-prompt>prompt</code>(<var>message</var> [, <var>default</var>] )<div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt title="The Window.prompt() displays a dialog with an optional message prompting the user to input some text.">Window/prompt</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>1+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>3+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>4+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>1+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span></div></div></div><dd>
+    <p>Displays a modal text control prompt with the given message, waits for the user to dismiss
+    it, and returns the value that the user entered. If the user cancels the prompt, then returns
+    null instead. If the second argument is present, then the given value is used as a default.</p>
+   </dl>
+
+  <p class=note>Logic that depends on <span>tasks</span> or <span>microtasks</span>, such as <a href=media.html#media-element id=simple-dialogs:media-element>media elements</a>
+  loading their <a id=simple-dialogs:media-data href=media.html#media-data>media data</a>, are stalled when these methods are invoked.</p>
+
+  
+
+
+
+  <h4 id=printing><span class=secno>8.8.2</span> Printing<a href=#printing class=self-link></a></h4><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Window/print title="Opens the Print Dialog to print the current document.">Window/print</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>1.1+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>6+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>5+</span></span><hr><span class="firefox_android no"><span>Firefox Android</span><span>No</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>1+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span><hr><span class=caniuse><span><a href="https://caniuse.com/#feat=beforeafterprint" title="Printing Events">caniuse.com table</a></span></span></div></div></div>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/web-application-apis/user-prompts/printing.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/web-application-apis/user-prompts/printing.zh.html?filename=printing.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fweb-application-apis%2Fuser-prompts%2Fprinting.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  <dl class=domintro><dt><var>window</var> . <code id=dom-print>print</code>()<dd>
+    <p>Prompts the user to print the page.</p>
+   </dl>
+
+  
+
+
+
+  <nav><a href=dynamic-markup-insertion.html>← 8.4 Dynamic markup insertion</a> — <a href=./>Table of Contents</a> — <a href=system-state.html>8.9 System state and capabilities →</a></nav>

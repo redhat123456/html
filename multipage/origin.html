@@ -1,0 +1,843 @@
+<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/html/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Standard</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/spec.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/html/styles.css crossorigin=""><script>
+   function toggleStatus(div) {
+     div.parentNode.classList.toggle('wrapped');
+   }
+   function setLinkFragment(link) {
+     link.hash = location.hash;
+   }
+  </script><link rel=stylesheet href=/html/resources/zh-cn.css><body>
+  
+  <script async="" crossorigin="" src=/html/resources/html-dfn.js></script>
+  <script data-file-issue-url=https://github.com/whatwg/html/issues/new async="" crossorigin="" src=https://resources.whatwg.org/file-issue.js></script>
+  
+  <header id=head class="head with-buttons">
+   <a href=https://whatwg.org/ class=logo><img width=100 alt=WHATWG crossorigin="" src=https://resources.whatwg.org/logo.svg height=100></a>
+   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Living Standard — Last Updated <span class=pubdate>6 November 2020</span></h2><div data-en-date="Sat Aug 11 2018 08:00:56 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/living-standard-mdash-last-updated-date-01-jan-1901.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/living-standard-mdash-last-updated-date-01-jan-1901.zh.html?filename=living-standard-mdash-last-updated-date-01-jan-1901.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fliving-standard-mdash-last-updated-date-01-jan-1901.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div><div data-en-date="Sat Aug 11 2018 08:00:56 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/commit-snapshot-mdash-last-updated-date-01-jan-1901.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/commit-snapshot-mdash-last-updated-date-01-jan-1901.zh.html?filename=commit-snapshot-mdash-last-updated-date-01-jan-1901.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fcommit-snapshot-mdash-last-updated-date-01-jan-1901.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div><div data-en-date="Sat Aug 11 2018 08:00:56 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/review-draft-mdash-published-date-01-jan-1901.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/review-draft-mdash-published-date-01-jan-1901.zh.html?filename=review-draft-mdash-published-date-01-jan-1901.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Freview-draft-mdash-published-date-01-jan-1901.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div></hgroup>
+   
+   
+   <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-91053840-1', 'auto');
+      ga('send', 'pageview');
+   </script>
+  </header>
+
+  
+
+  
+
+
+  
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/table-of-contents.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/table-of-contents.zh.html></div>
+  
+
+
+  
+<div data-en-date="Sat Aug 11 2018 08:00:56 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/full-table-of-contents.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/full-table-of-contents.zh.html></div>
+  
+
+  
+
+  
+
+
+  <nav><a href=window-object.html>← 7.3 The Window object</a> — <a href=./>Table of Contents</a> — <a href=history.html>7.9 Session history and navigation →</a></nav><ol class=toc><li id=toc-browsers><ol><li><a href=origin.html#origin><span class=secno>7.5</span> Origin</a><ol><li><a href=origin.html#sites><span class=secno>7.5.1</span> Sites</a><li><a href=origin.html#relaxing-the-same-origin-restriction><span class=secno>7.5.2</span> Relaxing the same-origin restriction</a><li><a href=origin.html#origin-isolation><span class=secno>7.5.3</span> Origin isolation</a></ol><li><a href=origin.html#sandboxing><span class=secno>7.6</span> Sandboxing</a><li><a href=origin.html#cross-origin-opener-policies><span class=secno>7.7</span> Cross-origin opener policies</a><ol><li><a href=origin.html#the-cross-origin-opener-policy-header><span class=secno>7.7.1</span> The `<code>Cross-Origin-Opener-Policy</code>`
+  header</a><li><a href=origin.html#browsing-context-group-switches-due-to-cross-origin-opener-policy><span class=secno>7.7.2</span> Browsing context group switches due to cross-origin opener policy</a></ol><li><a href=origin.html#coep><span class=secno>7.8</span> Cross-origin embedder policies</a><ol><li><a href=origin.html#the-headers><span class=secno>7.8.1</span> The headers</a><li><a href=origin.html#embedder-policy-checks><span class=secno>7.8.2</span> Embedder policy checks</a></ol></ol></ol><h3 id=origin><span class=secno>7.5</span> Origin<a href=#origin class=self-link></a></h3>
+<div data-zh-date="" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/loading-web-pages/origin/index.zh.html?filename=index.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Floading-web-pages%2Forigin%2Findex.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/loading-web-pages/origin/index.en.html></div>
+  
+
+  <p>Origins are the fundamental currency of the web's security model. Two actors in the web
+  platform that share an origin are assumed to trust each other and to have the same authority.
+  Actors with differing origins are considered potentially hostile versus each other, and are
+  isolated from each other to varying degrees.</p>
+
+  <p class=example>For example, if Example Bank's web site, hosted at <code>bank.example.com</code>, tries to examine the DOM of Example Charity's web site, hosted
+  at <code>charity.example.org</code>, a <a id=origin:securityerror href=https://heycam.github.io/webidl/#securityerror data-x-internal=securityerror>"<code>SecurityError</code>"</a>
+  <code id=origin:domexception><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code> will be raised.</p>
+
+  <hr>
+
+  <p id=origin-2>An <dfn id=concept-origin data-export="">origin</dfn> is one of the following:</p>
+
+  <dl><dt>An <dfn id=concept-origin-opaque data-export="">opaque origin</dfn><dd><p>An internal value, with no serialization it can be recreated from (it is serialized as
+   "<code>null</code>" per <a href=#ascii-serialisation-of-an-origin id=origin:ascii-serialisation-of-an-origin>serialization of an origin</a>), for which the only
+   meaningful operation is testing for equality.<dt>A <dfn id=concept-origin-tuple data-export="">tuple origin</dfn><dd>
+    <p>A <a href=#concept-origin-tuple id=origin:concept-origin-tuple>tuple</a> consists of:
+
+    <ul class=brief><li>A <dfn data-dfn-for=origin id=concept-origin-scheme data-export="">scheme</dfn> (a
+     <a href=https://url.spec.whatwg.org/#concept-url-scheme id=origin:concept-url-scheme data-x-internal=concept-url-scheme>scheme</a>).<li>A <dfn data-dfn-for=origin id=concept-origin-host data-export="">host</dfn> (a
+     <a href=https://url.spec.whatwg.org/#concept-host id=origin:concept-host data-x-internal=concept-host>host</a>).<li>A <dfn data-dfn-for=origin id=concept-origin-port data-export="">port</dfn> (a
+     <a href=https://url.spec.whatwg.org/#concept-url-port id=origin:concept-url-port data-x-internal=concept-url-port>port</a>).<li>A <dfn data-dfn-for=origin id=concept-origin-domain data-export="">domain</dfn>
+     (null or a <a href=https://url.spec.whatwg.org/#concept-domain id=origin:concept-domain data-x-internal=concept-domain>domain</a>). Null unless stated otherwise.</ul>
+   </dl>
+
+  <p class=note><a href=#concept-origin id=origin:concept-origin>Origins</a> can be shared, e.g., among multiple
+  <code id=origin:document><a href=dom.html#document>Document</a></code> objects. Furthermore, <a href=#concept-origin id=origin:concept-origin-2>origins</a> are generally
+  immutable. Only the <a href=#concept-origin-domain id=origin:concept-origin-domain>domain</a> of a <a href=#concept-origin-tuple id=origin:concept-origin-tuple-2>tuple origin</a> can be changed, and only through the <code id=origin:dom-document-domain><a href=#dom-document-domain>document.domain</a></code> API.</p>
+
+  <p>The <dfn id=concept-origin-effective-domain data-export="">effective domain</dfn> of an
+  <a href=#concept-origin id=origin:concept-origin-3>origin</a> <var>origin</var> is computed as follows:</p>
+
+  <ol><li><p>If <var>origin</var> is an <a href=#concept-origin-opaque id=origin:concept-origin-opaque>opaque origin</a>, then
+   return null.<li><p>If <var>origin</var>'s <a href=#concept-origin-domain id=origin:concept-origin-domain-2>domain</a> is non-null,
+   then return <var>origin</var>'s <a href=#concept-origin-domain id=origin:concept-origin-domain-3>domain</a>.<li><p>Return <var>origin</var>'s <a href=#concept-origin-host id=origin:concept-origin-host>host</a>.</ol>
+
+  
+
+  <p>Various specification objects are defined to have an <a href=#concept-origin id=origin:concept-origin-4>origin</a>. These <a href=#concept-origin id=origin:concept-origin-5>origins</a> are determined as follows:</p>
+
+  <dl><dt>For <code id=origin:document-2><a href=dom.html#document>Document</a></code> objects<dd>
+    <p>The <a href=browsers.html#creating-a-new-browsing-context id=origin:creating-a-new-browsing-context>create a new browsing context</a> and
+    <a href=browsing-the-web.html#navigate id=origin:navigate>navigation</a> algorithms assign the <a href=#concept-origin id=origin:concept-origin-6>origin</a> at
+    construction time. Otherwise, the default default behavior as defined in <cite>DOM</cite>
+    applies. <a href=references.html#refsDOM>[DOM]</a></p>
+   <dt>For images of <code id=origin:the-img-element><a href=embedded-content.html#the-img-element>img</a></code> elements<dd>
+    <dl class=switch><dt>If the <a href=images.html#img-req-data id=origin:img-req-data>image data</a> is <a id=origin:cors-cross-origin href=infrastructure.html#cors-cross-origin>CORS-cross-origin</a><dd><p>A unique <a href=#concept-origin-opaque id=origin:concept-origin-opaque-2>opaque origin</a> assigned when the
+     image is created.<dt>If the <a href=images.html#img-req-data id=origin:img-req-data-2>image data</a> is <a id=origin:cors-same-origin href=infrastructure.html#cors-same-origin>CORS-same-origin</a><dd><p>The <code id=origin:the-img-element-2><a href=embedded-content.html#the-img-element>img</a></code> element's <a id=origin:node-document href=https://dom.spec.whatwg.org/#concept-node-document data-x-internal=node-document>node document</a>'s
+     <a href=#concept-origin id=origin:concept-origin-7>origin</a>.</dl>
+   <dt>For <code id=origin:the-audio-element><a href=media.html#the-audio-element>audio</a></code> and <code id=origin:the-video-element><a href=media.html#the-video-element>video</a></code> elements<dd>
+    <dl class=switch><dt>If the <a id=origin:media-data href=media.html#media-data>media data</a> is <a id=origin:cors-cross-origin-2 href=infrastructure.html#cors-cross-origin>CORS-cross-origin</a><dd><p>A unique <a href=#concept-origin-opaque id=origin:concept-origin-opaque-3>opaque origin</a> assigned when the
+     <a id=origin:media-data-2 href=media.html#media-data>media data</a> is fetched.<dt>If the <a id=origin:media-data-3 href=media.html#media-data>media data</a> is <a id=origin:cors-same-origin-2 href=infrastructure.html#cors-same-origin>CORS-same-origin</a><dd><p>The <a id=origin:media-element href=media.html#media-element>media element</a>'s <a id=origin:node-document-2 href=https://dom.spec.whatwg.org/#concept-node-document data-x-internal=node-document>node document</a>'s
+     <a href=#concept-origin id=origin:concept-origin-8>origin</a>.</dl>
+   </dl>
+
+  <p>Other specifications can override the above definitions by themselves specifying the origin of
+  a particular <code id=origin:document-3><a href=dom.html#document>Document</a></code> object, image, or <a id=origin:media-element-2 href=media.html#media-element>media element</a>.</p>
+
+  <hr>
+
+  <p>The <dfn id=ascii-serialisation-of-an-origin data-lt="serialization of an
+  origin|ASCII serialization of an origin" data-export="">serialization of an origin</dfn> is the string obtained
+  by applying the following algorithm to the given <a href=#concept-origin id=origin:concept-origin-9>origin</a> <var>origin</var>:</p>
+
+  <ol><li><p>If <var>origin</var> is an <a href=#concept-origin-opaque id=origin:concept-origin-opaque-4>opaque origin</a>, then
+   return "<code>null</code>".<li><p>Otherwise, let <var>result</var> be <var>origin</var>'s <a href=#concept-origin-scheme id=origin:concept-origin-scheme>scheme</a>.<li><p>Append "<code>://</code>" to <var>result</var>.<li><p>Append <var>origin</var>'s <a href=#concept-origin-host id=origin:concept-origin-host-2>host</a>, <a href=https://url.spec.whatwg.org/#concept-host-serializer id=origin:host-serializer data-x-internal=host-serializer>serialized</a>, to <var>result</var>.<li><p>If <var>origin</var>'s <a href=#concept-origin-port id=origin:concept-origin-port>port</a> is non-null, append
+   a U+003A COLON character (:), and <var>origin</var>'s <a href=#concept-origin-port id=origin:concept-origin-port-2>port</a>, <a href=https://url.spec.whatwg.org/#serialize-an-integer id=origin:serialize-an-integer data-x-internal=serialize-an-integer>serialized</a>,
+   to <var>result</var>.<li><p>Return <var>result</var>.</ol>
+
+  <p class=example>The <a href=#ascii-serialisation-of-an-origin id=origin:ascii-serialisation-of-an-origin-2>serialization</a> of ("<code>https</code>", "<code>xn--maraa-rta.example</code>", null, null) is "<code>https://xn--maraa-rta.example</code>".</p>
+
+  <p id=unicode-serialisation-of-an-origin class=note>There used to also be a
+  <i>Unicode serialization of an origin</i>. However, it was never widely adopted.</p>
+
+  <hr>
+
+  <p>Two <a href=#concept-origin id=origin:concept-origin-10>origins</a>, <var>A</var> and <var>B</var>, are said to be
+  <dfn id=same-origin data-export="">same origin</dfn> if the following algorithm returns true:</p>
+
+  <ol><li><p>If <var>A</var> and <var>B</var> are the same <a href=#concept-origin-opaque id=origin:concept-origin-opaque-5>opaque
+   origin</a>, then return true.<li><p>If <var>A</var> and <var>B</var> are both <a href=#concept-origin-tuple id=origin:concept-origin-tuple-3>tuple
+   origins</a> and their <a href=#concept-origin-scheme id=origin:concept-origin-scheme-2>schemes</a>, <a href=#concept-origin-host id=origin:concept-origin-host-3>hosts</a>, and <a href=#concept-origin-port id=origin:concept-origin-port-3>port</a> are
+   identical, then return true.<li><p>Return false.</ol>
+
+  <p>Two <a href=#concept-origin id=origin:concept-origin-11>origins</a>, <var>A</var> and <var>B</var>, are said to be
+  <dfn id=same-origin-domain data-export="">same origin-domain</dfn> if the following algorithm returns true:</p>
+
+  <ol><li><p>If <var>A</var> and <var>B</var> are the same <a href=#concept-origin-opaque id=origin:concept-origin-opaque-6>opaque
+   origin</a>, then return true.<li>
+    <p>If <var>A</var> and <var>B</var> are both <a href=#concept-origin-tuple id=origin:concept-origin-tuple-4>tuple
+    origins</a>, run these substeps:</p>
+
+    <ol><li><p>If <var>A</var> and <var>B</var>'s <a href=#concept-origin-scheme id=origin:concept-origin-scheme-3>schemes</a>
+     are identical, and their <a href=#concept-origin-domain id=origin:concept-origin-domain-4>domains</a> are identical and
+     non-null, then return true.<li><p>Otherwise, if <var>A</var> and <var>B</var> are <a href=#same-origin id=origin:same-origin>same origin</a> and their <a href=#concept-origin-domain id=origin:concept-origin-domain-5>domains</a> are identical and null, then return
+     true.</ol>
+
+   <li><p>Return false.</ol>
+
+  <div class=example>
+   <table><tr><th><var>A</var>
+     <th><var>B</var>
+     <th><a href=#same-origin id=origin:same-origin-2>same origin</a>
+     <th><a href=#same-origin-domain id=origin:same-origin-domain>same origin-domain</a>
+    <tr><td>("<code>https</code>", "<code>example.org</code>", null, null)
+     <td>("<code>https</code>", "<code>example.org</code>", null, null)
+     <td>✅
+     <td>✅
+    <tr><td>("<code>https</code>", "<code>example.org</code>", 314, null)
+     <td>("<code>https</code>", "<code>example.org</code>", 420, null)
+     <td>❌
+     <td>❌
+    <tr><td>("<code>https</code>", "<code>example.org</code>", 314, "<code>example.org</code>")
+     <td>("<code>https</code>", "<code>example.org</code>", 420, "<code>example.org</code>")
+     <td>❌
+     <td>✅
+    <tr><td>("<code>https</code>", "<code>example.org</code>", null, null)
+     <td>("<code>https</code>", "<code>example.org</code>", null, "<code>example.org</code>")
+     <td>✅
+     <td>❌
+    <tr><td>("<code>https</code>", "<code>example.org</code>", null, "<code>example.org</code>")
+     <td>("<code>http</code>", "<code>example.org</code>", null, "<code>example.org</code>")
+     <td>❌
+     <td>❌
+   </table>
+  </div>
+
+
+
+  <h4 id=sites><span class=secno>7.5.1</span> Sites<a href=#sites class=self-link></a></h4>
+<div data-zh-date="" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/loading-web-pages/origin/sites.zh.html?filename=sites.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Floading-web-pages%2Forigin%2Fsites.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/loading-web-pages/origin/sites.en.html></div>
+
+  <p>A <dfn id=scheme-and-host>scheme-and-host</dfn> is a <a id=sites:tuple href=https://infra.spec.whatwg.org/#tuple data-x-internal=tuple>tuple</a> of a <a href=https://url.spec.whatwg.org/#concept-url-scheme id=sites:concept-url-scheme data-x-internal=concept-url-scheme>scheme</a> and a <a href=https://url.spec.whatwg.org/#concept-host id=sites:concept-host data-x-internal=concept-host>host</a>.</p>
+
+  <p>A <dfn id=site data-export="">site</dfn> is an <a href=#concept-origin-opaque id=sites:concept-origin-opaque>opaque origin</a> or a
+  <a href=#scheme-and-host id=sites:scheme-and-host>scheme-and-host</a>.</p>
+
+  <p>To <dfn id=obtain-a-site data-export="">obtain a site</dfn>, given an origin <var>origin</var>, run these steps:</p>
+
+  <ol><li><p>If <var>origin</var> is an <a href=#concept-origin-opaque id=sites:concept-origin-opaque-2>opaque origin</a>, then
+   return <var>origin</var>.<li><p>If <var>origin</var>'s <a href=#concept-origin-host id=sites:concept-origin-host>host</a>'s <a id=sites:registrable-domain href=https://url.spec.whatwg.org/#host-registrable-domain data-x-internal=registrable-domain>registrable
+   domain</a> is null, then return (<var>origin</var>'s <a href=#concept-origin-scheme id=sites:concept-origin-scheme>scheme</a>, <var>origin</var>'s <a href=#concept-origin-host id=sites:concept-origin-host-2>host</a>).<li><p>Return (<var>origin</var>'s <a href=#concept-origin-scheme id=sites:concept-origin-scheme-2>scheme</a>,
+   <var>origin</var>'s <a href=#concept-origin-host id=sites:concept-origin-host-3>host</a>'s <a id=sites:registrable-domain-2 href=https://url.spec.whatwg.org/#host-registrable-domain data-x-internal=registrable-domain>registrable
+   domain</a>).</ol>
+
+  <p>Two <a href=#concept-origin id=sites:concept-origin>origins</a>, <var>A</var> and <var>B</var>, are said to be <dfn id=schemelessly-same-site data-export="">schemelessly same site</dfn> if the following algorithm returns true:</p>
+
+  <ol><li><p>If <var>A</var> and <var>B</var> are the same <a href=#concept-origin-opaque id=sites:concept-origin-opaque-3>opaque
+   origin</a>, then return true.<li>
+    <p>If <var>A</var> and <var>B</var> are both <a href=#concept-origin-tuple id=sites:concept-origin-tuple>tuple
+    origins</a>, then:</p>
+
+    <ol><li><p>Let <var>hostA</var> be <var>A</var>'s <a href=#concept-origin-host id=sites:concept-origin-host-4>host</a>, and let <var>hostB</var> be <var>B</var>'s <a href=#concept-origin-host id=sites:concept-origin-host-5>host</a>.<li><p>If <var>hostA</var> <a href=https://url.spec.whatwg.org/#concept-host-equals id=sites:host-equals data-x-internal=host-equals>equals</a> <var>hostB</var> and
+     <var>hostA</var>'s <a id=sites:registrable-domain-3 href=https://url.spec.whatwg.org/#host-registrable-domain data-x-internal=registrable-domain>registrable domain</a> is null, then return true.<li><p>If <var>hostA</var>'s <a id=sites:registrable-domain-4 href=https://url.spec.whatwg.org/#host-registrable-domain data-x-internal=registrable-domain>registrable domain</a> <a href=https://url.spec.whatwg.org/#concept-host-equals id=sites:host-equals-2 data-x-internal=host-equals>equals</a> <var>hostB</var>'s <a id=sites:registrable-domain-5 href=https://url.spec.whatwg.org/#host-registrable-domain data-x-internal=registrable-domain>registrable domain</a> and is non-null, then
+     return true.</ol>
+   <li><p>Return false.</ol>
+
+  <p>Two <a href=#concept-origin id=sites:concept-origin-2>origins</a>, <var>A</var> and <var>B</var>, are said to be <dfn id=same-site data-export="">same site</dfn> if both of the following statements are true:</p>
+
+  <ul><li><p><var>A</var> and <var>B</var> are <a href=#schemelessly-same-site id=sites:schemelessly-same-site>schemelessly same site</a><li><p><var>A</var> and <var>B</var> are either both <a href=#concept-origin-opaque id=sites:concept-origin-opaque-4>opaque
+   origins</a>, or both <a href=#concept-origin-tuple id=sites:concept-origin-tuple-2>tuple origins</a> with the same
+   <a href=#concept-origin-scheme id=sites:concept-origin-scheme-3>scheme</a></ul>
+
+  <p class=note>Unlike the <a href=#same-origin id=sites:same-origin>same origin</a> and <a href=#same-origin-domain id=sites:same-origin-domain>same origin-domain</a> concepts,
+  for <a href=#schemelessly-same-site id=sites:schemelessly-same-site-2>schemelessly same site</a> and <a href=#same-site id=sites:same-site>same site</a>, the <a href=#concept-origin-port id=sites:concept-origin-port>port</a> and <a href=#concept-origin-domain id=sites:concept-origin-domain>domain</a>
+  components are ignored.</p>
+
+  <p class=warning>For the reasons <a href=https://url.spec.whatwg.org/#warning-avoid-psl>explained in <cite>URL</cite></a>, the
+  <a href=#same-site id=sites:same-site-2>same site</a> and <a href=#schemelessly-same-site id=sites:schemelessly-same-site-3>schemelessly same site</a> concepts should be avoided when
+  possible, in favor of <a href=#same-origin id=sites:same-origin-2>same origin</a> checks.</p>
+
+  <div id=example-same-site class=example>
+  <p>Given that <code>wildlife.museum</code>, <code>museum</code>, and
+  <code>com</code> are <a href=https://url.spec.whatwg.org/#host-public-suffix id=sites:public-suffix data-x-internal=public-suffix>public suffixes</a> and that
+  <code>example.com</code> is not:</p>
+
+   <table><tr><th><var>A</var>
+     <th><var>B</var>
+     <th><a href=#schemelessly-same-site id=sites:schemelessly-same-site-4>schemelessly same site</a>
+     <th><a href=#same-site id=sites:same-site-3>same site</a>
+    <tr><td>("<code>https</code>", "<code>example.com</code>")
+     <td>("<code>https</code>", "<code>sub.example.com</code>")
+     <td>✅
+     <td>✅
+    <tr><td>("<code>https</code>", "<code>example.com</code>")
+     <td>("<code>https</code>", "<code>sub.other.example.com</code>")
+     <td>✅
+     <td>✅
+    <tr><td>("<code>https</code>", "<code>example.com</code>")
+     <td>("<code>http</code>", "<code>non-secure.example.com</code>")
+     <td>✅
+     <td>❌
+    <tr><td>("<code>https</code>", "<code>r.wildlife.museum</code>")
+     <td>("<code>https</code>", "<code>sub.r.wildlife.museum</code>")
+     <td>✅
+     <td>✅
+    <tr><td>("<code>https</code>", "<code>r.wildlife.museum</code>")
+     <td>("<code>https</code>", "<code>sub.other.r.wildlife.museum</code>")
+     <td>✅
+     <td>✅
+    <tr><td>("<code>https</code>", "<code>r.wildlife.museum</code>")
+     <td>("<code>https</code>", "<code>other.wildlife.museum</code>")
+     <td>❌
+     <td>❌
+    <tr><td>("<code>https</code>", "<code>r.wildlife.museum</code>")
+     <td>("<code>https</code>", "<code>wildlife.museum</code>")
+     <td>❌
+     <td>❌
+    <tr><td>("<code>https</code>", "<code>wildlife.museum</code>")
+     <td>("<code>https</code>", "<code>wildlife.museum</code>")
+     <td>✅
+     <td>✅
+   </table>
+
+   <p>(Here we have omitted the <a href=#concept-origin-port id=sites:concept-origin-port-2>port</a> and <a href=#concept-origin-domain id=sites:concept-origin-domain-2>domain</a> components since they are not considered.)</p>
+  </div>
+
+  
+
+
+
+  <h4 id=relaxing-the-same-origin-restriction><span class=secno>7.5.2</span> Relaxing the same-origin restriction<a href=#relaxing-the-same-origin-restriction class=self-link></a></h4><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Document/domain title="The domain property of the Document interface gets/sets the domain portion of the origin of the current document, as used by the same-origin policy.">Document/domain</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>1+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>12.1+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>4+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>1+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>12.1+</span></span></div></div></div>
+<div data-zh-date="" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/loading-web-pages/origin/relaxing-the-same-origin-restriction.zh.html?filename=relaxing-the-same-origin-restriction.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Floading-web-pages%2Forigin%2Frelaxing-the-same-origin-restriction.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/loading-web-pages/origin/relaxing-the-same-origin-restriction.en.html></div>
+
+  <dl class=domintro><dt><var>document</var> . <code id=dom-document-domain-dev><a href=#dom-document-domain>domain</a></code> [ = <var>domain</var> ]<dd>
+    <p>Returns the current domain used for security checks.</p>
+
+    <p>Can be set to a value that removes subdomains, to change the <a href=#concept-origin id=relaxing-the-same-origin-restriction:concept-origin>origin</a>'s <a href=#concept-origin-domain id=relaxing-the-same-origin-restriction:concept-origin-domain>domain</a> to allow pages on other subdomains of the same
+    domain (if they do the same thing) to access each other. This enables pages on different hosts
+    of a domain to synchronously access each other's DOMs.</p>
+
+    <p>In sandboxed <code id=relaxing-the-same-origin-restriction:the-iframe-element><a href=iframe-embed-object.html#the-iframe-element>iframe</a></code>s, <code id=relaxing-the-same-origin-restriction:document><a href=dom.html#document>Document</a></code>s with <a href=#concept-origin-opaque id=relaxing-the-same-origin-restriction:concept-origin-opaque>opaque origins</a>, <code id=relaxing-the-same-origin-restriction:document-2><a href=dom.html#document>Document</a></code>s without a <a href=browsers.html#concept-document-bc id=relaxing-the-same-origin-restriction:concept-document-bc>browsing context</a>, and when the "<code id=relaxing-the-same-origin-restriction:document-domain-feature><a href=infrastructure.html#document-domain-feature>document-domain</a></code>" feature is disabled, the setter will
+    throw a <a id=relaxing-the-same-origin-restriction:securityerror href=https://heycam.github.io/webidl/#securityerror data-x-internal=securityerror>"<code>SecurityError</code>"</a> exception. In cases where <code id=relaxing-the-same-origin-restriction:dom-crossoriginisolated><a href=webappapis.html#dom-crossoriginisolated>crossOriginIsolated</a></code> or <code id=relaxing-the-same-origin-restriction:dom-originisolated><a href=#dom-originisolated>originIsolated</a></code> return true, the setter will do nothing.</p>
+   </dl>
+
+  <div class=critical>
+   <p>Avoid using the <code id=relaxing-the-same-origin-restriction:dom-document-domain><a href=#dom-document-domain>document.domain</a></code>
+   setter. It undermines the security protections provided by the same-origin policy. This is
+   especially acute when using shared hosting; for example, if an untrusted third party is able to
+   host an HTTP server at the same IP address but on a different port, then the same-origin
+   protection that normally protects two different sites on the same host will fail, as the ports
+   are ignored when comparing origins after the <code id=relaxing-the-same-origin-restriction:dom-document-domain-2><a href=#dom-document-domain>document.domain</a></code> setter has been used.</p>
+
+   <p>Because of these security pitfalls, this feature is in the process of being removed from the
+   web platform. (This is a long process that takes many years.)</p>
+
+   <p>Instead, use <code id=relaxing-the-same-origin-restriction:dom-window-postmessage><a href=web-messaging.html#dom-window-postmessage>postMessage()</a></code> or
+   <code id=relaxing-the-same-origin-restriction:messagechannel><a href=web-messaging.html#messagechannel>MessageChannel</a></code> objects to communicate across origins in a safe manner.</p>
+  </div>
+
+  
+
+  <p>The <dfn id=dom-document-domain><code>domain</code></dfn> getter steps are:</p>
+
+  <ol><li><p>Let <var>effectiveDomain</var> be <a id=relaxing-the-same-origin-restriction:this href=https://heycam.github.io/webidl/#this data-x-internal=this>this</a>'s <a href=#concept-origin id=relaxing-the-same-origin-restriction:concept-origin-2>origin</a>'s <a href=#concept-origin-effective-domain id=relaxing-the-same-origin-restriction:concept-origin-effective-domain>effective domain</a>.
+
+   <li><p>If <var>effectiveDomain</var> is null, then return the empty string.<li><p>Return <var>effectiveDomain</var>, <a href=https://url.spec.whatwg.org/#concept-host-serializer id=relaxing-the-same-origin-restriction:host-serializer data-x-internal=host-serializer>serialized</a>.</ol>
+
+  <p>The <code id=relaxing-the-same-origin-restriction:dom-document-domain-3><a href=#dom-document-domain>domain</a></code> setter steps are:</p>
+
+  <ol><li><p>If <a id=relaxing-the-same-origin-restriction:this-2 href=https://heycam.github.io/webidl/#this data-x-internal=this>this</a>'s <a href=browsers.html#concept-document-bc id=relaxing-the-same-origin-restriction:concept-document-bc-2>browsing context</a> is null,
+   then throw a <a id=relaxing-the-same-origin-restriction:securityerror-2 href=https://heycam.github.io/webidl/#securityerror data-x-internal=securityerror>"<code>SecurityError</code>"</a> <code id=relaxing-the-same-origin-restriction:domexception><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code>.<li><p>If <a id=relaxing-the-same-origin-restriction:this-3 href=https://heycam.github.io/webidl/#this data-x-internal=this>this</a>'s <a href=#active-sandboxing-flag-set id=relaxing-the-same-origin-restriction:active-sandboxing-flag-set>active sandboxing flag set</a> has its <a href=#sandboxed-document.domain-browsing-context-flag id=relaxing-the-same-origin-restriction:sandboxed-document.domain-browsing-context-flag>sandboxed
+   <code>document.domain</code> browsing context flag</a> set, then
+   throw a <a id=relaxing-the-same-origin-restriction:securityerror-3 href=https://heycam.github.io/webidl/#securityerror data-x-internal=securityerror>"<code>SecurityError</code>"</a> <code id=relaxing-the-same-origin-restriction:domexception-2><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code>.<li><p>If <a id=relaxing-the-same-origin-restriction:this-4 href=https://heycam.github.io/webidl/#this data-x-internal=this>this</a> is not <a id=relaxing-the-same-origin-restriction:allowed-to-use href=iframe-embed-object.html#allowed-to-use>allowed to use</a> the "<code id=relaxing-the-same-origin-restriction:document-domain-feature-2><a href=infrastructure.html#document-domain-feature>document-domain</a></code>" feature, then throw a
+   <a id=relaxing-the-same-origin-restriction:securityerror-4 href=https://heycam.github.io/webidl/#securityerror data-x-internal=securityerror>"<code>SecurityError</code>"</a> <code id=relaxing-the-same-origin-restriction:domexception-3><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code>.<li><p>Let <var>effectiveDomain</var> be <a id=relaxing-the-same-origin-restriction:this-5 href=https://heycam.github.io/webidl/#this data-x-internal=this>this</a>'s <a href=#concept-origin id=relaxing-the-same-origin-restriction:concept-origin-3>origin</a>'s <a href=#concept-origin-effective-domain id=relaxing-the-same-origin-restriction:concept-origin-effective-domain-2>effective domain</a>.
+
+   <li><p>If <var>effectiveDomain</var> is null, then throw a
+   <a id=relaxing-the-same-origin-restriction:securityerror-5 href=https://heycam.github.io/webidl/#securityerror data-x-internal=securityerror>"<code>SecurityError</code>"</a> <code id=relaxing-the-same-origin-restriction:domexception-4><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code>.<li><p>If the given value <a href=#is-a-registrable-domain-suffix-of-or-is-equal-to id=relaxing-the-same-origin-restriction:is-a-registrable-domain-suffix-of-or-is-equal-to>is not
+   a registrable domain suffix of and is not equal to</a> <var>effectiveDomain</var>, then throw
+   a <a id=relaxing-the-same-origin-restriction:securityerror-6 href=https://heycam.github.io/webidl/#securityerror data-x-internal=securityerror>"<code>SecurityError</code>"</a> <code id=relaxing-the-same-origin-restriction:domexception-5><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code>.<li><p>If the <a id=relaxing-the-same-origin-restriction:surrounding-agent href=https://tc39.es/ecma262/#surrounding-agent data-x-internal=surrounding-agent>surrounding agent</a>'s <a id=relaxing-the-same-origin-restriction:agent-cluster href=https://tc39.es/ecma262/#sec-agent-clusters data-x-internal=agent-cluster>agent cluster</a>'s <a id=relaxing-the-same-origin-restriction:cross-origin-isolated href=webappapis.html#cross-origin-isolated>cross-origin
+   isolated</a> is true, then return.<li><p>If the <a id=relaxing-the-same-origin-restriction:surrounding-agent-2 href=https://tc39.es/ecma262/#surrounding-agent data-x-internal=surrounding-agent>surrounding agent</a>'s <a id=relaxing-the-same-origin-restriction:agent-cluster-2 href=https://tc39.es/ecma262/#sec-agent-clusters data-x-internal=agent-cluster>agent cluster</a>'s
+   <a id=relaxing-the-same-origin-restriction:origin-isolated href=webappapis.html#origin-isolated>origin-isolated</a> is true, then return.<li><p>Set <var>this</var>'s <a href=#concept-origin id=relaxing-the-same-origin-restriction:concept-origin-4>origin</a>'s <a href=#concept-origin-domain id=relaxing-the-same-origin-restriction:concept-origin-domain-2>domain</a> to the result of <a href=https://url.spec.whatwg.org/#concept-host-parser id=relaxing-the-same-origin-restriction:host-parser data-x-internal=host-parser>parsing</a> the given value.</ol>
+
+  <p>To determine if a string <var>hostSuffixString</var> <dfn id=is-a-registrable-domain-suffix-of-or-is-equal-to data-lt="is a registrable
+  domain suffix of or is equal to|is not a registrable domain suffix of and is not equal to" data-export="">is a
+  registrable domain suffix of or is equal to</dfn> a <a href=https://url.spec.whatwg.org/#concept-host id=relaxing-the-same-origin-restriction:concept-host data-x-internal=concept-host>host</a>
+  <var>originalHost</var>, run these steps:</p>
+  
+
+  <ol><li><p>If <var>hostSuffixString</var> is the empty string, then return false.<li><p>Let <var>host</var> be the result of <a href=https://url.spec.whatwg.org/#concept-host-parser id=relaxing-the-same-origin-restriction:host-parser-2 data-x-internal=host-parser>parsing</a>
+   <var>hostSuffixString</var>.<li><p>If <var>host</var> is failure, then return false.<li>
+    <p>If <var>host</var> does not <a href=https://url.spec.whatwg.org/#concept-host-equals id=relaxing-the-same-origin-restriction:host-equals data-x-internal=host-equals>equal</a> <var>originalHost</var>,
+    then:</p>
+
+    <ol><li>
+      <p>If <var>host</var> or <var>originalHost</var> is not a <a href=https://url.spec.whatwg.org/#concept-domain id=relaxing-the-same-origin-restriction:concept-domain data-x-internal=concept-domain>domain</a>, then return false.</p>
+
+      <p class=note>This excludes <a href=https://url.spec.whatwg.org/#concept-host id=relaxing-the-same-origin-restriction:concept-host-2 data-x-internal=concept-host>hosts</a> that are an <a id=relaxing-the-same-origin-restriction:ipv4-address href=https://url.spec.whatwg.org/#concept-ipv4 data-x-internal=ipv4-address>IPv4
+      address</a> or an <a id=relaxing-the-same-origin-restriction:ipv6-address href=https://url.spec.whatwg.org/#concept-ipv6 data-x-internal=ipv6-address>IPv6 address</a>.</p>
+     <li><p>If <var>host</var>, prefixed by a U+002E FULL STOP (.), does not exactly match the end
+     of <var>originalHost</var>, then return false.<li><p>If <var>host</var> <a href=https://url.spec.whatwg.org/#concept-host-equals id=relaxing-the-same-origin-restriction:host-equals-2 data-x-internal=host-equals>equals</a> <var>host</var>'s
+     <a id=relaxing-the-same-origin-restriction:public-suffix href=https://url.spec.whatwg.org/#host-public-suffix data-x-internal=public-suffix>public suffix</a>, then return false. <a href=references.html#refsURL>[URL]</a></ol>
+   <li><p>Return true.</ol>
+
+  
+
+
+
+
+  <h4 id=origin-isolation><span class=secno>7.5.3</span> Origin isolation<a href=#origin-isolation class=self-link></a></h4>
+<div data-zh-date="" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/loading-web-pages/origin/origin-isolation.zh.html?filename=origin-isolation.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Floading-web-pages%2Forigin%2Forigin-isolation.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/loading-web-pages/origin/origin-isolation.en.html></div>
+
+  <dl class=domintro><dt>window . <code id=dom-originisolated-dev><a href=#dom-originisolated>originIsolated</a></code><dd>
+    <p>Returns true if this <code id=origin-isolation:window><a href=window-object.html#window>Window</a></code> is origin-isolated in the manner described in this
+    section.</p>
+   </dl>
+
+  <p>A <code id=origin-isolation:document><a href=dom.html#document>Document</a></code> delivered over a <a id=origin-isolation:secure-context href=webappapis.html#secure-context>secure context</a> can opt in to origin
+  isolation, by using the `<code id=origin-isolation:origin-isolation-2><a href=iana.html#origin-isolation-2>Origin-Isolation</a></code>` HTTP
+  response header. This header is a <a href=https://httpwg.org/http-extensions/draft-ietf-httpbis-header-structure.html id=origin-isolation:http-structured-header data-x-internal=http-structured-header>structured header</a>
+  whose value must be a <a href=https://httpwg.org/http-extensions/draft-ietf-httpbis-header-structure.html#boolean id=origin-isolation:http-structured-header-boolean data-x-internal=http-structured-header-boolean>boolean</a>. <a href=references.html#refsSTRUCTURED-FIELDS>[STRUCTURED-FIELDS]</a></p>
+
+  <p>Per the processing model in the <a href=browsing-the-web.html#initialise-the-document-object id=origin-isolation:initialise-the-document-object>create
+  and initialize a new <code>Document</code> object</a>, values that are not the <a href=https://httpwg.org/http-extensions/draft-ietf-httpbis-header-structure.html#boolean id=origin-isolation:http-structured-header-boolean-2 data-x-internal=http-structured-header-boolean>structured
+  header boolean</a> true value (i.e., `<code>?1</code>`) will be ignored.</p>
+
+  <p>The consequences of using this header are that the resulting
+  <code id=origin-isolation:document-2><a href=dom.html#document>Document</a></code>'s <a id=origin-isolation:agent-cluster-key href=webappapis.html#agent-cluster-key>agent cluster key</a> is its <a href=#concept-origin id=origin-isolation:concept-origin>origin</a>, instead of the
+  <a href=#obtain-a-site id=origin-isolation:obtain-a-site>corresponding site</a>. In terms of observable effects, this means
+  that attempting to <a href=#relaxing-the-same-origin-restriction>relax the same-origin
+  restriction</a> using <code id=origin-isolation:dom-document-domain><a href=#dom-document-domain>document.domain</a></code> will instead do
+  nothing, and it will not be possible to send <code id=origin-isolation:webassembly.module><a data-x-internal=webassembly.module href=https://webassembly.github.io/spec/js-api/#module>WebAssembly.Module</a></code> objects to
+  cross-origin <code id=origin-isolation:document-3><a href=dom.html#document>Document</a></code>s (even if they are <a href=#same-site id=origin-isolation:same-site>same site</a>). Behind the scenes,
+  this isolation can allow user agents to allocate implementation-specific resources corresponding
+  to <a href=https://tc39.es/ecma262/#sec-agent-clusters id=origin-isolation:agent-cluster data-x-internal=agent-cluster>agent clusters</a>, such as processes or threads, more
+  efficiently.</p>
+
+  <p>Note that within a <a id=origin-isolation:browsing-context-group href=browsers.html#browsing-context-group>browsing context group</a>, the `<code id=origin-isolation:origin-isolation-2-2><a href=iana.html#origin-isolation-2>Origin-Isolation</a></code>` header can never cause same-origin
+  <code id=origin-isolation:document-4><a href=dom.html#document>Document</a></code> objects to end up in different <a href=https://tc39.es/ecma262/#sec-agent-clusters id=origin-isolation:agent-cluster-2 data-x-internal=agent-cluster>agent
+  clusters</a>, even if one sends the header and the other doesn't. This is
+  prevented by means of the <a id=origin-isolation:historical-agent-cluster-key-map href=browsers.html#historical-agent-cluster-key-map>historical agent cluster key map</a>.</p>
+
+  <p class=note>This means that the <code id=origin-isolation:dom-originisolated><a href=#dom-originisolated>originIsolated</a></code> getter
+  can return false, even if the header is set, if the header was omitted on a previously-loaded
+  same-origin page in the same <a id=origin-isolation:browsing-context-group-2 href=browsers.html#browsing-context-group>browsing context group</a>. Similarly, it can return true
+  even when the header is not set.</p>
+
+  <p>The <dfn id=dom-originisolated><code>originIsolated</code></dfn> getter steps are
+  to return the <a id=origin-isolation:surrounding-agent href=https://tc39.es/ecma262/#surrounding-agent data-x-internal=surrounding-agent>surrounding agent</a>'s <a id=origin-isolation:agent-cluster-3 href=https://tc39.es/ecma262/#sec-agent-clusters data-x-internal=agent-cluster>agent cluster</a>'s
+  <a id=origin-isolation:origin-isolated href=webappapis.html#origin-isolated>origin-isolated</a>.</p>
+
+  <p class=note><code id=origin-isolation:document-5><a href=dom.html#document>Document</a></code>s with an <a href=#concept-origin-opaque id=origin-isolation:concept-origin-opaque>opaque
+  origin</a> can be considered unconditionally origin-isolated; for them the header has no
+  effect.</p>
+
+  <p class=note>Similarly, <code id=origin-isolation:document-6><a href=dom.html#document>Document</a></code>s in a <a id=origin-isolation:cross-origin-isolated href=webappapis.html#cross-origin-isolated>cross-origin isolated</a>
+  <a id=origin-isolation:agent-cluster-4 href=https://tc39.es/ecma262/#sec-agent-clusters data-x-internal=agent-cluster>agent cluster</a> are automatically origin-isolated. The `<code id=origin-isolation:origin-isolation-2-3><a href=iana.html#origin-isolation-2>Origin-Isolation</a></code>` header might be useful as an additional
+  hint to implementations about resource allocation, since the `<code id=origin-isolation:cross-origin-opener-policy-2><a href=iana.html#cross-origin-opener-policy-2>Cross-Origin-Opener-Policy</a></code>` and
+  `<code id=origin-isolation:cross-origin-embedder-policy><a href=iana.html#cross-origin-embedder-policy>Cross-Origin-Embedder-Policy</a></code>` headers used to achieve cross-origin isolation are
+  more about ensuring that everything in the same address space opts in to being there. But adding
+  it would have no additional observable effects on author code.</p>
+
+
+
+
+  <h3 id=sandboxing><span class=secno>7.6</span> Sandboxing<a href=#sandboxing class=self-link></a></h3>
+<div data-zh-date="" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/loading-web-pages/sandboxing.zh.html?filename=sandboxing.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Floading-web-pages%2Fsandboxing.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/loading-web-pages/sandboxing.en.html></div>
+
+  <p>A <dfn id=sandboxing-flag-set data-export="">sandboxing flag set</dfn> is a set of zero or more of the following flags, which
+  are used to restrict the abilities that potentially untrusted resources have:</p>
+
+  <dl><dt>The <dfn id=sandboxed-navigation-browsing-context-flag data-export="">sandboxed navigation browsing context flag</dfn><dd>
+    <p>This flag <a href=browsing-the-web.html#sandboxLinks>prevents content from navigating browsing contexts other
+    than the sandboxed browsing context itself</a> (or browsing contexts further nested inside it),
+    <a href=browsers.html#auxiliary-browsing-context id=sandboxing:auxiliary-browsing-context>auxiliary browsing contexts</a> (which are protected
+    by the <a href=#sandboxed-auxiliary-navigation-browsing-context-flag id=sandboxing:sandboxed-auxiliary-navigation-browsing-context-flag>sandboxed auxiliary navigation browsing context flag</a> defined next), and the
+    <a id=sandboxing:top-level-browsing-context href=browsers.html#top-level-browsing-context>top-level browsing context</a> (which is protected by the <a href=#sandboxed-top-level-navigation-without-user-activation-browsing-context-flag id=sandboxing:sandboxed-top-level-navigation-without-user-activation-browsing-context-flag>sandboxed top-level
+    navigation without user activation browsing context flag</a> and <a href=#sandboxed-top-level-navigation-with-user-activation-browsing-context-flag id=sandboxing:sandboxed-top-level-navigation-with-user-activation-browsing-context-flag>sandboxed top-level
+    navigation with user activation browsing context flag</a> defined below).</p>
+
+    <p>If the <a href=#sandboxed-auxiliary-navigation-browsing-context-flag id=sandboxing:sandboxed-auxiliary-navigation-browsing-context-flag-2>sandboxed auxiliary navigation browsing context flag</a> is not set, then in
+    certain cases the restrictions nonetheless allow popups (new <a href=browsers.html#top-level-browsing-context id=sandboxing:top-level-browsing-context-2>top-level browsing contexts</a>) to be opened. These <a href=browsers.html#browsing-context id=sandboxing:browsing-context>browsing contexts</a> always have <dfn id=one-permitted-sandboxed-navigator>one permitted sandboxed navigator</dfn>, set
+    when the browsing context is created, which allows the <a id=sandboxing:browsing-context-2 href=browsers.html#browsing-context>browsing context</a> that
+    created them to actually navigate them. (Otherwise, the <a href=#sandboxed-navigation-browsing-context-flag id=sandboxing:sandboxed-navigation-browsing-context-flag>sandboxed navigation browsing
+    context flag</a> would prevent them from being navigated even if they were opened.)</p>
+   <dt>The <dfn id=sandboxed-auxiliary-navigation-browsing-context-flag data-export="">sandboxed auxiliary navigation browsing context flag</dfn><dd>
+    <p>This flag <a href=browsers.html#sandboxWindowOpen>prevents content from creating new auxiliary browsing
+    contexts</a>, e.g. using the <code id=sandboxing:attr-hyperlink-target><a href=links.html#attr-hyperlink-target>target</a></code> attribute or
+    the <code id=sandboxing:dom-open><a href=window-object.html#dom-open>window.open()</a></code> method.</p>
+   <dt>The <dfn id=sandboxed-top-level-navigation-without-user-activation-browsing-context-flag data-export="">sandboxed top-level navigation without user activation browsing
+   context flag</dfn><dd>
+    <p>This flag <a href=browsing-the-web.html#sandboxLinks>prevents content from navigating their <span>top-level
+    browsing context</span></a> and <a href=window-object.html#sandboxClose>prevents content from closing their
+    <span>top-level browsing context</span></a>. It is consulted only when the sandboxed browsing
+    context's <a id=sandboxing:active-window href=browsers.html#active-window>active window</a> does not have <a id=sandboxing:transient-activation href=interaction.html#transient-activation>transient activation</a>.</p>
+
+    <p>When the <a href=#sandboxed-top-level-navigation-without-user-activation-browsing-context-flag id=sandboxing:sandboxed-top-level-navigation-without-user-activation-browsing-context-flag-2>sandboxed top-level navigation without user activation browsing context
+    flag</a> is <em>not</em> set, content can navigate its <a id=sandboxing:top-level-browsing-context-3 href=browsers.html#top-level-browsing-context>top-level browsing
+    context</a>, but other <a href=browsers.html#browsing-context id=sandboxing:browsing-context-3>browsing contexts</a> are still
+    protected by the <a href=#sandboxed-navigation-browsing-context-flag id=sandboxing:sandboxed-navigation-browsing-context-flag-2>sandboxed navigation browsing context flag</a> and possibly
+    the <a href=#sandboxed-auxiliary-navigation-browsing-context-flag id=sandboxing:sandboxed-auxiliary-navigation-browsing-context-flag-3>sandboxed auxiliary navigation browsing context flag</a>.</p>
+   <dt>The <dfn id=sandboxed-top-level-navigation-with-user-activation-browsing-context-flag data-export="">sandboxed top-level navigation with user activation browsing context
+   flag</dfn><dd>
+    <p>This flag <a href=browsing-the-web.html#sandboxLinks>prevents content from navigating their <span>top-level
+    browsing context</span></a> and <a href=window-object.html#sandboxClose>prevents content from closing their
+    <span>top-level browsing context</span></a>. It is consulted only when the sandboxed browsing
+    context's <a id=sandboxing:active-window-2 href=browsers.html#active-window>active window</a> has <a id=sandboxing:transient-activation-2 href=interaction.html#transient-activation>transient activation</a>.</p>
+
+    <p>As with the <a href=#sandboxed-top-level-navigation-without-user-activation-browsing-context-flag id=sandboxing:sandboxed-top-level-navigation-without-user-activation-browsing-context-flag-3>sandboxed top-level navigation without user activation browsing context
+    flag</a>, this flag only affects the <a id=sandboxing:top-level-browsing-context-4 href=browsers.html#top-level-browsing-context>top-level browsing context</a>; if it is not
+    set, other <a href=browsers.html#browsing-context id=sandboxing:browsing-context-4>browsing contexts</a> might still be protected by
+    other flags.</p>
+   <dt>The <dfn id=sandboxed-plugins-browsing-context-flag data-export="">sandboxed plugins browsing context flag</dfn><dd><p>This flag prevents content from instantiating <a href=infrastructure.html#plugin id=sandboxing:plugin>plugins</a>,
+   whether using <a href=iframe-embed-object.html#sandboxPluginEmbed>the <code>embed</code> element</a>, <a href=iframe-embed-object.html#sandboxPluginObject>the <code>object</code> element</a>, or through <a href=browsing-the-web.html#sandboxPluginNavigate>navigation</a> of their <a id=sandboxing:nested-browsing-context href=browsers.html#nested-browsing-context>nested browsing context</a>,
+   unless those <a href=infrastructure.html#plugin id=sandboxing:plugin-2>plugins</a> can be <a href=infrastructure.html#concept-plugin-secure id=sandboxing:concept-plugin-secure>secured</a>.<dt>The <dfn id=sandboxed-origin-browsing-context-flag data-export="">sandboxed origin browsing context flag</dfn><dd>
+    <p>This flag <a href=browsers.html#sandboxOrigin>forces content into a unique origin</a>, thus preventing
+    it from accessing other content from the same <a href=#concept-origin id=sandboxing:concept-origin>origin</a>.</p>
+
+    <p>This flag also <a href=dom.html#sandboxCookies>prevents script from reading from or writing to the
+    <code>document.cookie</code> IDL attribute</a>, and blocks access to
+    <code id=sandboxing:dom-localstorage><a href=webstorage.html#dom-localstorage>localStorage</a></code>.</p>
+   <dt>The <dfn id=sandboxed-forms-browsing-context-flag data-export="">sandboxed forms browsing context flag</dfn><dd>
+    <p>This flag <a href=form-control-infrastructure.html#sandboxSubmitBlocked>blocks form submission</a>.</p>
+   <dt>The <dfn id=sandboxed-pointer-lock-browsing-context-flag data-export="">sandboxed pointer lock browsing context flag</dfn><dd>
+    <p>This flag disables the Pointer Lock API. <a href=references.html#refsPOINTERLOCK>[POINTERLOCK]</a></p>
+   <dt>The <dfn id=sandboxed-scripts-browsing-context-flag data-export="">sandboxed scripts browsing context flag</dfn><dd>
+    <p>This flag <a href=webappapis.html#sandboxScriptBlocked>blocks script execution</a>.</p>
+   <dt>The <dfn id=sandboxed-automatic-features-browsing-context-flag data-export="">sandboxed automatic features browsing context flag</dfn><dd>
+    <p>This flag blocks features that trigger automatically, such as <a href=media.html#attr-media-autoplay id=sandboxing:attr-media-autoplay>automatically playing a video</a> or <a href=interaction.html#attr-fe-autofocus id=sandboxing:attr-fe-autofocus>automatically focusing a form control</a>.</p>
+   <dt>The <dfn id=sandboxed-document.domain-browsing-context-flag data-export="">sandboxed <code>document.domain</code>
+   browsing context flag</dfn><dd>
+    <p>This flag prevents content from using the
+    <code id=sandboxing:dom-document-domain><a href=#dom-document-domain>document.domain</a></code> setter.</p>
+   <dt>The <dfn id=sandbox-propagates-to-auxiliary-browsing-contexts-flag data-export="">sandbox propagates to auxiliary browsing contexts flag</dfn><dd>
+    <p>This flag prevents content from escaping the sandbox by ensuring that any
+    <a id=sandboxing:auxiliary-browsing-context-2 href=browsers.html#auxiliary-browsing-context>auxiliary browsing context</a> it creates inherits the content's
+    <a href=#active-sandboxing-flag-set id=sandboxing:active-sandboxing-flag-set>active sandboxing flag set</a>.</p>
+   <dt>The <dfn id=sandboxed-modals-flag data-export="">sandboxed modals flag</dfn><dd>
+    <p>This flag prevents content from using any of the following features to produce modal
+    dialogs:</p>
+
+    <ul><li><code id=sandboxing:dom-alert><a href=timers-and-user-prompts.html#dom-alert>window.alert()</a></code><li><code id=sandboxing:dom-confirm><a href=timers-and-user-prompts.html#dom-confirm>window.confirm()</a></code><li><code id=sandboxing:dom-print><a href=timers-and-user-prompts.html#dom-print>window.print()</a></code><li><code id=sandboxing:dom-prompt><a href=timers-and-user-prompts.html#dom-prompt>window.prompt()</a></code><li>the <code id=sandboxing:event-beforeunload><a href=indices.html#event-beforeunload>beforeunload</a></code> event</ul>
+   <dt>The <dfn id=sandboxed-orientation-lock-browsing-context-flag data-export="">sandboxed orientation lock browsing context flag</dfn><dd>
+    <p>This flag disables the ability to lock the screen orientation. <a href=references.html#refsSCREENORIENTATION>[SCREENORIENTATION]</a></p>
+   <dt>The <dfn id=sandboxed-presentation-browsing-context-flag data-export="">sandboxed presentation browsing context flag</dfn><dd>
+    <p>This flag disables the Presentation API. <a href=references.html#refsPRESENTATION>[PRESENTATION]</a></p>
+   <dt>The <dfn id=sandboxed-downloads-browsing-context-flag data-export="">sandboxed downloads browsing context flag</dfn><dd>
+    <p>This flag prevents content from initiating or instantiating downloads, whether through <a href=links.html#downloading-hyperlinks id=sandboxing:downloading-hyperlinks>downloading hyperlinks</a> or through <a href=browsing-the-web.html#process-a-navigate-response id=sandboxing:process-a-navigate-response>navigation</a> that gets handled <a id=sandboxing:as-a-download href=links.html#as-a-download>as a
+    download</a>.</p>
+   </dl>
+
+  <p>When the user agent is to <dfn id=parse-a-sandboxing-directive data-export="">parse a sandboxing directive</dfn>, given a string
+  <var>input</var>, a <a href=#sandboxing-flag-set id=sandboxing:sandboxing-flag-set>sandboxing flag set</a> <var>output</var>, it must run the following
+  steps:</p>
+
+  <ol><li><p><a href=https://infra.spec.whatwg.org/#split-on-ascii-whitespace id=sandboxing:split-a-string-on-spaces data-x-internal=split-a-string-on-spaces>Split <var>input</var> on ASCII
+   whitespace</a>, to obtain <var>tokens</var>.<li><p>Let <var>output</var> be empty.<li>
+    <p>Add the following flags to <var>output</var>:</p>
+
+    <ul><li><p>The <a href=#sandboxed-navigation-browsing-context-flag id=sandboxing:sandboxed-navigation-browsing-context-flag-3>sandboxed navigation browsing context flag</a>.<li><p>The <a href=#sandboxed-auxiliary-navigation-browsing-context-flag id=sandboxing:sandboxed-auxiliary-navigation-browsing-context-flag-4>sandboxed auxiliary navigation browsing context flag</a>, unless <var>tokens</var> contains the <dfn id=attr-iframe-sandbox-allow-popups><code>allow-popups</code></dfn> keyword.<li><p>The <a href=#sandboxed-top-level-navigation-without-user-activation-browsing-context-flag id=sandboxing:sandboxed-top-level-navigation-without-user-activation-browsing-context-flag-4>sandboxed top-level navigation without user activation browsing context flag</a>, unless
+     <var>tokens</var> contains the <dfn id=attr-iframe-sandbox-allow-top-navigation><code>allow-top-navigation</code></dfn> keyword.<li>
+      <p>The <a href=#sandboxed-top-level-navigation-with-user-activation-browsing-context-flag id=sandboxing:sandboxed-top-level-navigation-with-user-activation-browsing-context-flag-2>sandboxed top-level navigation with user activation browsing context flag</a>, unless
+      <var>tokens</var> contains either the <dfn id=attr-iframe-sandbox-allow-top-navigation-by-user-activation><code>allow-top-navigation-by-user-activation</code></dfn>
+      keyword or the <code id=sandboxing:attr-iframe-sandbox-allow-top-navigation><a href=#attr-iframe-sandbox-allow-top-navigation>allow-top-navigation</a></code> keyword.</p>
+
+      <p class=note>This means that if the <code id=sandboxing:attr-iframe-sandbox-allow-top-navigation-2><a href=#attr-iframe-sandbox-allow-top-navigation>allow-top-navigation</a></code> is present, the <code id=sandboxing:attr-iframe-sandbox-allow-top-navigation-by-user-activation><a href=#attr-iframe-sandbox-allow-top-navigation-by-user-activation>allow-top-navigation-by-user-activation</a></code>
+      keyword will have no effect. For this reason, specifying both is a document conformance error.</p>
+     <li><p>The <a href=#sandboxed-plugins-browsing-context-flag id=sandboxing:sandboxed-plugins-browsing-context-flag>sandboxed plugins browsing context flag</a>.<li>
+      <p>The <a href=#sandboxed-origin-browsing-context-flag id=sandboxing:sandboxed-origin-browsing-context-flag>sandboxed origin browsing context flag</a>, unless the <var>tokens</var> contains the <dfn id=attr-iframe-sandbox-allow-same-origin><code>allow-same-origin</code></dfn>
+      keyword.</p>
+
+      <div class=note>
+       <p>The <code id=sandboxing:attr-iframe-sandbox-allow-same-origin><a href=#attr-iframe-sandbox-allow-same-origin>allow-same-origin</a></code> keyword
+       is intended for two cases.</p>
+
+       <p>First, it can be used to allow content from the same site to be sandboxed to disable
+       scripting, while still allowing access to the DOM of the sandboxed content.</p>
+
+       <p>Second, it can be used to embed content from a third-party site, sandboxed to prevent that
+       site from opening popups, etc, without preventing the embedded page from communicating back
+       to its originating site, using the database APIs to store data, etc.</p>
+      </div>
+     <li><p>The <a href=#sandboxed-forms-browsing-context-flag id=sandboxing:sandboxed-forms-browsing-context-flag>sandboxed forms browsing context flag</a>, unless <var>tokens</var> contains the <dfn id=attr-iframe-sandbox-allow-forms><code>allow-forms</code></dfn> keyword.<li><p>The <a href=#sandboxed-pointer-lock-browsing-context-flag id=sandboxing:sandboxed-pointer-lock-browsing-context-flag>sandboxed pointer lock browsing context flag</a>, unless <var>tokens</var> contains the <dfn id=attr-iframe-sandbox-allow-pointer-lock><code>allow-pointer-lock</code></dfn>
+     keyword.<li><p>The <a href=#sandboxed-scripts-browsing-context-flag id=sandboxing:sandboxed-scripts-browsing-context-flag>sandboxed scripts browsing context flag</a>, unless <var>tokens</var> contains the <dfn id=attr-iframe-sandbox-allow-scripts><code>allow-scripts</code></dfn> keyword.<li>
+      <p>The <a href=#sandboxed-automatic-features-browsing-context-flag id=sandboxing:sandboxed-automatic-features-browsing-context-flag>sandboxed automatic features browsing context flag</a>, unless <var>tokens</var> contains the <code id=sandboxing:attr-iframe-sandbox-allow-scripts><a href=#attr-iframe-sandbox-allow-scripts>allow-scripts</a></code> keyword (defined above).</p>
+
+      <p class=note>This flag is relaxed by the same keyword as scripts, because when scripts are
+      enabled these features are trivially possible anyway, and it would be unfortunate to force
+      authors to use script to do them when sandboxed rather than allowing them to use the
+      declarative features.</p>
+     <li><p>The <a href=#sandboxed-document.domain-browsing-context-flag id=sandboxing:sandboxed-document.domain-browsing-context-flag>sandboxed <code>document.domain</code> browsing
+     context flag</a>.<li><p>The <a href=#sandbox-propagates-to-auxiliary-browsing-contexts-flag id=sandboxing:sandbox-propagates-to-auxiliary-browsing-contexts-flag>sandbox propagates to auxiliary browsing contexts flag</a>, unless
+     <var>tokens</var> contains the <dfn id=attr-iframe-sandbox-allow-popups-to-escape-sandbox><code>allow-popups-to-escape-sandbox</code></dfn>
+     keyword.<li><p>The <a href=#sandboxed-modals-flag id=sandboxing:sandboxed-modals-flag>sandboxed modals flag</a>, unless <var>tokens</var> contains the <dfn id=attr-iframe-sandbox-allow-modals><code>allow-modals</code></dfn> keyword.<li><p>The <a href=#sandboxed-orientation-lock-browsing-context-flag id=sandboxing:sandboxed-orientation-lock-browsing-context-flag>sandboxed orientation lock browsing context flag</a>, unless
+     <var>tokens</var> contains the <dfn id=attr-iframe-sandbox-allow-orientation-lock><code>allow-orientation-lock</code></dfn>
+     keyword.<li><p>The <a href=#sandboxed-presentation-browsing-context-flag id=sandboxing:sandboxed-presentation-browsing-context-flag>sandboxed presentation browsing context flag</a>, unless <var>tokens</var>
+     contains the <dfn id=attr-iframe-sandbox-allow-presentation><code>allow-presentation</code></dfn>
+     keyword.<li><p>The <a href=#sandboxed-downloads-browsing-context-flag id=sandboxing:sandboxed-downloads-browsing-context-flag>sandboxed downloads browsing context flag</a>, unless <var>
+     tokens</var> contains the <dfn id=attr-iframe-sandbox-allow-downloads><code>allow-downloads</code></dfn> keyword.</ul>
+   </ol>
+
+  <hr>
+
+  <p>Every <a id=sandboxing:top-level-browsing-context-5 href=browsers.html#top-level-browsing-context>top-level browsing context</a> has a <dfn id=popup-sandboxing-flag-set>popup sandboxing flag set</dfn>, which
+  is a <a href=#sandboxing-flag-set id=sandboxing:sandboxing-flag-set-2>sandboxing flag set</a>. When a <a id=sandboxing:browsing-context-5 href=browsers.html#browsing-context>browsing context</a> is created, its
+  <a href=#popup-sandboxing-flag-set id=sandboxing:popup-sandboxing-flag-set>popup sandboxing flag set</a> must be empty. It is populated by <a id=sandboxing:the-rules-for-choosing-a-browsing-context-given-a-browsing-context-name href=browsers.html#the-rules-for-choosing-a-browsing-context-given-a-browsing-context-name>the rules for
+  choosing a browsing context</a> and the <a href=#obtain-browsing-context-navigation id=sandboxing:obtain-browsing-context-navigation>obtain
+  a browsing context to use for a navigation response</a> algorithm.</p>
+
+  <p>Every <code id=sandboxing:the-iframe-element><a href=iframe-embed-object.html#the-iframe-element>iframe</a></code> element has an <dfn id=iframe-sandboxing-flag-set><code>iframe</code> sandboxing flag set</dfn>,
+  which is a <a href=#sandboxing-flag-set id=sandboxing:sandboxing-flag-set-3>sandboxing flag set</a>. Which flags in an <a href=#iframe-sandboxing-flag-set id=sandboxing:iframe-sandboxing-flag-set><code>iframe</code>
+  sandboxing flag set</a> are set at any particular time is determined by the <code id=sandboxing:the-iframe-element-2><a href=iframe-embed-object.html#the-iframe-element>iframe</a></code>
+  element's <code id=sandboxing:attr-iframe-sandbox><a href=iframe-embed-object.html#attr-iframe-sandbox>sandbox</a></code> attribute.</p>
+
+  <p>Every <code id=sandboxing:document><a href=dom.html#document>Document</a></code> has an <dfn data-dfn-for=Document id=active-sandboxing-flag-set data-export="">active sandboxing flag set</dfn>,
+  which is a <a href=#sandboxing-flag-set id=sandboxing:sandboxing-flag-set-4>sandboxing flag set</a>. When the <code id=sandboxing:document-2><a href=dom.html#document>Document</a></code> is created, its
+  <a href=#active-sandboxing-flag-set id=sandboxing:active-sandboxing-flag-set-2>active sandboxing flag set</a> must be empty. It is populated by the <a href=browsing-the-web.html#navigate id=sandboxing:navigate>navigation algorithm</a>.</p>
+
+  <p>Every resource that is obtained by the <a href=browsing-the-web.html#navigate id=sandboxing:navigate-2>navigation algorithm</a> has
+  a <dfn id=forced-sandboxing-flag-set data-export="">forced sandboxing flag set</dfn>, which is a <a href=#sandboxing-flag-set id=sandboxing:sandboxing-flag-set-5>sandboxing flag set</a>. A
+  resource by default has no flags set in its <a href=#forced-sandboxing-flag-set id=sandboxing:forced-sandboxing-flag-set>forced sandboxing flag set</a>, but other
+  specifications can define that certain flags are set.</p>
+
+  <p class=note>In particular, the <a href=#forced-sandboxing-flag-set id=sandboxing:forced-sandboxing-flag-set-2>forced sandboxing flag set</a> is used by
+  <cite>Content Security Policy</cite>. <a href=references.html#refsCSP>[CSP]</a></p>
+
+  <hr>
+
+  <p>To <dfn id=determining-the-creation-sandboxing-flags>determine the creation sandboxing
+  flags</dfn> for a <a href=browsers.html#concept-document-bc id=sandboxing:concept-document-bc>browsing context</a> <var>browsing
+  context</var>, given null or an element <var>embedder</var>, return the <a href=https://infra.spec.whatwg.org/#set-union id=sandboxing:set-union data-x-internal=set-union>union</a> of the flags that are present in the following <a href=#sandboxing-flag-set id=sandboxing:sandboxing-flag-set-6>sandboxing flag sets</a>:</p>
+
+  <ul><li><p>If <var>embedder</var> is null, then: the flags set on <var>browsing context</var>'s
+   <a href=#popup-sandboxing-flag-set id=sandboxing:popup-sandboxing-flag-set-2>popup sandboxing flag set</a>.<li><p>If <var>embedder</var> is an element, then: the flags set on <var>embedder</var>'s
+   <a href=#iframe-sandboxing-flag-set id=sandboxing:iframe-sandboxing-flag-set-2><code>iframe</code> sandboxing flag set</a>.<li><p>If <var>embedder</var> is an element, then: the flags set on <var>embedder</var>'s
+   <a id=sandboxing:node-document href=https://dom.spec.whatwg.org/#concept-node-document data-x-internal=node-document>node document</a>'s <a href=#active-sandboxing-flag-set id=sandboxing:active-sandboxing-flag-set-3>active sandboxing flag set</a>.</ul>
+
+  <p>After creation, the <dfn id=concept-bc-sandboxing-flags>sandboxing flags</dfn> for a
+  <a href=browsers.html#concept-document-bc id=sandboxing:concept-document-bc-2>browsing context</a> <var>browsing context</var> are the
+  result of <a href=#determining-the-creation-sandboxing-flags id=sandboxing:determining-the-creation-sandboxing-flags>determining the creation sandboxing flags</a> given <var>browsing context</var>
+  and <var>browsing context</var>'s <a href=browsers.html#bc-container id=sandboxing:bc-container>container</a>.
+
+
+
+
+  <h3 id=cross-origin-opener-policies><span class=secno>7.7</span> Cross-origin opener policies<a href=#cross-origin-opener-policies class=self-link></a></h3>
+<div data-zh-date="" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/loading-web-pages/cross-origin-opener-policies/index.zh.html?filename=index.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Floading-web-pages%2Fcross-origin-opener-policies%2Findex.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/loading-web-pages/cross-origin-opener-policies/index.en.html></div>
+
+  <p>A <dfn id=cross-origin-opener-policy>cross-origin opener policy</dfn> allows a document which is navigated to in a
+  <a id=cross-origin-opener-policies:top-level-browsing-context href=browsers.html#top-level-browsing-context>top-level browsing context</a> to force the creation of a new <a id=cross-origin-opener-policies:top-level-browsing-context-2 href=browsers.html#top-level-browsing-context>top-level browsing
+  context</a>, and a corresponding <a href=browsers.html#tlbc-group id=cross-origin-opener-policies:tlbc-group>group</a>. It has one of the
+  following values:</p>
+
+  <dl><dt>"<dfn id=coop-unsafe-none><code>unsafe-none</code></dfn>"<dd><p>This is the (current) default and means that the document will occupy the same
+   <a id=cross-origin-opener-policies:top-level-browsing-context-3 href=browsers.html#top-level-browsing-context>top-level browsing context</a> as its predecessor, unless that document specified a
+   different <a href=#cross-origin-opener-policy id=cross-origin-opener-policies:cross-origin-opener-policy>cross-origin opener policy</a>.<dt>"<dfn id=coop-same-origin-allow-popups><code>same-origin-allow-popups</code></dfn>"<dd><p>This forces the creation of a new <a id=cross-origin-opener-policies:top-level-browsing-context-4 href=browsers.html#top-level-browsing-context>top-level browsing context</a> for the
+   document, unless its predecessor specified the same <a href=#cross-origin-opener-policy id=cross-origin-opener-policies:cross-origin-opener-policy-2>cross-origin opener policy</a> and
+   they are <a href=#same-origin id=cross-origin-opener-policies:same-origin>same origin</a>.<dt>"<dfn id=coop-same-origin><code>same-origin</code></dfn>"<dd><p>This behaves the same as "<code id=cross-origin-opener-policies:coop-same-origin-allow-popups><a href=#coop-same-origin-allow-popups>same-origin-allow-popups</a></code>", with the addition that
+   any <a id=cross-origin-opener-policies:auxiliary-browsing-context href=browsers.html#auxiliary-browsing-context>auxiliary browsing context</a> created needs to contain <a href=#same-origin id=cross-origin-opener-policies:same-origin-2>same origin</a>
+   documents that also have the same <a href=#cross-origin-opener-policy id=cross-origin-opener-policies:cross-origin-opener-policy-3>cross-origin opener policy</a> or it will appear
+   closed to the opener.<dt>"<dfn id=coop-same-origin-plus-coep><code>same-origin-plus-COEP</code></dfn>"<dd>
+    <p>This behaves the same as "<code id=cross-origin-opener-policies:coop-same-origin><a href=#coop-same-origin>same-origin</a></code>", with the
+    addition that it sets the (new) <a id=cross-origin-opener-policies:top-level-browsing-context-5 href=browsers.html#top-level-browsing-context>top-level browsing context</a>'s <a href=browsers.html#tlbc-group id=cross-origin-opener-policies:tlbc-group-2>group</a>'s <a href=browsers.html#bcg-cross-origin-isolated id=cross-origin-opener-policies:bcg-cross-origin-isolated>cross-origin isolated</a> to
+    true.</p>
+
+    <p class=note>"<code id=cross-origin-opener-policies:coop-same-origin-plus-coep><a href=#coop-same-origin-plus-coep>same-origin-plus-COEP</a></code>" cannot
+    be directly set via the `<code id=cross-origin-opener-policies:cross-origin-opener-policy-2-2><a href=iana.html#cross-origin-opener-policy-2>Cross-Origin-Opener-Policy</a></code>` header, but results
+    from a combination of setting both `<code><a href=iana.html#cross-origin-opener-policy-2 id=cross-origin-opener-policies:cross-origin-opener-policy-2-3>Cross-Origin-Opener-Policy</a>: <a href=#coop-same-origin id=cross-origin-opener-policies:coop-same-origin-2>same-origin</a></code>` and `<code><a id=cross-origin-opener-policies:cross-origin-embedder-policy href=iana.html#cross-origin-embedder-policy>Cross-Origin-Embedder-Policy</a>: require-corp</code>` together.</p>
+   </dl>
+
+  <p>To <dfn id=matching-coop>match cross-origin opener policies</dfn>, given a
+  <a href=#cross-origin-opener-policy id=cross-origin-opener-policies:cross-origin-opener-policy-4>cross-origin opener policy</a> <var>A</var>, an <a href=#concept-origin id=cross-origin-opener-policies:concept-origin>origin</a> <var>originA</var>, a
+  <a href=#cross-origin-opener-policy id=cross-origin-opener-policies:cross-origin-opener-policy-5>cross-origin opener policy</a> <var>B</var>, and an <a href=#concept-origin id=cross-origin-opener-policies:concept-origin-2>origin</a>
+  <var>originB</var>:</p>
+
+  <ol><li><p>If <var>A</var> is "<code id=cross-origin-opener-policies:coop-unsafe-none><a href=#coop-unsafe-none>unsafe-none</a></code>" and <var>B</var>
+   is "<code id=cross-origin-opener-policies:coop-unsafe-none-2><a href=#coop-unsafe-none>unsafe-none</a></code>", then return true.<li><p>If <var>A</var> is "<code id=cross-origin-opener-policies:coop-unsafe-none-3><a href=#coop-unsafe-none>unsafe-none</a></code>" or <var>B</var> is
+   "<code id=cross-origin-opener-policies:coop-unsafe-none-4><a href=#coop-unsafe-none>unsafe-none</a></code>", then return false.<li><p>If <var>A</var> is <var>B</var> and <var>originA</var> is <a href=#same-origin id=cross-origin-opener-policies:same-origin-3>same origin</a> with
+   <var>originB</var>, then return true.<li><p>Return false.</ol>
+
+
+  <h4 id=the-cross-origin-opener-policy-header><span class=secno>7.7.1</span> The `<code id=the-cross-origin-opener-policy-header:cross-origin-opener-policy-2><a href=iana.html#cross-origin-opener-policy-2>Cross-Origin-Opener-Policy</a></code>`
+  header<a href=#the-cross-origin-opener-policy-header class=self-link></a></h4>
+<div data-zh-date="" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/loading-web-pages/cross-origin-opener-policies/the-cross-origin-opener-policy-header.zh.html?filename=the-cross-origin-opener-policy-header.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Floading-web-pages%2Fcross-origin-opener-policies%2Fthe-cross-origin-opener-policy-header.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/loading-web-pages/cross-origin-opener-policies/the-cross-origin-opener-policy-header.en.html></div>
+
+  <p>A <code id=the-cross-origin-opener-policy-header:document><a href=dom.html#document>Document</a></code>'s <a href=dom.html#concept-document-coop id=the-cross-origin-opener-policy-header:concept-document-coop>cross-origin opener
+  policy</a> is derived from the `<code id=the-cross-origin-opener-policy-header:cross-origin-opener-policy-2-2><a href=iana.html#cross-origin-opener-policy-2>Cross-Origin-Opener-Policy</a></code>` HTTP response header.
+  This header is a <a href=https://httpwg.org/http-extensions/draft-ietf-httpbis-header-structure.html id=the-cross-origin-opener-policy-header:http-structured-header data-x-internal=http-structured-header>structured header</a> whose value must
+  be a <a href=https://httpwg.org/http-extensions/draft-ietf-httpbis-header-structure.html#token id=the-cross-origin-opener-policy-header:http-structured-header-token data-x-internal=http-structured-header-token>token</a>. <a href=references.html#refsSTRUCTURED-FIELDS>[STRUCTURED-FIELDS]</a></p>
+
+  <p>The valid <a href=https://httpwg.org/http-extensions/draft-ietf-httpbis-header-structure.html#token id=the-cross-origin-opener-policy-header:http-structured-header-token-2 data-x-internal=http-structured-header-token>token</a> values are "<code id=the-cross-origin-opener-policy-header:coop-unsafe-none><a href=#coop-unsafe-none>unsafe-none</a></code>", "<code id=the-cross-origin-opener-policy-header:coop-same-origin-allow-popups><a href=#coop-same-origin-allow-popups>same-origin-allow-popups</a></code>", and "<code id=the-cross-origin-opener-policy-header:coop-same-origin><a href=#coop-same-origin>same-origin</a></code>".</p>
+
+  <p class=note>Per the processing model described below, user agents will ignore this header if
+  it contains an invalid value. Likewise, user agents will ignore this header if the value cannot be
+  parsed as a <a href=https://httpwg.org/http-extensions/draft-ietf-httpbis-header-structure.html#token id=the-cross-origin-opener-policy-header:http-structured-header-token-3 data-x-internal=http-structured-header-token>token</a>.</p>
+
+  <hr>
+
+  <p>To <dfn id=obtain-coop>obtain a cross-origin opener policy</dfn> given a <a href=https://fetch.spec.whatwg.org/#concept-response id=the-cross-origin-opener-policy-header:concept-response data-x-internal=concept-response>response</a> <var>response</var> and an <a id=the-cross-origin-opener-policy-header:environment href=webappapis.html#environment>environment</a>
+  <var>reservedEnvironment</var>:</p>
+
+  <ol><li><p>If <var>reservedEnvironment</var> is a <a id=the-cross-origin-opener-policy-header:non-secure-context href=webappapis.html#non-secure-context>non-secure context</a>, then return
+   "<code id=the-cross-origin-opener-policy-header:coop-unsafe-none-2><a href=#coop-unsafe-none>unsafe-none</a></code>".<li><p>Let <var>value</var> be the result of <a id=the-cross-origin-opener-policy-header:getting-a-structured-field-value href=https://fetch.spec.whatwg.org/#concept-header-list-get-structured-header data-x-internal=getting-a-structured-field-value>getting a structured field value</a> given
+   `<code id=the-cross-origin-opener-policy-header:cross-origin-opener-policy-2-3><a href=iana.html#cross-origin-opener-policy-2>Cross-Origin-Opener-Policy</a></code>` and "<code>item</code>" from <var>response</var>'s <a href=https://fetch.spec.whatwg.org/#concept-response-header-list id=the-cross-origin-opener-policy-header:concept-response-header-list data-x-internal=concept-response-header-list>header list</a>.<li><p>If <var>value</var> is null, then return "<code id=the-cross-origin-opener-policy-header:coop-unsafe-none-3><a href=#coop-unsafe-none>unsafe-none</a></code>".<li><p>If <var>value</var>[0] is not "<code id=the-cross-origin-opener-policy-header:coop-same-origin-2><a href=#coop-same-origin>same-origin</a></code>" or
+   "<code id=the-cross-origin-opener-policy-header:coop-same-origin-allow-popups-2><a href=#coop-same-origin-allow-popups>same-origin-allow-popups</a></code>", then return
+   "<code id=the-cross-origin-opener-policy-header:coop-unsafe-none-4><a href=#coop-unsafe-none>unsafe-none</a></code>".<li>
+    <p>If <var>value</var>[0] is "<code id=the-cross-origin-opener-policy-header:coop-same-origin-3><a href=#coop-same-origin>same-origin</a></code>", then:</p>
+
+    <ol><li><p>Let <var>coep</var> be the result of <a href=#obtain-an-embedder-policy id=the-cross-origin-opener-policy-header:obtain-an-embedder-policy>obtaining
+     an embedder policy</a> from <var>response</var>.<li><p>If <var>coep</var>'s <a href=#embedder-policy-value-2 id=the-cross-origin-opener-policy-header:embedder-policy-value-2>value</a> is
+     "<code>require-corp</code>", then return "<code id=the-cross-origin-opener-policy-header:coop-same-origin-plus-coep><a href=#coop-same-origin-plus-coep>same-origin-plus-COEP</a></code>".</ol>
+   <li><p>Return <var>value</var>[0].</ol>
+
+
+  <h4 id=browsing-context-group-switches-due-to-cross-origin-opener-policy><span class=secno>7.7.2</span> Browsing context group switches due to cross-origin opener policy<a href=#browsing-context-group-switches-due-to-cross-origin-opener-policy class=self-link></a></h4>
+<div data-zh-date="" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/loading-web-pages/cross-origin-opener-policies/browsing-context-group-switches-due-to-cross-origin-opener-policy.zh.html?filename=browsing-context-group-switches-due-to-cross-origin-opener-policy.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Floading-web-pages%2Fcross-origin-opener-policies%2Fbrowsing-context-group-switches-due-to-cross-origin-opener-policy.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/loading-web-pages/cross-origin-opener-policies/browsing-context-group-switches-due-to-cross-origin-opener-policy.en.html></div>
+
+  <p>A <dfn id=coop-enforcement-result>cross-origin opener policy enforcement result</dfn> is
+  a <a id=browsing-context-group-switches-due-to-cross-origin-opener-policy:struct href=https://infra.spec.whatwg.org/#struct data-x-internal=struct>struct</a> with the following <a href=https://infra.spec.whatwg.org/#struct-item id=browsing-context-group-switches-due-to-cross-origin-opener-policy:struct-item data-x-internal=struct-item>items</a>:</p>
+
+  <ul><li><p>A boolean <dfn id=coop-enforcement-bcg-switch>needs a browsing context group
+   switch</dfn>.<li><p>An <a href=#concept-origin id=browsing-context-group-switches-due-to-cross-origin-opener-policy:concept-origin>origin</a> <dfn id=coop-enforcement-origin>origin</dfn>.<li><p>A <a href=#cross-origin-opener-policy id=browsing-context-group-switches-due-to-cross-origin-opener-policy:cross-origin-opener-policy>cross-origin opener policy</a> <dfn id=coop-enforcement-coop>cross-origin opener policy</dfn>.</ul>
+
+  <p>To <dfn id=coop-enforce>enforce a response's cross-origin opener policy</dfn>, given a
+  <a id=browsing-context-group-switches-due-to-cross-origin-opener-policy:browsing-context href=browsers.html#browsing-context>browsing context</a> <var>browsingContext</var>, an <a href=#concept-origin id=browsing-context-group-switches-due-to-cross-origin-opener-policy:concept-origin-2>origin</a>
+  <var>responseOrigin</var>, a <a href=#cross-origin-opener-policy id=browsing-context-group-switches-due-to-cross-origin-opener-policy:cross-origin-opener-policy-2>cross-origin opener policy</a> <var>responseCOOP</var>, and
+  a <a href=#coop-enforcement-result id=browsing-context-group-switches-due-to-cross-origin-opener-policy:coop-enforcement-result>cross-origin opener policy enforcement result</a>
+  <var>currentCOOPEnforcementResult</var>:</p>
+
+  <ol><li><p>Let <var>newCOOPEnforcementResult</var> be a new <a href=#coop-enforcement-result id=browsing-context-group-switches-due-to-cross-origin-opener-policy:coop-enforcement-result-2>cross-origin opener policy enforcement result</a> whose <a href=#coop-enforcement-bcg-switch id=browsing-context-group-switches-due-to-cross-origin-opener-policy:coop-enforcement-bcg-switch>needs a browsing context group switch</a> is
+   <var>currentCOOPEnforcementResult</var>'s <a href=#coop-enforcement-bcg-switch id=browsing-context-group-switches-due-to-cross-origin-opener-policy:coop-enforcement-bcg-switch-2>needs a
+   browsing context group switch</a>, <a href=#coop-enforcement-origin id=browsing-context-group-switches-due-to-cross-origin-opener-policy:coop-enforcement-origin>origin</a> is
+   <var>responseOrigin</var>, and <a href=#coop-enforcement-coop id=browsing-context-group-switches-due-to-cross-origin-opener-policy:coop-enforcement-coop>cross-origin opener
+   policy</a> is <var>responseCOOP</var>.<li><p>Let <var>isInitialAboutBlank</var> be false.<li><p>If <var>browsingContext</var>'s only entry in its <a id=browsing-context-group-switches-due-to-cross-origin-opener-policy:session-history href=history.html#session-history>session history</a> is the
+   <code id=browsing-context-group-switches-due-to-cross-origin-opener-policy:about:blank><a href=infrastructure.html#about:blank>about:blank</a></code> <code id=browsing-context-group-switches-due-to-cross-origin-opener-policy:document><a href=dom.html#document>Document</a></code> that was added when <var>browsingContext</var> was
+   <a href=browsers.html#creating-a-new-browsing-context id=browsing-context-group-switches-due-to-cross-origin-opener-policy:creating-a-new-browsing-context>created</a>, then set
+   <var>isInitialAboutBlank</var> to true.<li><p>If the result of <a href=#matching-coop id=browsing-context-group-switches-due-to-cross-origin-opener-policy:matching-coop>matching</a>
+   <var>currentCOOPEnforcementResult</var>'s <a href=#coop-enforcement-coop id=browsing-context-group-switches-due-to-cross-origin-opener-policy:coop-enforcement-coop-2>cross-origin opener policy</a>,
+   <var>currentCOOPEnforcementResult</var>'s <a href=#coop-enforcement-origin id=browsing-context-group-switches-due-to-cross-origin-opener-policy:coop-enforcement-origin-2>origin</a>,
+   <var>responseCOOP</var>, and <var>responseOrigin</var> is true, then return
+   <var>newCOOPEnforcementResult</var>.<li>
+    <p>If all of the following are true:</p>
+
+    <ul class=brief><li><p><var>isInitialAboutBlank</var><li><p><var>currentCOOPEnforcementResult</var>'s <a href=#coop-enforcement-coop id=browsing-context-group-switches-due-to-cross-origin-opener-policy:coop-enforcement-coop-3>cross-origin opener policy</a> is "<code id=browsing-context-group-switches-due-to-cross-origin-opener-policy:coop-same-origin-allow-popups><a href=#coop-same-origin-allow-popups>same-origin-allow-popups</a></code>"<li><p><var>responseCOOP</var> is "<code id=browsing-context-group-switches-due-to-cross-origin-opener-policy:coop-unsafe-none><a href=#coop-unsafe-none>unsafe-none</a></code>"</ul>
+
+    <p>then return <var>newCOOPEnforcementResult</var>.</p>
+   <li><p>Set <var>newCOOPEnforcementResult</var>'s <a href=#coop-enforcement-bcg-switch id=browsing-context-group-switches-due-to-cross-origin-opener-policy:coop-enforcement-bcg-switch-3>needs
+   a browsing context group switch</a> to true.<li><p>Return <var>newCOOPEnforcementResult</var>.</ol>
+
+  <p>To <dfn id=obtain-browsing-context-navigation>obtain a browsing context to use for a
+  navigation response</dfn>, given a <a href=browsers.html#browsing-context id=browsing-context-group-switches-due-to-cross-origin-opener-policy:browsing-context-2>browsing context</a>
+  <var>browsingContext</var>, a <a href=#sandboxing-flag-set id=browsing-context-group-switches-due-to-cross-origin-opener-policy:sandboxing-flag-set>sandboxing flag set</a> <var>sandboxFlags</var>, and a
+  <a href=#cross-origin-opener-policy id=browsing-context-group-switches-due-to-cross-origin-opener-policy:cross-origin-opener-policy-3>cross-origin opener policy</a> <var>navigationCOOP</var>:</p>
+
+  <ol><li><p>Assert: <var>browsingContext</var> is a <a id=browsing-context-group-switches-due-to-cross-origin-opener-policy:top-level-browsing-context href=browsers.html#top-level-browsing-context>top-level browsing context</a>.<li><p>Let <var>newBrowsingContext</var> be the result of <a id=browsing-context-group-switches-due-to-cross-origin-opener-policy:creating-a-new-top-level-browsing-context href=browsers.html#creating-a-new-top-level-browsing-context>creating a new top-level browsing
+   context</a>.<li><p>If <var>navigationCOOP</var> is "<code id=browsing-context-group-switches-due-to-cross-origin-opener-policy:coop-same-origin-plus-coep><a href=#coop-same-origin-plus-coep>same-origin-plus-COEP</a></code>", then set
+   <var>newBrowsingContext</var>'s <a href=browsers.html#tlbc-group id=browsing-context-group-switches-due-to-cross-origin-opener-policy:tlbc-group>group</a>'s <a href=browsers.html#bcg-cross-origin-isolated id=browsing-context-group-switches-due-to-cross-origin-opener-policy:bcg-cross-origin-isolated>cross-origin isolated</a> to true.<li>
+    <p>If <var>sandboxFlags</var> is not empty, then:</p>
+    <ol><li><p>Assert: <var>navigationCOOP</var> is "<code id=browsing-context-group-switches-due-to-cross-origin-opener-policy:coop-unsafe-none-2><a href=#coop-unsafe-none>unsafe-none</a></code>".<li><p>Assert: <var>newBrowsingContext</var>'s <a href=#popup-sandboxing-flag-set id=browsing-context-group-switches-due-to-cross-origin-opener-policy:popup-sandboxing-flag-set>popup sandboxing flag set</a>
+     <a href=https://infra.spec.whatwg.org/#list-is-empty id=browsing-context-group-switches-due-to-cross-origin-opener-policy:list-is-empty data-x-internal=list-is-empty>is empty</a>.<li><p>Set <var>newBrowsingContext</var>'s <a href=#popup-sandboxing-flag-set id=browsing-context-group-switches-due-to-cross-origin-opener-policy:popup-sandboxing-flag-set-2>popup sandboxing flag set</a> to
+     a <a href=https://infra.spec.whatwg.org/#list-clone id=browsing-context-group-switches-due-to-cross-origin-opener-policy:list-clone data-x-internal=list-clone>clone</a> of <var>sandboxFlags</var>.</ol>
+   <li>
+    <p><a href=window-object.html#a-browsing-context-is-discarded id=browsing-context-group-switches-due-to-cross-origin-opener-policy:a-browsing-context-is-discarded>Discard</a> <var>browsingContext</var>.</p>
+
+    <p class=note>This has no effect on <var>browsingContext</var>'s <a href=browsers.html#tlbc-group id=browsing-context-group-switches-due-to-cross-origin-opener-policy:tlbc-group-2>group</a>, unless <var>browsingContext</var> was its sole <a id=browsing-context-group-switches-due-to-cross-origin-opener-policy:top-level-browsing-context-2 href=browsers.html#top-level-browsing-context>top-level browsing
+    context</a>. In that case, the user agent might delete the <a id=browsing-context-group-switches-due-to-cross-origin-opener-policy:browsing-context-group href=browsers.html#browsing-context-group>browsing context
+    group</a> which no longer contains any <a href=browsers.html#browsing-context id=browsing-context-group-switches-due-to-cross-origin-opener-policy:browsing-context-3>browsing
+    contexts</a>.</p>
+   <li><p>Return <var>newBrowsingContext</var>.</ol>
+
+  <p class=XXX>The impact of swapping browsing context groups following a navigation is not
+  fully defined. It is currently under discussion in <a href=https://github.com/whatwg/html/issues/5350>issue #5350</a>.</p>
+
+
+
+
+  <h3 id=coep><span class=secno>7.8</span> Cross-origin embedder policies<a href=#coep class=self-link></a></h3>
+<div data-zh-date="" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/loading-web-pages/cross-origin-embedder-policies/index.zh.html?filename=index.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Floading-web-pages%2Fcross-origin-embedder-policies%2Findex.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/loading-web-pages/cross-origin-embedder-policies/index.en.html></div>
+
+  <p>An <dfn id=embedder-policy-value data-export="">embedder policy value</dfn> controls the fetching of cross-origin resources
+  without explicit permission from resource owners. There are two such values:</p>
+
+  <dl><dt>"<dfn data-dfn-for="embedder policy value" id=coep-unsafe-none data-export=""><code>unsafe-none</code></dfn>"<dd><p>This is the default value. When this value is used, cross-origin resources can be fetched
+   without giving explicit permission through the <a id=coep:cors-protocol href=https://fetch.spec.whatwg.org/#http-cors-protocol data-x-internal=cors-protocol>CORS protocol</a> or the
+   `<code id=coep:cross-origin-resource-policy><a data-x-internal=cross-origin-resource-policy href=https://fetch.spec.whatwg.org/#http-cross-origin-resource-policy>Cross-Origin-Resource-Policy</a></code>` header.<dt>"<dfn data-dfn-for="embedder policy value" id=coep-require-corp data-export=""><code>require-corp</code></dfn>"<dd><p>When this value is used, fetching cross-origin resources requires the server's
+   explicit permission through the <a id=coep:cors-protocol-2 href=https://fetch.spec.whatwg.org/#http-cors-protocol data-x-internal=cors-protocol>CORS protocol</a> or the
+   `<code id=coep:cross-origin-resource-policy-2><a data-x-internal=cross-origin-resource-policy href=https://fetch.spec.whatwg.org/#http-cross-origin-resource-policy>Cross-Origin-Resource-Policy</a></code>` header.</dl>
+
+  <p>An <dfn id=embedder-policy data-export="">embedder policy</dfn> consists of:</p>
+
+  <ul><li><p>A <dfn data-dfn-for="embedder policy" id=embedder-policy-value-2 data-export="">value</dfn>, which is an <a href=#embedder-policy-value id=coep:embedder-policy-value>embedder policy value</a>, initially "<code id=coep:coep-unsafe-none><a href=#coep-unsafe-none>unsafe-none</a></code>".<li><p>A <dfn data-dfn-for="embedder policy" id=embedder-policy-reporting-endpoint data-export="">reporting endpoint</dfn> string, initially the empty string.<li><p>A <dfn data-dfn-for="embedder policy" id=embedder-policy-report-only-value data-export="">report only value</dfn>, which is an <a href=#embedder-policy-value id=coep:embedder-policy-value-2>embedder policy value</a>, initially
+   "<code id=coep:coep-unsafe-none-2><a href=#coep-unsafe-none>unsafe-none</a></code>".<li><p>A <dfn data-dfn-for="embedder
+   policy" id=embedder-policy-report-only-reporting-endpoint data-export="">report only reporting endpoint</dfn> string, initially the empty
+   string.</ul>
+
+  <p>The <dfn id=coep-report-type data-export="">"<code>coep</code>" report type</dfn> is a <a id=coep:report-type href=https://w3c.github.io/reporting/#report-type data-x-internal=report-type>report type</a> whose value
+  is "<code>coep</code>". It is <a id=coep:visible-to-reportingobservers href=https://w3c.github.io/reporting/#visible-to-reportingobservers data-x-internal=visible-to-reportingobservers>visible to
+  <code>ReportingObserver</code>s</a>.</p>
+
+
+  <h4 id=the-headers><span class=secno>7.8.1</span> The headers<a href=#the-headers class=self-link></a></h4>
+<div data-zh-date="" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/loading-web-pages/cross-origin-embedder-policies/the-headers.zh.html?filename=the-headers.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Floading-web-pages%2Fcross-origin-embedder-policies%2Fthe-headers.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/loading-web-pages/cross-origin-embedder-policies/the-headers.en.html></div>
+
+  <p>The `<code id=the-headers:cross-origin-embedder-policy><a href=iana.html#cross-origin-embedder-policy>Cross-Origin-Embedder-Policy</a></code>` and
+  `<code id=the-headers:cross-origin-embedder-policy-report-only><a href=iana.html#cross-origin-embedder-policy-report-only>Cross-Origin-Embedder-Policy-Report-Only</a></code>` HTTP response header fields allow a server
+  to declare an <a href=#embedder-policy id=the-headers:embedder-policy>embedder policy</a> for an <a id=the-headers:environment-settings-object href=webappapis.html#environment-settings-object>environment settings object</a>. These
+  headers are <a href=https://httpwg.org/http-extensions/draft-ietf-httpbis-header-structure.html id=the-headers:http-structured-header data-x-internal=http-structured-header>structured headers</a> whose values must be
+  <a href=https://httpwg.org/http-extensions/draft-ietf-httpbis-header-structure.html#token id=the-headers:http-structured-header-token data-x-internal=http-structured-header-token>token</a>. <a href=references.html#refsSTRUCTURED-FIELDS>[STRUCTURED-FIELDS]</a>
+
+  <p>The valid <a href=https://httpwg.org/http-extensions/draft-ietf-httpbis-header-structure.html#token id=the-headers:http-structured-header-token-2 data-x-internal=http-structured-header-token>token</a> values are the <a href=#embedder-policy-value id=the-headers:embedder-policy-value>embedder policy values</a>. The token may also have attached <a href=https://httpwg.org/http-extensions/draft-ietf-httpbis-header-structure.html#param id=the-headers:http-structured-header-parameters data-x-internal=http-structured-header-parameters>parameters</a>; of these, the "<dfn id=coep-report-to><code>report-to</code></dfn>" parameter can have a <a id=the-headers:valid-url-string href=https://url.spec.whatwg.org/#valid-url-string data-x-internal=valid-url-string>valid URL
+  string</a> identifying an appropriate reporting endpoint. <a href=references.html#refsREPORTING>[REPORTING]</a></p>
+
+  <div class=note>
+   <p>The <a href=#obtain-an-embedder-policy id=the-headers:obtain-an-embedder-policy>processing model</a> fails open (by defaulting
+   to "<code id=the-headers:coep-unsafe-none><a href=#coep-unsafe-none>unsafe-none</a></code>") in the presence of a header that cannot
+   be parsed as a token. This includes inadvertent lists created by combining multiple instances of
+   the `<code id=the-headers:cross-origin-embedder-policy-2><a href=iana.html#cross-origin-embedder-policy>Cross-Origin-Embedder-Policy</a></code>` header present in a given response:</p>
+
+   <table class=data><thead><tr><th>`<code id=the-headers:cross-origin-embedder-policy-3><a href=iana.html#cross-origin-embedder-policy>Cross-Origin-Embedder-Policy</a></code>`<th>Final <a href=#embedder-policy-value id=the-headers:embedder-policy-value-2>embedder policy value</a><tbody><tr><td><em>No header delivered</em><td>"<code id=the-headers:coep-unsafe-none-2><a href=#coep-unsafe-none>unsafe-none</a></code>"<tr><td>`<code>require-corp</code>`<td>"<code id=the-headers:coep-require-corp><a href=#coep-require-corp>require-corp</a></code>"<tr><td>`<code>unknown-value</code>`<td>"<code id=the-headers:coep-unsafe-none-3><a href=#coep-unsafe-none>unsafe-none</a></code>"<tr><td>`<code>require-corp, unknown-value</code>`<td>"<code id=the-headers:coep-unsafe-none-4><a href=#coep-unsafe-none>unsafe-none</a></code>"<tr><td>`<code>unknown-value, unknown-value</code>`<td>"<code id=the-headers:coep-unsafe-none-5><a href=#coep-unsafe-none>unsafe-none</a></code>"<tr><td>`<code>unknown-value, require-corp</code>`<td>"<code id=the-headers:coep-unsafe-none-6><a href=#coep-unsafe-none>unsafe-none</a></code>"<tr><td>`<code>require-corp, require-corp</code>`<td>"<code id=the-headers:coep-unsafe-none-7><a href=#coep-unsafe-none>unsafe-none</a></code>"</table>
+
+   <p>(The same applies to `<code id=the-headers:cross-origin-embedder-policy-report-only-2><a href=iana.html#cross-origin-embedder-policy-report-only>Cross-Origin-Embedder-Policy-Report-Only</a></code>`.)</p>
+  </div>
+
+  <hr>
+
+  <p>To <dfn id=obtain-an-embedder-policy data-export="">obtain an embedder policy</dfn> from a <a href=https://fetch.spec.whatwg.org/#concept-response id=the-headers:concept-response data-x-internal=concept-response>response</a> <var>response</var>:</p>
+
+  <ol><li><p>Let <var>policy</var> be a new <a href=#embedder-policy id=the-headers:embedder-policy-2>embedder policy</a>.<li><p>Let <var>parsedItem</var> be the result of <a id=the-headers:getting-a-structured-field-value href=https://fetch.spec.whatwg.org/#concept-header-list-get-structured-header data-x-internal=getting-a-structured-field-value>getting a structured field value</a>
+   with `<code id=the-headers:cross-origin-embedder-policy-4><a href=iana.html#cross-origin-embedder-policy>Cross-Origin-Embedder-Policy</a></code>` and "<code>item</code>" from
+   <var>response</var>'s <a href=https://fetch.spec.whatwg.org/#concept-response-header-list id=the-headers:concept-response-header-list data-x-internal=concept-response-header-list>header list</a>.<li>
+    <p>If <var>parsedItem</var> is non-null and <var>parsedItem</var>[0] is "<code>require-corp</code>":</p>
+
+    <ol><li><p>Set <var>policy</var>'s <a href=#embedder-policy-value-2 id=the-headers:embedder-policy-value-2-2>value</a> to "<code id=the-headers:coep-require-corp-2><a href=#coep-require-corp>require-corp</a></code>".<li><p>If <var>parsedItem</var>[1]["<code id=the-headers:coep-report-to><a href=#coep-report-to>report-to</a></code>"] <a href=https://infra.spec.whatwg.org/#map-exists id=the-headers:map-exists data-x-internal=map-exists>exists</a>, then set <var>policy</var>'s <a href=#embedder-policy-reporting-endpoint id=the-headers:embedder-policy-reporting-endpoint>endpoint</a> to <var>parsedItem</var>[1]["<code id=the-headers:coep-report-to-2><a href=#coep-report-to>report-to</a></code>"].</ol>
+   <li><p>Set <var>parsedItem</var> to the result of <a id=the-headers:getting-a-structured-field-value-2 href=https://fetch.spec.whatwg.org/#concept-header-list-get-structured-header data-x-internal=getting-a-structured-field-value>getting a structured field value</a>
+   with `<code id=the-headers:cross-origin-embedder-policy-report-only-3><a href=iana.html#cross-origin-embedder-policy-report-only>Cross-Origin-Embedder-Policy-Report-Only</a></code>` and "<code>item</code>"
+   from <var>response</var>'s <a href=https://fetch.spec.whatwg.org/#concept-response-header-list id=the-headers:concept-response-header-list-2 data-x-internal=concept-response-header-list>header
+   list</a>.<li>
+    <p>If <var>parsedItem</var> is non-null and <var>parsedItem</var>[0] is "<code>require-corp</code>":</p>
+
+    <ol><li><p>Set <var>policy</var>'s <a href=#embedder-policy-report-only-value id=the-headers:embedder-policy-report-only-value>report only
+     value</a> to "<code id=the-headers:coep-require-corp-3><a href=#coep-require-corp>require-corp</a></code>".<li><p>If <var>parsedItem</var>[1]["<code id=the-headers:coep-report-to-3><a href=#coep-report-to>report-to</a></code>"] <a href=https://infra.spec.whatwg.org/#map-exists id=the-headers:map-exists-2 data-x-internal=map-exists>exists</a>,  then set <var>policy</var>'s <a href=#embedder-policy-report-only-reporting-endpoint id=the-headers:embedder-policy-report-only-reporting-endpoint>report only reporting endpoint</a>
+     to <var>parsedItem</var>[1]["<code id=the-headers:coep-report-to-4><a href=#coep-report-to>report-to</a></code>"].</ol>
+   <li><p>Return <var>policy</var>.</ol>
+
+
+  <h4 id=embedder-policy-checks><span class=secno>7.8.2</span> Embedder policy checks<a href=#embedder-policy-checks class=self-link></a></h4>
+<div data-zh-date="" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/loading-web-pages/cross-origin-embedder-policies/embedder-policy-checks.zh.html?filename=embedder-policy-checks.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Floading-web-pages%2Fcross-origin-embedder-policies%2Fembedder-policy-checks.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/loading-web-pages/cross-origin-embedder-policies/embedder-policy-checks.en.html></div>
+
+  <p>To <dfn id="check-a-navigation-response's-adherence-to-its-embedder-policy">check a navigation response's adherence to its embedder policy</dfn> given a <a href=https://fetch.spec.whatwg.org/#concept-response id=embedder-policy-checks:concept-response data-x-internal=concept-response>response</a> <var>response</var> and a <a id=embedder-policy-checks:browsing-context href=browsers.html#browsing-context>browsing context</a>
+  <var>target</var>:</p>
+
+  <ol><li><p>If <var>target</var> is not a <a id=embedder-policy-checks:child-browsing-context href=browsers.html#child-browsing-context>child browsing context</a>, then return
+   true.<li><p>Let <var>responsePolicy</var> be the result of <a href=#obtain-an-embedder-policy id=embedder-policy-checks:obtain-an-embedder-policy>obtaining an embedder policy</a> from <var>response</var>.<li><p>Let <var>parentPolicy</var> be <var>target</var>'s <a href=browsers.html#bc-container-document id=embedder-policy-checks:bc-container-document>container document</a>'s <a href=dom.html#concept-document-embedder-policy id=embedder-policy-checks:concept-document-embedder-policy>embedder policy</a>.<li><p>If <var>parentPolicy</var>'s <a href=#embedder-policy-report-only-value id=embedder-policy-checks:embedder-policy-report-only-value>report only
+   value</a> is "<code id=embedder-policy-checks:coep-require-corp><a href=#coep-require-corp>require-corp</a></code>" and
+   <var>responsePolicy</var>'s <a href=#embedder-policy-value-2 id=embedder-policy-checks:embedder-policy-value-2>value</a> is "<code id=embedder-policy-checks:coep-unsafe-none><a href=#coep-unsafe-none>unsafe-none</a></code>", then <a href=#queue-a-cross-origin-embedder-policy-inheritance-violation id=embedder-policy-checks:queue-a-cross-origin-embedder-policy-inheritance-violation>queue a cross-origin embedder policy
+   inheritance violation</a> with <var>response</var>, "<code>navigation</code>",
+   <var>parentPolicy</var>'s <a href=#embedder-policy-report-only-reporting-endpoint id=embedder-policy-checks:embedder-policy-report-only-reporting-endpoint>report
+   only reporting endpoint</a>, "<code>reporting</code>", and <var>target</var>'s <a href=browsers.html#bc-container-document id=embedder-policy-checks:bc-container-document-2>container document</a>'s <a id=embedder-policy-checks:relevant-settings-object href=webappapis.html#relevant-settings-object>relevant settings
+   object</a>.<li><p>If <var>parentPolicy</var>'s <a href=#embedder-policy-value-2 id=embedder-policy-checks:embedder-policy-value-2-2>value</a> is "<code id=embedder-policy-checks:coep-unsafe-none-2><a href=#coep-unsafe-none>unsafe-none</a></code>" or <var>responsePolicy</var>'s <a href=#embedder-policy-value-2 id=embedder-policy-checks:embedder-policy-value-2-3>value</a> is "<code id=embedder-policy-checks:coep-require-corp-2><a href=#coep-require-corp>require-corp</a></code>", then return true.<li><p><a href=#queue-a-cross-origin-embedder-policy-inheritance-violation id=embedder-policy-checks:queue-a-cross-origin-embedder-policy-inheritance-violation-2>Queue a cross-origin embedder policy inheritance violation</a> with
+   <var>response</var>, "<code>navigation</code>", <var>parentPolicy</var>'s <a href=#embedder-policy-reporting-endpoint id=embedder-policy-checks:embedder-policy-reporting-endpoint>reporting endpoint</a>,
+   "<code>enforce</code>", and <var>target</var>'s
+   <a href=browsers.html#bc-container-document id=embedder-policy-checks:bc-container-document-3>container document</a>'s <a id=embedder-policy-checks:relevant-settings-object-2 href=webappapis.html#relevant-settings-object>relevant settings
+   object</a>.<li><p>Return false.</ol>
+
+  <p>To <dfn id="check-a-global-object's-embedder-policy">check a global object's embedder policy</dfn> given a <code id=embedder-policy-checks:workerglobalscope><a href=workers.html#workerglobalscope>WorkerGlobalScope</a></code>
+  <var>workerGlobalScope</var>, an <a id=embedder-policy-checks:environment-settings-object href=webappapis.html#environment-settings-object>environment settings object</a> <var>owner</var>, and
+  a <a href=https://fetch.spec.whatwg.org/#concept-response id=embedder-policy-checks:concept-response-2 data-x-internal=concept-response>response</a> <var>response</var>:</p>
+
+  <ol><li><p>If <var>workerGlobalScope</var> is not a <code id=embedder-policy-checks:dedicatedworkerglobalscope><a href=workers.html#dedicatedworkerglobalscope>DedicatedWorkerGlobalScope</a></code> object,
+   then return true.<li><p>Let <var>policy</var> be <var>workerGlobalScope</var>'s <a href=workers.html#concept-workerglobalscope-embedder-policy id=embedder-policy-checks:concept-workerglobalscope-embedder-policy>embedder policy</a>.
+
+   <li><p>Let <var>ownerPolicy</var> be <var>owner</var>'s <a href=webappapis.html#concept-settings-object-embedder-policy id=embedder-policy-checks:concept-settings-object-embedder-policy>embedder policy</a>.
+
+   <li><p>If <var>ownerPolicy</var>'s <a href=#embedder-policy-report-only-value id=embedder-policy-checks:embedder-policy-report-only-value-2>report only
+   value</a> is "<code id=embedder-policy-checks:coep-require-corp-3><a href=#coep-require-corp>require-corp</a></code>" and <var>policy</var>'s
+   <a href=#embedder-policy-value-2 id=embedder-policy-checks:embedder-policy-value-2-4>value</a> is "<code id=embedder-policy-checks:coep-unsafe-none-3><a href=#coep-unsafe-none>unsafe-none</a></code>", then <a href=#queue-a-cross-origin-embedder-policy-inheritance-violation id=embedder-policy-checks:queue-a-cross-origin-embedder-policy-inheritance-violation-3>queue a cross-origin embedder policy
+   inheritance violation</a> with <var>response</var>, "<code>worker
+   initialization</code>", <var>owner's policy</var>'s <a href=#embedder-policy-report-only-reporting-endpoint id=embedder-policy-checks:embedder-policy-report-only-reporting-endpoint-2>report only reporting endpoint</a>,
+   "<code>reporting</code>", and <var>owner</var>.<li><p>If <var>ownerPolicy</var>'s <a href=#embedder-policy-value-2 id=embedder-policy-checks:embedder-policy-value-2-5>value</a> is "<code id=embedder-policy-checks:coep-unsafe-none-4><a href=#coep-unsafe-none>unsafe-none</a></code>" or <var>policy</var>'s <a href=#embedder-policy-value-2 id=embedder-policy-checks:embedder-policy-value-2-6>value</a> is "<code id=embedder-policy-checks:coep-require-corp-4><a href=#coep-require-corp>require-corp</a></code>", then return true.<li><p><a href=#queue-a-cross-origin-embedder-policy-inheritance-violation id=embedder-policy-checks:queue-a-cross-origin-embedder-policy-inheritance-violation-4>Queue a cross-origin embedder policy inheritance violation</a> with
+   <var>response</var>, "<code>worker initialization</code>", <var>owner's policy</var>'s
+   <a href=#embedder-policy-reporting-endpoint id=embedder-policy-checks:embedder-policy-reporting-endpoint-2>reporting endpoint</a>,
+   "<code>enforce</code>", and <var>owner</var>.<li><p>Return false.</ol>
+
+  <p>To <dfn id=queue-a-cross-origin-embedder-policy-inheritance-violation>queue a cross-origin embedder policy inheritance violation</dfn> given a <a href=https://fetch.spec.whatwg.org/#concept-response id=embedder-policy-checks:concept-response-3 data-x-internal=concept-response>response</a> <var>response</var>, a string <var>type</var>, a string
+  <var>endpoint</var>, a string <var>disposition</var>, and an <a id=embedder-policy-checks:environment-settings-object-2 href=webappapis.html#environment-settings-object>environment settings
+  object</a> <var>settings</var>:</p>
+
+  <ol><li><p>Let <var>serialized</var> be the result of <a href=https://fetch.spec.whatwg.org/#serialize-a-response-url-for-reporting id=embedder-policy-checks:serialize-a-response-url-for-reporting data-x-internal=serialize-a-response-url-for-reporting>serializing a response URL for
+   reporting</a> with <var>response</var>.<li>
+    <p>Let <var>body</var> be a new object containing the following properties:</p>
+
+    <table class=data><thead><tr><th>key<th>value<tbody><tr><td>type<td><var>type</var><tr><td>blockedURL<td><var>serialized</var><tr><td>disposition<td><var>disposition</var></table>
+   <li><p><a href=https://w3c.github.io/reporting/#queue-report id=embedder-policy-checks:queue-a-report data-x-internal=queue-a-report>Queue</a> <var>body</var> as the
+   <a href=#coep-report-type id=embedder-policy-checks:coep-report-type>"<code>coep</code>" report type</a> for <var>endpoint</var> on <var>settings</var>.
+  </ol>
+
+
+
+
+  <nav><a href=window-object.html>← 7.3 The Window object</a> — <a href=./>Table of Contents</a> — <a href=history.html>7.9 Session history and navigation →</a></nav>
+<script src=/html/resources/zh-cn.js></script>

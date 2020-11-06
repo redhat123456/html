@@ -1,0 +1,608 @@
+<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/html/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Standard</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/spec.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/html/styles.css crossorigin=""><script>
+   function toggleStatus(div) {
+     div.parentNode.classList.toggle('wrapped');
+   }
+   function setLinkFragment(link) {
+     link.hash = location.hash;
+   }
+  </script><link rel=stylesheet href=/html/resources/zh-cn.css><body>
+  
+  <script async="" crossorigin="" src=/html/resources/html-dfn.js></script>
+  <script data-file-issue-url=https://github.com/whatwg/html/issues/new async="" crossorigin="" src=https://resources.whatwg.org/file-issue.js></script>
+  
+  <header id=head class="head with-buttons">
+   <a href=https://whatwg.org/ class=logo><img width=100 alt=WHATWG crossorigin="" src=https://resources.whatwg.org/logo.svg height=100></a>
+   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Living Standard — Last Updated <span class=pubdate>6 November 2020</span></h2><div data-en-date="Sat Aug 11 2018 08:00:56 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/living-standard-mdash-last-updated-date-01-jan-1901.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/living-standard-mdash-last-updated-date-01-jan-1901.zh.html?filename=living-standard-mdash-last-updated-date-01-jan-1901.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fliving-standard-mdash-last-updated-date-01-jan-1901.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div><div data-en-date="Sat Aug 11 2018 08:00:56 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/commit-snapshot-mdash-last-updated-date-01-jan-1901.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/commit-snapshot-mdash-last-updated-date-01-jan-1901.zh.html?filename=commit-snapshot-mdash-last-updated-date-01-jan-1901.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fcommit-snapshot-mdash-last-updated-date-01-jan-1901.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div><div data-en-date="Sat Aug 11 2018 08:00:56 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/review-draft-mdash-published-date-01-jan-1901.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/review-draft-mdash-published-date-01-jan-1901.zh.html?filename=review-draft-mdash-published-date-01-jan-1901.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Freview-draft-mdash-published-date-01-jan-1901.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div></hgroup>
+   
+   
+   <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-91053840-1', 'auto');
+      ga('send', 'pageview');
+   </script>
+  </header>
+
+  
+
+  
+
+
+  
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/table-of-contents.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/table-of-contents.zh.html></div>
+  
+
+
+  
+<div data-en-date="Sat Aug 11 2018 08:00:56 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/full-table-of-contents.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/full-table-of-contents.zh.html></div>
+  
+
+  
+
+  
+
+
+  <nav><a href=form-control-infrastructure.html>← 4.10.17 Form control infrastructure</a> — <a href=./>Table of Contents</a> — <a href=scripting.html>4.12 脚本 →</a></nav><ol class=toc><li id=toc-semantics><ol><li><a href=interactive-elements.html#interactive-elements><span class=secno>4.11</span> Interactive elements</a><ol><li><a href=interactive-elements.html#the-details-element><span class=secno>4.11.1</span> The <code>details</code> element</a><li><a href=interactive-elements.html#the-summary-element><span class=secno>4.11.2</span> The <code>summary</code> element</a><li><a href=interactive-elements.html#commands><span class=secno>4.11.3</span> 命令</a><ol><li><a href=interactive-elements.html#facets-2><span class=secno>4.11.3.1</span> Facets</a><li><a href=interactive-elements.html#using-the-a-element-to-define-a-command><span class=secno>4.11.3.2</span> 使用 <code>a</code> 元素来定义命令</a><li><a href=interactive-elements.html#using-the-button-element-to-define-a-command><span class=secno>4.11.3.3</span> 使用 <code>button</code> 元素来定义命令</a><li><a href=interactive-elements.html#using-the-input-element-to-define-a-command><span class=secno>4.11.3.4</span> 
+  使用 <code>input</code> 元素来定义命令</a><li><a href=interactive-elements.html#using-the-option-element-to-define-a-command><span class=secno>4.11.3.5</span> Using the <code>option</code> element to define a command</a><li><a href=interactive-elements.html#using-the-accesskey-attribute-on-a-legend-element-to-define-a-command><span class=secno>4.11.3.6</span> 
+  在 <code>legend</code> 元素上
+  使用 <code>accesskey</code> 属性
+  来定义一个命令</a><li><a href=interactive-elements.html#using-the-accesskey-attribute-to-define-a-command-on-other-elements><span class=secno>4.11.3.7</span> 使用 <code>accesskey</code> 属性给其他元素定义命令</a></ol><li><a href=interactive-elements.html#the-dialog-element><span class=secno>4.11.4</span> The <code>dialog</code> element</a></ol></ol></ol><h3 id=interactive-elements><span class=secno>4.11</span> Interactive elements<a href=#interactive-elements class=self-link></a></h3>
+<div data-zh-date="" data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/the-elements-of-html/interactive-elements/index.zh.html?filename=index.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fthe-elements-of-html%2Finteractive-elements%2Findex.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/interactive-elements/index.en.html></div>
+
+
+  <h4 id=the-details-element><span class=secno>4.11.1</span> The <dfn><code>details</code></dfn> element<a href=#the-details-element class=self-link></a></h4><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details title="The HTML Details Element (<details>) creates a disclosure widget in which information is visible only when the widget is toggled into an &quot;open&quot; state.">Element/details</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>49+</span></span><span class="safari yes"><span>Safari</span><span>6+</span></span><span class="chrome yes"><span>Chrome</span><span>12+</span></span><hr><span class="opera yes"><span>Opera</span><span>15+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>49+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>6.1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>14+</span></span><hr><span class=caniuse><span><a href="https://caniuse.com/#feat=details" title="Details &amp; Summary elements">caniuse.com table</a></span></span></div></div></div>
+<div data-zh-date="" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/the-elements-of-html/interactive-elements/the-details-element.zh.html?filename=the-details-element.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fthe-elements-of-html%2Finteractive-elements%2Fthe-details-element.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/interactive-elements/the-details-element.en.html></div>
+
+  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/HTMLDetailsElement title="The HTMLDetailsElement interface provides special properties (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating <details> elements.">HTMLDetailsElement</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>Yes</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>Yes</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div><dl class=element><dt><a href=dom.html#concept-element-categories id=the-details-element:concept-element-categories>Categories</a>:<dd><a id=the-details-element:flow-content href=dom.html#flow-content>Flow content</a>.<dd><a id=the-details-element:sectioning-root href=sections.html#sectioning-root>Sectioning root</a>.<dd><a id=the-details-element:interactive-content href=dom.html#interactive-content>Interactive content</a>.<dd><a id=the-details-element:palpable-content-2 href=dom.html#palpable-content-2>Palpable content</a>.<dt><a href=dom.html#concept-element-contexts id=the-details-element:concept-element-contexts>Contexts in which this element can be used</a>:<dd>Where <a id=the-details-element:flow-content-2 href=dom.html#flow-content>flow content</a> is expected.<dt><a href=dom.html#concept-element-content-model id=the-details-element:concept-element-content-model>Content model</a>:<dd>One <code id=the-details-element:the-summary-element><a href=#the-summary-element>summary</a></code> element followed by <a id=the-details-element:flow-content-3 href=dom.html#flow-content>flow content</a>.<dt><a href=dom.html#concept-element-tag-omission id=the-details-element:concept-element-tag-omission>text/html 中的标签省略</a>：<dd>哪个标签都不能省略。<dt><a href=dom.html#concept-element-attributes id=the-details-element:concept-element-attributes>Content attributes</a>:<dd><a id=the-details-element:全局属性 href=dom.html#全局属性>Global attributes</a><dd><code id=the-details-element:attr-details-open><a href=#attr-details-open>open</a></code> — Whether the details are visible<dt><a href=dom.html#concept-element-accessibility-considerations id=the-details-element:concept-element-accessibility-considerations>Accessibility considerations</a>:<dd><a href=https://w3c.github.io/html-aria/#el-details>For authors</a>.<dd><a href=https://w3c.github.io/html-aam/#el-details>For implementers</a>.<dt><a href=dom.html#concept-element-dom id=the-details-element:concept-element-dom>DOM interface</a>:<dd>
+    <pre><code class=idl>[Exposed=Window]
+interface <dfn id=htmldetailselement>HTMLDetailsElement</dfn> : <a id=the-details-element:htmlelement href=dom.html#htmlelement>HTMLElement</a> {
+  [<a id=the-details-element:htmlconstructor href=dom.html#htmlconstructor>HTMLConstructor</a>] constructor();
+
+  [<a id=the-details-element:cereactions href=custom-elements.html#cereactions>CEReactions</a>] attribute boolean <a href=#dom-details-open id=the-details-element:dom-details-open>open</a>;
+};</code></pre>
+   </dl>
+
+  <p>The <code id=the-details-element:the-details-element><a href=#the-details-element>details</a></code> element <a id=the-details-element:represents href=dom.html#represents>represents</a> a disclosure widget from which the
+  user can obtain additional information or controls.</p>
+
+  <p class=note>The <code id=the-details-element:the-details-element-2><a href=#the-details-element>details</a></code> element is not appropriate for footnotes. Please see <a href=semantics-other.html#footnotes>the section on footnotes</a> for details on how to mark up footnotes.</p>
+
+  <p>The first <code id=the-details-element:the-summary-element-2><a href=#the-summary-element>summary</a></code> element child of the element, if any,
+  <a id=the-details-element:represents-2 href=dom.html#represents>represents</a> the summary or legend of the details. If there is no
+  child <code id=the-details-element:the-summary-element-3><a href=#the-summary-element>summary</a></code> element, the user agent should provide its own legend (e.g.
+  "Details").</p>
+
+  <p>The rest of the element's contents <a id=the-details-element:represents-3 href=dom.html#represents>represents</a> the additional information or
+  controls.</p>
+
+  <p>The <dfn data-dfn-for=details id=attr-details-open data-dfn-type=element-attr><code>open</code></dfn> content
+  attribute is a <a id=the-details-element:boolean-attribute href=infrastructure.html#boolean-attribute>boolean attribute</a>. If present, it indicates that both the summary and
+  the additional information is to be shown to the user. If the attribute is absent, only the
+  summary is to be shown.</p>
+
+  
+
+  <p>When the element is created, if the attribute is absent, the additional information should be
+  hidden; if the attribute is present, that information should be shown. Subsequently, if the
+  attribute is removed, then the information should be hidden; if the attribute is added, the
+  information should be shown.</p>
+
+  <p>The user agent should allow the user to request that the additional information be shown or
+  hidden. To honor a request for the details to be shown, the user agent must <a href=https://dom.spec.whatwg.org/#concept-element-attributes-set-value id=the-details-element:concept-element-attributes-set-value data-x-internal=concept-element-attributes-set-value>set</a> the <code id=the-details-element:attr-details-open-2><a href=#attr-details-open>open</a></code> attribute on the element to the empty string. To honor a
+  request for the information to be hidden, the user agent must <a href=https://dom.spec.whatwg.org/#concept-element-attributes-remove id=the-details-element:concept-element-attributes-remove data-x-internal=concept-element-attributes-remove>remove</a> the <code id=the-details-element:attr-details-open-3><a href=#attr-details-open>open</a></code> attribute from the element.</p>
+
+  <p class=note>This ability to request that additional information be shown or hidden
+  may simply be the <a id=the-details-element:activation-behaviour href=https://dom.spec.whatwg.org/#eventtarget-activation-behavior data-x-internal=activation-behaviour>activation behavior</a> of the appropriate
+  <code id=the-details-element:the-summary-element-4><a href=#the-summary-element>summary</a></code> element, in the case such an element exists. However, if no such element
+  exists, user agents can still provide this ability through some other user interface
+  affordance.</p>
+
+  <p>Whenever the <code id=the-details-element:attr-details-open-4><a href=#attr-details-open>open</a></code> attribute is added to or removed from
+  a <code id=the-details-element:the-details-element-3><a href=#the-details-element>details</a></code> element, the user agent must <a id=the-details-element:queue-an-element-task href=webappapis.html#queue-an-element-task>queue an element task</a> on the
+  <a id=the-details-element:dom-manipulation-task-source href=webappapis.html#dom-manipulation-task-source>DOM manipulation task source</a> given then <code id=the-details-element:the-details-element-4><a href=#the-details-element>details</a></code> element that runs the
+  following steps, which are known as the <dfn id=details-notification-task-steps>details notification task steps</dfn>, for this
+  <code id=the-details-element:the-details-element-5><a href=#the-details-element>details</a></code> element:</p>
+
+  <ol><li>
+    <p>If another <a href=webappapis.html#concept-task id=the-details-element:concept-task>task</a> has been <a href=webappapis.html#queue-an-element-task id=the-details-element:queue-an-element-task-2>queued</a> to run the <a href=#details-notification-task-steps id=the-details-element:details-notification-task-steps>details notification task steps</a> for this
+    <code id=the-details-element:the-details-element-6><a href=#the-details-element>details</a></code> element, then return.</p>
+
+    <p class=note>When the <code id=the-details-element:attr-details-open-5><a href=#attr-details-open>open</a></code> attribute is toggled
+    several times in succession, these steps essentially get coalesced so that only one event is
+    fired.</p>
+   <li><p><a href=https://dom.spec.whatwg.org/#concept-event-fire id=the-details-element:concept-event-fire data-x-internal=concept-event-fire>Fire an event</a> named <code id=the-details-element:event-toggle><a href=indices.html#event-toggle>toggle</a></code> at the <code id=the-details-element:the-details-element-7><a href=#the-details-element>details</a></code> element.</ol>
+
+  <p>The <dfn data-dfn-for=HTMLDetailsElement id=dom-details-open data-dfn-type=attribute><code>open</code></dfn>
+  IDL attribute must <a id=the-details-element:reflect href=infrastructure.html#reflect>reflect</a> the <code id=the-details-element:attr-details-open-6><a href=#attr-details-open>open</a></code> content
+  attribute.</p>
+
+  
+
+  <div class=example>
+
+   <p>The following example shows the <code id=the-details-element:the-details-element-8><a href=#the-details-element>details</a></code> element being used to hide technical
+   details in a progress report.</p>
+
+   <pre><code class=html>&lt;section class="progress window">
+ &lt;h1>Copying "Really Achieving Your Childhood Dreams"&lt;/h1>
+ &lt;details>
+  &lt;summary>Copying... &lt;progress max="375505392" value="97543282">&lt;/progress> 25%&lt;/summary>
+  &lt;dl>
+   &lt;dt>Transfer rate:&lt;/dt> &lt;dd>452KB/s&lt;/dd>
+   &lt;dt>Local filename:&lt;/dt> &lt;dd>/home/rpausch/raycd.m4v&lt;/dd>
+   &lt;dt>Remote filename:&lt;/dt> &lt;dd>/var/www/lectures/raycd.m4v&lt;/dd>
+   &lt;dt>Duration:&lt;/dt> &lt;dd>01:16:27&lt;/dd>
+   &lt;dt>Color profile:&lt;/dt> &lt;dd>SD (6-1-6)&lt;/dd>
+   &lt;dt>Dimensions:&lt;/dt> &lt;dd>320×240&lt;/dd>
+  &lt;/dl>
+ &lt;/details>
+&lt;/section></code></pre>
+
+  </div>
+
+  <div class=example>
+
+   <p>The following shows how a <code id=the-details-element:the-details-element-9><a href=#the-details-element>details</a></code> element can be used to hide some controls by
+   default:</p>
+
+   <pre><code class=html>&lt;details>
+ &lt;summary>&lt;label for=fn>Name &amp; Extension:&lt;/label>&lt;/summary>
+ &lt;p>&lt;input type=text id=fn name=fn value="Pillar Magazine.pdf">
+ &lt;p>&lt;label>&lt;input type=checkbox name=ext checked> Hide extension&lt;/label>
+&lt;/details></code></pre>
+
+   <p>One could use this in conjunction with other <code id=the-details-element:the-details-element-10><a href=#the-details-element>details</a></code> in a list to allow the user
+   to collapse a set of fields down to a small set of headings, with the ability to open each
+   one.</p>
+
+   <p class=details-example><img src=/html/images/sample-details-1.png width=345 alt="" height=611><img src=/html/images/sample-details-2.png width=345 alt="" height=666></p>
+
+   <p>In these examples, the summary really just summarizes what the controls can change, and not
+   the actual values, which is less than ideal.</p>
+
+  </div>
+
+  <div class=example>
+
+   <p>Because the <code id=the-details-element:attr-details-open-7><a href=#attr-details-open>open</a></code> attribute is added and removed
+   automatically as the user interacts with the control, it can be used in CSS to style the element
+   differently based on its state. Here, a style sheet is used to animate the color of the summary
+   when the element is opened or closed:</p>
+
+   <pre><code class=html>&lt;style>
+ details > summary { transition: color 1s; color: black; }
+ details[open] > summary { color: red; }
+&lt;/style>
+&lt;details>
+ &lt;summary>Automated Status: Operational&lt;/summary>
+ &lt;p>Velocity: 12m/s&lt;/p>
+ &lt;p>Direction: North&lt;/p>
+&lt;/details></code></pre>
+
+  </div>
+
+
+
+  <h4 id=the-summary-element><span class=secno>4.11.2</span> The <dfn><code>summary</code></dfn> element<a href=#the-summary-element class=self-link></a></h4><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary title="The HTML Disclosure Summary element (<summary>) element specifies a summary, caption, or legend for a <details> element's disclosure box.">Element/summary</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>49+</span></span><span class="safari yes"><span>Safari</span><span>6+</span></span><span class="chrome yes"><span>Chrome</span><span>12+</span></span><hr><span class="opera yes"><span>Opera</span><span>15+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>49+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>4+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>14+</span></span></div></div></div>
+<div data-zh-date="" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/the-elements-of-html/interactive-elements/the-summary-element.zh.html?filename=the-summary-element.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fthe-elements-of-html%2Finteractive-elements%2Fthe-summary-element.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/interactive-elements/the-summary-element.en.html></div>
+
+  <dl class=element><dt><a href=dom.html#concept-element-categories id=the-summary-element:concept-element-categories>Categories</a>:<dd>None.<dt><a href=dom.html#concept-element-contexts id=the-summary-element:concept-element-contexts>Contexts in which this element can be used</a>:<dd>As the <a id=the-summary-element:first-child href=https://dom.spec.whatwg.org/#concept-tree-first-child data-x-internal=first-child>first child</a> of a <code id=the-summary-element:the-details-element><a href=#the-details-element>details</a></code> element.<dt><a href=dom.html#concept-element-content-model id=the-summary-element:concept-element-content-model>Content model</a>:<dd><a id=the-summary-element:phrasing-content href=dom.html#phrasing-content>Phrasing content</a>, optionally intermixed with <a id=the-summary-element:heading-content href=dom.html#heading-content>heading content</a>.<dt><a href=dom.html#concept-element-tag-omission id=the-summary-element:concept-element-tag-omission>text/html 中的标签省略</a>：<dd>哪个标签都不能省略。<dt><a href=dom.html#concept-element-attributes id=the-summary-element:concept-element-attributes>Content attributes</a>:<dd><a id=the-summary-element:全局属性 href=dom.html#全局属性>Global attributes</a><dt><a href=dom.html#concept-element-accessibility-considerations id=the-summary-element:concept-element-accessibility-considerations>Accessibility considerations</a>:<dd><a href=https://w3c.github.io/html-aria/#el-summary>For authors</a>.<dd><a href=https://w3c.github.io/html-aam/#el-summary>For implementers</a>.<dt><a href=dom.html#concept-element-dom id=the-summary-element:concept-element-dom>DOM interface</a>:<dd>Uses <code id=the-summary-element:htmlelement><a href=dom.html#htmlelement>HTMLElement</a></code>.</dl>
+
+  <p>The <code id=the-summary-element:the-summary-element><a href=#the-summary-element>summary</a></code> element <a id=the-summary-element:represents href=dom.html#represents>represents</a> a summary, caption, or legend for the
+  rest of the contents of the <code id=the-summary-element:the-summary-element-2><a href=#the-summary-element>summary</a></code> element's parent <code id=the-summary-element:the-details-element-2><a href=#the-details-element>details</a></code>
+  element, if any.</p>
+
+  
+
+  <p>A <code id=the-summary-element:the-summary-element-3><a href=#the-summary-element>summary</a></code> element is a <dfn id=summary-for-its-parent-details>summary for its parent details</dfn> if the following
+  algorithm returns true:</p>
+
+  <ol><li><p>If this <code id=the-summary-element:the-summary-element-4><a href=#the-summary-element>summary</a></code> element has no parent, then return false.<li><p>Let <var>parent</var> be this <code id=the-summary-element:the-summary-element-5><a href=#the-summary-element>summary</a></code> element's parent.<li><p>If <var>parent</var> is not a <code id=the-summary-element:the-details-element-3><a href=#the-details-element>details</a></code> element, then return false.<li><p>If <var>parent</var>'s first <code id=the-summary-element:the-summary-element-6><a href=#the-summary-element>summary</a></code> element child is not this
+   <code id=the-summary-element:the-summary-element-7><a href=#the-summary-element>summary</a></code> element, then return false.<li><p>Return true.</ol>
+
+  <p>The <a id=the-summary-element:activation-behaviour href=https://dom.spec.whatwg.org/#eventtarget-activation-behavior data-x-internal=activation-behaviour>activation behavior</a> of <code id=the-summary-element:the-summary-element-8><a href=#the-summary-element>summary</a></code> elements is to run the following
+  steps:</p>
+
+  <ol><li><p>If this <code id=the-summary-element:the-summary-element-9><a href=#the-summary-element>summary</a></code> element is not the <a href=#summary-for-its-parent-details id=the-summary-element:summary-for-its-parent-details>summary for its parent
+   details</a>, then return.<li><p>Let <var>parent</var> be this <code id=the-summary-element:the-summary-element-10><a href=#the-summary-element>summary</a></code> element's parent.<li>
+    <p>If the <code id=the-summary-element:attr-details-open><a href=#attr-details-open>open</a></code> attribute is present on
+    <var>parent</var>, then <a href=https://dom.spec.whatwg.org/#concept-element-attributes-remove id=the-summary-element:concept-element-attributes-remove data-x-internal=concept-element-attributes-remove>remove</a> it.
+    Otherwise, <a href=https://dom.spec.whatwg.org/#concept-element-attributes-set-value id=the-summary-element:concept-element-attributes-set-value data-x-internal=concept-element-attributes-set-value>set</a> <var>parent</var>'s
+    <code id=the-summary-element:attr-details-open-2><a href=#attr-details-open>open</a></code> attribute to the empty string.</p>
+
+    <p class=note>This will then run the <a href=#details-notification-task-steps id=the-summary-element:details-notification-task-steps>details notification task steps</a>.</p>
+   </ol>
+
+  
+
+
+
+
+
+  <h4 id=commands><span class=secno>4.11.3</span> 命令<a href=#commands class=self-link></a></h4>
+<div data-zh-date="Sun Apr 22 2018 10:08:08 GMT+0000 (UTC)" data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/the-elements-of-html/interactive-elements/commands/index.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/interactive-elements/commands/index.en.html></div>
+
+
+  <h5 id=facets-2><span class=secno>4.11.3.1</span> Facets<a href=#facets-2 class=self-link></a></h5>
+<div data-zh-date="" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/the-elements-of-html/interactive-elements/commands/facets.zh.html?filename=facets.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fthe-elements-of-html%2Finteractive-elements%2Fcommands%2Ffacets.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/interactive-elements/commands/facets.en.html></div>
+
+  <p>A <dfn id=concept-command>command</dfn> is the abstraction behind menu items, buttons, and
+  links. Once a command is defined, other parts of the interface can refer to the same command,
+  allowing many access points to a single feature to share facets such as the <a href=#command-facet-disabledstate id=facets-2:command-facet-disabledstate>Disabled State</a>.</p>
+
+  <p id=facets>Commands are defined to have the following <dfn id=concept-facet>facets</dfn>:</p>
+
+  <dl><dt><dfn id=command-facet-label>Label</dfn><dd>The name of the command as seen by the user.<dt><dfn id=command-facet-accesskey>Access Key</dfn><dd>A key combination selected by the user agent that triggers the command. A command might not
+   have an Access Key.<dt><dfn id=command-facet-hiddenstate>Hidden State</dfn><dd>Whether the command is hidden or not (basically, whether it should be shown in menus).<dt><dfn id=command-facet-disabledstate>Disabled State</dfn><dd>Whether the command is relevant and can be triggered or not.<dt><dfn id=command-facet-action>Action</dfn><dd>The actual effect that triggering the command will have. This could be a scripted event
+   handler, a <a id=facets-2:url href=https://url.spec.whatwg.org/#concept-url data-x-internal=url>URL</a> to which to <a id=facets-2:navigate href=browsing-the-web.html#navigate>navigate</a>, or a form submission.</dl>
+
+  <p id=expose-commands-in-ui>User agents may expose the <a href=#concept-command id=facets-2:concept-command>commands</a> that match the following criteria:</p>
+
+  <ul class=brief><li>The <a href=#command-facet-hiddenstate id=facets-2:command-facet-hiddenstate>Hidden State</a> facet is false (visible)<li>The element is <a id=facets-2:in-a-document href=https://dom.spec.whatwg.org/#in-a-document data-x-internal=in-a-document>in a document</a> with a non-null <a href=browsers.html#concept-document-bc id=facets-2:concept-document-bc>browsing context</a>.<li>Neither the element nor any of its ancestors has a <code id=facets-2:hidden-属性><a href=interaction.html#hidden-属性>hidden</a></code>
+   attribute specified.</ul>
+
+  <p>User agents are encouraged to do this especially for commands that have <a href=#command-facet-accesskey id=facets-2:command-facet-accesskey>Access Keys</a>, as a way to advertise those keys to the
+  user.</p>
+
+  <p class=example>For example, such commands could be listed in the user agent's menu bar.</p>
+
+
+  
+
+
+  <h5 id=using-the-a-element-to-define-a-command><span class=secno>4.11.3.2</span> <dfn>使用 <code>a</code> 元素来定义命令</dfn><a href=#using-the-a-element-to-define-a-command class=self-link></a></h5>
+<div data-zh-date="Sun Apr 22 2018 10:08:08 GMT+0000 (UTC)" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/the-elements-of-html/interactive-elements/commands/using-the-a-element-to-define-a-command.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/interactive-elements/commands/using-the-a-element-to-define-a-command.en.html></div>
+
+  <p>有 <code id=using-the-a-element-to-define-a-command:attr-hyperlink-href><a href=links.html#attr-hyperlink-href>href</a></code> 属性的 <code id=using-the-a-element-to-define-a-command:the-a-element><a href=text-level-semantics.html#the-a-element>a</a></code> 元素
+  <a href=#concept-command id=using-the-a-element-to-define-a-command:concept-command>会定义命令</a>。</p>
+
+  <p>这个命令的 <a href=#command-facet-label id=using-the-a-element-to-define-a-command:command-facet-label>Label</a> 是该元素的
+  <code id=using-the-a-element-to-define-a-command:textcontent><a data-x-internal=textcontent href=https://dom.spec.whatwg.org/#dom-node-textcontent>textContent</a></code> IDL 属性给出的字符串。</p>
+
+  <p>这个命令的 <a href=#command-facet-accesskey id=using-the-a-element-to-define-a-command:command-facet-accesskey>AccessKey</a> 是该元素
+  <a href=interaction.html#assigned-access-key id=using-the-a-element-to-define-a-command:assigned-access-key>被指定的访问键</a>，如果有的话。</p>
+
+  <p>如果这个元素有 <code id=using-the-a-element-to-define-a-command:hidden-属性><a href=interaction.html#hidden-属性>hidden</a></code> 属性，
+  它的 <a href=#command-facet-hiddenstate id=using-the-a-element-to-define-a-command:command-facet-hiddenstate>Hidden State</a> 就是 true（隐藏），
+  否则是 false。</p>
+
+  <p>如果这个元素或它的一个祖先是 <a href=interaction.html#inert id=using-the-a-element-to-define-a-command:inert>不活动的</a>，
+  那么这个命令的 <a href=#command-facet-disabledstate id=using-the-a-element-to-define-a-command:command-facet-disabledstate>Disabled State</a> 就是 true，
+  否则是 false。</p>
+
+  <p>这个命令的 <a href=#command-facet-action id=using-the-a-element-to-define-a-command:command-facet-action>Action</a> 会在这个元素上
+  <a href=webappapis.html#fire-a-click-event id=using-the-a-element-to-define-a-command:fire-a-click-event>触发一个 <code>click</code> 事件</a>。</p>
+
+
+  <h5 id=using-the-button-element-to-define-a-command><span class=secno>4.11.3.3</span> <dfn>使用 <code>button</code> 元素来定义命令</dfn><a href=#using-the-button-element-to-define-a-command class=self-link></a></h5>
+<div data-zh-date="Sun Apr 22 2018 10:08:08 GMT+0000 (UTC)" data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/the-elements-of-html/interactive-elements/commands/using-the-button-element-to-define-a-command.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/interactive-elements/commands/using-the-button-element-to-define-a-command.en.html></div>
+
+  <p><code id=using-the-button-element-to-define-a-command:the-button-element><a href=form-elements.html#the-button-element>button</a></code> 元素总会 <a href=#concept-command id=using-the-button-element-to-define-a-command:concept-command>定义一个命令</a>。</p>
+
+  <p>这个命令的 <a href=#command-facet-label id=using-the-button-element-to-define-a-command:command-facet-label>Label</a>, <a href=#command-facet-accesskey id=using-the-button-element-to-define-a-command:command-facet-accesskey>Access Key</a>, <a href=#command-facet-hiddenstate id=using-the-button-element-to-define-a-command:command-facet-hiddenstate>Hidden State</a> 和 <a href=#command-facet-action id=using-the-button-element-to-define-a-command:command-facet-action>Action</a> 的确定方式与
+  <a href=#using-the-a-element-to-define-a-command id=using-the-button-element-to-define-a-command:using-the-a-element-to-define-a-command><code>a</code> 元素</a> 相同（参考前一章）。</p>
+
+  <p>如果这个元素或它的一个祖先是 <a href=interaction.html#inert id=using-the-button-element-to-define-a-command:inert>不活动的</a>，
+  或者设置了这个元素的 <a href=form-control-infrastructure.html#concept-fe-disabled id=using-the-button-element-to-define-a-command:concept-fe-disabled>disabled</a> 状态，
+  那么这个命令的 <a href=#command-facet-disabledstate id=using-the-button-element-to-define-a-command:command-facet-disabledstate>Disabled State</a> 就是 true，
+  否则是 false。</p>
+
+
+  <h5 id=using-the-input-element-to-define-a-command><span class=secno>4.11.3.4</span> 
+  <dfn>使用 <code>input</code> 元素来定义命令</dfn><a href=#using-the-input-element-to-define-a-command class=self-link></a></h5>
+<div data-zh-date="Sat Apr 21 2018 17:11:33 GMT+0000 (UTC)" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/the-elements-of-html/interactive-elements/commands/using-the-input-element-to-define-a-command.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/interactive-elements/commands/using-the-input-element-to-define-a-command.en.html></div>
+
+  <p> <code id=using-the-input-element-to-define-a-command:attr-input-type><a href=input.html#attr-input-type>type</a></code> 属性处于
+  <a href="input.html#submit-button-state-(type=submit)" id="using-the-input-element-to-define-a-command:submit-button-state-(type=submit)">Submit Button</a>, <a href="input.html#reset-button-state-(type=reset)" id="using-the-input-element-to-define-a-command:reset-button-state-(type=reset)">Reset Button</a>, <a href="input.html#image-button-state-(type=image)" id="using-the-input-element-to-define-a-command:image-button-state-(type=image)">Image
+  Button</a>, <a href="input.html#button-state-(type=button)" id="using-the-input-element-to-define-a-command:button-state-(type=button)">Button</a>, <a href="input.html#radio-button-state-(type=radio)" id="using-the-input-element-to-define-a-command:radio-button-state-(type=radio)">Radio Button</a>, 或 <a href="input.html#checkbox-state-(type=checkbox)" id="using-the-input-element-to-define-a-command:checkbox-state-(type=checkbox)">Checkbox</a> 状态之一的
+  <code id=using-the-input-element-to-define-a-command:the-input-element><a href=input.html#the-input-element>input</a></code> 元素 <a href=#concept-command id=using-the-input-element-to-define-a-command:concept-command>定义了命令</a>。</p>
+
+  <p>这个命令的 <a href=#command-facet-label id=using-the-input-element-to-define-a-command:command-facet-label>Label</a> 按如下过程确定：</p>
+
+  <ul><li><p>如果 <code id=using-the-input-element-to-define-a-command:attr-input-type-2><a href=input.html#attr-input-type>type</a></code> 属性处于
+    <a href="input.html#submit-button-state-(type=submit)" id="using-the-input-element-to-define-a-command:submit-button-state-(type=submit)-2">Submit Button</a>, <a href="input.html#reset-button-state-(type=reset)" id="using-the-input-element-to-define-a-command:reset-button-state-(type=reset)-2">Reset Button</a>, <a href="input.html#image-button-state-(type=image)" id="using-the-input-element-to-define-a-command:image-button-state-(type=image)-2">Image
+    Button</a>, 或 <a href="input.html#button-state-(type=button)" id="using-the-input-element-to-define-a-command:button-state-(type=button)-2">Button</a> 状态，那么
+    <a href=#command-facet-label id=using-the-input-element-to-define-a-command:command-facet-label-2>Label</a> 就是
+    <code id=using-the-input-element-to-define-a-command:attr-input-value><a href=input.html#attr-input-value>value</a></code> 属性（如果有的话）给出的字符串，
+    如果没有的话，就是 UA 用作这个按钮标签的一个与 UA 和地区都有关的值。<li><p>否则，如果该元素是一个 <a href=forms.html#labeled-control id=using-the-input-element-to-define-a-command:labeled-control>有标签的控件</a>，
+    那么 <a href=#command-facet-label id=using-the-input-element-to-define-a-command:command-facet-label-3>Label</a> 就是给这个控件
+    <a href=forms.html#labeled-control id=using-the-input-element-to-define-a-command:labeled-control-2>打标签</a> 的 <code id=using-the-input-element-to-define-a-command:the-label-element><a href=forms.html#the-label-element>label</a></code> 元素中，
+    按照 <a href=https://dom.spec.whatwg.org/#concept-tree-order id=using-the-input-element-to-define-a-command:tree-order data-x-internal=tree-order>树序</a> 的第一个元素的
+    <code id=using-the-input-element-to-define-a-command:textcontent><a data-x-internal=textcontent href=https://dom.spec.whatwg.org/#dom-node-textcontent>textContent</a></code> 给出的字符串。
+    （在 DOM 术语中，这个字符串就是 <code><var>element</var>.labels[0].textContent</code>）<li><p>否则，如果有 <code id=using-the-input-element-to-define-a-command:attr-input-value-2><a href=input.html#attr-input-value>value</a></code> 属性，那么
+    <a href=#command-facet-label id=using-the-input-element-to-define-a-command:command-facet-label-4>Label</a> 就是这个属性的值。<li><p>否则， <a href=#command-facet-label id=using-the-input-element-to-define-a-command:command-facet-label-5>Label</a> 就是空字符串。</ul>
+
+  <p>这个命令的 <a href=#command-facet-accesskey id=using-the-input-element-to-define-a-command:command-facet-accesskey>AccessKey</a> 就是这个元素
+  <a href=interaction.html#assigned-access-key id=using-the-input-element-to-define-a-command:assigned-access-key>被指定的访问键</a>（如果有的话）。</p>
+
+  <p>如果这个元素有 <code id=using-the-input-element-to-define-a-command:hidden-属性><a href=interaction.html#hidden-属性>hidden</a></code> 属性，
+  它的 <a href=#command-facet-hiddenstate id=using-the-input-element-to-define-a-command:command-facet-hiddenstate>Hidden State</a> 就是 true（隐藏），
+  否则是 false。</p>
+
+  <p>如果这个元素或它的一个祖先是 <a href=interaction.html#inert id=using-the-input-element-to-define-a-command:inert>不活动的</a>，
+  或者设置了这个元素的 <a href=form-control-infrastructure.html#concept-fe-disabled id=using-the-input-element-to-define-a-command:concept-fe-disabled>disabled</a> 状态，
+  那么这个命令的 <a href=#command-facet-disabledstate id=using-the-input-element-to-define-a-command:command-facet-disabledstate>Disabled State</a> 就是 true，
+  否则是 false。</p>
+
+  <p>这个命令的 <a href=#command-facet-action id=using-the-input-element-to-define-a-command:command-facet-action>Action</a> 会在这个元素上
+  <a href=webappapis.html#fire-a-click-event id=using-the-input-element-to-define-a-command:fire-a-click-event>触发一个 <code>click</code> 事件</a>。</p>
+
+
+
+  <h5 id=using-the-option-element-to-define-a-command><span class=secno>4.11.3.5</span> <dfn>Using the <code>option</code> element to define a command</dfn><a href=#using-the-option-element-to-define-a-command class=self-link></a></h5>
+<div data-zh-date="" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/the-elements-of-html/interactive-elements/commands/using-the-option-element-to-define-a-command.zh.html?filename=using-the-option-element-to-define-a-command.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fthe-elements-of-html%2Finteractive-elements%2Fcommands%2Fusing-the-option-element-to-define-a-command.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/interactive-elements/commands/using-the-option-element-to-define-a-command.en.html></div>
+
+  <p>An <code id=using-the-option-element-to-define-a-command:the-option-element><a href=form-elements.html#the-option-element>option</a></code> element with an ancestor <code id=using-the-option-element-to-define-a-command:the-select-element><a href=form-elements.html#the-select-element>select</a></code> element and either no <code id=using-the-option-element-to-define-a-command:attr-option-value><a href=form-elements.html#attr-option-value>value</a></code> attribute or a <code id=using-the-option-element-to-define-a-command:attr-option-value-2><a href=form-elements.html#attr-option-value>value</a></code>
+  attribute that is not the empty string <a href=#concept-command id=using-the-option-element-to-define-a-command:concept-command>defines a command</a>.</p>
+
+  <p>The <a href=#command-facet-label id=using-the-option-element-to-define-a-command:command-facet-label>Label</a> of the command is the value of the
+  <code id=using-the-option-element-to-define-a-command:the-option-element-2><a href=form-elements.html#the-option-element>option</a></code> element's <code id=using-the-option-element-to-define-a-command:attr-option-label><a href=form-elements.html#attr-option-label>label</a></code> attribute, if there is
+  one, or else the <code id=using-the-option-element-to-define-a-command:the-option-element-3><a href=form-elements.html#the-option-element>option</a></code> element's <a id=using-the-option-element-to-define-a-command:descendant-text-content href=https://dom.spec.whatwg.org/#concept-descendant-text-content data-x-internal=descendant-text-content>descendant text content</a>, with <a href=https://infra.spec.whatwg.org/#strip-and-collapse-ascii-whitespace id=using-the-option-element-to-define-a-command:strip-and-collapse-ascii-whitespace data-x-internal=strip-and-collapse-ascii-whitespace>ASCII whitespace stripped and collapsed</a>.</p>
+
+  <p>The <a href=#command-facet-accesskey id=using-the-option-element-to-define-a-command:command-facet-accesskey>Access Key</a> of the command is the element's
+  <a id=using-the-option-element-to-define-a-command:assigned-access-key href=interaction.html#assigned-access-key>assigned access key</a>, if any.</p>
+
+  <p>The <a href=#command-facet-hiddenstate id=using-the-option-element-to-define-a-command:command-facet-hiddenstate>Hidden State</a> of the command is true (hidden)
+  if the element has a <code id=using-the-option-element-to-define-a-command:hidden-属性><a href=interaction.html#hidden-属性>hidden</a></code> attribute, and false otherwise.</p>
+
+  <p>The <a href=#command-facet-disabledstate id=using-the-option-element-to-define-a-command:command-facet-disabledstate>Disabled State</a> of the command is true if
+  the element is <a href=form-elements.html#concept-option-disabled id=using-the-option-element-to-define-a-command:concept-option-disabled>disabled</a>, or if its nearest ancestor
+  <code id=using-the-option-element-to-define-a-command:the-select-element-2><a href=form-elements.html#the-select-element>select</a></code> element is <a href=form-control-infrastructure.html#concept-fe-disabled id=using-the-option-element-to-define-a-command:concept-fe-disabled>disabled</a>, or if it or one
+  of its ancestors is <a id=using-the-option-element-to-define-a-command:inert href=interaction.html#inert>inert</a>, and false otherwise.</p>
+
+  <p>If the <code id=using-the-option-element-to-define-a-command:the-option-element-4><a href=form-elements.html#the-option-element>option</a></code>'s nearest ancestor <code id=using-the-option-element-to-define-a-command:the-select-element-3><a href=form-elements.html#the-select-element>select</a></code> element has a <code id=using-the-option-element-to-define-a-command:attr-select-multiple><a href=form-elements.html#attr-select-multiple>multiple</a></code> attribute, the <a href=#command-facet-action id=using-the-option-element-to-define-a-command:command-facet-action>Action</a> of the command is to <a href=form-elements.html#concept-select-toggle id=using-the-option-element-to-define-a-command:concept-select-toggle>toggle</a> the <code id=using-the-option-element-to-define-a-command:the-option-element-5><a href=form-elements.html#the-option-element>option</a></code> element. Otherwise, the <a href=#command-facet-action id=using-the-option-element-to-define-a-command:command-facet-action-2>Action</a> is to <a href=form-elements.html#concept-select-pick id=using-the-option-element-to-define-a-command:concept-select-pick>pick</a> the <code id=using-the-option-element-to-define-a-command:the-option-element-6><a href=form-elements.html#the-option-element>option</a></code> element.</p>
+
+
+
+  <h5 id=using-the-accesskey-attribute-on-a-legend-element-to-define-a-command><span class=secno>4.11.3.6</span> 
+  在 <code id=using-the-accesskey-attribute-on-a-legend-element-to-define-a-command:the-legend-element><a href=form-elements.html#the-legend-element>legend</a></code> 元素上
+  <dfn>使用 <code>accesskey</code> 属性
+  来定义一个命令</dfn><a href=#using-the-accesskey-attribute-on-a-legend-element-to-define-a-command class=self-link></a></h5>
+<div data-zh-date="Sat Apr 21 2018 17:11:33 GMT+0000 (UTC)" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/the-elements-of-html/interactive-elements/commands/using-the-accesskey-attribute-on-a-legend-element-to-define-a-command.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/interactive-elements/commands/using-the-accesskey-attribute-on-a-legend-element-to-define-a-command.en.html></div>
+
+  <p>有 <a href=interaction.html#assigned-access-key id=using-the-accesskey-attribute-on-a-legend-element-to-define-a-command:assigned-access-key>指定的访问键</a> 的 <code id=using-the-accesskey-attribute-on-a-legend-element-to-define-a-command:the-legend-element-2><a href=form-elements.html#the-legend-element>legend</a></code> 元素，
+  如果其祖先 <code id=using-the-accesskey-attribute-on-a-legend-element-to-define-a-command:the-fieldset-element><a href=form-elements.html#the-fieldset-element>fieldset</a></code> 元素有一个不是 <code id=using-the-accesskey-attribute-on-a-legend-element-to-define-a-command:the-label-element><a href=forms.html#the-label-element>label</a></code> 或 <code id=using-the-accesskey-attribute-on-a-legend-element-to-define-a-command:the-legend-element-3><a href=form-elements.html#the-legend-element>legend</a></code>
+  的后代元素（而且不是 <code id=using-the-accesskey-attribute-on-a-legend-element-to-define-a-command:the-legend-element-4><a href=form-elements.html#the-legend-element>legend</a></code> 元素的后代元素），而且这个后代元素
+  <a href=#concept-command id=using-the-accesskey-attribute-on-a-legend-element-to-define-a-command:concept-command>定义了一个命令</a>，那么这个 <code id=using-the-accesskey-attribute-on-a-legend-element-to-define-a-command:the-legend-element-5><a href=form-elements.html#the-legend-element>legend</a></code> 元素就
+  <a href=#concept-command id=using-the-accesskey-attribute-on-a-legend-element-to-define-a-command:concept-command-2>定义了一个命令</a>。</p>
+
+  <p>命令的 <a href=#command-facet-label id=using-the-accesskey-attribute-on-a-legend-element-to-define-a-command:command-facet-label>Label</a> 是该元素的
+  <code id=using-the-accesskey-attribute-on-a-legend-element-to-define-a-command:textcontent><a data-x-internal=textcontent href=https://dom.spec.whatwg.org/#dom-node-textcontent>textContent</a></code> IDL 属性给出的字符串。</p>
+
+  <p>命令的 <a href=#command-facet-accesskey id=using-the-accesskey-attribute-on-a-legend-element-to-define-a-command:command-facet-accesskey>AccessKey</a> 是该元素的
+  <a href=interaction.html#assigned-access-key id=using-the-accesskey-attribute-on-a-legend-element-to-define-a-command:assigned-access-key-2>指定的访问键</a>。</p>
+
+  <p>命令的 <a href=#command-facet-hiddenstate id=using-the-accesskey-attribute-on-a-legend-element-to-define-a-command:command-facet-hiddenstate>Hidden State</a>, <a href=#command-facet-disabledstate id=using-the-accesskey-attribute-on-a-legend-element-to-define-a-command:command-facet-disabledstate>Disabled State</a> 和 <a href=#command-facet-action id=using-the-accesskey-attribute-on-a-legend-element-to-define-a-command:command-facet-action>Action</a> 与
+  <code id=using-the-accesskey-attribute-on-a-legend-element-to-define-a-command:the-legend-element-6><a href=form-elements.html#the-legend-element>legend</a></code> 元素的父元素的 <a href=https://dom.spec.whatwg.org/#concept-tree-order id=using-the-accesskey-attribute-on-a-legend-element-to-define-a-command:tree-order data-x-internal=tree-order>按照树序</a> 的第一个
+  <a href=#concept-command id=using-the-accesskey-attribute-on-a-legend-element-to-define-a-command:concept-command-3>定义了命令</a> 的，
+  而且不是 <code id=using-the-accesskey-attribute-on-a-legend-element-to-define-a-command:the-legend-element-7><a href=form-elements.html#the-legend-element>legend</a></code> 元素的后代，也不是 <code id=using-the-accesskey-attribute-on-a-legend-element-to-define-a-command:the-label-element-2><a href=forms.html#the-label-element>label</a></code> 或 <code id=using-the-accesskey-attribute-on-a-legend-element-to-define-a-command:the-legend-element-8><a href=form-elements.html#the-legend-element>legend</a></code> 元素的，
+  后代元素的相应属性相同。
+  </p>
+
+
+
+  <h5 id=using-the-accesskey-attribute-to-define-a-command-on-other-elements><span class=secno>4.11.3.7</span> <dfn>使用 <code>accesskey</code> 属性给其他元素定义命令</dfn><a href=#using-the-accesskey-attribute-to-define-a-command-on-other-elements class=self-link></a></h5>
+<div data-zh-date="Sat Apr 21 2018 17:11:33 GMT+0000 (UTC)" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/the-elements-of-html/interactive-elements/commands/using-the-accesskey-attribute-to-define-a-command-on-other-elements.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/interactive-elements/commands/using-the-accesskey-attribute-to-define-a-command-on-other-elements.en.html></div>
+
+  <p>有 <a href=interaction.html#assigned-access-key id=using-the-accesskey-attribute-to-define-a-command-on-other-elements:assigned-access-key>指定的访问键</a> 的元素
+  <a href=#concept-command id=using-the-accesskey-attribute-to-define-a-command-on-other-elements:concept-command>定义了一个命令</a>。</p>
+
+  <p>如果前面的章节中定义了一个元素 <a href=#concept-command id=using-the-accesskey-attribute-to-define-a-command-on-other-elements:concept-command-2>会定义命令</a>，
+  那么应该遵循对应章节的定义，并忽略本小节。否则，本小节就适用于那个元素。</p>
+
+  <p>命令的 <a href=#command-facet-label id=using-the-accesskey-attribute-to-define-a-command-on-other-elements:command-facet-label>Label</a> 取决于元素本身。
+  如果该元素是 <a href=forms.html#labeled-control id=using-the-accesskey-attribute-to-define-a-command-on-other-elements:labeled-control>有标签的控件</a>，
+  那么 <a href=#command-facet-label id=using-the-accesskey-attribute-to-define-a-command-on-other-elements:command-facet-label-2>Label</a> 就是给这个控件
+  <a href=forms.html#labeled-control id=using-the-accesskey-attribute-to-define-a-command-on-other-elements:labeled-control-2>打标签</a> 的 <code id=using-the-accesskey-attribute-to-define-a-command-on-other-elements:the-label-element><a href=forms.html#the-label-element>label</a></code> 元素中，
+  按照 <a href=https://dom.spec.whatwg.org/#concept-tree-order id=using-the-accesskey-attribute-to-define-a-command-on-other-elements:tree-order data-x-internal=tree-order>树序</a> 的第一个元素的
+  <code id=using-the-accesskey-attribute-to-define-a-command-on-other-elements:textcontent><a data-x-internal=textcontent href=https://dom.spec.whatwg.org/#dom-node-textcontent>textContent</a></code> 给出的字符串。
+  （在 DOM 术语中，这个字符串就是 <code><var>element</var>.labels[0].textContent</code>）。
+  否则 <a href=#command-facet-label id=using-the-accesskey-attribute-to-define-a-command-on-other-elements:command-facet-label-3>Label</a> 就是元素自己的 <code id=using-the-accesskey-attribute-to-define-a-command-on-other-elements:textcontent-2><a data-x-internal=textcontent href=https://dom.spec.whatwg.org/#dom-node-textcontent>textContent</a></code>。</p>
+
+  <p>命令的 <a href=#command-facet-accesskey id=using-the-accesskey-attribute-to-define-a-command-on-other-elements:command-facet-accesskey>AccessKey</a> 就是元素的
+  <a href=interaction.html#assigned-access-key id=using-the-accesskey-attribute-to-define-a-command-on-other-elements:assigned-access-key-2>被指定的访问键</a>。</p>
+
+  <p>如果这个元素有 <code id=using-the-accesskey-attribute-to-define-a-command-on-other-elements:hidden-属性><a href=interaction.html#hidden-属性>hidden</a></code> 属性，
+  它的 <a href=#command-facet-hiddenstate id=using-the-accesskey-attribute-to-define-a-command-on-other-elements:command-facet-hiddenstate>Hidden State</a> 就是 true（隐藏），
+  否则是 false。</p>
+
+  <p>如果这个元素或它的一个祖先是 <a href=interaction.html#inert id=using-the-accesskey-attribute-to-define-a-command-on-other-elements:inert>不活动的</a>，
+  那么这个命令的 <a href=#command-facet-disabledstate id=using-the-accesskey-attribute-to-define-a-command-on-other-elements:command-facet-disabledstate>Disabled State</a> 就是 true，
+  否则是 false。</p>
+
+  <p>这个命令的 <a href=#command-facet-action id=using-the-accesskey-attribute-to-define-a-command-on-other-elements:command-facet-action>Action</a> 是执行以下步骤：</p>
+
+  <ol><li>为这个元素执行 <a href=interaction.html#focusing-steps id=using-the-accesskey-attribute-to-define-a-command-on-other-elements:focusing-steps>聚焦步骤</a>。<li>在这个元素上 <a href=webappapis.html#fire-a-click-event id=using-the-accesskey-attribute-to-define-a-command-on-other-elements:fire-a-click-event>触发一个
+   <code>click</code> 事件</a>。</ol>
+
+  
+
+  <h4 id=the-dialog-element><span class=secno>4.11.4</span> The <dfn><code>dialog</code></dfn> element<a href=#the-dialog-element class=self-link></a></h4><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog title="The HTML <dialog> element represents a dialog box or other interactive component, such as a dismissable alert, inspector, or subwindow.">Element/dialog</a><div class=support><span class="firefox yes"><span>Firefox</span><span title="Requires setting a user preference or runtime flag.">🔰 53+</span></span><span class="safari no"><span>Safari</span><span>No</span></span><span class="chrome yes"><span>Chrome</span><span>37+</span></span><hr><span class="opera yes"><span>Opera</span><span>24+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span title="Requires setting a user preference or runtime flag.">🔰 53+</span></span><span class="safari_ios no"><span>Safari iOS</span><span>No</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>37+</span></span><span class="webview_android yes"><span>WebView Android</span><span>37+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>3.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>24+</span></span><hr><span class=caniuse><span><a href="https://caniuse.com/#feat=dialog" title="Dialog element">caniuse.com table</a></span></span></div></div></div>
+<div data-zh-date="" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/the-elements-of-html/interactive-elements/the-dialog-element.zh.html?filename=the-dialog-element.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fthe-elements-of-html%2Finteractive-elements%2Fthe-dialog-element.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/interactive-elements/the-dialog-element.en.html></div>
+
+  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement title="The HTMLDialogElement interface provides methods to manipulate <dialog> elements. It inherits properties and methods from the HTMLElement interface.">HTMLDialogElement</a><div class=support><span class="firefox yes"><span>Firefox</span><span title="Requires setting a user preference or runtime flag.">🔰 53+</span></span><span class="safari no"><span>Safari</span><span>No</span></span><span class="chrome yes"><span>Chrome</span><span>37+</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span title="Requires setting a user preference or runtime flag.">🔰 53+</span></span><span class="safari_ios no"><span>Safari iOS</span><span>No</span></span><span class="chrome_android no"><span>Chrome Android</span><span>No</span></span><span class="webview_android no"><span>WebView Android</span><span>No</span></span><span class="samsunginternet_android no"><span>Samsung Internet</span><span>No</span></span><span class="opera_android no"><span>Opera Android</span><span>No</span></span></div></div></div><dl class=element><dt><a href=dom.html#concept-element-categories id=the-dialog-element:concept-element-categories>Categories</a>:<dd><a id=the-dialog-element:flow-content href=dom.html#flow-content>Flow content</a>.<dd><a id=the-dialog-element:sectioning-root href=sections.html#sectioning-root>Sectioning root</a>.<dt><a href=dom.html#concept-element-contexts id=the-dialog-element:concept-element-contexts>Contexts in which this element can be used</a>:<dd>Where <a id=the-dialog-element:flow-content-2 href=dom.html#flow-content>flow content</a> is expected.<dt><a href=dom.html#concept-element-content-model id=the-dialog-element:concept-element-content-model>Content model</a>:<dd><a id=the-dialog-element:flow-content-3 href=dom.html#flow-content>Flow content</a>.<dt><a href=dom.html#concept-element-tag-omission id=the-dialog-element:concept-element-tag-omission>text/html 中的标签省略</a>：<dd>哪个标签都不能省略。<dt><a href=dom.html#concept-element-attributes id=the-dialog-element:concept-element-attributes>Content attributes</a>:<dd><a id=the-dialog-element:全局属性 href=dom.html#全局属性>Global attributes</a><dd><code id=the-dialog-element:attr-dialog-open><a href=#attr-dialog-open>open</a></code> — Whether the dialog box is showing<dt><a href=dom.html#concept-element-accessibility-considerations id=the-dialog-element:concept-element-accessibility-considerations>Accessibility considerations</a>:<dd><a href=https://w3c.github.io/html-aria/#el-dialog>For authors</a>.<dd><a href=https://w3c.github.io/html-aam/#el-dialog>For implementers</a>.<dt><a href=dom.html#concept-element-dom id=the-dialog-element:concept-element-dom>DOM interface</a>:<dd>
+    <pre><code class=idl>[Exposed=Window]
+interface <dfn id=htmldialogelement>HTMLDialogElement</dfn> : <a id=the-dialog-element:htmlelement href=dom.html#htmlelement>HTMLElement</a> {
+  [<a id=the-dialog-element:htmlconstructor href=dom.html#htmlconstructor>HTMLConstructor</a>] constructor();
+
+  [<a id=the-dialog-element:cereactions href=custom-elements.html#cereactions>CEReactions</a>] attribute boolean <a href=#dom-dialog-open id=the-dialog-element:dom-dialog-open>open</a>;
+  attribute DOMString <a href=#dom-dialog-returnvalue id=the-dialog-element:dom-dialog-returnvalue>returnValue</a>;
+  [<a id=the-dialog-element:cereactions-2 href=custom-elements.html#cereactions>CEReactions</a>] undefined <a href=#dom-dialog-show id=the-dialog-element:dom-dialog-show>show</a>();
+  [<a id=the-dialog-element:cereactions-3 href=custom-elements.html#cereactions>CEReactions</a>] undefined <a href=#dom-dialog-showmodal id=the-dialog-element:dom-dialog-showmodal>showModal</a>();
+  [<a id=the-dialog-element:cereactions-4 href=custom-elements.html#cereactions>CEReactions</a>] undefined <a href=#dom-dialog-close id=the-dialog-element:dom-dialog-close>close</a>(optional DOMString returnValue);
+};</code></pre>
+   </dl>
+
+  <p>The <code id=the-dialog-element:the-dialog-element><a href=#the-dialog-element>dialog</a></code> element represents a part of an application that a user interacts with
+  to perform a task, for example a dialog box, inspector, or window.</p>
+
+  <p>The <dfn data-dfn-for=dialog id=attr-dialog-open data-dfn-type=element-attr><code>open</code></dfn> attribute
+  is a <a id=the-dialog-element:boolean-attribute href=infrastructure.html#boolean-attribute>boolean attribute</a>. When specified, it indicates that the <code id=the-dialog-element:the-dialog-element-2><a href=#the-dialog-element>dialog</a></code>
+  element is active and that the user can interact with it.</p>
+
+  
+
+  <p>A <code id=the-dialog-element:the-dialog-element-3><a href=#the-dialog-element>dialog</a></code> element without an <code id=the-dialog-element:attr-dialog-open-2><a href=#attr-dialog-open>open</a></code> attribute
+  specified should not be shown to the user. This requirement may be implemented indirectly through
+  the style layer. For example, user agents that <a href=infrastructure.html#renderingUA>support the suggested
+  default rendering</a> implement this requirement using the CSS rules described in the <a href=rendering.html#rendering>rendering section</a>.</p>
+
+  
+
+  <div class=note>
+   <p>Removing the <code id=the-dialog-element:attr-dialog-open-3><a href=#attr-dialog-open>open</a></code> attribute will usually hide the
+   dialog. However, doing so has a number of strange additional consequences:
+
+   <ul><li><p>The <code id=the-dialog-element:event-close><a href=indices.html#event-close>close</a></code> event will not be fired.<li><p>The <code id=the-dialog-element:dom-dialog-close-2><a href=#dom-dialog-close>close()</a></code> method, and any <a href=#canceling-dialogs>user-agent provided cancelation interface</a>, will no longer be able
+    to close the dialog.<li><p>If the dialog was shown using its <code id=the-dialog-element:dom-dialog-showmodal-2><a href=#dom-dialog-showmodal>showModal()</a></code>
+    method, the <code id=the-dialog-element:document><a href=dom.html#document>Document</a></code> will still be <a href=interaction.html#blocked-by-a-modal-dialog id=the-dialog-element:blocked-by-a-modal-dialog>blocked</a>.</ul>
+
+   <p>For these reasons, it is generally better to never remove the <code id=the-dialog-element:attr-dialog-open-4><a href=#attr-dialog-open>open</a></code> attribute manually. Instead, use the <code id=the-dialog-element:dom-dialog-close-3><a href=#dom-dialog-close>close()</a></code> method to close the dialog, or the <code id=the-dialog-element:hidden-属性><a href=interaction.html#hidden-属性>hidden</a></code> attribute to hide it.</p>
+  </div>
+
+  <p>The <code id=the-dialog-element:attr-tabindex><a href=interaction.html#attr-tabindex>tabindex</a></code> attribute must not be specified on
+  <code id=the-dialog-element:the-dialog-element-4><a href=#the-dialog-element>dialog</a></code> elements.</p>
+
+
+  <dl class=domintro><dt><var>dialog</var> . <code id=dom-dialog-show-dev><a href=#dom-dialog-show>show</a></code>()<dd>
+    <p>Displays the <code id=the-dialog-element:the-dialog-element-5><a href=#the-dialog-element>dialog</a></code> element.</p>
+   <dt><var>dialog</var> . <code id=dom-dialog-showmodal-dev><a href=#dom-dialog-showmodal>showModal</a></code>()<dd>
+    <p>Displays the <code id=the-dialog-element:the-dialog-element-6><a href=#the-dialog-element>dialog</a></code> element and makes it the top-most modal dialog.</p>
+
+    <p>This method honors the <code id=the-dialog-element:attr-fe-autofocus><a href=interaction.html#attr-fe-autofocus>autofocus</a></code> attribute.</p>
+   <dt><var>dialog</var> . <code id=dom-dialog-close-dev><a href=#dom-dialog-close>close</a></code>( [ <var>result</var> ] )<dd>
+    <p>Closes the <code id=the-dialog-element:the-dialog-element-7><a href=#the-dialog-element>dialog</a></code> element.</p>
+
+    <p>The argument, if provided, provides a return value.</p>
+   <dt><var>dialog</var> . <code id=dom-dialog-returnvalue-dev><a href=#dom-dialog-returnvalue>returnValue</a></code> [ = <var>result</var> ]<dd>
+    <p>Returns the <code id=the-dialog-element:the-dialog-element-8><a href=#the-dialog-element>dialog</a></code>'s return value.</p>
+
+    <p>Can be set, to update the return value.</p>
+   </dl>
+
+
+
+  
+
+  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/show title="The show() method of the HTMLDialogElement interface displays the dialog modelessly, i.e. still allowing interaction with content outside of the dialog.">HTMLDialogElement/show</a><div class=support><span class="firefox yes"><span>Firefox</span><span title="Requires setting a user preference or runtime flag.">🔰 53+</span></span><span class="safari no"><span>Safari</span><span>No</span></span><span class="chrome yes"><span>Chrome</span><span>37+</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span title="Requires setting a user preference or runtime flag.">🔰 53+</span></span><span class="safari_ios no"><span>Safari iOS</span><span>No</span></span><span class="chrome_android no"><span>Chrome Android</span><span>No</span></span><span class="webview_android no"><span>WebView Android</span><span>No</span></span><span class="samsunginternet_android no"><span>Samsung Internet</span><span>No</span></span><span class="opera_android no"><span>Opera Android</span><span>No</span></span></div></div></div><p>When the <dfn data-dfn-for=HTMLDialogElement id=dom-dialog-show data-dfn-type=method><code>show()</code></dfn>
+  method is invoked, the user agent must run the following steps:</p>
+
+  <ol><li><p>If the element already has an <code id=the-dialog-element:attr-dialog-open-5><a href=#attr-dialog-open>open</a></code> attribute, then
+   return.<li><p>Add an <code id=the-dialog-element:attr-dialog-open-6><a href=#attr-dialog-open>open</a></code> attribute to the <code id=the-dialog-element:the-dialog-element-9><a href=#the-dialog-element>dialog</a></code>
+   element, whose value is the empty string.<li><p>Run the <a href=#dialog-focusing-steps id=the-dialog-element:dialog-focusing-steps>dialog focusing steps</a> for the <code id=the-dialog-element:the-dialog-element-10><a href=#the-dialog-element>dialog</a></code> element.</ol>
+
+  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/showModal title="The showModal() method of the HTMLDialogElement interface displays the dialog as a modal, over the top of any other dialogs that might be present. It displays into the top layer, along with a ::backdrop pseudo-element. Interaction outside the dialog is blocked and the content outside it is rendered inert.">HTMLDialogElement/showModal</a><div class=support><span class="firefox yes"><span>Firefox</span><span title="Requires setting a user preference or runtime flag.">🔰 53+</span></span><span class="safari no"><span>Safari</span><span>No</span></span><span class="chrome yes"><span>Chrome</span><span>37+</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span title="Requires setting a user preference or runtime flag.">🔰 53+</span></span><span class="safari_ios no"><span>Safari iOS</span><span>No</span></span><span class="chrome_android no"><span>Chrome Android</span><span>No</span></span><span class="webview_android no"><span>WebView Android</span><span>No</span></span><span class="samsunginternet_android no"><span>Samsung Internet</span><span>No</span></span><span class="opera_android no"><span>Opera Android</span><span>No</span></span></div></div></div><p>When the <dfn id=dom-dialog-showmodal><code>showModal()</code></dfn> method is invoked,
+  the user agent must run the following steps:</p>
+
+  <ol><li><p>Let <var>subject</var> be the <code id=the-dialog-element:the-dialog-element-11><a href=#the-dialog-element>dialog</a></code> element on which the method was
+   invoked.<li><p>If <var>subject</var> already has an <code id=the-dialog-element:attr-dialog-open-7><a href=#attr-dialog-open>open</a></code>
+   attribute, then throw an <a id=the-dialog-element:invalidstateerror href=https://heycam.github.io/webidl/#invalidstateerror data-x-internal=invalidstateerror>"<code>InvalidStateError</code>"</a> <code id=the-dialog-element:domexception><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code>.<li><p>If <var>subject</var> is not <a id=the-dialog-element:connected href=https://dom.spec.whatwg.org/#connected data-x-internal=connected>connected</a>, then throw an
+   <a id=the-dialog-element:invalidstateerror-2 href=https://heycam.github.io/webidl/#invalidstateerror data-x-internal=invalidstateerror>"<code>InvalidStateError</code>"</a> <code id=the-dialog-element:domexception-2><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code>.<li><p>Add an <code id=the-dialog-element:attr-dialog-open-8><a href=#attr-dialog-open>open</a></code> attribute to <var>subject</var>, whose
+   value is the empty string.<li><p>Set the <a href=#is-modal id=the-dialog-element:is-modal>is modal</a> flag of <var>subject</var> to true.<li>
+    <p>Let <var>subject</var>'s <a id=the-dialog-element:node-document href=https://dom.spec.whatwg.org/#concept-node-document data-x-internal=node-document>node document</a> be <a href=interaction.html#blocked-by-a-modal-dialog id=the-dialog-element:blocked-by-a-modal-dialog-2>blocked by the modal dialog</a> <var>subject</var>.</p>
+
+    <p id=note-dialog-plus-focus-fixup class=note>This will cause the <a id=the-dialog-element:focused-area-of-the-document href=interaction.html#focused-area-of-the-document>focused area of the
+    document</a> to become <a id=the-dialog-element:inert href=interaction.html#inert>inert</a> (unless that currently focused area is a
+    <a id=the-dialog-element:shadow-including-descendant href=https://dom.spec.whatwg.org/#concept-shadow-including-descendant data-x-internal=shadow-including-descendant>shadow-including descendant</a> of <var>subject</var>). In such cases, the <a id=the-dialog-element:focus-fixup-rule href=interaction.html#focus-fixup-rule>focus
+    fixup rule</a> will kick in and reset the <a id=the-dialog-element:focused-area-of-the-document-2 href=interaction.html#focused-area-of-the-document>focused area of the document</a> to the
+    <a id=the-dialog-element:viewport href=https://drafts.csswg.org/css2/#viewport data-x-internal=viewport>viewport</a> for now. In a couple steps we will attempt to find a better candidate to
+    focus.</p>
+   <li><p>If <var>subject</var>'s <a id=the-dialog-element:node-document-2 href=https://dom.spec.whatwg.org/#concept-node-document data-x-internal=node-document>node document</a>'s <a id=the-dialog-element:top-layer href=https://fullscreen.spec.whatwg.org/#top-layer data-x-internal=top-layer>top layer</a> does not
+   already <a href=https://infra.spec.whatwg.org/#list-contain id=the-dialog-element:list-contains data-x-internal=list-contains>contain</a> <var>subject</var>, then <a href=https://fullscreen.spec.whatwg.org/#top-layer-add id=the-dialog-element:top-layer-add data-x-internal=top-layer-add>add</a> <var>subject</var> to <var>subject</var>'s <a id=the-dialog-element:node-document-3 href=https://dom.spec.whatwg.org/#concept-node-document data-x-internal=node-document>node
+   document</a>'s <a id=the-dialog-element:top-layer-2 href=https://fullscreen.spec.whatwg.org/#top-layer data-x-internal=top-layer>top layer</a>.<li><p>Run the <a href=#dialog-focusing-steps id=the-dialog-element:dialog-focusing-steps-2>dialog focusing steps</a> for <var>subject</var>.</ol>
+
+  <p>The <dfn id=dialog-focusing-steps>dialog focusing steps</dfn> for a <code id=the-dialog-element:the-dialog-element-12><a href=#the-dialog-element>dialog</a></code> element <var>subject</var> are as follows:</p>
+
+  <ol><li><p>If <var>subject</var> is <a id=the-dialog-element:inert-2 href=interaction.html#inert>inert</a>, return.<li>
+    <p>Let <var>control</var> be the first descendant element of <var>subject</var>, in <a id=the-dialog-element:tree-order href=https://dom.spec.whatwg.org/#concept-tree-order data-x-internal=tree-order>tree
+    order</a>, that is not <a id=the-dialog-element:inert-3 href=interaction.html#inert>inert</a> and has the <code id=the-dialog-element:attr-fe-autofocus-2><a href=interaction.html#attr-fe-autofocus>autofocus</a></code> attribute specified.</p>
+
+    <p>If there isn't one, then let <var>control</var> be the first non-<a id=the-dialog-element:inert-4 href=interaction.html#inert>inert</a>
+    descendant element of <var>subject</var>, in tree order.
+
+    <p>If there isn't one of those either, then let <var>control</var> be <var>subject</var>.</p>
+   <li>
+    <p>Run the <a id=the-dialog-element:focusing-steps href=interaction.html#focusing-steps>focusing steps</a> for <var>control</var>.</p>
+
+    <p class=note>If <var>control</var> is not <a id=the-dialog-element:focusable href=interaction.html#focusable>focusable</a>, this will do nothing. For
+    modal dialogs, this means that any <a href=#note-dialog-plus-focus-fixup>earlier
+    modifications</a> to the <a id=the-dialog-element:focused-area-of-the-document-3 href=interaction.html#focused-area-of-the-document>focused area of the document</a> will apply.</p>
+   <li><p>Let <var>topDocument</var> be the <a id=the-dialog-element:active-document href=browsers.html#active-document>active document</a> of <var>control</var>'s
+   <a id=the-dialog-element:node-document-4 href=https://dom.spec.whatwg.org/#concept-node-document data-x-internal=node-document>node document</a>'s <a href=browsers.html#concept-document-bc id=the-dialog-element:concept-document-bc>browsing context</a>'s
+   <a id=the-dialog-element:top-level-browsing-context href=browsers.html#top-level-browsing-context>top-level browsing context</a>.<li><p>If <var>control</var>'s <a id=the-dialog-element:node-document-5 href=https://dom.spec.whatwg.org/#concept-node-document data-x-internal=node-document>node document</a>'s <a id=the-dialog-element:concept-origin href=origin.html#concept-origin>origin</a> is not the
+   <a href=origin.html#same-origin id=the-dialog-element:same-origin>same</a> as the <a id=the-dialog-element:concept-origin-2 href=origin.html#concept-origin>origin</a> of <var>topDocument</var>,
+   then return.<li><p><a href=https://infra.spec.whatwg.org/#list-empty id=the-dialog-element:list-empty data-x-internal=list-empty>Empty</a> <var>topDocument</var>'s
+   <a id=the-dialog-element:autofocus-candidates href=interaction.html#autofocus-candidates>autofocus candidates</a>.<li><p>Set <var>topDocument</var>'s <a id=the-dialog-element:autofocus-processed-flag href=interaction.html#autofocus-processed-flag>autofocus processed flag</a> to true.</ol>
+
+  <p>If at any time a <code id=the-dialog-element:the-dialog-element-13><a href=#the-dialog-element>dialog</a></code> element is <a href=infrastructure.html#remove-an-element-from-a-document id=the-dialog-element:remove-an-element-from-a-document>removed from a <code>Document</code></a>, then if that <code id=the-dialog-element:the-dialog-element-14><a href=#the-dialog-element>dialog</a></code> is in that
+  <code id=the-dialog-element:document-2><a href=dom.html#document>Document</a></code>'s <a id=the-dialog-element:top-layer-3 href=https://fullscreen.spec.whatwg.org/#top-layer data-x-internal=top-layer>top layer</a>, it must be <a href=https://infra.spec.whatwg.org/#list-remove id=the-dialog-element:list-remove data-x-internal=list-remove>removed</a> from it.</p>
+
+  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/close title=Void.>HTMLDialogElement/close</a><div class=support><span class="firefox yes"><span>Firefox</span><span title="Requires setting a user preference or runtime flag.">🔰 53+</span></span><span class="safari no"><span>Safari</span><span>No</span></span><span class="chrome yes"><span>Chrome</span><span>37+</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span title="Requires setting a user preference or runtime flag.">🔰 53+</span></span><span class="safari_ios no"><span>Safari iOS</span><span>No</span></span><span class="chrome_android no"><span>Chrome Android</span><span>No</span></span><span class="webview_android no"><span>WebView Android</span><span>No</span></span><span class="samsunginternet_android no"><span>Samsung Internet</span><span>No</span></span><span class="opera_android no"><span>Opera Android</span><span>No</span></span></div></div></div><p>When the <dfn data-dfn-for=HTMLDialogElement id=dom-dialog-close data-dfn-type=method><code>close()</code></dfn> method is invoked, the user agent must <a href=#close-the-dialog id=the-dialog-element:close-the-dialog>close
+  the dialog</a> that the method was invoked on. If the method was invoked with an argument, that
+  argument must be used as the return value; otherwise, there is no return value.</p>
+
+
+  <p>When a <code id=the-dialog-element:the-dialog-element-15><a href=#the-dialog-element>dialog</a></code> element <var>subject</var> is to be <dfn id=close-the-dialog>closed</dfn>, optionally with a return value <var>result</var>, the user agent
+  must run the following steps:</p>
+
+  <ol><li><p>If <var>subject</var> does not have an <code id=the-dialog-element:attr-dialog-open-9><a href=#attr-dialog-open>open</a></code>
+   attribute, then return.<li><p>Remove <var>subject</var>'s <code id=the-dialog-element:attr-dialog-open-10><a href=#attr-dialog-open>open</a></code>
+   attribute.<li><p>Set the <a href=#is-modal id=the-dialog-element:is-modal-2>is modal</a> flag of <var>subject</var> to false.<li><p>If the argument <var>result</var> was provided, then set the <code id=the-dialog-element:dom-dialog-returnvalue-2><a href=#dom-dialog-returnvalue>returnValue</a></code> attribute to the value of <var>result</var>.<li><p>If <var>subject</var> is in its <code id=the-dialog-element:document-3><a href=dom.html#document>Document</a></code>'s <a id=the-dialog-element:top-layer-4 href=https://fullscreen.spec.whatwg.org/#top-layer data-x-internal=top-layer>top layer</a>, then <a href=https://infra.spec.whatwg.org/#list-remove id=the-dialog-element:list-remove-2 data-x-internal=list-remove>remove</a> it.<li><p><a id=the-dialog-element:queue-an-element-task href=webappapis.html#queue-an-element-task>Queue an element task</a> on the <a id=the-dialog-element:user-interaction-task-source href=webappapis.html#user-interaction-task-source>user interaction task source</a> given the
+   <var>subject</var> element to <a href=https://dom.spec.whatwg.org/#concept-event-fire id=the-dialog-element:concept-event-fire data-x-internal=concept-event-fire>fire an event</a> named
+   <code id=the-dialog-element:event-close-2><a href=indices.html#event-close>close</a></code> at <var>subject</var>.</ol>
+
+  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/returnValue title="The returnValue property of the HTMLDialogElement interface gets or sets the return value for the <dialog>, usually to indicate which button the user pressed to close it.">HTMLDialogElement/returnValue</a><div class=support><span class="firefox yes"><span>Firefox</span><span title="Requires setting a user preference or runtime flag.">🔰 53+</span></span><span class="safari no"><span>Safari</span><span>No</span></span><span class="chrome yes"><span>Chrome</span><span>37+</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span title="Requires setting a user preference or runtime flag.">🔰 53+</span></span><span class="safari_ios no"><span>Safari iOS</span><span>No</span></span><span class="chrome_android no"><span>Chrome Android</span><span>No</span></span><span class="webview_android no"><span>WebView Android</span><span>No</span></span><span class="samsunginternet_android no"><span>Samsung Internet</span><span>No</span></span><span class="opera_android no"><span>Opera Android</span><span>No</span></span></div></div></div><p>The <dfn id=dom-dialog-returnvalue><code>returnValue</code></dfn> IDL attribute, on
+  getting, must return the last value to which it was set. On setting, it must be set to the new
+  value. When the element is created, it must be set to the empty string.</p>
+
+  <hr>
+
+  <p id=canceling-dialogs><strong>Canceling dialogs</strong>: When <code id=the-dialog-element:document-4><a href=dom.html#document>Document</a></code> is
+  <a id=the-dialog-element:blocked-by-a-modal-dialog-3 href=interaction.html#blocked-by-a-modal-dialog>blocked by a modal dialog</a> <var>dialog</var>, user agents may provide a user interface
+  that, upon activation, <a href=webappapis.html#queue-an-element-task id=the-dialog-element:queue-an-element-task-2>queues an element task</a> on the
+  <a id=the-dialog-element:user-interaction-task-source-2 href=webappapis.html#user-interaction-task-source>user interaction task source</a> given the <var>dialog</var> element to run these steps:
+
+  <ol><li><p>Let <var>close</var> be the result of <a href=https://dom.spec.whatwg.org/#concept-event-fire id=the-dialog-element:concept-event-fire-2 data-x-internal=concept-event-fire>firing an
+   event</a> named <code id=the-dialog-element:event-cancel><a href=indices.html#event-cancel>cancel</a></code> at <var>dialog</var>, with the <code id=the-dialog-element:dom-event-cancelable><a data-x-internal=dom-event-cancelable href=https://dom.spec.whatwg.org/#dom-event-cancelable>cancelable</a></code> attribute initialized to true.<li><p>If <var>close</var> is true and <var>dialog</var> has an <code id=the-dialog-element:attr-dialog-open-11><a href=#attr-dialog-open>open</a></code> attribute, then <a href=#close-the-dialog id=the-dialog-element:close-the-dialog-2>close the dialog</a> with no
+   return value.</ol>
+
+  <p class=note>An example of such a UI mechanism would be the user pressing the "Escape" key.</p>
+
+  <hr>
+
+  <p>Each <code id=the-dialog-element:the-dialog-element-16><a href=#the-dialog-element>dialog</a></code> element has an <dfn id=is-modal>is modal</dfn> flag. When a <code id=the-dialog-element:the-dialog-element-17><a href=#the-dialog-element>dialog</a></code>
+  element is created, this flag must be set to false.</p>
+
+  <hr>
+
+  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/open title="A Boolean representing the state of the open HTML attribute. true means it is set, and therefore the dialog is shown. false means it not set, and therefore the dialog is not shown.">HTMLDialogElement/open</a><div class=support><span class="firefox yes"><span>Firefox</span><span title="Requires setting a user preference or runtime flag.">🔰 53+</span></span><span class="safari no"><span>Safari</span><span>No</span></span><span class="chrome yes"><span>Chrome</span><span>37+</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span title="Requires setting a user preference or runtime flag.">🔰 53+</span></span><span class="safari_ios no"><span>Safari iOS</span><span>No</span></span><span class="chrome_android no"><span>Chrome Android</span><span>No</span></span><span class="webview_android no"><span>WebView Android</span><span>No</span></span><span class="samsunginternet_android no"><span>Samsung Internet</span><span>No</span></span><span class="opera_android no"><span>Opera Android</span><span>No</span></span></div></div></div><p>The <dfn data-dfn-for=HTMLDialogElement id=dom-dialog-open data-dfn-type=attribute><code>open</code></dfn> IDL
+  attribute must <a id=the-dialog-element:reflect href=infrastructure.html#reflect>reflect</a> the <code id=the-dialog-element:attr-dialog-open-12><a href=#attr-dialog-open>open</a></code> content
+  attribute.</p>
+
+  
+
+  <div class=example>
+
+   <p>This dialog box has some small print. The <code id=the-dialog-element:the-strong-element><a href=text-level-semantics.html#the-strong-element>strong</a></code> element is used to draw the
+   user's attention to the more important part.</p>
+
+   <pre><code class=html>&lt;dialog>
+ &lt;h1>Add to Wallet&lt;/h1>
+ &lt;p>&lt;strong>&lt;label for=amt>How many gold coins do you want to add to your wallet?&lt;/label>&lt;/strong>&lt;/p>
+ &lt;p>&lt;input id=amt name=amt type=number min=0 step=0.01 value=100>&lt;/p>
+ &lt;p>&lt;small>You add coins at your own risk.&lt;/small>&lt;/p>
+ &lt;p>&lt;label>&lt;input name=round type=checkbox> Only add perfectly round coins &lt;/label>&lt;/p>
+ &lt;p>&lt;input type=button onclick="submit()" value="Add Coins">&lt;/p>
+&lt;/dialog></code></pre>
+
+  </div>
+
+
+
+
+
+  <nav><a href=form-control-infrastructure.html>← 4.10.17 Form control infrastructure</a> — <a href=./>Table of Contents</a> — <a href=scripting.html>4.12 脚本 →</a></nav>
+<script src=/html/resources/zh-cn.js></script>

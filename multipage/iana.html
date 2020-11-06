@@ -1,0 +1,454 @@
+<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/html/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Standard</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/spec.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/html/styles.css crossorigin=""><script>
+   function toggleStatus(div) {
+     div.parentNode.classList.toggle('wrapped');
+   }
+   function setLinkFragment(link) {
+     link.hash = location.hash;
+   }
+  </script><link rel=stylesheet href=/html/resources/zh-cn.css><body>
+  
+  <script async="" crossorigin="" src=/html/resources/html-dfn.js></script>
+  <script data-file-issue-url=https://github.com/whatwg/html/issues/new async="" crossorigin="" src=https://resources.whatwg.org/file-issue.js></script>
+  
+  <header id=head class="head with-buttons">
+   <a href=https://whatwg.org/ class=logo><img width=100 alt=WHATWG crossorigin="" src=https://resources.whatwg.org/logo.svg height=100></a>
+   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Living Standard — Last Updated <span class=pubdate>6 November 2020</span></h2><div data-en-date="Sat Aug 11 2018 08:00:56 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/living-standard-mdash-last-updated-date-01-jan-1901.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/living-standard-mdash-last-updated-date-01-jan-1901.zh.html?filename=living-standard-mdash-last-updated-date-01-jan-1901.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fliving-standard-mdash-last-updated-date-01-jan-1901.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div><div data-en-date="Sat Aug 11 2018 08:00:56 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/commit-snapshot-mdash-last-updated-date-01-jan-1901.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/commit-snapshot-mdash-last-updated-date-01-jan-1901.zh.html?filename=commit-snapshot-mdash-last-updated-date-01-jan-1901.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fcommit-snapshot-mdash-last-updated-date-01-jan-1901.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div><div data-en-date="Sat Aug 11 2018 08:00:56 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/review-draft-mdash-published-date-01-jan-1901.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/review-draft-mdash-published-date-01-jan-1901.zh.html?filename=review-draft-mdash-published-date-01-jan-1901.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Freview-draft-mdash-published-date-01-jan-1901.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div></hgroup>
+   
+   
+   <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-91053840-1', 'auto');
+      ga('send', 'pageview');
+   </script>
+  </header>
+
+  
+
+  
+
+
+  
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/table-of-contents.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/table-of-contents.zh.html></div>
+  
+
+
+  
+<div data-en-date="Sat Aug 11 2018 08:00:56 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/full-table-of-contents.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/full-table-of-contents.zh.html></div>
+  
+
+  
+
+  
+
+
+  <nav><a href=obsolete.html>← 16 废弃的特性</a> — <a href=./>Table of Contents</a> — <a href=indices.html>索引 →</a></nav><ol class=toc><li id=toc-iana><a href=iana.html#iana><span class=secno>17</span> IANA 注意事项</a><ol><li><a href=iana.html#text/html><span class=secno>17.1</span> <code>text/html</code></a><li><a href=iana.html#multipart/x-mixed-replace><span class=secno>17.2</span> <code>multipart/x-mixed-replace</code></a><li><a href=iana.html#application/xhtml+xml><span class=secno>17.3</span> <code>application/xhtml+xml</code></a><li><a href=iana.html#text/cache-manifest><span class=secno>17.4</span> <code>text/cache-manifest</code></a><li><a href=iana.html#text/ping><span class=secno>17.5</span> <code>text/ping</code></a><li><a href=iana.html#application/microdata+json><span class=secno>17.6</span> <code>application/microdata+json</code></a><li><a href=iana.html#text/event-stream><span class=secno>17.7</span> <code>text/event-stream</code></a><li><a href=iana.html#cross-origin-embedder-policy><span class=secno>17.8</span> `<code>Cross-Origin-Embedder-Policy</code>`</a><li><a href=iana.html#cross-origin-embedder-policy-report-only><span class=secno>17.9</span> `<code>Cross-Origin-Embedder-Policy-Report-Only</code>`</a><li><a href=iana.html#cross-origin-opener-policy-2><span class=secno>17.10</span> `<code>Cross-Origin-Opener-Policy</code>`</a><li><a href=iana.html#origin-isolation-2><span class=secno>17.11</span> `<code>Origin-Isolation</code>`</a><li><a href=iana.html#ping-from><span class=secno>17.12</span> `<code>Ping-From</code>`</a><li><a href=iana.html#ping-to><span class=secno>17.13</span> `<code>Ping-To</code>`</a><li><a href=iana.html#refresh><span class=secno>17.14</span> `<code>Refresh</code>`</a><li><a href=iana.html#last-event-id><span class=secno>17.15</span> `<code>Last-Event-ID</code>`</a><li><a href=iana.html#x-frame-options><span class=secno>17.16</span> `<code>X-Frame-Options</code>`</a><li><a href=iana.html#web+-scheme-prefix><span class=secno>17.17</span> <code>web+</code> scheme prefix</a></ol></ol><h2 id=iana><span class=secno>17</span> IANA 注意事项<a href=#iana class=self-link></a></h2>
+<div data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/iana-considerations/index.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/iana-considerations/index.en.html></div>
+
+  
+
+
+
+  <h3 id=text/html><span class=secno>17.1</span> <dfn><code>text/html</code></dfn><a href=#text/html class=self-link></a></h3>
+<div data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/iana-considerations/text-html.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/iana-considerations/text-html.en.html></div>
+
+  <p>This registration is for community review and will be submitted to the IESG for review,
+  approval, and registration with IANA.</p>
+
+  
+
+  
+
+  <dl><dt>Type name:<dd>text<dt>Subtype name:<dd>html<dt>Required parameters:<dd>No required parameters<dt>Optional parameters:<dd>
+    <dl><dt><code>charset</code><dd>
+
+      <p>The <code>charset</code> parameter may be provided to specify the
+      <a id="text/html:document's-character-encoding" href=https://dom.spec.whatwg.org/#concept-document-encoding data-x-internal="document's-character-encoding">document's character encoding</a>, overriding any <a href=semantics.html#character-encoding-declaration id=text/html:character-encoding-declaration>character encoding declarations</a> in the document other than a Byte Order Mark (BOM). The parameter's value
+      must be one of the <a href=https：//encoding.spec.whatwg.org/#label id=text/html:encoding-label data-x-internal=encoding-label>labels</a> of the <a href=https://encoding.spec.whatwg.org/#encoding id=text/html:encoding data-x-internal=encoding>character encoding</a> used to serialize the file. <a href=references.html#refsENCODING>[ENCODING]</a></p>
+
+     </dl>
+   <dt>Encoding considerations:<dd>
+
+    8bit (see the section on <a href=semantics.html#character-encoding-declaration id=text/html:character-encoding-declaration-2>character encoding
+    declarations</a>)
+
+   <dt>Security considerations:<dd>
+
+    <p>Entire novels have been written about the security considerations that apply to HTML
+    documents. Many are listed in this document, to which the reader is referred for more details.
+    Some general concerns bear mentioning here, however:</p>
+
+    <p>HTML is scripted language, and has a large number of APIs (some of which are described in
+    this document). Script can expose the user to potential risks of information leakage, credential
+    leakage, cross-site scripting attacks, cross-site request forgeries, and a host of other
+    problems. While the designs in this specification are intended to be safe if implemented
+    correctly, a full implementation is a massive undertaking and, as with any software, user agents
+    are likely to have security bugs.</p>
+
+    <p>Even without scripting, there are specific features in HTML which, for historical reasons,
+    are required for broad compatibility with legacy content but that expose the user to unfortunate
+    security problems. In particular, the <code id=text/html:the-img-element><a href=embedded-content.html#the-img-element>img</a></code> element can be used in conjunction with
+    some other features as a way to effect a port scan from the user's location on the Internet.
+    This can expose local network topologies that the attacker would otherwise not be able to
+    determine.</p>
+
+    <p>HTML relies on a compartmentalization scheme sometimes known as the <i>same-origin
+    policy</i>. An <a id=text/html:concept-origin href=origin.html#concept-origin>origin</a> in most cases consists of all the pages served from the same
+    host, on the same port, using the same protocol.</p>
+
+    <p>It is critical, therefore, to ensure that any untrusted content that forms part of a site be
+    hosted on a different <a id=text/html:concept-origin-2 href=origin.html#concept-origin>origin</a> than any sensitive content on that site. Untrusted
+    content can easily spoof any other page on the same origin, read data from that origin, cause
+    scripts in that origin to execute, submit forms to and from that origin even if they are
+    protected from cross-site request forgery attacks by unique tokens, and make use of any
+    third-party resources exposed to or rights granted to that origin.</p>
+
+   <dt>Interoperability considerations:<dd>
+    Rules for processing both conforming and non-conforming content
+    are defined in this specification.
+   <dt>Published specification:<dd id=authors-using-html>
+    This document is the relevant specification. Labeling a resource
+    with the <code id=text/html:text/html><a href=#text/html>text/html</a></code> type asserts that the resource is
+    an <a href=https://dom.spec.whatwg.org/#html-document id=text/html:html-documents data-x-internal=html-documents>HTML document</a> using
+    <a id=text/html:syntax href=syntax.html#syntax>the HTML syntax</a>.
+   <dt>Applications that use this media type:<dd>
+    Web browsers, tools for processing Web content, HTML authoring
+    tools, search engines, validators.
+   <dt>Additional information:<dd>
+    <dl><dt>Magic number(s):<dd>No sequence of bytes can uniquely identify an HTML
+     document. More information on detecting HTML documents is
+     available in the WHATWG MIME Sniffing standard. <a href=references.html#refsMIMESNIFF>[MIMESNIFF]</a><dt>File extension(s):<dd>"<code>html</code>" and "<code>htm</code>"
+     are commonly, but certainly not exclusively, used as the
+     extension for HTML documents.<dt>Macintosh file type code(s):<dd><code>TEXT</code></dl>
+   <dt>Person &amp; email address to contact for further information:<dd>Ian Hickson &lt;ian@hixie.ch><dt>Intended usage:<dd>Common<dt>Restrictions on usage:<dd>No restrictions apply.<dt>Author:<dd>Ian Hickson &lt;ian@hixie.ch><dt>Change controller:<dd>W3C</dl>
+
+  <p><a href=https://url.spec.whatwg.org/#concept-url-fragment id=text/html:concept-url-fragment data-x-internal=concept-url-fragment>Fragments</a> used with <code id=text/html:text/html-2><a href=#text/html>text/html</a></code> resources
+  either refer to <a id=text/html:the-indicated-part-of-the-document href=browsing-the-web.html#the-indicated-part-of-the-document>the indicated part of the document</a> or provide state information for
+  in-page scripts.</p>
+
+
+
+
+
+  <h3 id=multipart/x-mixed-replace><span class=secno>17.2</span> <dfn><code>multipart/x-mixed-replace</code></dfn><a href=#multipart/x-mixed-replace class=self-link></a></h3>
+<div data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/iana-considerations/multipart-x-mixed-replace.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/iana-considerations/multipart-x-mixed-replace.en.html></div>
+
+  <p>这个注册用于社区评审，之后会提交给 IESG 评审通过，通过 IANA 注册。</p>
+
+  
+
+  <dl><dt>类型名：<dd>multipart<dt>子类型名：<dd>x-mixed-replace<dt>必选参数：<dd>
+    <ul class=brief><li><code>boundary</code> (定义在 RFC2046) <a href=references.html#refsRFC2046>[RFC2046]</a>
+    </ul>
+   <dt>可选参数：<dd>无<dt>编码注意事项：<dd>binary<dt>安全注意事项：<dd>
+    <code id=multipart/x-mixed-replace:multipart/x-mixed-replace><a href=#multipart/x-mixed-replace>multipart/x-mixed-replace</a></code> 的子资源可能是任意类型，包括
+    有明显的安全性问题的资源，比如 <code id=multipart/x-mixed-replace:text/html><a href=#text/html>text/html</a></code>。
+   <dt>可互操作性注意事项：<dd> 无 <dt>已发布规范：<dd>
+    本规范描述了 Web 浏览器的处理规则。
+    产生这一类型资源的一致性要求同 <code id=multipart/x-mixed-replace:multipart/mixed><a href=indices.html#multipart/mixed>multipart/mixed</a></code>。 <a href=references.html#refsRFC2046>[RFC2046]</a>
+   <dt>使用该媒体类型的应用：<dd>这个类型用于由 Web 服务器产生的资源，由 Web 浏览器读取。<dt>更多信息：<dd>
+    <dl><dt>神奇数字：<dd>不存在可以标识 <code id=multipart/x-mixed-replace:multipart/x-mixed-replace-2><a href=#multipart/x-mixed-replace>multipart/x-mixed-replace</a></code> 资源的字节序列。<dt>文件扩展名：<dd>该类型没有特定的文件扩展名。<dt>Mac 文件类型码：<dd>该类型没有推荐的 Mac 文件类型码。</dl>
+   <dt>更多信息请联系的人和电子邮件地址：<dd>Ian Hickson &lt;ian@hixie.ch><dt>用途：<dd>通用<dt>使用限制：<dd>没有限制。<dt>作者：<dd>Ian Hickson &lt;ian@hixie.ch><dt>变更控制：<dd>W3C</dl>
+
+  <p>与 <code id=multipart/x-mixed-replace:multipart/x-mixed-replace-3><a href=#multipart/x-mixed-replace>multipart/x-mixed-replace</a></code> 资源一起使用的
+  <a href=https://url.spec.whatwg.org/#concept-url-fragment id=multipart/x-mixed-replace:concept-url-fragment data-x-internal=concept-url-fragment>Fragments</a> 的语义：
+  每个 body 部分适用那个 body 部分使用的类型的定义。</p>
+
+
+
+  <h3 id=application/xhtml+xml><span class=secno>17.3</span> <dfn><code>application/xhtml+xml</code></dfn><a href=#application/xhtml+xml class=self-link></a></h3>
+<div data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/iana-considerations/application-xhtml-xml.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/iana-considerations/application-xhtml-xml.en.html></div>
+
+  <p>这个注册用于社区评审，之后会提交给 IESG 评审通过，通过 IANA 注册。</p>
+
+  
+
+  
+
+  <dl><dt>类型名：<dd>application<dt>子类型名：<dd>xhtml+xml<dt>必选参数：<dd>同 <code id=application/xhtml+xml:application/xml><a href=indices.html#application/xml>application/xml</a></code> <a href=references.html#refsRFC7303>[RFC7303]</a><dt>可选参数：<dd>同 <code id=application/xhtml+xml:application/xml-2><a href=indices.html#application/xml>application/xml</a></code> <a href=references.html#refsRFC7303>[RFC7303]</a><dt>编码注意事项：<dd>同 <code id=application/xhtml+xml:application/xml-3><a href=indices.html#application/xml>application/xml</a></code> <a href=references.html#refsRFC7303>[RFC7303]</a><dt>安全注意事项：<dd>同 <code id=application/xhtml+xml:application/xml-4><a href=indices.html#application/xml>application/xml</a></code> <a href=references.html#refsRFC7303>[RFC7303]</a><dt>可互操作性注意事项：<dd>同 <code id=application/xhtml+xml:application/xml-5><a href=indices.html#application/xml>application/xml</a></code> <a href=references.html#refsRFC7303>[RFC7303]</a><dt id=authors-using-xhtml>已发布规范：<dd>将资源标记为 <code id=application/xhtml+xml:application/xhtml+xml><a href=#application/xhtml+xml>application/xhtml+xml</a></code> 类型断言了
+   该资源是一个 XML 文档，且可能有一个 <a href=https://infra.spec.whatwg.org/#html-namespace id=application/xhtml+xml:html-namespace-2 data-x-internal=html-namespace-2>HTML 命名空间</a> 的
+   <a href=https://dom.spec.whatwg.org/#document-element id=application/xhtml+xml:document-element data-x-internal=document-element>文档元素</a>。
+   因此，相关标准是 XML 规范，XML 规范中的 Namespaces，以及本规范。 <a href=references.html#refsXML>[XML]</a> <a href=references.html#refsXMLNS>[XMLNS]</a><dt>使用该媒体类型的应用：<dd>同 <code id=application/xhtml+xml:application/xml-6><a href=indices.html#application/xml>application/xml</a></code> <a href=references.html#refsRFC7303>[RFC7303]</a><dt>更多信息：<dd>
+    <dl><dt>神奇数字：<dd>同 <code id=application/xhtml+xml:application/xml-7><a href=indices.html#application/xml>application/xml</a></code> <a href=references.html#refsRFC7303>[RFC7303]</a><dt>文件扩展名：<dd>
+     有一个 <a href=https://infra.spec.whatwg.org/#html-namespace id=application/xhtml+xml:html-namespace-2-2 data-x-internal=html-namespace-2>HTML 命名空间</a> 的
+     <a href=https://dom.spec.whatwg.org/#document-element id=application/xhtml+xml:document-element-2 data-x-internal=document-element>文档元素</a> 的 XML 资源
+     有时候用 "<code>xhtml</code>" 和 "<code>xht</code>" 扩展名。<dt>Mac 文件类型码：<dd><code>TEXT</code></dl>
+   <dt>更多信息请联系的人和电子邮件地址：<dd>Ian Hickson &lt;ian@hixie.ch><dt>用途：<dd>通用<dt>使用限制：<dd>没有限制。<dt>作者：<dd>Ian Hickson &lt;ian@hixie.ch><dt>变更控制：<dd>W3C</dl>
+
+  <p>与 <code id=application/xhtml+xml:application/xhtml+xml-2><a href=#application/xhtml+xml>application/xhtml+xml</a></code> 资源一起使用的
+  <a href=https://url.spec.whatwg.org/#concept-url-fragment id=application/xhtml+xml:concept-url-fragment data-x-internal=concept-url-fragment>Fragments</a> 的语义同
+  <a id=application/xhtml+xml:xml-mime-type href=https://mimesniff.spec.whatwg.org/#xml-mime-type data-x-internal=xml-mime-type>XML MIME type</a>。 <a href=references.html#refsRFC7303>[RFC7303]</a></p>
+
+
+
+  <h3 id=text/cache-manifest><span class=secno>17.4</span> <dfn><code>text/cache-manifest</code></dfn><a href=#text/cache-manifest class=self-link></a></h3>
+<div data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/iana-considerations/text-cache-manifest.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/iana-considerations/text-cache-manifest.en.html></div>
+
+  <p>这个注册用于社区评审，之后会提交给 IESG 评审通过，通过 IANA 注册。</p>
+
+  
+
+  <dl><dt>类型名：<dd>text<dt>子类型名：<dd>cache-manifest<dt>必选参数：<dd>无<dt>可选参数：<dd>
+    <dl><dt><code>charset</code><dd>
+
+      <p>可以提供 <code>charset</code> 参数。
+      该参数的值必须是 "<code>utf-8</code>"。
+      该参数没有意义；只是为了与遗留服务器兼容。</p>
+
+     </dl>
+   <dt>编码注意事项：<dd>8bit (总是 UTF-8)<dt>安全注意事项：<dd>
+    <p>Cache 清单自己不会直接引起风险，除非其中包含了敏感信息。
+    但是要求实现方基于缓存清单填充缓存时遵循特定的规则，
+    来确保遵守了那些基于域的限制。
+    没有正确地实现这些规则可能导致信息泄露，跨站脚本攻击，以及类似的事情。</p>
+   <dt>可互操作性注意事项：<dd> 无论是符合规范的内容还是不合规范的内容，处理规则都定义在本规范中。<dt>已发布规范：<dd>本文档就是相关规范。<dt>使用该媒体类型的应用：<dd> Web 浏览器。<dt>更多信息：<dd>
+    <dl><dt>神奇数字：<dd>Cache 清单以字符串 "<code>CACHE MANIFEST</code>" 开始，
+     紧接着一个 U+0020 SPACE 字符，一个 U+0009 CHARACTER TABULATION (tab) 字符，
+     一个 U+000A LINE FEED (LF) 字符，或一个 U+000D CARRIAGE RETURN (CR) 字符。<dt>文件扩展名：<dd>"<code>appcache</code>"<dt>Mac 文件类型码：<dd>该类型没有推荐的 Mac 文件类型码。</dl>
+   <dt>更多信息请联系的人和电子邮件地址：<dd>Ian Hickson &lt;ian@hixie.ch><dt>用途：<dd>通用<dt>使用限制：<dd>没有限制。<dt>作者：<dd>Ian Hickson &lt;ian@hixie.ch><dt>变更控制：<dd>W3C</dl>
+
+  <p><a href=https://url.spec.whatwg.org/#concept-url-fragment id=text/cache-manifest:concept-url-fragment data-x-internal=concept-url-fragment>Fragments</a> 对
+  <code id=text/cache-manifest:text/cache-manifest><a href=#text/cache-manifest>text/cache-manifest</a></code> 资源没有语义。</p>
+
+
+
+  <h3 id=text/ping><span class=secno>17.5</span> <dfn><code>text/ping</code></dfn><a href=#text/ping class=self-link></a></h3>
+<div data-zh-date="" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/iana-considerations/text-ping.zh.html?filename=text-ping.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fiana-considerations%2Ftext-ping.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/iana-considerations/text-ping.en.html></div>
+
+  <p>This registration is for community review and will be submitted to the IESG for review,
+  approval, and registration with IANA.</p>
+
+  
+
+  <dl><dt>Type name:<dd>text<dt>Subtype name:<dd>ping<dt>Required parameters:<dd>No parameters<dt>Optional parameters:<dd>
+    <dl><dt><code>charset</code><dd>
+      <p>The <code>charset</code> parameter may be provided. The parameter's value must be
+      "<code>utf-8</code>". This parameter serves no purpose; it is only allowed for
+      compatibility with legacy servers.</p>
+     </dl>
+   <dt>Encoding considerations:<dd>Not applicable.<dt>Security considerations:<dd>
+    <p>If used exclusively in the fashion described in the context of
+    <a id=text/ping:hyperlink-auditing href=links.html#hyperlink-auditing>hyperlink auditing</a>, this type introduces no new
+    security concerns.</p>
+   <dt>Interoperability considerations:<dd>
+    Rules applicable to this type are defined in this specification.
+   <dt>Published specification:<dd>
+    This document is the relevant specification.
+   <dt>Applications that use this media type:<dd>
+    Web browsers.
+   <dt>Additional information:<dd>
+    <dl><dt>Magic number(s):<dd><code id=text/ping:text/ping><a href=#text/ping>text/ping</a></code> resources always consist of the four
+     bytes 0x50 0x49 0x4E 0x47 (`<code>PING</code>`).<dt>File extension(s):<dd>No specific file extension is recommended for this type.<dt>Macintosh file type code(s):<dd>No specific Macintosh file type codes are recommended for this type.</dl>
+   <dt>Person &amp; email address to contact for further information:<dd>Ian Hickson &lt;ian@hixie.ch><dt>Intended usage:<dd>Common<dt>Restrictions on usage:<dd>Only intended for use with HTTP POST requests generated as part
+   of a web browser's processing of the <code id=text/ping:ping><a href=links.html#ping>ping</a></code> attribute.<dt>Author:<dd>Ian Hickson &lt;ian@hixie.ch><dt>Change controller:<dd>W3C</dl>
+
+  <p><a href=https://url.spec.whatwg.org/#concept-url-fragment id=text/ping:concept-url-fragment data-x-internal=concept-url-fragment>Fragments</a> have no meaning with
+  <code id=text/ping:text/ping-2><a href=#text/ping>text/ping</a></code> resources.</p>
+
+
+
+  <h3 id=application/microdata+json><span class=secno>17.6</span> <dfn><code>application/microdata+json</code></dfn><a href=#application/microdata+json class=self-link></a></h3>
+<div data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/iana-considerations/application-microdata-json.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/iana-considerations/application-microdata-json.en.html></div>
+
+  <p>这个注册用于社区评审，之后会提交给 IESG 评审通过，通过 IANA 注册。</p>
+
+  
+
+  <dl><dt>类型名：<dd>application<dt>子类型名：<dd>microdata+json<dt>必选参数：<dd>同 <code id=application/microdata+json:application/json><a href=indices.html#application/json>application/json</a></code> <a href=references.html#refsJSON>[JSON]</a><dt>可选参数：<dd>同 <code id=application/microdata+json:application/json-2><a href=indices.html#application/json>application/json</a></code> <a href=references.html#refsJSON>[JSON]</a><dt>编码注意事项：<dd>8bit (总是 UTF-8)<dt>安全注意事项：<dd>同 <code id=application/microdata+json:application/json-3><a href=indices.html#application/json>application/json</a></code> <a href=references.html#refsJSON>[JSON]</a><dt>可互操作性注意事项：<dd>同 <code id=application/microdata+json:application/json-4><a href=indices.html#application/json>application/json</a></code> <a href=references.html#refsJSON>[JSON]</a><dt>已发布规范：<dd>
+
+    将资源标记为 <code id=application/microdata+json:application/microdata+json><a href=#application/microdata+json>application/microdata+json</a></code> 类型断言了
+    该资源是一个 JSON 文本，包含一个只有一个
+    "<code>items</code>" 属性的对象，这个属性由一个数组组成，每个都是一个对象。
+    该对象有一个 "<code>id</code>" 属性，其值为字符串；
+    有一个 "<code>type</code>" 属性，其值为字符串；
+    有一个 "<code>properties</code>" 属性，其属性值为对象或字符串构成的数组，
+    其中的对象与上述 "<code>items</code>" 属性的格式一致。
+    因此，相关规范是 JSON 规范和本规范。 <a href=references.html#refsJSON>[JSON]</a>
+
+   <dt>使用该媒体类型的应用：<dd>
+
+    <p>传输用于 HTML 的元数据特性的数据的那些应用。尤其是用于拖放操作的那类应用。</p>
+
+   <dt>更多信息：<dd>
+    <dl><dt>神奇数字：<dd>同 <code id=application/microdata+json:application/json-5><a href=indices.html#application/json>application/json</a></code> <a href=references.html#refsJSON>[JSON]</a><dt>文件扩展名：<dd>同 <code id=application/microdata+json:application/json-6><a href=indices.html#application/json>application/json</a></code> <a href=references.html#refsJSON>[JSON]</a><dt>Mac 文件类型码：<dd>同 <code id=application/microdata+json:application/json-7><a href=indices.html#application/json>application/json</a></code> <a href=references.html#refsJSON>[JSON]</a></dl>
+   <dt>更多信息请联系的人和电子邮件地址：<dd>Ian Hickson &lt;ian@hixie.ch><dt>用途：<dd>通用<dt>使用限制：<dd>没有限制。<dt>作者：<dd>Ian Hickson &lt;ian@hixie.ch><dt>变更控制：<dd>W3C</dl>
+
+  <p>与 <code id=application/microdata+json:application/microdata+json-2><a href=#application/microdata+json>application/microdata+json</a></code> 资源一起使用的
+  <a href=https://url.spec.whatwg.org/#concept-url-fragment id=application/microdata+json:concept-url-fragment data-x-internal=concept-url-fragment>Fragments</a> 的语义同
+  <code id=application/microdata+json:application/json-8><a href=indices.html#application/json>application/json</a></code>（也就是说写这篇文档时还没有额外的语义）。
+  <a href=references.html#refsJSON>[JSON]</a></p>
+
+
+
+  <h3 id=text/event-stream><span class=secno>17.7</span> <dfn><code>text/event-stream</code></dfn><a href=#text/event-stream class=self-link></a></h3>
+<div data-zh-date="" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/iana-considerations/text-event-stream.zh.html?filename=text-event-stream.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fiana-considerations%2Ftext-event-stream.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/iana-considerations/text-event-stream.en.html></div>
+
+  <p>This registration is for community review and will be submitted to the IESG for review,
+  approval, and registration with IANA.</p>
+
+  
+
+  <dl><dt>Type name:<dd>text<dt>Subtype name:<dd>event-stream<dt>Required parameters:<dd>No parameters<dt>Optional parameters:<dd>
+    <dl><dt><code>charset</code><dd>
+      <p>The <code>charset</code> parameter may be provided. The parameter's value must be
+      "<code>utf-8</code>". This parameter serves no purpose; it is only allowed for
+      compatibility with legacy servers.</p>
+     </dl>
+   <dt>Encoding considerations:<dd>8bit (always UTF-8)<dt>Security considerations:<dd>
+    <p>An event stream from an origin distinct from the origin of the content consuming the event
+    stream can result in information leakage. To avoid this, user agents are required to apply CORS
+    semantics. <a href=references.html#refsFETCH>[FETCH]</a></p>
+
+    <p>Event streams can overwhelm a user agent; a user agent is expected to apply suitable
+    restrictions to avoid depleting local resources because of an overabundance of information from
+    an event stream.</p>
+
+    <p>Servers can be overwhelmed if a situation develops in which the server is causing clients to
+    reconnect rapidly. Servers should use a 5xx status code to indicate capacity problems, as this
+    will prevent conforming clients from reconnecting automatically.</p>
+   <dt>Interoperability considerations:<dd>
+    Rules for processing both conforming and non-conforming content are defined in this
+    specification.
+   <dt>Published specification:<dd>
+    This document is the relevant specification.
+   <dt>Applications that use this media type:<dd>
+    Web browsers and tools using web services.
+   <dt>Additional information:<dd>
+    <dl><dt>Magic number(s):<dd>No sequence of bytes can uniquely identify an event stream.<dt>File extension(s):<dd>No specific file extensions are recommended for this type.<dt>Macintosh file type code(s):<dd>No specific Macintosh file type codes are recommended for this type.</dl>
+   <dt>Person &amp; email address to contact for further information:<dd>Ian Hickson &lt;ian@hixie.ch><dt>Intended usage:<dd>Common<dt>Restrictions on usage:<dd>This format is only expected to be used by dynamic open-ended streams served using HTTP or a
+   similar protocol. Finite resources are not expected to be labeled with this type.<dt>Author:<dd>Ian Hickson &lt;ian@hixie.ch><dt>Change controller:<dd>W3C</dl>
+
+  <p><a href=https://url.spec.whatwg.org/#concept-url-fragment id=text/event-stream:concept-url-fragment data-x-internal=concept-url-fragment>Fragments</a> have no meaning with
+  <code id=text/event-stream:text/event-stream><a href=#text/event-stream>text/event-stream</a></code> resources.</p>
+
+
+
+  <h3 id=cross-origin-embedder-policy><span class=secno>17.8</span> `<dfn data-dfn-type=http-header><code>Cross-Origin-Embedder-Policy</code></dfn>`<a href=#cross-origin-embedder-policy class=self-link></a></h3>
+<div data-zh-date="" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/iana-considerations/cross-origin-embedder-policy.zh.html?filename=cross-origin-embedder-policy.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fiana-considerations%2Fcross-origin-embedder-policy.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/iana-considerations/cross-origin-embedder-policy.en.html></div>
+
+  <p>This section describes a header for registration in the Permanent Message Header Field
+  Registry. <a href=references.html#refsRFC3864>[RFC3864]</a></p>
+
+  <dl><dt>Header field name:<dd>Cross-Origin-Embedder-Policy<dt>Applicable protocol:<dd>http<dt>Status:<dd>standard<dt>Author/Change controller:<dd>WHATWG<dt>Specification document(s):<dd>
+    This document is the relevant specification.
+   <dt>Related information:<dd>None.</dl>
+
+
+
+  <h3 id=cross-origin-embedder-policy-report-only><span class=secno>17.9</span> `<dfn data-dfn-type=http-header><code>Cross-Origin-Embedder-Policy-Report-Only</code></dfn>`<a href=#cross-origin-embedder-policy-report-only class=self-link></a></h3>
+<div data-zh-date="" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/iana-considerations/cross-origin-embedder-policy-report-only.zh.html?filename=cross-origin-embedder-policy-report-only.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fiana-considerations%2Fcross-origin-embedder-policy-report-only.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/iana-considerations/cross-origin-embedder-policy-report-only.en.html></div>
+
+  <p>This section describes a header for registration in the Permanent Message Header Field
+  Registry. <a href=references.html#refsRFC3864>[RFC3864]</a></p>
+
+  <dl><dt>Header field name:<dd>Cross-Origin-Embedder-Policy-Report-Only<dt>Applicable protocol:<dd>http<dt>Status:<dd>standard<dt>Author/Change controller:<dd>WHATWG<dt>Specification document(s):<dd>
+    This document is the relevant specification.
+   <dt>Related information:<dd>None.</dl>
+
+
+
+  <h3 id=cross-origin-opener-policy-2><span class=secno>17.10</span> `<dfn data-dfn-type=http-header><code>Cross-Origin-Opener-Policy</code></dfn>`<a href=#cross-origin-opener-policy-2 class=self-link></a></h3>
+<div data-zh-date="" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/iana-considerations/cross-origin-opener-policy.zh.html?filename=cross-origin-opener-policy.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fiana-considerations%2Fcross-origin-opener-policy.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/iana-considerations/cross-origin-opener-policy.en.html></div>
+
+  <p>This section describes a header for registration in the Permanent Message Header Field
+  Registry. <a href=references.html#refsRFC3864>[RFC3864]</a></p>
+
+  <dl><dt>Header field name:<dd>Cross-Origin-Opener-Policy<dt>Applicable protocol:<dd>http<dt>Status:<dd>standard<dt>Author/Change controller:<dd>WHATWG<dt>Specification document(s):<dd>
+    This document is the relevant specification.
+   <dt>Related information:<dd>None.</dl>
+
+
+
+  <h3 id=origin-isolation-2><span class=secno>17.11</span> `<dfn><code>Origin-Isolation</code></dfn>`<a href=#origin-isolation-2 class=self-link></a></h3>
+<div data-zh-date="" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/iana-considerations/origin-isolation.zh.html?filename=origin-isolation.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fiana-considerations%2Forigin-isolation.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/iana-considerations/origin-isolation.en.html></div>
+
+  <p>This section describes a header for registration in the Permanent Message Header Field
+  Registry. <a href=references.html#refsRFC3864>[RFC3864]</a></p>
+
+  <dl><dt>Header field name:<dd>Origin-Isolation<dt>Applicable protocol:<dd>http<dt>Status:<dd>standard<dt>Author/Change controller:<dd>WHATWG<dt>Specification document(s):<dd>
+    This document is the relevant specification.
+   <dt>Related information:<dd>None.</dl>
+
+
+
+  <h3 id=ping-from><span class=secno>17.12</span> `<dfn><code>Ping-From</code></dfn>`<a href=#ping-from class=self-link></a></h3>
+<div data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/iana-considerations/ping-from.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/iana-considerations/ping-from.en.html></div>
+
+  <p>本小节描述了 Permanent Message Header Field Registry 中的一个头部注册项。 <a href=references.html#refsRFC3864>[RFC3864]</a></p>
+
+  <dl><dt>头部字段名：<dd>Ping-From<dt>适用协议：<dd>http<dt>状态：<dd>标准<dt>作者/变更控制：<dd>W3C<dt>规范文档：<dd>本文档就是相关规范。<dt>相关信息：<dd>无</dl>
+
+
+
+  <h3 id=ping-to><span class=secno>17.13</span> `<dfn><code>Ping-To</code></dfn>`<a href=#ping-to class=self-link></a></h3>
+<div data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/iana-considerations/ping-to.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/iana-considerations/ping-to.en.html></div>
+
+  <p>本小节描述了 Permanent Message Header Field Registry 中的一个头部注册项。 <a href=references.html#refsRFC3864>[RFC3864]</a></p>
+
+  <dl><dt>头部字段名：<dd>Ping-To<dt>适用协议：<dd>http<dt>状态：<dd>标准<dt>作者/变更控制：<dd>W3C<dt>规范文档：<dd>本文档就是相关规范。<dt>相关信息：<dd>无</dl>
+
+
+
+  <h3 id=refresh><span class=secno>17.14</span> `<dfn><code>Refresh</code></dfn>`<a href=#refresh class=self-link></a></h3>
+<div data-zh-date="" data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/iana-considerations/refresh.zh.html?filename=refresh.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fiana-considerations%2Frefresh.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/iana-considerations/refresh.en.html></div>
+
+  <p>This section describes a header for registration in the Permanent Message Header Field
+  Registry. <a href=references.html#refsRFC3864>[RFC3864]</a></p>
+
+  <dl><dt>Header field name:<dd>Refresh<dt>Applicable protocol:<dd>http<dt>Status:<dd>standard<dt>Author/Change controller:<dd>WHATWG<dt>Specification document(s):<dd>
+    This document is the relevant specification.
+   <dt>Related information:<dd>None.</dl>
+
+
+
+  <h3 id=last-event-id><span class=secno>17.15</span> `<dfn><code>Last-Event-ID</code></dfn>`<a href=#last-event-id class=self-link></a></h3>
+<div data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/iana-considerations/last-event-id.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/iana-considerations/last-event-id.en.html></div>
+
+  <p>本小节描述了 Permanent Message Header Field Registry 中的一个头部注册项。 <a href=references.html#refsRFC3864>[RFC3864]</a></p>
+
+  <dl><dt>头部字段名：<dd>Last-Event-ID<dt>适用协议：<dd>http<dt>状态：<dd>标准<dt>作者/变更控制：<dd>W3C<dt>规范文档：<dd>本文档就是相关规范。<dt>相关信息：<dd>无</dl>
+
+
+
+  <h3 id=x-frame-options><span class=secno>17.16</span> `<dfn><code>X-Frame-Options</code></dfn>`<a href=#x-frame-options class=self-link></a></h3>
+<div data-zh-date="" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/iana-considerations/x-frame-options.zh.html?filename=x-frame-options.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fiana-considerations%2Fx-frame-options.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/iana-considerations/x-frame-options.en.html></div>
+
+  <p>This section describes a header for registration in the Permanent Message Header Field
+  Registry. <a href=references.html#refsRFC3864>[RFC3864]</a></p>
+
+  <dl><dt>Header field name:<dd>X-Frame-Options<dt>Applicable protocol:<dd>http<dt>Status:<dd>standard<dt>Author/Change controller:<dd>WHATWG<dt>Specification document(s):<dd>
+    This document is the relevant specification.
+   <dt>Related information:<dd>None.</dl>
+
+
+
+  <h3 id=web+-scheme-prefix><span class=secno>17.17</span> <dfn><code>web+</code> scheme prefix</dfn><a href=#web+-scheme-prefix class=self-link></a></h3>
+<div data-zh-date="" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/iana-considerations/web-scheme-prefix.zh.html?filename=web-scheme-prefix.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fiana-considerations%2Fweb-scheme-prefix.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/iana-considerations/web-scheme-prefix.en.html></div>
+
+  <p>This section describes a convention for use with the IANA URI scheme registry. It does not
+  itself register a specific scheme. <a href=references.html#refsRFC7595>[RFC7595]</a></p>
+
+  <dl><dt>Scheme name:<dd>
+    Schemes starting with the four characters "<code>web+</code>" followed by one or more letters in the range
+    <code>a</code>-<code>z</code>.
+   <dt>Status:<dd>Permanent<dt>Scheme syntax:<dd>Scheme-specific.<dt>Scheme semantics:<dd>Scheme-specific.<dt>Encoding considerations:<dd>All "<code>web+</code>" schemes should use UTF-8 encodings where relevant.<dt>Applications/protocols that use this scheme name:<dd>Scheme-specific.<dt>Interoperability considerations:<dd>The scheme is expected to be used in the context of web applications.<dt>Security considerations:<dd>
+    Any web page is able to register a handler for all "<code>web+</code>" schemes. As
+    such, these schemes must not be used for features intended to be core platform features (e.g.
+    network transfer protocols like HTTP or FTP). Similarly, such schemes must not store
+    confidential information in their URLs, such as usernames, passwords, personal information, or
+    confidential project names.
+   <dt>Contact:<dd>Ian Hickson &lt;ian@hixie.ch><dt>Change controller:<dd>Ian Hickson &lt;ian@hixie.ch><dt>References:<dd>
+    <cite>Custom scheme handlers</cite>, HTML Living Standard:
+    <a href=system-state.html#custom-handlers>https://html.spec.whatwg.org/#custom-handlers</a>
+   </dl>
+
+  
+
+
+
+
+  <nav><a href=obsolete.html>← 16 废弃的特性</a> — <a href=./>Table of Contents</a> — <a href=indices.html>索引 →</a></nav>
+<script src=/html/resources/zh-cn.js></script>

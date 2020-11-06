@@ -1,0 +1,485 @@
+<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Standard, Developer's Edition</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/dev/styles.css crossorigin=""><script>
+   function toggleStatus(div) {
+     div.parentNode.classList.toggle('wrapped');
+   }
+   function setLinkFragment(link) {
+     link.hash = location.hash;
+   }
+  </script><body>
+  <script async="" src=/dev/search.js></script>
+  
+  
+  
+  <header id=head class="head with-buttons">
+   <a href=https://whatwg.org/ class=logo><img width=100 alt=WHATWG crossorigin="" src=https://resources.whatwg.org/logo.svg height=100></a>
+   
+   <hgroup><h1><a rel=home href=/dev/>HTML: The Living Standard</a></h1><h2 id="developer's-edition-—-last-updated-date:-01-jan-1901" class="no-num no-toc">Developer's Edition — Last Updated <span class=pubdate>6 November 2020</span></h2><div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/developers-edition-mdash-last-updated-date-01-jan-1901.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/developers-edition-mdash-last-updated-date-01-jan-1901.zh.html></div></hgroup>
+   
+   <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-91053840-1', 'auto');
+      ga('send', 'pageview');
+   </script>
+  </header>
+
+  
+
+  
+
+
+  
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/table-of-contents.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/table-of-contents.zh.html></div>
+  
+
+
+  
+<div data-en-date="Sat Aug 11 2018 08:00:56 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/full-table-of-contents.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/full-table-of-contents.zh.html></div>
+  
+
+  
+
+  
+
+
+  <h2 id=about-dev-edition class="no-num no-toc">关于本标准</h2>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/about-this-specification.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/about-this-specification.zh.html></div>
+
+  <p>本标准与其他标准不同，它的处理完全考虑到了 Web 开发者。</p>
+
+  <p>本标准关注可读性和可访问性，不像 <a href=/multipage/>完整的 HTML 标准</a>，"开发者版本" 移除了
+  只有浏览器厂商需要知道的信息。它个版本是用我们的构建工具从完整的规范自动产出的，
+  因此总会与最新开发的 HTML 保持同步。</p>
+
+  <p>其概念、构造，以及未来可参考 <a href=http://web.archive.org/web/20150220020906/http://archive.germanforblack.com:80/articles/html5-for-web-developers>
+  原始出版发行</a>，以及 <a href=https://blog.whatwg.org/developers-edition-comeback>关于重启该版本的博文</a>。</p>
+
+  <p>最后，欢迎 <a href=https://github.com/whatwg/html/labels/dev%20edition>在 GitHub 贡献</a> 来改进该版本！</p>
+
+  
+
+
+  <nav><a href=interaction.html>← 6 用户交互</a> — <a href=./>Table of Contents</a> — <a href=browsers.html>7 加载 Web 页面 →</a></nav><ol class=toc><li><ol><li><a href=dnd.html#dnd><span class=secno>6.9</span> Drag and drop</a><ol><li><a href=dnd.html#event-drag><span class=secno>6.9.1</span> Introduction</a><li><a href=dnd.html#the-drag-data-store><span class=secno>6.9.2</span> The drag data store</a><li><a href=dnd.html#the-datatransfer-interface><span class=secno>6.9.3</span> The <code>DataTransfer</code> interface</a><ol><li><a href=dnd.html#the-datatransferitemlist-interface><span class=secno>6.9.3.1</span> The <code>DataTransferItemList</code> interface</a><li><a href=dnd.html#the-datatransferitem-interface><span class=secno>6.9.3.2</span> The <code>DataTransferItem</code> interface</a></ol><li><a href=dnd.html#the-dragevent-interface><span class=secno>6.9.4</span> The <code>DragEvent</code> interface</a><li><a href=dnd.html#dndevents><span class=secno>6.9.5</span> Events summary</a><li><a href=dnd.html#the-draggable-attribute><span class=secno>6.9.6</span> The <code>draggable</code> attribute</a></ol></ol></ol><h3 id=dnd><span class=secno>6.9</span> <dfn>Drag and drop</dfn><a href=#dnd class=self-link></a></h3><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API title="HTML Drag and Drop interfaces enable applications to use drag-and-drop features in browsers.">HTML_Drag_and_Drop_API</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>3.5+</span></span><span class="safari yes"><span>Safari</span><span>3.1+</span></span><span class="chrome yes"><span>Chrome</span><span>4+</span></span><hr><span class="opera yes"><span>Opera</span><span>12+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>18</span></span><span class="ie yes"><span>Internet Explorer</span><span>5.5+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>2+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>4.4+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.5+</span></span><span class="opera_android yes"><span>Opera Android</span><span>14+</span></span><hr><span class=caniuse><span><a href="https://caniuse.com/#feat=dragndrop" title="Drag and Drop">caniuse.com table</a></span></span></div></div></div>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/user-interaction/drag-and-drop/index.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/user-interaction/drag-and-drop/index.zh.html?filename=index.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fuser-interaction%2Fdrag-and-drop%2Findex.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+
+
+  <p>This section defines an event-based drag-and-drop mechanism.</p>
+
+  <p>This specification does not define exactly what a <em>drag-and-drop operation</em> actually
+  is.</p>
+
+  <p>On a visual medium with a pointing device, a drag operation could be the default action of a
+  <code id=dnd:event-mousedown><a data-x-internal=event-mousedown href=https://w3c.github.io/uievents/#event-type-mousedown>mousedown</a></code> event that is followed by a series of <code id=dnd:event-mousemove><a data-x-internal=event-mousemove href=https://w3c.github.io/uievents/#event-type-mousemove>mousemove</a></code> events, and the drop could be triggered by the mouse
+  being released.</p>
+
+  <p>When using an input modality other than a pointing device, users would probably have to
+  explicitly indicate their intention to perform a drag-and-drop operation, stating what they wish
+  to drag and where they wish to drop it, respectively.</p>
+
+  
+
+
+
+  <h4 id=event-drag><span class=secno>6.9.1</span> Introduction<a href=#event-drag class=self-link></a></h4>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/user-interaction/drag-and-drop/introduction.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/user-interaction/drag-and-drop/introduction.zh.html?filename=introduction.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fuser-interaction%2Fdrag-and-drop%2Fintroduction.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  
+
+  <p>To make an element draggable, give the element a <code id=event-drag:attr-draggable><a href=#attr-draggable>draggable</a></code>
+  attribute, and set an event listener for <code id=event-drag:event-dnd-dragstart><a href=#event-dnd-dragstart>dragstart</a></code> that
+  stores the data being dragged.</p>
+
+  <p>The event handler typically needs to check that it's not a text selection that is being
+  dragged, and then needs to store data into the <code id=event-drag:datatransfer><a href=#datatransfer>DataTransfer</a></code> object and set the
+  allowed effects (copy, move, link, or some combination).</p>
+
+  <p>For example:</p>
+
+  <pre><code class=html>&lt;p>What fruits do you like?&lt;/p>
+&lt;ol ondragstart="dragStartHandler(event)">
+ &lt;li draggable="true" data-value="fruit-apple">Apples&lt;/li>
+ &lt;li draggable="true" data-value="fruit-orange">Oranges&lt;/li>
+ &lt;li draggable="true" data-value="fruit-pear">Pears&lt;/li>
+&lt;/ol>
+&lt;script>
+  var internalDNDType = 'text/x-example'; // set this to something specific to your site
+  function dragStartHandler(event) {
+    if (event.target instanceof HTMLLIElement) {
+      // use the element's data-value="" attribute as the value to be moving:
+      event.dataTransfer.setData(internalDNDType, event.target.dataset.value);
+      event.dataTransfer.effectAllowed = 'move'; // only allow moves
+    } else {
+      event.preventDefault(); // don't allow selection to be dragged
+    }
+  }
+&lt;/script></code></pre>
+
+  <hr>
+
+  <p>To accept a drop, the drop target has to listen to the following events:</p>
+
+  <ol><li>The <code id=event-drag:event-dnd-dragenter><a href=#event-dnd-dragenter>dragenter</a></code> event handler reports
+    whether or not the drop target is potentially willing to accept the drop, by canceling the
+    event.<li>The <code id=event-drag:event-dnd-dragover><a href=#event-dnd-dragover>dragover</a></code> event handler specifies what feedback
+    will be shown to the user, by setting the <code id=event-drag:dom-datatransfer-dropeffect><a href=#dom-datatransfer-dropeffect>dropEffect</a></code> attribute of the
+    <code id=event-drag:datatransfer-2><a href=#datatransfer>DataTransfer</a></code> associated with the event. This event also needs to be canceled.<li>The <code id=event-drag:event-dnd-drop><a href=#event-dnd-drop>drop</a></code> event handler has a final chance to accept or
+    reject the drop. If the drop is accepted, the event handler must perform the drop operation on
+    the target. This event needs to be canceled, so that the <code id=event-drag:dom-datatransfer-dropeffect-2><a href=#dom-datatransfer-dropeffect>dropEffect</a></code> attribute's value can be used by the
+    source. Otherwise, the drop operation is rejected.</ol>
+
+  <p>For example:</p>
+
+  <pre><code class=html>&lt;p>Drop your favorite fruits below:&lt;/p>
+&lt;ol ondragenter="dragEnterHandler(event)" ondragover="dragOverHandler(event)"
+    ondrop="dropHandler(event)">
+&lt;/ol>
+&lt;script>
+  var internalDNDType = 'text/x-example'; // set this to something specific to your site
+  function dragEnterHandler(event) {
+    var items = event.dataTransfer.items;
+    for (var i = 0; i &lt; items.length; ++i) {
+      var item = items[i];
+      if (item.kind == 'string' &amp;&amp; item.type == internalDNDType) {
+        event.preventDefault();
+        return;
+      }
+    }
+  }
+  function dragOverHandler(event) {
+    event.dataTransfer.dropEffect = 'move';
+    event.preventDefault();
+  }
+  function dropHandler(event) {
+    var li = document.createElement('li');
+    var data = event.dataTransfer.getData(internalDNDType);
+    if (data == 'fruit-apple') {
+      li.textContent = 'Apples';
+    } else if (data == 'fruit-orange') {
+      li.textContent = 'Oranges';
+    } else if (data == 'fruit-pear') {
+      li.textContent = 'Pears';
+    } else {
+      li.textContent = 'Unknown Fruit';
+    }
+    event.target.appendChild(li);
+  }
+&lt;/script></code></pre>
+
+  <hr>
+
+  <p>To remove the original element (the one that was dragged) from the display, the <code id=event-drag:event-dnd-dragend><a href=#event-dnd-dragend>dragend</a></code> event can be used.</p>
+
+  <p>For our example here, that means updating the original markup to handle that event:</p>
+
+  <pre><code class=html>&lt;p>What fruits do you like?&lt;/p>
+&lt;ol ondragstart="dragStartHandler(event)" ondragend="dragEndHandler(event)">
+ <em>...as before...</em>
+&lt;/ol>
+&lt;script>
+  function dragStartHandler(event) {
+    // <em>...as before...</em>
+  }
+  function dragEndHandler(event) {
+    if (event.dataTransfer.dropEffect == 'move') {
+      // remove the dragged element
+      event.target.parentNode.removeChild(event.target);
+    }
+  }
+&lt;/script></code></pre>
+
+
+
+
+  <h4 id=the-drag-data-store><span class=secno>6.9.2</span> The drag data store<a href=#the-drag-data-store class=self-link></a></h4>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/user-interaction/drag-and-drop/the-drag-data-store.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/user-interaction/drag-and-drop/the-drag-data-store.zh.html?filename=the-drag-data-store.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fuser-interaction%2Fdrag-and-drop%2Fthe-drag-data-store.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  <p>The data that underlies a drag-and-drop operation, known as the <dfn id=drag-data-store>drag data store</dfn>,
+  consists of the following information:</p>
+
+  <ul><li><p>A <dfn id=drag-data-store-item-list>drag data store item list</dfn>, which is a list of items representing the dragged
+   data, each consisting of the following information:</p>
+
+    <dl><dt><dfn id=the-drag-data-item-kind>The drag data item kind</dfn><dd>
+      <p>The kind of data:</p>
+
+      <dl><dt><i>Text</i><dd>
+        <p>Text.</p>
+       <dt><i>File</i><dd>
+        <p>Binary data with a file name.</p>
+       </dl>
+     <dt><dfn id=the-drag-data-item-type-string>The drag data item type string</dfn><dd>
+      <p>A Unicode string giving the type or format of the data, generally given by a <a id=the-drag-data-store:mime-type href=https://mimesniff.spec.whatwg.org/#mime-type data-x-internal=mime-type>MIME
+      type</a>. Some values that are not <a href=https://mimesniff.spec.whatwg.org/#mime-type id=the-drag-data-store:mime-type-2 data-x-internal=mime-type>MIME types</a> are
+      special-cased for legacy reasons. The API does not enforce the use of <a href=https://mimesniff.spec.whatwg.org/#mime-type id=the-drag-data-store:mime-type-3 data-x-internal=mime-type>MIME types</a>; other values can be used as well. In all cases, however, the values
+      are all <a id=the-drag-data-store:converted-to-ascii-lowercase href=https://infra.spec.whatwg.org/#ascii-lowercase data-x-internal=converted-to-ascii-lowercase>converted to ASCII lowercase</a> by the API.</p>
+
+      <p>There is a limit of one <i>text</i> item per <a href=#the-drag-data-item-type-string id=the-drag-data-store:the-drag-data-item-type-string>item type string</a>.</p> 
+     <dt>The actual data<dd><p>A Unicode or binary string, in some cases with a file name (itself a Unicode string),
+      as per <a href=#the-drag-data-item-kind id=the-drag-data-store:the-drag-data-item-kind>the drag data item kind</a>.</dl>
+
+    <p>The <a href=#drag-data-store-item-list id=the-drag-data-store:drag-data-store-item-list>drag data store item list</a> is ordered in the order that the items were added
+    to the list; most recently added last.</p>
+   <li>
+    <p>The following information, used to generate the UI feedback during the drag:</p>
+
+    <ul><li>User-agent-defined default feedback information, known as the <dfn id=drag-data-store-default-feedback>drag data store default
+     feedback</dfn>.<li>Optionally, a bitmap image and the coordinate of a point within that image, known as the
+     <dfn id=drag-data-store-bitmap>drag data store bitmap</dfn> and <dfn id=drag-data-store-hot-spot-coordinate>drag data store hot spot coordinate</dfn>.</ul>
+   <li>
+    <p>A <dfn id=drag-data-store-mode>drag data store mode</dfn>, which is one of the following:</p>
+
+    <dl><dt><dfn id=concept-dnd-rw>Read/write mode</dfn><dd>
+      <p>For the <code id=the-drag-data-store:event-dnd-dragstart><a href=#event-dnd-dragstart>dragstart</a></code> event. New data can be added to the
+      <a href=#drag-data-store id=the-drag-data-store:drag-data-store>drag data store</a>.</p>
+     <dt><dfn id=concept-dnd-ro>Read-only mode</dfn><dd>
+      <p>For the <code id=the-drag-data-store:event-dnd-drop><a href=#event-dnd-drop>drop</a></code> event. The list of items representing dragged
+      data can be read, including the data. No new data can be added.</p>
+     <dt><dfn id=concept-dnd-p>Protected mode</dfn><dd>
+      <p>For all other events. The formats and kinds in the <a href=#drag-data-store id=the-drag-data-store:drag-data-store-2>drag data store</a> list of
+      items representing dragged data can be enumerated, but the data itself is unavailable and no
+      new data can be added.</p>
+     </dl>
+   <li>
+    <p>A <dfn id=drag-data-store-allowed-effects-state>drag data store allowed effects state</dfn>, which is a string.</p>
+   </ul>
+
+  <p>When a <a href=#drag-data-store id=the-drag-data-store:drag-data-store-3>drag data store</a> is <dfn id=create-a-drag-data-store>created</dfn>, it
+  must be initialized such that its <a href=#drag-data-store-item-list id=the-drag-data-store:drag-data-store-item-list-2>drag data store item list</a> is empty, it has no
+  <a href=#drag-data-store-default-feedback id=the-drag-data-store:drag-data-store-default-feedback>drag data store default feedback</a>, it has no <a href=#drag-data-store-bitmap id=the-drag-data-store:drag-data-store-bitmap>drag data store bitmap</a> and
+  <a href=#drag-data-store-hot-spot-coordinate id=the-drag-data-store:drag-data-store-hot-spot-coordinate>drag data store hot spot coordinate</a>, its <a href=#drag-data-store-mode id=the-drag-data-store:drag-data-store-mode>drag data store mode</a> is <a href=#concept-dnd-p id=the-drag-data-store:concept-dnd-p>protected mode</a>, and its <a href=#drag-data-store-allowed-effects-state id=the-drag-data-store:drag-data-store-allowed-effects-state>drag data store allowed effects
+  state</a> is the string "<code>uninitialized</code>".</p>
+
+
+
+  <h4 id=the-datatransfer-interface><span class=secno>6.9.3</span> The <code id=the-datatransfer-interface:datatransfer><a href=#datatransfer>DataTransfer</a></code> interface<a href=#the-datatransfer-interface class=self-link></a></h4>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/user-interaction/drag-and-drop/the-datatransfer-interface/index.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/user-interaction/drag-and-drop/the-datatransfer-interface/index.zh.html?filename=index.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fuser-interaction%2Fdrag-and-drop%2Fthe-datatransfer-interface%2Findex.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  <p><code id=the-datatransfer-interface:datatransfer-2><a href=#datatransfer>DataTransfer</a></code> objects are used to expose the <a href=#drag-data-store id=the-datatransfer-interface:drag-data-store>drag data store</a> that
+  underlies a drag-and-drop operation.</p>
+
+  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer title="The DataTransfer object is used to hold the data that is being dragged during a drag and drop operation. It may hold one or more data items, each of one or more data types. For more information about drag and drop, see HTML Drag and Drop API.">DataTransfer</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>3.5+</span></span><span class="safari yes"><span>Safari</span><span>3.1+</span></span><span class="chrome yes"><span>Chrome</span><span>3+</span></span><hr><span class="opera yes"><span>Opera</span><span>12+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>10+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>2+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>37+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>12+</span></span></div></div></div><pre><code class=idl>[Exposed=Window]
+interface <dfn id=datatransfer>DataTransfer</dfn> {
+  <a href=#dom-datatransfer id=the-datatransfer-interface:dom-datatransfer>constructor</a>();
+
+  attribute DOMString <a href=#dom-datatransfer-dropeffect id=the-datatransfer-interface:dom-datatransfer-dropeffect>dropEffect</a>;
+  attribute DOMString <a href=#dom-datatransfer-effectallowed id=the-datatransfer-interface:dom-datatransfer-effectallowed>effectAllowed</a>;
+
+  [SameObject] readonly attribute <a href=#datatransferitemlist id=the-datatransfer-interface:datatransferitemlist>DataTransferItemList</a> <a href=#dom-datatransfer-items id=the-datatransfer-interface:dom-datatransfer-items>items</a>;
+
+  undefined <a href=#dom-datatransfer-setdragimage id=the-datatransfer-interface:dom-datatransfer-setdragimage>setDragImage</a>(Element image, long x, long y);
+
+  /* old interface */
+  readonly attribute FrozenArray&lt;DOMString> <a href=#dom-datatransfer-types id=the-datatransfer-interface:dom-datatransfer-types>types</a>;
+  DOMString <a href=#dom-datatransfer-getdata id=the-datatransfer-interface:dom-datatransfer-getdata>getData</a>(DOMString format);
+  undefined <a href=#dom-datatransfer-setdata id=the-datatransfer-interface:dom-datatransfer-setdata>setData</a>(DOMString format, DOMString data);
+  undefined <a href=#dom-datatransfer-cleardata id=the-datatransfer-interface:dom-datatransfer-cleardata>clearData</a>(optional DOMString format);
+  [SameObject] readonly attribute <a id=the-datatransfer-interface:filelist href=https://w3c.github.io/FileAPI/#filelist-section data-x-internal=filelist>FileList</a> <a href=#dom-datatransfer-files id=the-datatransfer-interface:dom-datatransfer-files>files</a>;
+};</code></pre>
+
+  <dl class=domintro><dt><var>dataTransfer</var> = new <code id=dom-datatransfer>DataTransfer</code>()<div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in one engine only." class=less-than-two-engines-flag>⚠</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/DataTransfer title="The DataTransfer constructor creates a new DataTransfer object instance.">DataTransfer/DataTransfer</a><p class=less-than-two-engines-text>Support in one engine only.<div class=support><span class="firefox unknown"><span>Firefox</span><span>?</span></span><span class="safari no"><span>Safari</span><span>No</span></span><span class="chrome yes"><span>Chrome</span><span>60+</span></span><hr><span class="opera yes"><span>Opera</span><span>47+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android unknown"><span>Firefox Android</span><span>?</span></span><span class="safari_ios no"><span>Safari iOS</span><span>No</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>60+</span></span><span class="webview_android yes"><span>WebView Android</span><span>60+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>8.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>44+</span></span></div></div></div><dd>
+    <p>Creates a new <code id=the-datatransfer-interface:datatransfer-3><a href=#datatransfer>DataTransfer</a></code> object with an empty <a href=#drag-data-store id=the-datatransfer-interface:drag-data-store-2>drag data
+    store</a>.</p>
+   <dt><var>dataTransfer</var> . <code id=dom-datatransfer-dropeffect>dropEffect</code> [ = <var>value</var> ]<div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/dropEffect title="The DataTransfer.dropEffect property controls the feedback (typically visual) the user is given during a drag and drop operation. It will affect which cursor is displayed while dragging. For example, when the user hovers over a target drop element, the browser's cursor may indicate which type of operation will occur.">DataTransfer/dropEffect</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>Yes</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie unknown"><span>Internet Explorer</span><span>?</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>Yes</span></span><span class="safari_ios no"><span>Safari iOS</span><span>No</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div><dd>
+    <p>Returns the kind of operation that is currently selected. If the kind of operation isn't one
+    of those that is allowed by the <code id=the-datatransfer-interface:dom-datatransfer-effectallowed-2><a href=#dom-datatransfer-effectallowed>effectAllowed</a></code> attribute, then the operation will
+    fail.</p>
+
+    <p>Can be set, to change the selected operation.</p>
+
+    <p>The possible values are "<code>none</code>", "<code>copy</code>", "<code>link</code>", and "<code>move</code>".</p>
+   <dt><var>dataTransfer</var> . <code id=dom-datatransfer-effectallowed>effectAllowed</code> [ = <var>value</var> ]<div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/effectAllowed title="The DataTransfer.effectAllowed property specifies the effect that is allowed for a drag operation. The copy operation is used to indicate that the data being dragged will be copied from its present location to the drop location. The move operation is used to indicate that the data being dragged will be moved, and the link operation is used to indicate that some form of relationship or connection will be created between the source and drop locations.">DataTransfer/effectAllowed</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>Yes</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie unknown"><span>Internet Explorer</span><span>?</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>Yes</span></span><span class="safari_ios no"><span>Safari iOS</span><span>No</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div><dd>
+    <p>Returns the kinds of operations that are to be allowed.</p>
+
+    <p>Can be set (during the <code id=the-datatransfer-interface:event-dnd-dragstart><a href=#event-dnd-dragstart>dragstart</a></code> event), to change
+    the allowed operations.</p>
+
+    <p>The possible values are "<code>none</code>",
+    "<code>copy</code>", "<code>copyLink</code>", "<code>copyMove</code>", "<code>link</code>", "<code>linkMove</code>", "<code>move</code>", "<code>all</code>", and "<code>uninitialized</code>",</p>
+   <dt><var>dataTransfer</var> . <code id=dom-datatransfer-items>items</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/items title="The read-only DataTransfer property items property is a list of the data transfer items in a drag operation. The list includes one item for each item in the operation and if the operation had no items, the list is empty.">DataTransfer/items</a><div class=support><span class="firefox yes"><span>Firefox</span><span>50+</span></span><span class="safari no"><span>Safari</span><span>No</span></span><span class="chrome yes"><span>Chrome</span><span>4+</span></span><hr><span class="opera yes"><span>Opera</span><span>12+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>52+</span></span><span class="safari_ios no"><span>Safari iOS</span><span>No</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div><dd>
+    <p>Returns a <code id=the-datatransfer-interface:datatransferitemlist-2><a href=#datatransferitemlist>DataTransferItemList</a></code> object, with the drag data.</p>
+   <dt><var>dataTransfer</var> . <code id=dom-datatransfer-setdragimage>setDragImage</code>(<var>element</var>, <var>x</var>, <var>y</var>)<div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/setDragImage title="When a drag occurs, a translucent image is generated from the drag target (the element the dragstart event is fired at), and follows the mouse pointer during the drag. This image is created automatically, so you do not need to create it yourself. However, if a custom image is desired, the DataTransfer.setDragImage() method can be used to set the custom image to be used. The image will typically be an <image> element but it can also be a <canvas> or any other visible element.">DataTransfer/setDragImage</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>Yes</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>18</span></span><span class="ie unknown"><span>Internet Explorer</span><span>?</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>Yes</span></span><span class="safari_ios no"><span>Safari iOS</span><span>No</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div><dd>
+    <p>Uses the given element to update the drag feedback, replacing any previously specified
+    feedback.</p>
+   <dt><var>dataTransfer</var> . <code id=dom-datatransfer-types>types</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/types title="The DataTransfer.types read-only property returns an array of the drag data formats (as strings) that were set in the dragstart event. The order of the formats is the same order as the data included in the drag operation.">DataTransfer/types</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>Yes</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>10+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>Yes</span></span><span class="safari_ios no"><span>Safari iOS</span><span>No</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div><dd>
+    <p>Returns a <a id=the-datatransfer-interface:frozen-array href=https://heycam.github.io/webidl/#dfn-frozen-array-type data-x-internal=frozen-array>frozen array</a> listing the formats that were set in the <code id=the-datatransfer-interface:event-dnd-dragstart-2><a href=#event-dnd-dragstart>dragstart</a></code> event. In addition, if any files are being
+    dragged, then one of the types will be the string "<code>Files</code>".</p>
+   <dt><var>data</var> = <var>dataTransfer</var> . <code id=dom-datatransfer-getdata>getData</code>(<var>format</var>)<div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/getData title="The DataTransfer.getData() method retrieves drag data (as a DOMString) for the specified type. If the drag operation does not include data, this method returns an empty string.">DataTransfer/getData</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>Yes</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie unknown"><span>Internet Explorer</span><span>?</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>Yes</span></span><span class="safari_ios no"><span>Safari iOS</span><span>No</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div><dd>
+    <p>Returns the specified data. If there is no such data, returns the empty string.</p>
+   <dt><var>dataTransfer</var> . <code id=dom-datatransfer-setdata>setData</code>(<var>format</var>, <var>data</var>)<div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/setData title="The DataTransfer.setData() method sets the drag operation's drag data to the specified data and type. If data for the given type does not exist, it is added at the end of the drag data store, such that the last item in the types list will be the new type. If data for the given type already exists, the existing data is replaced in the same position. That is, the order of the types list is not changed when replacing data of the same type.">DataTransfer/setData</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>10+</span></span><span class="safari yes"><span>Safari</span><span>5+</span></span><span class="chrome yes"><span>Chrome</span><span>3+</span></span><hr><span class="opera yes"><span>Opera</span><span>12+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>10+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>5+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>37+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>12+</span></span></div></div></div><dd>
+    <p>Adds the specified data.</p>
+   <dt><var>dataTransfer</var> . <code id=dom-datatransfer-cleardata>clearData</code>( [ <var>format</var> ] )<div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/clearData title="The DataTransfer.clearData() method removes the drag operation's drag data for the given type. If data for the given type does not exist, this method does nothing.">DataTransfer/clearData</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>Yes</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie unknown"><span>Internet Explorer</span><span>?</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>Yes</span></span><span class="safari_ios no"><span>Safari iOS</span><span>No</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div><dd>
+    <p>Removes the data of the specified formats. Removes all data if the argument is omitted.</p>
+   <dt><var>dataTransfer</var> . <code id=dom-datatransfer-files>files</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/files title="The DataTransfer.files property is a list of the files in the drag operation. If the operation includes no files, the list is empty.">DataTransfer/files</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>Yes</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie unknown"><span>Internet Explorer</span><span>?</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>Yes</span></span><span class="safari_ios no"><span>Safari iOS</span><span>No</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div><dd>
+    <p>Returns a <code id=the-datatransfer-interface:filelist-2><a data-x-internal=filelist href=https://w3c.github.io/FileAPI/#filelist-section>FileList</a></code> of the files being dragged, if any.</p>
+   </dl>
+
+  <p><code id=the-datatransfer-interface:datatransfer-4><a href=#datatransfer>DataTransfer</a></code> objects that are created as part of <a href=#dndevents>drag-and-drop events</a> are only valid while those events are being fired.</p>
+
+  
+
+
+
+  <h5 id=the-datatransferitemlist-interface><span class=secno>6.9.3.1</span> The <code id=the-datatransferitemlist-interface:datatransferitemlist><a href=#datatransferitemlist>DataTransferItemList</a></code> interface<a href=#the-datatransferitemlist-interface class=self-link></a></h5><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItemList/DataTransferItem title="The DataTransferItem() getter method implements support for accessing items in the DataTransferItemList using array-style syntax (that is DataTransferItem[index]).">DataTransferItemList/DataTransferItem</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>50+</span></span><span class="safari yes"><span>Safari</span><span>6+</span></span><span class="chrome yes"><span>Chrome</span><span>13+</span></span><hr><span class="opera yes"><span>Opera</span><span>12+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>50+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>6+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>4.4+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android no"><span>Opera Android</span><span>No</span></span></div></div></div>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/user-interaction/drag-and-drop/the-datatransfer-interface/the-datatransferitemlist-interface.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/user-interaction/drag-and-drop/the-datatransfer-interface/the-datatransferitemlist-interface.zh.html?filename=the-datatransferitemlist-interface.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fuser-interaction%2Fdrag-and-drop%2Fthe-datatransfer-interface%2Fthe-datatransferitemlist-interface.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  <p>Each <code id=the-datatransferitemlist-interface:datatransfer><a href=#datatransfer>DataTransfer</a></code> object is associated with a <code id=the-datatransferitemlist-interface:datatransferitemlist-2><a href=#datatransferitemlist>DataTransferItemList</a></code>
+  object.</p>
+
+  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItemList title="The DataTransferItemList object is a list of DataTransferItem objects representing items being dragged. During a drag operation, each DragEvent has a dataTransfer property and that property is a DataTransferItemList.">DataTransferItemList</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>50+</span></span><span class="safari yes"><span>Safari</span><span>6+</span></span><span class="chrome yes"><span>Chrome</span><span>13+</span></span><hr><span class="opera yes"><span>Opera</span><span>12+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>50+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>6+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>4.4+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android no"><span>Opera Android</span><span>No</span></span></div></div></div><pre><code class=idl>[Exposed=Window]
+interface <dfn id=datatransferitemlist>DataTransferItemList</dfn> {
+  readonly attribute unsigned long <a href=#dom-datatransferitemlist-length id=the-datatransferitemlist-interface:dom-datatransferitemlist-length>length</a>;
+  <a href=#dom-datatransferitemlist-item>getter</a> <a href=#datatransferitem id=the-datatransferitemlist-interface:datatransferitem>DataTransferItem</a> (unsigned long index);
+  <a href=#datatransferitem id=the-datatransferitemlist-interface:datatransferitem-2>DataTransferItem</a>? <a href=#dom-datatransferitemlist-add id=the-datatransferitemlist-interface:dom-datatransferitemlist-add>add</a>(DOMString data, DOMString type);
+  <a href=#datatransferitem id=the-datatransferitemlist-interface:datatransferitem-3>DataTransferItem</a>? <a href=#dom-datatransferitemlist-add id=the-datatransferitemlist-interface:dom-datatransferitemlist-add-2>add</a>(<a id=the-datatransferitemlist-interface:file href=https://w3c.github.io/FileAPI/#dfn-file data-x-internal=file>File</a> data);
+  undefined <a href=#dom-datatransferitemlist-remove id=the-datatransferitemlist-interface:dom-datatransferitemlist-remove>remove</a>(unsigned long index);
+  undefined <a href=#dom-datatransferitemlist-clear id=the-datatransferitemlist-interface:dom-datatransferitemlist-clear>clear</a>();
+};</code></pre>
+
+  <dl class=domintro><dt><var>items</var> . <code id=dom-datatransferitemlist-length>length</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItemList/length title="The read-only length property of the DataTransferItemList interface returns the number of items currently in the drag item list.">DataTransferItemList/length</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>50+</span></span><span class="safari yes"><span>Safari</span><span>6+</span></span><span class="chrome yes"><span>Chrome</span><span>13+</span></span><hr><span class="opera yes"><span>Opera</span><span>12+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>50+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>6+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>4.4+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android no"><span>Opera Android</span><span>No</span></span></div></div></div><dd><p>Returns the number of items in the <a href=#drag-data-store id=the-datatransferitemlist-interface:drag-data-store>drag data store</a>.<dt><var>items</var>[<var>index</var>]<dd>
+    <p>Returns the <code id=the-datatransferitemlist-interface:datatransferitem-4><a href=#datatransferitem>DataTransferItem</a></code> object representing the <var>index</var>th
+    entry in the <a href=#drag-data-store id=the-datatransferitemlist-interface:drag-data-store-2>drag data store</a>.</p>
+   <dt><var>items</var> . <code id=dom-datatransferitemlist-remove>remove</code>(<var>index</var>)<div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItemList/remove title=undefined.>DataTransferItemList/remove</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>50+</span></span><span class="safari yes"><span>Safari</span><span>6+</span></span><span class="chrome yes"><span>Chrome</span><span>31+</span></span><hr><span class="opera yes"><span>Opera</span><span>12+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>50+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>6+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>31+</span></span><span class="webview_android yes"><span>WebView Android</span><span>4.4.3+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>2.0+</span></span><span class="opera_android no"><span>Opera Android</span><span>No</span></span></div></div></div><dd>
+    <p>Removes the <var>index</var>th entry in the <a href=#drag-data-store id=the-datatransferitemlist-interface:drag-data-store-3>drag data store</a>.</p>
+   <dt><var>items</var> . <code id=dom-datatransferitemlist-clear>clear</code>()<div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItemList/clear title="The DataTransferItemList method clear() removes all DataTransferItem objects from the drag data items list, leaving the list empty.">DataTransferItemList/clear</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>50+</span></span><span class="safari yes"><span>Safari</span><span>6+</span></span><span class="chrome yes"><span>Chrome</span><span>13+</span></span><hr><span class="opera yes"><span>Opera</span><span>12+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>50+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>6+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>4.4+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android no"><span>Opera Android</span><span>No</span></span></div></div></div><dd>
+    <p>Removes all the entries in the <a href=#drag-data-store id=the-datatransferitemlist-interface:drag-data-store-4>drag data store</a>.</p>
+   <dt><var>items</var> . <code id=dom-datatransferitemlist-add>add</code>(<var>data</var>)<div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItemList/add title="The DataTransferItemList.add() method creates a new DataTransferItem using the specified data and adds it to the drag data list. The item may be a File or a string of a given type. If the item is successfully added to the list, the newly-created DataTransferItem object is returned.">DataTransferItemList/add</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>50+</span></span><span class="safari yes"><span>Safari</span><span>6+</span></span><span class="chrome yes"><span>Chrome</span><span>13+</span></span><hr><span class="opera yes"><span>Opera</span><span>12+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>50+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>6+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>4.4+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android no"><span>Opera Android</span><span>No</span></span></div></div></div><dt><var>items</var> . <code id=the-datatransferitemlist-interface:dom-datatransferitemlist-add-3><a href=#dom-datatransferitemlist-add>add</a></code>(<var>data</var>, <var>type</var>)<dd>
+    <p>Adds a new entry for the given data to the <a href=#drag-data-store id=the-datatransferitemlist-interface:drag-data-store-5>drag data store</a>. If the data is plain
+    text  then a <var>type</var> string has to be provided
+    also.</p>
+   </dl>
+
+  
+
+
+
+  <h5 id=the-datatransferitem-interface><span class=secno>6.9.3.2</span> The <code id=the-datatransferitem-interface:datatransferitem><a href=#datatransferitem>DataTransferItem</a></code> interface<a href=#the-datatransferitem-interface class=self-link></a></h5>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/user-interaction/drag-and-drop/the-datatransfer-interface/the-datatransferitem-interface.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/user-interaction/drag-and-drop/the-datatransfer-interface/the-datatransferitem-interface.zh.html?filename=the-datatransferitem-interface.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fuser-interaction%2Fdrag-and-drop%2Fthe-datatransfer-interface%2Fthe-datatransferitem-interface.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  <p>Each <code id=the-datatransferitem-interface:datatransferitem-2><a href=#datatransferitem>DataTransferItem</a></code> object is associated with a <code id=the-datatransferitem-interface:datatransfer><a href=#datatransfer>DataTransfer</a></code>
+  object.</p>
+
+  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItem title="The DataTransferItem object represents one drag data item. During a drag operation, each drag event has a dataTransfer property which contains a list of drag data items. Each item in the list is a DataTransferItem object.">DataTransferItem</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>50+</span></span><span class="safari yes"><span>Safari</span><span>5.1+</span></span><span class="chrome yes"><span>Chrome</span><span>11+</span></span><hr><span class="opera yes"><span>Opera</span><span>12+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>50+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>5+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>4+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android no"><span>Opera Android</span><span>No</span></span></div></div></div><pre><code class=idl>[Exposed=Window]
+interface <dfn id=datatransferitem>DataTransferItem</dfn> {
+  readonly attribute DOMString <a href=#dom-datatransferitem-kind id=the-datatransferitem-interface:dom-datatransferitem-kind>kind</a>;
+  readonly attribute DOMString <a href=#dom-datatransferitem-type id=the-datatransferitem-interface:dom-datatransferitem-type>type</a>;
+  undefined <a href=#dom-datatransferitem-getasstring id=the-datatransferitem-interface:dom-datatransferitem-getasstring>getAsString</a>(<a href=#functionstringcallback id=the-datatransferitem-interface:functionstringcallback>FunctionStringCallback</a>? _callback);
+  <a id=the-datatransferitem-interface:file href=https://w3c.github.io/FileAPI/#dfn-file data-x-internal=file>File</a>? <a href=#dom-datatransferitem-getasfile id=the-datatransferitem-interface:dom-datatransferitem-getasfile>getAsFile</a>();
+};
+
+callback <dfn id=functionstringcallback>FunctionStringCallback</dfn> = undefined (DOMString data);</code></pre>
+
+  <dl class=domintro><dt><var>item</var> . <code id=dom-datatransferitem-kind>kind</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItem/kind title="The read-only DataTransferItem.kind property returns a DataTransferItem representing the drag data item kind: some text or some file.">DataTransferItem/kind</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>50+</span></span><span class="safari yes"><span>Safari</span><span>5.1+</span></span><span class="chrome yes"><span>Chrome</span><span>11+</span></span><hr><span class="opera yes"><span>Opera</span><span>12+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>50+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>5+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>4+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android no"><span>Opera Android</span><span>No</span></span></div></div></div><dd>
+    <p>Returns <a href=#the-drag-data-item-kind id=the-datatransferitem-interface:the-drag-data-item-kind>the drag data item kind</a>, one of: "string",
+     "file".</p>
+   <dt><var>item</var> . <code id=dom-datatransferitem-type>type</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItem/type title="The read-only DataTransferItem.type property returns the type (format) of the DataTransferItem object representing the drag data item. The type is a Unicode string generally given by a MIME type, although a MIME type is not required.">DataTransferItem/type</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>50+</span></span><span class="safari yes"><span>Safari</span><span>5.1+</span></span><span class="chrome yes"><span>Chrome</span><span>11+</span></span><hr><span class="opera yes"><span>Opera</span><span>12+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>50+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>5+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>4+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android no"><span>Opera Android</span><span>No</span></span></div></div></div><dd>
+    <p>Returns <a href=#the-drag-data-item-type-string id=the-datatransferitem-interface:the-drag-data-item-type-string>the drag data item type string</a>.</p>
+   <dt><var>item</var> . <code id=dom-datatransferitem-getasstring>getAsString</code>(<var>callback</var>)<div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItem/getAsString title="The DataTransferItem.getAsString() method invokes the given callback with the drag data item's string data as the argument if the item's kind is a Plain unicode string (i.e. kind is string).">DataTransferItem/getAsString</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>50+</span></span><span class="safari yes"><span>Safari</span><span>5.1+</span></span><span class="chrome yes"><span>Chrome</span><span>11+</span></span><hr><span class="opera yes"><span>Opera</span><span>12+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>50+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>5+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>4+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android no"><span>Opera Android</span><span>No</span></span></div></div></div><dd>
+    <p>Invokes the callback with the string data as the argument, if <a href=#the-drag-data-item-kind id=the-datatransferitem-interface:the-drag-data-item-kind-2>the drag data item
+    kind</a> is <i>text</i>.</p>
+   <dt><var>file</var> = <var>item</var> . <code id=dom-datatransferitem-getasfile>getAsFile</code>()<div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItem/getAsFile title="If the item is a file, the DataTransferItem.getAsFile() method returns the drag data item's File object. If the item is not a file, this method returns null.">DataTransferItem/getAsFile</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>50+</span></span><span class="safari yes"><span>Safari</span><span>5.1+</span></span><span class="chrome yes"><span>Chrome</span><span>11+</span></span><hr><span class="opera yes"><span>Opera</span><span>12+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>50+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>5+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>4+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android no"><span>Opera Android</span><span>No</span></span></div></div></div><dd>
+    <p>Returns a <code id=the-datatransferitem-interface:file-2><a data-x-internal=file href=https://w3c.github.io/FileAPI/#dfn-file>File</a></code> object, if <a href=#the-drag-data-item-kind id=the-datatransferitem-interface:the-drag-data-item-kind-3>the drag data item kind</a> is <i>File</i>.</p>
+   </dl>
+
+  
+
+
+
+
+  <h4 id=the-dragevent-interface><span class=secno>6.9.4</span> The <code id=the-dragevent-interface:dragevent><a href=#dragevent>DragEvent</a></code> interface<a href=#the-dragevent-interface class=self-link></a></h4><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/DragEvent/DragEvent title="This constructor is used to create a synthetic DragEvent object.">DragEvent/DragEvent</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>3.5+</span></span><span class="safari yes"><span>Safari</span><span>3.1+</span></span><span class="chrome yes"><span>Chrome</span><span>46+</span></span><hr><span class="opera yes"><span>Opera</span><span>12+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>10+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>Yes</span></span><span class="safari_ios no"><span>Safari iOS</span><span>No</span></span><span class="chrome_android no"><span>Chrome Android</span><span>No</span></span><span class="webview_android no"><span>WebView Android</span><span>No</span></span><span class="samsunginternet_android no"><span>Samsung Internet</span><span>No</span></span><span class="opera_android no"><span>Opera Android</span><span>No</span></span></div></div></div>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/user-interaction/drag-and-drop/the-dragevent-interface.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/user-interaction/drag-and-drop/the-dragevent-interface.zh.html?filename=the-dragevent-interface.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fuser-interaction%2Fdrag-and-drop%2Fthe-dragevent-interface.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  <p>The drag-and-drop processing model involves several events. They all use the
+  <code id=the-dragevent-interface:dragevent-2><a href=#dragevent>DragEvent</a></code> interface.</p>
+
+  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/DragEvent title="The DragEvent interface is a DOM event that represents a drag and drop interaction. The user initiates a drag by placing a pointer device (such as a mouse) on the touch surface and then dragging the pointer to a new location (such as another DOM element). Applications are free to interpret a drag and drop interaction in an application-specific way.">DragEvent</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>3.5+</span></span><span class="safari yes"><span>Safari</span><span>3.1+</span></span><span class="chrome yes"><span>Chrome</span><span>3+</span></span><hr><span class="opera yes"><span>Opera</span><span>12+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>10+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios no"><span>Safari iOS</span><span>No</span></span><span class="chrome_android no"><span>Chrome Android</span><span>No</span></span><span class="webview_android no"><span>WebView Android</span><span>No</span></span><span class="samsunginternet_android no"><span>Samsung Internet</span><span>No</span></span><span class="opera_android no"><span>Opera Android</span><span>No</span></span></div></div></div><pre><code class=idl>[Exposed=Window]
+interface <dfn id=dragevent>DragEvent</dfn> : <a id=the-dragevent-interface:mouseevent href=https://w3c.github.io/uievents/#mouseevent data-x-internal=mouseevent>MouseEvent</a> {
+  constructor(DOMString type, optional <a href=#drageventinit id=the-dragevent-interface:drageventinit>DragEventInit</a> eventInitDict = {});
+
+  readonly attribute <a href=#datatransfer id=the-dragevent-interface:datatransfer>DataTransfer</a>? <a href=#dom-dragevent-datatransfer id=the-dragevent-interface:dom-dragevent-datatransfer>dataTransfer</a>;
+};
+
+dictionary <dfn id=drageventinit>DragEventInit</dfn> : <a id=the-dragevent-interface:mouseeventinit href=https://w3c.github.io/uievents/#dictdef-mouseeventinit data-x-internal=mouseeventinit>MouseEventInit</a> {
+  <a href=#datatransfer id=the-dragevent-interface:datatransfer-2>DataTransfer</a>? dataTransfer = null;
+};</code></pre>
+
+  <dl class=domintro><dt><var>event</var> . <code id=dom-dragevent-datatransfer>dataTransfer</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/DragEvent/dataTransfer title="The DragEvent.dataTransfer property holds the drag operation's data (as a DataTransfer object).">DragEvent/dataTransfer</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>3.5+</span></span><span class="safari yes"><span>Safari</span><span>3.1+</span></span><span class="chrome yes"><span>Chrome</span><span>46+</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>10+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>Yes</span></span><span class="safari_ios no"><span>Safari iOS</span><span>No</span></span><span class="chrome_android no"><span>Chrome Android</span><span>No</span></span><span class="webview_android no"><span>WebView Android</span><span>No</span></span><span class="samsunginternet_android no"><span>Samsung Internet</span><span>No</span></span><span class="opera_android no"><span>Opera Android</span><span>No</span></span></div></div></div><dd>
+    <p>Returns the <code id=the-dragevent-interface:datatransfer-3><a href=#datatransfer>DataTransfer</a></code> object for the event.</p>
+   </dl>
+
+  <p class=note>Although, for consistency with other event interfaces, the <code id=the-dragevent-interface:dragevent-3><a href=#dragevent>DragEvent</a></code>
+  interface has a constructor, it is not particularly useful. In particular, there's no way to
+  create a useful <code id=the-dragevent-interface:datatransfer-4><a href=#datatransfer>DataTransfer</a></code> object from script, as <code id=the-dragevent-interface:datatransfer-5><a href=#datatransfer>DataTransfer</a></code> objects
+  have a processing and security model that is coordinated by the browser during drag-and-drops.</p>
+
+  
+
+  
+
+
+  
+
+
+
+  <h4 id=dndevents><span class=secno>6.9.5</span> Events summary<a href=#dndevents class=self-link></a></h4><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Document/drag_event title="The drag event is fired every few hundred milliseconds as an element or text selection is being dragged by the user.">Document/drag_event</a><div class=support><span class="firefox yes"><span>Firefox</span><span title="Partial implementation.">🔰 3.5+</span></span><span class="safari yes"><span>Safari</span><span>3.1+</span></span><span class="chrome yes"><span>Chrome</span><span>4+</span></span><hr><span class="opera yes"><span>Opera</span><span>12+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>10+</span></span><hr><span class="firefox_android no"><span>Firefox Android</span><span>No</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>11+</span></span><span class="chrome_android no"><span>Chrome Android</span><span>No</span></span><span class="webview_android no"><span>WebView Android</span><span>No</span></span><span class="samsunginternet_android no"><span>Samsung Internet</span><span>No</span></span><span class="opera_android no"><span>Opera Android</span><span>No</span></span></div></div><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Document/dragend_event title="The dragend event is fired when a drag operation is being ended (by releasing a mouse button or hitting the escape key).">Document/dragend_event</a><div class=support><span class="firefox yes"><span>Firefox</span><span title="Partial implementation.">🔰 3.5+</span></span><span class="safari yes"><span>Safari</span><span>3.1+</span></span><span class="chrome yes"><span>Chrome</span><span>4+</span></span><hr><span class="opera yes"><span>Opera</span><span>12+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>10+</span></span><hr><span class="firefox_android no"><span>Firefox Android</span><span>No</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>11+</span></span><span class="chrome_android no"><span>Chrome Android</span><span>No</span></span><span class="webview_android no"><span>WebView Android</span><span>No</span></span><span class="samsunginternet_android no"><span>Samsung Internet</span><span>No</span></span><span class="opera_android no"><span>Opera Android</span><span>No</span></span></div></div><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Document/dragenter_event title="The dragenter event is fired when a dragged element or text selection enters a valid drop target.">Document/dragenter_event</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>3.5+</span></span><span class="safari yes"><span>Safari</span><span>3.1+</span></span><span class="chrome yes"><span>Chrome</span><span>4+</span></span><hr><span class="opera yes"><span>Opera</span><span>12+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>10+</span></span><hr><span class="firefox_android no"><span>Firefox Android</span><span>No</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>11+</span></span><span class="chrome_android no"><span>Chrome Android</span><span>No</span></span><span class="webview_android no"><span>WebView Android</span><span>No</span></span><span class="samsunginternet_android no"><span>Samsung Internet</span><span>No</span></span><span class="opera_android no"><span>Opera Android</span><span>No</span></span></div></div><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Document/dragleave_event title="The dragleave event is fired when a dragged element or text selection leaves a valid drop target.">Document/dragleave_event</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>3.5+</span></span><span class="safari yes"><span>Safari</span><span>3.1+</span></span><span class="chrome yes"><span>Chrome</span><span>4+</span></span><hr><span class="opera yes"><span>Opera</span><span>12+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>10+</span></span><hr><span class="firefox_android no"><span>Firefox Android</span><span>No</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>11+</span></span><span class="chrome_android no"><span>Chrome Android</span><span>No</span></span><span class="webview_android no"><span>WebView Android</span><span>No</span></span><span class="samsunginternet_android no"><span>Samsung Internet</span><span>No</span></span><span class="opera_android no"><span>Opera Android</span><span>No</span></span></div></div><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Document/dragover_event title="The dragover event is fired when an element or text selection is being dragged over a valid drop target (every few hundred milliseconds).">Document/dragover_event</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>3.5+</span></span><span class="safari yes"><span>Safari</span><span>3.1+</span></span><span class="chrome yes"><span>Chrome</span><span>4+</span></span><hr><span class="opera yes"><span>Opera</span><span>12+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>10+</span></span><hr><span class="firefox_android no"><span>Firefox Android</span><span>No</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>11+</span></span><span class="chrome_android no"><span>Chrome Android</span><span>No</span></span><span class="webview_android no"><span>WebView Android</span><span>No</span></span><span class="samsunginternet_android no"><span>Samsung Internet</span><span>No</span></span><span class="opera_android no"><span>Opera Android</span><span>No</span></span></div></div><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Document/dragstart_event title="The dragstart event is fired when the user starts dragging an element or text selection.">Document/dragstart_event</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>3.5+</span></span><span class="safari yes"><span>Safari</span><span>3.1+</span></span><span class="chrome yes"><span>Chrome</span><span>4+</span></span><hr><span class="opera yes"><span>Opera</span><span>12+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>10+</span></span><hr><span class="firefox_android no"><span>Firefox Android</span><span>No</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>11+</span></span><span class="chrome_android no"><span>Chrome Android</span><span>No</span></span><span class="webview_android no"><span>WebView Android</span><span>No</span></span><span class="samsunginternet_android no"><span>Samsung Internet</span><span>No</span></span><span class="opera_android no"><span>Opera Android</span><span>No</span></span></div></div><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Document/drop_event title="The drop event is fired when an element or text selection is dropped on a valid drop target.">Document/drop_event</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>3.5+</span></span><span class="safari yes"><span>Safari</span><span>3.1+</span></span><span class="chrome yes"><span>Chrome</span><span>4+</span></span><hr><span class="opera yes"><span>Opera</span><span>12+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>10+</span></span><hr><span class="firefox_android no"><span>Firefox Android</span><span>No</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>11+</span></span><span class="chrome_android no"><span>Chrome Android</span><span>No</span></span><span class="webview_android no"><span>WebView Android</span><span>No</span></span><span class="samsunginternet_android no"><span>Samsung Internet</span><span>No</span></span><span class="opera_android no"><span>Opera Android</span><span>No</span></span></div></div></div>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/user-interaction/drag-and-drop/events-summary.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/user-interaction/drag-and-drop/events-summary.zh.html?filename=events-summary.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fuser-interaction%2Fdrag-and-drop%2Fevents-summary.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  
+
+  <p>The following events are involved in the drag-and-drop
+  model.</p>
+
+  <table><thead><tr><th> Event name <th> Target <th> Cancelable? <th> <a href=#drag-data-store-mode id=dndevents:drag-data-store-mode>Drag data store mode</a> <th> <code id=dndevents:dom-datatransfer-dropeffect><a href=#dom-datatransfer-dropeffect>dropEffect</a></code> <th> Default Action <tbody><tr><td><dfn data-dfn-for=GlobalEventHandlers id=event-dnd-dragstart data-dfn-type=event><code>dragstart</code></dfn><td><span>Source node</span><td>✓ Cancelable<td><a href=#concept-dnd-rw id=dndevents:concept-dnd-rw>Read/write mode</a>
+     <td>"<code>none</code>"<td>Initiate the drag-and-drop operation<tr><td><dfn data-dfn-for=GlobalEventHandlers id=event-dnd-drag data-dfn-type=event><code>drag</code></dfn><td><span>Source node</span><td>✓ Cancelable<td><a href=#concept-dnd-p id=dndevents:concept-dnd-p>Protected mode</a>
+     <td>"<code>none</code>"<td>Continue the drag-and-drop operation<tr><td><dfn data-dfn-for=GlobalEventHandlers id=event-dnd-dragenter data-dfn-type=event><code>dragenter</code></dfn><td><span>Immediate user selection</span> or <a id=dndevents:the-body-element-2 href=dom.html#the-body-element-2>the body element</a><td>✓ Cancelable<td><a href=#concept-dnd-p id=dndevents:concept-dnd-p-2>Protected mode</a>
+     <td><a href=#dropEffect-initialisation>Based on <code>effectAllowed</code> value</a><td>Reject <span>immediate user selection</span> as potential <span>target element</span><tr><td><dfn data-dfn-for=GlobalEventHandlers id=event-dnd-dragleave data-dfn-type=event><code>dragleave</code></dfn><td><span>Previous target element</span><td>—<td><a href=#concept-dnd-p id=dndevents:concept-dnd-p-3>Protected mode</a>
+     <td>"<code>none</code>"<td>None<tr><td><dfn data-dfn-for=GlobalEventHandlers id=event-dnd-dragover data-dfn-type=event><code>dragover</code></dfn><td><span>Current target element</span><td>✓ Cancelable<td><a href=#concept-dnd-p id=dndevents:concept-dnd-p-4>Protected mode</a>
+     <td><a href=#dropEffect-initialisation>Based on <code>effectAllowed</code> value</a><td>Reset the <span>current drag operation</span> to "none"<tr><td><dfn data-dfn-for=GlobalEventHandlers id=event-dnd-drop data-dfn-type=event><code>drop</code></dfn><td><span>Current target element</span><td>✓ Cancelable<td><a href=#concept-dnd-ro id=dndevents:concept-dnd-ro>Read-only mode</a>
+     <td><span>Current drag operation</span><td>Varies<tr><td><dfn data-dfn-for=GlobalEventHandlers id=event-dnd-dragend data-dfn-type=event><code>dragend</code></dfn><td><span>Source node</span><td>—<td><a href=#concept-dnd-p id=dndevents:concept-dnd-p-5>Protected mode</a>
+     
+     <td><span>Current drag operation</span><td>Varies</table>
+
+  <p>Not shown in the above table: all these events bubble, are composed, and the <code id=dndevents:dom-datatransfer-effectallowed><a href=#dom-datatransfer-effectallowed>effectAllowed</a></code> attribute always has the value it had
+  after the <code id=dndevents:event-dnd-dragstart><a href=#event-dnd-dragstart>dragstart</a></code> event, defaulting to "<code>uninitialized</code>" in the <code id=dndevents:event-dnd-dragstart-2><a href=#event-dnd-dragstart>dragstart</a></code> event.</p>
+
+
+
+
+  <h4 id=the-draggable-attribute><span class=secno>6.9.6</span> The <code id=the-draggable-attribute:attr-draggable><a href=#attr-draggable>draggable</a></code> attribute<a href=#the-draggable-attribute class=self-link></a></h4><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/draggable title="The draggable global attribute is an enumerated attribute that indicates whether the element can be dragged, either with native browser behavior or the HTML Drag and Drop API.">Global_attributes/draggable</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>2+</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>12+</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>Yes</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/user-interaction/drag-and-drop/the-draggable-attribute.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/user-interaction/drag-and-drop/the-draggable-attribute.zh.html?filename=the-draggable-attribute.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fuser-interaction%2Fdrag-and-drop%2Fthe-draggable-attribute.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  <p>All <a id=the-draggable-attribute:html-elements href=infrastructure.html#html-elements>HTML elements</a> may have the <dfn data-dfn-for=html-global id=attr-draggable data-dfn-type=element-attr><code>draggable</code></dfn> content attribute set. The <code id=the-draggable-attribute:attr-draggable-2><a href=#attr-draggable>draggable</a></code> attribute is an <a id=the-draggable-attribute:enumerated-attribute href=infrastructure.html#enumerated-attribute>enumerated attribute</a>. It has
+  three states. The first state is <i>true</i> and it has the keyword <code>true</code>.
+  The second state is <i>false</i> and it has the keyword <code>false</code>. The third
+  state is <i>auto</i>; it has no keywords but it is the <i id=the-draggable-attribute:missing-value-default><a href=infrastructure.html#missing-value-default>missing
+  value default</a></i> and the <i id=the-draggable-attribute:invalid-value-default><a href=infrastructure.html#invalid-value-default>invalid value default</a></i>.</p>
+
+  <p>The <i>true</i> state means the element is draggable; the <i>false</i> state means that it is
+  not. The <i>auto</i> state uses the default behavior of the user agent.</p>
+
+  <p>An element with a <code id=the-draggable-attribute:attr-draggable-3><a href=#attr-draggable>draggable</a></code> attribute should also have a
+  <code id=the-draggable-attribute:attr-title><a href=dom.html#attr-title>title</a></code> attribute that names the element for the purpose of
+  non-visual interactions. </p>
+
+  <dl class=domintro><dt><var>element</var> . <code id=dom-draggable>draggable</code> [ = <var>value</var> ]<dd>
+    <p>Returns true if the element is draggable; otherwise, returns false.</p>
+
+    <p>Can be set, to override the default and set the <code id=the-draggable-attribute:attr-draggable-4><a href=#attr-draggable>draggable</a></code>
+    content attribute.</p>
+   </dl>
+
+  
+
+
+
+
+  
+
+
+
+
+
+  <nav><a href=interaction.html>← 6 用户交互</a> — <a href=./>Table of Contents</a> — <a href=browsers.html>7 加载 Web 页面 →</a></nav>

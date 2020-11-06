@@ -1,0 +1,73 @@
+/*
+ * zh-cn localization
+ */
+
+.example::before { content: '示例';  }
+.note::before, dl.domintro::before { content: '注意'; }
+.bookkeeping:before { content: '簿记细节'; }
+.warning::before { content: '\26A0 警告！'; }
+
+
+.comment { position: relative; color: #2196F3; background: #e3f3ff; font-style: italic; margin-left: 2em; padding-left: 2em; }
+.comment em, .comment i, .comment var { font-style: normal; }
+span.comment { padding: 0 2em; }
+.comment p:first-child { margin-top: 0; }
+.comment p:last-child { margin-bottom: 0; }
+dd > .comment:first-child { margin-bottom: 0; }
+.comment::before { content: '译注'; background: #2196F3; color: white; padding: 0.15em 0.25em; font-style: normal; position: absolute; top: -0.2em; left: -1.5em; transform: rotate(-5deg); }
+h2, h3, h4, h5, h6 {
+    position: relative;
+}
+.translate-info {
+    display: none;
+    width: 280px;
+    font-weight: normal;
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    background: #cbfba2;
+    padding: 15px;
+    border-radius: 2px;
+    border: 1px solid #156918;
+    color: #3c790a;
+}
+.translate-info p {
+    margin: 0;
+    font-size: 14px;
+}
+.translate-info hr {
+    margin: 15px 0 10px;
+    border-bottom: 1px solid #156918;
+}
+.translate-info .guide {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+.translate-info .meta .date {
+    margin-left: 15px;
+}
+.translate-info .meta+.meta {
+    margin-top: 10px;
+}
+
+h2:hover .translate-info,
+h3:hover .translate-info,
+h4:hover .translate-info,
+h5:hover .translate-info,
+h6:hover .translate-info {
+    display: block;
+}
+
+.zh-outdated {
+    background-color: yellow;
+}
+.zh-outdated::after {
+    content: '\26A0 本小节的翻译已过时';
+    padding-left: 14px;
+    font-style: italic;
+    font-weight: normal;
+}
+.zh-outdated .translate-info .translate {
+    background-color: yellow;
+}

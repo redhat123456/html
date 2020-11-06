@@ -1,0 +1,1044 @@
+<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Standard, Developer's Edition</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/dev/styles.css crossorigin=""><script>
+   function toggleStatus(div) {
+     div.parentNode.classList.toggle('wrapped');
+   }
+   function setLinkFragment(link) {
+     link.hash = location.hash;
+   }
+  </script><body>
+  <script async="" src=/dev/search.js></script>
+  
+  
+  
+  <header id=head class="head with-buttons">
+   <a href=https://whatwg.org/ class=logo><img width=100 alt=WHATWG crossorigin="" src=https://resources.whatwg.org/logo.svg height=100></a>
+   
+   <hgroup><h1><a rel=home href=/dev/>HTML: The Living Standard</a></h1><h2 id="developer's-edition-—-last-updated-date:-01-jan-1901" class="no-num no-toc">Developer's Edition — Last Updated <span class=pubdate>6 November 2020</span></h2><div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/developers-edition-mdash-last-updated-date-01-jan-1901.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/developers-edition-mdash-last-updated-date-01-jan-1901.zh.html></div></hgroup>
+   
+   <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-91053840-1', 'auto');
+      ga('send', 'pageview');
+   </script>
+  </header>
+
+  
+
+  
+
+
+  
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/table-of-contents.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/table-of-contents.zh.html></div>
+  
+
+
+  
+<div data-en-date="Sat Aug 11 2018 08:00:56 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/full-table-of-contents.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/full-table-of-contents.zh.html></div>
+  
+
+  
+
+  
+
+
+  <h2 id=about-dev-edition class="no-num no-toc">关于本标准</h2>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/about-this-specification.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/about-this-specification.zh.html></div>
+
+  <p>本标准与其他标准不同，它的处理完全考虑到了 Web 开发者。</p>
+
+  <p>本标准关注可读性和可访问性，不像 <a href=/multipage/>完整的 HTML 标准</a>，"开发者版本" 移除了
+  只有浏览器厂商需要知道的信息。它个版本是用我们的构建工具从完整的规范自动产出的，
+  因此总会与最新开发的 HTML 保持同步。</p>
+
+  <p>其概念、构造，以及未来可参考 <a href=http://web.archive.org/web/20150220020906/http://archive.germanforblack.com:80/articles/html5-for-web-developers>
+  原始出版发行</a>，以及 <a href=https://blog.whatwg.org/developers-edition-comeback>关于重启该版本的博文</a>。</p>
+
+  <p>最后，欢迎 <a href=https://github.com/whatwg/html/labels/dev%20edition>在 GitHub 贡献</a> 来改进该版本！</p>
+
+  
+
+
+  <nav><a href=dom.html>← 3 HTML 文档的语义，结构，与API</a> — <a href=./>Table of Contents</a> — <a href=sections.html>4.3 Section →</a></nav><ol class=toc><li><a href=semantics.html#semantics><span class=secno>4</span> HTML 元素</a><ol><li><a href=semantics.html#the-root-element><span class=secno>4.1</span> 文档元素</a><ol><li><a href=semantics.html#the-html-element><span class=secno>4.1.1</span> <code>html</code> 元素</a></ol><li><a href=semantics.html#文档元数据><span class=secno>4.2</span> 文档元数据</a><ol><li><a href=semantics.html#the-head-element><span class=secno>4.2.1</span> <code>head</code> 元素</a><li><a href=semantics.html#the-title-element><span class=secno>4.2.2</span> <code>title</code> 元素</a><li><a href=semantics.html#base-元素><span class=secno>4.2.3</span> <code>base</code> 元素</a><li><a href=semantics.html#link-元素><span class=secno>4.2.4</span> <code>link</code> 元素</a><ol><li><a href=semantics.html#为用户提供一种跟随使用-link-元素创建的超链接的方式><span class=secno>4.2.4.1</span> 为用户提供一种跟随使用 <code>link</code> 元素创建的超链接的方式</a></ol><li><a href=semantics.html#the-meta-element><span class=secno>4.2.5</span> <code>meta</code> 元素</a><ol><li><a href=semantics.html#标准元数据名><span class=secno>4.2.5.1</span> 标准元数据名</a><li><a href=semantics.html#其他元数据名称><span class=secno>4.2.5.2</span> 其他元数据名称</a><li><a href=semantics.html#pragma-directives><span class=secno>4.2.5.3</span> Pragma directives</a><li><a href=semantics.html#charset><span class=secno>4.2.5.4</span> Specifying the document's character encoding</a></ol><li><a href=semantics.html#the-style-element><span class=secno>4.2.6</span> The <code>style</code> element</a></ol></ol></ol><h2 id=semantics><span class=secno>4</span> HTML 元素<a href=#semantics class=self-link></a></h2>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/index.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/the-elements-of-html/index.zh.html></div>
+
+
+  <h3 id=the-root-element><span class=secno>4.1</span> 文档元素<a href=#the-root-element class=self-link></a></h3>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/the-document-element/index.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/the-elements-of-html/the-document-element/index.zh.html></div>
+
+
+  <h4 id=the-html-element><span class=secno>4.1.1</span> <dfn><code>html</code></dfn> 元素<a href=#the-html-element class=self-link></a></h4><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html title="The HTML <html> element represents the root (top-level element) of an HTML document, so it is also referred to as the root element. All other elements must be descendants of this element.">Element/html</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>Yes</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>Yes</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>Yes</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/the-document-element/the-html-element.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/the-elements-of-html/the-document-element/the-html-element.zh.html></div>
+
+  <dl class=element><dt><a href=dom.html#concept-element-categories id=the-html-element:concept-element-categories>类别</a>：<dd>无。<dt><a href=dom.html#concept-element-contexts id=the-html-element:concept-element-contexts>该元素可用的上下文</a>：<dd>作为文档的 <a href=https://dom.spec.whatwg.org/#document-element id=the-html-element:document-element data-x-internal=document-element>文档元素</a>。<dd>复合文档中允许子文档片段的地方。<dt><a href=dom.html#concept-element-content-model id=the-html-element:concept-element-content-model>内容模型</a>：<dd><code id=the-html-element:the-head-element><a href=#the-head-element>head</a></code> 元素紧接着 <code id=the-html-element:the-body-element><a href=sections.html#the-body-element>body</a></code> 元素。<dt><a href=dom.html#concept-element-tag-omission id=the-html-element:concept-element-tag-omission>text/html 中的标签省略</a>：<dd>An <code id=the-html-element:the-html-element><a href=#the-html-element>html</a></code> element's <a href=syntax.html#syntax-start-tag id=the-html-element:syntax-start-tag>start tag</a> can be omitted
+   if the first thing inside the <code id=the-html-element:the-html-element-2><a href=#the-html-element>html</a></code> element is not a <a href=syntax.html#syntax-comments id=the-html-element:syntax-comments>comment</a>.<dd>An <code id=the-html-element:the-html-element-3><a href=#the-html-element>html</a></code> element's <a href=syntax.html#syntax-end-tag id=the-html-element:syntax-end-tag>end tag</a> can be omitted if
+   the <code id=the-html-element:the-html-element-4><a href=#the-html-element>html</a></code> element is not immediately followed by a <a href=syntax.html#syntax-comments id=the-html-element:syntax-comments-2>comment</a>.<dt><a href=dom.html#concept-element-attributes id=the-html-element:concept-element-attributes>内容属性</a>：<dd><a href=dom.html#全局属性 id=the-html-element:全局属性>全局属性</a><dd><code id=the-html-element:attr-html-manifest><a href=#attr-html-manifest>manifest</a></code> — <span>Application cache manifest</span><dt><a href=dom.html#concept-element-dom id=the-html-element:concept-element-dom>DOM 接口</a>：<dd>使用 <code>HTMLHtmlElement</code>。</dl>
+
+  <p><code id=the-html-element:the-html-element-5><a href=#the-html-element>html</a></code> 元素 <a href=dom.html#represents id=the-html-element:represents>表示</a> HTML 文档的根。</p>
+
+  <p>鼓励作者在根 <code id=the-html-element:the-html-element-6><a href=#the-html-element>html</a></code> 元素上指定 <code id=the-html-element:attr-lang><a href=dom.html#attr-lang>lang</a></code> 属性，
+  给出文档的语言。这可以帮助语音合成工具确定要使用的发音，帮助翻译工具确定要使用的规则，
+  等等。</p>
+
+  <p><dfn id=attr-html-manifest><code>manifest</code></dfn> 属性给出文档的
+  <span>应用缓存</span>
+  <span>manifest</span> 的地址，如果有的话。
+  如果出现了该属性，其值必须是一个
+  <a href=infrastructure.html#valid-non-empty-url-potentially-surrounded-by-spaces id=the-html-element:valid-non-empty-url-potentially-surrounded-by-spaces>可能被空格包裹的合法的非空URL</a>。</p>
+
+  <p class=critical><code id=the-html-element:attr-html-manifest-2><a href=#attr-html-manifest>manifest</a></code> 属性是是遗留的
+  "<a href=offline.html#offline>离线 Web 应用</a>" 特性的一部分，
+  该特性正在从 Web 平台移除。（这是一个很长的过程，可能持续很多年。）
+  现在强烈不推荐使用 <code id=the-html-element:attr-html-manifest-3><a href=#attr-html-manifest>manifest</a></code> 属性。
+  使用 service workers 来替代。 <a href=references.html#refsSW>[SW]</a></p>
+
+  <p><code id=the-html-element:attr-html-manifest-4><a href=#attr-html-manifest>manifest</a></code> 属性只在文档加载的早期阶段
+  <span>起作用</span>。
+  因此动态改变该属性没有效果（因此没有为该属性提供任何 DOM API）。</p>
+
+  <p class=note><span>应用缓存选择</span> 中，后续的 <code id=the-html-element:base-元素><a href=#base-元素>base</a></code>
+  元素影响不了 <code id=the-html-element:attr-html-manifest-5><a href=#attr-html-manifest>manifest</a></code> 属性的
+  <span>URL 解析</span>，因为在还没看到这些元素时就进行了这些属性的处理。</p>
+
+  <p class=note><code id=the-html-element:dom-applicationcache><a href=offline.html#dom-applicationcache>window.applicationCache</a></code> IDL
+  属性提供了对离线 <span>应用缓存</span> 机制的脚本访问。</p>
+
+
+  <div class=example>
+
+   <p>下面例子中的 <code id=the-html-element:the-html-element-7><a href=#the-html-element>html</a></code> 元素声明了该文档的语言是英语。</p>
+
+   <pre>&lt;!DOCTYPE html>
+<strong>&lt;html lang="en"></strong>
+&lt;head>
+&lt;title>Swapping Songs&lt;/title>
+&lt;/head>
+&lt;body>
+&lt;h1>Swapping Songs&lt;/h1>
+&lt;p>Tonight I swapped some of the songs I wrote with some friends,who
+gave me some of the songs they wrote. I love sharing my music.&lt;/p>
+&lt;/body>
+<strong>&lt;/html></strong></pre>
+
+  </div>
+
+
+
+
+
+  <h3 id=文档元数据><span class=secno>4.2</span> 文档元数据<a href=#文档元数据 class=self-link></a></h3>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/document-metadata/index.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/the-elements-of-html/document-metadata/index.zh.html></div>
+
+
+  <h4 id=the-head-element data-dfn-type=element data-lt=head><span class=secno>4.2.1</span> <dfn><code>head</code></dfn> 元素<a href=#the-head-element class=self-link></a></h4><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head title="The HTML <head> element contains machine-readable information (metadata) about the document, like its title, scripts, and style sheets.">Element/head</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>Yes</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/document-metadata/the-head-element.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/the-elements-of-html/document-metadata/the-head-element.zh.html></div>
+
+  <dl class=element><dt><a href=dom.html#concept-element-categories id=the-head-element:concept-element-categories>类别</a>：<dd>无。<dt><a href=dom.html#concept-element-contexts id=the-head-element:concept-element-contexts>该元素可用的上下文</a>：<dd>作为 <code id=the-head-element:the-html-element><a href=#the-html-element>html</a></code> 元素的第一个元素。<dt><a href=dom.html#concept-element-content-model id=the-head-element:concept-element-content-model>内容模型</a>：<dd>如果该文档是 <a href=iframe-embed-object.html#an-iframe-srcdoc-document id=the-head-element:an-iframe-srcdoc-document><code>iframe</code> <code>srcdoc</code> 文档</a>，
+   或者如果在更高级协议上有标题信息可用：大于等于0个 <a href=dom.html#metadata-content id=the-head-element:metadata-content>元数据内容</a> 元素，其中不多于一个 <code id=the-head-element:the-title-element><a href=#the-title-element>title</a></code> 元素，
+   不多于一个 <code id=the-head-element:base-元素><a href=#base-元素>base</a></code> 元素。<dd>否则：一个或更多 <a href=dom.html#metadata-content id=the-head-element:metadata-content-2>元数据内容</a> 元素，其中恰好一个是 <code id=the-head-element:the-title-element-2><a href=#the-title-element>title</a></code> 元素，
+   且不多于一个 <code id=the-head-element:base-元素-2><a href=#base-元素>base</a></code> 元素。<dt><a href=dom.html#concept-element-tag-omission id=the-head-element:concept-element-tag-omission>text/html 中的标签省略</a>：<dd>A <code id=the-head-element:the-head-element><a href=#the-head-element>head</a></code> element's <a href=syntax.html#syntax-start-tag id=the-head-element:syntax-start-tag>start tag</a> can be omitted if
+   the element is empty, or if the first thing inside the <code id=the-head-element:the-head-element-2><a href=#the-head-element>head</a></code> element is an
+   element.<dd>A <code id=the-head-element:the-head-element-3><a href=#the-head-element>head</a></code> element's <a href=syntax.html#syntax-end-tag id=the-head-element:syntax-end-tag>end tag</a> can be omitted if
+   the <code id=the-head-element:the-head-element-4><a href=#the-head-element>head</a></code> element is not immediately followed by <a id=the-head-element:space-characters href=https://infra.spec.whatwg.org/#ascii-whitespace data-x-internal=space-characters>ASCII whitespace</a> or a
+   <a href=syntax.html#syntax-comments id=the-head-element:syntax-comments>comment</a>.<dt><a href=dom.html#concept-element-attributes id=the-head-element:concept-element-attributes>内容属性</a>：<dd><a href=dom.html#全局属性 id=the-head-element:全局属性>全局属性</a><dt><a href=dom.html#concept-element-dom id=the-head-element:concept-element-dom>DOM 接口</a>：<dd>使用 <code>HTMLHeadElement</code>。</dl>
+
+  <p><code id=the-head-element:the-head-element-5><a href=#the-head-element>head</a></code> 元素 <a href=dom.html#represents id=the-head-element:represents>表示</a> <code id=the-head-element:document><a href=dom.html#document>Document</a></code> 的元数据集合。</p>
+  <div class=example>
+
+   <p><code id=the-head-element:the-head-element-6><a href=#the-head-element>head</a></code> 元素中的元数据集合可大可小。这里有一个非常小的例子：</p>
+
+   <pre>&lt;!doctype html>
+&lt;html lang=en>
+ &lt;head>
+  &lt;title>A document with a short head&lt;/title>
+ &lt;/head>
+ &lt;body>
+ ...</pre>
+
+   <p>这是一个更长的例子：</p>
+
+   <pre>&lt;!DOCTYPE HTML>
+&lt;HTML LANG="EN">
+ &lt;HEAD>
+  &lt;META CHARSET="UTF-8">
+  &lt;BASE HREF="https://www.example.com/">
+  &lt;TITLE>An application with a long head&lt;/TITLE>
+  &lt;LINK REL="STYLESHEET" HREF="default.css">
+  &lt;LINK REL="STYLESHEET ALTERNATE" HREF="big.css" TITLE="Big Text">
+  &lt;SCRIPT SRC="support.js">&lt;/SCRIPT>
+  &lt;META NAME="APPLICATION-NAME" CONTENT="Long headed application">
+ &lt;/HEAD>
+ &lt;BODY>
+ ...</pre>
+
+  </div>
+
+  <p class=note><code id=the-head-element:the-title-element-3><a href=#the-title-element>title</a></code> 元素在多数场景下都是必须的子元素，但是当更高级协议提供了标题信息时，
+  例如在 e-mail 中使用 HTML 作为编写格式，有标题行时就可以忽略 <code id=the-head-element:the-title-element-4><a href=#the-title-element>title</a></code> 元素。</p>
+
+
+
+
+  <h4 id=the-title-element><span class=secno>4.2.2</span> <dfn><code>title</code></dfn> 元素<a href=#the-title-element class=self-link></a></h4><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title title="The HTML Title element (<title>) defines the document's title that is shown in a browser's title bar or a page's tab.">Element/title</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>1+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>1+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Tue May 01 2018 09:32:20 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/document-metadata/the-title-element.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/the-elements-of-html/document-metadata/the-title-element.zh.html></div>
+
+  <dl class=element><dt><a href=dom.html#concept-element-categories id=the-title-element:concept-element-categories>类别</a>：<dd><a href=dom.html#metadata-content id=the-title-element:metadata-content>元数据内容</a>。<dt><a href=dom.html#concept-element-contexts id=the-title-element:concept-element-contexts>该元素可用的上下文</a>：<dd>在不包含 <code id=the-title-element:the-title-element><a href=#the-title-element>title</a></code> 的 <code id=the-title-element:the-head-element><a href=#the-head-element>head</a></code> 元素中。<dt><a href=dom.html#concept-element-content-model id=the-title-element:concept-element-content-model>内容模型</a>：<dd>非 <a href=dom.html#inter-element-whitespace id=the-title-element:inter-element-whitespace>元素间空白</a> 的 <a href=dom.html#text-content id=the-title-element:text-content>文本内容</a>。<dt><a href=dom.html#concept-element-tag-omission id=the-title-element:concept-element-tag-omission>text/html 中的标签省略</a>：<dd>哪个标签都不能省略。<dt><a href=dom.html#concept-element-attributes id=the-title-element:concept-element-attributes>内容属性</a>：<dd><a href=dom.html#全局属性 id=the-title-element:全局属性>全局属性</a><dt><a href=dom.html#concept-element-dom id=the-title-element:concept-element-dom>DOM 接口</a>：<dd>使用 <code>HTMLTitleElement</code>。</dl>
+
+  <p><code id=the-title-element:the-title-element-2><a href=#the-title-element>title</a></code> 元素 <a href=dom.html#represents id=the-title-element:represents>表示</a> 文档的标题或名称。
+  作者应该使用标识其文档的标题，这个标题在其他上下文中也会被使用，例如在用户的历史、书签，或搜索结果中。
+  文档的标题常常与第一个标题元素不同，因为第一个标题不需要在上下文之外有意义。</p>
+
+  <p>每个文档不得有多个 <code id=the-title-element:the-title-element-3><a href=#the-title-element>title</a></code> 元素。</p>
+
+  <p class=note>如果 <code id=the-title-element:document><a href=dom.html#document>Document</a></code> 没有标题是合理的，则可能不要求有
+  <code id=the-title-element:the-title-element-4><a href=#the-title-element>title</a></code> 元素。在 <code id=the-title-element:the-head-element-2><a href=#the-head-element>head</a></code> 元素的内容模型中描述了何时该元素是必须的。</p>
+
+  <dl class=domintro><dt><var>title</var> . <code id=dom-title-text>text</code> [ = <var>value</var> ]<dd>
+
+    <p>返回该元素的 <a href=https://dom.spec.whatwg.org/#concept-child-text-content id=the-title-element:child-text-content data-x-internal=child-text-content>子文本内容</a>。</p>
+
+    <p>设置时用给定的值替换该元素的子内容。</p>
+
+   </dl>
+
+  
+
+  <div class=example>
+
+   <p>这是一些合适的标题的例子，以及同一页面中可能有的顶层标题。</p>
+
+   <pre>  &lt;title>Introduction to The Mating Rituals of Bees&lt;/title>
+    ...
+  &lt;h1>Introduction&lt;/h1>
+  &lt;p>This companion guide to the highly successful
+  &lt;cite>Introduction to Medieval Bee-Keeping&lt;/cite> book is...</pre>
+
+   <p>The next page might be a part of the same site。 Note how the title describes the subject
+   matter unambiguously，while the first heading assumes the reader knows what the context is and
+   therefore won't wonder if the dances are Salsa or Waltz:</p>
+
+   <pre>  &lt;title>Dances used during bee mating rituals&lt;/title>
+    ...
+  &lt;h1>The Dances&lt;/h1></pre>
+
+  </div>
+
+  <p><code id=the-title-element:dom-document-title><a href=dom.html#dom-document-title>document.title</a></code> IDL 属性用作文档的标题。</p>
+
+  
+
+
+
+  <h4 id=base-元素 data-dfn-type=element data-lt=base><span class=secno>4.2.3</span> <dfn><code>base</code></dfn> 元素<a href=#base-元素 class=self-link></a></h4>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/document-metadata/the-base-element.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/the-elements-of-html/document-metadata/the-base-element.zh.html></div>
+
+  <dl class=element><dt><a href=dom.html#concept-element-categories id=base-元素:concept-element-categories>类别</a>：<dd><a href=dom.html#metadata-content id=base-元素:metadata-content>元数据内容</a>。<dt><a href=dom.html#concept-element-contexts id=base-元素:concept-element-contexts>该元素可用的上下文</a>：<dd>不包含其他 <code id=base-元素:base-元素><a href=#base-元素>base</a></code> 元素的 <code id=base-元素:the-head-element><a href=#the-head-element>head</a></code> 元素中。<dt><a href=dom.html#concept-element-content-model id=base-元素:concept-element-content-model>内容模型</a>：<dd><a href=dom.html#concept-content-nothing id=base-元素:concept-content-nothing>无</a>。<dt><a href=dom.html#concept-element-tag-omission id=base-元素:concept-element-tag-omission>text/html 中的标签省略</a>：<dd>哪个标签都不能省略。<dt><a href=dom.html#concept-element-attributes id=base-元素:concept-element-attributes>内容属性</a>：<dd><a href=dom.html#全局属性 id=base-元素:全局属性>全局属性</a><dd><code id=base-元素:attr-base-href><a href=#attr-base-href>href</a></code> — <a id=base-元素:document-base-url href=infrastructure.html#document-base-url>Document base URL</a><dd><code id=base-元素:attr-base-target><a href=#attr-base-target>target</a></code> — Default <a id=base-元素:browsing-context href=browsers.html#browsing-context>browsing context</a> for <a id=base-元素:hyperlink href=links.html#hyperlink>hyperlink</a> <span>navigation</span> and <a id=base-元素:form-submission href=form-control-infrastructure.html#form-submission>form submission</a><dt><a href=dom.html#concept-element-dom id=base-元素:concept-element-dom>DOM 接口</a>：<dd>使用 <code>HTMLBaseElement</code>。</dl>
+
+  <p><code id=base-元素:base-元素-2><a href=#base-元素>base</a></code> 元素允许作者指定用于 <span>解析 URL</span> 的
+  <a href=infrastructure.html#document-base-url id=base-元素:document-base-url-2>文档基 URL</a>，
+  以及用于 <span>跟随超链接</span> 的默认
+  <a href=browsers.html#browsing-context id=base-元素:browsing-context-2>浏览上下文</a> 的名称。
+  该元素不 <a href=dom.html#represents id=base-元素:represents>表示</a> 超出该信息的任何内容。</p>
+
+  <p>每个文档中不得包含多个 <code id=base-元素:base-元素-3><a href=#base-元素>base</a></code> 元素。</p>
+
+  <p><code id=base-元素:base-元素-4><a href=#base-元素>base</a></code> 元素有一个 <code id=base-元素:attr-base-href-2><a href=#attr-base-href>href</a></code> 属性，
+  或者 <code id=base-元素:attr-base-target-2><a href=#attr-base-target>target</a></code> 属性，或者两者都有。</p>
+
+  <p>如果指定了 <dfn id=attr-base-href><code>href</code></dfn> 内容属性，
+  必须包含一个 <a href=infrastructure.html#valid-url-potentially-surrounded-by-spaces id=base-元素:valid-url-potentially-surrounded-by-spaces>可能被空白包裹的合法的 URL</a>。</p>
+
+  <p>如果 <code id=base-元素:base-元素-5><a href=#base-元素>base</a></code> 元素有 <code id=base-元素:attr-base-href-3><a href=#attr-base-href>href</a></code> 属性，
+  则必须出现在树中的任何使用 <a href=https://url.spec.whatwg.org/#concept-url id=base-元素:url data-x-internal=url>URL</a> 的其他元素之前，
+  <code id=base-元素:the-html-element><a href=#the-html-element>html</a></code> 元素除外（其 <code id=base-元素:attr-html-manifest><a href=#attr-html-manifest>manifest</a></code> 属性不受
+  <code id=base-元素:base-元素-6><a href=#base-元素>base</a></code> 元素的影响)。</p>
+
+  
+
+  <p>如果指定了 <dfn id=attr-base-target><code>target</code></dfn> 属性，则必须包含一个
+  <a href=browsers.html#valid-browsing-context-name-or-keyword id=base-元素:valid-browsing-context-name-or-keyword>合法的浏览上下文名称或关键字</a>，
+  它指定了当 <code id=base-元素:document><a href=dom.html#document>Document</a></code> 中的 <a href=links.html#hyperlink id=base-元素:hyperlink-2>超链接</a> 和
+  <a href=forms.html#the-form-element id=base-元素:the-form-element>表单</a> 产生 <span>导航</span> 时默认使用哪个
+  <a href=browsers.html#browsing-context id=base-元素:browsing-context-3>浏览上下文</a>。</p>
+
+  <p><code id=base-元素:base-元素-7><a href=#base-元素>base</a></code> 元素如果有 <code id=base-元素:attr-base-target-3><a href=#attr-base-target>target</a></code> 属性，
+  必须出现在树中表示 <a href=links.html#hyperlink id=base-元素:hyperlink-3>超链接</a> 的其他元素之前。</p>
+
+  
+
+  <div class=example>
+
+   <p>在这个例子中，用一个 <code id=base-元素:base-元素-8><a href=#base-元素>base</a></code> 元素来设置 <a href=infrastructure.html#document-base-url id=base-元素:document-base-url-3>文档的 base URL</a>：</p>
+
+   <pre>&lt;!DOCTYPE html>
+&lt;html lang="en">
+    &lt;head>
+        &lt;title>This is an example for the &amp;lt;base&amp;gt; element&lt;/title>
+        &lt;base href="https://www.example.com/news/index.html">
+    &lt;/head>
+    &lt;body>
+        &lt;p>Visit the &lt;a href="archives.html">archives&lt;/a>.&lt;/p>
+    &lt;/body>
+&lt;/html></pre>
+
+   <p>上面例子中的链接地址是 "<code>https://www.example.com/news/archives.html</code>"。</p>
+
+  </div>
+
+
+
+
+
+  <h4 id=link-元素 data-dfn-type=element data-lt=link><span class=secno>4.2.4</span> <dfn><code>link</code></dfn> 元素<a href=#link-元素 class=self-link></a></h4>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/document-metadata/the-link-element/index.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/the-elements-of-html/document-metadata/the-link-element/index.zh.html></div>
+
+  <dl class=element><dt><a href=dom.html#concept-element-categories id=link-元素:concept-element-categories>类别</a>：<dd><a href=dom.html#metadata-content id=link-元素:metadata-content>元数据内容</a>。<dd>如果 <a href=#allowed-in-the-body id=link-元素:allowed-in-the-body>body 中允许</a> 该元素：<a href=dom.html#flow-content id=link-元素:flow-content>流式内容</a>。<dd>如果 <a href=#allowed-in-the-body id=link-元素:allowed-in-the-body-2>body 中允许</a> 该元素：<a href=dom.html#phrasing-content id=link-元素:phrasing-content>短语内容</a>。<dt><a href=dom.html#concept-element-contexts id=link-元素:concept-element-contexts>该元素可用的上下文</a>：<dd>期望 <a href=dom.html#metadata-content id=link-元素:metadata-content-2>元数据内容</a> 的地方。<dd>在 <code id=link-元素:the-head-element><a href=#the-head-element>head</a></code> 中的 <code id=link-元素:the-noscript-element><a href=scripting.html#the-noscript-element>noscript</a></code> 元素中。<dd>如果 <a href=#allowed-in-the-body id=link-元素:allowed-in-the-body-3>body 中允许</a> 该元素：
+   期望 <a href=dom.html#phrasing-content id=link-元素:phrasing-content-2>短语内容</a> 的地方。<dt><a href=dom.html#concept-element-content-model id=link-元素:concept-element-content-model>内容模型</a>：<dd><a href=dom.html#concept-content-nothing id=link-元素:concept-content-nothing>无</a>。<dt><a href=dom.html#concept-element-tag-omission id=link-元素:concept-element-tag-omission>text/html 中的标签省略</a>：<dd>哪个标签都不能省略。<dt><a href=dom.html#concept-element-attributes id=link-元素:concept-element-attributes>内容属性</a>：<dd><a href=dom.html#全局属性 id=link-元素:全局属性>全局属性</a><dd><code id=link-元素:attr-link-href><a href=#attr-link-href>href</a></code> — Address of the <a id=link-元素:hyperlink href=links.html#hyperlink>hyperlink</a><dd><code id=link-元素:attr-link-crossorigin><a href=#attr-link-crossorigin>crossorigin</a></code> — How the element handles crossorigin requests<dd><code id=link-元素:attr-link-rel><a href=#attr-link-rel>rel</a></code> — Relationship between the document containing the <a id=link-元素:hyperlink-2 href=links.html#hyperlink>hyperlink</a> and the destination resource<dd><code id=link-元素:attr-link-media><a href=#attr-link-media>media</a></code> — Applicable media<dd><code id=link-元素:attr-link-integrity><a href=#attr-link-integrity>integrity</a></code> — Integrity metadata used in <cite>Subresource Integrity</cite> checks <a href=references.html#refsSRI>[SRI]</a><dd><code id=link-元素:attr-link-hreflang><a href=#attr-link-hreflang>hreflang</a></code> — Language of the linked resource<dd><code id=link-元素:attr-link-type><a href=#attr-link-type>type</a></code> — Hint for the type of the referenced resource<dd><code id=link-元素:attr-link-referrerpolicy><a href=#attr-link-referrerpolicy>referrerpolicy</a></code> — <a id=link-元素:referrer-policy href=https://w3c.github.io/webappsec-referrer-policy/#referrer-policy data-x-internal=referrer-policy>Referrer policy</a> for <a href=https://fetch.spec.whatwg.org/#concept-fetch id=link-元素:concept-fetch data-x-internal=concept-fetch>fetches</a> initiated by the element<dd><code id=link-元素:attr-link-sizes><a href=#attr-link-sizes>sizes</a></code> — Sizes of the icons (for <code id=link-元素:attr-link-rel-2><a href=#attr-link-rel>rel</a></code>="<code id=link-元素:rel-icon><a href=links.html#rel-icon>icon</a></code>")<dd><code id=link-元素:attr-link-imagesrcset><a href=#attr-link-imagesrcset>imagesrcset</a></code> — Images to use in different situations, e.g., high-resolution displays, small monitors, etc. (for <code id=link-元素:attr-link-rel-3><a href=#attr-link-rel>rel</a></code>="<code id=link-元素:link-type-preload><a href=links.html#link-type-preload>preload</a></code>")<dd><code id=link-元素:attr-link-imagesizes><a href=#attr-link-imagesizes>imagesizes</a></code> — Image sizes for different page layouts (for <code id=link-元素:attr-link-rel-4><a href=#attr-link-rel>rel</a></code>="<code id=link-元素:link-type-preload-2><a href=links.html#link-type-preload>preload</a></code>")<dd><code id=link-元素:attr-link-as><a href=#attr-link-as>as</a></code> — <a href=https://fetch.spec.whatwg.org/#concept-potential-destination id=link-元素:concept-potential-destination data-x-internal=concept-potential-destination>Potential destination</a> for a preload request (for <code id=link-元素:attr-link-rel-5><a href=#attr-link-rel>rel</a></code>="<code id=link-元素:link-type-preload-3><a href=links.html#link-type-preload>preload</a></code>" and <code id=link-元素:attr-link-rel-6><a href=#attr-link-rel>rel</a></code>="<code id=link-元素:link-type-modulepreload><a href=links.html#link-type-modulepreload>modulepreload</a></code>")<dd><code id=link-元素:attr-link-color><a href=#attr-link-color>color</a></code> — Color to use when customizing a site's icon (for <code id=link-元素:attr-link-rel-7><a href=#attr-link-rel>rel</a></code>="<code>mask-icon</code>")<dd><code id=link-元素:attr-link-disabled><a href=#attr-link-disabled>disabled</a></code> — Whether the link is disabled<dd>此外，在该元素上 <code id=link-元素:attr-link-title><a href=#attr-link-title>title</a></code> 属性 <a href=#attr-link-title id=link-元素:attr-link-title-2>有特殊的语义</a>。 — Title of the link — <a id=link-元素:css-style-sheet-set-name href=https://drafts.csswg.org/cssom/#css-style-sheet-set-name data-x-internal=css-style-sheet-set-name>CSS style sheet set name</a><dt><a href=dom.html#concept-element-accessibility-considerations id=link-元素:concept-element-accessibility-considerations>可访问性相关</a>：<dd><a href=https://w3c.github.io/html-aria/#el-link>使用者版本</a>。<dd><a href=https://w3c.github.io/html-aam/#el-link>实现者版本</a>。<dt><a href=dom.html#concept-element-dom id=link-元素:concept-element-dom>DOM 接口</a>：<dd>Uses <code>HTMLLinkElement</code>。</dl>
+
+  <p><code id=link-元素:link-元素><a href=#link-元素>link</a></code> 元素允许作者把他们的文档链接到其他资源。</p>
+
+  <p>链接的地址由 <dfn id=attr-link-href><code>href</code></dfn> 属性给出。
+  如果存在 <code id=link-元素:attr-link-href-2><a href=#attr-link-href>href</a></code> 属性，那么它的值必须是一个
+  <a href=infrastructure.html#valid-non-empty-url-potentially-surrounded-by-spaces id=link-元素:valid-non-empty-url-potentially-surrounded-by-spaces>可能由空格包裹的合法的非空 URL</a>。
+  必须存在 <code id=link-元素:attr-link-href-3><a href=#attr-link-href>href</a></code> 或 <code id=link-元素:attr-link-imagesrcset-2><a href=#attr-link-imagesrcset>imagesrcset</a></code> 属性。</p>
+
+  
+
+  <p><dfn data-dfn-for=link id=attr-link-crossorigin data-dfn-type=element-attr><code>crossorigin</code></dfn>
+  属性是一个 <a href=infrastructure.html#cors-settings-attribute id=link-元素:cors-settings-attribute>CORS 设置属性</a>，用于 <a href=links.html#external-resource-link id=link-元素:external-resource-link>外部资源链接</a>。</p>
+
+  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/HTMLLinkElement/rel title="The HTMLLinkElement.rel property reflects the rel attribute. It is a DOMString containing a space-separated list of link types indicating the relationship between the resource represented by the <link> element and the current document.">HTMLLinkElement/rel</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>Yes</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>Yes</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>Yes</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div><p>链接指示的类型（关系）由 <dfn id=attr-link-rel><code>rel</code></dfn>
+  属性的值给出。该属性如果出现则它的值必须是一个
+  <a href=infrastructure.html#unordered-set-of-unique-space-separated-tokens id=link-元素:unordered-set-of-unique-space-separated-tokens>由空格分隔的唯一令牌的无序集合</a>。
+  <a href=links.html#linkTypes>允许的关键字及其含义</a> 定义在后续章节中。
+  </p>
+
+  
+
+  <p><code id=link-元素:link-元素-2><a href=#link-元素>link</a></code> 元素必须有一个 <code id=link-元素:attr-link-rel-8><a href=#attr-link-rel>rel</a></code>
+  属性或者 <code id=link-元素:names:-the-itemprop-attribute><a href=microdata.html#names:-the-itemprop-attribute>itemprop</a></code> 属性，但不能同时有这两个。</p>
+
+  <p>如果 <code id=link-元素:link-元素-3><a href=#link-元素>link</a></code> 元素有一个 <code id=link-元素:names:-the-itemprop-attribute-2><a href=microdata.html#names:-the-itemprop-attribute>itemprop</a></code> 属性，
+  或者有一个只包含 <a id=link-元素:body-ok href=links.html#body-ok>body-ok</a> 关键字的 <code id=link-元素:attr-link-rel-9><a href=#attr-link-rel>rel</a></code> 属性，
+  则称该元素 <dfn id=allowed-in-the-body>允许出现在 body 中</dfn>。
+  这意味着该元素可以用于期望 <a href=dom.html#phrasing-content id=link-元素:phrasing-content-3>短语内容</a> 的地方。</p>
+
+  <p class=note>如果用了 <code id=link-元素:attr-link-rel-10><a href=#attr-link-rel>rel</a></code> 属性，
+  该元素只能用于页面中的 <code id=link-元素:the-body-element><a href=sections.html#the-body-element>body</a></code> 部分。如果用了 <code id=link-元素:names:-the-itemprop-attribute-3><a href=microdata.html#names:-the-itemprop-attribute>itemprop</a></code> 属性，该元素既可以用于页面中的
+  <code id=link-元素:the-head-element-2><a href=#the-head-element>head</a></code> 元素也可以用于 <code id=link-元素:the-body-element-2><a href=sections.html#the-body-element>body</a></code> 元素，取决于元数据模型的约束。</p>
+
+  <p>使用 <code id=link-元素:link-元素-4><a href=#link-元素>link</a></code> 元素可以创建两类链接： <a href=links.html#external-resource-link id=link-元素:external-resource-link-2>外部资源链接</a> 和 <a href=links.html#hyperlink id=link-元素:hyperlink-3>超链接</a>。
+  <a href=links.html#linkTypes>链接类型一章</a> 定义了
+  特定的链接类型是外部资源还是超链接。
+  一个 <code id=link-元素:link-元素-5><a href=#link-元素>link</a></code> 元素可以创建多个链接（其中有些可能是
+  <a href=links.html#external-resource-link id=link-元素:external-resource-link-3>外部资源链接</a>，有些可能是
+  <a href=links.html#hyperlink id=link-元素:hyperlink-4>超链接</a>）；具体创建了哪种链接，创建了多少个取决于
+  <code id=link-元素:attr-link-rel-11><a href=#attr-link-rel>rel</a></code> 属性中给出的关键字。
+  用户代理必须逐链接而不是逐元素进行处理。</p>
+
+  <p class=note>为 <code id=link-元素:link-元素-6><a href=#link-元素>link</a></code> 元素创建的每个链接都会被单独处理。
+  例如，如果有两个有 <code>rel="stylesheet"</code> 的 <code id=link-元素:link-元素-7><a href=#link-元素>link</a></code> 元素，
+  它们每个都被当做独立的外部资源，每个都会独立地受自己的属性影响。
+  类似地，如果单个 <code id=link-元素:link-元素-8><a href=#link-元素>link</a></code> 元素有一个
+  值为 <code>next stylesheet</code>
+  <code id=link-元素:attr-link-rel-12><a href=#attr-link-rel>rel</a></code> 属性，
+  它（为 <code id=link-元素:link-type-next><a href=links.html#link-type-next>next</a></code> 关键字）创建了一个
+  <a href=links.html#hyperlink id=link-元素:hyperlink-5>超链接</a>，同时也
+  （为 <code id=link-元素:link-type-stylesheet><a href=links.html#link-type-stylesheet>stylesheet</a></code> 关键字）创建了一个
+  <a href=links.html#external-resource-link id=link-元素:external-resource-link-4>外部资源链接</a>，
+  它们分别受其他属性（例如 <code id=link-元素:attr-link-media-2><a href=#attr-link-media>media</a></code> 或
+  <code id=link-元素:attr-link-title-3><a href=#attr-link-title>title</a></code>）的影响。</p>
+
+  <div class=example>
+   <p>例如下面的 <code id=link-元素:link-元素-9><a href=#link-元素>link</a></code> 元素创建了两个 <a href=links.html#hyperlink id=link-元素:hyperlink-6>超链接</a>
+   （指向同一页面）：</p>
+
+   <pre><code class=html>&lt;link rel="author license" href="/about"></code></pre>
+
+   <p>该元素创建的这两个链接，一个的语义是目标页面具有关于当前页面作者的信息，
+   另一个的语义是目标页面具有提供当前页面的授权信息。</p>
+  </div>
+
+  <p class=note>
+  <code id=link-元素:link-元素-10><a href=#link-元素>link</a></code> 元素和它的 <code id=link-元素:attr-link-rel-13><a href=#attr-link-rel>rel</a></code> 属性创建的
+  <a href=links.html#hyperlink id=link-元素:hyperlink-7>超链接</a> 适用于整个文档。
+  这区别于 <code id=link-元素:the-a-element><a href=text-level-semantics.html#the-a-element>a</a></code> 和 <code id=link-元素:the-area-element><a href=image-maps.html#the-area-element>area</a></code> 元素的
+  <code id=link-元素:attr-hyperlink-rel><a href=links.html#attr-hyperlink-rel>rel</a></code> 属性，它们指定了链接的类型，
+  链接的上下文由链接在文档中的位置给出。</p>
+
+  <p><a href=links.html#external-resource-link id=link-元素:external-resource-link-5>外部资源链接</a> 的确切行为取决于由相关的
+  <a href=links.html#linkTypes>链接类型</a> 定义的具体关系。</p>
+
+  <p><dfn data-dfn-for=link id=attr-link-media data-dfn-type=element-attr><code>media</code></dfn> 属性指定了该资源适用哪种媒体。
+  它的值必须是 <a href=infrastructure.html#valid-media-query-list id=link-元素:valid-media-query-list>合法的媒体查询列表</a>。</p>
+
+  <p><dfn id=attr-link-nonce><code>nonce</code></dfn> 属性表示一个加密随机数
+  （"一次性数字"）用于 <cite>Content Security Policy</cite> 来确定
+  <a href=links.html#external-resource-link id=link-元素:external-resource-link-6>该链接指定的外部资源</a>
+  是否会被加载和应用于该文档。它的值是文本。 <a href=references.html#refsCSP>[CSP]</a></p>
+
+  <p><dfn data-dfn-for=link id=attr-link-integrity data-dfn-type=element-attr><code>integrity</code></dfn>
+  属性表示该元素负责的请求的 <a href=https://fetch.spec.whatwg.org/#concept-request-integrity-metadata id=link-元素:concept-request-integrity-metadata data-x-internal=concept-request-integrity-metadata>integrity 元信息</a>。
+  值为文本。该属性只能用于 <code id=link-元素:attr-link-rel-14><a href=#attr-link-rel>rel</a></code> 属性包含
+  <code id=link-元素:link-type-stylesheet-2><a href=links.html#link-type-stylesheet>stylesheet</a></code>，
+  <code id=link-元素:link-type-preload-4><a href=links.html#link-type-preload>preload</a></code> 或
+  <code id=link-元素:link-type-modulepreload-2><a href=links.html#link-type-modulepreload>modulepreload</a></code> 关键字的 <code id=link-元素:link-元素-11><a href=#link-元素>link</a></code> 元素。<a href=references.html#refsSRI>[SRI]</a></p>
+
+  <p><code id=link-元素:link-元素-12><a href=#link-元素>link</a></code> 元素上的 <dfn id=attr-link-hreflang><code>hreflang</code></dfn>
+  属性与 <a href=links.html#attr-hyperlink-hreflang id=link-元素:attr-hyperlink-hreflang><code>a</code> 元素上的 <code>hreflang</code>
+  属性</a> 具有相同的语义。</p>
+
+  <p><dfn data-dfn-for=link id=attr-link-type data-dfn-type=element-attr><code>type</code></dfn> 属性给出了被链接资源的
+  <a href=https://mimesniff.spec.whatwg.org/#mime-type id=link-元素:mime-type data-x-internal=mime-type>MIME 类型</a>。它纯属建议性的。它的值必须是
+  <a href=https://mimesniff.spec.whatwg.org/#valid-mime-type id=link-元素:valid-mime-type-string data-x-internal=valid-mime-type-string>合法的 MIME 类型</a>。</p>
+
+  <p>对于 <a href=links.html#external-resource-link id=link-元素:external-resource-link-7>外部资源链接</a>，
+  <code id=link-元素:attr-link-type-2><a href=#attr-link-type>type</a></code> 属性用于提示用户代理避免获取它们不支持的资源。</p>
+
+  <p><dfn data-dfn-for=link id=attr-link-referrerpolicy data-dfn-type=element-attr><code>referrerpolicy</code></dfn> 属性是一个
+  <a href=infrastructure.html#referrer-policy-attribute id=link-元素:referrer-policy-attribute>引荐策略属性</a>。
+  它用于 <a href=links.html#external-resource-link id=link-元素:external-resource-link-8>外部资源链接</a>，
+  帮助设置 <span>获取和处理</span> 该外部资源时的
+  <a href=https://w3c.github.io/webappsec-referrer-policy/#referrer-policy id=link-元素:referrer-policy-2 data-x-internal=referrer-policy>引荐策略</a>。 <a href=references.html#refsREFERRERPOLICY>[REFERRERPOLICY]</a>。</p>
+
+  <p><dfn data-dfn-for=link id=attr-link-title data-dfn-type=element-attr><code>title</code></dfn> 属性给出了链接的标题。
+  有一个特例中，它是纯建议性的。它的值是文本。
+  特例是 <a href=https://dom.spec.whatwg.org/#in-a-document-tree id=link-元素:in-a-document-tree data-x-internal=in-a-document-tree>在文档树</a> 中的样式表链接，
+  对它而言 <code id=link-元素:attr-link-title-4><a href=#attr-link-title>title</a></code> 属性定义了
+  <a href=https://drafts.csswg.org/cssom/#css-style-sheet-set id=link-元素:css-style-sheet-set data-x-internal=css-style-sheet-set>CSS 样式表集合</a>。</p>
+
+  <p class=note><code id=link-元素:link-元素-13><a href=#link-元素>link</a></code> 元素上的 <code id=link-元素:attr-link-title-5><a href=#attr-link-title>title</a></code> 属性
+  与多数其他元素的全局 <code id=link-元素:attr-title><a href=dom.html#attr-title>title</a></code> 属性不同，
+  没有标题的链接不继承父元素的标题：它只是没有标题。</p>
+
+  <hr>
+
+  <p><dfn data-dfn-for=link id=attr-link-imagesrcset data-dfn-type=element-attr><code>imagesrcset</code></dfn>
+  属性可以是一个 <a href=images.html#srcset-attribute id=link-元素:srcset-attribute>srcset 属性</a>。</p>
+
+  <p><code id=link-元素:attr-link-imagesrcset-3><a href=#attr-link-imagesrcset>imagesrcset</a></code> 和 <code id=link-元素:attr-link-href-4><a href=#attr-link-href>href</a></code> 属性（如果没有使用 <a href=images.html#width-descriptor id=link-元素:width-descriptor>宽度描述符</a>）
+  一起给 <span>source set</span> 提供 <span>图片源</span>。</p>
+
+  <p>如果 <code id=link-元素:attr-link-imagesrcset-4><a href=#attr-link-imagesrcset>imagesrcset</a></code> 属性存在且有任一个
+  <a href=images.html#image-candidate-string id=link-元素:image-candidate-string>图片候选字符串</a> 使用了 <a href=images.html#width-descriptor id=link-元素:width-descriptor-2>宽度描述符</a>，
+  <dfn data-dfn-for=link id=attr-link-imagesizes data-dfn-type=element-attr><code>imagesizes</code></dfn> 属性就必须存在，且是一个
+  <a href=images.html#sizes-attribute id=link-元素:sizes-attribute>尺寸属性</a>。<code id=link-元素:attr-link-imagesizes-2><a href=#attr-link-imagesizes>imagesizes</a></code> 属性给
+  <span>source set</span> 提供 <span>源尺寸</span>。</p>
+
+  <p><code id=link-元素:attr-link-imagesrcset-5><a href=#attr-link-imagesrcset>imagesrcset</a></code> 和 <code id=link-元素:attr-link-imagesizes-3><a href=#attr-link-imagesizes>imagesizes</a></code> 属性只能用于
+  <code id=link-元素:attr-link-rel-15><a href=#attr-link-rel>rel</a></code> 属性指定了 <code id=link-元素:link-type-preload-5><a href=links.html#link-type-preload>preload</a></code> 关键字，且
+  <code id=link-元素:attr-link-as-2><a href=#attr-link-as>as</a></code> 属性在处于 "<code>image</code>" 状态的
+  <code id=link-元素:link-元素-14><a href=#link-元素>link</a></code> 元素上。
+  </p>
+
+  <div class=example>
+   <p>这些属性运行预加载适当的资源，
+   后续 <code id=link-元素:the-img-element><a href=embedded-content.html#the-img-element>img</a></code> 被使用
+     <code id=link-元素:attr-img-srcset><a href=embedded-content.html#attr-img-srcset>srcset</a></code> 和 <code id=link-元素:attr-img-sizes><a href=embedded-content.html#attr-img-sizes>sizes</a></code> 属性：</p>
+
+   <pre><code class=html>&lt;link rel="preload" as="image"
+      imagesrcset="wolf_400px.jpg 400w, wolf_800px.jpg 800w, wolf_1600px.jpg 1600w"
+      imagesizes="50vw">
+
+&lt;!-- ... later, or perhaps inserted dynamically ... -->
+&lt;img src="wolf.jpg" alt="A rad wolf"
+     srcset="wolf_400px.jpg 400w, wolf_800px.jpg 800w, wolf_1600px.jpg 1600w"
+     sizes="50vw"></code></pre>
+
+     <p>注意我们忽略了 <code id=link-元素:attr-link-href-5><a href=#attr-link-href>href</a></code> 属性，因为它会在不支持
+     <code id=link-元素:attr-link-imagesrcset-6><a href=#attr-link-imagesrcset>imagesrcset</a></code> 的浏览器中起作用，可能会预加载错误的图片。</p>
+  </div>
+
+  <div class=example>
+   <p><code id=link-元素:attr-link-imagesrcset-7><a href=#attr-link-imagesrcset>imagesrcset</a></code> 属性可以和
+   <code id=link-元素:attr-link-media-3><a href=#attr-link-media>media</a></code> 属性一起使用来预加载适当的资源
+   <code id=link-元素:the-picture-element><a href=embedded-content.html#the-picture-element>picture</a></code> 元素选择的资源，来实现 <a href=images.html#art-direction id=link-元素:art-direction>美术设计</a>：</p>
+
+   <pre><code class=html>&lt;link rel="preload" as="image"
+      imagesrcset="dog-cropped-1x.jpg, dog-cropped-2x.jpg 2x"
+      media="(max-width: 800px)">
+&lt;link rel="preload" as="image"
+      imagesrcset="dog-wide-1x.jpg, dog-wide-2x.jpg 2x"
+      media="(min-width: 801px)">
+
+&lt;!-- ... later, or perhaps inserted dynamically ... -->
+&lt;picture>
+  &lt;source srcset="dog-cropped-1x.jpg, dog-cropped-2x.jpg 2x"
+          media="(max-width: 800px)">
+  &lt;img src="dog-wide-1x.jpg" srcset="dog-wide-2x.jpg 2x"
+       alt="An awesome dog">
+&lt;/picture></code></pre>
+  </div>
+
+  <hr>
+
+  <p><dfn data-dfn-for=link id=attr-link-sizes data-dfn-type=element-attr><code>sizes</code></dfn> 属性给出了
+  视觉媒体的图标大小。它的值（如果存在的话）只是建议性的。
+  
+  如果指定了，这个属性的值必须是 <a href=https://infra.spec.whatwg.org/#ascii-case-insensitive id=link-元素:ascii-case-insensitive data-x-internal=ascii-case-insensitive>ASCII 大小写不敏感</a> 的
+  <a href=infrastructure.html#unordered-set-of-unique-space-separated-tokens id=link-元素:unordered-set-of-unique-space-separated-tokens-2>空格分隔的无序不重复令牌集合</a>。
+  每个值必须 <a href=https://infra.spec.whatwg.org/#ascii-case-insensitive id=link-元素:ascii-case-insensitive-2 data-x-internal=ascii-case-insensitive>ASCII 大小写不敏感</a> 地匹配字符串
+  "<code id=link-元素:attr-link-sizes-any><a href=links.html#attr-link-sizes-any>any</a></code>"，或包含两个
+  <a href=infrastructure.html#valid-non-negative-integer id=link-元素:valid-non-negative-integer>合法的非负整数</a> 且不得有前导 U+0030 DIGIT ZERO (0) 字符，
+  并以单个 U+0078 LATIN SMALL LETTER X 或 U+0058 LATIN CAPITAL LETTER X 字符分隔。
+  该属性只能用于 <code id=link-元素:attr-link-rel-16><a href=#attr-link-rel>rel</a></code> 属性指定了
+  <code id=link-元素:rel-icon-2><a href=links.html#rel-icon>icon</a></code> 关键字或 <code>apple-touch-icon</code> 关键字的 <code id=link-元素:link-元素-15><a href=#link-元素>link</a></code> 元素。
+  </p>
+
+  <p class=note><code>apple-touch-icon</code> 关键字是一个已注册的 <a href=links.html#concept-rel-extensions id=link-元素:concept-rel-extensions>链接类型的预定义集合扩展</a>，但不要求用户代理支持它。</p>
+
+  <hr>
+
+  <p><dfn data-dfn-for=link id=attr-link-as data-dfn-type=element-attr><code>as</code></dfn> 属性为
+  <code id=link-元素:attr-link-href-6><a href=#attr-link-href>href</a></code> 指定的资源的预加载请求指定了
+  <a href=https://fetch.spec.whatwg.org/#concept-potential-destination id=link-元素:concept-potential-destination-2 data-x-internal=concept-potential-destination>可能的地址</a>。
+  这是一个 <a href=infrastructure.html#enumerated-attribute id=link-元素:enumerated-attribute>枚举属性</a>。
+  每个 <a href=https://fetch.spec.whatwg.org/#concept-potential-destination id=link-元素:concept-potential-destination-3 data-x-internal=concept-potential-destination>可能的地址</a> 是一个关键字，
+  映射为一个同名的状态。该属性必须指定在
+  <code id=link-元素:attr-link-rel-17><a href=#attr-link-rel>rel</a></code> 属性包含 <code id=link-元素:link-type-preload-6><a href=links.html#link-type-preload>preload</a></code> 关键字的
+  <code id=link-元素:link-元素-16><a href=#link-元素>link</a></code> 元素上。也可以指定在
+  <code id=link-元素:attr-link-rel-18><a href=#attr-link-rel>rel</a></code> 属性包含 <code id=link-元素:link-type-modulepreload-3><a href=links.html#link-type-modulepreload>modulepreload</a></code> 关键字的
+  <code id=link-元素:link-元素-17><a href=#link-元素>link</a></code> 元素上；这种情况下它的值必须是
+  <a href=https://fetch.spec.whatwg.org/#request-destination-script-like id=link-元素:concept-script-like-destination data-x-internal=concept-script-like-destination>script-like 地址</a>。
+  其他 <code id=link-元素:link-元素-18><a href=#link-元素>link</a></code> 元素不能使用这个属性。</p>
+
+   
+
+  <p class=note>该属性没有 <i id=link-元素:missing-value-default><a href=infrastructure.html#missing-value-default>缺失值默认</a></i> 或
+  <i id=link-元素:invalid-value-default><a href=infrastructure.html#invalid-value-default>非法值默认</a></i>，意味着非法值或缺失值不映射到任何状态。
+  这在处理模型中有所解释。</p>
+
+  <hr>
+
+  <p><dfn data-dfn-for=link id=attr-link-color data-dfn-type=element-attr><code>color</code></dfn> 属性用于 <code>mask-icon</code> 链接类型。该属性不得指定在
+  <code id=link-元素:attr-link-rel-19><a href=#attr-link-rel>rel</a></code> 属性不包含 <code>mask-icon</code> 关键字的
+  <code id=link-元素:link-元素-19><a href=#link-元素>link</a></code> 元素上。它的值必须是一个匹配 CSS <a id=link-元素:color href=https://drafts.csswg.org/css-color/#typedef-color data-x-internal=color>&lt;color></a> 生成式的字符串，
+  用于定义一个用户代理在用户固定一个网站时用来自定义图标展示的建议颜色。</p>
+
+  <p class=note>本规范在 <code id=link-元素:attr-link-color-2><a href=#attr-link-color>color</a></code> 属性上对用户代理没有任何要求。</p>
+
+  <p class=note><code>mask-icon</code> 关键字是一个已注册的 <a href=links.html#concept-rel-extensions id=link-元素:concept-rel-extensions-2>链接类型的预定义集合扩展</a>，但不要求用户代理支持。</p>
+
+  <hr>
+
+  <p><code id=link-元素:link-元素-20><a href=#link-元素>link</a></code> 元素有一个关联的 <dfn id=explicitly-enabled>explicitly enabled</dfn> 布尔。它默认为假。
+
+  <p><dfn data-dfn-for=link id=attr-link-disabled data-dfn-type=element-attr><code>disabled</code></dfn>
+  属性是一个 <a href=infrastructure.html#boolean-attribute id=link-元素:boolean-attribute>布尔属性</a>，用在 <code id=link-元素:link-type-stylesheet-3><a href=links.html#link-type-stylesheet>stylesheet</a></code> 链接类型上。该属性只能用在
+  <code id=link-元素:attr-link-rel-20><a href=#attr-link-rel>rel</a></code> 属性包含 <code id=link-元素:link-type-stylesheet-4><a href=links.html#link-type-stylesheet>stylesheet</a></code>
+  关键字的 <code id=link-元素:link-元素-21><a href=#link-元素>link</a></code> 元素上。</p>
+
+  <p>只要 <code id=link-元素:attr-link-disabled-2><a href=#attr-link-disabled>disabled</a></code> 属性被移除，就设置
+  <code id=link-元素:link-元素-22><a href=#link-元素>link</a></code> 元素的 <a href=#explicitly-enabled id=link-元素:explicitly-enabled>explicitly enabled</a> 属性为真。</p>
+
+  <div class=example>
+   <p>动态地移除 <code id=link-元素:attr-link-disabled-3><a href=#attr-link-disabled>disabled</a></code> 属性，例如用
+   <code>document.querySelector("link").removeAttribute("disabled")</code>，会去获取并应用样式：</p>
+
+   <pre><code class=html>&lt;link disabled rel="alternate stylesheet" href="css/pooh"></code></pre>
+  </div>
+
+  
+
+
+  <h5 id=为用户提供一种跟随使用-link-元素创建的超链接的方式><span class=secno>4.2.4.1</span> 为用户提供一种跟随使用 <code id=为用户提供一种跟随使用-link-元素创建的超链接的方式:link-元素><a href=#link-元素>link</a></code> 元素创建的超链接的方式<a href=#为用户提供一种跟随使用-link-元素创建的超链接的方式 class=self-link></a></h5>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/document-metadata/the-link-element/providing-users-with-a-means-to-follow-hyperlinks-created-using-the-link-element.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/the-elements-of-html/document-metadata/the-link-element/providing-users-with-a-means-to-follow-hyperlinks-created-using-the-link-element.zh.html></div>
+
+  <p id=linkui>交互式的用户代理可能会在用户界面里为用户提供一种 <span>跟随</span> 使用 <code id=为用户提供一种跟随使用-link-元素创建的超链接的方式:link-元素-2><a href=#link-元素>link</a></code> 元素创建的超链接的方式。
+  本规范没有定义具体的界面，但是它可以对文档中每个由
+  <code id=为用户提供一种跟随使用-link-元素创建的超链接的方式:link-元素-3><a href=#link-元素>link</a></code> 元素创建的 <a id=为用户提供一种跟随使用-link-元素创建的超链接的方式:hyperlink href=links.html#hyperlink>hyperlink</a>，
+  包含某种形式的（可能会被简化）以下信息（从元素的属性获取，下文有相应定义）：</p>
+
+  <ul><li>本文档和该资源（由 <code id=为用户提供一种跟随使用-link-元素创建的超链接的方式:attr-link-rel><a href=#attr-link-rel>rel</a></code> 属性给出）之间的关系。<li>该资源的标题（由 <code id=为用户提供一种跟随使用-link-元素创建的超链接的方式:attr-link-title><a href=#attr-link-title>title</a></code> 属性给出）。<li>该资源的地址（由 <code id=为用户提供一种跟随使用-link-元素创建的超链接的方式:attr-link-href><a href=#attr-link-href>href</a></code> 属性给出）。<li>该资源的语言（由 <code id=为用户提供一种跟随使用-link-元素创建的超链接的方式:attr-link-hreflang><a href=#attr-link-hreflang>hreflang</a></code> 属性给出）。<li>该资源的最佳媒体（由 <code id=为用户提供一种跟随使用-link-元素创建的超链接的方式:attr-link-media><a href=#attr-link-media>media</a></code> 属性给出）。</ul>
+
+  <p>用户代理也可以包含其他信息，比如资源类型（由 <code id=为用户提供一种跟随使用-link-元素创建的超链接的方式:attr-link-type><a href=#attr-link-type>type</a></code> 属性给出）。</p>
+
+  <p>创建 <a href=links.html#hyperlink id=为用户提供一种跟随使用-link-元素创建的超链接的方式:hyperlink-2>超链接</a> 的 <code id=为用户提供一种跟随使用-link-元素创建的超链接的方式:link-元素-4><a href=#link-元素>link</a></code> 元素的
+  <a href=https://dom.spec.whatwg.org/#eventtarget-activation-behavior id=为用户提供一种跟随使用-link-元素创建的超链接的方式:activation-behaviour data-x-internal=activation-behaviour>激活行为</a> 就是如下步骤：</p>
+
+  <ol><li><p>如果 <code id=为用户提供一种跟随使用-link-元素创建的超链接的方式:link-元素-5><a href=#link-元素>link</a></code> 元素的 <a href=https://dom.spec.whatwg.org/#concept-node-document id=为用户提供一种跟随使用-link-元素创建的超链接的方式:node-document data-x-internal=node-document>节点文档</a>
+   没有 <a href=browsers.html#fully-active id=为用户提供一种跟随使用-link-元素创建的超链接的方式:fully-active>完全激活</a>，则中止这些步骤。<li><p><span>跟随</span> 由 <code id=为用户提供一种跟随使用-link-元素创建的超链接的方式:link-元素-6><a href=#link-元素>link</a></code> 元素创建的超链接。</ol>
+
+
+
+
+
+
+  <h4 id=the-meta-element data-dfn-type=element data-lt=meta><span class=secno>4.2.5</span> <dfn id=meta><code>meta</code></dfn> 元素<a href=#the-meta-element class=self-link></a></h4><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta title="The HTML <meta> element represents metadata that cannot be represented by other HTML meta-related elements, like <base>, <link>, <script>, <style> or <title>.">Element/meta</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>Yes</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/document-metadata/the-meta-element/index.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/the-elements-of-html/document-metadata/the-meta-element/index.zh.html></div>
+
+  <dl class=element><dt><a href=dom.html#concept-element-categories id=the-meta-element:concept-element-categories>类别</a>：<dd><a href=dom.html#metadata-content id=the-meta-element:metadata-content>元数据内容</a>。<dd>如果有 <code id=the-meta-element:names:-the-itemprop-attribute><a href=microdata.html#names:-the-itemprop-attribute>itemprop</a></code> 属性： <a href=dom.html#flow-content id=the-meta-element:flow-content>流式内容</a>。<dd>如果有 <code id=the-meta-element:names:-the-itemprop-attribute-2><a href=microdata.html#names:-the-itemprop-attribute>itemprop</a></code> 属性： <a href=dom.html#phrasing-content id=the-meta-element:phrasing-content>短语内容</a>。<dt><a href=dom.html#concept-element-contexts id=the-meta-element:concept-element-contexts>该元素可用的上下文</a>：<dd>如果有 <code id=the-meta-element:attr-meta-charset><a href=#attr-meta-charset>charset</a></code> 属性，或者元素的 <code id=the-meta-element:attr-meta-http-equiv><a href=#attr-meta-http-equiv>http-equiv</a></code> 属性处于 <a href=#attr-meta-http-equiv-content-type id=the-meta-element:attr-meta-http-equiv-content-type>编码声明状态</a>：在 <code id=the-meta-element:the-head-element><a href=#the-head-element>head</a></code> 元素中。<dd>如果有 <code id=the-meta-element:attr-meta-http-equiv-2><a href=#attr-meta-http-equiv>http-equiv</a></code> 属性但不在 <a href=#attr-meta-http-equiv-content-type id=the-meta-element:attr-meta-http-equiv-content-type-2>编码声明状态</a>：在 <code id=the-meta-element:the-head-element-2><a href=#the-head-element>head</a></code> 元素中。<dd>如果有 <code id=the-meta-element:attr-meta-http-equiv-3><a href=#attr-meta-http-equiv>http-equiv</a></code> 属性但不在 <a href=#attr-meta-http-equiv-content-type id=the-meta-element:attr-meta-http-equiv-content-type-3>编码声明状态</a>：在 <code id=the-meta-element:the-head-element-3><a href=#the-head-element>head</a></code> 元素的 <code id=the-meta-element:the-noscript-element><a href=scripting.html#the-noscript-element>noscript</a></code> 子元素中。<dd>如果有 <code id=the-meta-element:attr-meta-name><a href=#attr-meta-name>name</a></code> 属性：期望 <a href=dom.html#metadata-content id=the-meta-element:metadata-content-2>元数据内容</a> 的地方。<dd>如果有 <code id=the-meta-element:names:-the-itemprop-attribute-3><a href=microdata.html#names:-the-itemprop-attribute>itemprop</a></code> 属性： 期望<a href=dom.html#metadata-content id=the-meta-element:metadata-content-3>元数据内容</a> 的地方。<dd>如果有 <code id=the-meta-element:names:-the-itemprop-attribute-4><a href=microdata.html#names:-the-itemprop-attribute>itemprop</a></code> 属性： 期望<a href=dom.html#phrasing-content id=the-meta-element:phrasing-content-2>短语内容</a> 的地方。<dt><a href=dom.html#concept-element-content-model id=the-meta-element:concept-element-content-model>内容模型</a>：<dd><a href=dom.html#concept-content-nothing id=the-meta-element:concept-content-nothing>无</a>。<dt><a href=dom.html#concept-element-tag-omission id=the-meta-element:concept-element-tag-omission>text/html 中的标签省略</a>：<dd>哪个标签都不能省略。<dt><a href=dom.html#concept-element-attributes id=the-meta-element:concept-element-attributes>内容属性</a>：<dd><a href=dom.html#全局属性 id=the-meta-element:全局属性>全局属性</a><dd><code id=the-meta-element:attr-meta-name-2><a href=#attr-meta-name>name</a></code> — Metadata name<dd><code id=the-meta-element:attr-meta-http-equiv-4><a href=#attr-meta-http-equiv>http-equiv</a></code> — Pragma directive<dd><code id=the-meta-element:attr-meta-content><a href=#attr-meta-content>content</a></code> — Value of the element<dd><code id=the-meta-element:attr-meta-charset-2><a href=#attr-meta-charset>charset</a></code> — <a href=#character-encoding-declaration id=the-meta-element:character-encoding-declaration>Character encoding declaration</a><dt><a href=dom.html#concept-element-dom id=the-meta-element:concept-element-dom>DOM 接口</a>：<dd>使用 <code>HTMLMetaElement</code>。</dl>
+
+  <p><code id=the-meta-element:the-meta-element><a href=#the-meta-element>meta</a></code> 元素 <a href=dom.html#represents id=the-meta-element:represents>表示</a> 很多不能用
+  <code id=the-meta-element:the-title-element><a href=#the-title-element>title</a></code>，<code id=the-meta-element:base-元素><a href=#base-元素>base</a></code>，<code id=the-meta-element:link-元素><a href=#link-元素>link</a></code>，<code id=the-meta-element:the-style-element><a href=#the-style-element>style</a></code>，
+  和 <code id=the-meta-element:the-script-element><a href=scripting.html#the-script-element>script</a></code> 元素表达的元数据。</p>
+
+  <p><code id=the-meta-element:the-meta-element-2><a href=#the-meta-element>meta</a></code> 元素可以通过 <code id=the-meta-element:attr-meta-name-3><a href=#attr-meta-name>name</a></code> 属性表示文档级别的元数据，
+  通过 <code id=the-meta-element:attr-meta-http-equiv-5><a href=#attr-meta-http-equiv>http-equiv</a></code> 属性表示编译指示，
+  通过 <code id=the-meta-element:attr-meta-charset-3><a href=#attr-meta-charset>charset</a></code> 属性表示 HTML 文档序列化为字符串时（例如用于网络传输或者磁盘存储时）
+  文件的 <a href=#character-encoding-declaration id=the-meta-element:character-encoding-declaration-2>字符编码声明</a>。</p>
+
+  <p>必须指定这些属性中的一个：<code id=the-meta-element:attr-meta-name-4><a href=#attr-meta-name>name</a></code>，<code id=the-meta-element:attr-meta-http-equiv-6><a href=#attr-meta-http-equiv>http-equiv</a></code>，<code id=the-meta-element:attr-meta-charset-4><a href=#attr-meta-charset>charset</a></code>，
+  和 <code id=the-meta-element:names:-the-itemprop-attribute-5><a href=microdata.html#names:-the-itemprop-attribute>itemprop</a></code>。</p>
+
+  <p>如果指定了 <code id=the-meta-element:attr-meta-name-5><a href=#attr-meta-name>name</a></code>，<code id=the-meta-element:attr-meta-http-equiv-7><a href=#attr-meta-http-equiv>http-equiv</a></code>，
+  或 <code id=the-meta-element:names:-the-itemprop-attribute-6><a href=microdata.html#names:-the-itemprop-attribute>itemprop</a></code>，那么必须也指定 <code id=the-meta-element:attr-meta-content-2><a href=#attr-meta-content>content</a></code> 属性。
+  否则必须忽略它。</p>
+
+  <p><dfn data-dfn-for=meta id=attr-meta-charset data-dfn-type=element-attr><code>charset</code></dfn> 属性指定了文档使用的字符编码。
+  这是一个 <a href=#character-encoding-declaration id=the-meta-element:character-encoding-declaration-3>字符编码声明</a>。如果在
+  <a href=https://dom.spec.whatwg.org/#xml-document id=the-meta-element:xml-documents data-x-internal=xml-documents>XML 文档</a> 上指定了该属性，其值必须
+  <a href=https://infra.spec.whatwg.org/#ascii-case-insensitive id=the-meta-element:ascii-case-insensitive data-x-internal=ascii-case-insensitive>ASCII 大小写不敏感地</a> 匹配 "<code>utf-8</code>"
+  （且该文档必须使用 <span>UTF-8</span> 作为它的编码）。</p>
+
+  <p class=note><code id=the-meta-element:the-meta-element-3><a href=#the-meta-element>meta</a></code> 元素上 <code id=the-meta-element:attr-meta-charset-5><a href=#attr-meta-charset>charset</a></code> 属性
+  对 XML 文档不起作用，允许它只是为了方便与 XML 之间进行迁移。</p>
+
+  <p>每个文档必须存在不少于一个有 <code id=the-meta-element:attr-meta-charset-6><a href=#attr-meta-charset>charset</a></code> 属性的 <code id=the-meta-element:the-meta-element-4><a href=#the-meta-element>meta</a></code> 元素。</p>
+
+  <p><dfn data-dfn-for=meta id=attr-meta-content data-dfn-type=element-attr><code>content</code></dfn> 属性给出了文档元数据或编译指令的值。
+  允许的值取决于确切的上下文，见本规范的后续章节的描述。</p>
+
+  <p>如果 <code id=the-meta-element:the-meta-element-5><a href=#the-meta-element>meta</a></code> 元素有一个 <dfn data-dfn-for=meta id=attr-meta-name data-dfn-type=element-attr><code>name</code></dfn> 属性，
+  它设置了文档元数据。文档元数据以 name-value 对表达，<code id=the-meta-element:the-meta-element-6><a href=#the-meta-element>meta</a></code> 元素的
+  <code id=the-meta-element:attr-meta-name-6><a href=#attr-meta-name>name</a></code> 属性给出了名字，同一元素的 <code id=the-meta-element:attr-meta-content-3><a href=#attr-meta-content>content</a></code> 属性
+  给出了值。名字指定了要设置哪方面的元数据；合法的名字连同它的值的含义在后续章节描述。
+  如果 <code id=the-meta-element:the-meta-element-7><a href=#the-meta-element>meta</a></code> 元素没有 <code id=the-meta-element:attr-meta-content-4><a href=#attr-meta-content>content</a></code> 属性，那么 name-value 对的值的部分是空字符串。</p>
+
+  
+
+
+
+  <h5 id=标准元数据名><span class=secno>4.2.5.1</span> 标准元数据名<a href=#标准元数据名 class=self-link></a></h5>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/document-metadata/the-meta-element/standard-metadata-names.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/the-elements-of-html/document-metadata/the-meta-element/standard-metadata-names.zh.html></div>
+
+  <p>本规范为 <code id=标准元数据名:the-meta-element><a href=#the-meta-element>meta</a></code> 元素的 <code id=标准元数据名:attr-meta-name><a href=#attr-meta-name>name</a></code> 属性定义了一些名字。</p>
+
+  <p>名字是大小写不敏感的<span class=impl>，必须以 <a href=https://infra.spec.whatwg.org/#ascii-case-insensitive id=标准元数据名:ascii-case-insensitive data-x-internal=ascii-case-insensitive>ASCII 大小写不敏感</a> 的方式进行比较</span>。</p>
+
+  <dl><dt><dfn id=meta-application-name><code>application-name</code></dfn><dd>
+
+    <p>值必须是一个简短的格式自由的字符串，给出本页面表示的 Web 应用的名字。
+    如果该页面不是一个 Web 应用，不得使用 <code id=标准元数据名:meta-application-name><a href=#meta-application-name>application-name</a></code> 元数据名。
+    必须使用 <code id=标准元数据名:attr-lang><a href=dom.html#attr-lang>lang</a></code> 属性来指定该 Web 应用的每个名字的语言。</p>
+
+    <p>给定一个 <span>language</span>，一个文档中不得有多个
+    <code id=标准元数据名:attr-meta-name-2><a href=#attr-meta-name>name</a></code> 属性设为 <code id=标准元数据名:meta-application-name-2><a href=#meta-application-name>application-name</a></code>
+    的 <code id=标准元数据名:the-meta-element-2><a href=#the-meta-element>meta</a></code> 元素。</p>
+
+    
+
+   <dt><dfn id=meta-author><code>author</code></dfn><dd><p>值必须是格式自由的字符串，给出了本页面的作者的名字。<dt><dfn id=meta-description><code>description</code></dfn><dd><p>值必须是描述本页面的格式自由的字符串，必须适合用于页面字典，例如搜索引擎。
+   每个文档中不得有多个 <code id=标准元数据名:the-meta-element-3><a href=#the-meta-element>meta</a></code> 元素的 <code id=标准元数据名:attr-meta-name-3><a href=#attr-meta-name>name</a></code>
+   属性设为 <code id=标准元数据名:meta-description><a href=#meta-description>description</a></code>。<dt><dfn id=meta-generator><code>generator</code></dfn><dd>
+
+    <p>值必须是一个表示用于产生该文档的软件包的格式自由的字符串。
+    这个值不得用于不是由软件产生的页面上，例如用户在文本编辑器上编写的页面。</p>
+
+    <div class=example>
+
+     <p>这是一个名为 "Frontweaver" 的工具在页面 <code id=标准元数据名:the-head-element><a href=#the-head-element>head</a></code> 元素中的输出，来标识该页面是由它这个工具生成的：</p>
+
+     <pre>&lt;meta name=generator content="Frontweaver 8.2"></pre>
+
+    </div>
+
+   <dt><dfn id=meta-keywords><code>keywords</code></dfn><dd>
+
+    <p>值必须是一个 <a href=infrastructure.html#set-of-comma-separated-tokens id=标准元数据名:set-of-comma-separated-tokens>逗号分隔的令牌集合</a>, 其中每一项都是页面的关键字。</p>
+
+    <div class=example>
+
+     <p>关于英国高速公路的字体的页面使用 <code id=标准元数据名:the-meta-element-4><a href=#the-meta-element>meta</a></code> 元素来指定一些关键字（用户可能用这些关键字来查找该页面）：</p>
+
+     <pre>&lt;!DOCTYPE HTML>
+&lt;html lang="en-GB">
+ &lt;head>
+  &lt;title>Typefaces on UK motorways&lt;/title>
+  &lt;meta name="keywords" content="british,type face,font,fonts,highway,highways">
+ &lt;/head>
+ &lt;body>
+  ...</pre>
+
+    </div>
+
+    <p class=note>很多搜索引擎不会考虑这些关键字，因为该特性是不可靠的甚至会导致垃圾结果，对用户并没有帮助。</p>
+
+    
+
+   <dt><dfn id=meta-referrer><code>referrer</code></dfn><dd>
+    <p>值必须是 <a href=https://w3c.github.io/webappsec-referrer-policy/#referrer-policy id=标准元数据名:referrer-policy data-x-internal=referrer-policy>引荐策略</a>, 它为 <code id=标准元数据名:document><a href=dom.html#document>Document</a></code> 定义了默认的
+    <a href=https://w3c.github.io/webappsec-referrer-policy/#referrer-policy id=标准元数据名:referrer-policy-2 data-x-internal=referrer-policy>引荐策略</a>。 <a href=references.html#refsREFERRERPOLICY>[REFERRERPOLICY]</a></p>
+
+    
+   <dt><dfn id=meta-theme-color><code>theme-color</code></dfn><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in one engine only." class=less-than-two-engines-flag>⚠</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name/theme-color title="The theme-color value for the name attribute of the <meta> element indicates a suggested color that user agents should use to customize the display of the page or of the surrounding user interface. If specified, the content attribute must contain a valid CSS <color>.">Element/meta/name/theme-color</a><p class=less-than-two-engines-text>Support in one engine only.<div class=support><span class="firefox no"><span>Firefox</span><span>No</span></span><span class="safari no"><span>Safari</span><span>No</span></span><span class="chrome yes"><span>Chrome</span><span title="Partial implementation.">🔰 73+</span></span><hr><span class="opera no"><span>Opera</span><span>No</span></span><span class="edge_blink yes"><span>Edge</span><span title="Partial implementation.">🔰 79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android no"><span>Firefox Android</span><span>No</span></span><span class="safari_ios no"><span>Safari iOS</span><span>No</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>80+</span></span><span class="webview_android no"><span>WebView Android</span><span>No</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>6.2+</span></span><span class="opera_android no"><span>Opera Android</span><span>No</span></span><hr><span class=caniuse><span><a href="https://caniuse.com/#feat=meta-theme-color" title="theme-color Meta Tag">caniuse.com table</a></span></span></div></div></div><dd>
+
+    <p>值必须是匹配 CSS <a id=标准元数据名:color href=https://drafts.csswg.org/css-color/#typedef-color data-x-internal=color>&lt;color></a> 生成式的字符串, 为用户代理定义了一个建议的颜色，
+    用来自定义该页面或周边 UI 的显示。例如，浏览器可能会用指定的颜色渲染页面的标题栏，
+    或者把它作为任标签栏或务栏的高亮颜色。</p>
+
+    <p>每个文档至少要有一个 <code id=标准元数据名:the-meta-element-5><a href=#the-meta-element>meta</a></code> 元素的 <code id=标准元数据名:attr-meta-name-4><a href=#attr-meta-name>name</a></code> 属性设为
+    <code id=标准元数据名:meta-theme-color><a href=#meta-theme-color>theme-color</a></code>。</p>
+
+    <div class=example>
+
+     <p>This standard itself uses "WHATWG green" as its theme color:</p>
+
+     <pre>&lt;!DOCTYPE HTML>
+&lt;title>HTML Standard&lt;/title>
+&lt;meta name="theme-color" content="#3c790a">
+...</pre>
+
+    </div>
+
+    
+
+    <p>在 UI 中使用主题颜色时，用户代理可能会调整具体的实现细节。例如，如果用户代理要用主题色作背景在上面显示白色的文字，
+    则可能会在 UI 的这一部分使用主题颜色的较暗变体，以确保充分的对比度。</p>
+
+   </dl>
+
+
+
+
+  <h5 id=其他元数据名称><span class=secno>4.2.5.2</span> 其他元数据名称<a href=#其他元数据名称 class=self-link></a></h5>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Sat Apr 21 2018 17:11:33 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/document-metadata/the-meta-element/other-metadata-names.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/the-elements-of-html/document-metadata/the-meta-element/other-metadata-names.zh.html></div>
+
+  <p>任何人都可以对预定义的元数据名称集合进行
+  <dfn id=concept-meta-extensions>扩展</dfn>，
+  创建和使用自己的元数据。而且这些扩展无需注册。</p>
+
+  <p>但是在以下情况下，不应创建新的元数据名：</p>
+
+  <ul><li><p>如果名称或它的 <code id=其他元数据名称:attr-meta-content><a href=#attr-meta-content>content</a></code> 属性值是 <a id=其他元数据名称:url href=https://url.spec.whatwg.org/#concept-url data-x-internal=url>URL</a>；在着这些情况下，建议把它注册为一个 <a href=links.html#concept-rel-extensions id=其他元数据名称:concept-rel-extensions>超链接预定义类型的扩展</a>（而不是创建一个新的元数据名称）。<li><p>如果该名称需要用户代理进行处理，那么它应该被标准化。</ul>
+
+  <p>另外，在创建和使用新的元数据名称之前，建议查阅 <a href=https://wiki.whatwg.org/wiki/MetaExtensions>WHATWG Wiki MetaExtensions 页面</a> —
+  来避免选择已经在使用的元数据名，以及与既有元数据名的用途冗余，
+  以及避免新标准化的名称与你选择的冲突。 <a href=references.html#refsWHATWGWIKI>[WHATWGWIKI]</a></p>
+
+  <p>任何人在任何时候都可以编辑 WHATWG Wiki MetaExtensions 页面，添加想要的元数据名称。
+  新的元数据名称可以用下列信息来说明：</p>
+
+  <dl><dt>关键字<dd><p>要定义的名称。这一名称不得与已定义的名称类似（比如只有大小写不同）。<dt>简要说明<dd><p>关于这个元数据名称的含义的一个简短的非正式的描述，包括它的取值应有的格式。<dt>规范<dd>一个链接，指向关于该元数据名称的语义和要求的更详细的描述。
+   可以是 Wiki 上的另一页，也可以是一个外部页面。<dt>同义词<dd><p>具有完全相同的处理要求的其他名称的列表。
+   作者不应使用定义为同义词的名称（它们只是用于允许用户代理支持遗留内容）。
+   任何人都可以移除实践中不再使用的同义词；只有需要当做同义词做兼容处理的名称需要这样注册。<dt>状态<dd>
+
+    <p>以下之一：</p>
+
+    <dl><dt>已提出<dd>该名称还没有接受广泛的 peer review 和 approval。有人提出了它并且正在用或者马上就要使用。<dt>已批准<dd>该名称已经接受了广泛的 peer review 和 approval。并且有一个标准明确地定义了如何处理使用了这个名称的页面，包括哪些使用方式是错误的。<dt>已终止<dd>该名称已经接受了广泛的 peer review 并且被认为是有用的。现存的页面已经在使用这个名称，
+     但新的页面应该避免使用。 "简要说明" 和 "规范" 入口会给出作者应该用哪些替代品，如果有的话。</dl>
+
+    <p>如果一个元数据名称与其他现存的值冗余，那么应该把它移除并列为那个现存值的同义词。</p>
+
+    <p>如果一个元数据名称添加到 “已提议” 状态经过一个多月的时间并未被使用或标准化，
+    那么应该把它从 WHATWG Wiki MetaExtensions 页面移除。</p>
+
+    <p>如果一个元数据名称添加到 “已提议” 状态但却与现存的值冗余，
+    就应该把它移除并列为该现存值的同义词。
+    如果一个名称被添加到 “已提议” 状态但被发现有害，则应该把它改为 “已终止” 状态。</p>
+
+    <p>任何人都可以随时更新状态，但应该根据上述定义进行。</p>
+
+   </dl>
+
+
+
+
+  <h5 id=pragma-directives><span class=secno>4.2.5.3</span> Pragma directives<a href=#pragma-directives class=self-link></a></h5>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/document-metadata/the-meta-element/pragma-directives.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/the-elements-of-html/document-metadata/the-meta-element/pragma-directives.zh.html?filename=pragma-directives.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fthe-elements-of-html%2Fdocument-metadata%2Fthe-meta-element%2Fpragma-directives.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  <p>When the <dfn data-dfn-for=meta id=attr-meta-http-equiv data-dfn-type=element-attr><code>http-equiv</code></dfn> attribute is specified on a
+  <code id=pragma-directives:the-meta-element><a href=#the-meta-element>meta</a></code> element, the element is a pragma directive.</p>
+
+  <p>The <code id=pragma-directives:attr-meta-http-equiv><a href=#attr-meta-http-equiv>http-equiv</a></code> attribute is an <a id=pragma-directives:enumerated-attribute href=infrastructure.html#enumerated-attribute>enumerated
+  attribute</a>. The following table lists the keywords defined for this attribute. The states
+  given in the first cell of the rows with keywords give the states to which those keywords map.
+  </p>
+
+  <table id=table-http-equiv><thead><tr><th>State
+     <th>Keyword
+     <th>Notes
+   <tbody><tr><td><a href=#attr-meta-http-equiv-content-type id=pragma-directives:attr-meta-http-equiv-content-type>Encoding declaration</a>
+     <td><dfn id=attr-meta-http-equiv-keyword-content-type><code>content-type</code></dfn>
+     <td>
+    <tr><td><a href=#attr-meta-http-equiv-default-style id=pragma-directives:attr-meta-http-equiv-default-style>Default style</a>
+     <td><dfn id=attr-meta-http-equiv-keyword-default-style><code>default-style</code></dfn>
+     <td>
+    <tr><td><a href=#attr-meta-http-equiv-refresh id=pragma-directives:attr-meta-http-equiv-refresh>Refresh</a>
+     <td><dfn id=attr-meta-http-equiv-keyword-refresh><code>refresh</code></dfn>
+     <td>
+    <tr><td><a href=#attr-meta-http-equiv-x-ua-compatible id=pragma-directives:attr-meta-http-equiv-x-ua-compatible>X-UA-Compatible</a>
+     <td><dfn id=attr-meta-http-equiv-keyword-x-ua-compatible><code>x-ua-compatible</code></dfn>
+     <td>
+    <tr><td><a href=#attr-meta-http-equiv-content-security-policy id=pragma-directives:attr-meta-http-equiv-content-security-policy>Content security policy</a>
+     <td><dfn id=attr-meta-http-equiv-keyword-content-security-policy><code>content-security-policy</code></dfn>
+     <td>
+  </table>
+
+
+
+  
+
+  <dl><dt><dfn id=attr-meta-http-equiv-content-type>Encoding declaration state</dfn> (<code>http-equiv="<code id=pragma-directives:attr-meta-http-equiv-keyword-content-type><a href=#attr-meta-http-equiv-keyword-content-type>content-type</a></code>"</code>)
+
+   <dd>
+    <p>The <a href=#attr-meta-http-equiv-content-type id=pragma-directives:attr-meta-http-equiv-content-type-2>Encoding declaration state</a> is
+    just an alternative form of setting the <code id=pragma-directives:attr-meta-charset><a href=#attr-meta-charset>charset</a></code>
+    attribute: it is a <a href=#character-encoding-declaration id=pragma-directives:character-encoding-declaration>character encoding declaration</a>. </p>
+
+    <p>For <code id=pragma-directives:the-meta-element-2><a href=#the-meta-element>meta</a></code> elements with an <code id=pragma-directives:attr-meta-http-equiv-2><a href=#attr-meta-http-equiv>http-equiv</a></code>
+    attribute in the <a href=#attr-meta-http-equiv-content-type id=pragma-directives:attr-meta-http-equiv-content-type-3>Encoding declaration
+    state</a>, the <code id=pragma-directives:attr-meta-content><a href=#attr-meta-content>content</a></code> attribute must have a value
+    that is an <a id=pragma-directives:ascii-case-insensitive href=https://infra.spec.whatwg.org/#ascii-case-insensitive data-x-internal=ascii-case-insensitive>ASCII case-insensitive</a> match for a string that consists of: the literal
+    string "<code>text/html;</code>", optionally followed by any number of <a id=pragma-directives:space-characters href=https://infra.spec.whatwg.org/#ascii-whitespace data-x-internal=space-characters>ASCII
+    whitespace</a>, followed by the literal string "<code>charset=utf-8</code>".</p>
+
+    <p>A document must not contain both a <code id=pragma-directives:the-meta-element-3><a href=#the-meta-element>meta</a></code> element with an <code id=pragma-directives:attr-meta-http-equiv-3><a href=#attr-meta-http-equiv>http-equiv</a></code> attribute in the <a href=#attr-meta-http-equiv-content-type id=pragma-directives:attr-meta-http-equiv-content-type-4>Encoding declaration state</a> and a
+    <code id=pragma-directives:the-meta-element-4><a href=#the-meta-element>meta</a></code> element with the <code id=pragma-directives:attr-meta-charset-2><a href=#attr-meta-charset>charset</a></code> attribute
+    present.</p>
+
+    <p>The <a href=#attr-meta-http-equiv-content-type id=pragma-directives:attr-meta-http-equiv-content-type-5>Encoding declaration state</a> may be
+    used in <a id=pragma-directives:html-documents href=https://dom.spec.whatwg.org/#html-document data-x-internal=html-documents>HTML documents</a>, but elements with an <code id=pragma-directives:attr-meta-http-equiv-4><a href=#attr-meta-http-equiv>http-equiv</a></code> attribute in that state must not be used in
+    <a id=pragma-directives:xml-documents href=https://dom.spec.whatwg.org/#xml-document data-x-internal=xml-documents>XML documents</a>.</p>
+   <dt><dfn id=attr-meta-http-equiv-default-style>Default style state</dfn> (<code>http-equiv="<code id=pragma-directives:attr-meta-http-equiv-keyword-default-style><a href=#attr-meta-http-equiv-keyword-default-style>default-style</a></code>"</code>)
+
+   <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in one engine only." class=less-than-two-engines-flag>⚠</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/CSS/Alternative_style_sheets title="Specifying alternative style sheets in a web page provides a way for users to see multiple versions of a page, based on their needs or preferences.">Alternative_style_sheets</a><p class=less-than-two-engines-text>Support in one engine only.<div class=support><span class="firefox yes"><span>Firefox</span><span>3+</span></span><span class="safari unknown"><span>Safari</span><span>?</span></span><span class="chrome no"><span>Chrome</span><span>1–48</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink no"><span>Edge</span><span>No</span></span><hr><span class="edge unknown"><span>Edge (Legacy)</span><span>?</span></span><span class="ie yes"><span>Internet Explorer</span><span>8+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios unknown"><span>Safari iOS</span><span>?</span></span><span class="chrome_android unknown"><span>Chrome Android</span><span>?</span></span><span class="webview_android unknown"><span>WebView Android</span><span>?</span></span><span class="samsunginternet_android unknown"><span>Samsung Internet</span><span>?</span></span><span class="opera_android unknown"><span>Opera Android</span><span>?</span></span></div></div></div><dd>
+    <p>This pragma sets the <a href=https://drafts.csswg.org/cssom/#css-style-sheet-set-name id=pragma-directives:css-style-sheet-set-name data-x-internal=css-style-sheet-set-name>name</a> of the default
+    <a id=pragma-directives:css-style-sheet-set href=https://drafts.csswg.org/cssom/#css-style-sheet-set data-x-internal=css-style-sheet-set>CSS style sheet set</a>.</p>
+
+    
+   <dt><dfn id=attr-meta-http-equiv-refresh>Refresh state</dfn> (<code>http-equiv="<code id=pragma-directives:attr-meta-http-equiv-keyword-refresh><a href=#attr-meta-http-equiv-keyword-refresh>refresh</a></code>"</code>)
+
+   <dd>
+    <p>This pragma acts as timed redirect.</p>
+
+    <p>A <code id=pragma-directives:document><a href=dom.html#document>Document</a></code> object has an associated <dfn data-dfn-for=Document id=will-declaratively-refresh>will declaratively
+    refresh</dfn> (a boolean). It is initially false.</p>
+
+    
+
+    <p>For <code id=pragma-directives:the-meta-element-5><a href=#the-meta-element>meta</a></code> elements with an <code id=pragma-directives:attr-meta-http-equiv-5><a href=#attr-meta-http-equiv>http-equiv</a></code>
+    attribute in the <a href=#attr-meta-http-equiv-refresh id=pragma-directives:attr-meta-http-equiv-refresh-2>Refresh state</a>, the <code id=pragma-directives:attr-meta-content-2><a href=#attr-meta-content>content</a></code> attribute must have a value consisting either of:</p>
+
+    <ul><li>just a <a id=pragma-directives:valid-non-negative-integer href=infrastructure.html#valid-non-negative-integer>valid non-negative integer</a>, or<li>a <a id=pragma-directives:valid-non-negative-integer-2 href=infrastructure.html#valid-non-negative-integer>valid non-negative integer</a>, followed by a U+003B SEMICOLON character
+     (;), followed by one or more <a id=pragma-directives:space-characters-2 href=https://infra.spec.whatwg.org/#ascii-whitespace data-x-internal=space-characters>ASCII whitespace</a>, followed by a substring that is
+     an <a id=pragma-directives:ascii-case-insensitive-2 href=https://infra.spec.whatwg.org/#ascii-case-insensitive data-x-internal=ascii-case-insensitive>ASCII case-insensitive</a> match for the string "<code>URL</code>",
+     followed by a U+003D EQUALS SIGN character (=), followed by a <a id=pragma-directives:valid-url-string href=https://url.spec.whatwg.org/#valid-url-string data-x-internal=valid-url-string>valid URL string</a>
+     that does not start with a literal U+0027 APOSTROPHE (') or U+0022 QUOTATION MARK (")
+     character.</ul>
+
+    <p>In the former case, the integer represents a number of seconds before the page is to be
+    reloaded; in the latter case the integer represents a number of seconds before the page is to be
+    replaced by the page at the given <a id=pragma-directives:url href=https://url.spec.whatwg.org/#concept-url data-x-internal=url>URL</a>.</p>
+
+    <div class=example>
+
+     <p>A news organization's front page could include the following markup in the page's
+     <code id=pragma-directives:the-head-element><a href=#the-head-element>head</a></code> element, to ensure that the page automatically reloads from the server every
+     five minutes:</p>
+
+     <pre><code class=html>&lt;meta http-equiv="Refresh" content="300"></code></pre>
+
+    </div>
+
+    <div class=example>
+
+     <p>A sequence of pages could be used as an automated slide show by making each page refresh to
+     the next page in the sequence, using markup such as the following:</p>
+
+     <pre><code class=html>&lt;meta http-equiv="Refresh" content="20; URL=page4.html"></code></pre>
+
+    </div>
+   <dt><dfn id=attr-meta-http-equiv-x-ua-compatible>X-UA-Compatible state</dfn> (<code>http-equiv="<code id=pragma-directives:attr-meta-http-equiv-keyword-x-ua-compatible><a href=#attr-meta-http-equiv-keyword-x-ua-compatible>x-ua-compatible</a></code>"</code>)
+
+   <dd>
+    <p>In practice, this pragma encourages Internet Explorer to more closely follow the
+    specifications.</p>
+
+    <p>For <code id=pragma-directives:the-meta-element-6><a href=#the-meta-element>meta</a></code> elements with an <code id=pragma-directives:attr-meta-http-equiv-6><a href=#attr-meta-http-equiv>http-equiv</a></code>
+    attribute in the <a href=#attr-meta-http-equiv-x-ua-compatible id=pragma-directives:attr-meta-http-equiv-x-ua-compatible-2>X-UA-Compatible state</a>, the
+    <code id=pragma-directives:attr-meta-content-3><a href=#attr-meta-content>content</a></code> attribute must have a value that is an
+    <a id=pragma-directives:ascii-case-insensitive-3 href=https://infra.spec.whatwg.org/#ascii-case-insensitive data-x-internal=ascii-case-insensitive>ASCII case-insensitive</a> match for the string "<code>IE=edge</code>".</p>
+
+    <p>User agents are required to ignore this pragma.</p>
+   <dt><dfn id=attr-meta-http-equiv-content-security-policy data-export="">Content security policy state</dfn> (<code>http-equiv="<code id=pragma-directives:attr-meta-http-equiv-keyword-content-security-policy><a href=#attr-meta-http-equiv-keyword-content-security-policy>content-security-policy</a></code>"</code>)
+
+   <dd>
+    <p>This pragma <a href=https://w3c.github.io/webappsec-csp/#enforced id=pragma-directives:enforce-the-policy data-x-internal=enforce-the-policy>enforces</a> a <a id=pragma-directives:content-security-policy href=https://w3c.github.io/webappsec-csp/#content-security-policy-object data-x-internal=content-security-policy>Content Security
+    Policy</a> on a <code id=pragma-directives:document-2><a href=dom.html#document>Document</a></code>. <a href=references.html#refsCSP>[CSP]</a></p>
+
+    
+
+    <p>For <code id=pragma-directives:the-meta-element-7><a href=#the-meta-element>meta</a></code> elements with an <code id=pragma-directives:attr-meta-http-equiv-7><a href=#attr-meta-http-equiv>http-equiv</a></code>
+    attribute in the <a href=#attr-meta-http-equiv-content-security-policy id=pragma-directives:attr-meta-http-equiv-content-security-policy-2>Content security
+    policy state</a>, the <code id=pragma-directives:attr-meta-content-4><a href=#attr-meta-content>content</a></code> attribute must have a
+    value consisting of a <a href=https://w3c.github.io/webappsec-csp/#grammardef-serialized-policy id=pragma-directives:content-security-policy-syntax data-x-internal=content-security-policy-syntax>valid Content Security
+    Policy</a>, but must not contain any <code id=pragma-directives:report-uri-directive><a data-x-internal=report-uri-directive href=https://w3c.github.io/webappsec-csp/#report-uri>report-uri</a></code>,
+    <code id=pragma-directives:frame-ancestors-directive><a data-x-internal=frame-ancestors-directive href=https://w3c.github.io/webappsec-csp/#frame-ancestors>frame-ancestors</a></code>, or <code id=pragma-directives:sandbox-directive><a data-x-internal=sandbox-directive href=https://w3c.github.io/webappsec-csp/#sandbox>sandbox</a></code> <a href=https://w3c.github.io/webappsec-csp/#directives id=pragma-directives:content-security-policy-directive data-x-internal=content-security-policy-directive>directives</a>.
+    The <a id=pragma-directives:content-security-policy-2 href=https://w3c.github.io/webappsec-csp/#content-security-policy-object data-x-internal=content-security-policy>Content Security Policy</a> given in the <code id=pragma-directives:attr-meta-content-5><a href=#attr-meta-content>content</a></code> attribute will be <a href=https://w3c.github.io/webappsec-csp/#enforced id=pragma-directives:enforce-the-policy-2 data-x-internal=enforce-the-policy>enforced</a> upon the current document. <a href=references.html#refsCSP>[CSP]</a></p>
+
+    <div class=example>
+
+     <p>A page might choose to mitigate the risk of cross-site scripting attacks by preventing the
+     execution of inline JavaScript, as well as blocking all plugin content, using a policy such
+     as the following:
+
+     <pre><code class=html>&lt;meta http-equiv="Content-Security-Policy" content="script-src 'self'; object-src 'none'"></code></pre>
+
+    </div>
+   </dl>
+
+  <p>There must not be more than one <code id=pragma-directives:the-meta-element-8><a href=#the-meta-element>meta</a></code> element with any particular state in the
+  document at a time.</p>
+
+
+
+  <h5 id=charset><span class=secno>4.2.5.4</span> Specifying the document's character encoding<a href=#charset class=self-link></a></h5>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/document-metadata/the-meta-element/specifying-the-documents-character-encoding.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/the-elements-of-html/document-metadata/the-meta-element/specifying-the-documents-character-encoding.zh.html?filename=specifying-the-documents-character-encoding.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fthe-elements-of-html%2Fdocument-metadata%2Fthe-meta-element%2Fspecifying-the-documents-character-encoding.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  
+
+  <p>A <dfn id=character-encoding-declaration>character encoding declaration</dfn> is a mechanism by which the <a href=https://encoding.spec.whatwg.org/#encoding id=charset:encoding data-x-internal=encoding>character encoding</a> used to store or transmit a document is specified.</p>
+
+  <p>The Encoding standard requires use of the <span>UTF-8</span> <a href=https://encoding.spec.whatwg.org/#encoding id=charset:encoding-2 data-x-internal=encoding>character
+  encoding</a> and requires use of the "<code>utf-8</code>" <a id=charset:encoding-label href=https：//encoding.spec.whatwg.org/#label data-x-internal=encoding-label>encoding label</a>
+  to identify it. Those requirements necessitate that the document's <a href=#character-encoding-declaration id=charset:character-encoding-declaration>character encoding
+  declaration</a>, if it exists, specifies an <a id=charset:encoding-label-2 href=https：//encoding.spec.whatwg.org/#label data-x-internal=encoding-label>encoding label</a> using an <a id=charset:ascii-case-insensitive href=https://infra.spec.whatwg.org/#ascii-case-insensitive data-x-internal=ascii-case-insensitive>ASCII
+  case-insensitive</a> match for "<code>utf-8</code>". Regardless of whether a
+  <a href=#character-encoding-declaration id=charset:character-encoding-declaration-2>character encoding declaration</a> is present or not, the actual <a href=https://dom.spec.whatwg.org/#concept-document-encoding id="charset:document's-character-encoding" data-x-internal="document's-character-encoding">character encoding</a> used to encode the document must be
+  <span>UTF-8</span>. <a href=references.html#refsENCODING>[ENCODING]</a></p>
+
+  
+
+  <p>The following restrictions also apply:</p>
+
+  <ul><li>The character encoding declaration must be serialized without the use of <a href=syntax.html#syntax-charref id=charset:syntax-charref>character references</a> or character escapes of any kind.<li id=charset1024><span id=charset512>The element containing the character encoding
+   declaration must be serialized completely within the first 1024 bytes of the
+   document.</span></ul>
+
+  <p>In addition, due to a number of restrictions on <code id=charset:the-meta-element><a href=#the-meta-element>meta</a></code> elements, there can only be
+  one <code id=charset:the-meta-element-2><a href=#the-meta-element>meta</a></code>-based character encoding declaration per document.</p> 
+
+  <p>If an <a href=https://dom.spec.whatwg.org/#html-document id=charset:html-documents data-x-internal=html-documents>HTML document</a> does not start with a BOM, and its
+  <a id=charset:encoding-3 href=https://encoding.spec.whatwg.org/#encoding data-x-internal=encoding>encoding</a> is not explicitly given by <span>Content-Type
+  metadata</span>, and the document is not <a id=charset:an-iframe-srcdoc-document href=iframe-embed-object.html#an-iframe-srcdoc-document>an <code>iframe</code> <code>srcdoc</code> document</a>, then the encoding must be specified
+  using a <code id=charset:the-meta-element-3><a href=#the-meta-element>meta</a></code> element with a <code id=charset:attr-meta-charset><a href=#attr-meta-charset>charset</a></code> attribute
+  or a <code id=charset:the-meta-element-4><a href=#the-meta-element>meta</a></code> element with an <code id=charset:attr-meta-http-equiv><a href=#attr-meta-http-equiv>http-equiv</a></code>
+  attribute in the <a href=#attr-meta-http-equiv-content-type id=charset:attr-meta-http-equiv-content-type>Encoding declaration
+  state</a>.</p>
+
+  <div class=note>
+   <p>A character encoding declaration is required (either in the <span>Content-Type metadata</span> or explicitly in the file) even when all
+   characters are in the ASCII range, because a character encoding is needed to process non-ASCII
+   characters entered by the user in forms, in URLs generated by scripts, and so forth.</p>
+
+   <p>Using non-UTF-8 encodings can have unexpected results on form submission and URL encodings,
+   which use the <a id="charset:document's-character-encoding-2" href=https://dom.spec.whatwg.org/#concept-document-encoding data-x-internal="document's-character-encoding">document's character encoding</a> by default.</p>
+  </div>
+
+  <p>If the document is <a id=charset:an-iframe-srcdoc-document-2 href=iframe-embed-object.html#an-iframe-srcdoc-document>an <code>iframe</code> <code>srcdoc</code>
+  document</a>, the document must not have a <a href=#character-encoding-declaration id=charset:character-encoding-declaration-3>character encoding declaration</a>. (In
+  this case, the source is already decoded, since it is part of the document that contained the
+  <code id=charset:the-iframe-element><a href=iframe-embed-object.html#the-iframe-element>iframe</a></code>.)</p>
+
+  <p>In XML, the XML declaration should be used for inline character encoding information, if
+  necessary.</p>
+
+  <div class=example>
+
+   <p>In HTML, to declare that the character encoding is <span>UTF-8</span>, the author could
+   include the following markup near the top of the document (in the <code id=charset:the-head-element><a href=#the-head-element>head</a></code> element):</p>
+
+   <pre><code class=html>&lt;meta charset="utf-8"></code></pre>
+
+   <p>In XML, the XML declaration would be used instead, at the very top of the markup:</p>
+
+   <pre><code class=html>&lt;?xml version="1.0" encoding="utf-8"?></code></pre>
+
+  </div>
+
+
+
+
+  <h4 id=the-style-element data-dfn-type=element data-lt=style><span class=secno>4.2.6</span> The <dfn><code>style</code></dfn> element<a href=#the-style-element class=self-link></a></h4><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style title="The HTML <style> element contains style information for a document, or part of a document.">Element/style</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>1+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>3.5+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>3+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>1+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span></div></div></div>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/document-metadata/the-style-element.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/the-elements-of-html/document-metadata/the-style-element.zh.html?filename=the-style-element.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fthe-elements-of-html%2Fdocument-metadata%2Fthe-style-element.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  <dl class=element><dt><a href=dom.html#concept-element-categories id=the-style-element:concept-element-categories>Categories</a>:<dd><a id=the-style-element:metadata-content href=dom.html#metadata-content>Metadata content</a>.<dt><a href=dom.html#concept-element-contexts id=the-style-element:concept-element-contexts>Contexts in which this element can be used</a>:<dd>Where <a id=the-style-element:metadata-content-2 href=dom.html#metadata-content>metadata content</a> is expected.<dd>In a <code id=the-style-element:the-noscript-element><a href=scripting.html#the-noscript-element>noscript</a></code> element that is a child of a <code id=the-style-element:the-head-element><a href=#the-head-element>head</a></code> element.<dt><a href=dom.html#concept-element-content-model id=the-style-element:concept-element-content-model>Content model</a>:<dd><a href=dom.html#text-content id=the-style-element:text-content>Text</a> that gives a <a id=the-style-element:conformant-style-sheet href=https://drafts.csswg.org/css-syntax/#conform-classes data-x-internal=conformant-style-sheet>conformant style sheet</a>.<dt><a href=dom.html#concept-element-tag-omission id=the-style-element:concept-element-tag-omission>text/html 中的标签省略</a>：<dd>哪个标签都不能省略。<dt><a href=dom.html#concept-element-attributes id=the-style-element:concept-element-attributes>Content attributes</a>:<dd><a id=the-style-element:全局属性 href=dom.html#全局属性>Global attributes</a><dd><code id=the-style-element:attr-style-media><a href=#attr-style-media>media</a></code> — Applicable media<dd>Also, the <code id=the-style-element:attr-style-title><a href=#attr-style-title>title</a></code> attribute <a href=#attr-style-title id=the-style-element:attr-style-title-2>has special semantics</a> on this element: <a id=the-style-element:css-style-sheet-set-name href=https://drafts.csswg.org/cssom/#css-style-sheet-set-name data-x-internal=css-style-sheet-set-name>CSS style sheet set name</a>.<dt><a href=dom.html#concept-element-accessibility-considerations id=the-style-element:concept-element-accessibility-considerations>Accessibility considerations</a>:<dd><a href=https://w3c.github.io/html-aria/#el-style>For authors</a>.<dd><a href=https://w3c.github.io/html-aam/#el-style>For implementers</a>.<dt><a href=dom.html#concept-element-dom id=the-style-element:concept-element-dom>DOM interface</a>:<dd>Uses <code>HTMLStyleElement</code>.</dl>
+
+  <p>The <code id=the-style-element:the-style-element><a href=#the-style-element>style</a></code> element allows authors to embed CSS style sheets in their documents.
+  The <code id=the-style-element:the-style-element-2><a href=#the-style-element>style</a></code> element is one of several inputs to the styling processing
+  model. The element does not <a href=dom.html#represents id=the-style-element:represents>represent</a> content for the
+  user.</p>
+
+  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/HTMLStyleElement/media title="The HTMLStyleElement.media property specifies the intended destination medium for style information.">HTMLStyleElement/media</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>Yes</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>Yes</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>Yes</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div><p>The <dfn data-dfn-for=style id=attr-style-media data-dfn-type=element-attr><code>media</code></dfn> attribute
+  says which media the styles apply to. The value must be a <a id=the-style-element:valid-media-query-list href=infrastructure.html#valid-media-query-list>valid media query list</a>.
+  </p>
+
+  
+
+  <p id=style-default-media>The default, if the <code id=the-style-element:attr-style-media-2><a href=#attr-style-media>media</a></code>
+  attribute is omitted, is "<code>all</code>", meaning that by default styles apply to all
+  media.</p>
+
+  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in one engine only." class=less-than-two-engines-flag>⚠</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/CSS/Alternative_style_sheets title="Specifying alternative style sheets in a web page provides a way for users to see multiple versions of a page, based on their needs or preferences.">Alternative_style_sheets</a><p class=less-than-two-engines-text>Support in one engine only.<div class=support><span class="firefox yes"><span>Firefox</span><span>3+</span></span><span class="safari unknown"><span>Safari</span><span>?</span></span><span class="chrome no"><span>Chrome</span><span>1–48</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink no"><span>Edge</span><span>No</span></span><hr><span class="edge unknown"><span>Edge (Legacy)</span><span>?</span></span><span class="ie yes"><span>Internet Explorer</span><span>8+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios unknown"><span>Safari iOS</span><span>?</span></span><span class="chrome_android unknown"><span>Chrome Android</span><span>?</span></span><span class="webview_android unknown"><span>WebView Android</span><span>?</span></span><span class="samsunginternet_android unknown"><span>Samsung Internet</span><span>?</span></span><span class="opera_android unknown"><span>Opera Android</span><span>?</span></span></div></div></div><p id=title-on-style>The <dfn data-dfn-for=style id=attr-style-title data-dfn-type=element-attr><code>title</code></dfn> attribute on <code id=the-style-element:the-style-element-3><a href=#the-style-element>style</a></code> elements defines
+  <a href=https://drafts.csswg.org/cssom/#css-style-sheet-set id=the-style-element:css-style-sheet-set data-x-internal=css-style-sheet-set>CSS style sheet sets</a>. If the <code id=the-style-element:the-style-element-4><a href=#the-style-element>style</a></code> element
+  has no <code id=the-style-element:attr-style-title-3><a href=#attr-style-title>title</a></code> attribute, then it has no title; the <code id=the-style-element:attr-title><a href=dom.html#attr-title>title</a></code> attribute of ancestors does not apply to the <code id=the-style-element:the-style-element-5><a href=#the-style-element>style</a></code>
+  element. If the <code id=the-style-element:the-style-element-6><a href=#the-style-element>style</a></code> element is not <a id=the-style-element:in-a-document-tree href=https://dom.spec.whatwg.org/#in-a-document-tree data-x-internal=in-a-document-tree>in a document tree</a>, then the <code id=the-style-element:attr-style-title-4><a href=#attr-style-title>title</a></code> attribute is ignored. <a href=references.html#refsCSSOM>[CSSOM]</a></p>
+
+  <p class=note>The <code id=the-style-element:attr-style-title-5><a href=#attr-style-title>title</a></code> attribute on <code id=the-style-element:the-style-element-7><a href=#the-style-element>style</a></code>
+  elements, like the <code id=the-style-element:attr-link-title><a href=#attr-link-title>title</a></code> attribute on <code id=the-style-element:link-元素><a href=#link-元素>link</a></code>
+  elements, differs from the global <code id=the-style-element:attr-title-2><a href=dom.html#attr-title>title</a></code> attribute in that a
+  <code id=the-style-element:the-style-element-8><a href=#the-style-element>style</a></code> block without a title does not inherit the title of the parent element: it
+  merely has no title.</p>
+
+  <p>The <a id=the-style-element:child-text-content href=https://dom.spec.whatwg.org/#concept-child-text-content data-x-internal=child-text-content>child text content</a> of a <code id=the-style-element:the-style-element-9><a href=#the-style-element>style</a></code> element must be that of a
+  <a id=the-style-element:conformant-style-sheet-2 href=https://drafts.csswg.org/css-syntax/#conform-classes data-x-internal=conformant-style-sheet>conformant style sheet</a>.</p>
+
+  <hr>
+
+  
+
+  <p class=note>This specification does not specify a style system, but CSS is expected to be
+  supported by most web browsers. <a href=references.html#refsCSS>[CSS]</a></p>
+
+  
+
+  <p>The <code id=the-style-element:linkstyle><a data-x-internal=linkstyle href=https://drafts.csswg.org/cssom/#the-linkstyle-interface>LinkStyle</a></code> interface is also implemented by this element. <a href=references.html#refsCSSOM>[CSSOM]</a></p>
+
+  <div class=example>
+
+   <p>The following document has its stress emphasis styled as bright red text rather than italics
+   text, while leaving titles of works and Latin words in their default italics. It shows how using
+   appropriate elements enables easier restyling of documents.</p>
+
+   <pre><code class=html>&lt;!DOCTYPE html>
+&lt;html lang="en-US">
+ &lt;head>
+  &lt;title>My favorite book&lt;/title>
+  &lt;style>
+   body { color: black; background: white; }
+   em { font-style: normal; color: red; }
+  &lt;/style>
+ &lt;/head>
+ &lt;body>
+  &lt;p>My &lt;em>favorite&lt;/em> book of all time has &lt;em>got&lt;/em> to be
+  &lt;cite>A Cat's Life&lt;/cite>. It is a book by P. Rahmel that talks
+  about the &lt;i lang="la">Felis Catus&lt;/i> in modern human society.&lt;/p>
+ &lt;/body>
+&lt;/html></code></pre>
+
+  </div>
+
+
+
+  
+
+
+
+
+
+  <nav><a href=dom.html>← 3 HTML 文档的语义，结构，与API</a> — <a href=./>Table of Contents</a> — <a href=sections.html>4.3 Section →</a></nav>

@@ -1,0 +1,162 @@
+<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Standard, Developer's Edition</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/dev/styles.css crossorigin=""><script>
+   function toggleStatus(div) {
+     div.parentNode.classList.toggle('wrapped');
+   }
+   function setLinkFragment(link) {
+     link.hash = location.hash;
+   }
+  </script><body>
+  <script async="" src=/dev/search.js></script>
+  
+  
+  
+  <header id=head class="head with-buttons">
+   <a href=https://whatwg.org/ class=logo><img width=100 alt=WHATWG crossorigin="" src=https://resources.whatwg.org/logo.svg height=100></a>
+   
+   <hgroup><h1><a rel=home href=/dev/>HTML: The Living Standard</a></h1><h2 id="developer's-edition-—-last-updated-date:-01-jan-1901" class="no-num no-toc">Developer's Edition — Last Updated <span class=pubdate>6 November 2020</span></h2><div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/developers-edition-mdash-last-updated-date-01-jan-1901.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/developers-edition-mdash-last-updated-date-01-jan-1901.zh.html></div></hgroup>
+   
+   <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-91053840-1', 'auto');
+      ga('send', 'pageview');
+   </script>
+  </header>
+
+  
+
+  
+
+
+  
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/table-of-contents.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/table-of-contents.zh.html></div>
+  
+
+
+  
+<div data-en-date="Sat Aug 11 2018 08:00:56 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/full-table-of-contents.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/full-table-of-contents.zh.html></div>
+  
+
+  
+
+  
+
+
+  <h2 id=about-dev-edition class="no-num no-toc">关于本标准</h2>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/about-this-specification.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/about-this-specification.zh.html></div>
+
+  <p>本标准与其他标准不同，它的处理完全考虑到了 Web 开发者。</p>
+
+  <p>本标准关注可读性和可访问性，不像 <a href=/multipage/>完整的 HTML 标准</a>，"开发者版本" 移除了
+  只有浏览器厂商需要知道的信息。它个版本是用我们的构建工具从完整的规范自动产出的，
+  因此总会与最新开发的 HTML 保持同步。</p>
+
+  <p>其概念、构造，以及未来可参考 <a href=http://web.archive.org/web/20150220020906/http://archive.germanforblack.com:80/articles/html5-for-web-developers>
+  原始出版发行</a>，以及 <a href=https://blog.whatwg.org/developers-edition-comeback>关于重启该版本的博文</a>。</p>
+
+  <p>最后，欢迎 <a href=https://github.com/whatwg/html/labels/dev%20edition>在 GitHub 贡献</a> 来改进该版本！</p>
+
+  
+
+
+  <nav><a href=named-characters.html>← 13.2 Named character references</a> — <a href=./>Table of Contents</a> — <a href=obsolete.html>15 废弃的特性 →</a></nav><ol class=toc><li><a href=xhtml.html#the-xhtml-syntax><span class=secno>14</span> XML 语法</a></ol><h2 id=the-xhtml-syntax><span class=secno>14</span> <dfn id=xhtml>XML 语法</dfn><a href=#the-xhtml-syntax class=self-link></a></h2><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/XHTML title="XHTML is a term that was historically used to describe HTML documents written to conform with XML syntax rules.">HTML/XHTML</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>2+</span></span><span class="safari yes"><span>Safari</span><span>3.1+</span></span><span class="chrome yes"><span>Chrome</span><span>4+</span></span><hr><span class="opera yes"><span>Opera</span><span>9+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>9+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>2+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>2+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span><hr><span class=caniuse><span><a href="https://caniuse.com/#feat=xhtml" title="XHTML served as application/xhtml+xml">caniuse.com table</a></span></span></div></div></div>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-xml-syntax/index.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/the-xml-syntax/index.zh.html></div>
+
+  <p class=note>本章只描述 XML 资源的语法规则。
+  <code>text/html</code> 资源的规则在上一章 "<a href=syntax.html#syntax id=the-xhtml-syntax:syntax>HTML
+  语法</a>" 中讨论。</p>
+
+  
+
+  <p class=note>HTML 的 XML 语法以前称为 "XHTML"，但本规范不适用这一术语
+  （一个原因是这样的术语不能用于 MathML 和 SVG 的 HTML 语法）。</p>
+
+  <p>XML 的语法定义在 XML 和 Namespaces in XML 规范中。<a href=references.html#refsXML>[XML]</a>
+  <a href=references.html#refsXMLNS>[XMLNS]</a></p>
+
+  <p>本规范没有在 XML 规范的基础上定义任何语法级别的要求。</p>
+
+  <p>XML 文档可能会包含一个 <code>DOCTYPE</code>，但符合本规范不要求包含。
+  本规范没有定义共有或系统标识符，也没有提供正式的 DTD。</p>
+
+  <p class=note>根据 XML 规范，XML 处理器不保证处理 DOCTYPE 中引用的外部 DTD 子集。
+  这意味着，例如为 XML 文档中的字符使用
+  <a href=https://www.w3.org/TR/xml/#dt-entref>实体引用</a>
+  时，如果它们定义在外部文件中（
+  除了 <code>&amp;lt;</code>，<code>&amp;gt;</code>，
+  <code>&amp;amp;</code>， <code>&amp;quot;</code> 以及
+  <code>&amp;apos;</code> 之外
+  ）就是不安全的。</p>
+
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+
+  
+
+
+  
+
+
+
+
+
+  <nav><a href=named-characters.html>← 13.2 Named character references</a> — <a href=./>Table of Contents</a> — <a href=obsolete.html>15 废弃的特性 →</a></nav>

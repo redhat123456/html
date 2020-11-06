@@ -1,0 +1,261 @@
+<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Standard, Developer's Edition</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/dev/styles.css crossorigin=""><script>
+   function toggleStatus(div) {
+     div.parentNode.classList.toggle('wrapped');
+   }
+   function setLinkFragment(link) {
+     link.hash = location.hash;
+   }
+  </script><body>
+  <script async="" src=/dev/search.js></script>
+  
+  
+  
+  <header id=head class="head with-buttons">
+   <a href=https://whatwg.org/ class=logo><img width=100 alt=WHATWG crossorigin="" src=https://resources.whatwg.org/logo.svg height=100></a>
+   
+   <hgroup><h1><a rel=home href=/dev/>HTML: The Living Standard</a></h1><h2 id="developer's-edition-—-last-updated-date:-01-jan-1901" class="no-num no-toc">Developer's Edition — Last Updated <span class=pubdate>6 November 2020</span></h2><div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/developers-edition-mdash-last-updated-date-01-jan-1901.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/developers-edition-mdash-last-updated-date-01-jan-1901.zh.html></div></hgroup>
+   
+   <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-91053840-1', 'auto');
+      ga('send', 'pageview');
+   </script>
+  </header>
+
+  
+
+  
+
+
+  
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/table-of-contents.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/table-of-contents.zh.html></div>
+  
+
+
+  
+<div data-en-date="Sat Aug 11 2018 08:00:56 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/full-table-of-contents.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/full-table-of-contents.zh.html></div>
+  
+
+  
+
+  
+
+
+  <h2 id=about-dev-edition class="no-num no-toc">关于本标准</h2>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/about-this-specification.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/about-this-specification.zh.html></div>
+
+  <p>本标准与其他标准不同，它的处理完全考虑到了 Web 开发者。</p>
+
+  <p>本标准关注可读性和可访问性，不像 <a href=/multipage/>完整的 HTML 标准</a>，"开发者版本" 移除了
+  只有浏览器厂商需要知道的信息。它个版本是用我们的构建工具从完整的规范自动产出的，
+  因此总会与最新开发的 HTML 保持同步。</p>
+
+  <p>其概念、构造，以及未来可参考 <a href=http://web.archive.org/web/20150220020906/http://archive.germanforblack.com:80/articles/html5-for-web-developers>
+  原始出版发行</a>，以及 <a href=https://blog.whatwg.org/developers-edition-comeback>关于重启该版本的博文</a>。</p>
+
+  <p>最后，欢迎 <a href=https://github.com/whatwg/html/labels/dev%20edition>在 GitHub 贡献</a> 来改进该版本！</p>
+
+  
+
+
+  <nav><a href=media.html>← 4.8.9 video 元素</a> — <a href=./>Table of Contents</a> — <a href=embedded-content-other.html>4.8.16 MathML →</a></nav><ol class=toc><li><ol><li><ol><li><a href=image-maps.html#the-map-element><span class=secno>4.8.13</span> The <code>map</code> element</a><li><a href=image-maps.html#the-area-element><span class=secno>4.8.14</span> The <code>area</code> element</a><li><a href=image-maps.html#image-maps><span class=secno>4.8.15</span> 图片映射</a></ol></ol></ol><h4 id=the-map-element><span class=secno>4.8.13</span> The <dfn><code>map</code></dfn> element<a href=#the-map-element class=self-link></a></h4><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/HTML/Element/map title="The HTML <map> element is used with <area> elements to define an image map (a clickable link area).">Element/map</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>1+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>Yes</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>1+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/embedded-content/the-map-element.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/the-elements-of-html/embedded-content/the-map-element.zh.html?filename=the-map-element.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fthe-elements-of-html%2Fembedded-content%2Fthe-map-element.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  <dl class=element><dt><a href=dom.html#concept-element-categories id=the-map-element:concept-element-categories>Categories</a>:<dd><a id=the-map-element:flow-content href=dom.html#flow-content>Flow content</a>.<dd><a id=the-map-element:phrasing-content href=dom.html#phrasing-content>Phrasing content</a>.<dd><a id=the-map-element:palpable-content-2 href=dom.html#palpable-content-2>Palpable content</a>.<dt><a href=dom.html#concept-element-contexts id=the-map-element:concept-element-contexts>Contexts in which this element can be used</a>:<dd>Where <a id=the-map-element:phrasing-content-2 href=dom.html#phrasing-content>phrasing content</a> is expected.<dt><a href=dom.html#concept-element-content-model id=the-map-element:concept-element-content-model>Content model</a>:<dd><a id=the-map-element:transparent href=dom.html#transparent>Transparent</a>.<dt><a href=dom.html#concept-element-tag-omission id=the-map-element:concept-element-tag-omission>text/html 中的标签省略</a>：<dd>哪个标签都不能省略。<dt><a href=dom.html#concept-element-attributes id=the-map-element:concept-element-attributes>Content attributes</a>:<dd><a id=the-map-element:全局属性 href=dom.html#全局属性>Global attributes</a><dd><code id=the-map-element:attr-map-name><a href=#attr-map-name>name</a></code> — Name of <a href=#image-map id=the-map-element:image-map>image map</a> to <a href=dom.html#referenced id=the-map-element:referenced>reference</a> from the <code id=the-map-element:attr-hyperlink-usemap><a href=#attr-hyperlink-usemap>usemap</a></code> attribute<dt><a href=dom.html#concept-element-accessibility-considerations id=the-map-element:concept-element-accessibility-considerations>Accessibility considerations</a>:<dd><a href=https://w3c.github.io/html-aria/#el-map>For authors</a>.<dd><a href=https://w3c.github.io/html-aam/#el-map>For implementers</a>.<dt><a href=dom.html#concept-element-dom id=the-map-element:concept-element-dom>DOM interface</a>:<dd>Uses <code>HTMLMapElement</code>.</dl>
+
+  <p>The <code id=the-map-element:the-map-element><a href=#the-map-element>map</a></code> element, in conjunction with an <code id=the-map-element:the-img-element><a href=embedded-content.html#the-img-element>img</a></code> element and any
+  <code id=the-map-element:the-area-element><a href=#the-area-element>area</a></code> element descendants, defines an <a href=#image-map id=the-map-element:image-map-2>image map</a>. The element
+  <a id=the-map-element:represents href=dom.html#represents>represents</a> its children.</p>
+
+  <p>The <dfn data-dfn-for=map id=attr-map-name data-dfn-type=element-attr><code>name</code></dfn> attribute gives
+  the map a name so that it can be <a id=the-map-element:referenced-2 href=dom.html#referenced>referenced</a>. The attribute must be present and must
+  have a non-empty value with no <a id=the-map-element:space-characters href=https://infra.spec.whatwg.org/#ascii-whitespace data-x-internal=space-characters>ASCII whitespace</a>. The value of the <code id=the-map-element:attr-map-name-2><a href=#attr-map-name>name</a></code> attribute must not be equal to the value of the <code id=the-map-element:attr-map-name-3><a href=#attr-map-name>name</a></code> attribute of another <code id=the-map-element:the-map-element-2><a href=#the-map-element>map</a></code> element in the same
+  <a id=the-map-element:tree href=https://dom.spec.whatwg.org/#concept-tree data-x-internal=tree>tree</a>. If the <code id=the-map-element:the-id-attribute><a href=dom.html#the-id-attribute>id</a></code> attribute is also specified, both
+  attributes must have the same value.</p>
+
+  <dl class=domintro><dt><var>map</var> . <code id=dom-map-areas>areas</code><dd>
+    <p>Returns an <code id=the-map-element:htmlcollection><a data-x-internal=htmlcollection href=https://dom.spec.whatwg.org/#interface-htmlcollection>HTMLCollection</a></code> of the <code id=the-map-element:the-area-element-2><a href=#the-area-element>area</a></code> elements in the
+    <code id=the-map-element:the-map-element-3><a href=#the-map-element>map</a></code>.</p>
+   </dl>
+
+  
+
+  <div class=example>
+
+   <p>Image maps can be defined in conjunction with other content on the page, to ease maintenance.
+   This example is of a page with an image map at the top of the page and a corresponding set of
+   text links at the bottom.</p>
+
+   <pre><code class=html>&lt;!DOCTYPE HTML>
+&lt;HTML LANG="EN">
+&lt;TITLE>Babies™: Toys&lt;/TITLE>
+&lt;HEADER>
+ &lt;H1>Toys&lt;/H1>
+ &lt;IMG SRC="/images/menu.gif"
+      ALT="Babies™ navigation menu. Select a department to go to its page."
+      USEMAP="#NAV">
+&lt;/HEADER>
+ ...
+&lt;FOOTER>
+ &lt;MAP NAME="NAV">
+  &lt;P>
+   &lt;A HREF="/clothes/">Clothes&lt;/A>
+   &lt;AREA ALT="Clothes" COORDS="0,0,100,50" HREF="/clothes/"> |
+   &lt;A HREF="/toys/">Toys&lt;/A>
+   &lt;AREA ALT="Toys" COORDS="100,0,200,50" HREF="/toys/"> |
+   &lt;A HREF="/food/">Food&lt;/A>
+   &lt;AREA ALT="Food" COORDS="200,0,300,50" HREF="/food/"> |
+   &lt;A HREF="/books/">Books&lt;/A>
+   &lt;AREA ALT="Books" COORDS="300,0,400,50" HREF="/books/">
+  &lt;/P>
+ &lt;/MAP>
+&lt;/FOOTER></code></pre>
+
+  </div>
+
+
+
+
+  <h4 id=the-area-element><span class=secno>4.8.14</span> The <dfn><code>area</code></dfn> element<a href=#the-area-element class=self-link></a></h4><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area title="The HTML <area> tag defines an area inside an image map that has predefined clickable areas. An image map allows geometric areas on an image to be associated with hypertext link.">Element/area</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>Yes</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/embedded-content/the-area-element.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/the-elements-of-html/embedded-content/the-area-element.zh.html?filename=the-area-element.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fthe-elements-of-html%2Fembedded-content%2Fthe-area-element.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  <dl class=element><dt><a href=dom.html#concept-element-categories id=the-area-element:concept-element-categories>Categories</a>:<dd><a id=the-area-element:flow-content href=dom.html#flow-content>Flow content</a>.<dd><a id=the-area-element:phrasing-content href=dom.html#phrasing-content>Phrasing content</a>.<dt><a href=dom.html#concept-element-contexts id=the-area-element:concept-element-contexts>Contexts in which this element can be used</a>:<dd>Where <a id=the-area-element:phrasing-content-2 href=dom.html#phrasing-content>phrasing content</a> is expected, but only if there is a <code id=the-area-element:the-map-element><a href=#the-map-element>map</a></code> element ancestor.<dt><a href=dom.html#concept-element-content-model id=the-area-element:concept-element-content-model>Content model</a>:<dd><a href=dom.html#concept-content-nothing id=the-area-element:concept-content-nothing>Nothing</a>.<dt><a href=dom.html#concept-element-tag-omission id=the-area-element:concept-element-tag-omission>text/html 中的标签省略</a>：<dd>哪个标签都不能省略。<dt><a href=dom.html#concept-element-attributes id=the-area-element:concept-element-attributes>Content attributes</a>:<dd><a id=the-area-element:全局属性 href=dom.html#全局属性>Global attributes</a><dd><code id=the-area-element:attr-area-alt><a href=#attr-area-alt>alt</a></code> — Replacement text for use when images are not available<dd><code id=the-area-element:attr-area-coords><a href=#attr-area-coords>coords</a></code> — Coordinates for the shape to be created in an <a href=#image-map id=the-area-element:image-map>image map</a><dd><code id=the-area-element:attr-area-shape><a href=#attr-area-shape>shape</a></code> — The kind of shape to be created in an <a href=#image-map id=the-area-element:image-map-2>image map</a><dd><code id=the-area-element:attr-hyperlink-href><a href=links.html#attr-hyperlink-href>href</a></code> — Address of the <a id=the-area-element:hyperlink href=links.html#hyperlink>hyperlink</a><dd><code id=the-area-element:attr-hyperlink-target><a href=links.html#attr-hyperlink-target>target</a></code> — <a id=the-area-element:browsing-context href=browsers.html#browsing-context>Browsing context</a> for <a id=the-area-element:hyperlink-2 href=links.html#hyperlink>hyperlink</a> <span>navigation</span><dd><code id=the-area-element:attr-hyperlink-download><a href=links.html#attr-hyperlink-download>download</a></code> — Whether to download the resource instead of navigating to it, and its file name if so<dd><code id=the-area-element:ping><a href=links.html#ping>ping</a></code> — <a href=https://url.spec.whatwg.org/#concept-url id=the-area-element:url data-x-internal=url>URLs</a> to ping<dd><code id=the-area-element:attr-hyperlink-rel><a href=links.html#attr-hyperlink-rel>rel</a></code> — Relationship between the location in the document containing the <a id=the-area-element:hyperlink-3 href=links.html#hyperlink>hyperlink</a> and the destination resource<dd><code id=the-area-element:attr-hyperlink-referrerpolicy><a href=links.html#attr-hyperlink-referrerpolicy>referrerpolicy</a></code> — <a id=the-area-element:referrer-policy href=https://w3c.github.io/webappsec-referrer-policy/#referrer-policy data-x-internal=referrer-policy>Referrer policy</a> for <a href=https://fetch.spec.whatwg.org/#concept-fetch id=the-area-element:concept-fetch data-x-internal=concept-fetch>fetches</a> initiated by the element<dt><a href=dom.html#concept-element-accessibility-considerations id=the-area-element:concept-element-accessibility-considerations>Accessibility considerations</a>:<dd>If the element has an <code id=the-area-element:attr-hyperlink-href-2><a href=links.html#attr-hyperlink-href>href</a></code> attribute: <a href=https://w3c.github.io/html-aria/#el-area>for authors</a>; <a href=https://w3c.github.io/html-aam/#el-area>for implementers</a>.<dd>Otherwise: <a href=https://w3c.github.io/html-aria/#el-area-no-href>for authors</a>; <a href=https://w3c.github.io/html-aam/#el-area-no-href>for implementers</a>.<dt><a href=dom.html#concept-element-dom id=the-area-element:concept-element-dom>DOM interface</a>:<dd>Uses <code>HTMLAreaElement</code>.</dl>
+
+  <p>The <code id=the-area-element:the-area-element><a href=#the-area-element>area</a></code> element <a id=the-area-element:represents href=dom.html#represents>represents</a> either a hyperlink with some text and a
+  corresponding area on an <a href=#image-map id=the-area-element:image-map-3>image map</a>, or a dead area on an image map.</p>
+
+  <p>An <code id=the-area-element:the-area-element-2><a href=#the-area-element>area</a></code> element with a parent node must have a <code id=the-area-element:the-map-element-2><a href=#the-map-element>map</a></code> element
+  ancestor.</p>
+
+  <p>If the <code id=the-area-element:the-area-element-3><a href=#the-area-element>area</a></code> element has an <code id=the-area-element:attr-hyperlink-href-3><a href=links.html#attr-hyperlink-href>href</a></code>
+  attribute, then the <code id=the-area-element:the-area-element-4><a href=#the-area-element>area</a></code> element represents a <a id=the-area-element:hyperlink-4 href=links.html#hyperlink>hyperlink</a>. In this case,
+  the <dfn data-dfn-for=area id=attr-area-alt data-dfn-type=element-attr><code>alt</code></dfn> attribute must be
+  present. It specifies the text of the hyperlink. Its value must be text that, when presented with
+  the texts specified for the other hyperlinks of the <a href=#image-map id=the-area-element:image-map-4>image map</a>, and with the
+  alternative text of the image, but without the image itself, provides the user with the same kind
+  of choice as the hyperlink would when used without its text but with its shape applied to the
+  image. The <code id=the-area-element:attr-area-alt-2><a href=#attr-area-alt>alt</a></code> attribute may be left blank if there is another
+  <code id=the-area-element:the-area-element-5><a href=#the-area-element>area</a></code> element in the same <a href=#image-map id=the-area-element:image-map-5>image map</a> that points to the same resource and
+  has a non-blank <code id=the-area-element:attr-area-alt-3><a href=#attr-area-alt>alt</a></code> attribute.</p>
+
+  <p>If the <code id=the-area-element:the-area-element-6><a href=#the-area-element>area</a></code> element has no <code id=the-area-element:attr-hyperlink-href-4><a href=links.html#attr-hyperlink-href>href</a></code>
+  attribute, then the area represented by the element cannot be selected, and the <code id=the-area-element:attr-area-alt-4><a href=#attr-area-alt>alt</a></code> attribute must be omitted.</p>
+
+  <p>In both cases, the <code id=the-area-element:attr-area-shape-2><a href=#attr-area-shape>shape</a></code> and <code id=the-area-element:attr-area-coords-2><a href=#attr-area-coords>coords</a></code> attributes specify the area.</p>
+
+  <p>The <dfn data-dfn-for=area id=attr-area-shape data-dfn-type=element-attr><code>shape</code></dfn> attribute is
+  an <a id=the-area-element:enumerated-attribute href=infrastructure.html#enumerated-attribute>enumerated attribute</a>. The following table lists the keywords defined for this
+  attribute. The states given in the first cell of the rows with keywords give the states to which
+  those keywords map.  </p>
+
+  <table><thead><tr><th>State
+     <th>Keywords
+     <tbody><tr><td><a href=#attr-area-shape-circle id=the-area-element:attr-area-shape-circle>Circle state</a>
+     <td><dfn id=attr-area-shape-keyword-circle><code>circle</code></dfn>
+     <tr><td><a href=#attr-area-shape-default id=the-area-element:attr-area-shape-default>Default state</a>
+     <td><dfn id=attr-area-shape-keyword-default><code>default</code></dfn>
+     <tr><td><a href=#attr-area-shape-poly id=the-area-element:attr-area-shape-poly>Polygon state</a>
+     <td><dfn id=attr-area-shape-keyword-poly><code>poly</code></dfn>
+     <tr><td><a href=#attr-area-shape-rect id=the-area-element:attr-area-shape-rect>Rectangle state</a>
+     <td><dfn id=attr-area-shape-keyword-rect><code>rect</code></dfn>
+     </table>
+
+  <p>The attribute may be omitted. The <i id=the-area-element:missing-value-default><a href=infrastructure.html#missing-value-default>missing value default</a></i>
+  and <i id=the-area-element:invalid-value-default><a href=infrastructure.html#invalid-value-default>invalid value default</a></i> are the <a href=#attr-area-shape-rect id=the-area-element:attr-area-shape-rect-2>rectangle</a> state.</p>
+
+  <p>The <dfn data-dfn-for=area id=attr-area-coords data-dfn-type=element-attr><code>coords</code></dfn> attribute
+  must, if specified, contain a <a id=the-area-element:valid-list-of-floating-point-numbers href=infrastructure.html#valid-list-of-floating-point-numbers>valid list of floating-point numbers</a>. This attribute
+  gives the coordinates for the shape described by the <code id=the-area-element:attr-area-shape-3><a href=#attr-area-shape>shape</a></code>
+  attribute. </p>
+
+  
+
+  <p>In the <dfn id=attr-area-shape-circle>circle state</dfn>, <code id=the-area-element:the-area-element-7><a href=#the-area-element>area</a></code> elements must
+  have a <code id=the-area-element:attr-area-coords-3><a href=#attr-area-coords>coords</a></code> attribute present, with three integers, the
+  last of which must be non-negative. The first integer must be the distance in <a href=https://drafts.csswg.org/css-values/#px id="the-area-element:'px'" data-x-internal="'px'">CSS pixels</a> from the left edge of the image to the center of the circle, the
+  second integer must be the distance in <a href=https://drafts.csswg.org/css-values/#px id="the-area-element:'px'-2" data-x-internal="'px'">CSS pixels</a> from the top edge of
+  the image to the center of the circle, and the third integer must be the radius of the circle,
+  again in <a href=https://drafts.csswg.org/css-values/#px id="the-area-element:'px'-3" data-x-internal="'px'">CSS pixels</a>.</p>
+
+  <p>In the <dfn id=attr-area-shape-default>default state</dfn> state, <code id=the-area-element:the-area-element-8><a href=#the-area-element>area</a></code>
+  elements must not have a <code id=the-area-element:attr-area-coords-4><a href=#attr-area-coords>coords</a></code> attribute. (The area is the
+  whole image.)</p>
+
+  <p>In the <dfn id=attr-area-shape-poly>polygon state</dfn>, <code id=the-area-element:the-area-element-9><a href=#the-area-element>area</a></code> elements must
+  have a <code id=the-area-element:attr-area-coords-5><a href=#attr-area-coords>coords</a></code> attribute with at least six integers, and the
+  number of integers must be even. Each pair of integers must represent a coordinate given as the
+  distances from the left and the top of the image in <a href=https://drafts.csswg.org/css-values/#px id="the-area-element:'px'-4" data-x-internal="'px'">CSS pixels</a>
+  respectively, and all the coordinates together must represent the points of the polygon, in
+  order.</p>
+
+  <p>In the <dfn id=attr-area-shape-rect>rectangle state</dfn>, <code id=the-area-element:the-area-element-10><a href=#the-area-element>area</a></code> elements
+  must have a <code id=the-area-element:attr-area-coords-6><a href=#attr-area-coords>coords</a></code> attribute with exactly four integers,
+  the first of which must be less than the third, and the second of which must be less than the
+  fourth. The four points must represent, respectively, the distance from the left edge of the image
+  to the left side of the rectangle, the distance from the top edge to the top side, the distance
+  from the left edge to the right side, and the distance from the top edge to the bottom side, all
+  in <a href=https://drafts.csswg.org/css-values/#px id="the-area-element:'px'-5" data-x-internal="'px'">CSS pixels</a>.</p>
+
+  
+
+  <p>The <code id=the-area-element:attr-hyperlink-target-2><a href=links.html#attr-hyperlink-target>target</a></code>, <code id=the-area-element:attr-hyperlink-download-2><a href=links.html#attr-hyperlink-download>download</a></code>, <code id=the-area-element:ping-2><a href=links.html#ping>ping</a></code>,
+  <code id=the-area-element:attr-hyperlink-rel-2><a href=links.html#attr-hyperlink-rel>rel</a></code>, and <code id=the-area-element:attr-hyperlink-referrerpolicy-2><a href=links.html#attr-hyperlink-referrerpolicy>referrerpolicy</a></code> attributes must be omitted if the
+  <code id=the-area-element:attr-hyperlink-href-5><a href=links.html#attr-hyperlink-href>href</a></code> attribute is not present.</p>
+
+  <p>If the <code id=the-area-element:names:-the-itemprop-attribute><a href=microdata.html#names:-the-itemprop-attribute>itemprop</a></code> attribute is specified on an
+  <code id=the-area-element:the-area-element-11><a href=#the-area-element>area</a></code> element, then the <code id=the-area-element:attr-hyperlink-href-6><a href=links.html#attr-hyperlink-href>href</a></code> attribute must
+  also be specified.</p>
+
+  
+
+
+
+
+  <h4 id=image-maps><span class=secno>4.8.15</span> 图片映射<a href=#image-maps class=self-link></a></h4>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Thu May 24 2018 01:36:45 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/embedded-content/image-maps/index.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/the-elements-of-html/embedded-content/image-maps/index.zh.html></div>
+
+  
+
+  
+
+  <p><dfn id=image-map>图片映射</dfn> 可以让图片的几何区域与 <a href=links.html#hyperlink id=image-maps:hyperlink>超链接</a> 相关联。</p>
+
+  <p><code id=image-maps:the-img-element><a href=embedded-content.html#the-img-element>img</a></code> 元素或 <code id=image-maps:the-object-element><a href=iframe-embed-object.html#the-object-element>object</a></code> 元素表示的图片可以通过在该元素上指定一个
+  <dfn id=attr-hyperlink-usemap><code>usemap</code></dfn> 属性来与一个图片映射相关联
+  （以 <code id=image-maps:the-map-element><a href=#the-map-element>map</a></code> 元素的形式）。如果指定了 <code id=image-maps:attr-hyperlink-usemap><a href=#attr-hyperlink-usemap>usemap</a></code>
+  属性，它必须是一个对 <code id=image-maps:the-map-element-2><a href=#the-map-element>map</a></code> 元素的 <a href=infrastructure.html#valid-hash-name-reference id=image-maps:valid-hash-name-reference>合法的哈希名引用</a>。</p>
+
+  <div class=example>
+
+   <p>考虑下面这样的图片：</p>
+
+   <p><img alt="A line with four shapes in it, equally spaced: a red hollow box, a green circle, a blue triangle, and a yellow four-pointed star." src=/images/sample-usemap.png width=600 height=150></p>
+
+   <p>我们想只让有颜色的区域可点，可以这样做：</p>
+
+   <pre>&lt;p>
+ Please select a shape:
+ &lt;img src="shapes.png" usemap="#shapes"
+      alt="Four shapes are available: a red hollow box, a green circle, a blue triangle, and a yellow four-pointed star.">
+ &lt;map name="shapes">
+  &lt;area shape=rect coords="50,50,100,100"> &lt;!-- the hole in the red box -->
+  &lt;area shape=rect coords="25,25,125,125" href="red.html" alt="Red box.">
+  &lt;area shape=circle coords="200,75,50" href="green.html" alt="Green circle.">
+  &lt;area shape=poly coords="325,25,262,125,388,125" href="blue.html" alt="Blue triangle.">
+  &lt;area shape=poly coords="450,25,435,60,400,75,435,90,450,125,465,90,500,75,465,60"
+        href="yellow.html" alt="Yellow star.">
+ &lt;/map>
+&lt;/p></pre>
+
+  </div>
+
+  
+
+
+
+
+  <nav><a href=media.html>← 4.8.9 video 元素</a> — <a href=./>Table of Contents</a> — <a href=embedded-content-other.html>4.8.16 MathML →</a></nav>

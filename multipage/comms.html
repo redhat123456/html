@@ -1,0 +1,157 @@
+<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/html/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Standard</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/spec.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/html/styles.css crossorigin=""><script>
+   function toggleStatus(div) {
+     div.parentNode.classList.toggle('wrapped');
+   }
+   function setLinkFragment(link) {
+     link.hash = location.hash;
+   }
+  </script><link rel=stylesheet href=/html/resources/zh-cn.css><body>
+  
+  <script async="" crossorigin="" src=/html/resources/html-dfn.js></script>
+  <script data-file-issue-url=https://github.com/whatwg/html/issues/new async="" crossorigin="" src=https://resources.whatwg.org/file-issue.js></script>
+  
+  <header id=head class="head with-buttons">
+   <a href=https://whatwg.org/ class=logo><img width=100 alt=WHATWG crossorigin="" src=https://resources.whatwg.org/logo.svg height=100></a>
+   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Living Standard — Last Updated <span class=pubdate>6 November 2020</span></h2><div data-en-date="Sat Aug 11 2018 08:00:56 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/living-standard-mdash-last-updated-date-01-jan-1901.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/living-standard-mdash-last-updated-date-01-jan-1901.zh.html?filename=living-standard-mdash-last-updated-date-01-jan-1901.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fliving-standard-mdash-last-updated-date-01-jan-1901.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div><div data-en-date="Sat Aug 11 2018 08:00:56 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/commit-snapshot-mdash-last-updated-date-01-jan-1901.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/commit-snapshot-mdash-last-updated-date-01-jan-1901.zh.html?filename=commit-snapshot-mdash-last-updated-date-01-jan-1901.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fcommit-snapshot-mdash-last-updated-date-01-jan-1901.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div><div data-en-date="Sat Aug 11 2018 08:00:56 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/review-draft-mdash-published-date-01-jan-1901.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/review-draft-mdash-published-date-01-jan-1901.zh.html?filename=review-draft-mdash-published-date-01-jan-1901.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Freview-draft-mdash-published-date-01-jan-1901.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div></hgroup>
+   
+   
+   <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-91053840-1', 'auto');
+      ga('send', 'pageview');
+   </script>
+  </header>
+
+  
+
+  
+
+
+  
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/table-of-contents.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/table-of-contents.zh.html></div>
+  
+
+
+  
+<div data-en-date="Sat Aug 11 2018 08:00:56 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/full-table-of-contents.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/full-table-of-contents.zh.html></div>
+  
+
+  
+
+  
+
+
+  <nav><a href=imagebitmap-and-animations.html>← 8.10 Images</a> — <a href=./>Table of Contents</a> — <a href=server-sent-events.html>9.2 服务器发送的事件 →</a></nav><ol class=toc><li id=toc-comms><a href=comms.html#comms><span class=secno>9</span> 通信</a><ol><li><a href=comms.html#messageevent-接口><span class=secno>9.1</span> <code>MessageEvent</code> 接口</a></ol></ol><h2 id=comms><span class=secno>9</span> 通信<a href=#comms class=self-link></a></h2>
+<div data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/communication/index.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/communication/index.en.html></div>
+
+
+  <h3 id=messageevent-接口><span class=secno>9.1</span> <code id=messageevent-接口:messageevent><a href=#messageevent>MessageEvent</a></code> 接口<a href=#messageevent-接口 class=self-link></a></h3>
+<div data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/communication/the-messageevent-interface.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/communication/the-messageevent-interface.en.html></div>
+
+  <p><a href=server-sent-events.html#server-sent-events id=messageevent-接口:server-sent-events>服务器发送的事件</a>,
+  <a id=messageevent-接口:network href=web-sockets.html#network>Web sockets</a>, <a href=web-messaging.html#web-messaging id=messageevent-接口:web-messaging>跨文档通信</a>,
+  <a href=web-messaging.html#通道 id=messageevent-接口:通道>通道通信</a>, 和
+  <a href=web-messaging.html#向其他浏览上下文广播 id=messageevent-接口:向其他浏览上下文广播>广播通道</a> 中的
+  <code id=messageevent-接口:event-message><a href=indices.html#event-message>消息</a></code> 使用 <code id=messageevent-接口:messageevent-2><a href=#messageevent>MessageEvent</a></code> 接口：</p>
+
+  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent title="The MessageEvent interface represents a message received by a target object.">MessageEvent</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>4+</span></span><span class="safari yes"><span>Safari</span><span>4+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>10.6+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>9+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>3+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>1+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>11+</span></span></div></div></div><pre class=idl>[Constructor(DOMString type, optional <a href=#messageeventinit id=messageevent-接口:messageeventinit>MessageEventInit</a> eventInitDict), Exposed=(Window,Worker,AudioWorklet)]
+interface <dfn id=messageevent>MessageEvent</dfn> : <a id=messageevent-接口:event href=https://dom.spec.whatwg.org/#interface-event data-x-internal=event>Event</a> {
+  readonly attribute any <a href=#dom-messageevent-data id=messageevent-接口:dom-messageevent-data>data</a>;
+  readonly attribute USVString <a href=#dom-messageevent-origin id=messageevent-接口:dom-messageevent-origin>origin</a>;
+  readonly attribute DOMString <a href=#dom-messageevent-lasteventid id=messageevent-接口:dom-messageevent-lasteventid>lastEventId</a>;
+  readonly attribute <a href=#messageeventsource id=messageevent-接口:messageeventsource>MessageEventSource</a>? <a href=#dom-messageevent-source id=messageevent-接口:dom-messageevent-source>source</a>;
+  readonly attribute FrozenArray&lt;<a id=messageevent-接口:messageport href=web-messaging.html#messageport>MessagePort</a>> <a href=#dom-messageevent-ports id=messageevent-接口:dom-messageevent-ports>ports</a>;
+
+  void <a href=#dom-messageevent-initmessageevent id=messageevent-接口:dom-messageevent-initmessageevent>initMessageEvent</a>(DOMString type, optional boolean bubbles = false, optional boolean cancelable = false, optional any data = null, optional USVString origin = "", optional DOMString lastEventId = "", optional <a href=#messageeventsource id=messageevent-接口:messageeventsource-2>MessageEventSource</a>? source = null, optional sequence&lt;<a id=messageevent-接口:messageport-2 href=web-messaging.html#messageport>MessagePort</a>> ports = []);
+};
+
+dictionary <dfn id=messageeventinit>MessageEventInit</dfn> : <a id=messageevent-接口:eventinit href=https://dom.spec.whatwg.org/#dictdef-eventinit data-x-internal=eventinit>EventInit</a> {
+  any data = null;
+  USVString origin = "";
+  DOMString lastEventId = "";
+  <a href=#messageeventsource id=messageevent-接口:messageeventsource-3>MessageEventSource</a>? source = null;
+  sequence&lt;<a id=messageevent-接口:messageport-3 href=web-messaging.html#messageport>MessagePort</a>> ports = [];
+};
+
+typedef (<a id=messageevent-接口:windowproxy href=window-object.html#windowproxy>WindowProxy</a> or <a id=messageevent-接口:messageport-4 href=web-messaging.html#messageport>MessagePort</a> or <a id=messageevent-接口:serviceworker href=https://w3c.github.io/ServiceWorker/#serviceworker data-x-internal=serviceworker>ServiceWorker</a>) <dfn id=messageeventsource>MessageEventSource</dfn>;</pre>
+
+  <dl class=domintro><dt><var>event</var> . <code id=dom-messageevent-data-dev><a href=#dom-messageevent-data>data</a></code><dd>
+
+    <p>返回消息的数据。</p>
+
+   <dt><var>event</var> . <code id=dom-messageevent-origin-dev><a href=#dom-messageevent-origin>origin</a></code><dd>
+
+    <p>返回消息的域，用于 <a href=server-sent-events.html#server-sent-events id=messageevent-接口:server-sent-events-2>服务器发送的事件</a> 和
+    <a href=web-messaging.html#web-messaging id=messageevent-接口:web-messaging-2>跨文档通信</a>。</p>
+
+   <dt><var>event</var> . <code id=dom-messageevent-lasteventid-dev><a href=#dom-messageevent-lasteventid>lastEventId</a></code><dd>
+
+    <p>返回 <a href=server-sent-events.html#concept-event-stream-last-event-id id=messageevent-接口:concept-event-stream-last-event-id>上一个事件 ID 字符串</a>,
+    用于 <a href=server-sent-events.html#server-sent-events id=messageevent-接口:server-sent-events-3>服务器发送的事件</a>。</p>
+
+   <dt><var>event</var> . <code id=dom-messageevent-source-dev><a href=#dom-messageevent-source>source</a></code><dd>
+
+    <p>返回源 window 的 <code id=messageevent-接口:windowproxy-2><a href=window-object.html#windowproxy>WindowProxy</a></code>, 用于
+    <a href=web-messaging.html#web-messaging id=messageevent-接口:web-messaging-3>跨文档通信</a>,
+    挂载 <code id=messageevent-接口:messageport-5><a href=web-messaging.html#messageport>MessagePort</a></code>,
+    以及在 <code id=messageevent-接口:sharedworkerglobalscope><a href=workers.html#sharedworkerglobalscope>SharedWorkerGlobalScope</a></code> 对象上触发的
+    <code id=messageevent-接口:event-workerglobalscope-connect><a href=indices.html#event-workerglobalscope-connect>connect</a></code> 事件中。</p>
+
+   <dt><var>event</var> . <code id=dom-messageevent-ports-dev><a href=#dom-messageevent-ports>ports</a></code><dd>
+
+    <p>返回与消息同时发送的 <code id=messageevent-接口:messageport-6><a href=web-messaging.html#messageport>MessagePort</a></code> 数组, 用于
+    <a href=web-messaging.html#web-messaging id=messageevent-接口:web-messaging-4>跨文档通信</a> 和
+    <a href=web-messaging.html#通道 id=messageevent-接口:通道-2>通道通信</a>。</p>
+
+   </dl>
+
+  
+
+  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent/data title="The data read-only property of the MessageEvent interface represents the data sent by the message emitter.">MessageEvent/data</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>4+</span></span><span class="safari yes"><span>Safari</span><span>4+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>9+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>Yes</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>3+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div><p><dfn id=dom-messageevent-data><code>data</code></dfn> 属性必须返回它被初始化的值。
+  表示被发送的消息。</p>
+
+  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent/origin title="The origin read-only property of the MessageEvent interface is a USVString representing the origin of the message emitter.">MessageEvent/origin</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>4+</span></span><span class="safari yes"><span>Safari</span><span>4+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>9+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>3+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div><p><dfn id=dom-messageevent-origin><code>origin</code></dfn> 属性必须返回它被初始化的值。
+  在 <a href=server-sent-events.html#server-sent-events id=messageevent-接口:server-sent-events-4>服务器发送的事件</a> 和
+  <a href=web-messaging.html#web-messaging id=messageevent-接口:web-messaging-5>跨文档通信</a> 中，
+  它表示发送消息的文档的 <a href=origin.html#concept-origin id=messageevent-接口:concept-origin>源</a>
+  （通常是文档的 scheme, 主机名和端口，
+  不包括它的路径和 <a href=https://url.spec.whatwg.org/#concept-url-fragment id=messageevent-接口:concept-url-fragment data-x-internal=concept-url-fragment>fragment</a>）。</p>
+
+  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent/lastEventId title="The lastEventId read-only property of the MessageEvent interface is a DOMString representing a unique ID for the event.">MessageEvent/lastEventId</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>4+</span></span><span class="safari yes"><span>Safari</span><span>4+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>17+</span></span><span class="ie yes"><span>Internet Explorer</span><span>9+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>Yes</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>3+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div><p><dfn id=dom-messageevent-lasteventid><code>lastEventId</code></dfn>
+  属性必须返回它被初始化的值。在 <a href=server-sent-events.html#server-sent-events id=messageevent-接口:server-sent-events-5>服务器发送的事件</a> 中，
+  它表示事件源的
+  <a href=server-sent-events.html#concept-event-stream-last-event-id id=messageevent-接口:concept-event-stream-last-event-id-2>上一个事件 ID 字符串</a>。</p>
+
+  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent/source title="The source read-only property of the MessageEvent interface is a MessageEventSource (which can be a WindowProxy, MessagePort, or ServiceWorker object) representing the message emitter.">MessageEvent/source</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>55+</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>55+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div><p><dfn id=dom-messageevent-source><code>source</code></dfn> 属性必须返回它被初始化的值。
+  在 <a href=web-messaging.html#web-messaging id=messageevent-接口:web-messaging-6>跨文档通信</a> 中，
+  它表示发送消息的 <code id=messageevent-接口:window><a href=window-object.html#window>Window</a></code> 对象的
+  <a href=browsers.html#browsing-context id=messageevent-接口:browsing-context>浏览上下文</a> 的 <code id=messageevent-接口:windowproxy-3><a href=window-object.html#windowproxy>WindowProxy</a></code>；
+
+  在 <a href=workers.html#sharedworkerglobalscope id=messageevent-接口:sharedworkerglobalscope-2>共享 Worker</a> 使用的
+  <code id=messageevent-接口:event-workerglobalscope-connect-2><a href=indices.html#event-workerglobalscope-connect>connect</a></code> 事件中，它表示
+  正在连接的新 <code id=messageevent-接口:messageport-7><a href=web-messaging.html#messageport>MessagePort</a></code>。</p>
+
+  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent/ports title="The ports read-only property of the MessageEvent interface is an array of MessagePort objects representing the ports associated with the channel the message is being sent through (where appropriate, e.g. in channel messaging or when sending a message to a shared worker).">MessageEvent/ports</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>4+</span></span><span class="safari yes"><span>Safari</span><span>4+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>9+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>Yes</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>3+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div><p><dfn id=dom-messageevent-ports><code>ports</code></dfn> 属性必须返回它被初始化的值。
+  在 <a href=web-messaging.html#web-messaging id=messageevent-接口:web-messaging-7>跨文档通信</a> 和
+  <a href=web-messaging.html#通道 id=messageevent-接口:通道-3>通道通信</a> 中它表示，
+  被发送的 <code id=messageevent-接口:messageport-8><a href=web-messaging.html#messageport>MessagePort</a></code> 数组。</p>
+
+  
+  <p><dfn id=dom-messageevent-initmessageevent><code>initMessageEvent()</code></dfn>
+  方法初始化事件的方式必须与命名相似的 <code id=messageevent-接口:dom-event-initevent><a data-x-internal=dom-event-initevent href=https://dom.spec.whatwg.org/#dom-event-initevent>initEvent()</a></code> 方法类似。
+  <a href=references.html#refsDOM>[DOM]</a></p>
+
+  
+
+  <p class=note>很多 API （例如 <code id=messageevent-接口:websocket><a href=web-sockets.html#websocket>WebSocket</a></code>， <code id=messageevent-接口:eventsource><a href=server-sent-events.html#eventsource>EventSource</a></code>）都
+  在它们的 <code id=messageevent-接口:event-message-2><a href=indices.html#event-message>message</a></code> 事件上直接使用
+  <code id=messageevent-接口:messageevent-3><a href=#messageevent>MessageEvent</a></code> 接口，而没有使用 <code id=messageevent-接口:messageport-9><a href=web-messaging.html#messageport>MessagePort</a></code> API。</p>
+
+
+
+  <nav><a href=imagebitmap-and-animations.html>← 8.10 Images</a> — <a href=./>Table of Contents</a> — <a href=server-sent-events.html>9.2 服务器发送的事件 →</a></nav>
+<script src=/html/resources/zh-cn.js></script>

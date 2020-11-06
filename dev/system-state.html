@@ -1,0 +1,295 @@
+<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Standard, Developer's Edition</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/dev/styles.css crossorigin=""><script>
+   function toggleStatus(div) {
+     div.parentNode.classList.toggle('wrapped');
+   }
+   function setLinkFragment(link) {
+     link.hash = location.hash;
+   }
+  </script><body>
+  <script async="" src=/dev/search.js></script>
+  
+  
+  
+  <header id=head class="head with-buttons">
+   <a href=https://whatwg.org/ class=logo><img width=100 alt=WHATWG crossorigin="" src=https://resources.whatwg.org/logo.svg height=100></a>
+   
+   <hgroup><h1><a rel=home href=/dev/>HTML: The Living Standard</a></h1><h2 id="developer's-edition-—-last-updated-date:-01-jan-1901" class="no-num no-toc">Developer's Edition — Last Updated <span class=pubdate>6 November 2020</span></h2><div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/developers-edition-mdash-last-updated-date-01-jan-1901.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/developers-edition-mdash-last-updated-date-01-jan-1901.zh.html></div></hgroup>
+   
+   <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-91053840-1', 'auto');
+      ga('send', 'pageview');
+   </script>
+  </header>
+
+  
+
+  
+
+
+  
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/table-of-contents.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/table-of-contents.zh.html></div>
+  
+
+
+  
+<div data-en-date="Sat Aug 11 2018 08:00:56 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/full-table-of-contents.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/full-table-of-contents.zh.html></div>
+  
+
+  
+
+  
+
+
+  <h2 id=about-dev-edition class="no-num no-toc">关于本标准</h2>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/about-this-specification.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/about-this-specification.zh.html></div>
+
+  <p>本标准与其他标准不同，它的处理完全考虑到了 Web 开发者。</p>
+
+  <p>本标准关注可读性和可访问性，不像 <a href=/multipage/>完整的 HTML 标准</a>，"开发者版本" 移除了
+  只有浏览器厂商需要知道的信息。它个版本是用我们的构建工具从完整的规范自动产出的，
+  因此总会与最新开发的 HTML 保持同步。</p>
+
+  <p>其概念、构造，以及未来可参考 <a href=http://web.archive.org/web/20150220020906/http://archive.germanforblack.com:80/articles/html5-for-web-developers>
+  原始出版发行</a>，以及 <a href=https://blog.whatwg.org/developers-edition-comeback>关于重启该版本的博文</a>。</p>
+
+  <p>最后，欢迎 <a href=https://github.com/whatwg/html/labels/dev%20edition>在 GitHub 贡献</a> 来改进该版本！</p>
+
+  
+
+
+  <nav><a href=timers-and-user-prompts.html>← 8.6 Timers</a> — <a href=./>Table of Contents</a> — <a href=imagebitmap-and-animations.html>8.10 Images →</a></nav><ol class=toc><li><ol><li><a href=system-state.html#system-state-and-capabilities><span class=secno>8.9</span> System state and capabilities</a><ol><li><a href=system-state.html#the-navigator-object><span class=secno>8.9.1</span> The <code>Navigator</code> object</a><ol><li><a href=system-state.html#client-identification><span class=secno>8.9.1.1</span> Client identification</a><li><a href=system-state.html#language-preferences><span class=secno>8.9.1.2</span> Language preferences</a><li><a href=system-state.html#custom-handlers><span class=secno>8.9.1.3</span> Custom scheme handlers: the <code>registerProtocolHandler()</code> method</a><li><a href=system-state.html#cookies><span class=secno>8.9.1.4</span> Cookies</a><li><a href=system-state.html#plugins><span class=secno>8.9.1.5</span> Plugins</a></ol></ol></ol></ol><h3 id=system-state-and-capabilities><span class=secno>8.9</span> System state and capabilities<a href=#system-state-and-capabilities class=self-link></a></h3>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/web-application-apis/system-state-and-capabilities/index.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/web-application-apis/system-state-and-capabilities/index.zh.html?filename=index.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fweb-application-apis%2Fsystem-state-and-capabilities%2Findex.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+
+  <h4 id=the-navigator-object><span class=secno>8.9.1</span> The <code id=the-navigator-object:navigator><a href=#navigator>Navigator</a></code> object<a href=#the-navigator-object class=self-link></a></h4><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Navigator title="The Navigator interface represents the state and the identity of the user agent. It allows scripts to query it and to register themselves to carry on some activities.">Navigator</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>1+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>3+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>4+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>1+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span></div></div></div>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/web-application-apis/system-state-and-capabilities/the-navigator-object/index.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/web-application-apis/system-state-and-capabilities/the-navigator-object/index.zh.html?filename=index.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fweb-application-apis%2Fsystem-state-and-capabilities%2Fthe-navigator-object%2Findex.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  
+
+  <pre><code class=idl>[Exposed=Window]
+interface <dfn id=navigator>Navigator</dfn> {
+  // objects implementing this interface also implement the interfaces given below
+};
+<a href=#navigator id=the-navigator-object:navigator-2>Navigator</a> includes <a href=#navigatorid id=the-navigator-object:navigatorid>NavigatorID</a>;
+<a href=#navigator id=the-navigator-object:navigator-3>Navigator</a> includes <a href=#navigatorlanguage id=the-navigator-object:navigatorlanguage>NavigatorLanguage</a>;
+<a href=#navigator id=the-navigator-object:navigator-4>Navigator</a> includes <a id=the-navigator-object:navigatoronline href=offline.html#navigatoronline>NavigatorOnLine</a>;
+<a href=#navigator id=the-navigator-object:navigator-5>Navigator</a> includes <a href=#navigatorcontentutils id=the-navigator-object:navigatorcontentutils>NavigatorContentUtils</a>;
+<a href=#navigator id=the-navigator-object:navigator-6>Navigator</a> includes <a href=#navigatorcookies id=the-navigator-object:navigatorcookies>NavigatorCookies</a>;
+<a href=#navigator id=the-navigator-object:navigator-7>Navigator</a> includes <a href=#navigatorplugins id=the-navigator-object:navigatorplugins>NavigatorPlugins</a>;
+<a href=#navigator id=the-navigator-object:navigator-8>Navigator</a> includes <a id=the-navigator-object:navigatorconcurrenthardware href=workers.html#navigatorconcurrenthardware>NavigatorConcurrentHardware</a>;</code></pre>
+
+  
+
+
+
+  <h5 id=client-identification><span class=secno>8.9.1.1</span> Client identification<a href=#client-identification class=self-link></a></h5>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/web-application-apis/system-state-and-capabilities/the-navigator-object/client-identification.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/web-application-apis/system-state-and-capabilities/the-navigator-object/client-identification.zh.html?filename=client-identification.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fweb-application-apis%2Fsystem-state-and-capabilities%2Fthe-navigator-object%2Fclient-identification.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID title="The NavigatorID interface contains methods and properties related to the identity of the browser.">NavigatorID</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>Yes</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>Yes</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>Yes</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div><pre><code class=idl>interface mixin <dfn id=navigatorid>NavigatorID</dfn> {
+  readonly attribute DOMString <a href=#dom-navigator-appcodename id=client-identification:dom-navigator-appcodename>appCodeName</a>; // constant "Mozilla"
+  readonly attribute DOMString <a href=#dom-navigator-appname id=client-identification:dom-navigator-appname>appName</a>; // constant "Netscape"
+  readonly attribute DOMString <a href=#dom-navigator-appversion id=client-identification:dom-navigator-appversion>appVersion</a>;
+  readonly attribute DOMString <a href=#dom-navigator-platform id=client-identification:dom-navigator-platform>platform</a>;
+  readonly attribute DOMString <a href=#dom-navigator-product id=client-identification:dom-navigator-product>product</a>; // constant "Gecko"
+  [Exposed=Window] readonly attribute DOMString <a href=#dom-navigator-productsub id=client-identification:dom-navigator-productsub>productSub</a>;
+  readonly attribute DOMString <a href=#dom-navigator-useragent id=client-identification:dom-navigator-useragent>userAgent</a>;
+  [Exposed=Window] readonly attribute DOMString <a href=#dom-navigator-vendor id=client-identification:dom-navigator-vendor>vendor</a>;
+  [Exposed=Window] readonly attribute DOMString <a href=#dom-navigator-vendorsub id=client-identification:dom-navigator-vendorsub>vendorSub</a>; // constant ""
+};</code></pre>
+
+  <p>In certain cases, despite the best efforts of the entire industry, web browsers have bugs and
+  limitations that web authors are forced to work around.</p>
+
+  <p>This section defines a collection of attributes that can be used to determine, from script, the
+  kind of user agent in use, in order to work around these issues.</p>
+
+  
+
+  <p>Client detection should always be limited to detecting known current versions; future versions
+  and unknown versions should always be assumed to be fully compliant.</p>
+
+  <dl class=domintro><dt><var>self</var> . <code>navigator</code> . <code id=dom-navigator-appcodename>appCodeName</code><dd><p>Returns the string "<code>Mozilla</code>".<dt><var>self</var> . <code>navigator</code> . <code id=dom-navigator-appname>appName</code><dd><p>Returns the string "<code>Netscape</code>".<dt><var>self</var> . <code>navigator</code> . <code id=dom-navigator-appversion>appVersion</code><dd><p>Returns the version of the browser.<dt><var>self</var> . <code>navigator</code> . <code id=dom-navigator-platform>platform</code><dd><p>Returns the name of the platform.<dt><var>self</var> . <code>navigator</code> . <code id=dom-navigator-product>product</code><dd><p>Returns the string "<code>Gecko</code>".<dt><var>window</var> . <code>navigator</code> . <code id=dom-navigator-productsub>productSub</code><dd><p>Returns either the string "<code>20030107</code>", or the string "<code>20100101</code>".<dt><var>self</var> . <code>navigator</code> . <code id=dom-navigator-useragent>userAgent</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/userAgent title="The NavigatorID.userAgent read-only property returns the user agent string for the current browser.">NavigatorID/userAgent</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>Yes</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>Yes</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>Yes</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div><dd><p>Returns the complete `<code>User-Agent</code>` header.<dt><var>window</var> . <code>navigator</code> . <code id=dom-navigator-vendor>vendor</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Navigator/vendor title="The value of the Navigator vendor property is always either &quot;Google Inc.&quot;, &quot;Apple Computer, Inc.&quot;, or (in Firefox) the empty string.">Navigator/vendor</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>1+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>15+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>11</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>1+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>14+</span></span></div></div></div><dd><p>Returns either the empty string, the string "<code>Apple Computer, Inc.</code>",
+   or the string "<code>Google Inc.</code>".<dt><var>window</var> . <code>navigator</code> . <code id=dom-navigator-vendorsub>vendorSub</code><dd><p>Returns the empty string.</dl>
+
+  
+
+  
+
+
+  <h5 id=language-preferences><span class=secno>8.9.1.2</span> Language preferences<a href=#language-preferences class=self-link></a></h5>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/web-application-apis/system-state-and-capabilities/the-navigator-object/language-preferences.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/web-application-apis/system-state-and-capabilities/the-navigator-object/language-preferences.zh.html?filename=language-preferences.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fweb-application-apis%2Fsystem-state-and-capabilities%2Fthe-navigator-object%2Flanguage-preferences.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/NavigatorLanguage title="NavigatorLanguage contains methods and properties related to the language of the navigator.">NavigatorLanguage</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>1+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>4+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>11</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>1+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span></div></div></div><pre><code class=idl>interface mixin <dfn id=navigatorlanguage>NavigatorLanguage</dfn> {
+  readonly attribute DOMString <a href=#dom-navigator-language id=language-preferences:dom-navigator-language>language</a>;
+  readonly attribute FrozenArray&lt;DOMString> <a href=#dom-navigator-languages id=language-preferences:dom-navigator-languages>languages</a>;
+};</code></pre>
+
+  <dl class=domintro><dt><var>self</var> . <code>navigator</code> . <code id=dom-navigator-language>language</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/NavigatorLanguage/language title="The NavigatorLanguage.language read-only property returns a string representing the preferred language of the user, usually the language of the browser UI.">NavigatorLanguage/language</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>1+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>4+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>11</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>1+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span></div></div></div><dd><p>Returns a language tag representing the user's preferred language.<dt><var>self</var> . <code>navigator</code> . <code id=dom-navigator-languages>languages</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/NavigatorLanguage/languages title="The NavigatorLanguage.languages read-only property returns an array of DOMStrings representing the user's preferred languages. The language is described using BCP 47 language tags. In the returned array they are ordered by preference with the most preferred language first.">NavigatorLanguage/languages</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>32+</span></span><span class="safari yes"><span>Safari</span><span>11+</span></span><span class="chrome yes"><span>Chrome</span><span>32+</span></span><hr><span class="opera yes"><span>Opera</span><span>24+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>11</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>32+</span></span><span class="webview_android yes"><span>WebView Android</span><span>4.4.3+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>2.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>24+</span></span></div></div></div><dd>
+    <p>Returns an array of language tags representing the user's preferred languages, with the most
+    preferred language first.</p>
+
+    <p>The most preferred language is the one returned by <code id=language-preferences:dom-navigator-language-2><a href=#dom-navigator-language>navigator.language</a></code>.</p>
+   </dl>
+
+  <p class=note>A <code id=language-preferences:event-languagechange><a href=indices.html#event-languagechange>languagechange</a></code> event is fired at the
+  <code id=language-preferences:window><a href=window-object.html#window>Window</a></code> or <code id=language-preferences:workerglobalscope><a href=workers.html#workerglobalscope>WorkerGlobalScope</a></code> object when the user agent's understanding
+  of what the user's preferred languages are changes.</p>
+
+  
+
+
+
+
+  <h5 id=custom-handlers><span class=secno>8.9.1.3</span> Custom scheme handlers: the <code id=custom-handlers:dom-navigator-registerprotocolhandler><a href=#dom-navigator-registerprotocolhandler>registerProtocolHandler()</a></code> method<a href=#custom-handlers class=self-link></a></h5><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Navigator/registerProtocolHandler title="The Navigator method registerProtocolHandler() lets web sites register their ability to open or handle particular URL schemes (aka protocols).">Navigator/registerProtocolHandler</a><div class=support><span class="firefox yes"><span>Firefox</span><span>3+</span></span><span class="safari no"><span>Safari</span><span>No</span></span><span class="chrome yes"><span>Chrome</span><span>13+</span></span><hr><span class="opera yes"><span>Opera</span><span>11.6+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android no"><span>Firefox Android</span><span>No</span></span><span class="safari_ios no"><span>Safari iOS</span><span>No</span></span><span class="chrome_android no"><span>Chrome Android</span><span>No</span></span><span class="webview_android no"><span>WebView Android</span><span>No</span></span><span class="samsunginternet_android no"><span>Samsung Internet</span><span>No</span></span><span class="opera_android no"><span>Opera Android</span><span>No</span></span><hr><span class=caniuse><span><a href="https://caniuse.com/#feat=registerprotocolhandler" title="Custom protocol handling">caniuse.com table</a></span></span></div></div></div>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/web-application-apis/system-state-and-capabilities/the-navigator-object/custom-scheme-handlers-the-registerprotocolhandler-method/index.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/web-application-apis/system-state-and-capabilities/the-navigator-object/custom-scheme-handlers-the-registerprotocolhandler-method/index.zh.html?filename=index.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fweb-application-apis%2Fsystem-state-and-capabilities%2Fthe-navigator-object%2Fcustom-scheme-handlers-the-registerprotocolhandler-method%2Findex.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  <pre><code class=idl>interface mixin <dfn id=navigatorcontentutils>NavigatorContentUtils</dfn> {
+  [SecureContext] undefined <a href=#dom-navigator-registerprotocolhandler id=custom-handlers:dom-navigator-registerprotocolhandler-2>registerProtocolHandler</a>(DOMString scheme, USVString url);
+  [SecureContext] undefined <a href=#dom-navigator-unregisterprotocolhandler id=custom-handlers:dom-navigator-unregisterprotocolhandler>unregisterProtocolHandler</a>(DOMString scheme, USVString url);
+};</code></pre>
+
+  <dl class=domintro><dt><var>window</var> . <code>navigator</code> . <code id=dom-navigator-registerprotocolhandler>registerProtocolHandler</code>(<var>scheme</var>, <var>url</var>)<dd>
+    <p>Registers a handler for <var>scheme</var> at <var>url</var>. For example, an online telephone
+    messaging service could register itself as a handler of the <code id=custom-handlers:sms-protocol><a data-x-internal=sms-protocol href=https://tools.ietf.org/html/rfc5724#section-2>sms:</a></code> scheme, so that if the user clicks on such a link, they are given the
+    opportunity to use that web site. <a href=references.html#refsSMS>[SMS]</a></p>
+
+    <p>The string "<code>%s</code>" in <var>url</var> is used as a placeholder for where
+    to put the URL of the content to be handled.</p>
+
+    <p>Throws a <a id=custom-handlers:securityerror href=https://heycam.github.io/webidl/#securityerror data-x-internal=securityerror>"<code>SecurityError</code>"</a> <code id=custom-handlers:domexception><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code> if the user
+    agent blocks the registration (this might happen if trying to register as a handler for "<code>http</code>", for instance).</p>
+
+    <p>Throws a <a id=custom-handlers:syntaxerror href=https://heycam.github.io/webidl/#syntaxerror data-x-internal=syntaxerror>"<code>SyntaxError</code>"</a> <code id=custom-handlers:domexception-2><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code> if the "<code>%s</code>" string is missing in <var>url</var>.</p>
+   <dt><var>window</var> . <code>navigator</code> . <code id=dom-navigator-unregisterprotocolhandler>unregisterProtocolHandler</code>(<var>scheme</var>, <var>url</var>)<dd>
+    <p>Unregisters the handler given by the arguments.</p>
+
+    <p>Throws a <a id=custom-handlers:securityerror-2 href=https://heycam.github.io/webidl/#securityerror data-x-internal=securityerror>"<code>SecurityError</code>"</a> <code id=custom-handlers:domexception-3><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code> if the user
+    agent blocks the deregistration (this might happen if with invalid schemes, for instance).</p>
+
+    <p>Throws a <a id=custom-handlers:syntaxerror-2 href=https://heycam.github.io/webidl/#syntaxerror data-x-internal=syntaxerror>"<code>SyntaxError</code>"</a> <code id=custom-handlers:domexception-4><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code> if the "<code>%s</code>" string is missing in <var>url</var>.</p>
+   </dl>
+
+
+  
+
+
+
+
+  <h5 id=cookies><span class=secno>8.9.1.4</span> Cookies<a href=#cookies class=self-link></a></h5>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/web-application-apis/system-state-and-capabilities/the-navigator-object/cookies.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/web-application-apis/system-state-and-capabilities/the-navigator-object/cookies.zh.html?filename=cookies.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fweb-application-apis%2Fsystem-state-and-capabilities%2Fthe-navigator-object%2Fcookies.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  <pre><code class=idl>interface mixin <dfn id=navigatorcookies>NavigatorCookies</dfn> {
+  readonly attribute boolean <a href=#dom-navigator-cookieenabled id=cookies:dom-navigator-cookieenabled>cookieEnabled</a>;
+};</code></pre>
+
+  <dl class=domintro><dt><var>window</var> . <code>navigator</code> . <code id=dom-navigator-cookieenabled>cookieEnabled</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Navigator/cookieEnabled title="navigator.cookieEnabled returns a Boolean value that indicates whether cookies are enabled or not.">Navigator/cookieEnabled</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>1+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>12.1+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>4+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>1+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>12.1+</span></span></div></div></div><dd>
+    <p>Returns false if setting a cookie will be ignored, and true otherwise.</p>
+   </dl>
+
+  
+
+
+
+
+  <h5 id=plugins><span class=secno>8.9.1.5</span> Plugins<a href=#plugins class=self-link></a></h5>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/web-application-apis/system-state-and-capabilities/the-navigator-object/plugins.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/web-application-apis/system-state-and-capabilities/the-navigator-object/plugins.zh.html?filename=plugins.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fweb-application-apis%2Fsystem-state-and-capabilities%2Fthe-navigator-object%2Fplugins.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/NavigatorPlugins title="The NavigatorPlugins mixin adds to the Navigator interface methods and properties for discovering and interacting with plugins installed into the browser.">NavigatorPlugins</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>Yes</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>Yes</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>Yes</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/PluginArray title="The PluginArray interface is used to store a list of Plugin objects describing the available plugins; it's returned by the window.navigator.plugins property. The PluginArray is not a JavaScript array, but has the length property and supports accessing individual items using bracket notation (plugins[2]), as well as via item(index) and namedItem(&quot;name&quot;) methods.">PluginArray</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>Yes</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie unknown"><span>Internet Explorer</span><span>?</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>Yes</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android no"><span>Opera Android</span><span>No</span></span></div></div><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/MimeTypeArray title="The MimeTypeArray interface returns an array of MimeType instances, each of which contains information about a supported browser plugins. This object is returned by NavigatorPlugins.mimeTypes.">MimeTypeArray</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie unknown"><span>Internet Explorer</span><span>?</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Plugin title="The Plugin interface provides information about a browser plugin.">Plugin</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>Yes</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie unknown"><span>Internet Explorer</span><span>?</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>Yes</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/MimeType title="The MimeType interface provides contains information about a MIME type associated with a particular plugin. NavigatorPlugins.mimeTypes returns an array of this object.">MimeType</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>Yes</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>18</span></span><span class="ie unknown"><span>Internet Explorer</span><span>?</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>Yes</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div><pre><code class=idl>interface mixin <dfn id=navigatorplugins>NavigatorPlugins</dfn> {
+  [SameObject] readonly attribute <a href=#pluginarray id=plugins:pluginarray>PluginArray</a> <a href=#dom-navigator-plugins id=plugins:dom-navigator-plugins>plugins</a>;
+  [SameObject] readonly attribute <a href=#mimetypearray id=plugins:mimetypearray>MimeTypeArray</a> <a href=#dom-navigator-mimetypes id=plugins:dom-navigator-mimetypes>mimeTypes</a>;
+  boolean <a href=#dom-navigator-javaenabled id=plugins:dom-navigator-javaenabled>javaEnabled()</a>;
+};
+
+[Exposed=Window,
+ LegacyUnenumerableNamedProperties]
+interface <dfn id=pluginarray>PluginArray</dfn> {
+  undefined <a href=#dom-pluginarray-refresh id=plugins:dom-pluginarray-refresh>refresh</a>(optional boolean reload = false);
+  readonly attribute unsigned long <a href=#dom-pluginarray-length id=plugins:dom-pluginarray-length>length</a>;
+  getter <a href=#dom-plugin id=plugins:dom-plugin>Plugin</a>? <a href=#dom-pluginarray-item id=plugins:dom-pluginarray-item>item</a>(unsigned long index);
+  getter <a href=#dom-plugin id=plugins:dom-plugin-2>Plugin</a>? <span>namedItem</span>(DOMString name);
+};
+
+[Exposed=Window,
+ LegacyUnenumerableNamedProperties]
+interface <dfn id=mimetypearray>MimeTypeArray</dfn> {
+  readonly attribute unsigned long <a href=#dom-mimetypearray-length id=plugins:dom-mimetypearray-length>length</a>;
+  getter <a href=#mimetype id=plugins:mimetype>MimeType</a>? <a href=#dom-mimetypearray-item id=plugins:dom-mimetypearray-item>item</a>(unsigned long index);
+  getter <a href=#mimetype id=plugins:mimetype-2>MimeType</a>? <span>namedItem</span>(DOMString name);
+};
+
+[Exposed=Window,
+ LegacyUnenumerableNamedProperties]
+interface <dfn id=dom-plugin>Plugin</dfn> {
+  readonly attribute DOMString <a href=#dom-plugin-name id=plugins:dom-plugin-name>name</a>;
+  readonly attribute DOMString <a href=#dom-plugin-description id=plugins:dom-plugin-description>description</a>;
+  readonly attribute DOMString <a href=#dom-plugin-filename id=plugins:dom-plugin-filename>filename</a>;
+  readonly attribute unsigned long <a href=#dom-plugin-length id=plugins:dom-plugin-length>length</a>;
+  getter <a href=#mimetype id=plugins:mimetype-3>MimeType</a>? <a href=#dom-plugin-item id=plugins:dom-plugin-item>item</a>(unsigned long index);
+  getter <a href=#mimetype id=plugins:mimetype-4>MimeType</a>? <span>namedItem</span>(DOMString name);
+};
+
+[Exposed=Window]
+interface <dfn id=mimetype>MimeType</dfn> {
+  readonly attribute DOMString <a href=#dom-mimetype-type id=plugins:dom-mimetype-type>type</a>;
+  readonly attribute DOMString <a href=#dom-mimetype-description id=plugins:dom-mimetype-description>description</a>;
+  readonly attribute DOMString <a href=#dom-mimetype-suffixes id=plugins:dom-mimetype-suffixes>suffixes</a>; // comma-separated
+  readonly attribute <a href=#dom-plugin id=plugins:dom-plugin-3>Plugin</a> <a href=#dom-mimetype-enabledplugin id=plugins:dom-mimetype-enabledplugin>enabledPlugin</a>;
+};</code></pre>
+
+  <dl class=domintro><dt><var>window</var> . <code>navigator</code> . <code id=dom-navigator-plugins>plugins</code> . <code id=dom-pluginarray-refresh>refresh</code>( [ <var>refresh</var> ] )<div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in one engine only." class=less-than-two-engines-flag>⚠</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/NavigatorPlugins/plugins title="Returns a PluginArray object, listing the Plugin objects describing the plugins installed in the application.">NavigatorPlugins/plugins</a><p class=less-than-two-engines-text>Support in one engine only.<div class=support><span class="firefox unknown"><span>Firefox</span><span>?</span></span><span class="safari unknown"><span>Safari</span><span>?</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera unknown"><span>Opera</span><span>?</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie unknown"><span>Internet Explorer</span><span>?</span></span><hr><span class="firefox_android unknown"><span>Firefox Android</span><span>?</span></span><span class="safari_ios unknown"><span>Safari iOS</span><span>?</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android unknown"><span>Opera Android</span><span>?</span></span></div></div></div><dd>
+    <p>Updates the lists of supported plugins and MIME types for this page, and reloads the page if the lists have changed.</p>
+    
+   <dt><var>window</var> . <code>navigator</code> . <code id=plugins:dom-navigator-plugins-2><a href=#dom-navigator-plugins>plugins</a></code> . <code id=dom-pluginarray-length>length</code><dd>
+    <p>Returns the number of plugins, represented by <code id=plugins:dom-plugin-4><a href=#dom-plugin>Plugin</a></code> objects, that the user agent reports.</p>
+   <dt><var>plugin</var> = <var>window</var> . <code>navigator</code> . <code id=plugins:dom-navigator-plugins-3><a href=#dom-navigator-plugins>plugins</a></code> . <code id=dom-pluginarray-item>item</code>(<var>index</var>)<dt><var>window</var> . <code>navigator</code> . <code id=plugins:dom-navigator-plugins-4><a href=#dom-navigator-plugins>plugins</a></code>[<var>index</var>]<dd>
+    <p>Returns the specified <code id=plugins:dom-plugin-5><a href=#dom-plugin>Plugin</a></code> object.</p>
+   <dt><var>plugin</var> = <var>window</var> . <code>navigator</code> . <code id=plugins:dom-navigator-plugins-5><a href=#dom-navigator-plugins>plugins</a></code> . <code id=plugins:dom-pluginarray-item-2><a href=#dom-pluginarray-item>item</a></code>(<var>name</var>)<dt><var>window</var> . <code>navigator</code> . <code id=plugins:dom-navigator-plugins-6><a href=#dom-navigator-plugins>plugins</a></code>[<var>name</var>]<dd>
+    <p>Returns the <code id=plugins:dom-plugin-6><a href=#dom-plugin>Plugin</a></code> object for the plugin with the given name.</p>
+   <dt><var>window</var> . <code>navigator</code> . <code id=dom-navigator-mimetypes>mimeTypes</code> . <code id=dom-mimetypearray-length>length</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in one engine only." class=less-than-two-engines-flag>⚠</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/NavigatorPlugins/mimeTypes title="Returns a MimeTypeArray object, which contains a list of MimeType objects representing the MIME types recognized by the browser.">NavigatorPlugins/mimeTypes</a><p class=less-than-two-engines-text>Support in one engine only.<div class=support><span class="firefox unknown"><span>Firefox</span><span>?</span></span><span class="safari unknown"><span>Safari</span><span>?</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera unknown"><span>Opera</span><span>?</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie unknown"><span>Internet Explorer</span><span>?</span></span><hr><span class="firefox_android unknown"><span>Firefox Android</span><span>?</span></span><span class="safari_ios unknown"><span>Safari iOS</span><span>?</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android unknown"><span>Opera Android</span><span>?</span></span></div></div></div><dd>
+    <p>Returns the number of MIME types, represented by <code id=plugins:mimetype-5><a href=#mimetype>MimeType</a></code> objects, supported by the plugins that the user agent reports.</p>
+   <dt><var>mimeType</var> = <var>window</var> . <code>navigator</code> . <code id=plugins:dom-navigator-mimetypes-2><a href=#dom-navigator-mimetypes>mimeTypes</a></code> . <code id=dom-mimetypearray-item>item</code>(<var>index</var>)<dt><var>window</var> . <code>navigator</code> . <code id=plugins:dom-navigator-mimetypes-3><a href=#dom-navigator-mimetypes>mimeTypes</a></code>[<var>index</var>]<dd>
+    <p>Returns the specified <code id=plugins:mimetype-6><a href=#mimetype>MimeType</a></code> object.</p>
+   <dt><var>mimeType</var> = <var>window</var> . <code>navigator</code> . <code id=plugins:dom-navigator-mimetypes-4><a href=#dom-navigator-mimetypes>mimeTypes</a></code> . <code id=plugins:dom-mimetypearray-item-2><a href=#dom-mimetypearray-item>item</a></code>(<var>name</var>)<dt><var>window</var> . <code>navigator</code> . <code id=plugins:dom-navigator-mimetypes-5><a href=#dom-navigator-mimetypes>mimeTypes</a></code>[<var>name</var>]<dd>
+    <p>Returns the <code id=plugins:mimetype-7><a href=#mimetype>MimeType</a></code> object for the given MIME type.</p>
+   <dt><var>plugin</var> . <code id=dom-plugin-name>name</code>
+   <dd>
+    <p>Returns the plugin's name.</p>
+   <dt><var>plugin</var> . <code id=dom-plugin-description>description</code>
+   <dd>
+    <p>Returns the plugin's description.</p>
+   <dt><var>plugin</var> . <code id=dom-plugin-filename>filename</code>
+   <dd>
+    <p>Returns the plugin library's filename, if applicable on the current platform.</p>
+   <dt><var>plugin</var> . <code id=dom-plugin-length>length</code><dd>
+    <p>Returns the number of MIME types, represented by <code id=plugins:mimetype-8><a href=#mimetype>MimeType</a></code> objects, supported by the plugin.</p>
+   <dt><var>mimeType</var> = <var>plugin</var> . <code id=dom-plugin-item>item</code>(<var>index</var>)<dt><var>plugin</var>[<var>index</var>]<dd>
+    <p>Returns the specified <code id=plugins:mimetype-9><a href=#mimetype>MimeType</a></code> object.</p>
+   <dt><var>mimeType</var> = <var>plugin</var> . <code id=plugins:dom-plugin-item-2><a href=#dom-plugin-item>item</a></code>(<var>name</var>)<dt><var>plugin</var>[<var>name</var>]<dd>
+    <p>Returns the <code id=plugins:mimetype-10><a href=#mimetype>MimeType</a></code> object for the given MIME type.</p>
+   <dt><var>mimeType</var> . <code id=dom-mimetype-type>type</code>
+   <dd>
+    <p>Returns the MIME type.</p>
+   <dt><var>mimeType</var> . <code id=dom-mimetype-description>description</code>
+   <dd>
+    <p>Returns the MIME type's description.</p>
+   <dt><var>mimeType</var> . <code id=dom-mimetype-suffixes>suffixes</code>
+   <dd>
+    <p>Returns the MIME type's typical file extensions, in a comma-separated list.</p>
+   <dt><var>mimeType</var> . <code id=dom-mimetype-enabledplugin>enabledPlugin</code>
+   <dd>
+    <p>Returns the <code id=plugins:dom-plugin-7><a href=#dom-plugin>Plugin</a></code> object that implements this MIME type.</p>
+   <dt><var>window</var> . <code>navigator</code> . <code id=dom-navigator-javaenabled>javaEnabled()</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in one engine only." class=less-than-two-engines-flag>⚠</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/NavigatorPlugins/javaEnabled title="This method indicates whether the current browser is Java-enabled or not.">NavigatorPlugins/javaEnabled</a><p class=less-than-two-engines-text>Support in one engine only.<div class=support><span class="firefox unknown"><span>Firefox</span><span>?</span></span><span class="safari unknown"><span>Safari</span><span>?</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera unknown"><span>Opera</span><span>?</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie unknown"><span>Internet Explorer</span><span>?</span></span><hr><span class="firefox_android unknown"><span>Firefox Android</span><span>?</span></span><span class="safari_ios unknown"><span>Safari iOS</span><span>?</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android unknown"><span>Opera Android</span><span>?</span></span></div></div></div><dd>
+    <p>Returns true if there's a plugin that supports the MIME type "<code>application/x-java-vm</code>".</p>
+   </dl>
+
+  
+
+
+
+
+  <nav><a href=timers-and-user-prompts.html>← 8.6 Timers</a> — <a href=./>Table of Contents</a> — <a href=imagebitmap-and-animations.html>8.10 Images →</a></nav>

@@ -1,0 +1,440 @@
+<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Standard, Developer's Edition</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/dev/styles.css crossorigin=""><script>
+   function toggleStatus(div) {
+     div.parentNode.classList.toggle('wrapped');
+   }
+   function setLinkFragment(link) {
+     link.hash = location.hash;
+   }
+  </script><body>
+  <script async="" src=/dev/search.js></script>
+  
+  
+  
+  <header id=head class="head with-buttons">
+   <a href=https://whatwg.org/ class=logo><img width=100 alt=WHATWG crossorigin="" src=https://resources.whatwg.org/logo.svg height=100></a>
+   
+   <hgroup><h1><a rel=home href=/dev/>HTML: The Living Standard</a></h1><h2 id="developer's-edition-—-last-updated-date:-01-jan-1901" class="no-num no-toc">Developer's Edition — Last Updated <span class=pubdate>6 November 2020</span></h2><div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/developers-edition-mdash-last-updated-date-01-jan-1901.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/developers-edition-mdash-last-updated-date-01-jan-1901.zh.html></div></hgroup>
+   
+   <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-91053840-1', 'auto');
+      ga('send', 'pageview');
+   </script>
+  </header>
+
+  
+
+  
+
+
+  
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/table-of-contents.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/table-of-contents.zh.html></div>
+  
+
+
+  
+<div data-en-date="Sat Aug 11 2018 08:00:56 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/full-table-of-contents.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/full-table-of-contents.zh.html></div>
+  
+
+  
+
+  
+
+
+  <h2 id=about-dev-edition class="no-num no-toc">关于本标准</h2>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/about-this-specification.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/about-this-specification.zh.html></div>
+
+  <p>本标准与其他标准不同，它的处理完全考虑到了 Web 开发者。</p>
+
+  <p>本标准关注可读性和可访问性，不像 <a href=/multipage/>完整的 HTML 标准</a>，"开发者版本" 移除了
+  只有浏览器厂商需要知道的信息。它个版本是用我们的构建工具从完整的规范自动产出的，
+  因此总会与最新开发的 HTML 保持同步。</p>
+
+  <p>其概念、构造，以及未来可参考 <a href=http://web.archive.org/web/20150220020906/http://archive.germanforblack.com:80/articles/html5-for-web-developers>
+  原始出版发行</a>，以及 <a href=https://blog.whatwg.org/developers-edition-comeback>关于重启该版本的博文</a>。</p>
+
+  <p>最后，欢迎 <a href=https://github.com/whatwg/html/labels/dev%20edition>在 GitHub 贡献</a> 来改进该版本！</p>
+
+  
+
+
+  <nav><a href=custom-elements.html>← 4.13 Custom elements</a> — <a href=./>Table of Contents</a> — <a href=microdata.html>5 微数据 →</a></nav><ol class=toc><li><ol><li><a href=semantics-other.html#common-idioms><span class=secno>4.14</span> Common idioms without dedicated elements</a><ol><li><a href=semantics-other.html#rel-up><span class=secno>4.14.1</span> 面包屑导航</a><li><a href=semantics-other.html#tag-clouds><span class=secno>4.14.2</span> 标签云</a><li><a href=semantics-other.html#conversations><span class=secno>4.14.3</span> 对话</a><li><a href=semantics-other.html#footnotes><span class=secno>4.14.4</span> 脚注</a></ol><li><a href=semantics-other.html#disabled-elements><span class=secno>4.15</span> Disabled elements</a></ol></ol><h3 id=common-idioms><span class=secno>4.14</span> Common idioms without dedicated elements<a href=#common-idioms class=self-link></a></h3>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/common-idioms-without-dedicated-elements/index.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/the-elements-of-html/common-idioms-without-dedicated-elements/index.zh.html?filename=index.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fthe-elements-of-html%2Fcommon-idioms-without-dedicated-elements%2Findex.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+
+  <h4 id=rel-up><span class=secno>4.14.1</span> 面包屑导航<a href=#rel-up class=self-link></a></h4>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Jun 03 2018 16:51:00 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/common-idioms-without-dedicated-elements/bread-crumb-navigation.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/the-elements-of-html/common-idioms-without-dedicated-elements/bread-crumb-navigation.zh.html></div>
+
+  <p>本规范没有提供机器可读的方式来描述面包屑导航彩蛋。
+  鼓励作者只是在段落中使用一些超链接。可以使用 <code id=rel-up:the-nav-element><a href=sections.html#the-nav-element>nav</a></code>
+  元素来标记包含这些段落的部分形成导航块。</p>
+
+  
+
+  <div class=example>
+
+   <p>在下面的例子中，当前页面可以通过两种路径到达。</p>
+
+   <pre>&lt;nav>
+ &lt;p>
+  &lt;a href="/">Main&lt;/a> ▸
+  &lt;a href="/products/">Products&lt;/a> ▸
+  &lt;a href="/products/dishwashers/">Dishwashers&lt;/a> ▸
+  &lt;a>Second hand&lt;/a>
+ &lt;/p>
+ &lt;p>
+  &lt;a href="/">Main&lt;/a> ▸
+  &lt;a href="/second-hand/">Second hand&lt;/a> ▸
+  &lt;a>Dishwashers&lt;/a>
+ &lt;/p>
+&lt;/nav></pre>
+
+  </div>
+
+
+
+  <h4 id=tag-clouds><span class=secno>4.14.2</span> 标签云<a href=#tag-clouds class=self-link></a></h4>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Thu May 31 2018 16:24:07 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/common-idioms-without-dedicated-elements/tag-clouds.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/the-elements-of-html/common-idioms-without-dedicated-elements/tag-clouds.zh.html></div>
+
+  <p id=tag-cloud>本规范没有定义任何专门标记一组页面的关键字列表（也称为 <i>tag clouds</i>）的标记。
+  通常，鼓励作者使用 <code id=tag-clouds:the-ul-element><a href=grouping-content.html#the-ul-element>ul</a></code> 元素来标记这些列表。
+  其中写好计数并隐藏，再用样式表或 SVG 把它的效果呈现出来。</p>
+
+  <div class=example>
+
+   <p>这是一个只有三个标签的标签云：</p>
+
+   <pre>&lt;style>
+.tag-cloud > li > span { display: none; }
+.tag-cloud > li { display: inline; }
+.tag-cloud-1 { font-size: 0.7em; }
+.tag-cloud-2 { font-size: 0.9em; }
+.tag-cloud-3 { font-size: 1.1em; }
+.tag-cloud-4 { font-size: 1.3em; }
+.tag-cloud-5 { font-size: 1.5em; }
+
+@media speech {
+  .tag-cloud > li > span { display:inline }
+}
+&lt;/style>
+...
+&lt;ul class="tag-cloud">
+ &lt;li class="tag-cloud-4">&lt;a title="28 instances" href="/t/apple">apple&lt;/a> &lt;span>(popular)&lt;/span>
+ &lt;li class="tag-cloud-2">&lt;a title="6 instances"  href="/t/kiwi">kiwi&lt;/a> &lt;span>(rare)&lt;/span>
+ &lt;li class="tag-cloud-5">&lt;a title="41 instances" href="/t/pear">pear&lt;/a> &lt;span>(very popular)&lt;/span>
+&lt;/ul></pre>
+
+   <p>每个标签实际的频率使用 <code id=tag-clouds:attr-title><a href=dom.html#attr-title>title</a></code> 属性给出。
+   提供了一个 CSS 样式表来把标记转化成一个不同大小的词的云，
+   但不支持 CSS 的或非视觉的用户代理中，包含类似 "(popular)" 或 "(rare)" 字样的标记也会把不同频率的标签分离开，
+   这样所有用户都可以得到这个信息。</p>
+
+   <p>使用 <code id=tag-clouds:the-ul-element-2><a href=grouping-content.html#the-ul-element>ul</a></code> 元素（而不是 <code id=tag-clouds:the-ol-element><a href=grouping-content.html#the-ol-element>ol</a></code>）是因为顺序并不重要：
+   虽然列表实际上是按字母顺序排列的，但如果按标签的长度排序，它将传达相同的信息。</p>
+
+   <p><code id=tag-clouds:link-type-tag><a href=links.html#link-type-tag>tag</a></code> <code id=tag-clouds:attr-hyperlink-rel><a href=links.html#attr-hyperlink-rel>rel</a></code>
+   关键字 <em>没有</em> 用在这些 <code id=tag-clouds:the-a-element><a href=text-level-semantics.html#the-a-element>a</a></code> 元素上，
+   因为它们表示的标签不适用于当前页面自己；它们只是列出标签本身的索引的一部分。</p>
+
+  </div>
+
+
+
+  <h4 id=conversations><span class=secno>4.14.3</span> 对话<a href=#conversations class=self-link></a></h4>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Jun 03 2018 16:51:00 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/common-idioms-without-dedicated-elements/conversations.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/the-elements-of-html/common-idioms-without-dedicated-elements/conversations.zh.html></div>
+
+  
+
+  <p>本规范没有定义特定的元素来标记对话、会议记录、聊天记录、剧本中的对话、即时通信记录，
+  和其他有不同参与者轮流发言的场景。</p>
+
+  <p>但是鼓励作者使用 <code id=conversations:the-p-element><a href=grouping-content.html#the-p-element>p</a></code> 元素和标点来标记对话。
+  需要标记发言者来提供样式的情况，鼓励作者使用 <code id=conversations:the-span-element><a href=text-level-semantics.html#the-span-element>span</a></code> 或 <code id=conversations:the-b-element><a href=text-level-semantics.html#the-b-element>b</a></code>。
+  可以使用 <code id=conversations:the-i-element><a href=text-level-semantics.html#the-i-element>i</a></code> 元素包裹其内容的段落来标记对话的信息。</p>
+
+  <div class=example>
+
+   <p>这个例子中，使用了 Abbot 和 Costello's 著名的喜剧 <cite>Who's on first</cite> 中的一个摘录：</p>
+
+<pre>&lt;p> Costello: Look, you gotta first baseman?
+&lt;p> Abbott: Certainly.
+&lt;p> Costello: Who's playing first?
+&lt;p> Abbott: That's right.
+&lt;p> Costello becomes exasperated.
+&lt;p> Costello: When you pay off the first baseman every month, who gets the money?
+&lt;p> Abbott: Every dollar of it.</pre>
+
+  </div>
+
+  <div class=example>
+
+   <p>下面的摘录演示了如何标记 IM 对话日志，
+   使用 <code id=conversations:the-data-element><a href=text-level-semantics.html#the-data-element>data</a></code> 元素来为每行提供 Unix 时间戳。
+   注意 <code id=conversations:the-time-element><a href=text-level-semantics.html#the-time-element>time</a></code> 元素不支持这个时间戳的格式，所以才使用了
+   <code id=conversations:the-data-element-2><a href=text-level-semantics.html#the-data-element>data</a></code> 元素（即 Unix <code>time_t</code> 时间戳）。
+   如果作者希望使用 <code id=conversations:the-time-element-2><a href=text-level-semantics.html#the-time-element>time</a></code> 元素支持的日期或时间格式来标记数据，
+   就要使用那个元素来替代 <code id=conversations:the-data-element-3><a href=text-level-semantics.html#the-data-element>data</a></code>。
+   这样的好处是数据分析工具可以无歧义地检测到时间戳，而不需要与网页作者协调。</p>
+
+   <pre>&lt;p> &lt;data value="1319898155">14:22&lt;/data> &lt;b>egof&lt;/b> I'm not that nerdy, I've only seen 30% of the star trek episodes
+&lt;p> &lt;data value="1319898192">14:23&lt;/data> &lt;b>kaj&lt;/b> if you know what percentage of the star trek episodes you have seen, you are inarguably nerdy
+&lt;p> &lt;data value="1319898200">14:23&lt;/data> &lt;b>egof&lt;/b> it's unarguably
+&lt;p> &lt;data value="1319898228">14:23&lt;/data> &lt;i>* kaj blinks&lt;/i>
+&lt;p> &lt;data value="1319898260">14:24&lt;/data> &lt;b>kaj&lt;/b> you are not helping your case</pre>
+   
+
+  </div>
+
+  <div class=example>
+
+   <p>HTML 没有一种好的方式来标记图形，因此游戏中交互式对话的描述很难标记出来。
+   这个例子展示了一个可能的惯例，使用 <code id=conversations:the-dl-element><a href=grouping-content.html#the-dl-element>dl</a></code> 元素来列出对话中每个点可能的回复。
+   可以考虑的另一个选择是以 DOT 文件的格式来描述对话，然后把结果输出为 SVG 图片放到文档中。<a href=references.html#refsDOT>[DOT]</a></p>
+
+   <pre>&lt;p> Next, you meet a fisher. You can say one of several greetings:
+&lt;dl>
+ &lt;dt> "Hello there!"
+ &lt;dd>
+  &lt;p> She responds with "Hello, how may I help you?"; you can respond with:
+  &lt;dl>
+   &lt;dt> "I would like to buy a fish."
+   &lt;dd> &lt;p> She sells you a fish and the conversation finishes.
+   &lt;dt> "Can I borrow your boat?"
+   &lt;dd>
+    &lt;p> She is surprised and asks "What are you offering in return?".
+    &lt;dl>
+     &lt;dt> "Five gold." (if you have enough)
+     &lt;dt> "Ten gold." (if you have enough)
+     &lt;dt> "Fifteen gold." (if you have enough)
+     &lt;dd> &lt;p> She lends you her boat. The conversation ends.
+     &lt;dt> "A fish." (if you have one)
+     &lt;dt> "A newspaper." (if you have one)
+     &lt;dt> "A pebble." (if you have one)
+     &lt;dd> &lt;p> "No thanks", she replies. Your conversation options
+     at this point are the same as they were after asking to borrow
+     her boat, minus any options you've suggested before.
+    &lt;/dl>
+   &lt;/dd>
+  &lt;/dl>
+ &lt;/dd>
+ &lt;dt> "Vote for me in the next election!"
+ &lt;dd> &lt;p> She turns away. The conversation finishes.
+ &lt;dt> "Madam, are you aware that your fish are running away?"
+ &lt;dd>
+  &lt;p> She looks at you skeptically and says "Fish cannot run, miss".
+  &lt;dl>
+   &lt;dt> "You got me!"
+   &lt;dd> &lt;p> The fisher sighs and the conversation ends.
+   &lt;dt> "Only kidding."
+   &lt;dd> &lt;p> "Good one!" she retorts. Your conversation options at this
+   point are the same as those following "Hello there!" above.
+   &lt;dt> "Oh, then what are they doing?"
+   &lt;dd> &lt;p> She looks at her fish, giving you an opportunity to steal
+   her boat, which you do. The conversation ends.
+  &lt;/dl>
+ &lt;/dd>
+&lt;/dl></pre>
+
+  </div>
+
+  <div class=example>
+
+   <p>有些图中对话比较简单：每个角色只有一些确定的话要说。
+   这个例子中，一个游戏 FAQ/流程 列出了每个角色的一些已知的可能回应：</p>
+
+   <pre>&lt;section>
+ &lt;h1>Dialogue&lt;/h1>
+ &lt;p>&lt;small>Some characters repeat their lines in order each time you interact
+ with them, others randomly pick from amongst their lines. Those who respond in
+ order have numbered entries in the lists below.&lt;/small>
+ &lt;h2>The Shopkeeper&lt;/h2>
+ &lt;ul>
+  &lt;li>How may I help you?
+  &lt;li>Fresh apples!
+  &lt;li>A loaf of bread for madam?
+ &lt;/ul>
+ &lt;h2>The pilot&lt;/h2>
+ &lt;p>Before the accident:
+ &lt;ul>
+  &lt;li>I'm about to fly out, sorry!
+  &lt;li>Sorry, I'm just waiting for flight clearance and then I'll be off!
+ &lt;/ul>
+ &lt;p>After the accident:
+ &lt;ol>
+  &lt;li>I'm about to fly out, sorry!
+  &lt;li>Ok, I'm not leaving right now, my plane is being cleaned.
+  &lt;li>Ok, it's not being cleaned, it needs a minor repair first.
+  &lt;li>Ok, ok, stop bothering me! Truth is, I had a crash.
+ &lt;/ol>
+ &lt;h2>Clan Leader&lt;/h2>
+ &lt;p>During the first clan meeting:
+ &lt;ul>
+  &lt;li>Hey, have you seen my daughter? I bet she's up to something nefarious again...
+  &lt;li>Nice weather we're having today, eh?
+  &lt;li>The name is Bailey, Jeff Bailey. How can I help you today?
+  &lt;li>A glass of water? Fresh from the well!
+ &lt;/ul>
+ &lt;p>After the earthquake:
+ &lt;ol>
+  &lt;li>Everyone is safe in the shelter, we just have to put out the fire!
+  &lt;li>I'll go and tell the fire brigade, you keep hosing it down!
+ &lt;/ol>
+&lt;/section></pre>
+
+  </div>
+
+
+
+  <h4 id=footnotes><span class=secno>4.14.4</span> 脚注<a href=#footnotes class=self-link></a></h4>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Jun 03 2018 16:51:00 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/common-idioms-without-dedicated-elements/footnotes.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/the-elements-of-html/common-idioms-without-dedicated-elements/footnotes.zh.html></div>
+
+  <p>HTML 没有标记脚注的专门机制。以下是建议的替代方案。</p>
+
+  <hr>
+
+  <p>对于较短的行内注释，可以使用 <code id=footnotes:attr-title><a href=dom.html#attr-title>title</a></code> 属性。。</p>
+
+  <div class=example>
+
+   <p>在这个例子中，对话框中有两部分是通过 <code id=footnotes:attr-title-2><a href=dom.html#attr-title>title</a></code> 属性，
+   使用类似脚注的内容注释的。</p>
+
+   <pre>&lt;p> &lt;b>Customer&lt;/b>: Hello! I wish to register a complaint. Hello. Miss?
+&lt;p> &lt;b>Shopkeeper&lt;/b>: <strong>&lt;span title="Colloquial pronunciation of 'What do you'"</strong>
+>Watcha&lt;/span> mean, miss?
+&lt;p> &lt;b>Customer&lt;/b>: Uh, I'm sorry, I have a cold. I wish to make a complaint.
+&lt;p> &lt;b>Shopkeeper&lt;/b>: Sorry, &lt;span <strong>title="This is, of course, a lie."</strong>>we're
+closing for lunch&lt;/span>.</pre>
+
+  </div>
+
+  
+  <p class=note>不幸的是，很多用户代理目前不鼓励依赖 <code id=footnotes:attr-title-3><a href=dom.html#attr-title>title</a></code> 属性，
+  它们没有按照本规范的要求把该属性以可访问的方式暴露出来。
+  （例如，需要类似鼠标的指点设备才能让提示显示出来，这就排除了纯键盘用户和触摸设备用户，
+  这里面包括任何一个使用现代手机和平板的用户）。</p>
+
+  <p class=note>如果使用 <code id=footnotes:attr-title-4><a href=dom.html#attr-title>title</a></code> 属性，可以使用 CSS 来吸引读者注意
+  这个有 <code id=footnotes:attr-title-5><a href=dom.html#attr-title>title</a></code> 属性的元素。</p>
+
+  <div class=example>
+
+   <p>例如，下面的 CSS 在有 <code id=footnotes:attr-title-6><a href=dom.html#attr-title>title</a></code> 属性的元素下面画了一条虚线。</p>
+
+   <pre>[title] { border-bottom: thin dashed; }</pre>
+
+  </div>
+
+  <hr>
+
+  <p>对于更长的注释，应该使用 <code id=footnotes:the-a-element><a href=text-level-semantics.html#the-a-element>a</a></code> 元素，指向文档后面的一个元素。
+  根据惯例，这个超链接的内容是一个方括号中的数字。</p>
+
+  <div class=example>
+
+   <p>在这个例子中，对话框中的脚注链接到了对话框下面的一个段落。
+   然后这个段落又链接回对话框，让用户可以返回脚注的位置。</p>
+
+   <pre>&lt;p> Announcer: Number 16: The &lt;i>hand&lt;/i>.
+&lt;p> Interviewer: Good evening. I have with me in the studio tonight
+Mr Norman St John Polevaulter, who for the past few years has been
+contradicting people. Mr Polevaulter, why &lt;em>do&lt;/em> you
+contradict people?
+&lt;p> Norman: I don't. &lt;sup>&lt;a href="#fn1" id="r1">[1]&lt;/a>&lt;/sup>
+&lt;p> Interviewer: You told me you did!
+<em>...</em>
+&lt;section>
+ &lt;p id="fn1">&lt;a href="#r1">[1]&lt;/a> This is, naturally, a lie,
+ but paradoxically if it were true he could not say so without
+ contradicting the interviewer and thus making it false.&lt;/p>
+&lt;/section></pre>
+
+  </div>
+
+  <hr>
+
+  <p>对于适用于整个章节的文本（而非特定的词和句子）的更长的边栏笔记，
+  应该使用 <code id=footnotes:the-aside-element><a href=sections.html#the-aside-element>aside</a></code> 元素。</p>
+
+  <div class=example>
+
+   <p>在这个例子中，对话框后给出了一个边栏，里面给出了一些上下文。</p>
+
+   <pre>&lt;p> &lt;span class="speaker">Customer&lt;/span>: I will not buy this record, it is scratched.
+&lt;p> &lt;span class="speaker">Shopkeeper&lt;/span>: I'm sorry?
+&lt;p> &lt;span class="speaker">Customer&lt;/span>: I will not buy this record, it is scratched.
+&lt;p> &lt;span class="speaker">Shopkeeper&lt;/span>: No no no, this's'a tobacconist's.
+&lt;aside>
+ &lt;p>In 1970, the British Empire lay in ruins, and foreign
+ nationalists frequented the streets — many of them Hungarians
+ (not the streets — the foreign nationals). Sadly, Alexander
+ Yalt has been publishing incompetently-written phrase books.
+&lt;/aside></pre>
+
+  </div>
+
+  <hr>
+
+  <p>对图表而言，脚注可以包含在相关的 <code id=footnotes:the-figcaption-element><a href=grouping-content.html#the-figcaption-element>figcaption</a></code> 或 <code id=footnotes:the-caption-element><a href=tables.html#the-caption-element>caption</a></code> 元素中，
+  或者周围的文章中。</p>
+
+  <div class=example>
+
+   <p>在这个例子中， 表格的单元格中有一些来自文章脚注。
+   使用了一个 <code id=footnotes:the-figure-element><a href=grouping-content.html#the-figure-element>figure</a></code> 元素为表格和脚注一起给出了一个图例。</p>
+
+   <pre>&lt;figure>
+ &lt;figcaption>Table 1. Alternative activities for knights.&lt;/figcaption>
+ &lt;table>
+  &lt;tr>
+   &lt;th> Activity
+   &lt;th> Location
+   &lt;th> Cost
+  &lt;tr>
+   &lt;td> Dance
+   &lt;td> Wherever possible
+   &lt;td> £0&lt;sup>&lt;a href="#fn1">1&lt;/a>&lt;/sup>
+  &lt;tr>
+   &lt;td> Routines, chorus scenes&lt;sup>&lt;a href="#fn2">2&lt;/a>&lt;/sup>
+   &lt;td> Undisclosed
+   &lt;td> Undisclosed
+  &lt;tr>
+   &lt;td> Dining&lt;sup>&lt;a href="#fn3">3&lt;/a>&lt;/sup>
+   &lt;td> Camelot
+   &lt;td> Cost of ham, jam, and spam&lt;sup>&lt;a href="#fn4">4&lt;/a>&lt;/sup>
+ &lt;/table>
+ &lt;p id="fn1">1. Assumed.&lt;/p>
+ &lt;p id="fn2">2. Footwork impeccable.&lt;/p>
+ &lt;p id="fn3">3. Quality described as "well".&lt;/p>
+ &lt;p id="fn4">4. A lot.&lt;/p>
+&lt;/figure></pre>
+
+  </div>
+
+
+
+  <h3 id=disabled-elements><span class=secno>4.15</span> Disabled elements<a href=#disabled-elements class=self-link></a></h3>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/disabled-elements.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/the-elements-of-html/disabled-elements.zh.html?filename=disabled-elements.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fthe-elements-of-html%2Fdisabled-elements.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  <p>An element is said to be <dfn id=concept-element-disabled>actually disabled</dfn> if it
+  is one of the following:</p>
+
+  <ul><li>a <code id=disabled-elements:the-button-element><a href=form-elements.html#the-button-element>button</a></code> element that is <a href=form-control-infrastructure.html#concept-fe-disabled id=disabled-elements:concept-fe-disabled>disabled</a><li>an <code id=disabled-elements:the-input-element><a href=input.html#the-input-element>input</a></code> element that is <a href=form-control-infrastructure.html#concept-fe-disabled id=disabled-elements:concept-fe-disabled-2>disabled</a><li>a <code id=disabled-elements:the-select-element><a href=form-elements.html#the-select-element>select</a></code> element that is <a href=form-control-infrastructure.html#concept-fe-disabled id=disabled-elements:concept-fe-disabled-3>disabled</a><li>a <code id=disabled-elements:the-textarea-element><a href=form-elements.html#the-textarea-element>textarea</a></code> element that is <a href=form-control-infrastructure.html#concept-fe-disabled id=disabled-elements:concept-fe-disabled-4>disabled</a><li>an <code id=disabled-elements:the-optgroup-element><a href=form-elements.html#the-optgroup-element>optgroup</a></code> element that has a <code id=disabled-elements:attr-optgroup-disabled><a href=form-elements.html#attr-optgroup-disabled>disabled</a></code> attribute<li>an <code id=disabled-elements:the-option-element><a href=form-elements.html#the-option-element>option</a></code> element that is <a href=form-elements.html#concept-option-disabled id=disabled-elements:concept-option-disabled>disabled</a><li>a <code id=disabled-elements:the-fieldset-element><a href=form-elements.html#the-fieldset-element>fieldset</a></code> element that is a <a href=form-elements.html#concept-fieldset-disabled id=disabled-elements:concept-fieldset-disabled>disabled fieldset</a><li>a <a id=disabled-elements:form-associated-custom-element href=custom-elements.html#form-associated-custom-element>form-associated custom element</a> that is
+   <a href=form-control-infrastructure.html#concept-fe-disabled id=disabled-elements:concept-fe-disabled-5>disabled</a></ul>
+
+  <p class=note>This definition is used to determine what elements are <span>focusable</span> and
+  which elements match the <code>:enabled</code> and
+  <code>:disabled</code> <a href=https://drafts.csswg.org/selectors/#pseudo-class id=disabled-elements:pseudo-class data-x-internal=pseudo-class>pseudo
+  classes</a>.</p>
+
+
+  
+
+
+
+
+  <nav><a href=custom-elements.html>← 4.13 Custom elements</a> — <a href=./>Table of Contents</a> — <a href=microdata.html>5 微数据 →</a></nav>

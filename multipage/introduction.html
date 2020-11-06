@@ -1,0 +1,1097 @@
+<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/html/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Standard</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/spec.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/html/styles.css crossorigin=""><script>
+   function toggleStatus(div) {
+     div.parentNode.classList.toggle('wrapped');
+   }
+   function setLinkFragment(link) {
+     link.hash = location.hash;
+   }
+  </script><link rel=stylesheet href=/html/resources/zh-cn.css><body>
+  
+  <script async="" crossorigin="" src=/html/resources/html-dfn.js></script>
+  <script data-file-issue-url=https://github.com/whatwg/html/issues/new async="" crossorigin="" src=https://resources.whatwg.org/file-issue.js></script>
+  
+  <header id=head class="head with-buttons">
+   <a href=https://whatwg.org/ class=logo><img width=100 alt=WHATWG crossorigin="" src=https://resources.whatwg.org/logo.svg height=100></a>
+   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Living Standard — Last Updated <span class=pubdate>6 November 2020</span></h2><div data-en-date="Sat Aug 11 2018 08:00:56 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/living-standard-mdash-last-updated-date-01-jan-1901.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/living-standard-mdash-last-updated-date-01-jan-1901.zh.html?filename=living-standard-mdash-last-updated-date-01-jan-1901.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fliving-standard-mdash-last-updated-date-01-jan-1901.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div><div data-en-date="Sat Aug 11 2018 08:00:56 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/commit-snapshot-mdash-last-updated-date-01-jan-1901.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/commit-snapshot-mdash-last-updated-date-01-jan-1901.zh.html?filename=commit-snapshot-mdash-last-updated-date-01-jan-1901.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fcommit-snapshot-mdash-last-updated-date-01-jan-1901.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div><div data-en-date="Sat Aug 11 2018 08:00:56 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/review-draft-mdash-published-date-01-jan-1901.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/review-draft-mdash-published-date-01-jan-1901.zh.html?filename=review-draft-mdash-published-date-01-jan-1901.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Freview-draft-mdash-published-date-01-jan-1901.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div></hgroup>
+   
+   
+   <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-91053840-1', 'auto');
+      ga('send', 'pageview');
+   </script>
+  </header>
+
+  
+
+  
+
+
+  
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/table-of-contents.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/table-of-contents.zh.html></div>
+  
+
+
+  
+<div data-en-date="Sat Aug 11 2018 08:00:56 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/full-table-of-contents.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/full-table-of-contents.zh.html></div>
+  
+
+  
+
+  
+
+
+  <nav><a href=./>Table of Contents</a> — <a href=infrastructure.html>2 公共基础设施 →</a></nav><ol class=toc><li id=toc-introduction><a href=introduction.html#introduction><span class=secno>1</span> 概述</a><ol><li><a href=introduction.html#abstract><span class=secno>1.1</span> 本标准的适用范围</a><li><a href=introduction.html#is-this-html5?><span class=secno>1.2</span> 这是 HTML5 吗?</a><li><a href=introduction.html#背景><span class=secno>1.3</span> 背景</a><li><a href=introduction.html#受众><span class=secno>1.4</span> 受众</a><li><a href=introduction.html#范围><span class=secno>1.5</span> 范围</a><li><a href=introduction.html#历史><span class=secno>1.6</span> 历史</a><li><a href=introduction.html#设计笔记><span class=secno>1.7</span> 设计笔记</a><ol><li><a href=introduction.html#serialisability-of-script-execution><span class=secno>1.7.1</span> 脚本执行的可串行性</a><li><a href=introduction.html#与其他标准的兼容性><span class=secno>1.7.2</span> 与其他标准的兼容性</a><li><a href=introduction.html#可扩展性><span class=secno>1.7.3</span> 可扩展性</a></ol><li><a href=introduction.html#html-vs-xhtml><span class=secno>1.8</span> HTML 和 XML 语法</a><li><a href=introduction.html#本标准的结构><span class=secno>1.9</span> 本标准的结构</a><ol><li><a href=introduction.html#如何阅读本标准><span class=secno>1.9.1</span> 如何阅读本标准</a><li><a href=introduction.html#排版惯例><span class=secno>1.9.2</span> 排版惯例</a></ol><li><a href=introduction.html#html-的简单介绍><span class=secno>1.10</span> HTML 的简单介绍</a><ol><li><a href=introduction.html#使用-html-编写安全应用><span class=secno>1.10.1</span> 使用 HTML 编写安全应用</a><li><a href=introduction.html#使用脚本-api-时常见的陷阱><span class=secno>1.10.2</span> 使用脚本 API 时常见的陷阱</a><li><a href=introduction.html#编写-html-时如何发现错误：验证器和一致性检查器><span class=secno>1.10.3</span> 编写 HTML 时如何发现错误：验证器和一致性检查器</a></ol><li><a href=introduction.html#对页面作者的一致性要求><span class=secno>1.11</span> 对页面作者的一致性要求</a><ol><li><a href=introduction.html#表示性的标记><span class=secno>1.11.1</span> 表示性的标记</a><li><a href=introduction.html#语法错误><span class=secno>1.11.2</span> 语法错误</a><li><a href=introduction.html#内容模型和属性值的限制><span class=secno>1.11.3</span> 内容模型和属性值的限制</a></ol><li><a href=introduction.html#推荐阅读><span class=secno>1.12</span> 推荐阅读</a></ol></ol><h2 id=introduction><span class=secno>1</span> 概述<a href=#introduction class=self-link></a></h2>
+<div data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/introduction/index.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/introduction/index.en.html></div>
+
+  
+
+
+  <h3 id=abstract><span class=secno>1.1</span> 本标准的适用范围<a href=#abstract class=self-link></a></h3>
+<div data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/introduction/where-does-this-specification-fit.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/introduction/where-does-this-specification-fit.en.html></div>
+
+  <p>本标准详细地定义了 Web 平台的很大一部分内容。Web 平台的标准栈中，它相对于其他标准的定位可以总结为：</p>
+
+  <svg id=abstractimg width=398 role=img viewBox="0 0 398 359" height=359 aria-label="It consists of everything else, above such core technologies as HTTP, TLS, MQ, DOM, Unicode, Web IDL, MIME, URL, XML, JavaScript, and Encodings; below presentation-layer technologies like CSS, SVG, MathML, and NPAPI; and to the side of technologies like Geo, Fetch, CSP, JPEG, GIF, and PNG.">
+   <rect width=398 height=80></rect>
+   <text class=top x=199 y=45>CSS SVG MathML NPAPI</text>
+   <rect width=67 y=85 height=177></rect>
+   <text transform="translate(25 251) rotate(-90)" class=left>Geo Fetch CSP</text>
+   <text transform="translate(50 250) rotate(-90)" class=left>JPEG GIF PNG</text>
+   
+   <image xlink:href=/html/images/abstract.jpeg width=326 x=72 y=85 height=177></image>
+   <text class=right x=130 y=250>THIS SPECIFICATION</text>
+   <rect width=398 y=267 height=92></rect>
+   <text class=bottom x=15 y=300>HTTP TLS MQ DOM Unicode Web IDL</text>
+   <text class=bottom x=18 y=330>MIME URL XML JavaScript Encodings</text>
+  </svg>
+
+  
+
+
+
+  <h3 id=is-this-html5?><span class=secno>1.2</span> 这是 HTML5 吗?<a href=#is-this-html5? class=self-link></a></h3>
+<div data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/introduction/is-this-html5.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/introduction/is-this-html5.en.html></div>
+
+  <p><i>This section is non-normative.</i></p>
+
+  <p>答案是：是的。</p>
+
+  <p>详细地说，广义的 "HTML5" 是指一系列的现代 Web 技术。
+  这些技术中很多都由 WHATWG 开发，本文档就是其中之一。
+  其他的可以在这里访问：
+  <a href=https://whatwg.org/specs/>the WHATWG specification index</a>。</p>
+
+  <p class=note>W3C 也在以独立的文档发布本标准中的部分内容，尽管我们已要求他们停止这样做。</p>
+
+
+
+  <h3 id=背景><span class=secno>1.3</span> 背景<a href=#背景 class=self-link></a></h3>
+<div data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/introduction/background.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/introduction/background.en.html></div>
+
+  <p><i>This section is non-normative.</i></p>
+
+  <p>HTML 是万维网的核心标记语言。最初 HTML 主要设计为在语义级别描述科学文档的语言。
+  然而它的总体设计使它在接下来的几年中能够适配一些其他类型的文档，甚至包括应用程序。</p>
+
+
+
+  <h3 id=受众><span class=secno>1.4</span> 受众<a href=#受众 class=self-link></a></h3>
+<div data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/introduction/audience.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/introduction/audience.en.html></div>
+
+  <p><i>This section is non-normative.</i></p>
+
+  <p>本标准是为以下读者提供的：使用了本标准定义的特性的文档和脚本的作者，
+  用于操作那些使用了本标准定义的特性的页面的工具的实现者，
+  希望根据本标准的要求确认文档或实现的正确性的个人。</p>
+
+  <p>本文档对还没有整体熟悉 Web 技术的读者可能不合适,
+  因为在有些地方为精确性而省略了具体阐述，为完整性而较为简洁概括。
+  易懂的教程和编写指南可以为这个话题提供更加温和的介绍。</p>
+
+  <p>具体地，为了完整地理解本标准中那些更加技术的部分，对 DOM 基础的熟悉是必要的。
+  对 Web IDL，HTTP，XML，Unicode，字符编码，JavaScript 和 CSS 的理解在有些地方也有帮助，但并非完全必要。</p>
+
+
+
+  <h3 id=范围><span class=secno>1.5</span> 范围<a href=#范围 class=self-link></a></h3>
+<div data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/introduction/scope.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/introduction/scope.en.html></div>
+
+  <p><i>This section is non-normative.</i></p>
+
+  <p>本标准只限于为编写可访问的 Web 页面（从静态文档到动态应用）
+  提供语义级别的标记语言，以及相应的语义级别的脚本 API。</p>
+
+  <p>本标准的范围不包括提供具体媒体的自定义呈现机制（尽管 Web 浏览器的默认渲染规则在本标准末尾有所涵盖，
+  一些挂钩到 CSS 的机制也作为语言的一部分加以提供）。</p>
+
+  <p>本标准的范围并非要描述整个操作系统。具体地，硬件配置软件、图像操作工具、
+  以及用户在高端工作站日常使用的应用程序都在范围之外。
+  对于应用软件，本标准只针对用户偶尔使用的，或定期使用但在不同地点的，
+  且 CPU 要求较低的特定应用。这样的应用例如在线购物系统、搜索系统、游戏（尤其是多人在线游戏）、
+  公开电话簿或地址簿、通信软件（邮件客户端、即时通信客户端、讨论软件），
+  文档编辑软件等。</p>
+
+
+
+  <h3 id=历史><span class=secno>1.6</span> 历史<a href=#历史 class=self-link></a></h3>
+<div data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/introduction/history.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/introduction/history.en.html></div>
+
+  <p><i>This section is non-normative.</i></p>
+
+  <p>在最初的5年中（1990-1995），HTML经历了若干次修订和扩展。最初由 CERN 主要托管，随后是 IETF。</p>
+
+  <p>随着 W3C 的诞生，HTML 的开发再次易主。1995 年第一次扩展 HTML 的尝试（HTML 3.0）以失败告终，随后转变为更加务实的 HTML 3.2，在 1997 年完成。
+  就在同年很快开始了 HTML4 的开发。</p>
+
+  <p>随后一年 W3C 成员决定停止 HTML 的演变，并开始开发基于 XML 的替代品 XHTML。  该
+  工作首先将 HTML4 重新规划为 XML，也就是著名的 XHTML 1.0。
+  唯一增加的特性就是新的序列化，该工作在 2000 年完成。
+  XHTML 1.0 之后，在 XHTML 模块化的口号下 W3C 的主要精力转向让其他工作组更容易地扩展 XHTML。
+  与此同时，W3C 致力于一门新的、与此前的 HTML 和 XHTML 都不兼容的语言：XHTML2。</p>
+
+  <p>大概在 1998 年 HTML 停止演化的时候，浏览器厂商开发的部分 HTML API 被标准化和发布在 DOM Level 1（1998）
+  和 DOM Level 2 Core，以及 DOM Level 2 HTML（2000年开始2003年完成）中。
+  在 2004 年发布了一些 DOM Level 3 标准，但是 Level 3 草案尚未全部完成工作组就关闭了。
+  这些工作也最终不了了之。</p>
+
+  <p>2003 年 XForms （一项定位于下一代 Web 表单的技术）的发布
+  重新激起了对 HTML 演化的兴趣，而不是像从前那样寻求新的替代品。
+  这时人们发现 XML 作为 Web 技术的部署只局限于全新的技术（比如 RSS 和后来的 Atom），
+  而不是取代已经部署的技术（比如 HTML）。</p>
+
+  <p>概念验证显示，在不要求浏览器实现与现存 HTML Web 页面不兼容的渲染引擎的情况下，
+  也可能扩展 HTML4 的表单来提供 XForms 1.0 引入的很多特性。
+  这一概念验证是对 HTML 重新燃起的兴趣产生的第一项成果。
+  在这早期阶段，虽然本草案已经公开可用且已广泛征求建议，该标准只在 Opera Software 版权下发布。</p>
+
+  <p>应该重新开启 HTML 演化的想法在 W3C 工作组得到了测试。
+  Mozilla 和 Opera 共同向 W3C 工作组提交了提议，包括
+  HTML5 工作背后的一些原则（见下文），以及前述的只涉及表单特性的早期草案。
+  该提议因为与此前选择的 Web 演化方向冲突而被拒绝，
+  W3C 职员和会员投票支持继续开发基于 XML 的替代品。</p>
+
+  <p>此后 Apple，Mozilla 和 Opera 共同声明他们将继续在 WHATWG（一个新的组织）团体下投入工作。
+  他们为此创建了一个公开的邮件列表，草案也移交到了 WHATWG 网站。随后版权也修改为这三家共同拥有，
+  同时允许该标准的重用。</p>
+
+  <p>WHATWG 基于若干核心原则，具体地：技术需要向后兼容，标准和实现需要相符（即使这意味着更改标准而不是实现），
+  标准需要足够详细来使得一个实现在不需对其他实现进行逆向工程的情况下，就能可达到完全的互操作性。</p>
+
+  <p>其中后一个原则，要求 HTML5 标准的范围应包括先前在 HTML4，XHTML1，和 DOM2 HTML
+  这三篇独立的文档中标准化的内容。
+  同时意味着相比于此前的考虑，需要显著地引入更多的细节。</p>
+
+  <p>2006 年，W3C 暗示了参与 HTML5 开发的兴趣，并于 2007 年组建了工作组来与 WHATWG 共同开发 HTML5 标准。
+  Apple，Mozilla，和 Opera 允许 W3C 在 W3C 版权下发布该标准，
+  只要保留一版 WHATWG 网站的那份较少限制的许可协议。</p>
+
+  <p>数年中各方一同工作，然而在 2011 年，这些工作组最终发现他们有着不同的目标：
+  W3C 希望发布一个"完成的" HTML5 版本，而 WHATWG 希望持续地维护一个 HTML Living Standard，
+  持续地维护该标准而不是锁定在一个带着已知问题的状态，
+  同时按照需求增加新的特性来发展整个平台。</p>
+
+  <p>从此 WHATWG 一直在（与其他组织一同）开发该标准，
+  W3C 则复制 WHATWG 的修复工作到他们所在的文档分支（也有其他的一些改动）。</p>
+
+
+
+
+  <h3 id=设计笔记><span class=secno>1.7</span> 设计笔记<a href=#设计笔记 class=self-link></a></h3>
+<div data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/introduction/design-notes/index.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/introduction/design-notes/index.en.html></div>
+
+  <p><i>This section is non-normative.</i></p>
+
+  <p>必须承认 HTML 的很多方面乍一看毫无意义或者不太一致。</p>
+
+  <p>HTML，它的 DOM API，以及很多其他的支持技术是由互不相识的有着不同目的的人，经数十年开发完成。</p>
+
+  <p>因此特性的出现有着不同的来源，也未经专门的一致的方式设计。
+  而且由于 Web 独有的特点，实现的 Bug 常常会变成事实上的惯例，以及现在合法的、标准的行为。
+  因为编写的内容常常会无意地依赖于这些未能及时修复的实现。</p>
+
+  <p>尽管这样，人们还是为坚持某些设计目标而付出努力。在接下来的几个小节中描述了这些努力。</p>
+
+
+  
+
+
+  <h4 id=serialisability-of-script-execution><span class=secno>1.7.1</span> 脚本执行的可串行性<a href=#serialisability-of-script-execution class=self-link></a></h4>
+<div data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/introduction/design-notes/serializability-of-script-execution.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/introduction/design-notes/serializability-of-script-execution.en.html></div>
+
+  <p><i>This section is non-normative.</i></p>
+
+  <p>为了避免让 Web 作者处理多线程的复杂性，HTML 和 DOM API 的设计使得脚本无法检测同时运行的其他脚本。
+  甚至在使用 <a href=workers.html#worker id=serialisability-of-script-execution:worker>workers</a> 时，设计意图中实现的行为可以被认为是
+  在所有 <a href=browsers.html#browsing-context id=serialisability-of-script-execution:browsing-context>浏览环境</a> 中串行地执行所有脚本。</p>
+
+  
+
+
+
+
+  <h4 id=与其他标准的兼容性><span class=secno>1.7.2</span> 与其他标准的兼容性<a href=#与其他标准的兼容性 class=self-link></a></h4>
+<div data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/introduction/design-notes/compliance-with-other-specifications.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/introduction/design-notes/compliance-with-other-specifications.en.html></div>
+
+  <p><i>This section is non-normative.</i></p>
+
+  <p>本标准和多种多样的其他有相互影响和依赖。很不幸在某些情况下，相互冲突的需求使得本标准违反了其他标准的要求。
+  当这种情况发生时，每一项冲突都会标记为 "<dfn id=willful-violation>willful violation</dfn>"，而且会说明该冲突的原因。</p>
+
+
+
+
+  <h4 id=可扩展性><span class=secno>1.7.3</span> 可扩展性<a href=#可扩展性 class=self-link></a></h4>
+<div data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/introduction/design-notes/extensibility.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/introduction/design-notes/extensibility.en.html></div>
+
+  <p><i>This section is non-normative.</i></p>
+
+  <p>HTML 有广泛的可扩展性机制，可用来安全地添加语义：</p>
+
+  <ul><li><p>作者可以使用 <code id=可扩展性:classes><a href=dom.html#classes>class</a></code> 属性来扩展元素，
+   在使用最接近的 "真实" HTML 元素的同时，也等效于创建了他们自己的元素，
+   因此不知道该扩展的浏览器和其他工具仍然可以在某种程度上很好地支持。
+   比如微格式就是使用的这种策略。<li><p>作者可以使用<code id=可扩展性:attr-data-*><a href=dom.html#attr-data-*>data-*=""</a></code>属性来包含数据，
+   在客户端脚本或服务器端的站点脚本中加以处理。可以保证浏览器永远不会碰这些数据，
+   使得脚本可以在 HTML 元素中引入数据，并在后续脚本中寻找或者处理。<li><p>通过<code id=可扩展性:the-meta-element><a href=semantics.html#the-meta-element>&lt;meta name="" content=""></a></code> 机制，
+   作者可以为<a href=semantics.html#concept-meta-extensions id=可扩展性:concept-meta-extensions>预定义的元数据名称的集合注册扩展</a>
+   来引入页面级别的元数据。<li><p>通过<code id=可扩展性:attr-hyperlink-rel><a href=links.html#attr-hyperlink-rel>rel=""</a></code> 机制，
+   作者可以通过<a href=links.html#concept-rel-extensions id=可扩展性:concept-rel-extensions>为预定义的链接类型注册扩展</a>，
+   来给链接标注特定的含义。微格式也使用了这种机制。<li><p>作者可以使用 <code id=可扩展性:the-script-element><a href=scripting.html#the-script-element>&lt;script type=""></a></code> 来内嵌自定义类型的原始数据，
+   用于在内联脚本或服务器端脚本中做进一步处理。<li><p>使用<code id=可扩展性:the-embed-element><a href=iframe-embed-object.html#the-embed-element>embed</a></code>元素，作者可以创建 <a href=infrastructure.html#plugin id=可扩展性:plugin>插件</a> 和调用他们。
+   这就是 Flash 的工作原理。<li><p>作者可以使用 JavaScript 原型机制来扩展 API。这在脚本库中有广泛的使用。<li><p>作者可以使用微数据特性（<code id=可扩展性:attr-itemscope><a href=microdata.html#attr-itemscope>itemscope=""</a></code> 和 <code id=可扩展性:names:-the-itemprop-attribute><a href=microdata.html#names:-the-itemprop-attribute>itemprop=""</a></code>属性）
+   来嵌入嵌套的键值对数据，以供其他应用和站点共享。</ul>
+
+
+
+
+
+  <h3 id=html-vs-xhtml><span class=secno>1.8</span> HTML 和 XML 语法<a href=#html-vs-xhtml class=self-link></a></h3>
+<div data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/introduction/html-vs-xml-syntax.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/introduction/html-vs-xml-syntax.en.html></div>
+
+  <p><i>This section is non-normative.</i></p>
+
+  <p>本标准定义了一个描述文档和应用的抽象语言，以及一些 API 来与使用该语言的资源的内存表示进行交互。</p>
+
+  <p>这一内存表示又称为 "DOM HTML"，或简称为 "DOM"。</p>
+
+  <p>对于传输使用了该抽象语言的资源，有很多不同的具体语法。本标准中定义了其中两种。</p>
+
+  <p>第一个这样的具体语法是 HTML 语法。这是对多数作者推荐的格式，它与多数遗留的 Web 浏览器相兼容。
+  如果一个文档以<code id=html-vs-xhtml:text/html><a href=iana.html#text/html>text/html</a></code> <a id=html-vs-xhtml:mime-type href=https://mimesniff.spec.whatwg.org/#mime-type data-x-internal=mime-type>MIME type</a>进行传输，
+  然后它将会被 Web 浏览器作为 HTML 文档处理。
+  本标准定义了最新的 HTML 语法，简单地称为 "HTML"。</p>
+
+  <p>第二个具体的语法是 XML。当一篇文档以<a id=html-vs-xhtml:xml-mime-type href=https://mimesniff.spec.whatwg.org/#xml-mime-type data-x-internal=xml-mime-type>XML MIME type</a>（比如<code id=html-vs-xhtml:application/xhtml+xml><a href=iana.html#application/xhtml+xml>application/xhtml+xml</a></code>）
+  传输时，它将会被 Web 浏览器当做 XML 文档处理，被 XML 处理器解析。
+  作者需要注意 XML 和 HTML 的处理存在差别；具体地，即使很小的语法错误都将阻止 XML 文档的完整渲染，
+  然而它们在 HTML 语法中将会被忽略。</p>
+
+  <p class=note>给 HTML 用的 XML 语法此前被称为 "XHTML"，但本标准不适用该术语
+  （原因之一是 MathML 和 SVG 的 HTML 语法中未使用该术语）。</p>
+
+  <p>DOM，HTML 语法，XML 语法不能用来表示同样的内容。
+  例如 HTML 语法不能表示命名空间，但 DOM 和 XML 语法却支持。
+  类似地，HTML 语法可以表示使用 <code id=html-vs-xhtml:the-noscript-element><a href=scripting.html#the-noscript-element>noscript</a></code> 特性的文档，
+  但 DOM 和 XML 语法却不能。
+  包含 "<code>--></code>" 的注释只能在 DOM 中表示，HTML 和 XML 语法却不行。</p>
+
+
+
+  <h3 id=本标准的结构><span class=secno>1.9</span> 本标准的结构<a href=#本标准的结构 class=self-link></a></h3>
+<div data-zh-date="Mon Jul 27 2020 01:00:46 GMT+0000 (UTC)" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/introduction/structure-of-this-specification/index.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/introduction/structure-of-this-specification/index.en.html></div>
+
+  <p><i>This section is non-normative.</i></p>
+
+  <p>本标准分为以下主要的部分：</p>
+
+  <dl><dt><a href=#introduction>概述</a><dd>为 HTML 标准提供上下文的非规范性材料。<dt><a href=infrastructure.html#infrastructure>通用基础设施</a><dd>合规的类、算法、定义、标准其余部分的通用基础。<dt><a href=dom.html#dom>HTML 文档的语义，结构，与 API</a><dd>文档由元素构成，这些元素使用 DOM 组成一棵树。
+   这部分定义了该 DOM 的特性，介绍了所有元素共同的特性，以及在定义元素时用到的概念。<dt><a href=semantics.html#semantics>HTML 元素</a><dd>每个元素都有一个预定义的含义，本章便解释了这些含义。
+   也给出了作者使用这些元素的规则，以及用户代理处理这些元素的要求。
+   这里包含了大量的 HTML 独有的特性，例如视频播放和副标题，表单控件和表单提交，
+   以及名为 HTML canvas 的 2D 图形 API。<dt><a href=microdata.html#microdata>微数据</a><dd>本标准介绍了为文档增加机器可读注解的机制，这样工具可以从文档中抽取键值对的树。
+   这部分文档描述了该机制  和用于将 HTML 文档转换为其他格式的一些算法。
+   这部分还为联系信息、日历事件和许可协议定义了一些示例的微数据词汇。<dt><a href=interaction.html#editing>用户交互</a><dd>HTML 文档可以提供一些用户与内容交互以及用户修改内容的机制，在本章中给出了这些机制的描述。
+   比如焦点的工作机制、以及拖放操作。<dt><a href=browsers.html#browsers>加载 Web 页面</a><dd>HTML 文档不是空中楼阁 — 这部分定义了很多影响处理多页面环境的特性，比如 Web 浏览器和 Web 应用的离线缓存。<dt><a href=webappapis.html#webappapis>Web 应用 API</a><dd>这部分介绍了 HTML 应用脚本的基本特性。<dt><a href=workers.html#workers>Web workers</a><dd>这部分定义了 JavaScript 后台线程的 API。<dt><a href=comms.html#comms>通信 API</a><dd>这部分描述了 HTML 编写的应用可用来与同一客户端中的，不同域名的其他应用通信的一些机制。
+   也介绍了一个服务器推送事件流机制，称为 Server Sent Events 或 <code id=本标准的结构:eventsource><a href=server-sent-events.html#eventsource>EventSource</a></code>，
+   以及一个为脚本提供的双向全双工套接字协议，称为 Web Sockets。
+
+   <dt><a href=webstorage.html#webstorage>Web storage</a><dd>这部分定义了一个基于键值对的客户端存储机制。<dt><a href=syntax.html#syntax>HTML 语法</a><dt><a href=xhtml.html#xhtml>XML 语法</a><dd>只有表示为序列化的形式并发送给其他人，所有的这些特性才会有意义。
+   所以这两部分定义了 HTML 和 XML 的语法 ，以及如何使用这些语法来解析内容的规则。<dt><a href=rendering.html#rendering>渲染</a><dd>这部分定义了 Web 浏览器默认的渲染规则。</dl>
+
+  <p>还有一些附录，列出了 <a href=obsolete.html#obsolete>废弃的特性</a> 和 <a href=iana.html#iana>IANA 考虑</a>，以及一些索引。</p>
+
+
+  
+
+
+  <h4 id=如何阅读本标准><span class=secno>1.9.1</span> 如何阅读本标准<a href=#如何阅读本标准 class=self-link></a></h4>
+<div data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/introduction/structure-of-this-specification/how-to-read-this-specification.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/introduction/structure-of-this-specification/how-to-read-this-specification.en.html></div>
+
+  <p>阅读本标准的方式与其他标准类似。首先应该完整地阅读多次，然后至少倒着读一次，
+  然后应该从目录中随机选入章节并跟着所有交叉引用读一次。</p>
+
+  <p>如下面一致性要求部分所述，本标准描述了各一致性等级的一致性标准。
+  特别地，有些一致性要求适用于<em>生产者</em>（例如作者和他们创建的文档），
+  也有一些适用于<em>消费者</em>（例如 Web 浏览器）。
+  他们的要求是不同的：对生产者的要求声明了什么是允许的，而对消费者的要求声明了软件的行为。</p>
+
+  <div class=example>
+
+   <p>例如，“<code>foo</code> 属性的值必须是一个<a href=infrastructure.html#valid-integer id=如何阅读本标准:valid-integer>合法的整数</a>”
+   是对生产者的要求，因为它规定了允许的取值；相反，
+   “<code>foo</code> 属性的值必须使用 <a href=infrastructure.html#rules-for-parsing-integers id=如何阅读本标准:rules-for-parsing-integers>解析整数的规则</a>来解析”
+   是对消费者的要求，因为它描述了如何处理内容。</p>
+
+  </div>
+
+  <p><strong>对生产者的要求不会对消费者产生任何影响。</strong></p>
+
+  <div class=example>
+
+   <p>继续上述例子，“属性值必须是<a href=infrastructure.html#valid-integer id=如何阅读本标准:valid-integer-2>合法的整数</a>”刻意地没有暗示对消费者的要求。
+   事实上消费者可能被要求把该属性当做透明的字符串，完全不关心它的值是否满足要求。
+   也可能被要求以指定的规则来解析它的值（就像上述例子中那样），这些规则就定义了如何处理不合法的值（在本例子中就是非数字的值）。</p>
+
+  </div>
+
+  
+
+
+
+
+  <h4 id=排版惯例><span class=secno>1.9.2</span> 排版惯例<a href=#排版惯例 class=self-link></a></h4>
+<div data-zh-date="Wed Aug 26 2020 09:09:49 GMT+0000 (UTC)" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/introduction/structure-of-this-specification/typographic-conventions.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/introduction/structure-of-this-specification/typographic-conventions.en.html></div>
+
+  <p>这是定义、要求，或者解释。</p>
+
+  <p class=note>这是注意事项。</p>
+
+  <p class=comment>这是翻译者的注释。</p>
+
+  <p class=example>这是例子。</p>
+
+  <p class=XXX>这是未解决的问题。</p>
+
+  <p class=warning>这是警告</p>
+
+  <pre class=extract><code class=idl>[Exposed=Window]
+interface <dfn>Example</dfn> {
+  // 这是一个 IDL 定义（接口描述语言）
+};</code></pre>
+
+  <dl class=domintro><dt><var>variable</var> = <var>object</var> . <code id=排版惯例:x-that><a href=#x-that>method</a></code>( [ <var>optionalArgument</var> ] )<dd>
+
+    <p>这是给作者看的，描述了接口的使用。</p>
+
+   </dl>
+
+  <pre><code class=css>/* 这是一个 CSS 片段 */</code></pre>
+
+  <p>术语的定义标记为 <dfn id=x-this>这样</dfn>。
+  该术语的使用标记为 <a href=#x-this id=排版惯例:x-this>这样</a> 或 <i id=排版惯例:x-this-2><a href=#x-this>这样</a></i>。</p>
+
+  <p>元素、属性或 API 的定义标记为<dfn id=x-that><code>这样</code></dfn>。
+  该元素、属性或 API 的引用标记为 <code id=排版惯例:x-that-2><a href=#x-that>这样</a></code>。</p>
+
+  <p>其他代码片段标记为<code>这样</code>。</p>
+
+  <p>变量标记为<var>这样</var>。</p>
+
+  <p>在算法中，<a href=webappapis.html#synchronous-section id=排版惯例:synchronous-section>同步部分</a>的步骤标记为 ⌛。</p>
+
+  <p>有些情况下，要求以列表的形式给出，列表项包括条件和对应的要求。
+  在该情况下，适用于某项条件的要求紧跟着条件出现，这些要求的条件可能有很多个。例如：</p>
+
+  <dl class=switch><dt>这是一个条件
+   <dt>这是另一个条件
+   <dd>这是适用于上述条件的要求
+
+   <dt>这是第三个条件
+   <dd>这是适用于第三个条件的要求
+
+  </dl>
+
+
+
+
+  <h3 id=html-的简单介绍><span class=secno>1.10</span> HTML 的简单介绍<a href=#html-的简单介绍 class=self-link></a></h3>
+<div data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/introduction/a-quick-introduction-to-html/index.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/introduction/a-quick-introduction-to-html/index.en.html></div>
+
+  <p><i>This section is non-normative.</i></p>
+
+  <p>一个基本的 HTML 文档看起来像这样：</p>
+
+  <pre id=intro-early-example>&lt;!DOCTYPE html>
+&lt;html lang="en">
+ &lt;head>
+  &lt;title>Sample page&lt;/title>
+ &lt;/head>
+ &lt;body>
+  &lt;h1>Sample page&lt;/h1>
+  &lt;p>This is a &lt;a href="demo.html">simple&lt;/a> sample.&lt;/p>
+  &lt;!-- this is a comment -->
+ &lt;/body>
+&lt;/html></pre>
+
+  <p>HTML 文档由树状的元素和文本组成。源码中每个元素由
+  一个 <a href=syntax.html#syntax-start-tag id=html-的简单介绍:syntax-start-tag>开始标签</a>（例如 "<code>&lt;body></code>"）
+  和一个 <a href=syntax.html#syntax-end-tag id=html-的简单介绍:syntax-end-tag>结束标签</a>（例如 "<code>&lt;/body></code>"）表示。
+  （某些开始标签和结束标签在某些情况下可以 <a href=syntax.html#syntax-tag-omission id=html-的简单介绍:syntax-tag-omission>省略</a>。）</p>
+
+  <p>标签的嵌套必须使所有标签都完全在其他标签内部，不应出现重叠：</p>
+
+  <pre class=bad>&lt;p>This is &lt;em>very &lt;strong>wrong&lt;/em>!&lt;/strong>&lt;/p></pre>
+  <pre>&lt;p>This &lt;em>is &lt;strong>correct&lt;/strong>.&lt;/em>&lt;/p></pre>
+
+  <p>本标准定义了 HTML 中使用的一些元素，以及它们的嵌套规则。</p>
+
+  <p>元素可以有属性来控制元素的行为。在下面的例子中是一个 <a href=links.html#hyperlink id=html-的简单介绍:hyperlink>超链接</a>，
+  由一个<code id=html-的简单介绍:the-a-element><a href=text-level-semantics.html#the-a-element>a</a></code>元素和它的 <code id=html-的简单介绍:attr-hyperlink-href><a href=links.html#attr-hyperlink-href>href</a></code> 属性组成：</p>
+
+  <pre>&lt;a href="demo.html">simple&lt;/a></pre>
+
+  <p><a href=syntax.html#syntax-attributes id=html-的简单介绍:syntax-attributes>属性</a> 应放置在开始标签中，由
+  <a href=syntax.html#syntax-attribute-name id=html-的简单介绍:syntax-attribute-name>属性名</a> 和 <a href=syntax.html#syntax-attribute-value id=html-的简单介绍:syntax-attribute-value>属性值</a>构成，
+  以 "<code>=</code>" 分隔。
+  如果不包含<a href=https://infra.spec.whatwg.org/#ascii-whitespace id=html-的简单介绍:space-characters data-x-internal=space-characters>空格</a><code>"</code> <code>'</code> <code>`</code> <code>=</code> <code>&lt;</code> 或
+  <code>></code>， 属性值可以保持 <a href=syntax.html#unquoted>没有引号</a> ；
+  否则必须使用单引号或双引号。
+  如果属性值是空字符串，属性值以及 "<code>=</code>" 可以一起省略。</p>
+
+  <pre>&lt;!-- empty attributes -->
+&lt;input name=address disabled>
+&lt;input name=address disabled="">
+
+&lt;!-- attributes with a value -->
+&lt;input name=address maxlength=200>
+&lt;input name=address maxlength='200'>
+&lt;input name=address maxlength="200"></pre>
+
+  <p>HTML 用户代理（比如 Web 浏览器）<i>解析</i>这些标记，把它转化为 DOM（Document Object Model）树。
+  DOM 树是文档在内存中的表示。</p>
+
+  <p>DOM 数包含若干种节点，具体地：<code id=html-的简单介绍:documenttype><a data-x-internal=documenttype href=https://dom.spec.whatwg.org/#interface-documenttype>DocumentType</a></code> 节点、
+  <code id=html-的简单介绍:element><a data-x-internal=element href=https://dom.spec.whatwg.org/#interface-element>Element</a></code>节点、<code id=html-的简单介绍:text><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>Text</a></code> 节点、<code id=html-的简单介绍:comment-2><a data-x-internal=comment-2 href=https://dom.spec.whatwg.org/#interface-comment>Comment</a></code> 节点，
+  以及有时会出现的 <code id=html-的简单介绍:processinginstruction><a data-x-internal=processinginstruction href=https://dom.spec.whatwg.org/#interface-processinginstruction>ProcessingInstruction</a></code> 节点。</p>
+
+  <p><a href=#intro-early-example>本章顶部的代码片段</a>将会转化为下列 DOM 树：</p>
+
+  <ul class=domTree><li class=t10>DOCTYPE: <code>html</code><li class=t1><code id=html-的简单介绍:the-html-element><a href=semantics.html#the-html-element>html</a></code> <span class=t2><code id=html-的简单介绍:attr-lang class="attribute name"><a href=dom.html#attr-lang>lang</a></code>="<code class="attribute value">en</code>"</span><ul><li class=t1><code id=html-的简单介绍:the-head-element><a href=semantics.html#the-head-element>head</a></code><ul><li class=t3><code id=html-的简单介绍:text-2><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span>⏎␣␣</span><li class=t1><code id=html-的简单介绍:the-title-element><a href=semantics.html#the-title-element>title</a></code><ul><li class=t3><code id=html-的简单介绍:text-3><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span>Sample page</span></ul><li class=t3><code id=html-的简单介绍:text-4><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span>⏎␣</span></ul><li class=t3><code id=html-的简单介绍:text-5><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span>⏎␣</span><li class=t1><code id=html-的简单介绍:the-body-element><a href=sections.html#the-body-element>body</a></code><ul><li class=t3><code id=html-的简单介绍:text-6><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span>⏎␣␣</span><li class=t1><code id=html-的简单介绍:the-h1,-h2,-h3,-h4,-h5,-and-h6-elements><a href=sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements>h1</a></code><ul><li class=t3><code id=html-的简单介绍:text-7><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span>Sample page</span></ul><li class=t3><code id=html-的简单介绍:text-8><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span>⏎␣␣</span><li class=t1><code id=html-的简单介绍:the-p-element><a href=grouping-content.html#the-p-element>p</a></code><ul><li class=t3><code id=html-的简单介绍:text-9><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span>This is a </span><li class=t1><code id=html-的简单介绍:the-a-element-2><a href=text-level-semantics.html#the-a-element>a</a></code> <span class=t2><code id=html-的简单介绍:attr-hyperlink-href-2 class="attribute name"><a href=links.html#attr-hyperlink-href>href</a></code>="<code class="attribute value">demo.html</code>"</span><ul><li class=t3><code id=html-的简单介绍:text-10><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span>simple</span></ul><li class=t3><code id=html-的简单介绍:text-11><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span> sample.</span></ul><li class=t3><code id=html-的简单介绍:text-12><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span>⏎␣␣</span><li class=t8><code id=html-的简单介绍:comment-2-2><a data-x-internal=comment-2 href=https://dom.spec.whatwg.org/#interface-comment>#comment</a></code>: <span> this is a comment </span><li class=t3><code id=html-的简单介绍:text-13><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span>⏎␣⏎</span></ul></ul></ul>
+
+  <p>树中的<a href=https://dom.spec.whatwg.org/#document-element id=html-的简单介绍:document-element data-x-internal=document-element>document 元素</a> 是 <code id=html-的简单介绍:the-html-element-2><a href=semantics.html#the-html-element>html</a></code> 元素，
+  在 HTML 文档的这一位置总是应该有这样一个元素。它包含两个元素，
+  <code id=html-的简单介绍:the-head-element-2><a href=semantics.html#the-head-element>head</a></code> 和 <code id=html-的简单介绍:the-body-element-2><a href=sections.html#the-body-element>body</a></code>，以及它们之间的一个 <code id=html-的简单介绍:text-14><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>Text</a></code> 节点。</p>
+
+  <p>DOM 树中的 <code id=html-的简单介绍:text-15><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>Text</a></code> 节点比你预想的要多，因为源码包含一些空格（表示为"␣"）和换行（"⏎"），
+  这些都会变成 DOM 中的 <code id=html-的简单介绍:text-16><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>Text</a></code> 节点。然而因为历史原因，并非所有这些源码中的空格和换行都出现在 DOM 中。
+  具体地，所有<code id=html-的简单介绍:the-head-element-3><a href=semantics.html#the-head-element>head</a></code>开始标签前的空白都会被悄悄地丢掉，所有<code id=html-的简单介绍:the-body-element-3><a href=sections.html#the-body-element>body</a></code>结束标签后的空白都会出现在<code id=html-的简单介绍:the-body-element-4><a href=sections.html#the-body-element>body</a></code>的尾部。</p>
+
+  <p><code id=html-的简单介绍:the-head-element-4><a href=semantics.html#the-head-element>head</a></code> 元素包含一个 <code id=html-的简单介绍:the-title-element-2><a href=semantics.html#the-title-element>title</a></code> 元素，其中包含一个
+  内容为 "Sample page" 的 <code id=html-的简单介绍:text-17><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>Text</a></code> 节点。类似地，<code id=html-的简单介绍:the-body-element-5><a href=sections.html#the-body-element>body</a></code> 元素包含一个
+  <code id=html-的简单介绍:the-h1,-h2,-h3,-h4,-h5,-and-h6-elements-2><a href=sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements>h1</a></code> 元素，一个<code id=html-的简单介绍:the-p-element-2><a href=grouping-content.html#the-p-element>p</a></code> 元素，和一个注释。</p>
+
+  <hr>
+
+  <p>页面中的脚本可以操作该 DOM 树。脚本（比如 JavaScript）是可以使用
+  <code id=html-的简单介绍:the-script-element><a href=scripting.html#the-script-element>script</a></code>标签或 <a href=webappapis.html#event-handler-content-attributes id=html-的简单介绍:event-handler-content-attributes>事件处理内容属性</a>内嵌的小程序。
+  比如下面是一个表单，其中的脚本设置了表单中<code id=html-的简单介绍:the-output-element><a href=form-elements.html#the-output-element>output</a></code>元素的内容并输出 "Hello World"：</p>
+
+  <pre>&lt;<a id=html-的简单介绍:the-form-element href=forms.html#the-form-element>form</a> <a href=forms.html#attr-form-name id=html-的简单介绍:attr-form-name>name</a>="main">
+ Result: &lt;<a id=html-的简单介绍:the-output-element-2 href=form-elements.html#the-output-element>output</a> <a href=form-control-infrastructure.html#attr-fe-name id=html-的简单介绍:attr-fe-name>name</a>="result">&lt;/output>
+ &lt;<a id=html-的简单介绍:the-script-element-2 href=scripting.html#the-script-element>script</a>>
+  <a href=dom.html#document id=html-的简单介绍:document>document</a>.<a href=dom.html#dom-document-forms id=html-的简单介绍:dom-document-forms>forms</a>.main.<a href=forms.html#dom-form-elements id=html-的简单介绍:dom-form-elements>elements</a>.result.<a href=form-elements.html#dom-output-value id=html-的简单介绍:dom-output-value>value</a> = 'Hello World';
+ &lt;/script>
+&lt;/form></pre>
+
+  <p>DOM 树中的每个元素表示为一个对象，这些对象提供 API 以供操作。
+  例如，一个链接（比如上述树中的<code id=html-的简单介绍:the-a-element-3><a href=text-level-semantics.html#the-a-element>a</a></code>元素）的
+  "<code id=html-的简单介绍:attr-hyperlink-href-3><a href=links.html#attr-hyperlink-href>href</a></code>"属性可以通过多种方式改变：</p>
+
+  <pre>var a = <a href=dom.html#document id=html-的简单介绍:document-2>document</a>.<a href=dom.html#dom-document-links id=html-的简单介绍:dom-document-links>links</a>[0]; // obtain the first link in the document
+a.<a href=links.html#dom-hyperlink-href id=html-的简单介绍:dom-hyperlink-href>href</a> = 'sample.html'; // change the destination URL of the link
+a.<a href=links.html#dom-hyperlink-protocol id=html-的简单介绍:dom-hyperlink-protocol>protocol</a> = 'https'; // change just the scheme part of the URL
+a.setAttribute('href', 'https://example.com/'); // change the content attribute directly</pre>
+
+  <p>由于 DOM 树是实现者（尤其是像 Web 浏览器这样的交互式实现）用来处理和显示 HTML 文档的，
+  本标准更多地是按照 DOM 树来介绍的，而不是按照上面描述的标记代码。</p>
+
+  <hr>
+
+  <p>HTML 文档表示了交互式内容的一种媒体无关的描述。HTML 文档可能会渲染在屏幕、语音合成器、或者盲文点触设备。
+  为了精确地控制渲染行为，作者可以使用一个像 CSS 这样的样式语言。</p>
+
+  <p>在下列例子中，使用 CSS 将页面设置为蓝底白字。</p>
+
+  <pre>&lt;!DOCTYPE html>
+&lt;html lang="en">
+ &lt;head>
+  &lt;title>Sample styled page&lt;/title>
+  &lt;style>
+   body { background: navy; color: yellow; }
+  &lt;/style>
+ &lt;/head>
+ &lt;body>
+  &lt;h1>Sample styled page&lt;/h1>
+  &lt;p>This page is just a demo.&lt;/p>
+ &lt;/body>
+&lt;/html></pre>
+
+  <p>关于更多 HTML 的使用细节，鼓励作者参考教程和指南。
+  本标准中的一些示例可能也有用，但新手作者需要注意本标准必须非常详细地定义该语言，
+  以至于一开始可能很难理解。</p>
+
+
+
+
+
+  <h4 id=使用-html-编写安全应用><span class=secno>1.10.1</span> 使用 HTML 编写安全应用<a href=#使用-html-编写安全应用 class=self-link></a></h4>
+<div data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/introduction/a-quick-introduction-to-html/writing-secure-applications-with-html.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/introduction/a-quick-introduction-to-html/writing-secure-applications-with-html.en.html></div>
+
+  <p><i>This section is non-normative.</i></p>
+
+  <p>当使用 HTML 创建交互式网站时，需要注意避免引入漏洞，使得攻击者通过这些漏洞危害网站本身或网站用户信息的完整性。</p>
+
+  <p>对这一问题的全面研究超出了本文档的范围，我们强烈建议网站作者去更详细地研究这一问题。
+  即便如此，本节尝试对 HTML 应用程序开发中的一些常见陷阱作简单介绍。</p>
+
+  <p>Web 的安全模型基于“域”的概念，因此 Web 上许多潜在的攻击涉及跨域操作。<a href=references.html#refsORIGIN>[ORIGIN]</a></p>
+
+  <dl><dt>不验证用户输入<dt>跨站脚本（XSS）<dt>SQL 注入<dd>
+
+    <p>当接受不可信输入时（例如文本评论这样的用户生成内容，URL 参数中的值，来自第三方网站的消息等），
+    必须在使用前验证数据，并在显示时正确转义。 否则就会允许恶意的用户执行各种攻击，
+    这些攻击可能是轻微的，例如提供诸如负的年龄这样的假的用户信息；
+    也可能是严重的，例如在每次用户查看包含该信息的页面时执行脚本；
+    也可能是传播性的攻击导致灾难性后果，比如删除服务器中的所有数据。</p>
+
+    <p>当编写过滤器验证用户输入时，过滤器应当是基于白名单的，允许已知的安全构造并禁止所有其他输入。
+    基于黑名单的过滤器（禁止已知的错误输入并允许其他所有输入）是不安全的，
+    因为并不是所有错误输入都是已知的（因为它可能会在未来发明）。</p>
+
+    <div class=example>
+
+     <p>例如，一个页面查看它的 URL 查询字符串来决定显示的内容，
+     然后网站将用户重定向到显示该消息的页面。比如：</p>
+
+     <pre>&lt;ul>
+ &lt;li>&lt;a href="message.cgi?say=Hello">Say Hello&lt;/a>
+ &lt;li>&lt;a href="message.cgi?say=Welcome">Say Welcome&lt;/a>
+ &lt;li>&lt;a href="message.cgi?say=Kittens">Say Kittens&lt;/a>
+&lt;/ul></pre>
+
+     <p>如果这一消息没有转义就显示给用户，恶意的攻击者可能会构造一个包含脚本元素的 URL：</p>
+
+     <pre>https://example.com/message.cgi?say=%3Cscript%3Ealert%28%27Oh%20no%21%27%29%3C/script%3E</pre>
+
+     <p>如果攻击者随后说服受害者访问此页面，攻击者选择的脚本将在页面上运行。
+     这样的脚本可以执行任意的恶意操作，只要是站点提供的。
+     例如站点是电子商务商店，这样的脚本可以导致在用户不知情的情况下进行任意的购买。</p>
+
+     <p>这称为跨站脚本攻击。</p>
+
+    </div>
+
+    <p>有很多构造可以欺骗网站执行代码。以下是网站作者在编写白名单过滤器时应考虑的事项：</p>
+
+    <ul><li>当允许像<code id=使用-html-编写安全应用:the-img-element><a href=embedded-content.html#the-img-element>img</a></code>这样看起来无害的元素时，重要的是同时为所有提供的属性给出白名单。
+     比如，如果一个元素允许所有属性，攻击者可能会使用<code id=使用-html-编写安全应用:handler-onload><a href=webappapis.html#handler-onload>onload</a></code>属性来运行任意脚本。<li>当允许提供 URL 时（比如 link），每一个 URL 的 scheme 也需要显式地给出白名单。
+     因为有很多 scheme 都可能会被滥用。最著名的例子是：“<code id=使用-html-编写安全应用:javascript-protocol><a href=browsing-the-web.html#javascript-protocol>javascript:</a></code>”，
+     用户代理也可能会实现其他的一些scheme，由于历史原因确实已经实现了不少。<li>允许插入 <code id=使用-html-编写安全应用:base-元素><a href=semantics.html#base-元素>base</a></code> 元素意味着页面中的任何相对链接的 <code id=使用-html-编写安全应用:the-script-element><a href=scripting.html#the-script-element>script</a></code> 元素都可能被劫持，
+     类似地任何表单提交也可能重定向到恶意站点。</ul>
+
+   <dt>跨站请求伪造 (CSRF)<dd>
+
+    <p>如果网站允许用户提交的表单产生用户相关的影响，例如使用名字在论坛上发布消息，
+    进行购买或申请护照，那么很有必要核实该请求确实是用户有意发起的，
+    而不是由另一个站点欺骗用户不知情地发起请求。</p>
+
+    <p>该问题的存在是因为 HTML 表单可能被提交到其他域名。</p>
+
+    <p>站点可以通过为表单填充用户相关的隐藏标记或检查所有请求的`<code id=使用-html-编写安全应用:http-origin><a data-x-internal=http-origin href=https://fetch.spec.whatwg.org/#http-origin>Origin</a></code>`头字段，
+    来防止这样的攻击。</p>
+
+   <dt>Clickjacking<dd>
+
+    <p>如果页面为用户提供的界面中包含用户可能不希望执行的操作时，
+    该页面应当经过特殊设计来避免用户被欺骗以激活该界面的可能性。</p>
+
+    <p>一种用户被欺骗的可能是，如果恶意站点将受害站点放在一个小的 <code id=使用-html-编写安全应用:the-iframe-element><a href=iframe-embed-object.html#the-iframe-element>iframe</a></code> 中然后让用户去点击，
+    例如让用户玩一个反应类游戏。一旦用户开始玩这个游戏，恶意站点可以在用户正要点击时快速地将这个 iframe 放到鼠标光标下。
+    以此来欺骗用户点击受害站点的界面。</p>
+
+    <p>为了避免这种情况，鼓励不期望在 iframe 下使用的站点只有检测（例如通过比较<code id=使用-html-编写安全应用:dom-window><a href=window-object.html#dom-window>window</a></code>对象和<code id=使用-html-编写安全应用:dom-top><a href=browsers.html#dom-top>top</a></code>属性的值）
+    到它们不在 iframe 下时才激活它们的界面。</p>
+
+   </dl>
+
+
+
+
+  <h4 id=使用脚本-api-时常见的陷阱><span class=secno>1.10.2</span> 使用脚本 API 时常见的陷阱<a href=#使用脚本-api-时常见的陷阱 class=self-link></a></h4>
+<div data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/introduction/a-quick-introduction-to-html/common-pitfalls-to-avoid-when-using-the-scripting-apis.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/introduction/a-quick-introduction-to-html/common-pitfalls-to-avoid-when-using-the-scripting-apis.en.html></div>
+
+  <p><i>This section is non-normative.</i></p>
+
+  <p>HTML 中的脚本有着"运行到完成"的语义，这意味着浏览器通常在执行任何其他操作
+  （诸如触发进一步的事件或继续解析文档）之前会不中断地执行脚本。</p>
+
+  <p>另一方面，HTML 文件的解析是逐步发生的，这意味着解析器可以在任何地方暂停来让脚本运行。
+  这通常是一件好事，但确实意味着作者需要小心地避免在事件可能已经触发之后才绑定事件处理程序。</p>
+
+  <p>有两项技术能够可靠地完成这件事情：使用
+  <a href=webappapis.html#event-handler-content-attributes id=使用脚本-api-时常见的陷阱:event-handler-content-attributes>事件处理程序内容属性</a>，
+  或者在同一脚本中创建元素和添加事件处理程序。后一种更为安全，因为如前所述，
+  脚本会在进一步的事件发生前一直运行到完成。</p>
+
+  <div class=example>
+
+   <p>一个可以表示此种情形的例子是<code id=使用脚本-api-时常见的陷阱:the-img-element><a href=embedded-content.html#the-img-element>img</a></code>元素和<code id=使用脚本-api-时常见的陷阱:event-load><a href=indices.html#event-load>load</a></code>事件。
+   该事件在元素解析完成时就会触发，特别是当图片已经被缓存之后（这很常见）。</p>
+
+   <p>这里，作者在<code id=使用脚本-api-时常见的陷阱:the-img-element-2><a href=embedded-content.html#the-img-element>img</a></code>标签上使用 <code id=使用脚本-api-时常见的陷阱:handler-onload><a href=webappapis.html#handler-onload>onload</a></code> 事件处理程序
+   来捕捉 <code id=使用脚本-api-时常见的陷阱:event-load-2><a href=indices.html#event-load>load</a></code> 事件：</p>
+
+   <pre>&lt;img src="games.png" alt="Games" onload="gamesLogoHasLoaded(event)"></pre>
+
+   <p>如果使用脚本添加元素，那么只要在同一脚本中添加事件处理函数，该事件就不会被错过：</p>
+
+   <pre>&lt;script>
+ var img = new Image();
+ img.src = 'games.png';
+ img.alt = 'Games';
+ img.onload = gamesLogoHasLoaded;
+ // img.addEventListener('load', gamesLogoHasLoaded, false); // would work also
+&lt;/script></pre>
+
+   <p>然而如果作者首先创建了<code id=使用脚本-api-时常见的陷阱:the-img-element-3><a href=embedded-content.html#the-img-element>img</a></code>元素，然后在另一个单独的脚本中添加了事件监听器，
+   那么有可能<code id=使用脚本-api-时常见的陷阱:event-load-3><a href=indices.html#event-load>load</a></code>事件会在两者之间触发，导致它被错过：</p>
+
+   <pre class=bad>&lt;!-- Do not use this style, it has a race condition! -->
+ &lt;img id="games" src="games.png" alt="Games">
+ &lt;!-- the 'load' event might fire here while the parser is taking a
+      break, in which case you will not see it! -->
+ &lt;script>
+  var img = document.getElementById('games');
+  img.onload = gamesLogoHasLoaded; // might never fire!
+ &lt;/script></pre>
+
+  </div>
+
+
+
+
+  <h4 id=编写-html-时如何发现错误：验证器和一致性检查器><span class=secno>1.10.3</span> 编写 HTML 时如何发现错误：验证器和一致性检查器<a href=#编写-html-时如何发现错误：验证器和一致性检查器 class=self-link></a></h4>
+<div data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/introduction/a-quick-introduction-to-html/how-to-catch-mistakes-when-writing-html-validators-and-conformance-checkers.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/introduction/a-quick-introduction-to-html/how-to-catch-mistakes-when-writing-html-validators-and-conformance-checkers.en.html></div>
+
+  <p><i>This section is non-normative.</i></p>
+
+  <p>鼓励作者使用一致性检查器（又称<i>验证器</i>）来发现常见的错误。
+  WHATWG 维护着这种工具的一个列表：<a href=https://validator.whatwg.org/>https://validator.whatwg.org/</a></p>
+
+
+
+
+  <h3 id=对页面作者的一致性要求><span class=secno>1.11</span> 对页面作者的一致性要求<a href=#对页面作者的一致性要求 class=self-link></a></h3>
+<div data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/introduction/conformance-requirements-for-authors/index.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/introduction/conformance-requirements-for-authors/index.en.html></div>
+
+  <p><i>This section is non-normative.</i></p>
+
+  <p>与以前版本的 HTML 规范不同，此规范不仅定义了对有效文档的处理，
+  也详细定义了对无效文档的处理过程。</p> 
+
+  <p>然而，即使无效内容的处理在大多数情况下是良好定义的，文档的一致性仍然很重要：
+  在实践中，互操作性（所有实现以可靠和相同或等同的方式处理特定内容的情况）并不是文档一致性要求的唯一目标。
+  本节详细地介绍了合法文档和错误文档仍然有所区别的一些常见原因。</p>
+
+
+
+  <h4 id=表示性的标记><span class=secno>1.11.1</span> 表示性的标记<a href=#表示性的标记 class=self-link></a></h4>
+<div data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/introduction/conformance-requirements-for-authors/presentational-markup.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/introduction/conformance-requirements-for-authors/presentational-markup.en.html></div>
+
+  <p><i>This section is non-normative.</i></p>
+
+  <p>先前 HTML 版本的大多数表示性特性不再被允许。一般来说，表示性的标记有这样一些问题：</p>
+
+  <dl><dt>表示性元素的使用导致较差的可访问性<dd>
+
+    <p>尽管使用显示性的标记也可以为使用辅助技术（Assistive Technologies，AT）的用户
+    提供可接受的体验（比如使用 ARIA），但这样做显然比使用适当的语义标记更加困难。
+    此外，即使使用这样的技术也不能帮助那些既没有 AT 又没有图形的用户（比如使用文本模式浏览器的用户）访问页面。</p>
+
+    <p>另一方面，使用媒体无关的标记为编写更多用户（比如文本浏览器的用户）可用的文档提供了简单的方式。</p>
+
+   <dt>更高的维护成本<dd>
+
+    <p>使用样式无关的标记编写的站点，显然更容易维护。比如，对于到处都在使用 <code>&lt;font color=""></code> 的站点，更改颜色需要更改整个站点，
+    然而对基于 CSS 的站点做类似的改动，只需更改一个文件。</p>
+
+   <dt>更大的文档大小<dd>
+
+    <p>表示性标记往往会增加冗余，因此导致更大的文档大小。</p>
+
+   </dl>
+
+  <p>出于这些原因，在本版本的 HTML 中移除了表示性的标记。
+  这一改动并不突然，HTML4 在很多年前就已经不推荐使用表示性标记，
+  并提供了一种模式（HTML4 Transitional） 来帮助作者从表示性标记进行迁移；
+  后来 XHTML 1.1 更进一步地一起废弃了那些特性。</p>
+
+  <p>HTML 中唯一保留下来的表示性标记特性是 <code id=表示性的标记:style-属性><a href=dom.html#style-属性>style</a></code> 属性和 <code id=表示性的标记:the-style-element><a href=semantics.html#the-style-element>style</a></code> 元素。
+  生产环境中使用 <code id=表示性的标记:style-属性-2><a href=dom.html#style-属性>style</a></code> 属性也在某种程度上不再推荐，
+  但在创建原型（这些规则之后可以直接移动到单独的样式表中）
+  以及在特殊情况下（当单独的样式表不方便时）提供特定样式很有用。
+  类似地，<code id=表示性的标记:the-style-element-2><a href=semantics.html#the-style-element>style</a></code> 元素在引入外部样式内容或者提供页面特定样式时很有用。
+  但一般来说，当样式适用于多个页面时，外部样式表可能更加方便。</p>
+
+  <p>值得注意的是有些先前的表示性元素在本标准中已经被重新定义为媒体无关的：
+  <code id=表示性的标记:the-b-element><a href=text-level-semantics.html#the-b-element>b</a></code>, <code id=表示性的标记:the-i-element><a href=text-level-semantics.html#the-i-element>i</a></code>,
+  <code id=表示性的标记:the-hr-element><a href=grouping-content.html#the-hr-element>hr</a></code>, <code id=表示性的标记:the-s-element><a href=text-level-semantics.html#the-s-element>s</a></code>, <code id=表示性的标记:the-small-element><a href=text-level-semantics.html#the-small-element>small</a></code>, and <code id=表示性的标记:the-u-element><a href=text-level-semantics.html#the-u-element>u</a></code>.</p>
+
+
+
+  <h4 id=语法错误><span class=secno>1.11.2</span> 语法错误<a href=#语法错误 class=self-link></a></h4>
+<div data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/introduction/conformance-requirements-for-authors/syntax-errors.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/introduction/conformance-requirements-for-authors/syntax-errors.en.html></div>
+
+  <p><i>This section is non-normative.</i></p>
+
+  <p>限制 HTML 的语法是为了避免各种各样的问题。</p>
+
+  <dl><dt>不直观的错误处理行为<dd>
+
+    <p>某些不合法的语法构造在解析后会导致很不直观的 DOM 树。</p>
+
+    <div class=example>
+
+     <p>例如，以下标记片段会导致 DOM 树中的 <code id=语法错误:the-hr-element><a href=grouping-content.html#the-hr-element>hr</a></code> 元素
+     在相应的 <code id=语法错误:the-table-element><a href=tables.html#the-table-element>table</a></code> 元素<em>之前</em>。</p>
+
+     <pre class=bad>&lt;table>&lt;hr>...</pre>
+
+    </div>
+
+   <dt>可选错误恢复的错误<dd>
+
+    <p>为了允许在受控环境中使用的用户代理不必实现更奇怪和复杂的错误处理规则，
+    允许用户代理在遇到<a href=parsing.html#parse-errors id=语法错误:parse-errors>解析错误</a>时失败。</p>
+
+   <dt>错误处理行为与流式用户代理不兼容的的错误<dd>
+
+    <p>一些错误处理行为（比如上面提到的<code>&lt;table>&lt;hr>...</code>）
+    与流式用户代理（不存储状态且通过一次遍历来处理 HTML 文件的用户代理）不兼容。
+    为了避免与这样的用户代理的互操作性问题，任何导致该行为的语法都是无效的。</p>
+
+   <dt>会导致信息集强制的错误<dd>
+
+    <p>当一个基于 XML 的用户代理连接到一个 HTML 解析器时，
+    某些 XML 强制的不变式（比如元素或属性名不可包含多个冒号）可能被 HTML 文件违反。
+    处理这种情况可能要求解析器将 HTML DOM 信息强加给 XML 兼容的信息集。
+    要求这一处理的多数语法构造都是不合法的。
+    （包含两个连续的间隔符的注释，或以一个间隔符结尾的注释是特例，这在 HTML 语法中是允许的）。</p>
+    <p class=comment>这一规则意味着基于 XML 的用户代理只需连接一个 HTML
+    解析器（Parser）即可拥有理解 HTML 的能力。所以 HTML 与 XML 只是语法有所不同，
+    表达语义的能力应当是等价的。</p>
+
+   <dt>会导致性能下降的错误<dd>
+
+    <p>某些语法构造可能导致很差的性能。为了阻止这些构造的使用，通常把它们归为不合规范的。</p>
+
+    <div class=example>
+
+     <p>例如，下列标记会导致很差的性能，因为所有未闭合的 <code id=语法错误:the-i-element><a href=text-level-semantics.html#the-i-element>i</a></code> 元素必须在每个段落中重新构造，
+     导致每个段落中的元素累加地增多：</p>
+
+     <pre class=bad>&lt;p>&lt;i>She dreamt.
+&lt;p>&lt;i>She dreamt that she ate breakfast.
+&lt;p>&lt;i>Then lunch.
+&lt;p>&lt;i>And finally dinner.</pre>
+
+     <p>该片段的结果 DOM 将会是：</p>
+
+     <ul class=domTree><li class=t1><code id=语法错误:the-p-element><a href=grouping-content.html#the-p-element>p</a></code><ul><li class=t1><code id=语法错误:the-i-element-2><a href=text-level-semantics.html#the-i-element>i</a></code><ul><li class=t3><code id=语法错误:text><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span>She dreamt.</span></ul></ul><li class=t1><code id=语法错误:the-p-element-2><a href=grouping-content.html#the-p-element>p</a></code><ul><li class=t1><code id=语法错误:the-i-element-3><a href=text-level-semantics.html#the-i-element>i</a></code><ul><li class=t1><code id=语法错误:the-i-element-4><a href=text-level-semantics.html#the-i-element>i</a></code><ul><li class=t3><code id=语法错误:text-2><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span>She dreamt that she ate breakfast.</span></ul></ul></ul><li class=t1><code id=语法错误:the-p-element-3><a href=grouping-content.html#the-p-element>p</a></code><ul><li class=t1><code id=语法错误:the-i-element-5><a href=text-level-semantics.html#the-i-element>i</a></code><ul><li class=t1><code id=语法错误:the-i-element-6><a href=text-level-semantics.html#the-i-element>i</a></code><ul><li class=t1><code id=语法错误:the-i-element-7><a href=text-level-semantics.html#the-i-element>i</a></code><ul><li class=t3><code id=语法错误:text-3><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span>Then lunch.</span></ul></ul></ul></ul><li class=t1><code id=语法错误:the-p-element-4><a href=grouping-content.html#the-p-element>p</a></code><ul><li class=t1><code id=语法错误:the-i-element-8><a href=text-level-semantics.html#the-i-element>i</a></code><ul><li class=t1><code id=语法错误:the-i-element-9><a href=text-level-semantics.html#the-i-element>i</a></code><ul><li class=t1><code id=语法错误:the-i-element-10><a href=text-level-semantics.html#the-i-element>i</a></code><ul><li class=t1><code id=语法错误:the-i-element-11><a href=text-level-semantics.html#the-i-element>i</a></code><ul><li class=t3><code id=语法错误:text-4><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span>And finally dinner.</span></ul></ul></ul></ul></ul></ul>
+
+    </div>
+
+   <dt>涉及到脆弱的语法构造的错误<dd>
+
+    <p>由于历史原因有一些语法构造相对脆弱。为了避免用户意外地掉到坑里，它们也被归为不合规范的。</p>
+
+    <div class=example>
+
+     <p>例如，即使省略了关闭分号，对属性中命名的字符引用的解析也会发生。
+     可以安全地引入一个<code>&amp;</code>以及紧随其后的不构成特殊命名的字符引用，
+     但如果这些字母改成构成命名的字符引用，它们将会被解释为那个特殊字符。</p>
+
+     <p>在这个代码片段中，属性值是“<code>?bill&amp;ted</code>”：</p>
+
+     <pre class=bad>&lt;a href="?bill&amp;ted">Bill and Ted&lt;/a></pre>
+
+     <p>在下面的代码片段中，属性值实际上会变成“<code>?art©</code>”，
+     而<em>不是</em> 期望的 “<code>?art&amp;copy</code>”，
+     因为即使没有最后的分号“<code>&amp;copy</code>”也会一样地被处理为
+     “<code>&amp;copy;</code>”最终被解释为“<code>©</code>”：</p>
+
+     <pre class=bad>&lt;a href="?art&amp;copy">Art and Copy&lt;/a></pre>
+
+     <p>为了避免这一问题，要求所有命名的字符引用以分号结束，
+     所有使用命名字符引用但未添加分号的都被标记为错误。</p>
+
+     <p>因此正确地表达上述情况的方式如下：</p>
+
+     <pre>&lt;a href="?bill&amp;ted">Bill and Ted&lt;/a> &lt;!-- &amp;ted is ok, since it's not a named character reference --></pre>
+     <pre>&lt;a href="?art&amp;amp;copy">Art and Copy&lt;/a> &lt;!-- the &amp; has to be escaped, since &amp;copy <em>is</em> a named character reference --></pre>
+
+    </div>
+
+   <dt>涉及旧用户代理中的已知互操作性问题的错误<dd>
+
+    <p>某些语法构造在旧的用户代理中会造成一些已知的细微或严重的问题。
+    因此他们被标记为不合规范的来帮助作者避免这些问题。</p>
+
+    <div class=example>
+
+     <p>例如 U+0060 重音符（`）不允许出现在没有引号的属性中。
+     因为在某些旧用户代理中，它有时会被当做一个引号。</p>
+
+    </div>
+
+    <div class=example>
+
+     <p>另一个例子是必须使用 DOCTYPE 来触发 <a href=https://dom.spec.whatwg.org/#concept-document-no-quirks id=语法错误:no-quirks-mode data-x-internal=no-quirks-mode>非怪异模式</a>，
+     因为旧用户代理在 <a href=https://dom.spec.whatwg.org/#concept-document-quirks id=语法错误:quirks-mode data-x-internal=quirks-mode>怪异模式</a> 下的行为通常都没有文档。</p>
+
+    </div>
+
+   <dt>可能引发对作者的安全攻击的错误<dd>
+
+    <p>某些限制纯粹是为了避免已知的安全问题。</p>
+
+    <div class=example>
+
+     <p>例如，对使用 UTF-7 的限制纯粹是为了避免作者成为使用 UTF-7
+     的已知跨站脚本攻击的的目标。<a href=references.html#refsUTF7>[UTF7]</a></p>
+
+    </div>
+
+   <dt>作者的意图不清楚的情况<dd>
+
+    <p>作者意图不清楚的标记通常被划为不规范的。
+    尽早修复这些错误会使得后续维护更为容易。</p>
+
+    <div class=example>
+
+     <p>例如，作者是要将以下内容作为 <code id=语法错误:the-h1,-h2,-h3,-h4,-h5,-and-h6-elements><a href=sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements>h1</a></code> 标题还是
+     <code id=语法错误:the-h1,-h2,-h3,-h4,-h5,-and-h6-elements-2><a href=sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements>h2</a></code> 标题的意图并不明确：</p>
+
+     <pre class=bad>&lt;h1>Contact details&lt;/h2></pre>
+
+    </div>
+
+   <dt>可能是拼写错误的情况<dd>
+
+    <p>当用户发生了拼写错误，提早捕获该错误是有帮助的，因为这可以节省作者很多调试时间。
+    因此本标准通常认为使用与本标准中定义的名字不匹配的元素名、属性名等是错误的。</p>
+
+    <div class=example>
+
+     <p>例如，如果作者键入<code>&lt;capton></code> 而不是 <code>&lt;caption></code>，这将被标记为错误，作者可以立即更正错字。</p>
+
+    </div>
+
+   <dt>将来可能会干扰新语法的错误<dd>
+
+    <p>为了允许将来扩展语言语法，某些本来无害的特性也是不允许的。</p>
+
+    <div class=example>
+
+     <p>例如，在结束标签中的“属性”目前被忽略，但它们是非法的。
+     以防未来使用该语法特性的语言变更与已部署（但是合法的！）内容产生冲突。</p>
+
+    </div>
+
+   </dl>
+
+  <p>一些作者发现，在实践中总是用引号包含所有的属性并且总是包含所有的可选标签很有帮助，
+  相比于利用 HTML 语法的灵活性而带来的一点简洁，更偏好这一做法带来的一致性。
+  为了协助这样的作者，一致性检查器可以提供执行这一惯例的运行模式。</p>
+
+
+
+
+  <h4 id=内容模型和属性值的限制><span class=secno>1.11.3</span> 内容模型和属性值的限制<a href=#内容模型和属性值的限制 class=self-link></a></h4>
+<div data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/introduction/conformance-requirements-for-authors/restrictions-on-content-models-and-on-attribute-values.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/introduction/conformance-requirements-for-authors/restrictions-on-content-models-and-on-attribute-values.en.html></div>
+
+  <p><i>This section is non-normative.</i></p>
+
+  <p>除了语言的语法，本标准还对如何指定元素和属性做出了限制。
+  这些限制是出于类似的原因：</p>
+
+  <dl><dt>语义可疑的内容<dd>
+
+    <p>为了避免误用定义了含义的元素，
+    定义内容模型时，限制了可疑的元素嵌套方式。</p>
+
+    <p class=example>例如，本标准不允许 <code id=内容模型和属性值的限制:the-section-element><a href=sections.html#the-section-element>section</a></code>
+    元素嵌套在 <code id=内容模型和属性值的限制:the-kbd-element><a href=text-level-semantics.html#the-kbd-element>kbd</a></code> 元素中，因为作者不太可能表示
+    应该键入整个 <code id=内容模型和属性值的限制:the-section-element-2><a href=sections.html#the-section-element>section</a></code>。</p>
+
+   <dt>表达的语义存在冲突<dd>
+
+    <p>类似地，为了让作者对元素使用中的错误引起注意，
+    表达出的语义存在明显的矛盾也被认为是一致性错误。</p>
+
+    <div class=example>
+
+     <p>例如下面的片段中的语义是毫无意义的：
+     分隔符不能同时是单元格，单选按钮也不能是进度条。</p>
+
+     <pre class=bad>&lt;hr role="cell"></pre>
+     <pre class=bad>&lt;input type=radio role=progressbar></pre>
+
+    </div>
+
+    <p class=example>另一个例子是对<code id=内容模型和属性值的限制:the-ul-element><a href=grouping-content.html#the-ul-element>ul</a></code>元素的内容模型的限制，
+    该限制只允许 <code id=内容模型和属性值的限制:the-li-element><a href=grouping-content.html#the-li-element>li</a></code> 子元素。根据定义列表只可包含一些列表项。
+    所以如果 <code id=内容模型和属性值的限制:the-ul-element-2><a href=grouping-content.html#the-ul-element>ul</a></code> 元素包含一些除了 <code id=内容模型和属性值的限制:the-li-element-2><a href=grouping-content.html#the-li-element>li</a></code> 之外的元素，
+    它的含义就不清楚了。</p>
+
+   <dt>默认样式可能会导致困惑的情况<dd>
+
+    <p>某些元素有一些默认样式和行为，它们的某些组合可能会令人困惑。
+    如果存在没有这一问题的等效替代，就不允许这样令人困惑的组合。</p>
+
+    <p class=example>例如，<code id=内容模型和属性值的限制:the-div-element><a href=grouping-content.html#the-div-element>div</a></code> 元素会被渲染为 <a href=https://drafts.csswg.org/css2/#block-boxes%E2%91%A0 id=内容模型和属性值的限制:block-box data-x-internal=block-box>block boxes</a>，<code id=内容模型和属性值的限制:the-span-element><a href=text-level-semantics.html#the-span-element>span</a></code> 元素则为 <a href=https://drafts.csswg.org/css2/#inline-box id=内容模型和属性值的限制:inline-box data-x-internal=inline-box>inline boxes</a>。将 <a id=内容模型和属性值的限制:block-box-2 href=https://drafts.csswg.org/css2/#block-boxes%E2%91%A0 data-x-internal=block-box>block box</a> 放到
+    <a id=内容模型和属性值的限制:inline-box-2 href=https://drafts.csswg.org/css2/#inline-box data-x-internal=inline-box>inline box</a> 中就会导致不必要的困惑；因为只嵌套 <code id=内容模型和属性值的限制:the-div-element-2><a href=grouping-content.html#the-div-element>div</a></code>
+    元素，或只嵌套 <code id=内容模型和属性值的限制:the-span-element-2><a href=text-level-semantics.html#the-span-element>span</a></code> 元素，或在<code id=内容模型和属性值的限制:the-div-element-3><a href=grouping-content.html#the-div-element>div</a></code>元素中嵌套
+    <code id=内容模型和属性值的限制:the-span-element-3><a href=text-level-semantics.html#the-span-element>span</a></code> 元素都可以与在<code id=内容模型和属性值的限制:the-span-element-4><a href=text-level-semantics.html#the-span-element>span</a></code>元素中嵌套<code id=内容模型和属性值的限制:the-div-element-4><a href=grouping-content.html#the-div-element>div</a></code>元素
+    达到同样的目的。但只有后者涉及到在 <a id=内容模型和属性值的限制:inline-box-3 href=https://drafts.csswg.org/css2/#inline-box data-x-internal=inline-box>inline box</a> 中嵌套 <a id=内容模型和属性值的限制:block-box-3 href=https://drafts.csswg.org/css2/#block-boxes%E2%91%A0 data-x-internal=block-box>block box</a>，
+    所以后者的组合方式是不允许的。</p>
+
+    <p class=example>另一个可能的例子是 <a href=dom.html#interactive-content id=内容模型和属性值的限制:interactive-content>交互内容</a>
+    不可嵌套。例如： <code id=内容模型和属性值的限制:the-button-element><a href=form-elements.html#the-button-element>button</a></code> 元素不可包含 <code id=内容模型和属性值的限制:the-textarea-element><a href=form-elements.html#the-textarea-element>textarea</a></code> 元素。
+    这是因为这样嵌套交互元素可能对用户造成困惑。可以并排放置这些元素。</p>
+
+   <dt>对本标准可能的误解<dd>
+
+    <p>有时，某些禁止是因为允许它将可能会让作者困惑。</p>
+
+    <p class=example>例如，设置 <code id=内容模型和属性值的限制:attr-fe-disabled><a href=form-control-infrastructure.html#attr-fe-disabled>disabled</a></code>
+    属性为 "<code>false</code>" 是不允许的，因为表面上看起来它的含义是元素可用，
+    但实际上含义是元素被 <em>禁用</em>
+    （实现中起作用的是该属性是否存在，而非它的值）。</p>
+
+   <dt>纯粹为了简化语言而强加的限制<dd>
+
+    <p>一些一致性错误简化了作者需要学习的语言。</p>
+
+    <p class=example>例如，<code id=内容模型和属性值的限制:the-area-element><a href=image-maps.html#the-area-element>area</a></code> 元素的 <code id=内容模型和属性值的限制:attr-area-shape><a href=image-maps.html#attr-area-shape>shape</a></code> 属性，在实践中虽然同时接受 <code id=内容模型和属性值的限制:attr-area-shape-keyword-circ><a href=image-maps.html#attr-area-shape-keyword-circ>circ</a></code> 和 <code id=内容模型和属性值的限制:attr-area-shape-keyword-circle><a href=image-maps.html#attr-area-shape-keyword-circle>circle</a></code>
+    取值并作为同义词，但禁止
+    <code id=内容模型和属性值的限制:attr-area-shape-keyword-circ-2><a href=image-maps.html#attr-area-shape-keyword-circ>circ</a></code> 值的使用，
+    以此来简化教程和其他学习材料。同时允许它们并没有好处，
+    但它们可能在学习语言时造成额外的困惑。</p>
+
+   <dt>解析器的一些怪异行为<dd>
+
+    <p>某些元素的解析有点奇怪（通常是由于历史原因），
+    它们的内容模型限制旨在避免作者碰到这些问题。</p>
+
+    <div class=example>
+
+     <p>例如，<a id=内容模型和属性值的限制:phrasing-content href=dom.html#phrasing-content>phrasing content</a> 中不允许
+     <code id=内容模型和属性值的限制:the-form-element><a href=forms.html#the-form-element>form</a></code> 元素，因为当解析 HTML 时，
+     <code id=内容模型和属性值的限制:the-form-element-2><a href=forms.html#the-form-element>form</a></code> 元素的开始标签将会产生一个
+     <code id=内容模型和属性值的限制:the-p-element><a href=grouping-content.html#the-p-element>p</a></code> 元素的关闭标签。因此下面的标记会产生两个
+     <a href=dom.html#paragraph id=内容模型和属性值的限制:paragraph>段落</a>（而不是一个）：</p>
+
+     <pre>&lt;p>Welcome. &lt;form>&lt;label>Name:&lt;/label> &lt;input>&lt;/form></pre>
+
+     <p>与下面代码的解析结果完全一样：</p>
+
+     <pre>&lt;p>Welcome. &lt;/p>&lt;form>&lt;label>Name:&lt;/label> &lt;input>&lt;/form></pre>
+
+    </div>
+
+   <dt>可能导致难以调试的脚本错误的情况<dd>
+
+    <p>有些错误旨在避免难以调试的脚本问题。</p>
+
+    <p class=example>比如，这就是为什么有两个等值的 <code id=内容模型和属性值的限制:the-id-attribute><a href=dom.html#the-id-attribute>id</a></code> 属性是不合法的。
+    重复的 ID 导致选择到错误的元素，有时会产生难以确定原因的灾难性后果。</p>
+
+   <dt>会浪费编写时间的错误<dd>
+
+    <p>某些构造被禁止是因为历史上它们曾浪费大量的编写时间。
+    鼓励作者避免使用这些构造，将来可以节省很多时间。</p>
+
+    <p class=example>例如，<code id=内容模型和属性值的限制:the-script-element><a href=scripting.html#the-script-element>script</a></code> 元素的 <code id=内容模型和属性值的限制:attr-script-src><a href=scripting.html#attr-script-src>src</a></code> 属性会导致元素的内容被忽略。
+    然而这并不明显（尤其是元素内容是可执行脚本时）—
+    这会导致作者花费大量时间尝试调试内联脚本，却没意识到它并未执行。
+    为了减少这一问题，在本标准中<code id=内容模型和属性值的限制:attr-script-src-2><a href=scripting.html#attr-script-src>src</a></code>
+    属性出现时，<code id=内容模型和属性值的限制:the-script-element-2><a href=scripting.html#the-script-element>script</a></code>元素中不允许存在可执行脚本。
+    这意味着作者在验证他们的文档时，不太可能在这样的错误上浪费时间。</p>
+
+   <dt>影响作者在 HTML 和 XML 语法间迁移的部分<dd>
+
+    <p>有些作者喜欢编写用 XML 和 HTML 解释可以得到类似结果的文件。
+    由于种种微妙的复杂性（尤其是涉及脚本、样式、或其他任何自动的序列化），
+    一般并不鼓励这一做法，尽管如此，本标准也有一些限制意在在某种程度上减轻困难。
+    这让作者在 HTML 和 XML 语法之间迁移时，可以更容易地将其用于过渡步骤。</p>
+
+    <p class=example>例如，围绕 <code id=内容模型和属性值的限制:attr-lang><a href=dom.html#attr-lang>lang</a></code> 和
+    <code id=内容模型和属性值的限制:attr-xml-lang><a href=dom.html#attr-xml-lang>xml:lang</a></code> 属性有一些复杂的规则，
+    就是为了让 HTML 和 XML 同步。</p>
+
+    <p class=example>另一个例子可能是在 HTML 序列化中对 <code>xmlns</code> 属性值的限制，意在确保不管是 HTML 还是 XML 解析，
+    合法的文档中元素总在同一命名空间。</p>
+
+   <dt>为将来扩充而保留的部分<dd>
+
+    <p>对语法的某些限制是为了允许语言的未来版本中添加新的语法，
+    类似地，对元素和属性取值的内容模型的一些限制是为了允许将来对 HTML 词库进行扩充。</p>
+
+    <p class=example>例如，限制 <code id=内容模型和属性值的限制:attr-hyperlink-target><a href=links.html#attr-hyperlink-target>target</a></code> 属性的值，
+    以 U+005F 下划线（_）起始的只能是特定的预定义值。这允许了在将来引入新的预定义值，
+    同时不会与作者定义的值产生冲突。</p>
+
+   <dt>对其他标准的误用<dd>
+
+    <p>某些限制意在支持其他标准作出的限制。</p>
+
+    <p class=example>例如，使用媒体查询列表的属性只能使用
+    <em>合法的</em> 媒体查询列表，强调了遵循那一标准的一致性规则的重要性。</p>
+
+   </dl>
+
+
+
+
+  <h3 id=推荐阅读><span class=secno>1.12</span> 推荐阅读<a href=#推荐阅读 class=self-link></a></h3>
+<div data-zh-date="Tue May 01 2018 09:32:20 GMT+0000 (UTC)" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/introduction/suggested-reading.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/introduction/suggested-reading.en.html></div>
+
+  <p><i>This section is non-normative.</i></p>
+
+  <p>本标准的读者可能对以下文档感兴趣。</p>
+
+  <dl><dt><cite>Character Model for the World Wide Web 1.0: Fundamentals</cite> <a href=references.html#refsCHARMOD>[CHARMOD]</a><dd><blockquote><p>这个架构风格标准定义了 World Wide Web 中可互操作的文本操作。为其他标准的作者、软件开发者，以及内容开发者提供了通用的参考。
+   该标准构建在 Universal Character Set 之上，同时定义在 Unicode Standard 和 ISO/IEC 10646。
+   涉及的话题包括：字符、编码、字符串、引用处理模型、字符编码的选择和识别、字符转义，以及字符串索引。</blockquote><dt><cite>Unicode 安全考虑</cite> <a href=references.html#refsUTR36>[UTR36]</a><dd><blockquote><p>由于 Unicode 包含大量的字符，引入了世界上不同的书写系统，
+   错误的使用会将程序和系统暴露在可能的安全攻击之下。随着越来越多的产品被国际化该问题尤为重要。
+   该标准描述了程序员、系统分析师、标准开发者，以及用户应当考虑的安全事项，为减少风险提供了明确的建议。</blockquote><dt><cite>Web Content Accessibility Guidelines (WCAG) 2.0</cite> <a href=references.html#refsWCAG>[WCAG]</a><dd><blockquote><p>Web Content Accessibility Guidelines (WCAG) 2.0 对于提高 Web 内容的可访问性给出了广泛的建议。
+   遵循这些指导可以使更多的残障人士（包括失明和弱视、失聪和听觉损耗、学习和认知障碍、行动不便、语言障碍、光过敏等）可访问您的内容。
+   遵循这些指导也通常会使您的 Web 内容对普通用户更加可用。</blockquote><dt><cite>Authoring Tool Accessibility Guidelines (ATAG) 2.0</cite> <a href=references.html#refsATAG>[ATAG]</a><dd><blockquote><p>
+   该标准为设计 Web 内容写作工具提供了指导意见，使得残障人士也可使用这些工具。
+   遵从这些指导的写作工具将会通过为残障作者提供可访问的用户界面以提升可访问性，以及为所有作者提供、支持和提升产出 Web 内容的可访问性。</blockquote><dt><cite>User Agent Accessibility Guidelines (UAAG) 2.0</cite> <a href=references.html#refsUAAG>[UAAG]</a><dd><blockquote><p>该文档为设计降低残障人士 Web 访问门槛的用户代理提供了指导意见。
+   用户代理包括浏览器和其他获取和渲染 Web 内容的软件。
+   遵循这些指导的用户代理通过它自己的用户界面以及其他内部工具
+   （包括与其他技术通信的能力，尤其是辅助性技术）提升可访问性。
+   此外，除残障人士之外的所有用户都会发现遵循该标准用户代理更加可用。</blockquote></dl>
+
+
+
+
+  <nav><a href=./>Table of Contents</a> — <a href=infrastructure.html>2 公共基础设施 →</a></nav>
+<script src=/html/resources/zh-cn.js></script>

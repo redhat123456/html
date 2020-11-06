@@ -1,0 +1,794 @@
+<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Standard, Developer's Edition</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/dev/styles.css crossorigin=""><script>
+   function toggleStatus(div) {
+     div.parentNode.classList.toggle('wrapped');
+   }
+   function setLinkFragment(link) {
+     link.hash = location.hash;
+   }
+  </script><body>
+  <script async="" src=/dev/search.js></script>
+  
+  
+  
+  <header id=head class="head with-buttons">
+   <a href=https://whatwg.org/ class=logo><img width=100 alt=WHATWG crossorigin="" src=https://resources.whatwg.org/logo.svg height=100></a>
+   
+   <hgroup><h1><a rel=home href=/dev/>HTML: The Living Standard</a></h1><h2 id="developer's-edition-—-last-updated-date:-01-jan-1901" class="no-num no-toc">Developer's Edition — Last Updated <span class=pubdate>6 November 2020</span></h2><div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/developers-edition-mdash-last-updated-date-01-jan-1901.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/developers-edition-mdash-last-updated-date-01-jan-1901.zh.html></div></hgroup>
+   
+   <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-91053840-1', 'auto');
+      ga('send', 'pageview');
+   </script>
+  </header>
+
+  
+
+  
+
+
+  
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/table-of-contents.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/table-of-contents.zh.html></div>
+  
+
+
+  
+<div data-en-date="Sat Aug 11 2018 08:00:56 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/full-table-of-contents.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/full-table-of-contents.zh.html></div>
+  
+
+  
+
+  
+
+
+  <h2 id=about-dev-edition class="no-num no-toc">关于本标准</h2>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/about-this-specification.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/about-this-specification.zh.html></div>
+
+  <p>本标准与其他标准不同，它的处理完全考虑到了 Web 开发者。</p>
+
+  <p>本标准关注可读性和可访问性，不像 <a href=/multipage/>完整的 HTML 标准</a>，"开发者版本" 移除了
+  只有浏览器厂商需要知道的信息。它个版本是用我们的构建工具从完整的规范自动产出的，
+  因此总会与最新开发的 HTML 保持同步。</p>
+
+  <p>其概念、构造，以及未来可参考 <a href=http://web.archive.org/web/20150220020906/http://archive.germanforblack.com:80/articles/html5-for-web-developers>
+  原始出版发行</a>，以及 <a href=https://blog.whatwg.org/developers-edition-comeback>关于重启该版本的博文</a>。</p>
+
+  <p>最后，欢迎 <a href=https://github.com/whatwg/html/labels/dev%20edition>在 GitHub 贡献</a> 来改进该版本！</p>
+
+  
+
+
+  <nav><a href=tables.html>← 4.9 表格数据</a> — <a href=./>Table of Contents</a> — <a href=input.html>4.10.5 The input element →</a></nav><ol class=toc><li><ol><li><a href=forms.html#forms><span class=secno>4.10</span> 表单</a><ol><li><a href=forms.html#introduction-4><span class=secno>4.10.1</span> 概述</a><ol><li><a href="forms.html#writing-a-form's-user-interface"><span class=secno>4.10.1.1</span> 编写表单的用户界面</a><li><a href=forms.html#implementing-the-server-side-processing-for-a-form><span class=secno>4.10.1.2</span> 实现服务器端表单处理</a><li><a href=forms.html#configuring-a-form-to-communicate-with-a-server><span class=secno>4.10.1.3</span> 配置表单与服务器通信</a><li><a href=forms.html#client-side-form-validation><span class=secno>4.10.1.4</span> 客户端表单验证</a><li><a href=forms.html#enabling-client-side-automatic-filling-of-form-controls><span class=secno>4.10.1.5</span> 启用表单控件的客户端自动填充</a><li><a href=forms.html#improving-the-user-experience-on-mobile-devices><span class=secno>4.10.1.6</span> Improving the user experience on mobile devices</a><li><a href=forms.html#the-difference-between-the-field-type,-the-autofill-field-name,-and-the-input-modality><span class=secno>4.10.1.7</span> The difference between the field type, the autofill field name, and the input modality</a><li><a href=forms.html#input-author-notes><span class=secno>4.10.1.8</span> 日期、时间和数字格式</a></ol><li><a href=forms.html#categories><span class=secno>4.10.2</span> Categories</a><li><a href=forms.html#the-form-element><span class=secno>4.10.3</span> The <code>form</code> element</a><li><a href=forms.html#the-label-element><span class=secno>4.10.4</span> The <code>label</code> element</a></ol></ol></ol><h3 id=forms><span class=secno>4.10</span> 表单<a href=#forms class=self-link></a></h3><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Forms title="This page lists all the HTML elements, which are created using tags.">Element#Forms</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>4+</span></span><span class="safari yes"><span>Safari</span><span>4+</span></span><span class="chrome yes"><span>Chrome</span><span>61+</span></span><hr><span class="opera yes"><span>Opera</span><span>52+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>16+</span></span><span class="ie yes"><span>Internet Explorer</span><span>10+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>5+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>3.2+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>61+</span></span><span class="webview_android yes"><span>WebView Android</span><span>61+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>8.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>47+</span></span><hr><span class=caniuse><span><a href="https://caniuse.com/#feat=forms" title="HTML5 form features">caniuse.com table</a></span></span></div></div></div>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Wed May 16 2018 16:14:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/forms/index.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/the-elements-of-html/forms/index.zh.html></div>
+
+
+  <h4 id=introduction-4><span class=secno>4.10.1</span> 概述<a href=#introduction-4 class=self-link></a></h4>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Wed May 16 2018 16:14:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/forms/introduction/index.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/the-elements-of-html/forms/introduction/index.zh.html></div>
+
+  
+
+  <p>表单是一种网页组件，可以包含表单控件如文本，按钮，复选框，范围或颜色选择器控件。
+  用户可以与这样的表单进行交互并提供数据，随后这些数据被发送到服务器用于进一步处理
+  （例如返回搜索或计算结果）。在许多情况下都不需要客户端脚本，尽管提供了这样的 API，
+  脚本可以用这些 API 增强用户体验，或者将表单用于提交数据之外的用途。</p>
+
+  <p>编写一个表单包含几个步骤，可以按任意顺序进行：
+  编写用户界面，实现服务器端处理以及配置用户界面以与服务器进行通信。</p>
+
+
+
+  <h5 id="writing-a-form's-user-interface"><span class=secno>4.10.1.1</span> 编写表单的用户界面<a href="#writing-a-form's-user-interface" class=self-link></a></h5>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun May 06 2018 14:42:26 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/forms/introduction/writing-a-forms-user-interface.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/the-elements-of-html/forms/introduction/writing-a-forms-user-interface.zh.html></div>
+
+  
+
+  <p>为了这个简短的介绍，我们将创建一个 Pizza 订购表单。</p>
+
+  <p>表单都以 <code id="writing-a-form's-user-interface:the-form-element"><a href=#the-form-element>form</a></code> 元素开始，其中可以放置一些控件。
+  多数控件都由 <code id="writing-a-form's-user-interface:the-input-element"><a href=input.html#the-input-element>input</a></code> 元素表示，它默认提供一个文本控件。
+  使用 <code id="writing-a-form's-user-interface:the-label-element"><a href=#the-label-element>label</a></code> 元素来描述控件；标签文本和控件自己都会进入
+  <code id="writing-a-form's-user-interface:the-label-element-2"><a href=#the-label-element>label</a></code> 元素内。表单的每一部分都是一个
+  <a href=dom.html#paragraph id="writing-a-form's-user-interface:paragraph">段落</a>，一般会用 <code id="writing-a-form's-user-interface:the-p-element"><a href=grouping-content.html#the-p-element>p</a></code> 元素来与其他部分分隔。
+  放到一起，可以这样询问顾客的名字：</p>
+
+  <pre><strong>&lt;form>
+ &lt;p>&lt;label>Customer name: &lt;input>&lt;/label>&lt;/p>
+&lt;/form></strong></pre>
+
+  <p>为了让用户选择 Pizza 的大小，我们可以使用一组单选按钮。
+  单选按钮也是用 <code id="writing-a-form's-user-interface:the-input-element-2"><a href=input.html#the-input-element>input</a></code> 元素，这次设置一个 <code id="writing-a-form's-user-interface:attr-input-type"><a href=input.html#attr-input-type>type</a></code> 属性，值为 <code id="writing-a-form's-user-interface:radio-button-state-(type=radio)"><a href="input.html#radio-button-state-(type=radio)">radio</a></code>。
+  为了让单选按钮成组，要使用 <code id="writing-a-form's-user-interface:attr-fe-name"><a href=form-control-infrastructure.html#attr-fe-name>name</a></code> 属性给它们一样的名字。
+  为了让一批控件成为一组，比如这个例子中的单选按钮，可以使用
+  <code id="writing-a-form's-user-interface:the-fieldset-element"><a href=form-elements.html#the-fieldset-element>fieldset</a></code> 元素。这样的控件组的标题由 <code id="writing-a-form's-user-interface:the-fieldset-element-2"><a href=form-elements.html#the-fieldset-element>fieldset</a></code> 中的第一个元素给出，
+  这个元素必须是一个 <code id="writing-a-form's-user-interface:the-legend-element"><a href=form-elements.html#the-legend-element>legend</a></code> 元素。</p>
+
+  <pre>&lt;form>
+ &lt;p>&lt;label>Customer name: &lt;input>&lt;/label>&lt;/p>
+<strong> &lt;fieldset>
+  &lt;legend> Pizza Size &lt;/legend>
+  &lt;p>&lt;label> &lt;input type=radio name=size> Small &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=radio name=size> Medium &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=radio name=size> Large &lt;/label>&lt;/p>
+ &lt;/fieldset></strong>
+&lt;/form></pre>
+
+  <p class=note>我们高亮了上一个步骤中的改变。</p>
+
+  <p>我们可以使用复选框来选择配料。这些复选框也使用 <code id="writing-a-form's-user-interface:the-input-element-3"><a href=input.html#the-input-element>input</a></code> 元素，
+  它们的 <code id="writing-a-form's-user-interface:attr-input-type-2"><a href=input.html#attr-input-type>type</a></code> 属性值为 <code id="writing-a-form's-user-interface:checkbox-state-(type=checkbox)"><a href="input.html#checkbox-state-(type=checkbox)">checkbox</a></code>：</p>
+
+  <pre>&lt;form>
+ &lt;p>&lt;label>Customer name: &lt;input>&lt;/label>&lt;/p>
+ &lt;fieldset>
+  &lt;legend> Pizza Size &lt;/legend>
+  &lt;p>&lt;label> &lt;input type=radio name=size> Small &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=radio name=size> Medium &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=radio name=size> Large &lt;/label>&lt;/p>
+ &lt;/fieldset>
+<strong> &lt;fieldset>
+  &lt;legend> Pizza Toppings &lt;/legend>
+  &lt;p>&lt;label> &lt;input type=checkbox> Bacon &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=checkbox> Extra Cheese &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=checkbox> Onion &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=checkbox> Mushroom &lt;/label>&lt;/p>
+ &lt;/fieldset></strong>
+&lt;/form></pre>
+
+  <p>这个 pizza 店总会犯一些错误，因此需要顾客的联系方式。
+  为此我们可以使用电话号码的表单控件（<code id="writing-a-form's-user-interface:attr-input-type-3"><a href=input.html#attr-input-type>type</a></code> 属性设为
+  <code id="writing-a-form's-user-interface:telephone-state-(type=tel)"><a href="input.html#telephone-state-(type=tel)">tel</a></code> 的 <code id="writing-a-form's-user-interface:the-input-element-4"><a href=input.html#the-input-element>input</a></code> 元素），
+  以及 e-mail 地址（<code id="writing-a-form's-user-interface:attr-input-type-4"><a href=input.html#attr-input-type>type</a></code> 属性设为
+  <code id="writing-a-form's-user-interface:email-state-(type=email)"><a href="input.html#email-state-(type=email)">email</a></code> 的 <code id="writing-a-form's-user-interface:the-input-element-5"><a href=input.html#the-input-element>input</a></code> 元素）：</p>
+
+  <pre>&lt;form>
+ &lt;p>&lt;label>Customer name: &lt;input>&lt;/label>&lt;/p>
+<strong> &lt;p>&lt;label>Telephone: &lt;input type=tel>&lt;/label>&lt;/p>
+ &lt;p>&lt;label>E-mail address: &lt;input type=email>&lt;/label>&lt;/p></strong>
+ &lt;fieldset>
+  &lt;legend> Pizza Size &lt;/legend>
+  &lt;p>&lt;label> &lt;input type=radio name=size> Small &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=radio name=size> Medium &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=radio name=size> Large &lt;/label>&lt;/p>
+ &lt;/fieldset>
+ &lt;fieldset>
+  &lt;legend> Pizza Toppings &lt;/legend>
+  &lt;p>&lt;label> &lt;input type=checkbox> Bacon &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=checkbox> Extra Cheese &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=checkbox> Onion &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=checkbox> Mushroom &lt;/label>&lt;/p>
+ &lt;/fieldset>
+&lt;/form></pre>
+
+  <p>我们可以使用 <code id="writing-a-form's-user-interface:attr-input-type-5"><a href=input.html#attr-input-type>type</a></code> 属性设为
+  <code id="writing-a-form's-user-interface:time-state-(type=time)"><a href="input.html#time-state-(type=time)">time</a></code> 的 <code id="writing-a-form's-user-interface:the-input-element-6"><a href=input.html#the-input-element>input</a></code> 元素来询问配送时间。
+  很多控件都可以设置可选值的范围；这个例子中我们关心的属性是
+  <code id="writing-a-form's-user-interface:attr-input-min"><a href=input.html#attr-input-min>min</a></code>, <code id="writing-a-form's-user-interface:attr-input-max"><a href=input.html#attr-input-max>max</a></code> 和
+  <code id="writing-a-form's-user-interface:attr-input-step"><a href=input.html#attr-input-step>step</a></code>。这些属性分别用来设置最小时间，最大时间，
+  以及允许的值之间的间隔（单位为秒）。这个 pizza 店只在 11am 到 9pm 之间配送，
+  而且不保证精确到 15 分钟以内，我们可以这样写：</p>
+
+  <pre>&lt;form>
+ &lt;p>&lt;label>Customer name: &lt;input>&lt;/label>&lt;/p>
+ &lt;p>&lt;label>Telephone: &lt;input type=tel>&lt;/label>&lt;/p>
+ &lt;p>&lt;label>E-mail address: &lt;input type=email>&lt;/label>&lt;/p>
+ &lt;fieldset>
+  &lt;legend> Pizza Size &lt;/legend>
+  &lt;p>&lt;label> &lt;input type=radio name=size> Small &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=radio name=size> Medium &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=radio name=size> Large &lt;/label>&lt;/p>
+ &lt;/fieldset>
+ &lt;fieldset>
+  &lt;legend> Pizza Toppings &lt;/legend>
+  &lt;p>&lt;label> &lt;input type=checkbox> Bacon &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=checkbox> Extra Cheese &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=checkbox> Onion &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=checkbox> Mushroom &lt;/label>&lt;/p>
+ &lt;/fieldset>
+<strong> &lt;p>&lt;label>Preferred delivery time: &lt;input type=time min="11:00" max="21:00" step="900">&lt;/label>&lt;/p></strong>
+&lt;/form></pre>
+
+  <p><code id="writing-a-form's-user-interface:the-textarea-element"><a href=form-elements.html#the-textarea-element>textarea</a></code> 元素可以用来提供多行文本。例如我们要用它来给顾客提供一个地方，编写配送备注：</p>
+
+  <pre>&lt;form>
+ &lt;p>&lt;label>Customer name: &lt;input>&lt;/label>&lt;/p>
+ &lt;p>&lt;label>Telephone: &lt;input type=tel>&lt;/label>&lt;/p>
+ &lt;p>&lt;label>E-mail address: &lt;input type=email>&lt;/label>&lt;/p>
+ &lt;fieldset>
+  &lt;legend> Pizza Size &lt;/legend>
+  &lt;p>&lt;label> &lt;input type=radio name=size> Small &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=radio name=size> Medium &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=radio name=size> Large &lt;/label>&lt;/p>
+ &lt;/fieldset>
+ &lt;fieldset>
+  &lt;legend> Pizza Toppings &lt;/legend>
+  &lt;p>&lt;label> &lt;input type=checkbox> Bacon &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=checkbox> Extra Cheese &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=checkbox> Onion &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=checkbox> Mushroom &lt;/label>&lt;/p>
+ &lt;/fieldset>
+ &lt;p>&lt;label>Preferred delivery time: &lt;input type=time min="11:00" max="21:00" step="900">&lt;/label>&lt;/p>
+<strong> &lt;p>&lt;label>Delivery instructions: &lt;textarea>&lt;/textarea>&lt;/label>&lt;/p></strong>
+&lt;/form></pre>
+
+  <p>最后，为了让表单可以提交我们要用一个 <code id="writing-a-form's-user-interface:the-button-element"><a href=form-elements.html#the-button-element>button</a></code> 元素：</p>
+
+  <pre>&lt;form>
+ &lt;p>&lt;label>Customer name: &lt;input>&lt;/label>&lt;/p>
+ &lt;p>&lt;label>Telephone: &lt;input type=tel>&lt;/label>&lt;/p>
+ &lt;p>&lt;label>E-mail address: &lt;input type=email>&lt;/label>&lt;/p>
+ &lt;fieldset>
+  &lt;legend> Pizza Size &lt;/legend>
+  &lt;p>&lt;label> &lt;input type=radio name=size> Small &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=radio name=size> Medium &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=radio name=size> Large &lt;/label>&lt;/p>
+ &lt;/fieldset>
+ &lt;fieldset>
+  &lt;legend> Pizza Toppings &lt;/legend>
+  &lt;p>&lt;label> &lt;input type=checkbox> Bacon &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=checkbox> Extra Cheese &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=checkbox> Onion &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=checkbox> Mushroom &lt;/label>&lt;/p>
+ &lt;/fieldset>
+ &lt;p>&lt;label>Preferred delivery time: &lt;input type=time min="11:00" max="21:00" step="900">&lt;/label>&lt;/p>
+ &lt;p>&lt;label>Delivery instructions: &lt;textarea>&lt;/textarea>&lt;/label>&lt;/p>
+<strong> &lt;p>&lt;button>Submit order&lt;/button>&lt;/p></strong>
+&lt;/form></pre>
+
+
+
+  <h5 id=implementing-the-server-side-processing-for-a-form><span class=secno>4.10.1.2</span> 实现服务器端表单处理<a href=#implementing-the-server-side-processing-for-a-form class=self-link></a></h5>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Wed May 16 2018 16:14:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/forms/introduction/implementing-the-server-side-processing-for-a-form.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/the-elements-of-html/forms/introduction/implementing-the-server-side-processing-for-a-form.zh.html></div>
+
+  
+
+  <p>编写服务器端处理程序的具体的细节超出了本规范的范围。
+  这个概述中我们会假设
+  <code>https://pizza.example.com/order.cgi</code> 处的脚本已经配置为接受
+  <code id=implementing-the-server-side-processing-for-a-form:attr-fs-enctype-urlencoded><a href=form-control-infrastructure.html#attr-fs-enctype-urlencoded>application/x-www-form-urlencoded</a></code> 格式的表单提交，
+  而且 HTTP POST 消息体中会包含以下参数：</p>
+
+  <dl><dt><code>custname</code><dd>顾客的名字<dt><code>custtel</code><dd>顾客的手机号<dt><code>custemail</code><dd>顾客的 e-mail 地址<dt><code>size</code><dd>Pizza 大小，可以是 <code>small</code>, <code>medium</code>
+   或 <code>large</code><dt><code>topping</code><dd>选中的每个配料，允许的值包括
+   <code>bacon</code>, <code>cheese</code>, <code>onion</code>
+   和 <code>mushroom</code><dt><code>delivery</code><dd>配送时间<dt><code>comments</code><dd>配送备注</dl>
+
+
+
+  <h5 id=configuring-a-form-to-communicate-with-a-server><span class=secno>4.10.1.3</span> 配置表单与服务器通信<a href=#configuring-a-form-to-communicate-with-a-server class=self-link></a></h5>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Wed May 16 2018 16:14:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/forms/introduction/configuring-a-form-to-communicate-with-a-server.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/the-elements-of-html/forms/introduction/configuring-a-form-to-communicate-with-a-server.zh.html></div>
+
+  
+
+  <p>表单提交以多种方式暴露给服务器，通常是 HTTP GET 或 POST 请求。
+  在 <code id=configuring-a-form-to-communicate-with-a-server:the-form-element><a href=#the-form-element>form</a></code> 元素上使用 <code id=configuring-a-form-to-communicate-with-a-server:attr-fs-method><a href=form-control-infrastructure.html#attr-fs-method>method</a></code> 属性来指定使用哪种方法。
+  这还没有指定表单数据的编码方式，指定编码方式要使用 <code id=configuring-a-form-to-communicate-with-a-server:attr-fs-enctype><a href=form-control-infrastructure.html#attr-fs-enctype>enctype</a></code>
+  属性。你还需要使用 <code id=configuring-a-form-to-communicate-with-a-server:attr-fs-action><a href=form-control-infrastructure.html#attr-fs-action>action</a></code> 属性来指定
+  处理提交的数据的服务的 <a id=configuring-a-form-to-communicate-with-a-server:url href=https://url.spec.whatwg.org/#concept-url data-x-internal=url>URL</a>。</p>
+
+  <p>每个需要提交的表单控件都要有一个名字来对应提交的数据。
+  我们已经为单选按钮组指定了名字；这个属性（<code id=configuring-a-form-to-communicate-with-a-server:attr-fe-name><a href=form-control-infrastructure.html#attr-fe-name>name</a></code>）也指定了提交的名字。
+  单选按钮可以之间可以通过（使用 <code id=configuring-a-form-to-communicate-with-a-server:attr-input-value><a href=input.html#attr-input-value>value</a></code> 属性）
+  给它们不同的值来区分。</p>
+
+  <p>多个控件可以有同样的名字；例如我们给所有复选框一样的名字，服务器检查那个名字的哪些值提交了上来。
+  — 像单选按钮一样，也通过 <code id=configuring-a-form-to-communicate-with-a-server:attr-input-value-2><a href=input.html#attr-input-value>value</a></code> 属性给它们不重复的值。</p>
+
+  <p>鉴于上一小节的设置，表单现在变成了：</p>
+
+  <pre>&lt;form<strong> method="post"
+      enctype="application/x-www-form-urlencoded"
+      action="https://pizza.example.com/order.cgi"</strong>>
+ &lt;p>&lt;label>Customer name: &lt;input<strong> name="custname"</strong>>&lt;/label>&lt;/p>
+ &lt;p>&lt;label>Telephone: &lt;input type=tel<strong> name="custtel"</strong>>&lt;/label>&lt;/p>
+ &lt;p>&lt;label>E-mail address: &lt;input type=email<strong> name="custemail"</strong>>&lt;/label>&lt;/p>
+ &lt;fieldset>
+  &lt;legend> Pizza Size &lt;/legend>
+  &lt;p>&lt;label> &lt;input type=radio name=size<strong> value="small"</strong>> Small &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=radio name=size<strong> value="medium"</strong>> Medium &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=radio name=size<strong> value="large"</strong>> Large &lt;/label>&lt;/p>
+ &lt;/fieldset>
+ &lt;fieldset>
+  &lt;legend> Pizza Toppings &lt;/legend>
+  &lt;p>&lt;label> &lt;input type=checkbox<strong> name="topping" value="bacon"</strong>> Bacon &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=checkbox<strong> name="topping" value="cheese"</strong>> Extra Cheese &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=checkbox<strong> name="topping" value="onion"</strong>> Onion &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=checkbox<strong> name="topping" value="mushroom"</strong>> Mushroom &lt;/label>&lt;/p>
+ &lt;/fieldset>
+ &lt;p>&lt;label>Preferred delivery time: &lt;input type=time min="11:00" max="21:00" step="900"<strong> name="delivery"</strong>>&lt;/label>&lt;/p>
+ &lt;p>&lt;label>Delivery instructions: &lt;textarea<strong> name="comments"</strong>>&lt;/textarea>&lt;/label>&lt;/p>
+ &lt;p>&lt;button>Submit order&lt;/button>&lt;/p>
+&lt;/form></pre>
+
+  <p class=note>有些属性的值用引号包含，有些没有，但这没有特别的含义。
+  HTML 语法允许很多种合法的方式来指定属性，如 <a href=syntax.html#syntax-attributes id=configuring-a-form-to-communicate-with-a-server:syntax-attributes>语法部分</a> 所述。</p>
+
+  <p>例如，如果顾客输入 "Denise Lawrence" 作为名字，"555-321-8642" 作为电话号，没有指定 e-mail 地址，
+  要一个中等大小的 Pizza，选择了 Extra Cheese 和 Mushroom 配料，
+  输入的配送时间是 7pm 并在配送备注部分留空，用户代理会提交下面内容到在线 Web 服务：</p>
+
+  <pre>custname=Denise+Lawrence&amp;custtel=555-321-8642&amp;custemail=&amp;size=medium&amp;topping=cheese&amp;topping=mushroom&amp;delivery=19%3A00&amp;comments=</pre>
+
+
+
+  <h5 id=client-side-form-validation><span class=secno>4.10.1.4</span> 客户端表单验证<a href=#client-side-form-validation class=self-link></a></h5><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/Forms/Form_validation title="Client-side form validation sometimes requires JavaScript if you want to customize styling and error messages, but it always requires you to think carefully about the user. Always remember to help your users correct the data they provide. To that end, be sure to:">Form_validation</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>Yes</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie unknown"><span>Internet Explorer</span><span>?</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>Yes</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span><hr><span class=caniuse><span><a href="https://caniuse.com/#feat=form-validation" title="Form validation">caniuse.com table</a></span></span></div></div></div>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Wed May 16 2018 16:14:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/forms/introduction/client-side-form-validation.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/the-elements-of-html/forms/introduction/client-side-form-validation.zh.html></div>
+
+  
+
+  <p>可以通过表单标记使得用户代理可以在表单提交之前检查用户输入。
+  服务器仍然必须校验输入是有效的（因为恶意用户可以很容易绕过表单验证），
+  但这使我们可以避免因为只能在服务器上检查而造成用户等待。</p>
+
+  <p>最简单的标记是 <code id=client-side-form-validation:attr-input-required><a href=input.html#attr-input-required>required</a></code> 属性，
+  可以在 <code id=client-side-form-validation:the-input-element><a href=input.html#the-input-element>input</a></code> 元素上指定，表示只有给出值之后表单才可以提交。
+  把这个属性添加到顾客名字、Pizza 大小和配送时间字段，在用户没填写这些字段就提交表单时，
+  我们可以让用户代理提示用户。</p>
+
+  <pre>&lt;form method="post"
+      enctype="application/x-www-form-urlencoded"
+      action="https://pizza.example.com/order.cgi">
+ &lt;p>&lt;label>Customer name: &lt;input name="custname"<strong> required</strong>>&lt;/label>&lt;/p>
+ &lt;p>&lt;label>Telephone: &lt;input type=tel name="custtel">&lt;/label>&lt;/p>
+ &lt;p>&lt;label>E-mail address: &lt;input type=email name="custemail">&lt;/label>&lt;/p>
+ &lt;fieldset>
+  &lt;legend> Pizza Size &lt;/legend>
+  &lt;p>&lt;label> &lt;input type=radio name=size<strong> required</strong> value="small"> Small &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=radio name=size<strong> required</strong> value="medium"> Medium &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=radio name=size<strong> required</strong> value="large"> Large &lt;/label>&lt;/p>
+ &lt;/fieldset>
+ &lt;fieldset>
+  &lt;legend> Pizza Toppings &lt;/legend>
+  &lt;p>&lt;label> &lt;input type=checkbox name="topping" value="bacon"> Bacon &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=checkbox name="topping" value="cheese"> Extra Cheese &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=checkbox name="topping" value="onion"> Onion &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=checkbox name="topping" value="mushroom"> Mushroom &lt;/label>&lt;/p>
+ &lt;/fieldset>
+ &lt;p>&lt;label>Preferred delivery time: &lt;input type=time min="11:00" max="21:00" step="900" name="delivery"<strong> required</strong>>&lt;/label>&lt;/p>
+ &lt;p>&lt;label>Delivery instructions: &lt;textarea name="comments">&lt;/textarea>&lt;/label>&lt;/p>
+ &lt;p>&lt;button>Submit order&lt;/button>&lt;/p>
+&lt;/form></pre>
+
+  <p>也可以使用 <code id=client-side-form-validation:attr-fe-maxlength><a href=form-control-infrastructure.html#attr-fe-maxlength>maxlength</a></code> 属性来限制输入的长度。
+  把这个属性添加到 <code id=client-side-form-validation:the-textarea-element><a href=form-elements.html#the-textarea-element>textarea</a></code> 元素上，我们可以限制用户输入到 1000 字符，
+  防止他们给配送员编写长文而不聚焦重点。</p>
+
+  <pre>&lt;form method="post"
+      enctype="application/x-www-form-urlencoded"
+      action="https://pizza.example.com/order.cgi">
+ &lt;p>&lt;label>Customer name: &lt;input name="custname" required>&lt;/label>&lt;/p>
+ &lt;p>&lt;label>Telephone: &lt;input type=tel name="custtel">&lt;/label>&lt;/p>
+ &lt;p>&lt;label>E-mail address: &lt;input type=email name="custemail">&lt;/label>&lt;/p>
+ &lt;fieldset>
+  &lt;legend> Pizza Size &lt;/legend>
+  &lt;p>&lt;label> &lt;input type=radio name=size required value="small"> Small &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=radio name=size required value="medium"> Medium &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=radio name=size required value="large"> Large &lt;/label>&lt;/p>
+ &lt;/fieldset>
+ &lt;fieldset>
+  &lt;legend> Pizza Toppings &lt;/legend>
+  &lt;p>&lt;label> &lt;input type=checkbox name="topping" value="bacon"> Bacon &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=checkbox name="topping" value="cheese"> Extra Cheese &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=checkbox name="topping" value="onion"> Onion &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=checkbox name="topping" value="mushroom"> Mushroom &lt;/label>&lt;/p>
+ &lt;/fieldset>
+ &lt;p>&lt;label>Preferred delivery time: &lt;input type=time min="11:00" max="21:00" step="900" name="delivery" required>&lt;/label>&lt;/p>
+ &lt;p>&lt;label>Delivery instructions: &lt;textarea name="comments"<strong> maxlength=1000</strong>>&lt;/textarea>&lt;/label>&lt;/p>
+ &lt;p>&lt;button>Submit order&lt;/button>&lt;/p>
+&lt;/form></pre>
+
+  <p class=note>提交表单时，每个不合法的表单控件上，以及 <code id=client-side-form-validation:the-form-element><a href=#the-form-element>form</a></code> 元素上都会触发
+  <code id=client-side-form-validation:event-invalid><a href=indices.html#event-invalid>invalid</a></code> 事件，
+  这个事件可以用来显示表单存在哪些问题的一个描述，因为浏览器自己只会逐个报告问题。</p>
+
+
+
+
+  <h5 id=enabling-client-side-automatic-filling-of-form-controls><span class=secno>4.10.1.5</span> 启用表单控件的客户端自动填充<a href=#enabling-client-side-automatic-filling-of-form-controls class=self-link></a></h5>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Wed May 16 2018 16:14:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/forms/introduction/enabling-client-side-automatic-filling-of-form-controls.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/the-elements-of-html/forms/introduction/enabling-client-side-automatic-filling-of-form-controls.zh.html></div>
+
+  
+
+  <p>有些浏览器尝试帮助用户自动填充表单控件，避免让用户每次重新输入。例如询问用户电话号码的字段就可以自动填充为用户的手机号码。</p>
+
+  <p>为了帮助用户代理做自动填充，可以使用 <code id=enabling-client-side-automatic-filling-of-form-controls:attr-fe-autocomplete><a href=form-control-infrastructure.html#attr-fe-autocomplete>autocomplete</a></code>
+  属性来描述字段的用途。下面这个表单的例子，Pizza 配送的用户信息中三个字段都可以这样自动填充：
+  添加相应的信息后看起来是这样的：</p>
+
+  <pre>&lt;form method="post"
+      enctype="application/x-www-form-urlencoded"
+      action="https://pizza.example.com/order.cgi">
+ &lt;p>&lt;label>Customer name: &lt;input name="custname" required <strong>autocomplete="shipping name"</strong>>&lt;/label>&lt;/p>
+ &lt;p>&lt;label>Telephone: &lt;input type=tel name="custtel" <strong>autocomplete="shipping tel"</strong>>&lt;/label>&lt;/p>
+ &lt;p>&lt;label>E-mail address: &lt;input type=email name="custemail" <strong>autocomplete="shipping email"</strong>>&lt;/label>&lt;/p>
+ &lt;fieldset>
+  &lt;legend> Pizza Size &lt;/legend>
+  &lt;p>&lt;label> &lt;input type=radio name=size required value="small"> Small &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=radio name=size required value="medium"> Medium &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=radio name=size required value="large"> Large &lt;/label>&lt;/p>
+ &lt;/fieldset>
+ &lt;fieldset>
+  &lt;legend> Pizza Toppings &lt;/legend>
+  &lt;p>&lt;label> &lt;input type=checkbox name="topping" value="bacon"> Bacon &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=checkbox name="topping" value="cheese"> Extra Cheese &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=checkbox name="topping" value="onion"> Onion &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=checkbox name="topping" value="mushroom"> Mushroom &lt;/label>&lt;/p>
+ &lt;/fieldset>
+ &lt;p>&lt;label>Preferred delivery time: &lt;input type=time min="11:00" max="21:00" step="900" name="delivery" required>&lt;/label>&lt;/p>
+ &lt;p>&lt;label>Delivery instructions: &lt;textarea name="comments" maxlength=1000>&lt;/textarea>&lt;/label>&lt;/p>
+ &lt;p>&lt;button>Submit order&lt;/button>&lt;/p>
+&lt;/form></pre>
+
+
+
+  <h5 id=improving-the-user-experience-on-mobile-devices><span class=secno>4.10.1.6</span> Improving the user experience on mobile devices<a href=#improving-the-user-experience-on-mobile-devices class=self-link></a></h5>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/forms/introduction/improving-the-user-experience-on-mobile-devices.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/the-elements-of-html/forms/introduction/improving-the-user-experience-on-mobile-devices.zh.html?filename=improving-the-user-experience-on-mobile-devices.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fthe-elements-of-html%2Fforms%2Fintroduction%2Fimproving-the-user-experience-on-mobile-devices.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  
+
+  <p>Some devices, in particular those with virtual keyboards can provide the user with multiple
+  input modalities. For example, when typing in a credit card number the user may wish to only see
+  keys for digits 0-9, while when typing in their name they may wish to see a form field that by
+  default capitalizes each word.</p>
+
+  <p>Using the <code id=improving-the-user-experience-on-mobile-devices:attr-inputmode><a href=interaction.html#attr-inputmode>inputmode</a></code> attribute we can select appropriate
+  input modalities:</p>
+
+  <pre><code class=html>&lt;form method="post"
+      enctype="application/x-www-form-urlencoded"
+      action="https://pizza.example.com/order.cgi">
+ &lt;p>&lt;label>Customer name: &lt;input name="custname" required autocomplete="shipping name">&lt;/label>&lt;/p>
+ &lt;p>&lt;label>Telephone: &lt;input type=tel name="custtel" autocomplete="shipping tel">&lt;/label>&lt;/p>
+ &lt;p>&lt;label>Buzzer code: &lt;input name="custbuzz" <strong>inputmode="numeric"</strong>>&lt;/label>&lt;/p>
+ &lt;p>&lt;label>Email address: &lt;input type=email name="custemail" autocomplete="shipping email">&lt;/label>&lt;/p>
+ &lt;fieldset>
+  &lt;legend> Pizza Size &lt;/legend>
+  &lt;p>&lt;label> &lt;input type=radio name=size required value="small"> Small &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=radio name=size required value="medium"> Medium &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=radio name=size required value="large"> Large &lt;/label>&lt;/p>
+ &lt;/fieldset>
+ &lt;fieldset>
+  &lt;legend> Pizza Toppings &lt;/legend>
+  &lt;p>&lt;label> &lt;input type=checkbox name="topping" value="bacon"> Bacon &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=checkbox name="topping" value="cheese"> Extra Cheese &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=checkbox name="topping" value="onion"> Onion &lt;/label>&lt;/p>
+  &lt;p>&lt;label> &lt;input type=checkbox name="topping" value="mushroom"> Mushroom &lt;/label>&lt;/p>
+ &lt;/fieldset>
+ &lt;p>&lt;label>Preferred delivery time: &lt;input type=time min="11:00" max="21:00" step="900" name="delivery" required>&lt;/label>&lt;/p>
+ &lt;p>&lt;label>Delivery instructions: &lt;textarea name="comments" maxlength=1000>&lt;/textarea>&lt;/label>&lt;/p>
+ &lt;p>&lt;button>Submit order&lt;/button>&lt;/p>
+&lt;/form></code></pre>
+
+
+
+
+  <h5 id=the-difference-between-the-field-type,-the-autofill-field-name,-and-the-input-modality><span class=secno>4.10.1.7</span> The difference between the field type, the autofill field name, and the input modality<a href=#the-difference-between-the-field-type,-the-autofill-field-name,-and-the-input-modality class=self-link></a></h5>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/forms/introduction/the-difference-between-the-field-type-the-autofill-field-name-and-the-input-modality.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/the-elements-of-html/forms/introduction/the-difference-between-the-field-type-the-autofill-field-name-and-the-input-modality.zh.html?filename=the-difference-between-the-field-type-the-autofill-field-name-and-the-input-modality.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fthe-elements-of-html%2Fforms%2Fintroduction%2Fthe-difference-between-the-field-type-the-autofill-field-name-and-the-input-modality.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  
+
+  <p>The <code id=the-difference-between-the-field-type,-the-autofill-field-name,-and-the-input-modality:attr-input-type><a href=input.html#attr-input-type>type</a></code>, <code id=the-difference-between-the-field-type,-the-autofill-field-name,-and-the-input-modality:attr-fe-autocomplete><a href=form-control-infrastructure.html#attr-fe-autocomplete>autocomplete</a></code>, and <code id=the-difference-between-the-field-type,-the-autofill-field-name,-and-the-input-modality:attr-inputmode><a href=interaction.html#attr-inputmode>inputmode</a></code> attributes can seem confusingly similar. For instance,
+  in all three cases, the string "<code>email</code>" is a valid value. This section
+  attempts to illustrate the difference between the three attributes and provides advice suggesting
+  how to use them.</p>
+
+  <p>The <code id=the-difference-between-the-field-type,-the-autofill-field-name,-and-the-input-modality:attr-input-type-2><a href=input.html#attr-input-type>type</a></code> attribute on <code id=the-difference-between-the-field-type,-the-autofill-field-name,-and-the-input-modality:the-input-element><a href=input.html#the-input-element>input</a></code> elements decides
+  what kind of control the user agent will use to expose the field. Choosing between different
+  values of this attribute is the same choice as choosing whether to use an <code id=the-difference-between-the-field-type,-the-autofill-field-name,-and-the-input-modality:the-input-element-2><a href=input.html#the-input-element>input</a></code>
+  element, a <code id=the-difference-between-the-field-type,-the-autofill-field-name,-and-the-input-modality:the-textarea-element><a href=form-elements.html#the-textarea-element>textarea</a></code> element, a <code id=the-difference-between-the-field-type,-the-autofill-field-name,-and-the-input-modality:the-select-element><a href=form-elements.html#the-select-element>select</a></code> element, etc.</p>
+
+  <p>The <code id=the-difference-between-the-field-type,-the-autofill-field-name,-and-the-input-modality:attr-fe-autocomplete-2><a href=form-control-infrastructure.html#attr-fe-autocomplete>autocomplete</a></code> attribute, in contrast, describes
+  what the value that the user will enter actually represents. Choosing between different values of
+  this attribute is the same choice as choosing what the label for the element will be.</p>
+
+  <p>First, consider telephone numbers. If a page is asking for a telephone number from the user,
+  the right form control to use is <code id="the-difference-between-the-field-type,-the-autofill-field-name,-and-the-input-modality:telephone-state-(type=tel)"><a href="input.html#telephone-state-(type=tel)">&lt;input type=tel></a></code>.
+  However, which <code id=the-difference-between-the-field-type,-the-autofill-field-name,-and-the-input-modality:attr-fe-autocomplete-3><a href=form-control-infrastructure.html#attr-fe-autocomplete>autocomplete</a></code> value to use depends on
+  which phone number the page is asking for, whether they expect a telephone number in the
+  international format or just the local format, and so forth.</p>
+
+  <p>For example, a page that forms part of a checkout process on an e-commerce site for a customer
+  buying a gift to be shipped to a friend might need both the buyer's telephone number (in case of
+  payment issues) and the friend's telephone number (in case of delivery issues). If the site
+  expects international phone numbers (with the country code prefix), this could thus look like
+  this:</p>
+
+  <pre><code class=html>&lt;p>&lt;label>Your phone number: &lt;input type=tel name=custtel autocomplete="billing tel">&lt;/label>
+&lt;p>&lt;label>Recipient's phone number: &lt;input type=tel name=shiptel autocomplete="shipping tel">&lt;/label>
+&lt;p>Please enter complete phone numbers including the country code prefix, as in "+1 555 123 4567".</code></pre>
+
+  <p>But if the site only supports British customers and recipients, it might instead look like this
+  (notice the use of <code id=the-difference-between-the-field-type,-the-autofill-field-name,-and-the-input-modality:attr-fe-autocomplete-tel-national><a href=form-control-infrastructure.html#attr-fe-autocomplete-tel-national>tel-national</a></code> rather than
+  <code id=the-difference-between-the-field-type,-the-autofill-field-name,-and-the-input-modality:attr-fe-autocomplete-tel><a href=form-control-infrastructure.html#attr-fe-autocomplete-tel>tel</a></code>):</p>
+
+  <pre><code class=html>&lt;p>&lt;label>Your phone number: &lt;input type=tel name=custtel autocomplete="billing tel-national">&lt;/label>
+&lt;p>&lt;label>Recipient's phone number: &lt;input type=tel name=shiptel autocomplete="shipping tel-national">&lt;/label>
+&lt;p>Please enter complete UK phone numbers, as in "(01632) 960 123".</code></pre>
+
+  <p>Now, consider a person's preferred languages. The right <code id=the-difference-between-the-field-type,-the-autofill-field-name,-and-the-input-modality:attr-fe-autocomplete-4><a href=form-control-infrastructure.html#attr-fe-autocomplete>autocomplete</a></code> value is <code id=the-difference-between-the-field-type,-the-autofill-field-name,-and-the-input-modality:attr-fe-autocomplete-language><a href=form-control-infrastructure.html#attr-fe-autocomplete-language>language</a></code>. However, there could be a number of
+  different form controls used for the purpose: a text control (<code id="the-difference-between-the-field-type,-the-autofill-field-name,-and-the-input-modality:text-(type=text)-state-and-search-state-(type=search)"><a href="input.html#text-(type=text)-state-and-search-state-(type=search)">&lt;input type=text></a></code>), a drop-down list (<code id=the-difference-between-the-field-type,-the-autofill-field-name,-and-the-input-modality:the-select-element-2><a href=form-elements.html#the-select-element>&lt;select></a></code>), radio buttons (<code id="the-difference-between-the-field-type,-the-autofill-field-name,-and-the-input-modality:radio-button-state-(type=radio)"><a href="input.html#radio-button-state-(type=radio)">&lt;input
+  type=radio></a></code>), etc. It only depends on what kind of interface is desired.</p>
+
+  <p>Finally, consider names. If a page just wants one name from the user, then the relevant control
+  is <code id="the-difference-between-the-field-type,-the-autofill-field-name,-and-the-input-modality:text-(type=text)-state-and-search-state-(type=search)-2"><a href="input.html#text-(type=text)-state-and-search-state-(type=search)">&lt;input type=text></a></code>. If the page is asking for the
+  user's full name, then the relevant <code id=the-difference-between-the-field-type,-the-autofill-field-name,-and-the-input-modality:attr-fe-autocomplete-5><a href=form-control-infrastructure.html#attr-fe-autocomplete>autocomplete</a></code> value
+  is <code id=the-difference-between-the-field-type,-the-autofill-field-name,-and-the-input-modality:attr-fe-autocomplete-name><a href=form-control-infrastructure.html#attr-fe-autocomplete-name>name</a></code>.
+
+  <pre><code class=html>&lt;p>&lt;label>Japanese name: &lt;input name="j" type="text" autocomplete="section-jp name">&lt;/label>
+&lt;label>Romanized name: &lt;input name="e" type="text" autocomplete="section-en name">&lt;/label></code></pre>
+
+  <p>In this example, the "<code id=the-difference-between-the-field-type,-the-autofill-field-name,-and-the-input-modality:attr-fe-autocomplete-section><a href=form-control-infrastructure.html#attr-fe-autocomplete-section>section-*</a></code>" keywords in
+  the <code id=the-difference-between-the-field-type,-the-autofill-field-name,-and-the-input-modality:attr-fe-autocomplete-6><a href=form-control-infrastructure.html#attr-fe-autocomplete>autocomplete</a></code> attributes' values tell the user agent
+  that the two fields expect <em>different</em> names. Without them, the user agent could
+  automatically fill the second field with the value given in the first field when the user gave a
+  value to the first field.</p>
+
+  <p class=note>The "<code>-jp</code>" and "<code>-en</code>" parts of the
+  keywords are opaque to the user agent; the user agent cannot guess, from those, that the two names
+  are expected to be in Japanese and English respectively.</p>
+
+  <p>Separate from the choices regarding <code id=the-difference-between-the-field-type,-the-autofill-field-name,-and-the-input-modality:attr-input-type-3><a href=input.html#attr-input-type>type</a></code> and <code id=the-difference-between-the-field-type,-the-autofill-field-name,-and-the-input-modality:attr-fe-autocomplete-7><a href=form-control-infrastructure.html#attr-fe-autocomplete>autocomplete</a></code>, the <code id=the-difference-between-the-field-type,-the-autofill-field-name,-and-the-input-modality:attr-inputmode-2><a href=interaction.html#attr-inputmode>inputmode</a></code> attribute decides what kind of input modality (e.g.,
+  virtual keyboard) to use, when the control is a text control.</p>
+
+  <p>Consider credit card numbers. The appropriate input type is <em>not</em> <code id="the-difference-between-the-field-type,-the-autofill-field-name,-and-the-input-modality:number-state-(type=number)"><a href="input.html#number-state-(type=number)">&lt;input type=number></a></code>, <a href=input.html#when-number-is-not-appropriate>as explained below</a>; it is instead <code id="the-difference-between-the-field-type,-the-autofill-field-name,-and-the-input-modality:text-(type=text)-state-and-search-state-(type=search)-3"><a href="input.html#text-(type=text)-state-and-search-state-(type=search)">&lt;input type=text></a></code>. To encourage the user agent to use a
+  numeric input modality anyway (e.g., a virtual keyboard displaying only digits), the page would
+  use</p>
+
+  <pre><code class=html>&lt;p>&lt;label>Credit card number:
+                &lt;input name="cc" type="text" inputmode="numeric" pattern="[0-9]{8,19}" autocomplete="cc-number">
+&lt;/label>&lt;/p></code></pre>
+
+
+
+
+  <h5 id=input-author-notes><span class=secno>4.10.1.8</span> 日期、时间和数字格式<a href=#input-author-notes class=self-link></a></h5>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Wed May 16 2018 16:14:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/forms/introduction/date-time-and-number-formats.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/the-elements-of-html/forms/introduction/date-time-and-number-formats.zh.html></div>
+  
+
+  
+
+  <p>这个 Pizza 配送的例子中，时间的格式为 "HH:MM": 两位数字的小时（24小时格式），以及两位数字的时间。
+  （还可以指定秒，虽然这个例子中没有必要）</p>
+
+  <p>但是在某些时区里展示给用户的时间是不同的。例如在美国仍然经常使用 12 小时的表加一个 am/pm 指示，
+  比如 "2pm"。在法国通常使用一个 "h" 字符来分隔小时和分钟，例如 "14h00"。</p>
+
+  <p>日期也存在类似的问题，更严重的是日期各部分的顺序也总是不一致的。
+  — 例如在 Cyprus 2003 年 2 月 1 日会写成 "1/2/03"，
+  同样的日期在日本会写成 "2003年02月01日" — 数字也是一样，
+  在不同的时区小数点和千分点使用的标点也不一样。</p>
+
+  <p>因此把 HTML 和表单提交中的时间、日期和数字的格式（即本规范中定义的格式，以及
+  ISO 8601 标准建立的对计算机可读的时间和日期格式），和
+  浏览器显示给用户的或浏览器接受用户输入的时间、日期和数字格式区分开来非常重要。</p>
+
+  <p>协议中（即 HTML 标记和表单提交）使用的格式是为了使得计算机可读和一致，且与用户的区域设置无关。
+  例如日期总是表示为 "YYYY-MM-DD"，比如 "2003-02-01"。用户永远不应该看到这个格式。</p>
+
+  <p>页面给出的时间、日期或数字的按照协议的格式会在显示给用户之前翻译成用户偏好的显示方式
+  （基于用户偏好或页面自己所在的区域设置）。类似地，在用户使用他们偏好的格式输入时间、日期或数字时，
+  用户代理把它放回 DOM 或提交之前，要把它转换回协议格式。</p>
+
+  <p>这使得页面脚本和服务器可以使用一致的方式来处理时间、日期和数字，不需要支持几十种不同的格式，
+  同时仍然能够支持用户的需要。</p>
+
+  
+
+
+
+  <h4 id=categories><span class=secno>4.10.2</span> Categories<a href=#categories class=self-link></a></h4>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/forms/categories.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/the-elements-of-html/forms/categories.zh.html?filename=categories.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fthe-elements-of-html%2Fforms%2Fcategories.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  <p>Mostly for historical reasons, elements in this section fall into several overlapping (but
+  subtly different) categories in addition to the usual ones like <a id=categories:flow-content href=dom.html#flow-content>flow content</a>,
+  <a id=categories:phrasing-content href=dom.html#phrasing-content>phrasing content</a>, and <a id=categories:interactive-content href=dom.html#interactive-content>interactive content</a>.</p>
+
+  <p>A number of the elements are <dfn id=form-associated-element>form-associated
+  elements</dfn>, which means they can have a <a id=categories:form-owner href=form-control-infrastructure.html#form-owner>form owner</a>.
+
+  
+  <ul class="brief category-list"><li><code id=categories:the-button-element><a href=form-elements.html#the-button-element>button</a></code><li><code id=categories:the-fieldset-element><a href=form-elements.html#the-fieldset-element>fieldset</a></code><li><code id=categories:the-input-element><a href=input.html#the-input-element>input</a></code><li><code id=categories:the-object-element><a href=iframe-embed-object.html#the-object-element>object</a></code><li><code id=categories:the-output-element><a href=form-elements.html#the-output-element>output</a></code><li><code id=categories:the-select-element><a href=form-elements.html#the-select-element>select</a></code><li><code id=categories:the-textarea-element><a href=form-elements.html#the-textarea-element>textarea</a></code><li><code id=categories:the-img-element><a href=embedded-content.html#the-img-element>img</a></code><li><a href=custom-elements.html#form-associated-custom-element id=categories:form-associated-custom-element>form-associated custom elements</a></ul>
+
+  <p>The <a href=#form-associated-element id=categories:form-associated-element>form-associated elements</a> fall into several
+  subcategories:</p>
+
+  <dl><dt><dfn id=category-listed>Listed elements</dfn><dd>
+    <p>Denotes elements that are listed in the <code id=categories:dom-form-elements><a href=#dom-form-elements><var>form</var>.elements</a></code> and <code id=categories:dom-fieldset-elements><a href=form-elements.html#dom-fieldset-elements><var>fieldset</var>.elements</a></code> APIs. These elements also
+    have a <code id=categories:attr-fae-form><a href=form-control-infrastructure.html#attr-fae-form>form</a></code> content attribute, and a matching <code id=categories:dom-fae-form><a href=form-control-infrastructure.html#dom-fae-form>form</a></code> IDL attribute, that allow authors to specify an explicit
+    <a id=categories:form-owner-2 href=form-control-infrastructure.html#form-owner>form owner</a>.</p>
+
+    
+    <ul class="brief category-list"><li><code id=categories:the-button-element-2><a href=form-elements.html#the-button-element>button</a></code><li><code id=categories:the-fieldset-element-2><a href=form-elements.html#the-fieldset-element>fieldset</a></code><li><code id=categories:the-input-element-2><a href=input.html#the-input-element>input</a></code><li><code id=categories:the-object-element-2><a href=iframe-embed-object.html#the-object-element>object</a></code><li><code id=categories:the-output-element-2><a href=form-elements.html#the-output-element>output</a></code><li><code id=categories:the-select-element-2><a href=form-elements.html#the-select-element>select</a></code><li><code id=categories:the-textarea-element-2><a href=form-elements.html#the-textarea-element>textarea</a></code><li><a href=custom-elements.html#form-associated-custom-element id=categories:form-associated-custom-element-2>form-associated custom elements</a></ul>
+   <dt><dfn id=category-submit>Submittable elements</dfn><dd>
+    <p>Denotes elements that can be used for <span>constructing the entry list</span> when a
+    <code id=categories:the-form-element><a href=#the-form-element>form</a></code> element is <span>submitted</span>.</p>
+
+    
+    <ul class="brief category-list"><li><code id=categories:the-button-element-3><a href=form-elements.html#the-button-element>button</a></code><li><code id=categories:the-input-element-3><a href=input.html#the-input-element>input</a></code><li><code id=categories:the-object-element-3><a href=iframe-embed-object.html#the-object-element>object</a></code><li><code id=categories:the-select-element-3><a href=form-elements.html#the-select-element>select</a></code><li><code id=categories:the-textarea-element-3><a href=form-elements.html#the-textarea-element>textarea</a></code><li><a href=custom-elements.html#form-associated-custom-element id=categories:form-associated-custom-element-3>form-associated custom elements</a></ul>
+
+    <p>Some <a href=#category-submit id=categories:category-submit>submittable elements</a> can be, depending on their
+    attributes, <dfn id=concept-button>buttons</dfn>. The prose below defines when an element
+    is a button. Some buttons are specifically <dfn id=concept-submit-button>submit
+    buttons</dfn>.</p>
+   <dt><dfn id=category-reset>Resettable elements</dfn><dd>
+    <p>Denotes elements that can be affected when a <code id=categories:the-form-element-2><a href=#the-form-element>form</a></code> element is <span>reset</span>.</p>
+
+    
+    <ul class="brief category-list"><li><code id=categories:the-input-element-4><a href=input.html#the-input-element>input</a></code><li><code id=categories:the-output-element-3><a href=form-elements.html#the-output-element>output</a></code><li><code id=categories:the-select-element-4><a href=form-elements.html#the-select-element>select</a></code><li><code id=categories:the-textarea-element-4><a href=form-elements.html#the-textarea-element>textarea</a></code><li><a href=custom-elements.html#form-associated-custom-element id=categories:form-associated-custom-element-4>form-associated custom elements</a></ul>
+   <dt><dfn id=category-autocapitalize>Autocapitalize-inheriting elements</dfn><dd>
+    <p>Denotes elements that inherit the <code id=categories:attr-autocapitalize><a href=interaction.html#attr-autocapitalize>autocapitalize</a></code>
+    attribute from their <a id=categories:form-owner-3 href=form-control-infrastructure.html#form-owner>form owner</a>.</p>
+
+    
+    <ul class="brief category-list"><li><code id=categories:the-button-element-4><a href=form-elements.html#the-button-element>button</a></code><li><code id=categories:the-fieldset-element-3><a href=form-elements.html#the-fieldset-element>fieldset</a></code><li><code id=categories:the-input-element-5><a href=input.html#the-input-element>input</a></code><li><code id=categories:the-output-element-4><a href=form-elements.html#the-output-element>output</a></code><li><code id=categories:the-select-element-5><a href=form-elements.html#the-select-element>select</a></code><li><code id=categories:the-textarea-element-5><a href=form-elements.html#the-textarea-element>textarea</a></code></ul>
+   </dl>
+
+  <p>Some elements, not all of them <a href=#form-associated-element id=categories:form-associated-element-2>form-associated</a>,
+  are categorized as <dfn id=category-label>labelable elements</dfn>. These are elements that
+  can be associated with a <code id=categories:the-label-element><a href=#the-label-element>label</a></code> element.
+
+  
+  <ul class="brief category-list"><li><code id=categories:the-button-element-5><a href=form-elements.html#the-button-element>button</a></code><li><code id=categories:the-input-element-6><a href=input.html#the-input-element>input</a></code> (if the <code id=categories:attr-input-type><a href=input.html#attr-input-type>type</a></code> attribute is <em>not</em> in the <a href="input.html#hidden-state-(type=hidden)" id="categories:hidden-state-(type=hidden)">Hidden</a> state)<li><code id=categories:the-meter-element><a href=form-elements.html#the-meter-element>meter</a></code><li><code id=categories:the-output-element-5><a href=form-elements.html#the-output-element>output</a></code><li><code id=categories:the-progress-element><a href=form-elements.html#the-progress-element>progress</a></code><li><code id=categories:the-select-element-6><a href=form-elements.html#the-select-element>select</a></code><li><code id=categories:the-textarea-element-6><a href=form-elements.html#the-textarea-element>textarea</a></code><li><a href=custom-elements.html#form-associated-custom-element id=categories:form-associated-custom-element-5>form-associated custom elements</a></ul>
+
+
+
+  <h4 id=the-form-element data-dfn-type=element data-lt=form><span class=secno>4.10.3</span> The <dfn><code>form</code></dfn> element<a href=#the-form-element class=self-link></a></h4><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form title="The HTML <form> element represents a document section containing interactive controls for submitting information.">Element/form</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>Yes</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>Yes</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>Yes</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/forms/the-form-element.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/the-elements-of-html/forms/the-form-element.zh.html?filename=the-form-element.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fthe-elements-of-html%2Fforms%2Fthe-form-element.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  <dl class=element><dt><a href=dom.html#concept-element-categories id=the-form-element:concept-element-categories>Categories</a>:<dd><a id=the-form-element:flow-content href=dom.html#flow-content>Flow content</a>.<dd><a id=the-form-element:palpable-content-2 href=dom.html#palpable-content-2>Palpable content</a>.<dt><a href=dom.html#concept-element-contexts id=the-form-element:concept-element-contexts>Contexts in which this element can be used</a>:<dd>Where <a id=the-form-element:flow-content-2 href=dom.html#flow-content>flow content</a> is expected.<dt><a href=dom.html#concept-element-content-model id=the-form-element:concept-element-content-model>Content model</a>:<dd><a id=the-form-element:flow-content-3 href=dom.html#flow-content>Flow content</a>, but with no <code id=the-form-element:the-form-element><a href=#the-form-element>form</a></code> element descendants.<dt><a href=dom.html#concept-element-tag-omission id=the-form-element:concept-element-tag-omission>text/html 中的标签省略</a>：<dd>哪个标签都不能省略。<dt><a href=dom.html#concept-element-attributes id=the-form-element:concept-element-attributes>Content attributes</a>:<dd><a id=the-form-element:全局属性 href=dom.html#全局属性>Global attributes</a><dd><code id=the-form-element:attr-form-accept-charset><a href=#attr-form-accept-charset>accept-charset</a></code> — Character encodings to use for <a id=the-form-element:form-submission href=form-control-infrastructure.html#form-submission>form submission</a><dd><code id=the-form-element:attr-fs-action><a href=form-control-infrastructure.html#attr-fs-action>action</a></code> — <a id=the-form-element:url href=https://url.spec.whatwg.org/#concept-url data-x-internal=url>URL</a> to use for <a id=the-form-element:form-submission-2 href=form-control-infrastructure.html#form-submission>form submission</a><dd><code id=the-form-element:attr-form-autocomplete><a href=#attr-form-autocomplete>autocomplete</a></code> — Default setting for autofill feature for controls in the form<dd><code id=the-form-element:attr-fs-enctype><a href=form-control-infrastructure.html#attr-fs-enctype>enctype</a></code> — Entry list encoding type to use for <a id=the-form-element:form-submission-3 href=form-control-infrastructure.html#form-submission>form submission</a><dd><code id=the-form-element:attr-fs-method><a href=form-control-infrastructure.html#attr-fs-method>method</a></code> — Variant to use for <a id=the-form-element:form-submission-4 href=form-control-infrastructure.html#form-submission>form submission</a><dd><code id=the-form-element:attr-form-name><a href=#attr-form-name>name</a></code> — Name of form to use in the <code id=the-form-element:dom-document-forms><a href=dom.html#dom-document-forms>document.forms</a></code> API<dd><code id=the-form-element:attr-fs-novalidate><a href=form-control-infrastructure.html#attr-fs-novalidate>novalidate</a></code> — Bypass form control validation for <a id=the-form-element:form-submission-5 href=form-control-infrastructure.html#form-submission>form submission</a><dd><code id=the-form-element:attr-fs-target><a href=form-control-infrastructure.html#attr-fs-target>target</a></code> — <a id=the-form-element:browsing-context href=browsers.html#browsing-context>Browsing context</a> for <a id=the-form-element:form-submission-6 href=form-control-infrastructure.html#form-submission>form submission</a><dd><code id=the-form-element:attr-form-rel><a href=#attr-form-rel>rel</a></code><dt><a href=dom.html#concept-element-accessibility-considerations id=the-form-element:concept-element-accessibility-considerations>Accessibility considerations</a>:<dd><a href=https://w3c.github.io/html-aria/#el-form>For authors</a>.<dd><a href=https://w3c.github.io/html-aam/#el-form>For implementers</a>.<dt><a href=dom.html#concept-element-dom id=the-form-element:concept-element-dom>DOM interface</a>:<dd>Uses <code>HTMLFormElement</code>.</dl>
+
+  <p>The <code id=the-form-element:the-form-element-2><a href=#the-form-element>form</a></code> element <a id=the-form-element:represents href=dom.html#represents>represents</a> a <a id=the-form-element:hyperlink href=links.html#hyperlink>hyperlink</a> that can be
+  manipulated through a collection of <a href=#form-associated-element id=the-form-element:form-associated-element>form-associated
+  elements</a>, some of which can represent editable values that can be submitted to a server for
+  processing.</p>
+
+  <p>The <dfn data-dfn-for=form id=attr-form-accept-charset data-dfn-type=element-attr><code>accept-charset</code></dfn> attribute gives the character
+  encodings that are to be used for the submission. If specified, the value must be an <a id=the-form-element:ascii-case-insensitive href=https://infra.spec.whatwg.org/#ascii-case-insensitive data-x-internal=ascii-case-insensitive>ASCII
+  case-insensitive</a> match for "<code>UTF-8</code>". <a href=references.html#refsENCODING>[ENCODING]</a></p>
+
+  <p>The <dfn data-dfn-for=form id=attr-form-name data-dfn-type=element-attr><code>name</code></dfn> attribute
+  represents the <code id=the-form-element:the-form-element-3><a href=#the-form-element>form</a></code>'s name within the <code id=the-form-element:dom-document-forms-2><a href=dom.html#dom-document-forms>forms</a></code>
+  collection. The value must not be the empty string, and the value must be unique amongst the
+  <code id=the-form-element:the-form-element-4><a href=#the-form-element>form</a></code> elements in the <code id=the-form-element:dom-document-forms-3><a href=dom.html#dom-document-forms>forms</a></code> collection that
+  it is in, if any.</p>
+
+  <p>The <dfn data-dfn-for=form id=attr-form-autocomplete data-dfn-type=element-attr><code>autocomplete</code></dfn> attribute is an <a id=the-form-element:enumerated-attribute href=infrastructure.html#enumerated-attribute>enumerated
+  attribute</a>. The attribute has two states. The <dfn id=attr-form-autocomplete-on><code>on</code></dfn> keyword maps to the <dfn id=attr-form-autocomplete-on-state>on</dfn> state, and the <dfn id=attr-form-autocomplete-off><code>off</code></dfn> keyword maps to the <dfn id=attr-form-autocomplete-off-state>off</dfn> state. The attribute may also be omitted. The
+  <i id=the-form-element:missing-value-default><a href=infrastructure.html#missing-value-default>missing value default</a></i> and the <i id=the-form-element:invalid-value-default><a href=infrastructure.html#invalid-value-default>invalid value default</a></i> are the <a href=#attr-form-autocomplete-on-state id=the-form-element:attr-form-autocomplete-on-state>on</a> state. The <a href=#attr-form-autocomplete-off-state id=the-form-element:attr-form-autocomplete-off-state>off</a> state indicates that by default, form
+  controls in the form will have their <span>autofill field name</span> set to "<code id=the-form-element:attr-fe-autocomplete-off><a href=form-control-infrastructure.html#attr-fe-autocomplete-off>off</a></code>"; the <a href=#attr-form-autocomplete-on-state id=the-form-element:attr-form-autocomplete-on-state-2>on</a> state indicates that by default, form controls
+  in the form will have their <span>autofill field name</span> set to "<code id=the-form-element:attr-fe-autocomplete-on><a href=form-control-infrastructure.html#attr-fe-autocomplete-on>on</a></code>".</p>
+
+  <p>The <code id=the-form-element:attr-fs-action-2><a href=form-control-infrastructure.html#attr-fs-action>action</a></code>, <code id=the-form-element:attr-fs-enctype-2><a href=form-control-infrastructure.html#attr-fs-enctype>enctype</a></code>,
+  <code id=the-form-element:attr-fs-method-2><a href=form-control-infrastructure.html#attr-fs-method>method</a></code>, <code id=the-form-element:attr-fs-novalidate-2><a href=form-control-infrastructure.html#attr-fs-novalidate>novalidate</a></code>,
+  and <code id=the-form-element:attr-fs-target-2><a href=form-control-infrastructure.html#attr-fs-target>target</a></code> attributes are <a id=the-form-element:attributes-for-form-submission href=form-control-infrastructure.html#attributes-for-form-submission>attributes for form
+  submission</a>.</p>
+
+  <p>The <dfn data-dfn-for=form id=attr-form-rel data-dfn-type=element-attr><code>rel</code></dfn> attribute on
+  <code id=the-form-element:the-form-element-5><a href=#the-form-element>form</a></code> elements controls what kinds of links the elements create. The attribute's value
+  must be a <a id=the-form-element:unordered-set-of-unique-space-separated-tokens href=infrastructure.html#unordered-set-of-unique-space-separated-tokens>unordered set of unique space-separated tokens</a>. The <a href=links.html#linkTypes>allowed keywords and their meanings</a> are defined in an earlier section.</p>
+
+  <p><code id=the-form-element:attr-form-rel-2><a href=#attr-form-rel>rel</a></code>'s <a href=https://dom.spec.whatwg.org/#concept-supported-tokens id=the-form-element:concept-supported-tokens data-x-internal=concept-supported-tokens>supported
+  tokens</a> are the keywords defined in <a href=links.html#linkTypes>HTML link types</a> which are
+  allowed on <code id=the-form-element:the-form-element-6><a href=#the-form-element>form</a></code> elements, impact the processing model, and are supported by the user
+  agent. The possible <a href=https://dom.spec.whatwg.org/#concept-supported-tokens id=the-form-element:concept-supported-tokens-2 data-x-internal=concept-supported-tokens>supported tokens</a> are <code id=the-form-element:link-type-noreferrer><a href=links.html#link-type-noreferrer>noreferrer</a></code>, <code id=the-form-element:link-type-noopener><a href=links.html#link-type-noopener>noopener</a></code>, and <code id=the-form-element:link-type-opener><a href=links.html#link-type-opener>opener</a></code>. <code id=the-form-element:attr-form-rel-3><a href=#attr-form-rel>rel</a></code>'s <a href=https://dom.spec.whatwg.org/#concept-supported-tokens id=the-form-element:concept-supported-tokens-3 data-x-internal=concept-supported-tokens>supported tokens</a> must only include the tokens from this
+  list that the user agent implements the processing model for.</p>
+
+  <dl class=domintro><dt><var>form</var> . <code id=dom-form-elements>elements</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/elements title="The HTMLFormElement property elements returns an HTMLFormControlsCollection listing all the form controls contained in the <form> element.">HTMLFormElement/elements</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>3+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>8+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>9+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>1+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span></div></div></div><dd>
+    <p>Returns an <code id=the-form-element:htmlformcontrolscollection><a href=infrastructure.html#htmlformcontrolscollection>HTMLFormControlsCollection</a></code> of the form controls in the form (excluding image
+    buttons for historical reasons).</p>
+   <dt><var>form</var> . <code id=dom-form-length>length</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/length title="The HTMLFormElement.length read-only property returns the number of controls in the <form> element.">HTMLFormElement/length</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>Yes</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie unknown"><span>Internet Explorer</span><span>?</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>Yes</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div><dd>
+    <p>Returns the number of form controls in the form (excluding image buttons for historical
+    reasons).</p>
+   <dt><var>form</var>[<var>index</var>]<dd>
+    <p>Returns the <var>index</var>th element in the form (excluding image buttons for
+    historical reasons).</p>
+   <dt><var>form</var>[<var>name</var>]<dd>
+    <p>Returns the form control (or, if there are several, a <code id=the-form-element:radionodelist><a href=infrastructure.html#radionodelist>RadioNodeList</a></code> of the form
+    controls) in the form with the given <a href=https://dom.spec.whatwg.org/#concept-id id=the-form-element:concept-id data-x-internal=concept-id>ID</a> or <code id=the-form-element:attr-fe-name><a href=form-control-infrastructure.html#attr-fe-name>name</a></code> (excluding image buttons for historical reasons); or, if there
+    are none, returns the <code id=the-form-element:the-img-element><a href=embedded-content.html#the-img-element>img</a></code> element with the given ID.</p>
+
+    <p>Once an element has been referenced using a particular name, that name will continue being
+    available as a way to reference that element in this method, even if the element's actual <a href=https://dom.spec.whatwg.org/#concept-id id=the-form-element:concept-id-2 data-x-internal=concept-id>ID</a> or <code id=the-form-element:attr-fe-name-2><a href=form-control-infrastructure.html#attr-fe-name>name</a></code> changes, for as long as
+    the element remains in the <a id=the-form-element:tree href=https://dom.spec.whatwg.org/#concept-tree data-x-internal=tree>tree</a>.</p>
+
+    <p>If there are multiple matching items, then a <code id=the-form-element:radionodelist-2><a href=infrastructure.html#radionodelist>RadioNodeList</a></code> object containing all
+    those elements is returned.</p>
+   <dt><var>form</var> . <code id=dom-form-submit>submit</code>()<div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/submit title="The HTMLFormElement.submit() method submits a given <form>.">HTMLFormElement/submit</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>Yes</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>Yes</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>Yes</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div><dd>
+    <p>Submits the form, bypassing <span>interactive
+    constraint validation</span> and without firing a <code id=the-form-element:event-submit><a href=indices.html#event-submit>submit</a></code>
+    event.</p>
+   <dt><var>form</var> . <code id=dom-form-requestsubmit>requestSubmit</code>( [ <var>submitter</var> ] )<div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/requestSubmit title="The HTMLFormElement method requestSubmit() requests that the form be submitted using a specific submit button.">HTMLFormElement/requestSubmit</a><div class=support><span class="firefox yes"><span>Firefox</span><span>75+</span></span><span class="safari no"><span>Safari</span><span>No</span></span><span class="chrome yes"><span>Chrome</span><span>76+</span></span><hr><span class="opera yes"><span>Opera</span><span>63+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android no"><span>Firefox Android</span><span>No</span></span><span class="safari_ios no"><span>Safari iOS</span><span>No</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>76+</span></span><span class="webview_android yes"><span>WebView Android</span><span>76+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>12.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>54+</span></span></div></div></div><dd>
+    <p>Requests to submit the form. Unlike <code id=the-form-element:dom-form-submit><a href=#dom-form-submit>submit()</a></code>, this
+    method includes <span>interactive constraint
+    validation</span> and firing a <code id=the-form-element:event-submit-2><a href=indices.html#event-submit>submit</a></code> event, either of which
+    can cancel submission.</p>
+
+    <p>The <var>submitter</var> argument can be used to point to a specific <a href=#concept-submit-button id=the-form-element:concept-submit-button>submit button</a>, whose <code id=the-form-element:attr-fs-formaction><a href=form-control-infrastructure.html#attr-fs-formaction>formaction</a></code>, <code id=the-form-element:attr-fs-formenctype><a href=form-control-infrastructure.html#attr-fs-formenctype>formenctype</a></code>, <code id=the-form-element:attr-fs-formmethod><a href=form-control-infrastructure.html#attr-fs-formmethod>formmethod</a></code>, <code id=the-form-element:attr-fs-formnovalidate><a href=form-control-infrastructure.html#attr-fs-formnovalidate>formnovalidate</a></code>, and <code id=the-form-element:attr-fs-formtarget><a href=form-control-infrastructure.html#attr-fs-formtarget>formtarget</a></code> attributes can impact submission. Additionally,
+    the submitter will be included when <span>constructing the entry list</span> for submission;
+    normally, buttons are excluded.</p>
+   <dt><var>form</var> . <code id=dom-form-reset>reset</code>()<div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reset title="The HTMLFormElement.reset() method restores a form element's default values. This method does the same thing as clicking the form's reset button.">HTMLFormElement/reset</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>3+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>8+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>9+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>1+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span></div></div></div><dd>
+    <p>Resets the form.</p>
+   <dt><var>form</var> . <code id=dom-form-checkvalidity>checkValidity</code>()<dd>
+    <p>Returns true if the form's controls are all valid; otherwise, returns false.</p>
+   <dt><var>form</var> . <code id=dom-form-reportvalidity>reportValidity</code>()<dd>
+    <p>Returns true if the form's controls are all valid; otherwise, returns false and informs the user.</p>
+   </dl>
+
+  
+
+  <div class=example>
+
+   <p>This example shows two search forms:</p>
+
+   <pre><code class=html>&lt;form action="https://www.google.com/search" method="get">
+ &lt;label>Google: &lt;input type="search" name="q">&lt;/label> &lt;input type="submit" value="Search...">
+&lt;/form>
+&lt;form action="https://www.bing.com/search" method="get">
+ &lt;label>Bing: &lt;input type="search" name="q">&lt;/label> &lt;input type="submit" value="Search...">
+&lt;/form></code></pre>
+
+  </div>
+
+
+
+
+  <h4 id=the-label-element><span class=secno>4.10.4</span> The <dfn><code>label</code></dfn> element<a href=#the-label-element class=self-link></a></h4><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label title="The HTML <label> element represents a caption for an item in a user interface.">Element/label</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>Yes</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>Yes</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>Yes</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/forms/the-label-element.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/the-elements-of-html/forms/the-label-element.zh.html?filename=the-label-element.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fthe-elements-of-html%2Fforms%2Fthe-label-element.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  <dl class=element><dt><a href=dom.html#concept-element-categories id=the-label-element:concept-element-categories>Categories</a>:<dd><a id=the-label-element:flow-content href=dom.html#flow-content>Flow content</a>.<dd><a id=the-label-element:phrasing-content href=dom.html#phrasing-content>Phrasing content</a>.<dd><a id=the-label-element:interactive-content href=dom.html#interactive-content>Interactive content</a>.<dd><a id=the-label-element:palpable-content-2 href=dom.html#palpable-content-2>Palpable content</a>.<dt><a href=dom.html#concept-element-contexts id=the-label-element:concept-element-contexts>Contexts in which this element can be used</a>:<dd>Where <a id=the-label-element:phrasing-content-2 href=dom.html#phrasing-content>phrasing content</a> is expected.<dt><a href=dom.html#concept-element-content-model id=the-label-element:concept-element-content-model>Content model</a>:<dd><a id=the-label-element:phrasing-content-3 href=dom.html#phrasing-content>Phrasing content</a>, but with no descendant <a href=#category-label id=the-label-element:category-label>labelable elements</a> unless it is the element's <span>labeled control</span>, and no descendant <code id=the-label-element:the-label-element><a href=#the-label-element>label</a></code> elements.<dt><a href=dom.html#concept-element-tag-omission id=the-label-element:concept-element-tag-omission>text/html 中的标签省略</a>：<dd>哪个标签都不能省略。<dt><a href=dom.html#concept-element-attributes id=the-label-element:concept-element-attributes>Content attributes</a>:<dd><a id=the-label-element:全局属性 href=dom.html#全局属性>Global attributes</a><dd><code id=the-label-element:attr-label-for><a href=#attr-label-for>for</a></code> — Associate the label with form control<dt><a href=dom.html#concept-element-accessibility-considerations id=the-label-element:concept-element-accessibility-considerations>Accessibility considerations</a>:<dd><a href=https://w3c.github.io/html-aria/#el-label>For authors</a>.<dd><a href=https://w3c.github.io/html-aam/#el-label>For implementers</a>.<dt><a href=dom.html#concept-element-dom id=the-label-element:concept-element-dom>DOM interface</a>:<dd>Uses <code>HTMLLabelElement</code>.</dl>
+
+  <p>The <code id=the-label-element:the-label-element-2><a href=#the-label-element>label</a></code> element <a id=the-label-element:represents href=dom.html#represents>represents</a> a caption in a user interface. The
+  caption can be associated with a specific form control, either using the <code id=the-label-element:attr-label-for-2><a href=#attr-label-for>for</a></code> attribute, or by putting the form control inside the
+  <code id=the-label-element:the-label-element-3><a href=#the-label-element>label</a></code> element itself.</p>
+
+  
+
+  <p>The <dfn data-dfn-for=label id=attr-label-for data-dfn-type=element-attr><code>for</code></dfn> attribute may
+  be specified to indicate a form control with which the caption is to be associated. If the
+  attribute is specified, the attribute's value must be the <a href=https://dom.spec.whatwg.org/#concept-id id=the-label-element:concept-id data-x-internal=concept-id>ID</a> of a
+  <a href=#category-label id=the-label-element:category-label-2>labelable element</a> in the same <a id=the-label-element:tree href=https://dom.spec.whatwg.org/#concept-tree data-x-internal=tree>tree</a> as the
+  <code id=the-label-element:the-label-element-4><a href=#the-label-element>label</a></code> element. </p>
+
+  
+
+  <div class=example>
+
+   <p>The following example shows three form controls each with a label, two of which have small
+   text showing the right format for users to use.</p>
+
+   <pre><code class=html>&lt;p>&lt;label>Full name: &lt;input name=fn> &lt;small>Format: First Last&lt;/small>&lt;/label>&lt;/p>
+&lt;p>&lt;label>Age: &lt;input name=age type=number min=0>&lt;/label>&lt;/p>
+&lt;p>&lt;label>Post code: &lt;input name=pc> &lt;small>Format: AB12 3CD&lt;/small>&lt;/label>&lt;/p></code></pre>
+
+  </div>
+
+  <dl class=domintro><dt><var>label</var> . <code id=dom-label-control>control</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/HTMLLabelElement/control title="The read-only HTMLLabelElement.control property returns a reference to the control (in the form of an object of type HTMLElement or one of its derivatives) with which the <label> element is associated, or null if the label isn't associated with a control.">HTMLLabelElement/control</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>4+</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>18</span></span><span class="ie yes"><span>Internet Explorer</span><span>Yes</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div><dd>
+    <p>Returns the form control that is associated with this element.</p>
+   <dt><var>label</var> . <code id=dom-label-form>form</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/HTMLLabelElement/form title="The read-only HTMLLabelElement.form property returns an HTMLFormElement object which represents the form of which the label's associated control is a part, or null if there is either no associated control, or if that control isn't in a form.">HTMLLabelElement/form</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>Yes</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div><dd>
+    <p>Returns the <a id=the-label-element:form-owner href=form-control-infrastructure.html#form-owner>form owner</a> of the form control that is associated with this
+    element.</p>
+
+    <p>Returns null if there isn't one.</p>
+   </dl>
+
+  
+
+  <p class=note>The <code id=the-label-element:dom-label-form><a href=#dom-label-form>form</a></code> IDL attribute on the
+  <code id=the-label-element:the-label-element-5><a href=#the-label-element>label</a></code> element is different from the <code id=the-label-element:attr-fae-form><a href=form-control-infrastructure.html#attr-fae-form>form</a></code> IDL
+  attribute on <a href=#category-listed id=the-label-element:category-listed>listed</a> <a href=#form-associated-element id=the-label-element:form-associated-element>form-associated elements</a>, and the <code id=the-label-element:the-label-element-6><a href=#the-label-element>label</a></code> element does not have a <code id=the-label-element:attr-fae-form-2><a href=form-control-infrastructure.html#attr-fae-form>form</a></code> content attribute.</p>
+
+  <hr>
+
+  <dl class=domintro><dt><var>control</var> . <code id=dom-lfe-labels>labels</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement/labels title="The HTMLButtonElement.labels read-only property returns a NodeList of the <label> elements associated with the <button> element.">HTMLButtonElement/labels</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>56+</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>18</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>56+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/labels title="The HTMLInputElement.labels read-only property returns a NodeList of the <label> elements associated with the <input> element.">HTMLInputElement/labels</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>56+</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>14+</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>18</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>Yes</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/HTMLMeterElement/labels title="The HTMLMeterElement.labels read-only property returns a NodeList of the <label> elements associated with the <meter> element.">HTMLMeterElement/labels</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>56+</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>18</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>56+</span></span><span class="safari_ios unknown"><span>Safari iOS</span><span>?</span></span><span class="chrome_android unknown"><span>Chrome Android</span><span>?</span></span><span class="webview_android unknown"><span>WebView Android</span><span>?</span></span><span class="samsunginternet_android unknown"><span>Samsung Internet</span><span>?</span></span><span class="opera_android unknown"><span>Opera Android</span><span>?</span></span></div></div><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/HTMLOutputElement/labels title="The HTMLOutputElement.labels read-only property returns a NodeList of the <label> elements associated with the <output> element.">HTMLOutputElement/labels</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>56+</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>18</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>56+</span></span><span class="safari_ios no"><span>Safari iOS</span><span>No</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android unknown"><span>Opera Android</span><span>?</span></span></div></div><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/HTMLProgressElement/labels title="The HTMLProgressElement.labels read-only property returns a NodeList of the <label> elements associated with the <progress> element.">HTMLProgressElement/labels</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>56+</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>18</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>56+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/labels title="The HTMLSelectElement.labels read-only property returns a NodeList of the <label> elements associated with the <select> element.">HTMLSelectElement/labels</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>56+</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>14+</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>18</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>56+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement/labels title="The HTMLTextAreaElement.labels read-only property returns a NodeList of the <label> elements associated with the <textarea> element.">HTMLTextAreaElement/labels</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>56+</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>14+</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>18</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>56+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div><dd>
+    <p>Returns a <code id=the-label-element:nodelist><a data-x-internal=nodelist href=https://dom.spec.whatwg.org/#interface-nodelist>NodeList</a></code> of all the <code id=the-label-element:the-label-element-7><a href=#the-label-element>label</a></code> elements that the form control
+    is associated with.</p>
+   </dl>
+
+  
+
+
+
+  <nav><a href=tables.html>← 4.9 表格数据</a> — <a href=./>Table of Contents</a> — <a href=input.html>4.10.5 The input element →</a></nav>

@@ -1,0 +1,468 @@
+<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Standard, Developer's Edition</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/dev/styles.css crossorigin=""><script>
+   function toggleStatus(div) {
+     div.parentNode.classList.toggle('wrapped');
+   }
+   function setLinkFragment(link) {
+     link.hash = location.hash;
+   }
+  </script><body>
+  <script async="" src=/dev/search.js></script>
+  
+  
+  
+  <header id=head class="head with-buttons">
+   <a href=https://whatwg.org/ class=logo><img width=100 alt=WHATWG crossorigin="" src=https://resources.whatwg.org/logo.svg height=100></a>
+   
+   <hgroup><h1><a rel=home href=/dev/>HTML: The Living Standard</a></h1><h2 id="developer's-edition-—-last-updated-date:-01-jan-1901" class="no-num no-toc">Developer's Edition — Last Updated <span class=pubdate>6 November 2020</span></h2><div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/developers-edition-mdash-last-updated-date-01-jan-1901.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/developers-edition-mdash-last-updated-date-01-jan-1901.zh.html></div></hgroup>
+   
+   <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-91053840-1', 'auto');
+      ga('send', 'pageview');
+   </script>
+  </header>
+
+  
+
+  
+
+
+  
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/table-of-contents.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/table-of-contents.zh.html></div>
+  
+
+
+  
+<div data-en-date="Sat Aug 11 2018 08:00:56 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/full-table-of-contents.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/full-table-of-contents.zh.html></div>
+  
+
+  
+
+  
+
+
+  <h2 id=about-dev-edition class="no-num no-toc">关于本标准</h2>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/about-this-specification.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/about-this-specification.zh.html></div>
+
+  <p>本标准与其他标准不同，它的处理完全考虑到了 Web 开发者。</p>
+
+  <p>本标准关注可读性和可访问性，不像 <a href=/multipage/>完整的 HTML 标准</a>，"开发者版本" 移除了
+  只有浏览器厂商需要知道的信息。它个版本是用我们的构建工具从完整的规范自动产出的，
+  因此总会与最新开发的 HTML 保持同步。</p>
+
+  <p>其概念、构造，以及未来可参考 <a href=http://web.archive.org/web/20150220020906/http://archive.germanforblack.com:80/articles/html5-for-web-developers>
+  原始出版发行</a>，以及 <a href=https://blog.whatwg.org/developers-edition-comeback>关于重启该版本的博文</a>。</p>
+
+  <p>最后，欢迎 <a href=https://github.com/whatwg/html/labels/dev%20edition>在 GitHub 贡献</a> 来改进该版本！</p>
+
+  
+
+
+  <nav><a href=origin.html>← 7.3 Origin</a> — <a href=./>Table of Contents</a> — <a href=browsing-the-web.html>7.8 Browsing the web →</a></nav><ol class=toc><li><ol><li><a href=history.html#history><span class=secno>7.7</span> Session history and navigation</a><ol><li><a href=history.html#browsing-sessions><span class=secno>7.7.1</span> Browsing sessions</a><li><a href=history.html#the-session-history-of-browsing-contexts><span class=secno>7.7.2</span> The session history of browsing contexts</a><li><a href=history.html#the-history-interface><span class=secno>7.7.3</span> The <code>History</code> interface</a><li><a href=history.html#the-location-interface><span class=secno>7.7.4</span> The <code>Location</code> interface</a></ol></ol></ol><h3 id=history><span class=secno>7.7</span> Session history and navigation<a href=#history class=self-link></a></h3><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/History/back title="The History.back() method causes the browser to move back one page in the session history.">History/back</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>Yes</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>10+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>Yes</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/History/forward title="The History.forward() method causes the browser to move forward one page in the session history. It has the same effect as calling history.go(1).">History/forward</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>Yes</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>10+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>Yes</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/loading-web-pages/session-history-and-navigation/index.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/loading-web-pages/session-history-and-navigation/index.zh.html?filename=index.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Floading-web-pages%2Fsession-history-and-navigation%2Findex.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+
+  <h4 id=browsing-sessions><span class=secno>7.7.1</span> Browsing sessions<a href=#browsing-sessions class=self-link></a></h4>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/loading-web-pages/session-history-and-navigation/browsing-sessions.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/loading-web-pages/session-history-and-navigation/browsing-sessions.zh.html?filename=browsing-sessions.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Floading-web-pages%2Fsession-history-and-navigation%2Fbrowsing-sessions.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  <div class=XXX>
+
+  <p>A <dfn id=browsing-session data-export="">browsing session</dfn> is …. See <a href=https://github.com/whatwg/html/issues/4782>whatwg/html issue #4782</a> and <a href=https://github.com/whatwg/html/issues/5350>whatwg/html issue #5350</a> for defining
+  <a href=#browsing-session id=browsing-sessions:browsing-session>browsing session</a>. It is roughly analogous to a <a id=browsing-sessions:top-level-browsing-context href=browsers.html#top-level-browsing-context>top-level browsing
+  context</a> except that it cannot be replaced due to a `<code>Cross-Origin-Opener-Policy</code>` header or
+  navigation.</p>
+
+  <p>A <a id=browsing-sessions:top-level-browsing-context-2 href=browsers.html#top-level-browsing-context>top-level browsing context</a> has an associated <dfn data-dfn-for="top-level browsing context" id=tlbc-browsing-session data-export="">browsing session</dfn> which is a <a href=#browsing-session id=browsing-sessions:browsing-session-2>browsing
+  session</a>.</p>
+
+  <p>The <dfn data-dfn-for="environment settings object" id=environment-browsing-session data-export="">browsing session</dfn> of an <span>environment settings object</span>
+  <var>environment</var> is the result of running these steps:</p>
+
+  <ol><li><p>Assert: <var>environment</var> has a <span>responsible document</span>.<li><p>Return <var>environment</var>'s <span>responsible document</span>'s <a href=browsers.html#concept-document-bc id=browsing-sessions:concept-document-bc>browsing context</a>'s <a id=browsing-sessions:top-level-browsing-context-3 href=browsers.html#top-level-browsing-context>top-level browsing context</a>'s
+   <a href=#tlbc-browsing-session id=browsing-sessions:tlbc-browsing-session>browsing session</a>.</ol>
+
+  </div>
+
+
+
+  <h4 id=the-session-history-of-browsing-contexts><span class=secno>7.7.2</span> The session history of browsing contexts<a href=#the-session-history-of-browsing-contexts class=self-link></a></h4>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/loading-web-pages/session-history-and-navigation/the-session-history-of-browsing-contexts.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/loading-web-pages/session-history-and-navigation/the-session-history-of-browsing-contexts.zh.html?filename=the-session-history-of-browsing-contexts.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Floading-web-pages%2Fsession-history-and-navigation%2Fthe-session-history-of-browsing-contexts.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  <p>The sequence of <code id=the-session-history-of-browsing-contexts:document><a href=dom.html#document>Document</a></code>s in a <a id=the-session-history-of-browsing-contexts:browsing-context href=browsers.html#browsing-context>browsing context</a> is its <dfn id=session-history>session
+  history</dfn>. Each <a id=the-session-history-of-browsing-contexts:browsing-context-2 href=browsers.html#browsing-context>browsing context</a>, including <a href=browsers.html#child-browsing-context id=the-session-history-of-browsing-contexts:child-browsing-context>child browsing contexts</a>, has a distinct session history. A <a id=the-session-history-of-browsing-contexts:browsing-context-3 href=browsers.html#browsing-context>browsing
+  context</a>'s session history consists of a flat list of <a href=#session-history-entry id=the-session-history-of-browsing-contexts:session-history-entry>session history entries</a>.</p>
+
+  <p>Each <code id=the-session-history-of-browsing-contexts:document-2><a href=dom.html#document>Document</a></code> object in a <a id=the-session-history-of-browsing-contexts:browsing-context-4 href=browsers.html#browsing-context>browsing context</a>'s <a href=#session-history id=the-session-history-of-browsing-contexts:session-history>session
+  history</a> is associated with a unique <code id=the-session-history-of-browsing-contexts:history-2><a href=#history-2>History</a></code> object which must all model the
+  same underlying <a href=#session-history id=the-session-history-of-browsing-contexts:session-history-2>session history</a>.</p>
+
+  
+
+  <hr>
+
+  <p>A <dfn id=session-history-entry>session history entry</dfn> is a <a id=the-session-history-of-browsing-contexts:struct href=https://infra.spec.whatwg.org/#struct data-x-internal=struct>struct</a> with the following <a href=https://infra.spec.whatwg.org/#struct-item id=the-session-history-of-browsing-contexts:struct-item data-x-internal=struct-item>items</a>:</p>
+
+  <ul><li><p><dfn id=she-url>URL</dfn>, a <a id=the-session-history-of-browsing-contexts:url href=https://url.spec.whatwg.org/#concept-url data-x-internal=url>URL</a><li>
+    <p><dfn id=she-document>document</dfn>, a <code id=the-session-history-of-browsing-contexts:document-3><a href=dom.html#document>Document</a></code> or null</p>
+
+    <p class=note>Each entry, when first created, has a <code id=the-session-history-of-browsing-contexts:document-4><a href=dom.html#document>Document</a></code> for its <a href=#she-document id=the-session-history-of-browsing-contexts:she-document>document</a>. However, when a <code id=the-session-history-of-browsing-contexts:document-5><a href=dom.html#document>Document</a></code> is not <a href=browsers.html#fully-active id=the-session-history-of-browsing-contexts:fully-active>active</a>, it's possible for it to be <span>discarded</span> to free resources. The <a href=#she-url id=the-session-history-of-browsing-contexts:she-url>URL</a> and other
+    data in the <a href=#session-history-entry id=the-session-history-of-browsing-contexts:session-history-entry-2>session history entry</a> is then used to bring a new <code id=the-session-history-of-browsing-contexts:document-6><a href=dom.html#document>Document</a></code>
+    into being to take the place of the original, in the case where the user agent finds itself
+    having to navigate to the entry.</p>
+   <li><p><dfn id=she-serialized-state>serialized state</dfn>, which is <a href=#serialized-state id=the-session-history-of-browsing-contexts:serialized-state>serialized
+   state</a> or null, initially null<li>
+    <p><dfn id=she-title>title</dfn>, a <a id=the-session-history-of-browsing-contexts:string href=https://infra.spec.whatwg.org/#string data-x-internal=string>string</a> or null</p>
+
+    <p class=note>This need not have any relation with the current <code id=the-session-history-of-browsing-contexts:the-title-element><a href=semantics.html#the-title-element>title</a></code> of the <a href=#she-document id=the-session-history-of-browsing-contexts:she-document-2>document</a>. The <a href=#session-history-entry id=the-session-history-of-browsing-contexts:session-history-entry-3>session history entry</a> <a href=#she-title id=the-session-history-of-browsing-contexts:she-title>title</a> is intended to explain the state of the document at that point,
+    so that the user can navigate the document's history.</p>
+   <li><p><dfn id=she-scroll-restoration-mode>scroll restoration mode</dfn>, a <a href=#scroll-restoration-mode id=the-session-history-of-browsing-contexts:scroll-restoration-mode>scroll
+   restoration mode</a>, initially "<code id=the-session-history-of-browsing-contexts:dom-scrollrestoration-auto><a href=#dom-scrollrestoration-auto>auto</a></code>".<li><p><dfn id=she-scroll-position>scroll position data</dfn>, which is scroll position
+   data for the <a href=#she-document id=the-session-history-of-browsing-contexts:she-document-3>document</a>'s <span>restorable scrollable
+   regions</span>.<li><p><dfn id=she-bc-name>browsing context name</dfn>, a <a id=the-session-history-of-browsing-contexts:browsing-context-name href=browsers.html#browsing-context-name>browsing context
+   name</a><li>
+    <p id=an-entry-with-persisted-user-state><dfn id=she-other>persisted user state</dfn>,
+    which is <a id=the-session-history-of-browsing-contexts:implementation-defined href=https://infra.spec.whatwg.org/#implementation-defined data-x-internal=implementation-defined>implementation-defined</a>, initially null</p>
+
+    <p class=example>For example, some user agents might want to persist the values of form
+    controls.</p>
+
+    <p class=note>User agents that persist the value of form controls are encouraged to also
+    persist their directionality (the value of the element's <code id=the-session-history-of-browsing-contexts:dir-属性><a href=dom.html#dir-属性>dir</a></code>
+    attribute). This prevents values from being displayed incorrectly after a history traversal when
+    the user had originally entered the values with an explicit, non-default directionality.</p>
+   </ul>
+
+  <p id=state-object><dfn id=serialized-state>Serialized state</dfn> is a serialization (via
+  <span>StructuredSerializeForStorage</span>) of an object representing a user interface state. We
+  sometimes informally refer to "state objects", which are the objects representing user interface
+  state supplied by the author, or alternately the objects created by deserializing (via
+  <span>StructuredDeserialize</span>) serialized state.</p>
+
+  <p>Pages can <a href=#dom-history-pushstate id=the-session-history-of-browsing-contexts:dom-history-pushstate>add</a> <a href=#serialized-state id=the-session-history-of-browsing-contexts:serialized-state-2>serialized state</a> to the
+  session history. These are then <span>deserialized</span> and <a href=indices.html#event-popstate id=the-session-history-of-browsing-contexts:event-popstate>returned to the script</a> when the user (or script) goes back in the
+  history, thus enabling authors to use the "navigation" metaphor even in one-page applications.</p>
+
+  <div class=note>
+   <p><a href=#serialized-state id=the-session-history-of-browsing-contexts:serialized-state-3>Serialized state</a> is intended to be used for two main purposes: first, storing a
+   preparsed description of the state in the <a id=the-session-history-of-browsing-contexts:url-2 href=https://url.spec.whatwg.org/#concept-url data-x-internal=url>URL</a> so that in the simple case an author
+   doesn't have to do the parsing (though one would still need the parsing for handling <a href=https://url.spec.whatwg.org/#concept-url id=the-session-history-of-browsing-contexts:url-3 data-x-internal=url>URLs</a> passed around by users, so it's only a minor optimization). Second, so
+   that the author can store state that one wouldn't store in the URL because it only applies to the
+   current <code id=the-session-history-of-browsing-contexts:document-7><a href=dom.html#document>Document</a></code> instance and it would have to be reconstructed if a new
+   <code id=the-session-history-of-browsing-contexts:document-8><a href=dom.html#document>Document</a></code> were opened.</p>
+
+   <p>An example of the latter would be something like keeping track of the precise coordinate from
+   which a popup <code id=the-session-history-of-browsing-contexts:the-div-element><a href=grouping-content.html#the-div-element>div</a></code> was made to animate, so that if the user goes back, it can be made
+   to animate to the same location. Or alternatively, it could be used to keep a pointer into a
+   cache of data that would be fetched from the server based on the information in the
+   <a id=the-session-history-of-browsing-contexts:url-4 href=https://url.spec.whatwg.org/#concept-url data-x-internal=url>URL</a>, so that when going back and forward, the information doesn't have to be fetched
+   again.</p>
+  </div>
+
+  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/History/scrollRestoration title="The scrollRestoration property of History interface allows web applications to explicitly set default scroll restoration behavior on history navigation.">History/scrollRestoration</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>46+</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>46+</span></span><hr><span class="opera yes"><span>Opera</span><span>33+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>Yes</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>46+</span></span><span class="webview_android no"><span>WebView Android</span><span>No</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>5.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div><p>A <dfn id=scroll-restoration-mode>scroll restoration mode</dfn> indicates whether the user agent should restore the
+  persisted scroll position (if any) when traversing to an <a href=#session-history-entry id=the-session-history-of-browsing-contexts:session-history-entry-4>entry</a>. A scroll restoration mode is one of the following:</p>
+
+  <dl><dt>"<dfn id=dom-scrollrestoration-auto><code>auto</code></dfn>"<dd>The user agent is responsible for restoring the scroll position upon navigation.<dt>"<dfn id=dom-scrollrestoration-manual><code>manual</code></dfn>"<dd>The page is responsible for restoring the scroll position and the user agent does not
+   attempt to do so automatically</dl>
+
+  <hr>
+
+  <p>Several contiguous entries in a session history can share the same <a href=#she-document id=the-session-history-of-browsing-contexts:she-document-4>document</a>. This can occur when the initial entry is reached via normal
+  <span>navigation</span>, and the following entry is added via <code id=the-session-history-of-browsing-contexts:dom-history-pushstate-2><a href=#dom-history-pushstate>history.pushState()</a></code>. Or it can occur via <span>navigation to a fragment</span>.</p>
+
+  <p class=note>All entries that share the same <a href=#she-document id=the-session-history-of-browsing-contexts:she-document-5>document</a> (and
+  that are therefore merely different states of one particular document) are contiguous by
+  definition.</p>
+
+  
+
+  <hr>
+
+  <p>At any point, one of the entries in the session history is the <dfn id=current-entry>current entry</dfn>. This
+  is the entry representing the <a id=the-session-history-of-browsing-contexts:active-document href=browsers.html#active-document>active document</a> of the <a id=the-session-history-of-browsing-contexts:browsing-context-5 href=browsers.html#browsing-context>browsing context</a>.
+  Which entry is the <a href=#current-entry id=the-session-history-of-browsing-contexts:current-entry>current entry</a> is changed by the algorithms defined in this
+  specification, e.g., during <span>session history
+  traversal</span>.</p>
+
+  <p class=note>The <a href=#current-entry id=the-session-history-of-browsing-contexts:current-entry-2>current entry</a> is usually the initial entry created upon
+  navigation. However, it can also be one of the contiguous entries that share the same <a href=#she-document id=the-session-history-of-browsing-contexts:she-document-6>document</a>, as described above.</p>
+
+  <p>Each <code id=the-session-history-of-browsing-contexts:document-9><a href=dom.html#document>Document</a></code> in a <a id=the-session-history-of-browsing-contexts:browsing-context-6 href=browsers.html#browsing-context>browsing context</a> can also have a <dfn id=latest-entry>latest
+  entry</dfn>. This is the entry for that <code id=the-session-history-of-browsing-contexts:document-10><a href=dom.html#document>Document</a></code> to which the <a id=the-session-history-of-browsing-contexts:browsing-context-7 href=browsers.html#browsing-context>browsing
+  context</a>'s <a href=#session-history id=the-session-history-of-browsing-contexts:session-history-3>session history</a> was most recently traversed. When a
+  <code id=the-session-history-of-browsing-contexts:document-11><a href=dom.html#document>Document</a></code> is created, it initially has no <a href=#latest-entry id=the-session-history-of-browsing-contexts:latest-entry>latest entry</a>.</p>
+
+
+
+
+  <h4 id=the-history-interface><span class=secno>7.7.3</span> The <code id=the-history-interface:history-2><a href=#history-2>History</a></code> interface<a href=#the-history-interface class=self-link></a></h4><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/History title="The History interface allows manipulation of the browser session history, that is the pages visited in the tab or frame that the current page is loaded in.">History</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>1+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>3+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>10+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>1+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span></div></div><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Window/history title="The Window.history read-only property returns a reference to the History object, which provides an interface for manipulating the browser session history (pages visited in the tab or frame that the current page is loaded in).">Window/history</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>1+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>3+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>4+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>1+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span></div></div></div>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/loading-web-pages/session-history-and-navigation/the-history-interface.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/loading-web-pages/session-history-and-navigation/the-history-interface.zh.html?filename=the-history-interface.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Floading-web-pages%2Fsession-history-and-navigation%2Fthe-history-interface.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  <pre><code class=idl>enum <dfn id=scrollrestoration>ScrollRestoration</dfn> { "<a href=#dom-scrollrestoration-auto id=the-history-interface:dom-scrollrestoration-auto>auto</a>", "<a href=#dom-scrollrestoration-manual id=the-history-interface:dom-scrollrestoration-manual>manual</a>" };
+
+[Exposed=Window]
+interface <dfn id=history-2>History</dfn> {
+  readonly attribute unsigned long <a href=#dom-history-length id=the-history-interface:dom-history-length>length</a>;
+  attribute <a href=#scrollrestoration id=the-history-interface:scrollrestoration>ScrollRestoration</a> <a href=#dom-history-scroll-restoration id=the-history-interface:dom-history-scroll-restoration>scrollRestoration</a>;
+  readonly attribute any <a href=#dom-history-state id=the-history-interface:dom-history-state>state</a>;
+  undefined <a href=#dom-history-go id=the-history-interface:dom-history-go>go</a>(optional long delta = 0);
+  undefined <a href=#dom-history-back id=the-history-interface:dom-history-back>back</a>();
+  undefined <a href=#dom-history-forward id=the-history-interface:dom-history-forward>forward</a>();
+  undefined <a href=#dom-history-pushstate id=the-history-interface:dom-history-pushstate>pushState</a>(any data, DOMString title, optional USVString? url = null);
+  undefined <a href=#dom-history-replacestate id=the-history-interface:dom-history-replacestate>replaceState</a>(any data, DOMString title, optional USVString? url = null);
+};</code></pre>
+
+  <dl class=domintro><dt><var>window</var> . <code id=dom-history>history</code> . <code id=dom-history-length>length</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/History/length title="The History.length read-only property returns an integer representing the number of elements in the session history, including the currently loaded page.">History/length</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>Yes</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>10+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>Yes</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div><dd>
+    <p>Returns the number of entries in the <a href=#joint-session-history id=the-history-interface:joint-session-history>joint session history</a>.</p>
+   <dt><var>window</var> . <code id=the-history-interface:dom-history><a href=#dom-history>history</a></code> . <code id=dom-history-scroll-restoration>scrollRestoration</code> [ = <var>value</var> ]<dd>
+    <p>Returns the <a href=#she-scroll-restoration-mode id=the-history-interface:she-scroll-restoration-mode>scroll restoration mode</a> of the
+    current entry in the <a href=#session-history id=the-history-interface:session-history>session history</a>.</p>
+
+    <p>Can be set, to change the <a href=#she-scroll-restoration-mode id=the-history-interface:she-scroll-restoration-mode-2>scroll restoration
+    mode</a> of the current entry in the <a href=#session-history id=the-history-interface:session-history-2>session history</a>.</p>
+   <dt><var>window</var> . <code id=the-history-interface:dom-history-2><a href=#dom-history>history</a></code> . <code id=dom-history-state>state</code><dd>
+    <p>Returns the current <a href=#serialized-state id=the-history-interface:serialized-state>serialized state</a>, deserialized into an object.</p>
+   <dt><var>window</var> . <code id=the-history-interface:dom-history-3><a href=#dom-history>history</a></code> . <code id=dom-history-go>go</code>( [ <var>delta</var> ] )<div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/History/go title="The History.go() method loads a specific page from the session history. You can use it to move forwards and backwards through the history depending on the value of a parameter.">History/go</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>Yes</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>10+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>Yes</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div><dd>
+    <p>Goes back or forward the specified number of steps in the <a href=#joint-session-history id=the-history-interface:joint-session-history-2>joint session history</a>.</p>
+
+    <p>A zero delta will reload the current page.</p>
+
+    <p>If the delta is out of range, does nothing.</p>
+   <dt><var>window</var> . <code id=the-history-interface:dom-history-4><a href=#dom-history>history</a></code> . <code id=dom-history-back>back</code>()<dd>
+    <p>Goes back one step in the <a href=#joint-session-history id=the-history-interface:joint-session-history-3>joint session history</a>.</p>
+
+    <p>If there is no previous page, does nothing.</p>
+   <dt><var>window</var> . <code id=the-history-interface:dom-history-5><a href=#dom-history>history</a></code> . <code id=dom-history-forward>forward</code>()<dd>
+    <p>Goes forward one step in the <a href=#joint-session-history id=the-history-interface:joint-session-history-4>joint session history</a>.</p>
+
+    <p>If there is no next page, does nothing.</p>
+   <dt><var>window</var> . <code id=the-history-interface:dom-history-6><a href=#dom-history>history</a></code> . <code id=dom-history-pushstate>pushState</code>(<var>data</var>, <var>title</var> [, <var>url</var> ] )<div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/History/pushState title="In an HTML document, the history.pushState() method adds an entry to the browser's session history stack.">History/pushState</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>4+</span></span><span class="safari yes"><span>Safari</span><span>5+</span></span><span class="chrome yes"><span>Chrome</span><span>5+</span></span><hr><span class="opera yes"><span>Opera</span><span>11.5+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>10+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>4.3+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>37+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>11.5+</span></span><hr><span class=caniuse><span><a href="https://caniuse.com/#feat=history" title="Session history management">caniuse.com table</a></span></span></div></div></div><dd>
+    <p>Pushes the given data onto the session history, with the given title, and, if provided and
+    not null, the given URL.</p>
+   <dt><var>window</var> . <code id=the-history-interface:dom-history-7><a href=#dom-history>history</a></code> . <code id=dom-history-replacestate>replaceState</code>(<var>data</var>, <var>title</var> [, <var>url</var> ] )<div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/History/replaceState title="The History.replaceState() method modifies the current history entry, replacing it with the stateObj, title, and URL passed in the method parameters. This method is particularly useful when you want to update the state object or URL of the current history entry in response to some user action.">History/replaceState</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>4+</span></span><span class="safari yes"><span>Safari</span><span>5+</span></span><span class="chrome yes"><span>Chrome</span><span>5+</span></span><hr><span class="opera yes"><span>Opera</span><span>11.5+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>10+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>4.3+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>37+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>11.5+</span></span></div></div></div><dd>
+    <p>Updates the current entry in the session history to have the given data, title, and, if
+    provided and not null, URL.</p>
+   </dl>
+
+
+  <p>The <dfn id=joint-session-history>joint session history</dfn> of a <a id=the-history-interface:top-level-browsing-context href=browsers.html#top-level-browsing-context>top-level browsing context</a> is the union
+  of all the <a href=#session-history id=the-history-interface:session-history-3>session histories</a> of all <a href=browsers.html#concept-document-bc id=the-history-interface:concept-document-bc>browsing contexts</a> of all the <a id=the-history-interface:fully-active href=browsers.html#fully-active>fully active</a>
+  <code id=the-history-interface:document><a href=dom.html#document>Document</a></code> objects that share that <a id=the-history-interface:top-level-browsing-context-2 href=browsers.html#top-level-browsing-context>top-level browsing context</a>, with all
+  the entries that are <a href=#current-entry id=the-history-interface:current-entry>current entries</a> in their respective <a href=#session-history id=the-history-interface:session-history-4>session histories</a> removed except for the <a href=#current-entry-of-the-joint-session-history id=the-history-interface:current-entry-of-the-joint-session-history>current entry of
+  the joint session history</a>.</p>
+
+  <p>The <dfn id=current-entry-of-the-joint-session-history>current entry of the joint session history</dfn> is the entry that most recently
+  became a <a href=#current-entry id=the-history-interface:current-entry-2>current entry</a> in its <a href=#session-history id=the-history-interface:session-history-5>session history</a>.</p>
+
+  <p>Entries in the <a href=#joint-session-history id=the-history-interface:joint-session-history-5>joint session history</a> are ordered chronologically by the time they
+  were added to their respective <a href=#session-history id=the-history-interface:session-history-6>session histories</a>. Each entry
+  has an index; the earliest entry has index 0, and the subsequent entries are numbered with
+  consecutively increasing integers (1, 2, 3, etc).</p>
+
+  <p class=note>Since each <code id=the-history-interface:document-2><a href=dom.html#document>Document</a></code> in a <a id=the-history-interface:browsing-context href=browsers.html#browsing-context>browsing context</a> might have a
+  different <span>event loop</span>, the actual state of the <a href=#joint-session-history id=the-history-interface:joint-session-history-6>joint session history</a> can
+  be somewhat nebulous. For example, two sibling <code id=the-history-interface:the-iframe-element><a href=iframe-embed-object.html#the-iframe-element>iframe</a></code> elements could both <span>traverse</span> from one unique origin to another at the same time,
+  so their precise order might not be well-defined; similarly, since they might only find out about
+  each other later, they might disagree about the length of the <a href=#joint-session-history id=the-history-interface:joint-session-history-7>joint session
+  history</a>.</p>
+
+
+  
+
+  <div class=example>
+
+   <p>Consider a game where the user can navigate along a line, such that the user is always at some
+   coordinate, and such that the user can bookmark the page corresponding to a particular
+   coordinate, to return to it later.</p>
+
+   <p>A static page implementing the x=5 position in such a game could look like the following:</p>
+
+   <pre><code class=html>&lt;!DOCTYPE HTML>
+&lt;!-- this is https://example.com/line?x=5 -->
+&lt;html lang="en">
+&lt;title>Line Game - 5&lt;/title>
+&lt;p>You are at coordinate 5 on the line.&lt;/p>
+&lt;p>
+ &lt;a href="?x=6">Advance to 6&lt;/a> or
+ &lt;a href="?x=4">retreat to 4&lt;/a>?
+&lt;/p></code></pre>
+
+   <p>The problem with such a system is that each time the user clicks, the whole page has to be
+   reloaded. Here instead is another way of doing it, using script:</p>
+
+   <pre><code class=html>&lt;!DOCTYPE HTML>
+&lt;!-- this starts off as https://example.com/line?x=5 -->
+&lt;html lang="en">
+&lt;title>Line Game - 5&lt;/title>
+&lt;p>You are at coordinate &lt;span id="coord">5&lt;/span> on the line.&lt;/p>
+&lt;p>
+ &lt;a href="?x=6" onclick="go(1); return false;">Advance to 6&lt;/a> or
+ &lt;a href="?x=4" onclick="go(-1); return false;">retreat to 4&lt;/a>?
+&lt;/p>
+&lt;script>
+ var currentPage = 5; // prefilled by server
+ function go(d) {
+   setupPage(currentPage + d);
+   history.pushState(currentPage, document.title, '?x=' + currentPage);
+ }
+ onpopstate = function(event) {
+   setupPage(event.state);
+ }
+ function setupPage(page) {
+   currentPage = page;
+   document.title = 'Line Game - ' + currentPage;
+   document.getElementById('coord').textContent = currentPage;
+   document.links[0].href = '?x=' + (currentPage+1);
+   document.links[0].textContent = 'Advance to ' + (currentPage+1);
+   document.links[1].href = '?x=' + (currentPage-1);
+   document.links[1].textContent = 'retreat to ' + (currentPage-1);
+ }
+&lt;/script></code></pre>
+
+   <p>In systems without script, this still works like the previous example. However, users that
+   <em>do</em> have script support can now navigate much faster, since there is no network access
+   for the same experience. Furthermore, contrary to the experience the user would have with just a
+   naïve script-based approach, bookmarking and navigating the session history still work.</p>
+
+   <p>In the example above, the <var>data</var> argument to the <code id=the-history-interface:dom-history-pushstate-2><a href=#dom-history-pushstate>pushState()</a></code> method is the same information as would be sent
+   to the server, but in a more convenient form, so that the script doesn't have to parse the URL
+   each time the user navigates.</p>
+
+  </div>
+
+  <div class=example>
+
+   <p>Applications might not use the same title for a <a href=#session-history-entry id=the-history-interface:session-history-entry>session history entry</a> as the
+   value of the document's <code id=the-history-interface:the-title-element><a href=semantics.html#the-title-element>title</a></code> element at that time. For example, here is a simple
+   page that shows a block in the <code id=the-history-interface:the-title-element-2><a href=semantics.html#the-title-element>title</a></code> element. Clearly, when navigating backwards to
+   a previous state the user does not go back in time, and therefore it would be inappropriate to
+   put the time in the session history title.</p>
+
+   <pre><code class=html>&lt;!DOCTYPE HTML>
+&lt;HTML LANG=EN>
+&lt;TITLE>Line&lt;/TITLE>
+&lt;SCRIPT>
+ setInterval(function () { document.title = 'Line - ' + new Date(); }, 1000);
+ var i = 1;
+ function inc() {
+   set(i+1);
+   history.pushState(i, 'Line - ' + i);
+ }
+ function set(newI) {
+   i = newI;
+   document.forms.F.I.value = newI;
+ }
+&lt;/SCRIPT>
+&lt;BODY ONPOPSTATE="set(event.state)">
+&lt;FORM NAME=F>
+State: &lt;OUTPUT NAME=I>1&lt;/OUTPUT> &lt;INPUT VALUE="Increment" TYPE=BUTTON ONCLICK="inc()">
+&lt;/FORM></code></pre>
+
+  </div>
+
+  <div class=example>
+   <p>Most applications want to use the same <a href=#scroll-restoration-mode id=the-history-interface:scroll-restoration-mode>scroll restoration mode</a> value for all of
+   their history entries. To achieve this they can set the <code id=the-history-interface:dom-history-scroll-restoration-2><a href=#dom-history-scroll-restoration>scrollRestoration</a></code> attribute as soon as possible
+   (e.g., in the first <code id=the-history-interface:the-script-element><a href=scripting.html#the-script-element>script</a></code> element in the document's <code id=the-history-interface:the-head-element><a href=semantics.html#the-head-element>head</a></code> element) to
+   ensure that any entry added to the history session gets the desired scroll restoration mode.</p>
+
+   <pre><code class=html>&lt;head>
+  &lt;script>
+       if ('scrollRestoration' in history)
+            history.scrollRestoration = 'manual';
+  &lt;/script>
+&lt;/head>
+   </code></pre>
+  </div>
+
+
+  
+
+
+
+  <h4 id=the-location-interface><span class=secno>7.7.4</span> The <code id=the-location-interface:location><a href=#location>Location</a></code> interface<a href=#the-location-interface class=self-link></a></h4><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Document/location title="The Document.location read-only property returns a Location object, which contains information about the URL of the document and provides methods for changing that URL and loading another URL.">Document/location</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>1+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>3+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>4+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>1+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span></div></div><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Location title="The Location interface represents the location (URL) of the object it is linked to. Changes done on it are reflected on the object it relates to. Both the Document and Window interface have such a linked Location, accessible via Document.location and Window.location respectively.">Location</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>1+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>3+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>3+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>1+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span></div></div><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Window/location title="The Window.location read-only property returns a Location object with information about the current location of the document.">Window/location</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>1+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>3+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>4+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>1+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span></div></div></div>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/loading-web-pages/session-history-and-navigation/the-location-interface/index.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/loading-web-pages/session-history-and-navigation/the-location-interface/index.zh.html?filename=index.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Floading-web-pages%2Fsession-history-and-navigation%2Fthe-location-interface%2Findex.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  <p>Each <code id=the-location-interface:window><a href=window-object.html#window>Window</a></code> object is associated with a unique instance of a <code id=the-location-interface:location-2><a href=#location>Location</a></code>
+  object, allocated when the <code id=the-location-interface:window-2><a href=window-object.html#window>Window</a></code> object is created.</p>
+
+  
+
+  <dl class=domintro><dt><var>document</var> . <code id=dom-document-location>location</code> [ = <var>value</var> ]<dt><var>window</var> . <code id=dom-location>location</code> [ = <var>value</var> ]<dd>
+    <p>Returns a <code id=the-location-interface:location-3><a href=#location>Location</a></code> object with the current page's location.</p>
+
+    <p>Can be set, to navigate to another page.</p>
+   </dl>
+
+  
+
+  <p><code id=the-location-interface:location-4><a href=#location>Location</a></code> objects provide a representation of the <a href=https://dom.spec.whatwg.org/#concept-document-url id=the-location-interface:the-document的-address data-x-internal=the-document的-address>URL</a> of the <a id=the-location-interface:active-document href=browsers.html#active-document>active document</a> of their
+  <code id=the-location-interface:document><a href=dom.html#document>Document</a></code>'s <a href=browsers.html#concept-document-bc id=the-location-interface:concept-document-bc>browsing context</a>, and allow the
+  <a href=#current-entry id=the-location-interface:current-entry>current entry</a> of the <a id=the-location-interface:browsing-context href=browsers.html#browsing-context>browsing context</a>'s session history to be changed,
+  by adding or replacing entries in the <code id=the-location-interface:dom-history><a href=#dom-history>history</a></code> object.</p>
+
+  <pre><code class=idl>[Exposed=Window]
+interface <dfn id=location>Location</dfn> { // but see also <a href=#the-location-interface>additional creation steps</a> and <a href=#location-internal-methods>overridden internal methods</a>
+  [<a id=the-location-interface:legacyunforgeable href=https://heycam.github.io/webidl/#LegacyUnforgeable data-x-internal=legacyunforgeable>LegacyUnforgeable</a>] stringifier attribute USVString <a href=#dom-location-href id=the-location-interface:dom-location-href>href</a>;
+  [<a id=the-location-interface:legacyunforgeable-2 href=https://heycam.github.io/webidl/#LegacyUnforgeable data-x-internal=legacyunforgeable>LegacyUnforgeable</a>] readonly attribute USVString <a href=#dom-location-origin id=the-location-interface:dom-location-origin>origin</a>;
+  [<a id=the-location-interface:legacyunforgeable-3 href=https://heycam.github.io/webidl/#LegacyUnforgeable data-x-internal=legacyunforgeable>LegacyUnforgeable</a>] attribute USVString <a href=#dom-location-protocol id=the-location-interface:dom-location-protocol>protocol</a>;
+  [<a id=the-location-interface:legacyunforgeable-4 href=https://heycam.github.io/webidl/#LegacyUnforgeable data-x-internal=legacyunforgeable>LegacyUnforgeable</a>] attribute USVString <a href=#dom-location-host id=the-location-interface:dom-location-host>host</a>;
+  [<a id=the-location-interface:legacyunforgeable-5 href=https://heycam.github.io/webidl/#LegacyUnforgeable data-x-internal=legacyunforgeable>LegacyUnforgeable</a>] attribute USVString <a href=#dom-location-hostname id=the-location-interface:dom-location-hostname>hostname</a>;
+  [<a id=the-location-interface:legacyunforgeable-6 href=https://heycam.github.io/webidl/#LegacyUnforgeable data-x-internal=legacyunforgeable>LegacyUnforgeable</a>] attribute USVString <a href=#dom-location-port id=the-location-interface:dom-location-port>port</a>;
+  [<a id=the-location-interface:legacyunforgeable-7 href=https://heycam.github.io/webidl/#LegacyUnforgeable data-x-internal=legacyunforgeable>LegacyUnforgeable</a>] attribute USVString <a href=#dom-location-pathname id=the-location-interface:dom-location-pathname>pathname</a>;
+  [<a id=the-location-interface:legacyunforgeable-8 href=https://heycam.github.io/webidl/#LegacyUnforgeable data-x-internal=legacyunforgeable>LegacyUnforgeable</a>] attribute USVString <a href=#dom-location-search id=the-location-interface:dom-location-search>search</a>;
+  [<a id=the-location-interface:legacyunforgeable-9 href=https://heycam.github.io/webidl/#LegacyUnforgeable data-x-internal=legacyunforgeable>LegacyUnforgeable</a>] attribute USVString <a href=#dom-location-hash id=the-location-interface:dom-location-hash>hash</a>;
+
+  [<a id=the-location-interface:legacyunforgeable-10 href=https://heycam.github.io/webidl/#LegacyUnforgeable data-x-internal=legacyunforgeable>LegacyUnforgeable</a>] undefined <a href=#dom-location-assign id=the-location-interface:dom-location-assign>assign</a>(USVString url);
+  [<a id=the-location-interface:legacyunforgeable-11 href=https://heycam.github.io/webidl/#LegacyUnforgeable data-x-internal=legacyunforgeable>LegacyUnforgeable</a>] undefined <a href=#dom-location-replace id=the-location-interface:dom-location-replace>replace</a>(USVString url);
+  [<a id=the-location-interface:legacyunforgeable-12 href=https://heycam.github.io/webidl/#LegacyUnforgeable data-x-internal=legacyunforgeable>LegacyUnforgeable</a>] undefined <a href=#dom-location-reload id=the-location-interface:dom-location-reload>reload</a>();
+
+  [<a id=the-location-interface:legacyunforgeable-13 href=https://heycam.github.io/webidl/#LegacyUnforgeable data-x-internal=legacyunforgeable>LegacyUnforgeable</a>, SameObject] readonly attribute <a id=the-location-interface:domstringlist href=infrastructure.html#domstringlist>DOMStringList</a> <a href=#dom-location-ancestororigins id=the-location-interface:dom-location-ancestororigins>ancestorOrigins</a>;
+};</code></pre>
+
+  <dl class=domintro><dt><var>location</var> . <code>toString()</code><dt><var>location</var> . <code id=dom-location-href>href</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Location/href title="The href property of the Location interface is a stringifier that returns a USVString containing the whole URL, and allows the href to be updated.">Location/href</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>22+</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>Yes</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>22+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Location/toString title="The toString() stringifier method of the Location interface returns a USVString containing the whole URL. It is a read-only version of Location.href.">Location/toString</a><div class=support><span class="firefox yes"><span>Firefox</span><span>22+</span></span><span class="safari unknown"><span>Safari</span><span>?</span></span><span class="chrome yes"><span>Chrome</span><span>52+</span></span><hr><span class="opera unknown"><span>Opera</span><span>?</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>11</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>22+</span></span><span class="safari_ios unknown"><span>Safari iOS</span><span>?</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>52+</span></span><span class="webview_android yes"><span>WebView Android</span><span>52+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>6.0+</span></span><span class="opera_android unknown"><span>Opera Android</span><span>?</span></span></div></div></div><dd>
+    <p>Returns the <code id=the-location-interface:location-5><a href=#location>Location</a></code> object's URL.</p>
+    <p>Can be set, to navigate to the given URL.</p>
+   <dt><var>location</var> . <code id=dom-location-origin>origin</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Location/origin title="The origin read-only property of the Location interface is a USVString containing the Unicode serialization of the origin of the represented URL">Location/origin</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>26+</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>10+</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>11</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>26+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>5+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android unknown"><span>Opera Android</span><span>?</span></span></div></div></div><dd>
+    <p>Returns the <code id=the-location-interface:location-6><a href=#location>Location</a></code> object's URL's origin.</p>
+   <dt><var>location</var> . <code id=dom-location-protocol>protocol</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Location/protocol title="The protocol property of the Location interface is a USVString representing the protocol scheme of the URL, including the final ':'.">Location/protocol</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>22+</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>Yes</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>22+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div><dd>
+    <p>Returns the <code id=the-location-interface:location-7><a href=#location>Location</a></code> object's URL's scheme.</p>
+    <p>Can be set, to navigate to the same URL with a changed scheme.</p>
+   <dt><var>location</var> . <code id=dom-location-host>host</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Location/host title="The host property of the Location interface is a USVString containing the host, that is the hostname, and then, if the port of the URL is nonempty, a ':', and the port of the URL.">Location/host</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>22+</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>Yes</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>22+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div><dd>
+    <p>Returns the <code id=the-location-interface:location-8><a href=#location>Location</a></code> object's URL's host and port (if different from the default
+    port for the scheme).</p>
+    <p>Can be set, to navigate to the same URL with a changed host and port.</p>
+   <dt><var>location</var> . <code id=dom-location-hostname>hostname</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Location/hostname title="The hostname property of the Location interface is a USVString containing the domain of the URL.">Location/hostname</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>22+</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>Yes</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>22+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div><dd>
+    <p>Returns the <code id=the-location-interface:location-9><a href=#location>Location</a></code> object's URL's host.</p>
+    <p>Can be set, to navigate to the same URL with a changed host.</p>
+   <dt><var>location</var> . <code id=dom-location-port>port</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Location/port title="The port property of the Location interface is a USVString containing the port number of the URL. If the URL does not contain an explicit port number, it will be set to ''.">Location/port</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>22+</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>Yes</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>22+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div><dd>
+    <p>Returns the <code id=the-location-interface:location-10><a href=#location>Location</a></code> object's URL's port.</p>
+    <p>Can be set, to navigate to the same URL with a changed port.</p>
+   <dt><var>location</var> . <code id=dom-location-pathname>pathname</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Location/pathname title="The pathname property of the Location interface is a USVString containing an initial '/' followed by the path of the URL (or the empty string if there is no path).">Location/pathname</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>22+</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>Yes</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>22+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div><dd>
+    <p>Returns the <code id=the-location-interface:location-11><a href=#location>Location</a></code> object's URL's path.</p>
+    <p>Can be set, to navigate to the same URL with a changed path.</p>
+   <dt><var>location</var> . <code id=dom-location-search>search</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Location/search title="The search property of the Location interface is a search string, also called a query string; that is, a USVString containing a '?' followed by the parameters of the URL.">Location/search</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>22+</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>Yes</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>22+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div><dd>
+    <p>Returns the <code id=the-location-interface:location-12><a href=#location>Location</a></code> object's URL's query (includes leading "<code>?</code>" if non-empty).</p>
+    <p>Can be set, to navigate to the same URL with a changed query (ignores leading "<code>?</code>").</p>
+   <dt><var>location</var> . <code id=dom-location-hash>hash</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Location/hash title="The hash property of the Location interface returns a USVString containing a '#' followed by the fragment identifier of the URL.">Location/hash</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>22+</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>Yes</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>22+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div><dd>
+    <p>Returns the <code id=the-location-interface:location-13><a href=#location>Location</a></code> object's URL's fragment (includes leading "<code>#</code>" if non-empty).</p>
+    <p>Can be set, to navigate to the same URL with a changed fragment (ignores leading "<code>#</code>").</p>
+   <dt><var>location</var> . <code id=dom-location-assign>assign</code>(<var>url</var>)<div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Location/assign title="The Location.assign() method causes the window to load and display the document at the URL specified. After the navigation occurs, the user can navigate back to the page that called Location.assign() by pressing the &quot;back&quot; button.">Location/assign</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>3+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>3+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>5.5+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>1+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span></div></div></div><dd>
+    <p>Navigates to the given URL.</p>
+   <dt><var>location</var> . <code id=dom-location-replace>replace</code>(<var>url</var>)<div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Location/replace title="The replace() method of the Location interface replaces the current resource with the one at the provided URL. The difference from the assign() method is that after using replace() the current page will not be saved in session History, meaning the user won't be able to use the back button to navigate to it.">Location/replace</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>1+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>3+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>5.5+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>1+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span></div></div></div><dd>
+    <p>Removes the current page from the session history and navigates to the given URL.</p>
+   <dt><var>location</var> . <code id=dom-location-reload>reload</code>()<div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Location/reload title="The Location.reload() method reloads the current URL, like the Refresh button.">Location/reload</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>1+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>3+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>5.5+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>1+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span></div></div></div><dd>
+    <p>Reloads the current page.</p>
+   <dt><var>location</var> . <code id=dom-location-ancestororigins>ancestorOrigins</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Location/ancestorOrigins title="The ancestorOrigins read-only property of the Location interface is a static DOMStringList containing, in reverse order, the origins of all ancestor browsing contexts of the document associated with the given Location object.">Location/ancestorOrigins</a><div class=support><span class="firefox no"><span>Firefox</span><span>No</span></span><span class="safari yes"><span>Safari</span><span>6+</span></span><span class="chrome yes"><span>Chrome</span><span>20+</span></span><hr><span class="opera yes"><span>Opera</span><span>15+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android no"><span>Firefox Android</span><span>No</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>6+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>25+</span></span><span class="webview_android yes"><span>WebView Android</span><span>4.4+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.5+</span></span><span class="opera_android yes"><span>Opera Android</span><span>14+</span></span></div></div></div><dd>
+    <p>Returns a <code id=the-location-interface:domstringlist-2><a href=infrastructure.html#domstringlist>DOMStringList</a></code> object listing the origins of the ancestor <a href=browsers.html#browsing-context id=the-location-interface:browsing-context-2>browsing contexts</a>, from the <a id=the-location-interface:parent-browsing-context href=browsers.html#parent-browsing-context>parent browsing
+    context</a> to the <a id=the-location-interface:top-level-browsing-context href=browsers.html#top-level-browsing-context>top-level browsing context</a>.</p>
+   </dl>
+
+  
+
+
+
+  <nav><a href=origin.html>← 7.3 Origin</a> — <a href=./>Table of Contents</a> — <a href=browsing-the-web.html>7.8 Browsing the web →</a></nav>

@@ -1,0 +1,1040 @@
+<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/html/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Standard</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/spec.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/html/styles.css crossorigin=""><script>
+   function toggleStatus(div) {
+     div.parentNode.classList.toggle('wrapped');
+   }
+   function setLinkFragment(link) {
+     link.hash = location.hash;
+   }
+  </script><link rel=stylesheet href=/html/resources/zh-cn.css><body>
+  
+  <script async="" crossorigin="" src=/html/resources/html-dfn.js></script>
+  <script data-file-issue-url=https://github.com/whatwg/html/issues/new async="" crossorigin="" src=https://resources.whatwg.org/file-issue.js></script>
+  
+  <header id=head class="head with-buttons">
+   <a href=https://whatwg.org/ class=logo><img width=100 alt=WHATWG crossorigin="" src=https://resources.whatwg.org/logo.svg height=100></a>
+   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Living Standard — Last Updated <span class=pubdate>6 November 2020</span></h2><div data-en-date="Sat Aug 11 2018 08:00:56 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/living-standard-mdash-last-updated-date-01-jan-1901.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/living-standard-mdash-last-updated-date-01-jan-1901.zh.html?filename=living-standard-mdash-last-updated-date-01-jan-1901.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fliving-standard-mdash-last-updated-date-01-jan-1901.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div><div data-en-date="Sat Aug 11 2018 08:00:56 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/commit-snapshot-mdash-last-updated-date-01-jan-1901.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/commit-snapshot-mdash-last-updated-date-01-jan-1901.zh.html?filename=commit-snapshot-mdash-last-updated-date-01-jan-1901.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fcommit-snapshot-mdash-last-updated-date-01-jan-1901.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div><div data-en-date="Sat Aug 11 2018 08:00:56 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/review-draft-mdash-published-date-01-jan-1901.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/review-draft-mdash-published-date-01-jan-1901.zh.html?filename=review-draft-mdash-published-date-01-jan-1901.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Freview-draft-mdash-published-date-01-jan-1901.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div></hgroup>
+   
+   
+   <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-91053840-1', 'auto');
+      ga('send', 'pageview');
+   </script>
+  </header>
+
+  
+
+  
+
+
+  
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/table-of-contents.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/table-of-contents.zh.html></div>
+  
+
+
+  
+<div data-en-date="Sat Aug 11 2018 08:00:56 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/full-table-of-contents.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/full-table-of-contents.zh.html></div>
+  
+
+  
+
+  
+
+
+  <nav><a href=dnd.html>← 6.9 Drag and drop</a> — <a href=./>Table of Contents</a> — <a href=window-object.html>7.3 The Window object →</a></nav><ol class=toc><li id=toc-browsers><a href=browsers.html#browsers><span class=secno>7</span> 加载 Web 页面</a><ol><li><a href=browsers.html#windows><span class=secno>7.1</span> Browsing contexts</a><ol><li><a href=browsers.html#creating-browsing-contexts><span class=secno>7.1.1</span> Creating browsing contexts</a><li><a href=browsers.html#nested-browsing-contexts><span class=secno>7.1.2</span> Related browsing contexts</a><ol><li><a href=browsers.html#navigating-nested-browsing-contexts-in-the-dom><span class=secno>7.1.2.1</span> Navigating related browsing contexts in
+  the DOM</a></ol><li><a href=browsers.html#security-nav><span class=secno>7.1.3</span> Security</a><li><a href=browsers.html#浏览上下文分组><span class=secno>7.1.4</span> 浏览上下文分组</a><li><a href=browsers.html#browsing-context-names><span class=secno>7.1.5</span> Browsing context names</a></ol><li><a href=browsers.html#cross-origin-objects><span class=secno>7.2</span> <code>Window</code>,
+  <code>WindowProxy</code>, 和 <code>Location</code> 对象的安全基础设施 </a><ol><li><a href=browsers.html#integration-with-idl><span class=secno>7.2.1</span> Integration with IDL</a><li><a href=browsers.html#shared-internal-slot:-crossoriginpropertydescriptormap><span class=secno>7.2.2</span> Shared internal slot: [[CrossOriginPropertyDescriptorMap]]</a><li><a href=browsers.html#shared-abstract-operations><span class=secno>7.2.3</span> Shared abstract operations</a><ol><li><a href=browsers.html#crossoriginproperties-(-o-)><span class=secno>7.2.3.1</span> CrossOriginProperties ( <var>O</var> )</a><li><a href=browsers.html#crossoriginpropertyfallback-(-p-)><span class=secno>7.2.3.2</span> CrossOriginPropertyFallback ( <var>P</var> )</a><li><a href=browsers.html#isplatformobjectsameorigin-(-o-)><span class=secno>7.2.3.3</span> IsPlatformObjectSameOrigin ( <var>O</var> )</a><li><a href=browsers.html#crossorigingetownpropertyhelper-(-o,-p-)><span class=secno>7.2.3.4</span> CrossOriginGetOwnPropertyHelper ( <var>O</var>, <var>P</var> )</a><li><a href=browsers.html#crossoriginget-(-o,-p,-receiver-)><span class=secno>7.2.3.5</span> CrossOriginGet ( <var>O</var>, <var>P</var>, <var>Receiver</var> )</a><li><a href=browsers.html#crossoriginset-(-o,-p,-v,-receiver-)><span class=secno>7.2.3.6</span> CrossOriginSet ( <var>O</var>, <var>P</var>, <var>V</var>,
+  <var>Receiver</var> )</a><li><a href=browsers.html#crossoriginownpropertykeys-(-o-)><span class=secno>7.2.3.7</span> CrossOriginOwnPropertyKeys ( <var>O</var> )</a></ol></ol></ol></ol><h2 id=browsers><span class=secno>7</span> 加载 Web 页面<a href=#browsers class=self-link></a></h2>
+<div data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/loading-web-pages/index.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/loading-web-pages/index.en.html></div>
+
+  
+
+  <p>This section describes features that apply most directly to Web browsers. Having said that,
+  except where specified otherwise, the requirements defined in this section <em>do</em> apply to
+  all user agents, whether they are Web browsers or not.</p>
+
+  
+
+
+
+
+  <h3 id=windows><span class=secno>7.1</span> Browsing contexts<a href=#windows class=self-link></a></h3>
+<div data-zh-date="" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/loading-web-pages/browsing-contexts/index.zh.html?filename=index.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Floading-web-pages%2Fbrowsing-contexts%2Findex.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/loading-web-pages/browsing-contexts/index.en.html></div>
+
+  <p>A <dfn id=browsing-context data-export="">browsing context</dfn> is an environment in which <code id=windows:document><a href=dom.html#document>Document</a></code> objects
+  are presented to the user.</p>
+
+  <p class=note>A tab or window in a web browser typically contains a <a href=#browsing-context id=windows:browsing-context>browsing
+  context</a>, as does an <code id=windows:the-iframe-element><a href=iframe-embed-object.html#the-iframe-element>iframe</a></code> or <code id=windows:frame><a href=obsolete.html#frame>frame</a></code>s in a
+  <code id=windows:frameset><a href=obsolete.html#frameset>frameset</a></code>.</p>
+
+  <p>A <a href=#browsing-context id=windows:browsing-context-2>browsing context</a> has a corresponding <code id=windows:windowproxy><a href=window-object.html#windowproxy>WindowProxy</a></code> object.</p>
+
+  <p>A <a href=#browsing-context id=windows:browsing-context-3>browsing context</a> has an <dfn id=opener-browsing-context data-export="">opener browsing context</dfn>, which is null
+  or a <a href=#browsing-context id=windows:browsing-context-4>browsing context</a>. It is initially null.</p>
+
+  <p>A <a href=#browsing-context id=windows:browsing-context-5>browsing context</a> has a <dfn id=disowned-its-opener>disowned</dfn> boolean. It
+  is initially false.</p>
+
+  <p>A <a href=#browsing-context id=windows:browsing-context-6>browsing context</a> has an <dfn id=is-closing>is closing</dfn> boolean. It is initially
+  false.</p>
+
+  <div class=example>
+   <p>The following example illustrates the various possibilities of a <a href=#browsing-context id=windows:browsing-context-7>browsing context</a>.
+   It can be <a href=#disowned-its-opener id=windows:disowned-its-opener>disowned</a>, <a href=#is-closing id=windows:is-closing>is closing</a>, neither, or both.</p>
+
+   <pre><code class=js>// Neither disowned nor is closing:
+const popup1 = window.open();
+
+// Disowned, but not is closing:
+const popup2 = window.open();
+popup2.opener = null;
+
+// Not disowned, but is closing:
+const popup3 = window.open();
+popup3.close();
+
+// Disowned, is closing:
+const popup4 = window.open();
+popup4.opener = null;
+popup4.close();</code></pre></div>
+
+  <p>A <a href=#browsing-context id=windows:browsing-context-8>browsing context</a> has a <a id=windows:session-history href=history.html#session-history>session history</a>, which lists the
+  <code id=windows:document-2><a href=dom.html#document>Document</a></code> objects that the <a href=#browsing-context id=windows:browsing-context-9>browsing context</a> has presented, is presenting,
+  or will present. A <dfn data-dfn-for=Document id=concept-document-bc data-lt="browsing context" data-export=""><code>Document</code>'s browsing context</dfn> is the <a href=#browsing-context id=windows:browsing-context-10>browsing
+  context</a> whose <a id=windows:session-history-2 href=history.html#session-history>session history</a> contains the <code id=windows:document-3><a href=dom.html#document>Document</a></code>, if any such
+  browsing context exists and has not been <a href=window-object.html#a-browsing-context-is-discarded id=windows:a-browsing-context-is-discarded>discarded</a>, and null otherwise.</p>
+
+  <p class=note>A <code id=windows:document-4><a href=dom.html#document>Document</a></code> does not necessarily have a non-null <a href=#concept-document-bc id=windows:concept-document-bc>browsing context</a>. In particular, data mining tools are likely
+  to never instantiate browsing contexts. A <code id=windows:document-5><a href=dom.html#document>Document</a></code> created using an API such as <code id=windows:dom-domimplementation-createdocument><a data-x-internal=dom-domimplementation-createdocument href=https://dom.spec.whatwg.org/#dom-domimplementation-createdocument>createDocument()</a></code> never has a non-null <a href=#concept-document-bc id=windows:concept-document-bc-2>browsing context</a>. And the <code id=windows:document-6><a href=dom.html#document>Document</a></code> originally
+  created for an <code id=windows:the-iframe-element-2><a href=iframe-embed-object.html#the-iframe-element>iframe</a></code> element, which has since been <a href=infrastructure.html#remove-an-element-from-a-document id=windows:remove-an-element-from-a-document>removed from the document</a>, has no associated browsing context, since that
+  browsing context was <a href=window-object.html#a-browsing-context-is-discarded id=windows:a-browsing-context-is-discarded-2>discarded</a>.</p>
+
+  <p>A <a href=#browsing-context id=windows:browsing-context-11>browsing context</a>'s <dfn data-dfn-for="browsing context" id=active-window data-export="">active window</dfn> is its
+  <code id=windows:windowproxy-2><a href=window-object.html#windowproxy>WindowProxy</a></code> object's <a href=window-object.html#concept-windowproxy-window id=windows:concept-windowproxy-window>[[Window]]</a>
+  internal slot value. A <a href=#browsing-context id=windows:browsing-context-12>browsing context</a>'s <dfn id=active-document data-export="">active document</dfn> is its
+  <a href=#active-window id=windows:active-window>active window</a>'s <a href=window-object.html#concept-document-window id=windows:concept-document-window>associated
+  <code>Document</code></a>.
+
+  <p class=note>In general, there is a 1-to-1 mapping from the <code id=windows:window><a href=window-object.html#window>Window</a></code> object to the
+  <code id=windows:document-7><a href=dom.html#document>Document</a></code> object, as long as the <code id=windows:document-8><a href=dom.html#document>Document</a></code> object has a non-null <a href=#concept-document-bc id=windows:concept-document-bc-3>browsing context</a>. There is one exception. A
+  <code id=windows:window-2><a href=window-object.html#window>Window</a></code> can be reused for the presentation of a second <code id=windows:document-9><a href=dom.html#document>Document</a></code> in the
+  same <a href=#browsing-context id=windows:browsing-context-13>browsing context</a>, such that the mapping is then 1-to-2. This occurs when a
+  <a href=#browsing-context id=windows:browsing-context-14>browsing context</a> is <a href=browsing-the-web.html#navigate id=windows:navigate>navigated</a> from the initial
+  <code id=windows:about:blank><a href=infrastructure.html#about:blank>about:blank</a></code> <code id=windows:document-10><a href=dom.html#document>Document</a></code> to another, with <var id=windows:navigation-hh><a href=browsing-the-web.html#navigation-hh>historyHandling</a></var> set to "<code id=windows:hh-replace><a href=browsing-the-web.html#hh-replace>replace</a></code>".</p>
+
+
+
+  <h4 id=creating-browsing-contexts><span class=secno>7.1.1</span> Creating browsing contexts<a href=#creating-browsing-contexts class=self-link></a></h4>
+<div data-zh-date="" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/loading-web-pages/browsing-contexts/creating-browsing-contexts.zh.html?filename=creating-browsing-contexts.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Floading-web-pages%2Fbrowsing-contexts%2Fcreating-browsing-contexts.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/loading-web-pages/browsing-contexts/creating-browsing-contexts.en.html></div>
+
+  <p>To <dfn id=set-the-active-document>set the active document</dfn> of a <a href=#browsing-context id=creating-browsing-contexts:browsing-context>browsing context</a>
+  <var>browsingContext</var> to a <code id=creating-browsing-contexts:document><a href=dom.html#document>Document</a></code> object <var>document</var>, run these
+  steps:</p>
+
+  <ol><li>
+    <p>Let <var>window</var> be <var>document</var>'s <a id=creating-browsing-contexts:concept-relevant-global href=webappapis.html#concept-relevant-global>relevant global object</a>.</p>
+
+    <p class=XXX>Per this standard <var>document</var> can be created before <var>window</var>,
+    which does not make much sense. See <a href=https://github.com/whatwg/html/issues/2688>issue
+    #2688</a>.</p>
+   <li><p>Set <var>browsingContext</var>'s <a href=#active-window id=creating-browsing-contexts:active-window>active window</a> to <var>window</var>.<li><p>Set <var>window</var>'s <a href=window-object.html#concept-document-window id=creating-browsing-contexts:concept-document-window>associated
+   <code>Document</code></a> to <var>document</var>.<li><p>Set <var>window</var>'s <a id=creating-browsing-contexts:relevant-settings-object href=webappapis.html#relevant-settings-object>relevant settings object</a>'s <a href=webappapis.html#concept-environment-execution-ready-flag id=creating-browsing-contexts:concept-environment-execution-ready-flag>execution ready flag</a>.</ol>
+
+  <hr>
+
+  <p>A <a href=#browsing-context id=creating-browsing-contexts:browsing-context-2>browsing context</a> has an associated <dfn id=creator-origin>creator origin</dfn> (null or returns an
+  <a id=creating-browsing-contexts:concept-origin href=origin.html#concept-origin>origin</a>), <dfn id=creator-url>creator URL</dfn> (null or returns a <a id=creating-browsing-contexts:url href=https://url.spec.whatwg.org/#concept-url data-x-internal=url>URL</a>), and <dfn id=creator-base-url>creator
+  base URL</dfn> (null or returns a <a id=creating-browsing-contexts:url-2 href=https://url.spec.whatwg.org/#concept-url data-x-internal=url>URL</a>). These are all initially null.</p>
+
+  
+
+  <p>To <dfn id=determining-the-origin>determine the origin</dfn>, given <a href=#browsing-context id=creating-browsing-contexts:browsing-context-3>browsing
+  context</a> <var>browsingContext</var>, <a id=creating-browsing-contexts:url-3 href=https://url.spec.whatwg.org/#concept-url data-x-internal=url>URL</a> <var>url</var>, <a id=creating-browsing-contexts:sandboxing-flag-set href=origin.html#sandboxing-flag-set>sandboxing flag
+  set</a> <var>sandboxFlags</var>, and two <a href=origin.html#concept-origin id=creating-browsing-contexts:concept-origin-2>origins</a>
+  <var>invocationOrigin</var> and <var>activeDocumentNavigationOrigin</var>:</p>
+
+  <ol><li id=sandboxOrigin><p>If <var>sandboxFlags</var> has its <a id=creating-browsing-contexts:sandboxed-origin-browsing-context-flag href=origin.html#sandboxed-origin-browsing-context-flag>sandboxed origin browsing
+   context flag</a> set, then return a new <a href=origin.html#concept-origin-opaque id=creating-browsing-contexts:concept-origin-opaque>opaque
+   origin</a>.<li><p>If <var>url</var> is null, then return a new <a href=origin.html#concept-origin-opaque id=creating-browsing-contexts:concept-origin-opaque-2>opaque
+   origin</a>.<li><p>If <var>activeDocumentNavigationOrigin</var> is not null, and <var>url</var>'s <a href=https://url.spec.whatwg.org/#concept-url-scheme id=creating-browsing-contexts:concept-url-scheme data-x-internal=concept-url-scheme>scheme</a> is "<code>javascript</code>", then return
+   <var>activeDocumentNavigationOrigin</var>.<li>
+    <p>If <var>invocationOrigin</var> is non-null and <var>url</var> is <code id=creating-browsing-contexts:about:blank><a href=infrastructure.html#about:blank>about:blank</a></code>,
+    then return <var>invocationOrigin</var>.</p>
+
+    <p class=note>The result here is that two documents end up with the same underlying
+    <a id=creating-browsing-contexts:concept-origin-3 href=origin.html#concept-origin>origin</a>, meaning that <code id=creating-browsing-contexts:dom-document-domain><a href=origin.html#dom-document-domain>document.domain</a></code>
+    affects both.</p>
+   <li><p>If <var>url</var> is <code id=creating-browsing-contexts:about:srcdoc><a href=infrastructure.html#about:srcdoc>about:srcdoc</a></code>, then return the <a id=creating-browsing-contexts:concept-origin-4 href=origin.html#concept-origin>origin</a> of
+   <var>browsingContext</var>'s <a href=#bc-container-document id=creating-browsing-contexts:bc-container-document>container
+   document</a>.<li><p>Return <var>url</var>'s <a href=https://url.spec.whatwg.org/#concept-url-origin id=creating-browsing-contexts:concept-url-origin data-x-internal=concept-url-origin>origin</a>.</ol>
+
+  <p>To <dfn id=creating-a-new-browsing-context>create a new browsing context</dfn>, given
+  null or a <code id=creating-browsing-contexts:document-2><a href=dom.html#document>Document</a></code> object <var>creator</var>, null or an element <var>embedder</var>,
+  and a <a href=#browsing-context-group id=creating-browsing-contexts:browsing-context-group>browsing context group</a> <var>group</var>, run these steps:</p>
+
+  
+
+  <ol><li><p>Let <var>browsingContext</var> be a new <a href=#browsing-context id=creating-browsing-contexts:browsing-context-4>browsing context</a>.<li id=creator-browsing-context><p>If <var>creator</var> is non-null, then set
+   <var>browsingContext</var>'s <a href=#creator-origin id=creating-browsing-contexts:creator-origin>creator origin</a> to return <var>creator</var>'s
+   <a id=creating-browsing-contexts:concept-origin-5 href=origin.html#concept-origin>origin</a>, <var>browsingContext</var>'s <a href=#creator-url id=creating-browsing-contexts:creator-url>creator URL</a> to return
+   <var>creator</var>'s <a href=https://dom.spec.whatwg.org/#concept-document-url id=creating-browsing-contexts:the-document的-address data-x-internal=the-document的-address>URL</a>, and
+   <var>browsingContext</var>'s <a href=#creator-base-url id=creating-browsing-contexts:creator-base-url>creator base URL</a> to return <var>creator</var>'s <a href=infrastructure.html#document-base-url id=creating-browsing-contexts:document-base-url>base URL</a>.<li><p>Let <var>sandboxFlags</var> be the result of <a id=creating-browsing-contexts:determining-the-creation-sandboxing-flags href=origin.html#determining-the-creation-sandboxing-flags>determining the creation sandboxing
+   flags</a> given <var>browsingContext</var> and <var>embedder</var>.<li id=about-blank-origin><p>Let <var>origin</var> be the result of <a href=#determining-the-origin id=creating-browsing-contexts:determining-the-origin>determining the
+   origin</a> given <var>browsingContext</var>, <code id=creating-browsing-contexts:about:blank-2><a href=infrastructure.html#about:blank>about:blank</a></code>,
+   <var>sandboxFlags</var>, <var>browsingContext</var>'s <a href=#creator-origin id=creating-browsing-contexts:creator-origin-2>creator origin</a>, and
+   null.<li>
+    <p>Let <var>permissionsPolicy</var> be the result of <a id=creating-browsing-contexts:creating-a-permissions-policy href=https://w3c.github.io/webappsec-feature-policy/#create-for-browsingcontext data-x-internal=creating-a-permissions-policy>creating a permissions policy</a>
+    given <var>browsingContext</var> and <var>origin</var>. <a href=references.html#refsPERMISSIONSPOLICY>[PERMISSIONSPOLICY]</a></p>
+
+    <p class=XXX>This needs to use <var>embedder</var>.</p>
+   <li><p>Let <var>agent</var> be the result of <a href=webappapis.html#obtain-similar-origin-window-agent id=creating-browsing-contexts:obtain-similar-origin-window-agent>obtaining a similar-origin window agent</a> given
+   <var>origin</var>, <var>group</var>, and false.<li>
+    <p>Let <var>realm execution context</var> be the result of <a id=creating-browsing-contexts:creating-a-new-javascript-realm href=webappapis.html#creating-a-new-javascript-realm>creating a new JavaScript
+    realm</a> given <var>agent</var> and the following customizations:</p>
+
+    <ul><li><p>For the global object, create a new <code id=creating-browsing-contexts:window><a href=window-object.html#window>Window</a></code> object.<li><p>For the global <b>this</b> binding, use <var>browsingContext</var>'s
+     <code id=creating-browsing-contexts:windowproxy><a href=window-object.html#windowproxy>WindowProxy</a></code> object.</ul>
+   <li><p>Let <var>topLevelCreationURL</var> be <code id=creating-browsing-contexts:about:blank-3><a href=infrastructure.html#about:blank>about:blank</a></code> if <var>embedder</var> is
+   null; otherwise <var>embedder</var>'s <a id=creating-browsing-contexts:relevant-settings-object-2 href=webappapis.html#relevant-settings-object>relevant settings object</a>'s <a id=creating-browsing-contexts:concept-environment-top-level-creation-url href=webappapis.html#concept-environment-top-level-creation-url>top-level
+   creation URL</a>.<li><p>Let <var>topLevelOrigin</var> be <var>origin</var> if <var>embedder</var> is null;
+   otherwise <var>embedder</var>'s <a id=creating-browsing-contexts:relevant-settings-object-3 href=webappapis.html#relevant-settings-object>relevant settings object</a>'s <a id=creating-browsing-contexts:concept-environment-top-level-origin href=webappapis.html#concept-environment-top-level-origin>top-level
+   origin</a>.<li><p>Let <var>settingsObject</var> be the result of <a href=window-object.html#set-up-a-window-environment-settings-object id=creating-browsing-contexts:set-up-a-window-environment-settings-object>setting up a window environment settings object</a> with <var>realm execution
+   context</var>, null, <var>topLevelCreationURL</var>, and <var>topLevelOrigin</var>.<li><p>Let <var>coop</var> be "<code id=creating-browsing-contexts:coop-unsafe-none><a href=origin.html#coop-unsafe-none>unsafe-none</a></code>".<li><p>If <var>creator</var> is non-null and <var>creator</var>'s <a id=creating-browsing-contexts:concept-origin-6 href=origin.html#concept-origin>origin</a> is
+   <a id=creating-browsing-contexts:same-origin href=origin.html#same-origin>same origin</a> with <var>creator</var>'s <a id=creating-browsing-contexts:relevant-settings-object-4 href=webappapis.html#relevant-settings-object>relevant settings object</a>'s
+   <a id=creating-browsing-contexts:concept-environment-top-level-origin-2 href=webappapis.html#concept-environment-top-level-origin>top-level origin</a>, then set <var>coop</var> to <var>creator</var>'s <a href=#concept-document-bc id=creating-browsing-contexts:concept-document-bc>browsing context</a>'s <a href=#top-level-browsing-context id=creating-browsing-contexts:top-level-browsing-context>top-level browsing context</a>'s
+   <a href=#active-document id=creating-browsing-contexts:active-document>active document</a>'s <a href=dom.html#concept-document-coop id=creating-browsing-contexts:concept-document-coop>cross-origin opener
+   policy</a>.<li><p>Let <var>document</var> be a new <code id=creating-browsing-contexts:document-3><a href=dom.html#document>Document</a></code>, marked as an <a href=https://dom.spec.whatwg.org/#html-document id=creating-browsing-contexts:html-documents data-x-internal=html-documents>HTML document</a> in <a id=creating-browsing-contexts:quirks-mode href=https://dom.spec.whatwg.org/#concept-document-quirks data-x-internal=quirks-mode>quirks mode</a>, whose <a href=https://dom.spec.whatwg.org/#concept-document-content-type id=creating-browsing-contexts:concept-document-content-type data-x-internal=concept-document-content-type>content type</a> is "<code>text/html</code>",
+   <a id=creating-browsing-contexts:concept-origin-7 href=origin.html#concept-origin>origin</a> is <var>origin</var>, <a id=creating-browsing-contexts:active-sandboxing-flag-set href=origin.html#active-sandboxing-flag-set>active sandboxing flag set</a> is
+   <var>sandboxFlags</var>, <a href=dom.html#concept-document-permissions-policy id=creating-browsing-contexts:concept-document-permissions-policy>permissions
+   policy</a> is <var>permissionsPolicy</var>, <a href=dom.html#concept-document-coop id=creating-browsing-contexts:concept-document-coop-2>cross-origin
+   opener policy</a> is <var>coop</var>, and which is <a id=creating-browsing-contexts:ready-for-post-load-tasks href=parsing.html#ready-for-post-load-tasks>ready for post-load
+   tasks</a>.<li><p>Ensure that <var>document</var> has a single child <code id=creating-browsing-contexts:the-html-element><a href=semantics.html#the-html-element>html</a></code> node, which itself
+   has two empty child nodes: a <code id=creating-browsing-contexts:the-head-element><a href=semantics.html#the-head-element>head</a></code> element, and a <code id=creating-browsing-contexts:the-body-element><a href=sections.html#the-body-element>body</a></code> element.<li><p><a href=#set-the-active-document id=creating-browsing-contexts:set-the-active-document>Set the active document</a> of <var>browsingContext</var> to
+   <var>document</var>.<li><p>If <var>browsingContext</var>'s <a href=#creator-url id=creating-browsing-contexts:creator-url-2>creator URL</a> is non-null, then set
+   <var>document</var>'s <a href="dom.html#the-document's-referrer" id="creating-browsing-contexts:the-document's-referrer">referrer</a> to the <a href=https://url.spec.whatwg.org/#concept-url-serializer id=creating-browsing-contexts:concept-url-serializer data-x-internal=concept-url-serializer>serialization</a> of it.<li><p>If <var>creator</var> is non-null, then set <var>document</var>'s
+   <a href=dom.html#concept-document-referrer-policy id=creating-browsing-contexts:concept-document-referrer-policy>referrer policy</a> to <var>creator</var>'s
+   <a href=dom.html#concept-document-referrer-policy id=creating-browsing-contexts:concept-document-referrer-policy-2>referrer policy</a>.<li><p>If <var>creator</var> is non-null, then set <var>document</var>'s
+   <a href=dom.html#concept-document-embedder-policy id=creating-browsing-contexts:concept-document-embedder-policy>embedder policy</a> to <var>creator</var>'s
+   <a href=dom.html#concept-document-embedder-policy id=creating-browsing-contexts:concept-document-embedder-policy-2>embedder policy</a>.<li><p>Add <var>document</var> to <var>browsingContext</var>'s <a id=creating-browsing-contexts:session-history href=history.html#session-history>session
+   history</a>.<li><p><a id=creating-browsing-contexts:completely-finish-loading href=browsing-the-web.html#completely-finish-loading>Completely finish loading</a> <var>document</var>.<li><p>Return <var>browsingContext</var>.</ol>
+
+  <p>To <dfn id=creating-a-new-top-level-browsing-context>create a new top-level browsing
+  context</dfn>:</p>
+
+  <ol><li><p>Let <var>group</var> be the result of <a href=#creating-a-new-browsing-context-group id=creating-browsing-contexts:creating-a-new-browsing-context-group>creating a new browsing context
+   group</a>.<li><p>Return <var>group</var>'s <a href=#browsing-context-set id=creating-browsing-contexts:browsing-context-set>browsing context set</a>[0].</ol>
+
+  <p class=note>This creates a <a href=#top-level-browsing-context id=creating-browsing-contexts:top-level-browsing-context-2>top-level browsing context</a>.</p>
+
+  <p>To <dfn id=creating-a-new-auxiliary-browsing-context>create a new auxiliary browsing
+  context</dfn>, given a <a href=#browsing-context id=creating-browsing-contexts:browsing-context-5>browsing context</a> <var>opener</var>:</p>
+
+  <ol><li><p>Let <var>group</var> be <var>opener</var>'s <a href=#top-level-browsing-context id=creating-browsing-contexts:top-level-browsing-context-3>top-level browsing context</a>'s
+   <a href=#tlbc-group id=creating-browsing-contexts:tlbc-group>group</a><li><p>Assert: <var>group</var> is non-null, as <a href=browsing-the-web.html#navigate id=creating-browsing-contexts:navigate>navigating</a> invokes
+   this directly.<li><p>Let <var>browsingContext</var> be the result of <a href=#creating-a-new-browsing-context id=creating-browsing-contexts:creating-a-new-browsing-context>creating a new browsing
+   context</a> with <var>opener</var>'s <a href=#active-document id=creating-browsing-contexts:active-document-2>active document</a>, null, and
+   <var>group</var>.<li><p><a href=#bcg-append id=creating-browsing-contexts:bcg-append>Append</a> <var>browsingContext</var> to
+   <var>group</var>.<li><p>Set <var>browsingContext</var>'s <a href=#opener-browsing-context id=creating-browsing-contexts:opener-browsing-context>opener browsing context</a> to
+   <var>opener</var>.<li id=copy-session-storage><p><a id=creating-browsing-contexts:legacy-clone-a-browsing-session-storage-shed href=https://storage.spec.whatwg.org/#legacy-clone-a-browsing-session-storage-shed data-x-internal=legacy-clone-a-browsing-session-storage-shed>Legacy-clone a browsing session storage shed</a> with
+   <var>opener</var>'s <a href=history.html#tlbc-browsing-session id=creating-browsing-contexts:tlbc-browsing-session>browsing session</a> and
+   <var>browsingContext</var>'s <a href=history.html#tlbc-browsing-session id=creating-browsing-contexts:tlbc-browsing-session-2>browsing session</a>. <a href=references.html#refsSTORAGE>[STORAGE]</a><li><p>Return <var>browsingContext</var>.</ol>
+
+  <p class=note>This creates a <a href=#top-level-browsing-context id=creating-browsing-contexts:top-level-browsing-context-4>top-level browsing context</a> that is also an
+  <a href=#auxiliary-browsing-context id=creating-browsing-contexts:auxiliary-browsing-context>auxiliary browsing context</a>.</p>
+
+  <p>To <dfn id=creating-a-new-nested-browsing-context>create a new nested browsing context</dfn>,
+  given an element <var>element</var>:</p>
+
+  <ol><li><p>Let <var>group</var> be <var>element</var>'s <a id=creating-browsing-contexts:node-document href=https://dom.spec.whatwg.org/#concept-node-document data-x-internal=node-document>node document</a>'s <a href=#concept-document-bc id=creating-browsing-contexts:concept-document-bc-2>browsing context</a>'s <a href=#top-level-browsing-context id=creating-browsing-contexts:top-level-browsing-context-5>top-level browsing context</a>'s
+   <a href=#tlbc-group id=creating-browsing-contexts:tlbc-group-2>group</a>.<li><p>Let <var>browsingContext</var> be the result of <a href=#creating-a-new-browsing-context id=creating-browsing-contexts:creating-a-new-browsing-context-2>creating a new browsing
+   context</a> with <var>element</var>'s <a id=creating-browsing-contexts:node-document-2 href=https://dom.spec.whatwg.org/#concept-node-document data-x-internal=node-document>node document</a>, <var>element</var>, and
+   <var>group</var>.<li><p>Set <var>element</var>'s <a href=#nested-browsing-context id=creating-browsing-contexts:nested-browsing-context>nested browsing context</a> to
+   <var>browsingContext</var>.<li><p>If <var>element</var> has a <code>name</code> attribute, then set
+   <var>browsingContext</var>'s <a href=#browsing-context-name id=creating-browsing-contexts:browsing-context-name>name</a> to the value of
+   this attribute.</ol>
+
+  
+
+
+
+  <h4 id=nested-browsing-contexts><span class=secno>7.1.2</span> Related browsing contexts<a href=#nested-browsing-contexts class=self-link></a></h4>
+<div data-zh-date="" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/loading-web-pages/browsing-contexts/related-browsing-contexts/index.zh.html?filename=index.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Floading-web-pages%2Fbrowsing-contexts%2Frelated-browsing-contexts%2Findex.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/loading-web-pages/browsing-contexts/related-browsing-contexts/index.en.html></div>
+
+  <p>Certain elements (for example, <code id=nested-browsing-contexts:the-iframe-element><a href=iframe-embed-object.html#the-iframe-element>iframe</a></code> elements) can instantiate further <a href=#browsing-context id=nested-browsing-contexts:browsing-context>browsing contexts</a>. These elements are called <dfn id=browsing-context-container data-lt="browsing context container" data-export="">browsing context
+  containers</dfn>.</p>
+
+  <p>Each <a href=#browsing-context-container id=nested-browsing-contexts:browsing-context-container>browsing context container</a> has a <dfn id=nested-browsing-context data-export="">nested browsing context</dfn>,
+  which is either a <a href=#browsing-context id=nested-browsing-contexts:browsing-context-2>browsing context</a> or null. It is initially null.</p>
+
+  <p>The <dfn id=bc-container>container</dfn> of a <a href=#browsing-context id=nested-browsing-contexts:browsing-context-3>browsing context</a> <var>bc</var>
+  is the <a href=#browsing-context-container id=nested-browsing-contexts:browsing-context-container-2>browsing context container</a> whose <a href=#nested-browsing-context id=nested-browsing-contexts:nested-browsing-context>nested browsing context</a> is
+  <var>bc</var>, or null if there is no such element.</p>
+
+  <p>Each <a href=#browsing-context id=nested-browsing-contexts:browsing-context-4>browsing context</a> <var>bc</var> has a <dfn id=bc-container-document>container document</dfn>, which is the result of running these
+  steps:</p>
+
+  <ol><li><p>If <var>bc</var>'s <a href=#bc-container id=nested-browsing-contexts:bc-container>container</a> is null, then return
+   null.<li>
+    <p>Return <var>bc</var>'s <a href=#bc-container id=nested-browsing-contexts:bc-container-2>container</a>'s <a id=nested-browsing-contexts:node-document href=https://dom.spec.whatwg.org/#concept-node-document data-x-internal=node-document>node
+    document</a>.</p>
+
+    <p class=note>This is equal to <var>bc</var>'s <a href=#bc-container id=nested-browsing-contexts:bc-container-3>container</a>'s
+    <a id=nested-browsing-contexts:shadow-including-root href=https://dom.spec.whatwg.org/#concept-shadow-including-root data-x-internal=shadow-including-root>shadow-including root</a> as <var>bc</var>'s <a href=#bc-container id=nested-browsing-contexts:bc-container-4>container</a> has to be <a id=nested-browsing-contexts:connected href=https://dom.spec.whatwg.org/#connected data-x-internal=connected>connected</a>.</p>
+   </ol>
+
+  <p>A <a href=#browsing-context id=nested-browsing-contexts:browsing-context-5>browsing context</a> <var>child</var> is said to be a <dfn id=child-browsing-context data-export="">child browsing
+  context</dfn> of another <a href=#browsing-context id=nested-browsing-contexts:browsing-context-6>browsing context</a> <var>parent</var>, if <var>child</var>'s
+  <a href=#bc-container-document id=nested-browsing-contexts:bc-container-document>container document</a> is non-null and <var>child</var>'s
+  <a href=#bc-container-document id=nested-browsing-contexts:bc-container-document-2>container document</a>'s <a href=#concept-document-bc id=nested-browsing-contexts:concept-document-bc>browsing context</a> is <var>parent</var>.</p>
+
+  <p>A <a href=#browsing-context id=nested-browsing-contexts:browsing-context-7>browsing context</a> <var>child</var> is a <dfn id=document-tree-child-browsing-context>document-tree child browsing
+  context</dfn> of <var>parent</var> if <var>child</var> is a <a href=#child-browsing-context id=nested-browsing-contexts:child-browsing-context>child browsing context</a>
+  and <var>child</var>'s <a href=#bc-container id=nested-browsing-contexts:bc-container-5>container</a> is <a id=nested-browsing-contexts:in-a-document-tree href=https://dom.spec.whatwg.org/#in-a-document-tree data-x-internal=in-a-document-tree>in a document
+  tree</a>.</p>
+
+  <p>A <a href=#browsing-context id=nested-browsing-contexts:browsing-context-8>browsing context</a> <var>child</var> may have a <dfn id=parent-browsing-context data-export="">parent browsing
+  context</dfn>. This is the unique <a href=#browsing-context id=nested-browsing-contexts:browsing-context-9>browsing context</a> that has <var>child</var> as a
+  <a href=#child-browsing-context id=nested-browsing-contexts:child-browsing-context-2>child browsing context</a>, if any such browsing context exists. Otherwise, the
+  <a href=#browsing-context id=nested-browsing-contexts:browsing-context-10>browsing context</a> has no <a href=#parent-browsing-context id=nested-browsing-contexts:parent-browsing-context>parent browsing context</a>.</p>
+
+  <p>A <a href=#browsing-context id=nested-browsing-contexts:browsing-context-11>browsing context</a> <var>A</var> is said to be an <dfn id=ancestor-browsing-context data-lt="ancestor browsing context" data-export="">ancestor</dfn> of a browsing context
+  <var>B</var> if there exists a browsing context <var>A'</var> that is a <a href=#child-browsing-context id=nested-browsing-contexts:child-browsing-context-3>child browsing
+  context</a> of <var>A</var> and that is itself an <a href=#ancestor-browsing-context id=nested-browsing-contexts:ancestor-browsing-context>ancestor</a> of <var>B</var>, or if the browsing context <var>A</var> is the
+  <a href=#parent-browsing-context id=nested-browsing-contexts:parent-browsing-context-2>parent browsing context</a> of <var>B</var>.</p>
+
+  <p>A <a href=#browsing-context id=nested-browsing-contexts:browsing-context-12>browsing context</a> that has no <a href=#parent-browsing-context id=nested-browsing-contexts:parent-browsing-context-3>parent browsing context</a> is the <dfn id=top-level-browsing-context data-export="">top-level browsing context</dfn> for itself and all of the browsing contexts for which it
+  is an <a href=#ancestor-browsing-context id=nested-browsing-contexts:ancestor-browsing-context-2>ancestor browsing context</a>.</p>
+
+  <p>A <a href=#top-level-browsing-context id=nested-browsing-contexts:top-level-browsing-context>top-level browsing context</a> has an associated <dfn id=tlbc-group>group</dfn> (null or a <a href=#browsing-context-group id=nested-browsing-contexts:browsing-context-group>browsing context group</a>). It is initially null.</p>
+
+  <p>It is possible to create new browsing contexts that are related to a <a href=#top-level-browsing-context id=nested-browsing-contexts:top-level-browsing-context-2>top-level browsing
+  context</a> while their <a href=#bc-container id=nested-browsing-contexts:bc-container-6>container</a> is null. Such browsing
+  contexts are called <dfn id=auxiliary-browsing-context data-lt="auxiliary browsing context" data-export="">auxiliary browsing contexts</dfn>. Auxiliary browsing contexts are always <a href=#top-level-browsing-context id=nested-browsing-contexts:top-level-browsing-context-3>top-level browsing contexts</a>.</p>
+
+  <p>The transitive closure of <a href=#parent-browsing-context id=nested-browsing-contexts:parent-browsing-context-4>parent browsing
+  contexts</a> for a <a href=#browsing-context id=nested-browsing-contexts:browsing-context-13>browsing context</a> that is a <a href=#child-browsing-context id=nested-browsing-contexts:child-browsing-context-4>child browsing context</a>
+  gives the list of <a href=#ancestor-browsing-context id=nested-browsing-contexts:ancestor-browsing-context-3>ancestor browsing contexts</a>.</p>
+
+  <p>The <dfn id=list-of-the-descendant-browsing-contexts>list of the descendant browsing contexts</dfn> of a <code id=nested-browsing-contexts:document><a href=dom.html#document>Document</a></code> <var>d</var>
+  is the (ordered) list returned by the following algorithm:</p>
+
+  <ol><li><p>Let <var>list</var> be an empty <a id=nested-browsing-contexts:list href=https://infra.spec.whatwg.org/#list data-x-internal=list>list</a>.<li>
+    <p>For each <a href=#browsing-context-container id=nested-browsing-contexts:browsing-context-container-3>browsing context container</a> <var>container</var>, whose <a href=#nested-browsing-context id=nested-browsing-contexts:nested-browsing-context-2>nested
+    browsing context</a> is non-null and whose <a id=nested-browsing-contexts:shadow-including-root-2 href=https://dom.spec.whatwg.org/#concept-shadow-including-root data-x-internal=shadow-including-root>shadow-including root</a> is
+    <var>d</var>, in <a id=nested-browsing-contexts:shadow-including-tree-order href=https://dom.spec.whatwg.org/#concept-shadow-including-tree-order data-x-internal=shadow-including-tree-order>shadow-including tree order</a>:</p>
+
+    <ol><li><p>Let <var>nestedBC</var> be <var>container</var>'s <a href=#nested-browsing-context id=nested-browsing-contexts:nested-browsing-context-3>nested browsing
+     context</a>.<li><p><a href=https://infra.spec.whatwg.org/#list-append id=nested-browsing-contexts:list-append data-x-internal=list-append>Append</a> <var>nestedBC</var> to
+     <var>list</var>.<li><p><a href=https://infra.spec.whatwg.org/#list-extend id=nested-browsing-contexts:list-extend data-x-internal=list-extend>Extend</a> <var>list</var> with the <a href=#list-of-the-descendant-browsing-contexts id=nested-browsing-contexts:list-of-the-descendant-browsing-contexts>list of the
+     descendant browsing contexts</a> of <var>nestedBC</var>'s <a href=#active-document id=nested-browsing-contexts:active-document>active
+     document</a>.</ol>
+   <li><p>Return <var>list</var>.</ol>
+
+  <p>A <code id=nested-browsing-contexts:document-2><a href=dom.html#document>Document</a></code> <var>d</var> is said to be <dfn data-dfn-for=Document id=fully-active data-export="">fully
+  active</dfn> when <var>d</var>'s <a href=#concept-document-bc id=nested-browsing-contexts:concept-document-bc-2>browsing context</a> is
+  non-null, <var>d</var>'s <a href=#concept-document-bc id=nested-browsing-contexts:concept-document-bc-3>browsing context</a>'s <a href=#active-document id=nested-browsing-contexts:active-document-2>active
+  document</a> is <var>d</var>, and either <var>d</var>'s <a href=#concept-document-bc id=nested-browsing-contexts:concept-document-bc-4>browsing context</a> is a <a href=#top-level-browsing-context id=nested-browsing-contexts:top-level-browsing-context-4>top-level browsing context</a>,
+  or <var>d</var>'s <a href=#bc-container-document id=nested-browsing-contexts:bc-container-document-3>container document</a> is <a href=#fully-active id=nested-browsing-contexts:fully-active>fully
+  active</a>.</p>
+
+  <p>Because they are associated with an element, <a href=#child-browsing-context id=nested-browsing-contexts:child-browsing-context-5>child
+  browsing contexts</a> are always tied to a specific <code id=nested-browsing-contexts:document-3><a href=dom.html#document>Document</a></code> in their <a href=#parent-browsing-context id=nested-browsing-contexts:parent-browsing-context-5>parent
+  browsing context</a>. User agents must not allow the user to interact with <a href=#child-browsing-context id=nested-browsing-contexts:child-browsing-context-6>child browsing contexts</a> of elements that are in <code id=nested-browsing-contexts:document-4><a href=dom.html#document>Document</a></code>s
+  that are not themselves <a href=#fully-active id=nested-browsing-contexts:fully-active-2>fully active</a>.</p>
+
+  <div class=example>
+   <p>The following example illustrates the differences between <a href=#active-document id=nested-browsing-contexts:active-document-3>active</a> and <a href=#fully-active id=nested-browsing-contexts:fully-active-3>fully active</a> <code id=nested-browsing-contexts:document-5><a href=dom.html#document>Document</a></code> objects. Here <code>a.html</code> is loaded into a browser window, <code>b-1.html</code> starts
+   out loaded into an <code id=nested-browsing-contexts:the-iframe-element-2><a href=iframe-embed-object.html#the-iframe-element>iframe</a></code> as shown, and <code>b-2.html</code> and <code>c.html</code> are omitted (they can simply be an empty document).</p>
+
+   <pre><code class=html>&lt;!-- a.html -->
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;title>Browsing context A&lt;/title>
+
+&lt;iframe src="b-1.html">&lt;/iframe>
+&lt;button onclick="frames[0].location.href = 'b-2.html'">Click me&lt;/button>
+
+&lt;!-- b-1.html -->
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;title>Browsing context B&lt;/title>
+
+&lt;iframe src="c.html">&lt;/iframe></code></pre>
+
+   <p>At this point, the documents given by <code>a.html</code>, <code>b-1.html</code>, and <code>c.html</code> are all the <a href=#active-document id=nested-browsing-contexts:active-document-4>active documents</a> of their respective <a href=#concept-document-bc id=nested-browsing-contexts:concept-document-bc-5>browsing
+   contexts</a>. They are also all <a href=#fully-active id=nested-browsing-contexts:fully-active-4>fully active</a>.</p>
+
+   <p>After clicking on the <code id=nested-browsing-contexts:the-button-element><a href=form-elements.html#the-button-element>button</a></code>, and thus loading a new <code id=nested-browsing-contexts:document-6><a href=dom.html#document>Document</a></code> from
+   <code>b-2.html</code> into browsing context B, we have the following results:</p>
+
+   <ul><li><p>The <code>a.html</code> <code id=nested-browsing-contexts:document-7><a href=dom.html#document>Document</a></code> remains both the <a href=#active-document id=nested-browsing-contexts:active-document-5>active
+    document</a> of browsing context A, and <a href=#fully-active id=nested-browsing-contexts:fully-active-5>fully active</a>.<li><p>The <code>b-1.html</code> <code id=nested-browsing-contexts:document-8><a href=dom.html#document>Document</a></code> is now <em>not</em> the
+    <a href=#active-document id=nested-browsing-contexts:active-document-6>active document</a> of browsing context B. As such it is also not <a href=#fully-active id=nested-browsing-contexts:fully-active-6>fully
+    active</a>.<li><p>The new <code>b-2.html</code> <code id=nested-browsing-contexts:document-9><a href=dom.html#document>Document</a></code> is now the <a href=#active-document id=nested-browsing-contexts:active-document-7>active
+    document</a> of browsing context B, and is also <a href=#fully-active id=nested-browsing-contexts:fully-active-7>fully active</a>.<li><p>The <code>c.html</code> <code id=nested-browsing-contexts:document-10><a href=dom.html#document>Document</a></code> is still the <a href=#active-document id=nested-browsing-contexts:active-document-8>active
+    document</a> of browsing context C. However, since C's <a href=#bc-container-document id=nested-browsing-contexts:bc-container-document-4>container document</a> is the <code>b-1.html</code>
+    <code id=nested-browsing-contexts:document-11><a href=dom.html#document>Document</a></code>, which is itself not <a href=#fully-active id=nested-browsing-contexts:fully-active-8>fully active</a>, this means the <code>c.html</code> <code id=nested-browsing-contexts:document-12><a href=dom.html#document>Document</a></code> is now not <a href=#fully-active id=nested-browsing-contexts:fully-active-9>fully active</a> (even though
+    it is <a href=#active-document id=nested-browsing-contexts:active-document-9>active</a>).</ul>
+
+   <p>For more explorations of the complexities involved here, especially as it impacts <a href=history.html#history>the session history</a>, see <cite>A Model of Navigation History</cite>. <a href=references.html#refsNAVMODEL>[NAVMODEL]</a></p>
+  </div>
+
+  <p>A <a href=#child-browsing-context id=nested-browsing-contexts:child-browsing-context-7>child browsing context</a> can be put into a <dfn id=delaying-load-events-mode>delaying <code>load</code> events mode</dfn>. This is used when it is <a href=browsing-the-web.html#navigate id=nested-browsing-contexts:navigate>navigated</a>, to <a id=nested-browsing-contexts:delay-the-load-event href=parsing.html#delay-the-load-event>delay the load event</a> of its
+  <a href=#bc-container id=nested-browsing-contexts:bc-container-7>container</a> before the new <code id=nested-browsing-contexts:document-13><a href=dom.html#document>Document</a></code> is created.</p>
+
+  <p>The <dfn id=document-family>document family</dfn> of a <a href=#browsing-context id=nested-browsing-contexts:browsing-context-14>browsing context</a> consists of the union of all
+  the <code id=nested-browsing-contexts:document-14><a href=dom.html#document>Document</a></code> objects in that <a href=#browsing-context id=nested-browsing-contexts:browsing-context-15>browsing context</a>'s <a id=nested-browsing-contexts:session-history href=history.html#session-history>session
+  history</a> and the <a href=#document-family id=nested-browsing-contexts:document-family>document families</a> of all those
+  <code id=nested-browsing-contexts:document-15><a href=dom.html#document>Document</a></code> objects. The <a href=#document-family id=nested-browsing-contexts:document-family-2>document family</a> of a <code id=nested-browsing-contexts:document-16><a href=dom.html#document>Document</a></code> object
+  consists of the union of all the <a href=#document-family id=nested-browsing-contexts:document-family-3>document families</a> of the
+  <a href=#browsing-context id=nested-browsing-contexts:browsing-context-16>browsing contexts</a> in the <a href=#list-of-the-descendant-browsing-contexts id=nested-browsing-contexts:list-of-the-descendant-browsing-contexts-2>list of the descendant
+  browsing contexts</a> of the <code id=nested-browsing-contexts:document-17><a href=dom.html#document>Document</a></code> object.</p>
+
+  <p>The <dfn id=concept-bcc-content-document>content document</dfn> of a <a href=#browsing-context-container id=nested-browsing-contexts:browsing-context-container-4>browsing
+  context container</a> <var>container</var> is the result of the following algorithm:</p>
+
+  <ol><li><p>If <var>container</var>'s <a href=#nested-browsing-context id=nested-browsing-contexts:nested-browsing-context-4>nested browsing context</a> is null, then return
+   null.<li><p>Let <var>context</var> be <var>container</var>'s <a href=#nested-browsing-context id=nested-browsing-contexts:nested-browsing-context-5>nested browsing
+   context</a>.<li><p>Let <var>document</var> be <var>context</var>'s <a href=#active-document id=nested-browsing-contexts:active-document-10>active document</a>.<li><p>If <var>document</var>'s <a id=nested-browsing-contexts:concept-origin href=origin.html#concept-origin>origin</a> and <var>container</var>'s <a id=nested-browsing-contexts:node-document-2 href=https://dom.spec.whatwg.org/#concept-node-document data-x-internal=node-document>node
+   document</a>'s <a id=nested-browsing-contexts:concept-origin-2 href=origin.html#concept-origin>origin</a> are not <a id=nested-browsing-contexts:same-origin-domain href=origin.html#same-origin-domain>same origin-domain</a>, then return
+   null.<li><p>Return <var>document</var>.</ol>
+
+
+
+  <h5 id=navigating-nested-browsing-contexts-in-the-dom><span class=secno>7.1.2.1</span> Navigating related browsing contexts in
+  the DOM<a href=#navigating-nested-browsing-contexts-in-the-dom class=self-link></a></h5>
+<div data-zh-date="" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/loading-web-pages/browsing-contexts/related-browsing-contexts/navigating-related-browsing-contexts-in-the-dom.zh.html?filename=navigating-related-browsing-contexts-in-the-dom.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Floading-web-pages%2Fbrowsing-contexts%2Frelated-browsing-contexts%2Fnavigating-related-browsing-contexts-in-the-dom.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/loading-web-pages/browsing-contexts/related-browsing-contexts/navigating-related-browsing-contexts-in-the-dom.en.html></div>
+
+  <dl class=domintro><dt><var>window</var> . <code id=dom-top-dev><a href=#dom-top>top</a></code><dd>
+    <p>Returns the <code id=navigating-nested-browsing-contexts-in-the-dom:windowproxy><a href=window-object.html#windowproxy>WindowProxy</a></code> for the <a href=#top-level-browsing-context id=navigating-nested-browsing-contexts-in-the-dom:top-level-browsing-context>top-level browsing context</a>.</p>
+   <dt><var>window</var> . <code id=dom-opener-dev><a href=#dom-opener>opener</a></code> [ = <var>value</var> ]<dd>
+    <p>Returns the <code id=navigating-nested-browsing-contexts-in-the-dom:windowproxy-2><a href=window-object.html#windowproxy>WindowProxy</a></code> for the <a href=#opener-browsing-context id=navigating-nested-browsing-contexts-in-the-dom:opener-browsing-context>opener browsing context</a>.</p>
+
+    <p>Returns null if there isn't one or if it has been set to null.</p>
+
+    <p>Can be set to null.</p>
+   <dt><var>window</var> . <code id=dom-parent-dev><a href=#dom-parent>parent</a></code><dd>
+    <p>Returns the <code id=navigating-nested-browsing-contexts-in-the-dom:windowproxy-3><a href=window-object.html#windowproxy>WindowProxy</a></code> for the <a href=#parent-browsing-context id=navigating-nested-browsing-contexts-in-the-dom:parent-browsing-context>parent browsing context</a>.</p>
+   <dt><var>window</var> . <code id=dom-frameelement-dev><a href=#dom-frameelement>frameElement</a></code><dd>
+    <p>Returns the <code id=navigating-nested-browsing-contexts-in-the-dom:element><a data-x-internal=element href=https://dom.spec.whatwg.org/#interface-element>Element</a></code> for the <a href=#browsing-context-container id=navigating-nested-browsing-contexts-in-the-dom:browsing-context-container>browsing context container</a>.</p>
+
+    <p>Returns null if there isn't one, and in cross-origin situations.</p>
+   </dl>
+
+  
+
+  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Window/top title="Returns a reference to the topmost window in the window hierarchy.">Window/top</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>3+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>12.1+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>4+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>1+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>12.1+</span></span></div></div></div><p>The <dfn data-dfn-for=Window id=dom-top data-dfn-type=attribute><code>top</code></dfn> attribute's getter must
+  run these steps:</p>
+
+  <ol><li><p>If this <code id=navigating-nested-browsing-contexts-in-the-dom:window><a href=window-object.html#window>Window</a></code> object's <a href=window-object.html#window-bc id=navigating-nested-browsing-contexts-in-the-dom:window-bc>browsing context</a> is
+   null, then return null.<li><p>Return this <code id=navigating-nested-browsing-contexts-in-the-dom:window-2><a href=window-object.html#window>Window</a></code> object's <a href=window-object.html#window-bc id=navigating-nested-browsing-contexts-in-the-dom:window-bc-2>browsing
+   context</a>'s <a href=#top-level-browsing-context id=navigating-nested-browsing-contexts-in-the-dom:top-level-browsing-context-2>top-level browsing context</a>'s <code id=navigating-nested-browsing-contexts-in-the-dom:windowproxy-4><a href=window-object.html#windowproxy>WindowProxy</a></code>
+   object.</ol>
+
+  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Window/opener title="The Window interface's opener property returns a reference to the window that opened the window, either with open(), or by navigating a link with a target attribute.">Window/opener</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>1+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>3+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>9+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>1+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span></div></div></div><p>The <dfn data-dfn-for=Window id=dom-opener data-dfn-type=attribute><code>opener</code></dfn> attribute's
+  getter must run these steps:</p>
+
+  <ol><li><p>Let <var>current</var> be this <code id=navigating-nested-browsing-contexts-in-the-dom:window-3><a href=window-object.html#window>Window</a></code> object's <a href=window-object.html#window-bc id=navigating-nested-browsing-contexts-in-the-dom:window-bc-3>browsing context</a>.<li><p>If <var>current</var> is null, then return null.<li><p>If <var>current</var>'s <a href=#disowned-its-opener id=navigating-nested-browsing-contexts-in-the-dom:disowned-its-opener>disowned</a> is true, then return null.<li><p>If <var>current</var>'s <a href=#opener-browsing-context id=navigating-nested-browsing-contexts-in-the-dom:opener-browsing-context-2>opener browsing context</a> is null, then return
+   null.<li><p>Return <var>current</var>'s <a href=#opener-browsing-context id=navigating-nested-browsing-contexts-in-the-dom:opener-browsing-context-3>opener browsing context</a>'s
+   <code id=navigating-nested-browsing-contexts-in-the-dom:windowproxy-5><a href=window-object.html#windowproxy>WindowProxy</a></code> object.</ol>
+
+  <p>The <code id=navigating-nested-browsing-contexts-in-the-dom:dom-opener><a href=#dom-opener>opener</a></code> attribute's setter must run these steps:</p>
+
+  <ol><li><p>If the given value is null and this <code id=navigating-nested-browsing-contexts-in-the-dom:window-4><a href=window-object.html#window>Window</a></code> object's <a href=window-object.html#window-bc id=navigating-nested-browsing-contexts-in-the-dom:window-bc-4>browsing context</a> is non-null, then set this <code id=navigating-nested-browsing-contexts-in-the-dom:window-5><a href=window-object.html#window>Window</a></code> object's <a href=window-object.html#window-bc id=navigating-nested-browsing-contexts-in-the-dom:window-bc-5>browsing context</a>'s <a href=#disowned-its-opener id=navigating-nested-browsing-contexts-in-the-dom:disowned-its-opener-2>disowned</a> to true.<li><p>If the given value is non-null, then return ? <a id=navigating-nested-browsing-contexts-in-the-dom:ordinarydefineownproperty href=https://tc39.es/ecma262/#sec-ordinarydefineownproperty data-x-internal=ordinarydefineownproperty>OrdinaryDefineOwnProperty</a>(this
+   <code id=navigating-nested-browsing-contexts-in-the-dom:window-6><a href=window-object.html#window>Window</a></code> object, "<code>opener</code>", { [[Value]]: the given value,
+   [[Writable]]: true, [[Enumerable]]: true, [[Configurable]]: true }).</ol>
+
+  <div class=note>
+   <p>If a <a href=#browsing-context id=navigating-nested-browsing-contexts-in-the-dom:browsing-context>browsing context</a>'s <a href=#disowned-its-opener id=navigating-nested-browsing-contexts-in-the-dom:disowned-its-opener-3>disowned</a> is true, its <code id=navigating-nested-browsing-contexts-in-the-dom:dom-opener-2><a href=#dom-opener>window.opener</a></code> attribute is null. That prevents scripts in the
+   <a href=#browsing-context id=navigating-nested-browsing-contexts-in-the-dom:browsing-context-2>browsing context</a> from changing any properties of its <a href=#opener-browsing-context id=navigating-nested-browsing-contexts-in-the-dom:opener-browsing-context-4>opener browsing
+   context</a>'s <code id=navigating-nested-browsing-contexts-in-the-dom:window-7><a href=window-object.html#window>Window</a></code> object (i.e., the <code id=navigating-nested-browsing-contexts-in-the-dom:window-8><a href=window-object.html#window>Window</a></code> object from which the
+   <a href=#browsing-context id=navigating-nested-browsing-contexts-in-the-dom:browsing-context-3>browsing context</a> was created).</p>
+
+   <p>Otherwise, if a <a href=#browsing-context id=navigating-nested-browsing-contexts-in-the-dom:browsing-context-4>browsing context</a>'s <a href=#disowned-its-opener id=navigating-nested-browsing-contexts-in-the-dom:disowned-its-opener-4>disowned</a> is false, then scripts
+   in that <a href=#browsing-context id=navigating-nested-browsing-contexts-in-the-dom:browsing-context-5>browsing context</a> can use <code id=navigating-nested-browsing-contexts-in-the-dom:dom-opener-3><a href=#dom-opener>window.opener</a></code> to
+   change properties of its <a href=#opener-browsing-context id=navigating-nested-browsing-contexts-in-the-dom:opener-browsing-context-5>opener browsing context</a>'s <code id=navigating-nested-browsing-contexts-in-the-dom:window-9><a href=window-object.html#window>Window</a></code> object. For
+   example, a script running in the <a href=#browsing-context id=navigating-nested-browsing-contexts-in-the-dom:browsing-context-6>browsing context</a> can change the value of <code>window.opener.location</code>, causing the <a href=#opener-browsing-context id=navigating-nested-browsing-contexts-in-the-dom:opener-browsing-context-6>opener browsing context</a> to
+   navigate to a completely different document.</p>
+  </div>
+
+  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Window/parent title="The Window.parent property is a reference to the parent of the current window or subframe.">Window/parent</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>1.3+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>3+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>9+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>1+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span></div></div></div><p>The <dfn data-dfn-for=Window id=dom-parent data-dfn-type=attribute><code>parent</code></dfn> attribute's
+  getter must run these steps:</p>
+
+  <ol><li><p>Let <var>current</var> be this <code id=navigating-nested-browsing-contexts-in-the-dom:window-10><a href=window-object.html#window>Window</a></code> object's <a href=window-object.html#window-bc id=navigating-nested-browsing-contexts-in-the-dom:window-bc-6>browsing context</a>.<li><p>If <var>current</var> is null, then return null.<li><p>If <var>current</var> is a <a href=#child-browsing-context id=navigating-nested-browsing-contexts-in-the-dom:child-browsing-context>child browsing context</a> of another <a href=#browsing-context id=navigating-nested-browsing-contexts-in-the-dom:browsing-context-7>browsing
+   context</a> <var>parent</var>, then return <var>parent</var>'s <code id=navigating-nested-browsing-contexts-in-the-dom:windowproxy-6><a href=window-object.html#windowproxy>WindowProxy</a></code>
+   object.<li><p>Assert: <var>current</var> is a <a href=#top-level-browsing-context id=navigating-nested-browsing-contexts-in-the-dom:top-level-browsing-context-3>top-level browsing context</a>.<li><p>Return <var>current</var>'s <code id=navigating-nested-browsing-contexts-in-the-dom:windowproxy-7><a href=window-object.html#windowproxy>WindowProxy</a></code> object.</ol>
+
+  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Window/frameElement title="The Window.frameElement property returns the element (such as <iframe> or <object>) in which the window is embedded.">Window/frameElement</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>3+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>12.1+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>5.5+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>1+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>12.1+</span></span></div></div></div><p>The <dfn id=dom-frameelement><code>frameElement</code></dfn> attribute's getter must run
+  these steps:</p>
+
+  <ol><li><p>Let <var>current</var> be this <code id=navigating-nested-browsing-contexts-in-the-dom:window-11><a href=window-object.html#window>Window</a></code> object's <a href=window-object.html#window-bc id=navigating-nested-browsing-contexts-in-the-dom:window-bc-7>browsing context</a>.<li><p>If <var>current</var> is null, then return null.<li><p>Let <var>container</var> be <var>current</var>'s <a href=#bc-container id=navigating-nested-browsing-contexts-in-the-dom:bc-container>container</a>.<li><p>If <var>container</var> is null, then return null.<li><p>If <var>container</var>'s <a id=navigating-nested-browsing-contexts-in-the-dom:node-document href=https://dom.spec.whatwg.org/#concept-node-document data-x-internal=node-document>node document</a>'s <a id=navigating-nested-browsing-contexts-in-the-dom:concept-origin href=origin.html#concept-origin>origin</a> is not
+   <a id=navigating-nested-browsing-contexts-in-the-dom:same-origin-domain href=origin.html#same-origin-domain>same origin-domain</a> with the <a id=navigating-nested-browsing-contexts-in-the-dom:current-settings-object href=webappapis.html#current-settings-object>current settings object</a>'s <a href=webappapis.html#concept-settings-object-origin id=navigating-nested-browsing-contexts-in-the-dom:concept-settings-object-origin>origin</a>, then return null.<li><p>Return <var>container</var>.</ol>
+
+  <div class=example>
+   <p>An example of when these IDL attributes can return null is as follows:</p>
+
+   <pre><code class=html>&lt;!DOCTYPE html>
+&lt;iframe>&lt;/iframe>
+
+&lt;script>
+"use strict";
+const element = document.querySelector("iframe");
+const iframeWindow = element.contentWindow;
+element.remove();
+
+console.assert(iframeWindow.top === null);
+console.assert(iframeWindow.parent === null);
+console.assert(iframeWindow.frameElement === null);
+&lt;/script></code></pre>
+
+   <p>Here the <a href=#browsing-context id=navigating-nested-browsing-contexts-in-the-dom:browsing-context-8>browsing context</a> corresponding to <code>iframeWindow</code>
+   was <a href=window-object.html#a-browsing-context-is-discarded id=navigating-nested-browsing-contexts-in-the-dom:a-browsing-context-is-discarded>discarded</a> when <code>element</code> was removed from the document.</p>
+  </div>
+
+
+
+
+  <h4 id=security-nav><span class=secno>7.1.3</span> Security<a href=#security-nav class=self-link></a></h4>
+<div data-zh-date="" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/loading-web-pages/browsing-contexts/security.zh.html?filename=security.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Floading-web-pages%2Fbrowsing-contexts%2Fsecurity.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/loading-web-pages/browsing-contexts/security.en.html></div>
+
+  <p id=security-1>A <a href=#browsing-context id=security-nav:browsing-context>browsing context</a> <var>A</var> is <dfn id=familiar-with>familiar
+  with</dfn> a second <a href=#browsing-context id=security-nav:browsing-context-2>browsing context</a> <var>B</var> if one of the following
+  conditions is true:</p>
+
+  <ul><li>Either the <a id=security-nav:concept-origin href=origin.html#concept-origin>origin</a> of the <a href=#active-document id=security-nav:active-document>active document</a> of <var>A</var>
+   is the <a href=origin.html#same-origin id=security-nav:same-origin>same</a> as the <a id=security-nav:concept-origin-2 href=origin.html#concept-origin>origin</a> of the <a href=#active-document id=security-nav:active-document-2>active
+   document</a> of <var>B</var>, or<li>The browsing context <var>A</var> is a <a href=#child-browsing-context id=security-nav:child-browsing-context>child browsing context</a> and its
+   <a href=#top-level-browsing-context id=security-nav:top-level-browsing-context>top-level browsing context</a> is <var>B</var>, or<li>The browsing context <var>B</var> is an <a href=#auxiliary-browsing-context id=security-nav:auxiliary-browsing-context>auxiliary browsing context</a> and
+   <var>A</var> is <a href=#familiar-with id=security-nav:familiar-with>familiar with</a> <var>B</var>'s <a href=#opener-browsing-context id=security-nav:opener-browsing-context>opener
+   browsing context</a>, or<li>The browsing context <var>B</var> is not a <a href=#top-level-browsing-context id=security-nav:top-level-browsing-context-2>top-level browsing context</a>,
+   but there exists an <a href=#ancestor-browsing-context id=security-nav:ancestor-browsing-context>ancestor browsing context</a> of <var>B</var> whose
+   <a href=#active-document id=security-nav:active-document-3>active document</a> has the <a href=origin.html#same-origin id=security-nav:same-origin-2>same</a> <a id=security-nav:concept-origin-3 href=origin.html#concept-origin>origin</a> as
+   the <a href=#active-document id=security-nav:active-document-4>active document</a> of <var>A</var> (possibly in fact being <var>A</var> itself).</ul>
+
+  <hr>
+
+  <p>A <a href=#browsing-context id=security-nav:browsing-context-3>browsing context</a> <var>A</var> is <dfn id=allowed-to-navigate>allowed to navigate</dfn> a
+  second <a href=#browsing-context id=security-nav:browsing-context-4>browsing context</a> <var>B</var> if the following algorithm returns true:</p>
+
+  <ol><li><p>If <var>A</var> is not the same <a href=#browsing-context id=security-nav:browsing-context-5>browsing context</a> as <var>B</var>, and
+   <var>A</var> is not one of the <a href=#ancestor-browsing-context id=security-nav:ancestor-browsing-context-2>ancestor browsing
+   contexts</a> of <var>B</var>, and <var>B</var> is not a <a href=#top-level-browsing-context id=security-nav:top-level-browsing-context-3>top-level browsing
+   context</a>, and <var>A</var>'s <a href=#active-document id=security-nav:active-document-5>active document</a>'s <a id=security-nav:active-sandboxing-flag-set href=origin.html#active-sandboxing-flag-set>active sandboxing flag
+   set</a> has its <a id=security-nav:sandboxed-navigation-browsing-context-flag href=origin.html#sandboxed-navigation-browsing-context-flag>sandboxed navigation browsing context flag</a> set, then return
+   false.<li>
+    <p>Otherwise, if <var>B</var> is a <a href=#top-level-browsing-context id=security-nav:top-level-browsing-context-4>top-level browsing context</a>, and is one of the
+    <a href=#ancestor-browsing-context id=security-nav:ancestor-browsing-context-3>ancestor browsing contexts</a> of <var>A</var>,
+    then:</p>
+
+    <ol><li><p>If <var>A</var>'s <a href=#active-window id=security-nav:active-window>active window</a> has <a id=security-nav:transient-activation href=interaction.html#transient-activation>transient activation</a> and
+     <var>A</var>'s <a href=#active-document id=security-nav:active-document-6>active document</a>'s <a id=security-nav:active-sandboxing-flag-set-2 href=origin.html#active-sandboxing-flag-set>active sandboxing flag set</a> has its
+     <a id=security-nav:sandboxed-top-level-navigation-with-user-activation-browsing-context-flag href=origin.html#sandboxed-top-level-navigation-with-user-activation-browsing-context-flag>sandboxed top-level navigation with user activation browsing context flag</a> set,
+     then return false.<li><p>Otherwise, if <var>A</var>'s <a href=#active-window id=security-nav:active-window-2>active window</a> does not have <a id=security-nav:transient-activation-2 href=interaction.html#transient-activation>transient
+     activation</a> and <var>A</var>'s <a href=#active-document id=security-nav:active-document-7>active document</a>'s <a id=security-nav:active-sandboxing-flag-set-3 href=origin.html#active-sandboxing-flag-set>active sandboxing
+     flag set</a> has its <a id=security-nav:sandboxed-top-level-navigation-without-user-activation-browsing-context-flag href=origin.html#sandboxed-top-level-navigation-without-user-activation-browsing-context-flag>sandboxed top-level navigation without user activation browsing
+     context flag</a> set, then return false.</ol>
+   <li><p>Otherwise, if <var>B</var> is a <a href=#top-level-browsing-context id=security-nav:top-level-browsing-context-5>top-level browsing context</a>, and is
+   neither <var>A</var> nor one of the <a href=#ancestor-browsing-context id=security-nav:ancestor-browsing-context-4>ancestor
+   browsing contexts</a> of <var>A</var>, and <var>A</var>'s
+   <code id=security-nav:document><a href=dom.html#document>Document</a></code>'s <a id=security-nav:active-sandboxing-flag-set-4 href=origin.html#active-sandboxing-flag-set>active sandboxing flag set</a> has its <a id=security-nav:sandboxed-navigation-browsing-context-flag-2 href=origin.html#sandboxed-navigation-browsing-context-flag>sandboxed
+   navigation browsing context flag</a> set, and <var>A</var> is not the <a id=security-nav:one-permitted-sandboxed-navigator href=origin.html#one-permitted-sandboxed-navigator>one
+   permitted sandboxed navigator</a> of <var>B</var>, then return false.<li><p>Return true.</ol>
+
+  <hr>
+
+  <p>An element has a <dfn id=browsing-context-scope-origin>browsing context scope origin</dfn> if its <code id=security-nav:document-2><a href=dom.html#document>Document</a></code>'s
+  <a href=#concept-document-bc id=security-nav:concept-document-bc>browsing context</a> is a <a href=#top-level-browsing-context id=security-nav:top-level-browsing-context-6>top-level browsing
+  context</a> or if all of its <code id=security-nav:document-3><a href=dom.html#document>Document</a></code>'s <a href=#ancestor-browsing-context id=security-nav:ancestor-browsing-context-5>ancestor browsing contexts</a> all have <a href=#active-document id=security-nav:active-document-8>active
+  documents</a> whose <a id=security-nav:concept-origin-4 href=origin.html#concept-origin>origin</a> are the <a id=security-nav:same-origin-3 href=origin.html#same-origin>same origin</a> as the element's
+  <a id=security-nav:node-document href=https://dom.spec.whatwg.org/#concept-node-document data-x-internal=node-document>node document</a>'s <a id=security-nav:concept-origin-5 href=origin.html#concept-origin>origin</a>. If an element has a <a href=#browsing-context-scope-origin id=security-nav:browsing-context-scope-origin>browsing context scope
+  origin</a>, then its value is the <a id=security-nav:concept-origin-6 href=origin.html#concept-origin>origin</a> of the element's <a id=security-nav:node-document-2 href=https://dom.spec.whatwg.org/#concept-node-document data-x-internal=node-document>node
+  document</a>.</p>
+
+  
+
+
+  
+
+
+  <h4 id=浏览上下文分组><span class=secno>7.1.4</span> 浏览上下文分组<a href=#浏览上下文分组 class=self-link></a></h4>
+<div data-zh-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/loading-web-pages/browsing-contexts/groupings-of-browsing-contexts.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/loading-web-pages/browsing-contexts/groupings-of-browsing-contexts.en.html></div>
+
+  <p>用户代理持有 <dfn id=browsing-context-group-set>浏览上下文分组的集合</dfn>
+  （一个 <a href=#browsing-context-group id=浏览上下文分组:browsing-context-group>浏览上下文分组</a> 的 <a href=https://infra.spec.whatwg.org/#ordered-set id=浏览上下文分组:set data-x-internal=set>集合</a>）。</p>
+
+  <p><dfn id=browsing-context-group>浏览上下文分组</dfn> 持有 <dfn id=browsing-context-set>浏览上下文集合</dfn>
+  （一个 <a href=#top-level-browsing-context id=浏览上下文分组:top-level-browsing-context>顶级浏览上下文</a> 的 <a href=https://infra.spec.whatwg.org/#ordered-set id=浏览上下文分组:set-2 data-x-internal=set>集合</a>）。</p>
+
+  <p class=note><a href=#creating-a-new-browsing-context-group id=浏览上下文分组:creating-a-new-browsing-context-group>创建分组时</a> 把
+  <a href=#top-level-browsing-context id=浏览上下文分组:top-level-browsing-context-2>顶级浏览上下文</a> 添加到 <a href=#browsing-context-group id=浏览上下文分组:browsing-context-group-2>组内</a>。
+  所有后续添加到 <a href=#browsing-context-group id=浏览上下文分组:browsing-context-group-3>组内</a> 的 <a href=#top-level-browsing-context id=浏览上下文分组:top-level-browsing-context-3>顶级浏览上下文</a>
+  都是 <a href=#auxiliary-browsing-context id=浏览上下文分组:auxiliary-browsing-context>附属浏览上下文</a>。</p>
+
+  <p><a href=#browsing-context-group id=浏览上下文分组:browsing-context-group-4>浏览上下文组</a> 有一个关联的 <dfn id=agent-cluster-map>代理群映射</dfn>
+  （一个 <a href=webappapis.html#agent-cluster-key id=浏览上下文分组:agent-cluster-key>代理群的键</a> 到 <a href=https://tc39.es/ecma262/#sec-agent-clusters id=浏览上下文分组:agent-cluster data-x-internal=agent-cluster>代理群</a> 的弱 <a href=https://infra.spec.whatwg.org/#ordered-map id=浏览上下文分组:ordered-map data-x-internal=ordered-map>映射</a>）。
+  用户代理负责收集已经没有地方能访问的代理群。</p>
+
+  <p><a href=#browsing-context-group id=浏览上下文分组:browsing-context-group-5>浏览上下文组</a> 有一个
+  <dfn id=bcg-cross-origin-isolated>跨域隔离</dfn> 布尔，初始为 false。</p>
+
+  <p><a href=#browsing-context-group id=浏览上下文分组:browsing-context-group-6>浏览上下文组</a> 有一个关联的
+  <dfn id=historical-agent-cluster-key-map>历史代理群键映射</dfn>，是一个
+  <a href=origin.html#concept-origin id=浏览上下文分组:concept-origin>源</a> 到 <a href=webappapis.html#agent-cluster-key id=浏览上下文分组:agent-cluster-key-2>代理群键</a> 的 <a href=https://infra.spec.whatwg.org/#ordered-map id=浏览上下文分组:ordered-map-2 data-x-internal=ordered-map>映射</a>。
+  通过记录哪些代理群键之前用于给定的源，这个映射用于确保 <a href=origin.html#origin-isolation>域隔离</a> 特性的一致性。</p>
+
+  <p class=note><a href=#historical-agent-cluster-key-map id=浏览上下文分组:historical-agent-cluster-key-map>历史代理群键映射</a> 的条目只能在浏览上下文组的生命期内获得。</p>
+
+  <p><dfn id=creating-a-new-browsing-context-group>创建浏览上下文组</dfn> 要执行以下步骤：</p>
+
+  <ol><li><p>令 <var>group</var> 为一个新的 <a href=#browsing-context-group id=浏览上下文分组:browsing-context-group-7>浏览上下文组</a>。<li><p>把 <var>group</var> <a href=https://infra.spec.whatwg.org/#set-append id=浏览上下文分组:set-append data-x-internal=set-append>加</a> 到用户代理的
+   <a href=#browsing-context-group-set id=浏览上下文分组:browsing-context-group-set>浏览上下文组集合</a>。<li><p>令 <var>browsingContext</var> 为用 null, null 和 <var>group</var>
+   <a href=#creating-a-new-browsing-context id=浏览上下文分组:creating-a-new-browsing-context>创建新的浏览上下文</a> 的结果。<li><p>把 <var>browsingContext</var> <a href=#bcg-append id=浏览上下文分组:bcg-append>加</a> 到 <var>group</var>。<li><p>返回 <var>group</var>。</ol>
+
+  <p>把 <a href=#top-level-browsing-context id=浏览上下文分组:top-level-browsing-context-4>顶级浏览上下文</a> <var>browsingContext</var>
+  <dfn id=bcg-append>加</dfn> 到 <a href=#browsing-context-group id=浏览上下文分组:browsing-context-group-8>浏览上下文组</a> <var>group</var> 的步骤如下：</p>
+
+  <ol><li><p>把 <var>browsingContext</var> <a href=https://infra.spec.whatwg.org/#set-append id=浏览上下文分组:set-append-2 data-x-internal=set-append>加到</a> <var>group</var> 的 <a href=#browsing-context-set id=浏览上下文分组:browsing-context-set>浏览上下文集合</a>。<li><p>设置 <var>browsingContext</var> 的 <a href=#tlbc-group id=浏览上下文分组:tlbc-group>group</a> 为 <var>group</var>。</ol>
+
+  <p><dfn id=bcg-remove>移除</dfn> <a href=#top-level-browsing-context id=浏览上下文分组:top-level-browsing-context-5>顶级浏览上下文</a>
+  <var>browsingContext</var> 的步骤如下：</p>
+
+  <ol><li><p>断言 <var>browsingContext</var> 的 <a href=#tlbc-group id=浏览上下文分组:tlbc-group-2>group</a> 非空，因为
+   <a href=#browsing-context id=浏览上下文分组:browsing-context>浏览环境</a> 只能 <a href=window-object.html#a-browsing-context-is-discarded id=浏览上下文分组:a-browsing-context-is-discarded>丢弃</a> 一次。<li><p>令 <var>group</var> 为 <var>browsingContext</var> 的 <a href=#tlbc-group id=浏览上下文分组:tlbc-group-3>group</a>。<li><p>设置 <var>browsingContext</var> 的 <a href=#tlbc-group id=浏览上下文分组:tlbc-group-4>group</a> 为 null。<li><p>从 <var>group</var> 的 <a href=#browsing-context-set id=浏览上下文分组:browsing-context-set-2>浏览上下文集合</a> <a href=https://infra.spec.whatwg.org/#list-remove id=浏览上下文分组:list-remove data-x-internal=list-remove>移除</a> <var>browsingContext</var>。<li><p>如果 <var>group</var> 的 <a href=#browsing-context-set id=浏览上下文分组:browsing-context-set-3>浏览上下文集合</a>
+   <a href=https://infra.spec.whatwg.org/#list-is-empty id=浏览上下文分组:list-is-empty data-x-internal=list-is-empty>为空</a>，就从用户代理的 <a href=#browsing-context-group-set id=浏览上下文分组:browsing-context-group-set-2>浏览上下文组集合</a> 中
+   <a href=https://infra.spec.whatwg.org/#list-remove id=浏览上下文分组:list-remove-2 data-x-internal=list-remove>移除</a> <var>group</var>。</ol>
+
+  <p class=note><a href=#bcg-append id=浏览上下文分组:bcg-append-2>追加</a> 和 <a href=#bcg-remove id=浏览上下文分组:bcg-remove>移除</a>
+  是定义 <a href=#browsing-context-group id=浏览上下文分组:browsing-context-group-9>浏览上下文组</a> 生命期的基本操作，
+  会被 <a href=#creating-a-new-browsing-context-group id=浏览上下文分组:creating-a-new-browsing-context-group-2>创建浏览上下文组</a>，
+  <a href=#creating-a-new-auxiliary-browsing-context id=浏览上下文分组:creating-a-new-auxiliary-browsing-context>创建附属浏览上下文</a> 和
+  <a href=window-object.html#a-browsing-context-is-discarded id=浏览上下文分组:a-browsing-context-is-discarded-2>丢弃浏览上下文</a> 调用。</p>
+
+  <hr>
+
+  <p class=note>HTML 标准层定义过 "<span id=unit-of-related-browsing-contexts>相关浏览上下文单元</span>" 和
+  "<span id=unit-of-related-similar-origin-browsing-contexts>相关 similar-origin 浏览上下文单元</span>"。
+  因为它们不够充分已经被移除。</p>
+
+  
+
+
+
+
+  <h4 id=browsing-context-names><span class=secno>7.1.5</span> Browsing context names<a href=#browsing-context-names class=self-link></a></h4>
+<div data-zh-date="" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/loading-web-pages/browsing-contexts/browsing-context-names.zh.html?filename=browsing-context-names.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Floading-web-pages%2Fbrowsing-contexts%2Fbrowsing-context-names.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/loading-web-pages/browsing-contexts/browsing-context-names.en.html></div>
+
+  <p>Browsing contexts can have a <dfn id=browsing-context-name>browsing context name</dfn>. Unless stated otherwise, it is
+  the empty string.</p>
+
+  <p>A <dfn id=valid-browsing-context-name>valid browsing context name</dfn> is any string with at least one character that does
+  not start with a U+005F LOW LINE character. (Names starting with an underscore are reserved for
+  special keywords.)</p>
+
+  <p>A <dfn id=valid-browsing-context-name-or-keyword>valid browsing context name or keyword</dfn> is any string that is either a <a href=#valid-browsing-context-name id=browsing-context-names:valid-browsing-context-name>valid
+  browsing context name</a> or that is an <a id=browsing-context-names:ascii-case-insensitive href=https://infra.spec.whatwg.org/#ascii-case-insensitive data-x-internal=ascii-case-insensitive>ASCII case-insensitive</a> match for one of:
+  <code>_blank</code>, <code>_self</code>, <code>_parent</code>, or
+  <code>_top</code>.</p>
+
+  <p>These values have different meanings based on whether the page is sandboxed or not, as
+  summarized in the following (non-normative) table. In this table, "current" means the
+  <a href=#browsing-context id=browsing-context-names:browsing-context>browsing context</a> that the link or script is in, "parent" means the <a href=#parent-browsing-context id=browsing-context-names:parent-browsing-context>parent
+  browsing context</a> of the one the link or script is in, "top" means the <a href=#top-level-browsing-context id=browsing-context-names:top-level-browsing-context>top-level
+  browsing context</a> of the one the link or script is in, "new" means a new <a href=#top-level-browsing-context id=browsing-context-names:top-level-browsing-context-2>top-level
+  browsing context</a> or <a href=#auxiliary-browsing-context id=browsing-context-names:auxiliary-browsing-context>auxiliary browsing context</a> is to be created, subject to
+  various user preferences and user agent policies, "none" means that nothing will happen, and
+  "maybe new" means the same as "new" if the "<code id=browsing-context-names:attr-iframe-sandbox-allow-popups><a href=origin.html#attr-iframe-sandbox-allow-popups>allow-popups</a></code>" keyword is also specified on the
+  <code id=browsing-context-names:attr-iframe-sandbox><a href=iframe-embed-object.html#attr-iframe-sandbox>sandbox</a></code> attribute (or if the user overrode the
+  sandboxing), and the same as "none" otherwise.</p>
+
+  <table><thead><tr><th rowspan=2>Keyword
+     <th rowspan=2>Ordinary effect
+     <th colspan=2>Effect in an <code id=browsing-context-names:the-iframe-element><a href=iframe-embed-object.html#the-iframe-element>iframe</a></code> with...
+    <tr><th><code>sandbox=""</code>
+     <th><code>sandbox="allow-top-navigation"</code>
+
+   <tbody><tr><td>none specified, for links and form submissions 
+     <td>current
+     <td>current
+     <td>current
+
+    <tr><td>empty string
+     <td>current
+     <td>current
+     <td>current
+
+    <tr><td><code>_blank</code>
+     <td>new
+     <td>maybe new
+     <td>maybe new
+
+    <tr><td><code>_self</code>
+     <td>current
+     <td>current
+     <td>current
+
+    <tr><td><code>_parent</code> if there isn't a parent
+     <td>current
+     <td>current
+     <td>current
+
+    <tr><td><code>_parent</code> if parent is also top
+     <td>parent/top
+     <td>none
+     <td>parent/top
+
+    <tr><td><code>_parent</code> if there is one and it's not top
+     <td>parent
+     <td>none
+     <td>none
+
+    <tr><td><code>_top</code> if top is current
+     <td>current
+     <td>current
+     <td>current
+
+    <tr><td><code>_top</code> if top is not current
+     <td>top
+     <td>none
+     <td>top
+
+    <tr><td>name that doesn't exist
+     <td>new
+     <td>maybe new
+     <td>maybe new
+
+    <tr><td>name that exists and is a descendant
+     <td>specified descendant
+     <td>specified descendant
+     <td>specified descendant
+
+    <tr><td>name that exists and is current
+     <td>current
+     <td>current
+     <td>current
+
+    <tr><td>name that exists and is an ancestor that is top
+     <td>specified ancestor
+     <td>none
+     <td>specified ancestor/top
+
+    <tr><td>name that exists and is an ancestor that is not top
+     <td>specified ancestor
+     <td>none
+     <td>none
+
+    <tr><td>other name that exists with common top
+     <td>specified
+     <td>none
+     <td>none
+
+    <tr><td>name that exists with different top, if <a href=#familiar-with id=browsing-context-names:familiar-with>familiar</a> and <a id=browsing-context-names:one-permitted-sandboxed-navigator href=origin.html#one-permitted-sandboxed-navigator>one permitted sandboxed navigator</a>
+     <td>specified
+     <td>specified
+     <td>specified
+
+    <tr><td>name that exists with different top, if <a href=#familiar-with id=browsing-context-names:familiar-with-2>familiar</a> but not <a id=browsing-context-names:one-permitted-sandboxed-navigator-2 href=origin.html#one-permitted-sandboxed-navigator>one permitted sandboxed navigator</a>
+     <td>specified
+     <td>none
+     <td>none
+
+    <tr><td>name that exists with different top, not <a href=#familiar-with id=browsing-context-names:familiar-with-3>familiar</a>
+     <td>new
+     <td>maybe new
+     <td>maybe new
+
+  </table>
+
+  <p class=tablenote><small>Most of the restrictions on sandboxed browsing contexts are applied by
+  other algorithms, e.g. the <a href=browsing-the-web.html#navigate id=browsing-context-names:navigate>navigation</a> algorithm, not <a href=#the-rules-for-choosing-a-browsing-context-given-a-browsing-context-name id=browsing-context-names:the-rules-for-choosing-a-browsing-context-given-a-browsing-context-name>the
+  rules for choosing a browsing context</a> given below.</small></p>
+
+  
+
+  <hr>
+
+  <p><dfn id=the-rules-for-choosing-a-browsing-context-given-a-browsing-context-name>The rules for
+  choosing a browsing context</dfn>, given a <a href=#browsing-context-name id=browsing-context-names:browsing-context-name>browsing context name</a> <var>name</var>, a
+  <a href=#browsing-context id=browsing-context-names:browsing-context-2>browsing context</a> <var>current</var>, and a boolean <var>noopener</var> are as
+  follows:</p>
+
+  <ol><li><p>Let <var>chosen</var> be null.<li><p>Let <var>windowType</var> be "<code>existing or none</code>".<li><p>Let <var>sandboxingFlagSet</var> be <var>current</var>'s <a href=#active-document id=browsing-context-names:active-document>active document</a>'s
+   <a id=browsing-context-names:active-sandboxing-flag-set href=origin.html#active-sandboxing-flag-set>active sandboxing flag set</a>.<li><p>If <var>name</var> is the empty string or an <a id=browsing-context-names:ascii-case-insensitive-2 href=https://infra.spec.whatwg.org/#ascii-case-insensitive data-x-internal=ascii-case-insensitive>ASCII case-insensitive</a> match for
+   "<code>_self</code>", then set <var>chosen</var> to <var>current</var>.<li><p>Otherwise, if <var>name</var> is an <a id=browsing-context-names:ascii-case-insensitive-3 href=https://infra.spec.whatwg.org/#ascii-case-insensitive data-x-internal=ascii-case-insensitive>ASCII case-insensitive</a> match for "<code>_parent</code>", set <var>chosen</var> to <var>current</var>'s <a href=#parent-browsing-context id=browsing-context-names:parent-browsing-context-2>parent browsing
+   context</a>, if any, and <var>current</var> otherwise.<li><p>Otherwise, if <var>name</var> is an <a id=browsing-context-names:ascii-case-insensitive-4 href=https://infra.spec.whatwg.org/#ascii-case-insensitive data-x-internal=ascii-case-insensitive>ASCII case-insensitive</a> match for "<code>_top</code>", set <var>chosen</var> to <var>current</var>'s <a href=#top-level-browsing-context id=browsing-context-names:top-level-browsing-context-3>top-level browsing
+   context</a>, if any, and <var>current</var> otherwise.<li>
+    <p>Otherwise, if <var>name</var> is not an <a id=browsing-context-names:ascii-case-insensitive-5 href=https://infra.spec.whatwg.org/#ascii-case-insensitive data-x-internal=ascii-case-insensitive>ASCII case-insensitive</a> match for "<code>_blank</code>", there exists a browsing context whose <a href=#browsing-context-name id=browsing-context-names:browsing-context-name-2>name</a> is the same as <var>name</var>, <var>current</var> is <a href=#familiar-with id=browsing-context-names:familiar-with-4>familiar
+    with</a> that browsing context, and the user agent determines that the two browsing contexts
+    are related enough that it is ok if they reach each other, set <var>chosen</var> to that
+    browsing context. If there are multiple matching browsing contexts, the user agent should set
+    <var>chosen</var> to one in some arbitrary consistent manner, such as the most recently opened,
+    most recently focused, or more closely related.</p>
+
+    <p class=XXX>This will be made more precise in <a href=https://github.com/whatwg/html/issues/313>issue #313</a>.</p>
+   <li>
+    <p>Otherwise, a new browsing context is being requested, and what happens depends on the user
+    agent's configuration and abilities — it is determined by the rules given for the first
+    applicable option from the following list:</p>
+
+    <dl class=switch><dt id=popup-blocker>If <var>current</var>'s <a href=#active-window id=browsing-context-names:active-window>active window</a> does not have
+     <a id=browsing-context-names:transient-activation href=interaction.html#transient-activation>transient activation</a> and the user agent has been configured to not show popups
+     (i.e., the user agent has a "popup blocker" enabled)<dd><p>The user agent may inform the user that a popup has been blocked.<dt id=sandboxWindowOpen>If <var>sandboxingFlagSet</var> has the <a id=browsing-context-names:sandboxed-auxiliary-navigation-browsing-context-flag href=origin.html#sandboxed-auxiliary-navigation-browsing-context-flag>sandboxed auxiliary
+     navigation browsing context flag</a> set<dd><p>The user agent may report to a developer console that a popup has been blocked.<dt>If the user agent has been configured such that in this instance it will create a new
+     browsing context<dd>
+      <ol><li><p>Set <var>windowType</var> to "<code>new and unrestricted</code>".<li>
+        <p>If <var>current</var>'s <a href=#top-level-browsing-context id=browsing-context-names:top-level-browsing-context-4>top-level browsing context</a>'s <a href=#active-document id=browsing-context-names:active-document-2>active
+        document</a>'s <a href=dom.html#concept-document-coop id=browsing-context-names:concept-document-coop>cross-origin opener policy</a> is
+        "<code id=browsing-context-names:coop-same-origin><a href=origin.html#coop-same-origin>same-origin</a></code>" or "<code id=browsing-context-names:coop-same-origin-plus-coep><a href=origin.html#coop-same-origin-plus-coep>same-origin-plus-COEP</a></code>", then:</p>
+
+        <ol><li><p>Let <var>currentDocument</var> be <var>current</var>'s <a href=#active-document id=browsing-context-names:active-document-3>active
+         document</a>.<li>
+          <p>If <var>currentDocument</var>'s <a id=browsing-context-names:concept-origin href=origin.html#concept-origin>origin</a> is not <a id=browsing-context-names:same-origin href=origin.html#same-origin>same origin</a>
+          with <var>currentDocument</var>'s <a id=browsing-context-names:relevant-settings-object href=webappapis.html#relevant-settings-object>relevant settings object</a>'s <a id=browsing-context-names:concept-environment-top-level-origin href=webappapis.html#concept-environment-top-level-origin>top-level
+          origin</a>, then set <var>noopener</var> to true, <var>name</var> to "<code>_blank</code>", and <var>windowType</var> to "<code>new with no
+          opener</code>".</p>
+
+          <p class=note>In the presence of a <a id=browsing-context-names:cross-origin-opener-policy href=origin.html#cross-origin-opener-policy>cross-origin opener policy</a>, nested
+          documents that are cross-origin with their top-level browsing context's active document
+          always set <var>noopener</var> to true.</p>
+         </ol>
+       <li id=noopener><p>If <var>noopener</var> is true, then set <var>chosen</var> to the result
+       of <a href=#creating-a-new-top-level-browsing-context id=browsing-context-names:creating-a-new-top-level-browsing-context>creating a new top-level browsing context</a>.<li>
+        <p>Otherwise:</p>
+
+        <ol><li><p>Set <var>chosen</var> to the result of <a href=#creating-a-new-auxiliary-browsing-context id=browsing-context-names:creating-a-new-auxiliary-browsing-context>creating a new auxiliary browsing
+         context</a> with <var>current</var>.<li><p>If <var>sandboxingFlagSet</var>'s <a id=browsing-context-names:sandboxed-navigation-browsing-context-flag href=origin.html#sandboxed-navigation-browsing-context-flag>sandboxed navigation browsing context
+         flag</a> is set, then <var>current</var> must be set as <var>chosen</var>'s <a id=browsing-context-names:one-permitted-sandboxed-navigator-3 href=origin.html#one-permitted-sandboxed-navigator>one
+         permitted sandboxed navigator</a>.</ol>
+       <li><p>If <var>sandboxingFlagSet</var>'s <a id=browsing-context-names:sandbox-propagates-to-auxiliary-browsing-contexts-flag href=origin.html#sandbox-propagates-to-auxiliary-browsing-contexts-flag>sandbox propagates to auxiliary browsing
+       contexts flag</a> is set, then all the flags that are set in <var>sandboxingFlagSet</var>
+       must be set in <var>chosen</var>'s <a id=browsing-context-names:popup-sandboxing-flag-set href=origin.html#popup-sandboxing-flag-set>popup sandboxing flag set</a>.<li><p>If <var>name</var> is not an <a id=browsing-context-names:ascii-case-insensitive-6 href=https://infra.spec.whatwg.org/#ascii-case-insensitive data-x-internal=ascii-case-insensitive>ASCII case-insensitive</a> match for "<code>_blank</code>", then set <var>chosen</var>'s <a href=#browsing-context-name id=browsing-context-names:browsing-context-name-3>name</a> to <var>name</var>.</ol>
+
+      <p class=note>If the newly created <a href=#browsing-context id=browsing-context-names:browsing-context-3>browsing context</a> is immediately <a href=browsing-the-web.html#navigate id=browsing-context-names:navigate-2>navigated</a>, then the navigation will be done with <var id=browsing-context-names:navigation-hh><a href=browsing-the-web.html#navigation-hh>historyHandling</a></var> set to "<code id=browsing-context-names:hh-replace><a href=browsing-the-web.html#hh-replace>replace</a></code>".</p>
+     <dt>If the user agent has been configured such that in this instance it will reuse
+     <var>current</var><dd><p>Set <var>chosen</var> to <var>current</var>.<dt>If the user agent has been configured such that in this instance it will not find a
+     browsing context<dd><p>Do nothing.</dl>
+
+    <p class=note>User agents are encouraged to provide a way for users to configure the user
+    agent to always reuse <var>current</var>.</p>
+   <li><p>Return <var>chosen</var> and <var>windowType</var>.</ol>
+
+
+
+  <h3 id=cross-origin-objects><span class=secno>7.2</span> <code id=cross-origin-objects:window><a href=window-object.html#window>Window</a></code>,
+  <code id=cross-origin-objects:windowproxy><a href=window-object.html#windowproxy>WindowProxy</a></code>, 和 <code id=cross-origin-objects:location><a href=history.html#location>Location</a></code> 对象的安全基础设施 <a href=#cross-origin-objects class=self-link></a></h3>
+<div data-zh-date="Wed Feb 28 2018 16:23:38 GMT+0000 (UTC)" data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/loading-web-pages/security-infrastructure-for-window-windowproxy-and-location-objects/index.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/loading-web-pages/security-infrastructure-for-window-windowproxy-and-location-objects/index.en.html></div>
+
+  <p>尽管通常不可以跨 <a href=origin.html#concept-origin id=cross-origin-objects:concept-origin>域</a> 访问对象，
+  但 Web 平台必须考虑遗留的那些例外情况。
+
+
+  <h4 id=integration-with-idl><span class=secno>7.2.1</span> Integration with IDL<a href=#integration-with-idl class=self-link></a></h4>
+<div data-zh-date="" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/loading-web-pages/security-infrastructure-for-window-windowproxy-and-location-objects/integration-with-idl.zh.html?filename=integration-with-idl.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Floading-web-pages%2Fsecurity-infrastructure-for-window-windowproxy-and-location-objects%2Fintegration-with-idl.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/loading-web-pages/security-infrastructure-for-window-windowproxy-and-location-objects/integration-with-idl.en.html></div>
+
+  <p>When <a id=integration-with-idl:perform-a-security-check href=https://heycam.github.io/webidl/#dfn-perform-a-security-check data-x-internal=perform-a-security-check>perform a security check</a> is invoked, with a <var>platformObject</var>,
+  <var>identifier</var>, and <var>type</var>, run these steps:</p>
+
+  <ol><li><p>If <var>platformObject</var> is not a <code id=integration-with-idl:window><a href=window-object.html#window>Window</a></code> or <code id=integration-with-idl:location><a href=history.html#location>Location</a></code> object,
+   then return.</p>
+
+   <li>
+    <p>For each <var>e</var> of ! <a href=#crossoriginproperties-(-o-) id=integration-with-idl:crossoriginproperties-(-o-)>CrossOriginProperties</a>(<var>platformObject</var>):</p>
+
+    <ol><li>
+      <p>If <a id=integration-with-idl:samevalue href=https://tc39.es/ecma262/#sec-samevalue data-x-internal=samevalue>SameValue</a>(<var>e</var>.[[Property]], <var>identifier</var>) is true,
+      then:</p>
+
+      <ol><li><p>If <var>type</var> is "<code>method</code>" and <var>e</var> has neither
+       [[NeedsGet]] nor [[NeedsSet]], then return.<li><p>Otherwise, if <var>type</var> is "<code>getter</code>" and
+       <var>e</var>.[[NeedsGet]] is true, then return.<li><p>Otherwise, if <var>type</var> is "<code>setter</code>" and
+       <var>e</var>.[[NeedsSet]] is true, then return.</ol>
+     </ol>
+   <li><p>If ! <a href=#isplatformobjectsameorigin-(-o-) id=integration-with-idl:isplatformobjectsameorigin-(-o-)>IsPlatformObjectSameOrigin</a>(<var>platformObject</var>) is false, then
+   throw a <a id=integration-with-idl:securityerror href=https://heycam.github.io/webidl/#securityerror data-x-internal=securityerror>"<code>SecurityError</code>"</a> <code id=integration-with-idl:domexception><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code>.</ol>
+
+
+
+  <h4 id=shared-internal-slot:-crossoriginpropertydescriptormap><span class=secno>7.2.2</span> Shared internal slot: [[CrossOriginPropertyDescriptorMap]]<a href=#shared-internal-slot:-crossoriginpropertydescriptormap class=self-link></a></h4>
+<div data-zh-date="" data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/loading-web-pages/security-infrastructure-for-window-windowproxy-and-location-objects/shared-internal-slot-crossoriginpropertydescriptormap.zh.html?filename=shared-internal-slot-crossoriginpropertydescriptormap.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Floading-web-pages%2Fsecurity-infrastructure-for-window-windowproxy-and-location-objects%2Fshared-internal-slot-crossoriginpropertydescriptormap.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/loading-web-pages/security-infrastructure-for-window-windowproxy-and-location-objects/shared-internal-slot-crossoriginpropertydescriptormap.en.html></div>
+
+  <p><code id=shared-internal-slot:-crossoriginpropertydescriptormap:window><a href=window-object.html#window>Window</a></code> and <code id=shared-internal-slot:-crossoriginpropertydescriptormap:location><a href=history.html#location>Location</a></code> objects both have a
+  <dfn id=crossoriginpropertydescriptormap>[[CrossOriginPropertyDescriptorMap]]</dfn> internal slot, whose value is initially an empty
+  map.
+
+  <p class=note>The <a href=#crossoriginpropertydescriptormap id=shared-internal-slot:-crossoriginpropertydescriptormap:crossoriginpropertydescriptormap>[[CrossOriginPropertyDescriptorMap]]</a> internal slot contains a map
+  with entries whose keys are (<var>currentGlobal</var>, <var>objectGlobal</var>,
+  <var>propertyKey</var>)-tuples and values are property descriptors, as a memoization of what is
+  visible to scripts when <var>currentGlobal</var> inspects a <code id=shared-internal-slot:-crossoriginpropertydescriptormap:window-2><a href=window-object.html#window>Window</a></code> or
+  <code id=shared-internal-slot:-crossoriginpropertydescriptormap:location-2><a href=history.html#location>Location</a></code> object from <var>objectGlobal</var>. It is filled lazily by
+  <a href=#crossorigingetownpropertyhelper-(-o,-p-) id=shared-internal-slot:-crossoriginpropertydescriptormap:crossorigingetownpropertyhelper-(-o,-p-)>CrossOriginGetOwnPropertyHelper</a>, which consults it on future lookups.</p>
+
+  <p>User agents should allow a value held in the map to be garbage collected along with its
+  corresponding key when nothing holds a reference to any part of the value. That is, as long as
+  garbage collection is not observable.</p>
+
+  <p class=example>For example, with <code>const href =
+  Object.getOwnPropertyDescriptor(crossOriginLocation, "href").set</code> the value and its
+  corresponding key in the map cannot be garbage collected as that would be observable.</p>
+
+  <p>User agents may have an optimization whereby they remove key-value pairs from the map when
+  <code id=shared-internal-slot:-crossoriginpropertydescriptormap:dom-document-domain><a href=origin.html#dom-document-domain>document.domain</a></code> is set. This is not observable as <code id=shared-internal-slot:-crossoriginpropertydescriptormap:dom-document-domain-2><a href=origin.html#dom-document-domain>document.domain</a></code> cannot revisit an earlier value.</p>
+
+  <p class=example>For example, setting <code id=shared-internal-slot:-crossoriginpropertydescriptormap:dom-document-domain-3><a href=origin.html#dom-document-domain>document.domain</a></code>
+  to "<code>example.com</code>" on www.example.com means user agents can remove all
+  key-value pairs from the map where part of the key is www.example.com, as that can never be part
+  of the <a id=shared-internal-slot:-crossoriginpropertydescriptormap:concept-origin href=origin.html#concept-origin>origin</a> again and therefore the corresponding value could never be retrieved
+  from the map.</p>
+
+
+
+  <h4 id=shared-abstract-operations><span class=secno>7.2.3</span> Shared abstract operations<a href=#shared-abstract-operations class=self-link></a></h4>
+<div data-zh-date="" data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/loading-web-pages/security-infrastructure-for-window-windowproxy-and-location-objects/shared-abstract-operations/index.zh.html?filename=index.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Floading-web-pages%2Fsecurity-infrastructure-for-window-windowproxy-and-location-objects%2Fshared-abstract-operations%2Findex.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/loading-web-pages/security-infrastructure-for-window-windowproxy-and-location-objects/shared-abstract-operations/index.en.html></div>
+
+
+  <h5 id=crossoriginproperties-(-o-)><span class=secno>7.2.3.1</span> <dfn>CrossOriginProperties</dfn> ( <var>O</var> )<a href=#crossoriginproperties-(-o-) class=self-link></a></h5>
+<div data-zh-date="" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/loading-web-pages/security-infrastructure-for-window-windowproxy-and-location-objects/shared-abstract-operations/crossoriginproperties-o.zh.html?filename=crossoriginproperties-o.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Floading-web-pages%2Fsecurity-infrastructure-for-window-windowproxy-and-location-objects%2Fshared-abstract-operations%2Fcrossoriginproperties-o.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/loading-web-pages/security-infrastructure-for-window-windowproxy-and-location-objects/shared-abstract-operations/crossoriginproperties-o.en.html></div>
+
+  <ol><li><p>Assert: <var>O</var> is a <code id=crossoriginproperties-(-o-):location><a href=history.html#location>Location</a></code> or <code id=crossoriginproperties-(-o-):window><a href=window-object.html#window>Window</a></code> object.<li><p>If <var>O</var> is a <code id=crossoriginproperties-(-o-):location-2><a href=history.html#location>Location</a></code> object, then return «
+   { [[Property]]: "<code>href</code>", [[NeedsGet]]: false, [[NeedsSet]]: true },
+   { [[Property]]: "<code>replace</code>" } ».<li><p>Return «
+   { [[Property]]: "<code>window</code>", [[NeedsGet]]: true, [[NeedsSet]]: false },
+   { [[Property]]: "<code>self</code>", [[NeedsGet]]: true, [[NeedsSet]]: false },
+   { [[Property]]: "<code>location</code>", [[NeedsGet]]: true, [[NeedsSet]]: true },
+   { [[Property]]: "<code>close</code>" },
+   { [[Property]]: "<code>closed</code>", [[NeedsGet]]: true, [[NeedsSet]]: false },
+   { [[Property]]: "<code>focus</code>" },
+   { [[Property]]: "<code>blur</code>" },
+   { [[Property]]: "<code>frames</code>", [[NeedsGet]]: true, [[NeedsSet]]: false },
+   { [[Property]]: "<code>length</code>", [[NeedsGet]]: true, [[NeedsSet]]: false },
+   { [[Property]]: "<code>top</code>", [[NeedsGet]]: true, [[NeedsSet]]: false },
+   { [[Property]]: "<code>opener</code>", [[NeedsGet]]: true, [[NeedsSet]]: false },
+   { [[Property]]: "<code>parent</code>", [[NeedsGet]]: true, [[NeedsSet]]: false },
+   { [[Property]]: "<code>postMessage</code>" } ».</ol>
+
+  <p class=note>Indexed properties do not need to be safelisted as they are handled directly by
+  the <code id=crossoriginproperties-(-o-):windowproxy><a href=window-object.html#windowproxy>WindowProxy</a></code> object.</p>
+
+
+  <h5 id=crossoriginpropertyfallback-(-p-)><span class=secno>7.2.3.2</span> <dfn>CrossOriginPropertyFallback</dfn> ( <var>P</var> )<a href=#crossoriginpropertyfallback-(-p-) class=self-link></a></h5>
+<div data-zh-date="" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/loading-web-pages/security-infrastructure-for-window-windowproxy-and-location-objects/shared-abstract-operations/crossoriginpropertyfallback-p.zh.html?filename=crossoriginpropertyfallback-p.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Floading-web-pages%2Fsecurity-infrastructure-for-window-windowproxy-and-location-objects%2Fshared-abstract-operations%2Fcrossoriginpropertyfallback-p.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/loading-web-pages/security-infrastructure-for-window-windowproxy-and-location-objects/shared-abstract-operations/crossoriginpropertyfallback-p.en.html></div>
+
+  <ol><li><p>If <var>P</var> is "<code>then</code>", <a id=crossoriginpropertyfallback-(-p-):@@tostringtag href=infrastructure.html#@@tostringtag>@@toStringTag</a>,
+   <a id=crossoriginpropertyfallback-(-p-):@@hasinstance href=infrastructure.html#@@hasinstance>@@hasInstance</a>, or <a id=crossoriginpropertyfallback-(-p-):@@isconcatspreadable href=infrastructure.html#@@isconcatspreadable>@@isConcatSpreadable</a>, then return
+   <a id=crossoriginpropertyfallback-(-p-):propertydescriptor href=https://tc39.es/ecma262/#sec-property-descriptor-specification-type data-x-internal=propertydescriptor>PropertyDescriptor</a>{
+   [[Value]]: undefined,
+   [[Writable]]: false,
+   [[Enumerable]]: false,
+   [[Configurable]]: true }.<li><p>Throw a <a id=crossoriginpropertyfallback-(-p-):securityerror href=https://heycam.github.io/webidl/#securityerror data-x-internal=securityerror>"<code>SecurityError</code>"</a> <code id=crossoriginpropertyfallback-(-p-):domexception><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code>.</ol>
+
+
+  <h5 id=isplatformobjectsameorigin-(-o-)><span class=secno>7.2.3.3</span> <dfn>IsPlatformObjectSameOrigin</dfn> ( <var>O</var> )<a href=#isplatformobjectsameorigin-(-o-) class=self-link></a></h5>
+<div data-zh-date="" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/loading-web-pages/security-infrastructure-for-window-windowproxy-and-location-objects/shared-abstract-operations/isplatformobjectsameorigin-o.zh.html?filename=isplatformobjectsameorigin-o.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Floading-web-pages%2Fsecurity-infrastructure-for-window-windowproxy-and-location-objects%2Fshared-abstract-operations%2Fisplatformobjectsameorigin-o.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/loading-web-pages/security-infrastructure-for-window-windowproxy-and-location-objects/shared-abstract-operations/isplatformobjectsameorigin-o.en.html></div>
+
+  <ol><li><p>Return true if the <a id=isplatformobjectsameorigin-(-o-):current-settings-object href=webappapis.html#current-settings-object>current settings object</a>'s <a href=webappapis.html#concept-settings-object-origin id=isplatformobjectsameorigin-(-o-):concept-settings-object-origin>origin</a> is <a id=isplatformobjectsameorigin-(-o-):same-origin-domain href=origin.html#same-origin-domain>same origin-domain</a> with
+   <var>O</var>'s <a id=isplatformobjectsameorigin-(-o-):relevant-settings-object href=webappapis.html#relevant-settings-object>relevant settings object</a>'s <a href=webappapis.html#concept-settings-object-origin id=isplatformobjectsameorigin-(-o-):concept-settings-object-origin-2>origin</a>, and false otherwise.</ol>
+
+  <p class=note>Here the <a id=isplatformobjectsameorigin-(-o-):current-settings-object-2 href=webappapis.html#current-settings-object>current settings object</a> roughly corresponds to the "caller",
+  because this check occurs before the <a href=https://tc39.es/ecma262/#sec-execution-contexts id=isplatformobjectsameorigin-(-o-):javascript-execution-context data-x-internal=javascript-execution-context>execution
+  context</a> for the getter/setter/method in question makes its way onto the <a id=isplatformobjectsameorigin-(-o-):javascript-execution-context-stack href=https://tc39.es/ecma262/#execution-context-stack data-x-internal=javascript-execution-context-stack>JavaScript
+  execution context stack</a>. For example, in the code <code>w.document</code>, this
+  step is invoked before the <code id=isplatformobjectsameorigin-(-o-):dom-document-2><a href=window-object.html#dom-document-2>document</a></code> getter is reached as part
+  of the <a href=window-object.html#windowproxy-get>[[Get]]</a> algorithm for the <code id=isplatformobjectsameorigin-(-o-):windowproxy><a href=window-object.html#windowproxy>WindowProxy</a></code>
+  <var>w</var>.</p>
+
+
+  <h5 id=crossorigingetownpropertyhelper-(-o,-p-)><span class=secno>7.2.3.4</span> <dfn>CrossOriginGetOwnPropertyHelper</dfn> ( <var>O</var>, <var>P</var> )<a href=#crossorigingetownpropertyhelper-(-o,-p-) class=self-link></a></h5>
+<div data-zh-date="" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/loading-web-pages/security-infrastructure-for-window-windowproxy-and-location-objects/shared-abstract-operations/crossorigingetownpropertyhelper-o-p.zh.html?filename=crossorigingetownpropertyhelper-o-p.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Floading-web-pages%2Fsecurity-infrastructure-for-window-windowproxy-and-location-objects%2Fshared-abstract-operations%2Fcrossorigingetownpropertyhelper-o-p.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/loading-web-pages/security-infrastructure-for-window-windowproxy-and-location-objects/shared-abstract-operations/crossorigingetownpropertyhelper-o-p.en.html></div>
+
+  <p class=note>If this abstract operation returns undefined and there is no custom behavior, the
+  caller needs to throw a <a id=crossorigingetownpropertyhelper-(-o,-p-):securityerror href=https://heycam.github.io/webidl/#securityerror data-x-internal=securityerror>"<code>SecurityError</code>"</a> <code id=crossorigingetownpropertyhelper-(-o,-p-):domexception><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code>. In
+  practice this is handled by the caller calling <a href=#crossoriginpropertyfallback-(-p-) id=crossorigingetownpropertyhelper-(-o,-p-):crossoriginpropertyfallback-(-p-)>CrossOriginPropertyFallback</a>.</p>
+
+  <ol><li><p>Let <var>crossOriginKey</var> be a tuple consisting of the <a id=crossorigingetownpropertyhelper-(-o,-p-):current-settings-object href=webappapis.html#current-settings-object>current settings
+   object</a>, <var>O</var>'s <a id=crossorigingetownpropertyhelper-(-o,-p-):relevant-settings-object href=webappapis.html#relevant-settings-object>relevant settings object</a>, and <var>P</var>.<li>
+    <p>For each <var>e</var> of ! <a href=#crossoriginproperties-(-o-) id=crossorigingetownpropertyhelper-(-o,-p-):crossoriginproperties-(-o-)>CrossOriginProperties</a>(<var>O</var>):</p>
+
+    <ol><li>
+      <p>If <a id=crossorigingetownpropertyhelper-(-o,-p-):samevalue href=https://tc39.es/ecma262/#sec-samevalue data-x-internal=samevalue>SameValue</a>(<var>e</var>.[[Property]], <var>P</var>) is true, then:</p>
+
+      <ol><li><p>If the value of the <a href=#crossoriginpropertydescriptormap id=crossorigingetownpropertyhelper-(-o,-p-):crossoriginpropertydescriptormap>[[CrossOriginPropertyDescriptorMap]]</a> internal slot of
+       <var>O</var> contains an entry whose key is <var>crossOriginKey</var>, then return that
+       entry's value.<li><p>Let <var>originalDesc</var> be <a id=crossorigingetownpropertyhelper-(-o,-p-):ordinarygetownproperty href=https://tc39.es/ecma262/#sec-ordinarygetownproperty data-x-internal=ordinarygetownproperty>OrdinaryGetOwnProperty</a>(<var>O</var>,
+       <var>P</var>).<li><p>Let <var>crossOriginDesc</var> be undefined.<li>
+        <p>If <var>e</var>.[[NeedsGet]] and <var>e</var>.[[NeedsSet]] are absent, then:</p>
+
+        <ol><li><p>Let <var>value</var> be <var>originalDesc</var>.[[Value]].<li><p>If ! <a id=crossorigingetownpropertyhelper-(-o,-p-):iscallable href=https://tc39.es/ecma262/#sec-iscallable data-x-internal=iscallable>IsCallable</a>(<var>value</var>) is true, then set <var>value</var> to
+         an anonymous built-in function, created in the <a id=crossorigingetownpropertyhelper-(-o,-p-):current-realm-record href=https://tc39.es/ecma262/#current-realm data-x-internal=current-realm-record>current Realm Record</a>, that
+         performs the same steps as the IDL operation <var>P</var> on object <var>O</var>.<li><p>Set <var>crossOriginDesc</var> to <a id=crossorigingetownpropertyhelper-(-o,-p-):propertydescriptor href=https://tc39.es/ecma262/#sec-property-descriptor-specification-type data-x-internal=propertydescriptor>PropertyDescriptor</a>{
+         [[Value]]: <var>value</var>,
+         [[Enumerable]]: false,
+         [[Writable]]: false,
+         [[Configurable]]: true }.</ol>
+       <li>
+        <p>Otherwise:</p>
+
+        <ol><li><p>Let <var>crossOriginGet</var> be undefined.<li><p>If <var>e</var>.[[NeedsGet]] is true, then set <var>crossOriginGet</var> to an
+         anonymous built-in function, created in the <a id=crossorigingetownpropertyhelper-(-o,-p-):current-realm-record-2 href=https://tc39.es/ecma262/#current-realm data-x-internal=current-realm-record>current Realm Record</a>, that
+         performs the same steps as the getter of the IDL attribute <var>P</var> on object
+         <var>O</var>.<li><p>Let <var>crossOriginSet</var> be undefined.<li><p>If <var>e</var>.[[NeedsSet]] is true, then set <var>crossOriginSet</var> to an
+         anonymous built-in function, created in the <a id=crossorigingetownpropertyhelper-(-o,-p-):current-realm-record-3 href=https://tc39.es/ecma262/#current-realm data-x-internal=current-realm-record>current Realm Record</a>, that
+         performs the same steps as the setter of the IDL attribute <var>P</var> on object
+         <var>O</var>.<li><p>Set <var>crossOriginDesc</var> to <a id=crossorigingetownpropertyhelper-(-o,-p-):propertydescriptor-2 href=https://tc39.es/ecma262/#sec-property-descriptor-specification-type data-x-internal=propertydescriptor>PropertyDescriptor</a>{
+         [[Get]]: <var>crossOriginGet</var>,
+         [[Set]]: <var>crossOriginSet</var>,
+         [[Enumerable]]: false,
+         [[Configurable]]: true }.</ol>
+       <li><p>Create an entry in the value of the <a href=#crossoriginpropertydescriptormap id=crossorigingetownpropertyhelper-(-o,-p-):crossoriginpropertydescriptormap-2>[[CrossOriginPropertyDescriptorMap]]</a>
+       internal slot of <var>O</var> with key <var>crossOriginKey</var> and value
+       <var>crossOriginDesc</var>.<li><p>Return <var>crossOriginDesc</var>.</ol>
+     </ol>
+   <li><p>Return undefined.</ol>
+
+  <p class=note>The reason that the property descriptors produced here are configurable is to
+  preserve the <a id=crossorigingetownpropertyhelper-(-o,-p-):invariants-of-the-essential-internal-methods href=https://tc39.es/ecma262/#sec-invariants-of-the-essential-internal-methods data-x-internal=invariants-of-the-essential-internal-methods>invariants of the essential internal methods</a> required by the JavaScript
+  specification. In particular, since the value of the property can change as a consequence of
+  navigation, it is required that the property be configurable. (However, see <a href=https://github.com/tc39/ecma262/issues/672>tc39/ecma262 issue #672</a> and references to it
+  elsewhere in this specification for cases where we are not able to preserve these invariants, for
+  compatibility with existing web content.) <a href=references.html#refsJAVASCRIPT>[JAVASCRIPT]</a></p>
+
+  <p class=note>The reason the property descriptors are non-enumerable, despite this mismatching
+  the same-origin behavior, is for compatibility with existing web content. See <a href=https://github.com/whatwg/html/issues/3183>issue #3183</a> for details.</p>
+
+
+  <h5 id=crossoriginget-(-o,-p,-receiver-)><span class=secno>7.2.3.5</span> <dfn>CrossOriginGet</dfn> ( <var>O</var>, <var>P</var>, <var>Receiver</var> )<a href=#crossoriginget-(-o,-p,-receiver-) class=self-link></a></h5>
+<div data-zh-date="" data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/loading-web-pages/security-infrastructure-for-window-windowproxy-and-location-objects/shared-abstract-operations/crossoriginget-o-p-receiver.zh.html?filename=crossoriginget-o-p-receiver.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Floading-web-pages%2Fsecurity-infrastructure-for-window-windowproxy-and-location-objects%2Fshared-abstract-operations%2Fcrossoriginget-o-p-receiver.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/loading-web-pages/security-infrastructure-for-window-windowproxy-and-location-objects/shared-abstract-operations/crossoriginget-o-p-receiver.en.html></div>
+
+  <ol><li><p>Let <var>desc</var> be ? <var>O</var>.[[GetOwnProperty]](<var>P</var>).<li><p>Assert: <var>desc</var> is not undefined.<li><p>If ! <a id=crossoriginget-(-o,-p,-receiver-):isdatadescriptor href=https://tc39.es/ecma262/#sec-isdatadescriptor data-x-internal=isdatadescriptor>IsDataDescriptor</a>(<var>desc</var>) is true, then return
+   <var>desc</var>.[[Value]].<li><p>Assert: <a id=crossoriginget-(-o,-p,-receiver-):isaccessordescriptor href=https://tc39.es/ecma262/#sec-isaccessordescriptor data-x-internal=isaccessordescriptor>IsAccessorDescriptor</a>(<var>desc</var>) is true.<li><p>Let <var>getter</var> be <var>desc</var>.[[Get]].<li><p>If <var>getter</var> is undefined, then throw a <a id=crossoriginget-(-o,-p,-receiver-):securityerror href=https://heycam.github.io/webidl/#securityerror data-x-internal=securityerror>"<code>SecurityError</code>"</a>
+   <code id=crossoriginget-(-o,-p,-receiver-):domexception><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code>.<li><p>Return ? <a id=crossoriginget-(-o,-p,-receiver-):call href=https://tc39.es/ecma262/#sec-call data-x-internal=call>Call</a>(<var>getter</var>, <var>Receiver</var>).</ol>
+
+
+  <h5 id=crossoriginset-(-o,-p,-v,-receiver-)><span class=secno>7.2.3.6</span> <dfn>CrossOriginSet</dfn> ( <var>O</var>, <var>P</var>, <var>V</var>,
+  <var>Receiver</var> )<a href=#crossoriginset-(-o,-p,-v,-receiver-) class=self-link></a></h5>
+<div data-zh-date="" data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/loading-web-pages/security-infrastructure-for-window-windowproxy-and-location-objects/shared-abstract-operations/crossoriginset-o-p-v-receiver.zh.html?filename=crossoriginset-o-p-v-receiver.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Floading-web-pages%2Fsecurity-infrastructure-for-window-windowproxy-and-location-objects%2Fshared-abstract-operations%2Fcrossoriginset-o-p-v-receiver.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/loading-web-pages/security-infrastructure-for-window-windowproxy-and-location-objects/shared-abstract-operations/crossoriginset-o-p-v-receiver.en.html></div>
+
+  <ol><li><p>Let <var>desc</var> be ? <var>O</var>.[[GetOwnProperty]](<var>P</var>).<li><p>Assert: <var>desc</var> is not undefined.<li>
+    <p>If <var>desc</var>.[[Set]] is present and its value is not undefined, then:
+
+    <ol><li><p>Perform ? <a id=crossoriginset-(-o,-p,-v,-receiver-):call href=https://tc39.es/ecma262/#sec-call data-x-internal=call>Call</a>(<var>setter</var>, <var>Receiver</var>,
+     «<var>V</var>»).<li><p>Return true.</ol>
+   <li><p>Throw a <a id=crossoriginset-(-o,-p,-v,-receiver-):securityerror href=https://heycam.github.io/webidl/#securityerror data-x-internal=securityerror>"<code>SecurityError</code>"</a> <code id=crossoriginset-(-o,-p,-v,-receiver-):domexception><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code>.</ol>
+
+
+  <h5 id=crossoriginownpropertykeys-(-o-)><span class=secno>7.2.3.7</span> <dfn>CrossOriginOwnPropertyKeys</dfn> ( <var>O</var> )<a href=#crossoriginownpropertykeys-(-o-) class=self-link></a></h5>
+<div data-zh-date="" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/loading-web-pages/security-infrastructure-for-window-windowproxy-and-location-objects/shared-abstract-operations/crossoriginownpropertykeys-o.zh.html?filename=crossoriginownpropertykeys-o.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Floading-web-pages%2Fsecurity-infrastructure-for-window-windowproxy-and-location-objects%2Fshared-abstract-operations%2Fcrossoriginownpropertykeys-o.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/loading-web-pages/security-infrastructure-for-window-windowproxy-and-location-objects/shared-abstract-operations/crossoriginownpropertykeys-o.en.html></div>
+
+  <ol><li><p>Let <var>keys</var> be a new empty <a href=https://tc39.es/ecma262/#sec-list-and-record-specification-type id=crossoriginownpropertykeys-(-o-):js-list data-x-internal=js-list>List</a>.<li><p>For each <var>e</var> of ! <a href=#crossoriginproperties-(-o-) id=crossoriginownpropertykeys-(-o-):crossoriginproperties-(-o-)>CrossOriginProperties</a>(<var>O</var>), <a href=https://infra.spec.whatwg.org/#list-append id=crossoriginownpropertykeys-(-o-):list-append data-x-internal=list-append>append</a> <var>e</var>.[[Property]] to <var>keys</var>.<li><p>Return the concatenation of <var>keys</var> and « "<code>then</code>",
+   <a id=crossoriginownpropertykeys-(-o-):@@tostringtag href=infrastructure.html#@@tostringtag>@@toStringTag</a>, <a id=crossoriginownpropertykeys-(-o-):@@hasinstance href=infrastructure.html#@@hasinstance>@@hasInstance</a>, <a id=crossoriginownpropertykeys-(-o-):@@isconcatspreadable href=infrastructure.html#@@isconcatspreadable>@@isConcatSpreadable</a>
+   ».</ol>
+
+  
+
+
+
+
+  <nav><a href=dnd.html>← 6.9 Drag and drop</a> — <a href=./>Table of Contents</a> — <a href=window-object.html>7.3 The Window object →</a></nav>
+<script src=/html/resources/zh-cn.js></script>

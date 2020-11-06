@@ -1,0 +1,765 @@
+<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/html/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Standard</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/spec.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/html/styles.css crossorigin=""><script>
+   function toggleStatus(div) {
+     div.parentNode.classList.toggle('wrapped');
+   }
+   function setLinkFragment(link) {
+     link.hash = location.hash;
+   }
+  </script><link rel=stylesheet href=/html/resources/zh-cn.css><body>
+  
+  <script async="" crossorigin="" src=/html/resources/html-dfn.js></script>
+  <script data-file-issue-url=https://github.com/whatwg/html/issues/new async="" crossorigin="" src=https://resources.whatwg.org/file-issue.js></script>
+  
+  <header id=head class="head with-buttons">
+   <a href=https://whatwg.org/ class=logo><img width=100 alt=WHATWG crossorigin="" src=https://resources.whatwg.org/logo.svg height=100></a>
+   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Living Standard — Last Updated <span class=pubdate>6 November 2020</span></h2><div data-en-date="Sat Aug 11 2018 08:00:56 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/living-standard-mdash-last-updated-date-01-jan-1901.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/living-standard-mdash-last-updated-date-01-jan-1901.zh.html?filename=living-standard-mdash-last-updated-date-01-jan-1901.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fliving-standard-mdash-last-updated-date-01-jan-1901.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div><div data-en-date="Sat Aug 11 2018 08:00:56 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/commit-snapshot-mdash-last-updated-date-01-jan-1901.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/commit-snapshot-mdash-last-updated-date-01-jan-1901.zh.html?filename=commit-snapshot-mdash-last-updated-date-01-jan-1901.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fcommit-snapshot-mdash-last-updated-date-01-jan-1901.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div><div data-en-date="Sat Aug 11 2018 08:00:56 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/review-draft-mdash-published-date-01-jan-1901.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/review-draft-mdash-published-date-01-jan-1901.zh.html?filename=review-draft-mdash-published-date-01-jan-1901.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Freview-draft-mdash-published-date-01-jan-1901.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div></hgroup>
+   
+   
+   <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-91053840-1', 'auto');
+      ga('send', 'pageview');
+   </script>
+  </header>
+
+  
+
+  
+
+
+  
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/table-of-contents.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/table-of-contents.zh.html></div>
+  
+
+
+  
+<div data-en-date="Sat Aug 11 2018 08:00:56 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/full-table-of-contents.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/full-table-of-contents.zh.html></div>
+  
+
+  
+
+  
+
+
+  <nav><a href=custom-elements.html>← 4.13 Custom elements</a> — <a href=./>Table of Contents</a> — <a href=microdata.html>5 微数据 →</a></nav><ol class=toc><li id=toc-semantics><ol><li><a href=semantics-other.html#common-idioms><span class=secno>4.14</span> Common idioms without dedicated elements</a><ol><li><a href=semantics-other.html#rel-up><span class=secno>4.14.1</span> 面包屑导航</a><li><a href=semantics-other.html#tag-clouds><span class=secno>4.14.2</span> 标签云</a><li><a href=semantics-other.html#conversations><span class=secno>4.14.3</span> 对话</a><li><a href=semantics-other.html#footnotes><span class=secno>4.14.4</span> 脚注</a></ol><li><a href=semantics-other.html#disabled-elements><span class=secno>4.15</span> Disabled elements</a><li><a href=semantics-other.html#selectors><span class=secno>4.16</span> 使用选择符和 CSS 匹配 HTML 元素</a><ol><li><a href="semantics-other.html#case-sensitivity-of-the-css-'attr()'-function"><span class=secno>4.16.1</span> CSS 'attr()' 函数的大小写敏感性</a><li><a href=semantics-other.html#case-sensitivity-of-selectors><span class=secno>4.16.2</span> Case-sensitivity of selectors</a><li><a href=semantics-other.html#pseudo-classes><span class=secno>4.16.3</span> Pseudo-classes</a></ol></ol></ol><h3 id=common-idioms><span class=secno>4.14</span> Common idioms without dedicated elements<a href=#common-idioms class=self-link></a></h3>
+<div data-zh-date="" data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/the-elements-of-html/common-idioms-without-dedicated-elements/index.zh.html?filename=index.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fthe-elements-of-html%2Fcommon-idioms-without-dedicated-elements%2Findex.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/common-idioms-without-dedicated-elements/index.en.html></div>
+
+
+  <h4 id=rel-up><span class=secno>4.14.1</span> 面包屑导航<a href=#rel-up class=self-link></a></h4>
+<div data-zh-date="Sun Jun 03 2018 16:51:00 GMT+0000 (UTC)" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/the-elements-of-html/common-idioms-without-dedicated-elements/bread-crumb-navigation.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/common-idioms-without-dedicated-elements/bread-crumb-navigation.en.html></div>
+
+  <p>本规范没有提供机器可读的方式来描述面包屑导航彩蛋。
+  鼓励作者只是在段落中使用一些超链接。可以使用 <code id=rel-up:the-nav-element><a href=sections.html#the-nav-element>nav</a></code>
+  元素来标记包含这些段落的部分形成导航块。</p>
+
+  
+
+  <div class=example>
+
+   <p>在下面的例子中，当前页面可以通过两种路径到达。</p>
+
+   <pre>&lt;nav>
+ &lt;p>
+  &lt;a href="/">Main&lt;/a> ▸
+  &lt;a href="/products/">Products&lt;/a> ▸
+  &lt;a href="/products/dishwashers/">Dishwashers&lt;/a> ▸
+  &lt;a>Second hand&lt;/a>
+ &lt;/p>
+ &lt;p>
+  &lt;a href="/">Main&lt;/a> ▸
+  &lt;a href="/second-hand/">Second hand&lt;/a> ▸
+  &lt;a>Dishwashers&lt;/a>
+ &lt;/p>
+&lt;/nav></pre>
+
+  </div>
+
+
+
+  <h4 id=tag-clouds><span class=secno>4.14.2</span> 标签云<a href=#tag-clouds class=self-link></a></h4>
+<div data-zh-date="Thu May 31 2018 16:24:07 GMT+0000 (UTC)" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/the-elements-of-html/common-idioms-without-dedicated-elements/tag-clouds.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/common-idioms-without-dedicated-elements/tag-clouds.en.html></div>
+
+  <p id=tag-cloud>本规范没有定义任何专门标记一组页面的关键字列表（也称为 <i>tag clouds</i>）的标记。
+  通常，鼓励作者使用 <code id=tag-clouds:the-ul-element><a href=grouping-content.html#the-ul-element>ul</a></code> 元素来标记这些列表。
+  其中写好计数并隐藏，再用样式表或 SVG 把它的效果呈现出来。</p>
+
+  <div class=example>
+
+   <p>这是一个只有三个标签的标签云：</p>
+
+   <pre>&lt;style>
+.tag-cloud > li > span { display: none; }
+.tag-cloud > li { display: inline; }
+.tag-cloud-1 { font-size: 0.7em; }
+.tag-cloud-2 { font-size: 0.9em; }
+.tag-cloud-3 { font-size: 1.1em; }
+.tag-cloud-4 { font-size: 1.3em; }
+.tag-cloud-5 { font-size: 1.5em; }
+
+@media speech {
+  .tag-cloud > li > span { display:inline }
+}
+&lt;/style>
+...
+&lt;ul class="tag-cloud">
+ &lt;li class="tag-cloud-4">&lt;a title="28 instances" href="/t/apple">apple&lt;/a> &lt;span>(popular)&lt;/span>
+ &lt;li class="tag-cloud-2">&lt;a title="6 instances"  href="/t/kiwi">kiwi&lt;/a> &lt;span>(rare)&lt;/span>
+ &lt;li class="tag-cloud-5">&lt;a title="41 instances" href="/t/pear">pear&lt;/a> &lt;span>(very popular)&lt;/span>
+&lt;/ul></pre>
+
+   <p>每个标签实际的频率使用 <code id=tag-clouds:attr-title><a href=dom.html#attr-title>title</a></code> 属性给出。
+   提供了一个 CSS 样式表来把标记转化成一个不同大小的词的云，
+   但不支持 CSS 的或非视觉的用户代理中，包含类似 "(popular)" 或 "(rare)" 字样的标记也会把不同频率的标签分离开，
+   这样所有用户都可以得到这个信息。</p>
+
+   <p>使用 <code id=tag-clouds:the-ul-element-2><a href=grouping-content.html#the-ul-element>ul</a></code> 元素（而不是 <code id=tag-clouds:the-ol-element><a href=grouping-content.html#the-ol-element>ol</a></code>）是因为顺序并不重要：
+   虽然列表实际上是按字母顺序排列的，但如果按标签的长度排序，它将传达相同的信息。</p>
+
+   <p><code id=tag-clouds:link-type-tag><a href=links.html#link-type-tag>tag</a></code> <code id=tag-clouds:attr-hyperlink-rel><a href=links.html#attr-hyperlink-rel>rel</a></code>
+   关键字 <em>没有</em> 用在这些 <code id=tag-clouds:the-a-element><a href=text-level-semantics.html#the-a-element>a</a></code> 元素上，
+   因为它们表示的标签不适用于当前页面自己；它们只是列出标签本身的索引的一部分。</p>
+
+  </div>
+
+
+
+  <h4 id=conversations><span class=secno>4.14.3</span> 对话<a href=#conversations class=self-link></a></h4>
+<div data-zh-date="Sun Jun 03 2018 16:51:00 GMT+0000 (UTC)" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/the-elements-of-html/common-idioms-without-dedicated-elements/conversations.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/common-idioms-without-dedicated-elements/conversations.en.html></div>
+
+  
+
+  <p>本规范没有定义特定的元素来标记对话、会议记录、聊天记录、剧本中的对话、即时通信记录，
+  和其他有不同参与者轮流发言的场景。</p>
+
+  <p>但是鼓励作者使用 <code id=conversations:the-p-element><a href=grouping-content.html#the-p-element>p</a></code> 元素和标点来标记对话。
+  需要标记发言者来提供样式的情况，鼓励作者使用 <code id=conversations:the-span-element><a href=text-level-semantics.html#the-span-element>span</a></code> 或 <code id=conversations:the-b-element><a href=text-level-semantics.html#the-b-element>b</a></code>。
+  可以使用 <code id=conversations:the-i-element><a href=text-level-semantics.html#the-i-element>i</a></code> 元素包裹其内容的段落来标记对话的信息。</p>
+
+  <div class=example>
+
+   <p>这个例子中，使用了 Abbot 和 Costello's 著名的喜剧 <cite>Who's on first</cite> 中的一个摘录：</p>
+
+<pre>&lt;p> Costello: Look, you gotta first baseman?
+&lt;p> Abbott: Certainly.
+&lt;p> Costello: Who's playing first?
+&lt;p> Abbott: That's right.
+&lt;p> Costello becomes exasperated.
+&lt;p> Costello: When you pay off the first baseman every month, who gets the money?
+&lt;p> Abbott: Every dollar of it.</pre>
+
+  </div>
+
+  <div class=example>
+
+   <p>下面的摘录演示了如何标记 IM 对话日志，
+   使用 <code id=conversations:the-data-element><a href=text-level-semantics.html#the-data-element>data</a></code> 元素来为每行提供 Unix 时间戳。
+   注意 <code id=conversations:the-time-element><a href=text-level-semantics.html#the-time-element>time</a></code> 元素不支持这个时间戳的格式，所以才使用了
+   <code id=conversations:the-data-element-2><a href=text-level-semantics.html#the-data-element>data</a></code> 元素（即 Unix <code>time_t</code> 时间戳）。
+   如果作者希望使用 <code id=conversations:the-time-element-2><a href=text-level-semantics.html#the-time-element>time</a></code> 元素支持的日期或时间格式来标记数据，
+   就要使用那个元素来替代 <code id=conversations:the-data-element-3><a href=text-level-semantics.html#the-data-element>data</a></code>。
+   这样的好处是数据分析工具可以无歧义地检测到时间戳，而不需要与网页作者协调。</p>
+
+   <pre>&lt;p> &lt;data value="1319898155">14:22&lt;/data> &lt;b>egof&lt;/b> I'm not that nerdy, I've only seen 30% of the star trek episodes
+&lt;p> &lt;data value="1319898192">14:23&lt;/data> &lt;b>kaj&lt;/b> if you know what percentage of the star trek episodes you have seen, you are inarguably nerdy
+&lt;p> &lt;data value="1319898200">14:23&lt;/data> &lt;b>egof&lt;/b> it's unarguably
+&lt;p> &lt;data value="1319898228">14:23&lt;/data> &lt;i>* kaj blinks&lt;/i>
+&lt;p> &lt;data value="1319898260">14:24&lt;/data> &lt;b>kaj&lt;/b> you are not helping your case</pre>
+   
+
+  </div>
+
+  <div class=example>
+
+   <p>HTML 没有一种好的方式来标记图形，因此游戏中交互式对话的描述很难标记出来。
+   这个例子展示了一个可能的惯例，使用 <code id=conversations:the-dl-element><a href=grouping-content.html#the-dl-element>dl</a></code> 元素来列出对话中每个点可能的回复。
+   可以考虑的另一个选择是以 DOT 文件的格式来描述对话，然后把结果输出为 SVG 图片放到文档中。<a href=references.html#refsDOT>[DOT]</a></p>
+
+   <pre>&lt;p> Next, you meet a fisher. You can say one of several greetings:
+&lt;dl>
+ &lt;dt> "Hello there!"
+ &lt;dd>
+  &lt;p> She responds with "Hello, how may I help you?"; you can respond with:
+  &lt;dl>
+   &lt;dt> "I would like to buy a fish."
+   &lt;dd> &lt;p> She sells you a fish and the conversation finishes.
+   &lt;dt> "Can I borrow your boat?"
+   &lt;dd>
+    &lt;p> She is surprised and asks "What are you offering in return?".
+    &lt;dl>
+     &lt;dt> "Five gold." (if you have enough)
+     &lt;dt> "Ten gold." (if you have enough)
+     &lt;dt> "Fifteen gold." (if you have enough)
+     &lt;dd> &lt;p> She lends you her boat. The conversation ends.
+     &lt;dt> "A fish." (if you have one)
+     &lt;dt> "A newspaper." (if you have one)
+     &lt;dt> "A pebble." (if you have one)
+     &lt;dd> &lt;p> "No thanks", she replies. Your conversation options
+     at this point are the same as they were after asking to borrow
+     her boat, minus any options you've suggested before.
+    &lt;/dl>
+   &lt;/dd>
+  &lt;/dl>
+ &lt;/dd>
+ &lt;dt> "Vote for me in the next election!"
+ &lt;dd> &lt;p> She turns away. The conversation finishes.
+ &lt;dt> "Madam, are you aware that your fish are running away?"
+ &lt;dd>
+  &lt;p> She looks at you skeptically and says "Fish cannot run, miss".
+  &lt;dl>
+   &lt;dt> "You got me!"
+   &lt;dd> &lt;p> The fisher sighs and the conversation ends.
+   &lt;dt> "Only kidding."
+   &lt;dd> &lt;p> "Good one!" she retorts. Your conversation options at this
+   point are the same as those following "Hello there!" above.
+   &lt;dt> "Oh, then what are they doing?"
+   &lt;dd> &lt;p> She looks at her fish, giving you an opportunity to steal
+   her boat, which you do. The conversation ends.
+  &lt;/dl>
+ &lt;/dd>
+&lt;/dl></pre>
+
+  </div>
+
+  <div class=example>
+
+   <p>有些图中对话比较简单：每个角色只有一些确定的话要说。
+   这个例子中，一个游戏 FAQ/流程 列出了每个角色的一些已知的可能回应：</p>
+
+   <pre>&lt;section>
+ &lt;h1>Dialogue&lt;/h1>
+ &lt;p>&lt;small>Some characters repeat their lines in order each time you interact
+ with them, others randomly pick from amongst their lines. Those who respond in
+ order have numbered entries in the lists below.&lt;/small>
+ &lt;h2>The Shopkeeper&lt;/h2>
+ &lt;ul>
+  &lt;li>How may I help you?
+  &lt;li>Fresh apples!
+  &lt;li>A loaf of bread for madam?
+ &lt;/ul>
+ &lt;h2>The pilot&lt;/h2>
+ &lt;p>Before the accident:
+ &lt;ul>
+  &lt;li>I'm about to fly out, sorry!
+  &lt;li>Sorry, I'm just waiting for flight clearance and then I'll be off!
+ &lt;/ul>
+ &lt;p>After the accident:
+ &lt;ol>
+  &lt;li>I'm about to fly out, sorry!
+  &lt;li>Ok, I'm not leaving right now, my plane is being cleaned.
+  &lt;li>Ok, it's not being cleaned, it needs a minor repair first.
+  &lt;li>Ok, ok, stop bothering me! Truth is, I had a crash.
+ &lt;/ol>
+ &lt;h2>Clan Leader&lt;/h2>
+ &lt;p>During the first clan meeting:
+ &lt;ul>
+  &lt;li>Hey, have you seen my daughter? I bet she's up to something nefarious again...
+  &lt;li>Nice weather we're having today, eh?
+  &lt;li>The name is Bailey, Jeff Bailey. How can I help you today?
+  &lt;li>A glass of water? Fresh from the well!
+ &lt;/ul>
+ &lt;p>After the earthquake:
+ &lt;ol>
+  &lt;li>Everyone is safe in the shelter, we just have to put out the fire!
+  &lt;li>I'll go and tell the fire brigade, you keep hosing it down!
+ &lt;/ol>
+&lt;/section></pre>
+
+  </div>
+
+
+
+  <h4 id=footnotes><span class=secno>4.14.4</span> 脚注<a href=#footnotes class=self-link></a></h4>
+<div data-zh-date="Sun Jun 03 2018 16:51:00 GMT+0000 (UTC)" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/the-elements-of-html/common-idioms-without-dedicated-elements/footnotes.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/common-idioms-without-dedicated-elements/footnotes.en.html></div>
+
+  <p>HTML 没有标记脚注的专门机制。以下是建议的替代方案。</p>
+
+  <hr>
+
+  <p>对于较短的行内注释，可以使用 <code id=footnotes:attr-title><a href=dom.html#attr-title>title</a></code> 属性。。</p>
+
+  <div class=example>
+
+   <p>在这个例子中，对话框中有两部分是通过 <code id=footnotes:attr-title-2><a href=dom.html#attr-title>title</a></code> 属性，
+   使用类似脚注的内容注释的。</p>
+
+   <pre>&lt;p> &lt;b>Customer&lt;/b>: Hello! I wish to register a complaint. Hello. Miss?
+&lt;p> &lt;b>Shopkeeper&lt;/b>: <strong>&lt;span title="Colloquial pronunciation of 'What do you'"</strong>
+>Watcha&lt;/span> mean, miss?
+&lt;p> &lt;b>Customer&lt;/b>: Uh, I'm sorry, I have a cold. I wish to make a complaint.
+&lt;p> &lt;b>Shopkeeper&lt;/b>: Sorry, &lt;span <strong>title="This is, of course, a lie."</strong>>we're
+closing for lunch&lt;/span>.</pre>
+
+  </div>
+
+  
+  <p class=note>不幸的是，很多用户代理目前不鼓励依赖 <code id=footnotes:attr-title-3><a href=dom.html#attr-title>title</a></code> 属性，
+  它们没有按照本规范的要求把该属性以可访问的方式暴露出来。
+  （例如，需要类似鼠标的指点设备才能让提示显示出来，这就排除了纯键盘用户和触摸设备用户，
+  这里面包括任何一个使用现代手机和平板的用户）。</p>
+
+  <p class=note>如果使用 <code id=footnotes:attr-title-4><a href=dom.html#attr-title>title</a></code> 属性，可以使用 CSS 来吸引读者注意
+  这个有 <code id=footnotes:attr-title-5><a href=dom.html#attr-title>title</a></code> 属性的元素。</p>
+
+  <div class=example>
+
+   <p>例如，下面的 CSS 在有 <code id=footnotes:attr-title-6><a href=dom.html#attr-title>title</a></code> 属性的元素下面画了一条虚线。</p>
+
+   <pre>[title] { border-bottom: thin dashed; }</pre>
+
+  </div>
+
+  <hr>
+
+  <p>对于更长的注释，应该使用 <code id=footnotes:the-a-element><a href=text-level-semantics.html#the-a-element>a</a></code> 元素，指向文档后面的一个元素。
+  根据惯例，这个超链接的内容是一个方括号中的数字。</p>
+
+  <div class=example>
+
+   <p>在这个例子中，对话框中的脚注链接到了对话框下面的一个段落。
+   然后这个段落又链接回对话框，让用户可以返回脚注的位置。</p>
+
+   <pre>&lt;p> Announcer: Number 16: The &lt;i>hand&lt;/i>.
+&lt;p> Interviewer: Good evening. I have with me in the studio tonight
+Mr Norman St John Polevaulter, who for the past few years has been
+contradicting people. Mr Polevaulter, why &lt;em>do&lt;/em> you
+contradict people?
+&lt;p> Norman: I don't. &lt;sup>&lt;a href="#fn1" id="r1">[1]&lt;/a>&lt;/sup>
+&lt;p> Interviewer: You told me you did!
+<em>...</em>
+&lt;section>
+ &lt;p id="fn1">&lt;a href="#r1">[1]&lt;/a> This is, naturally, a lie,
+ but paradoxically if it were true he could not say so without
+ contradicting the interviewer and thus making it false.&lt;/p>
+&lt;/section></pre>
+
+  </div>
+
+  <hr>
+
+  <p>对于适用于整个章节的文本（而非特定的词和句子）的更长的边栏笔记，
+  应该使用 <code id=footnotes:the-aside-element><a href=sections.html#the-aside-element>aside</a></code> 元素。</p>
+
+  <div class=example>
+
+   <p>在这个例子中，对话框后给出了一个边栏，里面给出了一些上下文。</p>
+
+   <pre>&lt;p> &lt;span class="speaker">Customer&lt;/span>: I will not buy this record, it is scratched.
+&lt;p> &lt;span class="speaker">Shopkeeper&lt;/span>: I'm sorry?
+&lt;p> &lt;span class="speaker">Customer&lt;/span>: I will not buy this record, it is scratched.
+&lt;p> &lt;span class="speaker">Shopkeeper&lt;/span>: No no no, this's'a tobacconist's.
+&lt;aside>
+ &lt;p>In 1970, the British Empire lay in ruins, and foreign
+ nationalists frequented the streets — many of them Hungarians
+ (not the streets — the foreign nationals). Sadly, Alexander
+ Yalt has been publishing incompetently-written phrase books.
+&lt;/aside></pre>
+
+  </div>
+
+  <hr>
+
+  <p>对图表而言，脚注可以包含在相关的 <code id=footnotes:the-figcaption-element><a href=grouping-content.html#the-figcaption-element>figcaption</a></code> 或 <code id=footnotes:the-caption-element><a href=tables.html#the-caption-element>caption</a></code> 元素中，
+  或者周围的文章中。</p>
+
+  <div class=example>
+
+   <p>在这个例子中， 表格的单元格中有一些来自文章脚注。
+   使用了一个 <code id=footnotes:the-figure-element><a href=grouping-content.html#the-figure-element>figure</a></code> 元素为表格和脚注一起给出了一个图例。</p>
+
+   <pre>&lt;figure>
+ &lt;figcaption>Table 1. Alternative activities for knights.&lt;/figcaption>
+ &lt;table>
+  &lt;tr>
+   &lt;th> Activity
+   &lt;th> Location
+   &lt;th> Cost
+  &lt;tr>
+   &lt;td> Dance
+   &lt;td> Wherever possible
+   &lt;td> £0&lt;sup>&lt;a href="#fn1">1&lt;/a>&lt;/sup>
+  &lt;tr>
+   &lt;td> Routines, chorus scenes&lt;sup>&lt;a href="#fn2">2&lt;/a>&lt;/sup>
+   &lt;td> Undisclosed
+   &lt;td> Undisclosed
+  &lt;tr>
+   &lt;td> Dining&lt;sup>&lt;a href="#fn3">3&lt;/a>&lt;/sup>
+   &lt;td> Camelot
+   &lt;td> Cost of ham, jam, and spam&lt;sup>&lt;a href="#fn4">4&lt;/a>&lt;/sup>
+ &lt;/table>
+ &lt;p id="fn1">1. Assumed.&lt;/p>
+ &lt;p id="fn2">2. Footwork impeccable.&lt;/p>
+ &lt;p id="fn3">3. Quality described as "well".&lt;/p>
+ &lt;p id="fn4">4. A lot.&lt;/p>
+&lt;/figure></pre>
+
+  </div>
+
+
+
+  <h3 id=disabled-elements><span class=secno>4.15</span> Disabled elements<a href=#disabled-elements class=self-link></a></h3>
+<div data-zh-date="" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/the-elements-of-html/disabled-elements.zh.html?filename=disabled-elements.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fthe-elements-of-html%2Fdisabled-elements.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/disabled-elements.en.html></div>
+
+  <p>An element is said to be <dfn id=concept-element-disabled>actually disabled</dfn> if it
+  is one of the following:</p>
+
+  <ul><li>a <code id=disabled-elements:the-button-element><a href=form-elements.html#the-button-element>button</a></code> element that is <a href=form-control-infrastructure.html#concept-fe-disabled id=disabled-elements:concept-fe-disabled>disabled</a><li>an <code id=disabled-elements:the-input-element><a href=input.html#the-input-element>input</a></code> element that is <a href=form-control-infrastructure.html#concept-fe-disabled id=disabled-elements:concept-fe-disabled-2>disabled</a><li>a <code id=disabled-elements:the-select-element><a href=form-elements.html#the-select-element>select</a></code> element that is <a href=form-control-infrastructure.html#concept-fe-disabled id=disabled-elements:concept-fe-disabled-3>disabled</a><li>a <code id=disabled-elements:the-textarea-element><a href=form-elements.html#the-textarea-element>textarea</a></code> element that is <a href=form-control-infrastructure.html#concept-fe-disabled id=disabled-elements:concept-fe-disabled-4>disabled</a><li>an <code id=disabled-elements:the-optgroup-element><a href=form-elements.html#the-optgroup-element>optgroup</a></code> element that has a <code id=disabled-elements:attr-optgroup-disabled><a href=form-elements.html#attr-optgroup-disabled>disabled</a></code> attribute<li>an <code id=disabled-elements:the-option-element><a href=form-elements.html#the-option-element>option</a></code> element that is <a href=form-elements.html#concept-option-disabled id=disabled-elements:concept-option-disabled>disabled</a><li>a <code id=disabled-elements:the-fieldset-element><a href=form-elements.html#the-fieldset-element>fieldset</a></code> element that is a <a href=form-elements.html#concept-fieldset-disabled id=disabled-elements:concept-fieldset-disabled>disabled fieldset</a><li>a <a id=disabled-elements:form-associated-custom-element href=custom-elements.html#form-associated-custom-element>form-associated custom element</a> that is
+   <a href=form-control-infrastructure.html#concept-fe-disabled id=disabled-elements:concept-fe-disabled-5>disabled</a></ul>
+
+  <p class=note>This definition is used to determine what elements are <a id=disabled-elements:focusable href=interaction.html#focusable>focusable</a> and
+  which elements match the <code id=disabled-elements:selector-enabled><a href=#selector-enabled>:enabled</a></code> and
+  <code id=disabled-elements:selector-disabled><a href=#selector-disabled>:disabled</a></code> <a href=https://drafts.csswg.org/selectors/#pseudo-class id=disabled-elements:pseudo-class data-x-internal=pseudo-class>pseudo
+  classes</a>.</p>
+
+
+  
+
+
+  <h3 id=selectors><span class=secno>4.16</span> 使用选择符和 CSS 匹配 HTML 元素<a href=#selectors class=self-link></a></h3>
+<div data-zh-date="Sat Apr 21 2018 17:11:33 GMT+0000 (UTC)" data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/the-elements-of-html/matching-html-elements-using-selectors-and-css/index.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/matching-html-elements-using-selectors-and-css/index.en.html></div>
+
+
+  <h4 id="case-sensitivity-of-the-css-'attr()'-function"><span class=secno>4.16.1</span> CSS <a id="case-sensitivity-of-the-css-'attr()'-function:'attr()'" href=https://drafts.csswg.org/css-values/#funcdef-attr data-x-internal="'attr()'">'attr()'</a> 函数的大小写敏感性<a href="#case-sensitivity-of-the-css-'attr()'-function" class=self-link></a></h4>
+<div data-zh-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/the-elements-of-html/matching-html-elements-using-selectors-and-css/case-sensitivity-of-the-css-attr-function.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/matching-html-elements-using-selectors-and-css/case-sensitivity-of-the-css-attr-function.en.html></div>
+
+  <p>CSS Values and Units 规范把 <a id="case-sensitivity-of-the-css-'attr()'-function:'attr()'-2" href=https://drafts.csswg.org/css-values/#funcdef-attr data-x-internal="'attr()'">'attr()'</a> 函数的属性名的大小写敏感性留给宿主语言来定义。
+  <a href=references.html#refsCSSVALUES>[CSSVALUES]</a></p>
+
+  <p>当比较 CSS <a id="case-sensitivity-of-the-css-'attr()'-function:'attr()'-3" href=https://drafts.csswg.org/css-values/#funcdef-attr data-x-internal="'attr()'">'attr()'</a> 函数的属性名部分与
+  <a href=https://dom.spec.whatwg.org/#html-document id="case-sensitivity-of-the-css-'attr()'-function:html-documents" data-x-internal=html-documents>HTML 文档</a> 中的
+  <a href=infrastructure.html#html-elements id="case-sensitivity-of-the-css-'attr()'-function:html-elements">HTML 元素</a> 的
+  无命名空间的属性名时，
+  CSS <a id="case-sensitivity-of-the-css-'attr()'-function:'attr()'-4" href=https://drafts.csswg.org/css-values/#funcdef-attr data-x-internal="'attr()'">'attr()'</a> 函数的属性名部分首先必须
+  <a href=https://infra.spec.whatwg.org/#ascii-lowercase id="case-sensitivity-of-the-css-'attr()'-function:converted-to-ascii-lowercase" data-x-internal=converted-to-ascii-lowercase>转换为 ASCII 小写</a>。
+  该函数与其他属性对比时必须根据它原有的大小写。
+  在上述两种情况下，比较过程都是大小写敏感的。</p>
+
+  <p class=note>这与比较 CSS <a href=https://drafts.csswg.org/selectors/#attribute-selector id="case-sensitivity-of-the-css-'attr()'-function:attribute-selector" data-x-internal=attribute-selector>属性选择器</a> 的名字部分是一样的，
+  在下一节中说明。</p>
+
+
+
+  <h4 id=case-sensitivity-of-selectors><span class=secno>4.16.2</span> Case-sensitivity of selectors<a href=#case-sensitivity-of-selectors class=self-link></a></h4>
+<div data-zh-date="" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/the-elements-of-html/matching-html-elements-using-selectors-and-css/case-sensitivity-of-selectors.zh.html?filename=case-sensitivity-of-selectors.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fthe-elements-of-html%2Fmatching-html-elements-using-selectors-and-css%2Fcase-sensitivity-of-selectors.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/matching-html-elements-using-selectors-and-css/case-sensitivity-of-selectors.en.html></div>
+
+  <p><cite>Selectors</cite> leaves the case-sensitivity of element names, attribute names, and
+  attribute values to be defined by the host language. <a href=references.html#refsSELECTORS>[SELECTORS]</a></p>
+
+  <p>When comparing a CSS element <a id=case-sensitivity-of-selectors:type-selector href=https://drafts.csswg.org/selectors/#type-selector data-x-internal=type-selector>type selector</a> to the names of <a id=case-sensitivity-of-selectors:html-elements href=infrastructure.html#html-elements>HTML
+  elements</a> in <a id=case-sensitivity-of-selectors:html-documents href=https://dom.spec.whatwg.org/#html-document data-x-internal=html-documents>HTML documents</a>, the CSS element <a id=case-sensitivity-of-selectors:type-selector-2 href=https://drafts.csswg.org/selectors/#type-selector data-x-internal=type-selector>type selector</a> must
+  first be <a id=case-sensitivity-of-selectors:converted-to-ascii-lowercase href=https://infra.spec.whatwg.org/#ascii-lowercase data-x-internal=converted-to-ascii-lowercase>converted to ASCII lowercase</a>. The same selector when compared to other
+  elements must be compared according to its original case. In both cases, to match the values must
+  be <a id=case-sensitivity-of-selectors:identical-to href=https://infra.spec.whatwg.org/#string-is data-x-internal=identical-to>identical to</a> each other (and therefore the comparison is case sensitive).</p>
+  
+
+  <p>When comparing the name part of a CSS <a id=case-sensitivity-of-selectors:attribute-selector href=https://drafts.csswg.org/selectors/#attribute-selector data-x-internal=attribute-selector>attribute selector</a> to the names of
+  attributes on <a id=case-sensitivity-of-selectors:html-elements-2 href=infrastructure.html#html-elements>HTML elements</a> in <a id=case-sensitivity-of-selectors:html-documents-2 href=https://dom.spec.whatwg.org/#html-document data-x-internal=html-documents>HTML documents</a>, the name
+  part of the CSS <a id=case-sensitivity-of-selectors:attribute-selector-2 href=https://drafts.csswg.org/selectors/#attribute-selector data-x-internal=attribute-selector>attribute selector</a> must first be <a id=case-sensitivity-of-selectors:converted-to-ascii-lowercase-2 href=https://infra.spec.whatwg.org/#ascii-lowercase data-x-internal=converted-to-ascii-lowercase>converted to ASCII
+  lowercase</a>. The same selector when compared to other attributes must be compared according
+  to its original case. In both cases, the comparison is case-sensitive.</p>
+  
+
+  <p><a href=https://drafts.csswg.org/selectors/#attribute-selector id=case-sensitivity-of-selectors:attribute-selector-3 data-x-internal=attribute-selector>Attribute selectors</a> on an <a href=infrastructure.html#html-elements id=case-sensitivity-of-selectors:html-elements-3>HTML element</a> in an <a href=https://dom.spec.whatwg.org/#html-document id=case-sensitivity-of-selectors:html-documents-3 data-x-internal=html-documents>HTML
+  document</a> must treat the <em>values</em> of attributes with the following names as
+  <a id=case-sensitivity-of-selectors:ascii-case-insensitive href=https://infra.spec.whatwg.org/#ascii-case-insensitive data-x-internal=ascii-case-insensitive>ASCII case-insensitive</a>:</p>
+
+  
+  
+  <ul class=brief><li><code>accept</code>
+   <li><code>accept-charset</code>
+   <li><code>align</code>
+   <li><code>alink</code>
+   <li><code>axis</code>
+   <li><code>bgcolor</code>
+   <li><code>charset</code>
+   <li><code>checked</code>
+   <li><code>clear</code>
+   <li><code>codetype</code>
+   <li><code>color</code>
+   <li><code>compact</code>
+   <li><code>declare</code>
+   <li><code>defer</code>
+   <li><code>dir</code>
+   <li><code>direction</code> 
+   <li><code>disabled</code>
+   <li><code>enctype</code>
+   <li><code>face</code>
+   <li><code>frame</code>
+   <li><code>hreflang</code>
+   <li><code>http-equiv</code>
+   <li><code>lang</code>
+   <li><code>language</code>
+   <li><code>link</code>
+   <li><code>media</code>
+   <li><code>method</code>
+   <li><code>multiple</code>
+   <li><code>nohref</code>
+   <li><code>noresize</code>
+   <li><code>noshade</code>
+   <li><code>nowrap</code>
+   <li><code>readonly</code>
+   <li><code>rel</code>
+   <li><code>rev</code>
+   <li><code>rules</code>
+   <li><code>scope</code>
+   <li><code>scrolling</code>
+   <li><code>selected</code>
+   <li><code>shape</code>
+   <li><code>target</code>
+   <li><code>text</code>
+   <li><code>type</code>
+   <li><code>valign</code>
+   <li><code>valuetype</code>
+   <li><code>vlink</code>
+  </ul>
+
+  <div class=example>
+   <p>For example, the selector <code>[bgcolor="#ffffff"]</code> will match any HTML
+   element with a <code>bgcolor</code> attribute with values including <code>#ffffff</code>, <code>#FFFFFF</code> and <code>#fffFFF</code>. This
+   happens even if <code>bgcolor</code> has no effect for a given element (e.g.,
+   <code id=case-sensitivity-of-selectors:the-div-element><a href=grouping-content.html#the-div-element>div</a></code>).</p>
+
+   <p>The selector <code>[type=a s]</code> will match any
+   HTML element with a <code>type</code> attribute whose value is <code>a</code>, but not whose value is <code>A</code>, due to the <code>s</code> flag.</p>
+  </div>
+
+  <p>All other attribute values and everything else must be treated as entirely <a id=case-sensitivity-of-selectors:identical-to-2 href=https://infra.spec.whatwg.org/#string-is data-x-internal=identical-to>identical
+  to</a> each other for the purposes of selector matching. This includes:</p>
+
+  <ul class=brief><li> <a href=https://dom.spec.whatwg.org/#concept-id id=case-sensitivity-of-selectors:concept-id data-x-internal=concept-id>IDs</a> and <a href=https://dom.spec.whatwg.org/#concept-class id=case-sensitivity-of-selectors:concept-class data-x-internal=concept-class>classes</a>
+   in <a id=case-sensitivity-of-selectors:no-quirks-mode href=https://dom.spec.whatwg.org/#concept-document-no-quirks data-x-internal=no-quirks-mode>no-quirks mode</a> and <a id=case-sensitivity-of-selectors:limited-quirks-mode href=https://dom.spec.whatwg.org/#concept-document-limited-quirks data-x-internal=limited-quirks-mode>limited-quirks mode</a>
+   <li> the names of elements not in the <a id=case-sensitivity-of-selectors:html-namespace-2 href=https://infra.spec.whatwg.org/#html-namespace data-x-internal=html-namespace-2>HTML namespace</a>
+   <li> the names of <a id=case-sensitivity-of-selectors:html-elements-4 href=infrastructure.html#html-elements>HTML elements</a> in <a id=case-sensitivity-of-selectors:xml-documents href=https://dom.spec.whatwg.org/#xml-document data-x-internal=xml-documents>XML documents</a>
+   <li> the names of attributes of elements not in the <a id=case-sensitivity-of-selectors:html-namespace-2-2 href=https://infra.spec.whatwg.org/#html-namespace data-x-internal=html-namespace-2>HTML namespace</a>
+   <li> the names of attributes of <a id=case-sensitivity-of-selectors:html-elements-5 href=infrastructure.html#html-elements>HTML elements</a> in <a id=case-sensitivity-of-selectors:xml-documents-2 href=https://dom.spec.whatwg.org/#xml-document data-x-internal=xml-documents>XML documents</a>
+   <li> the names of attributes that themselves have namespaces
+  </ul>
+
+  <p class=note><cite>Selectors</cite> defines that ID and class selectors (such as <code>#foo</code> and <code>.bar</code>), when matched against elements in documents
+  that are in <a id=case-sensitivity-of-selectors:quirks-mode href=https://dom.spec.whatwg.org/#concept-document-quirks data-x-internal=quirks-mode>quirks mode</a>, will be matched in an <a id=case-sensitivity-of-selectors:ascii-case-insensitive-2 href=https://infra.spec.whatwg.org/#ascii-case-insensitive data-x-internal=ascii-case-insensitive>ASCII case-insensitive</a>
+  manner. However, this does not apply for attribute selectors with "<code>id</code>" or
+  "<code>class</code>" as the name part. The selector <code>[class="foobar"]</code> will treat its value as case-sensitive even in
+  <a id=case-sensitivity-of-selectors:quirks-mode-2 href=https://dom.spec.whatwg.org/#concept-document-quirks data-x-internal=quirks-mode>quirks mode</a>.</p>
+
+
+
+  <h4 id=pseudo-classes><span class=secno>4.16.3</span> Pseudo-classes<a href=#pseudo-classes class=self-link></a></h4><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes title="A CSS pseudo-class is a keyword added to a selector that specifies a special state of the selected element(s).">Pseudo-classes</a></div></div>
+<div data-zh-date="" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/the-elements-of-html/matching-html-elements-using-selectors-and-css/pseudo-classes.zh.html?filename=pseudo-classes.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fthe-elements-of-html%2Fmatching-html-elements-using-selectors-and-css%2Fpseudo-classes.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/matching-html-elements-using-selectors-and-css/pseudo-classes.en.html></div>
+
+  <p>There are a number of dynamic selectors that can be used with HTML. This section defines when
+  these selectors match HTML elements. <a href=references.html#refsSELECTORS>[SELECTORS]</a> <a href=references.html#refsCSSUI>[CSSUI]</a></p>
+
+  <dl><dt><dfn id=selector-defined data-noexport=""><code>:defined</code></dfn><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/CSS/:defined title="The :defined CSS pseudo-class represents any element that has been defined. This includes any standard element built in to the browser, and custom elements that have been successfully defined (i.e. with the CustomElementRegistry.define() method).">:defined</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>63+</span></span><span class="safari yes"><span>Safari</span><span>10+</span></span><span class="chrome yes"><span>Chrome</span><span>54+</span></span><hr><span class="opera yes"><span>Opera</span><span>41+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>63+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>10+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>54+</span></span><span class="webview_android yes"><span>WebView Android</span><span>54+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>6.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>41+</span></span></div></div></div><dd>
+    <p>The <code id=pseudo-classes:selector-defined><a href=#selector-defined>:defined</a></code> <a id=pseudo-classes:pseudo-class href=https://drafts.csswg.org/selectors/#pseudo-class data-x-internal=pseudo-class>pseudo-class</a> must match
+    any element that is <a href=https://dom.spec.whatwg.org/#concept-element-defined id=pseudo-classes:concept-element-defined data-x-internal=concept-element-defined>defined</a>.</p>
+   <dt><dfn id=selector-link data-noexport=""><code>:link</code></dfn><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/CSS/:link title="The :link CSS pseudo-class represents an element that has not yet been visited. It matches every unvisited <a>, <area>, or <link> element that has an href attribute.">:link</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>1+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>3.5+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>3+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>3.2+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>1.5+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>14+</span></span></div></div></div><dt><dfn id=selector-visited data-noexport=""><code>:visited</code></dfn><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/CSS/:visited title="The :visited CSS pseudo-class represents links that the user has already visited. For privacy reasons, the styles that can be modified using this selector are very limited.">:visited</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>1+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>3.5+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>4+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>4.4+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span></div></div></div><dd>
+    <p>All <code id=pseudo-classes:the-a-element><a href=text-level-semantics.html#the-a-element>a</a></code> elements that have an <code id=pseudo-classes:attr-hyperlink-href><a href=links.html#attr-hyperlink-href>href</a></code>
+    attribute, all <code id=pseudo-classes:the-area-element><a href=image-maps.html#the-area-element>area</a></code> elements that have an <code id=pseudo-classes:attr-hyperlink-href-2><a href=links.html#attr-hyperlink-href>href</a></code> attribute, and all <code id=pseudo-classes:link-元素><a href=semantics.html#link-元素>link</a></code> elements that have
+    an <code id=pseudo-classes:attr-link-href><a href=semantics.html#attr-link-href>href</a></code> attribute, must match one of <code id=pseudo-classes:selector-link><a href=#selector-link>:link</a></code> and <code id=pseudo-classes:selector-visited><a href=#selector-visited>:visited</a></code>.</p>
+
+    <p>Other specifications might apply more specific rules regarding how these elements are to
+    match these <a href=https://drafts.csswg.org/selectors/#pseudo-class id=pseudo-classes:pseudo-class-2 data-x-internal=pseudo-class>pseudo-classes</a>, to mitigate some privacy concerns
+    that apply with straightforward implementations of this requirement.</p>
+   <dt><dfn id=selector-active data-noexport=""><code>:active</code></dfn><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/CSS/:active title="The :active CSS pseudo-class represents an element (such as a button) that is being activated by the user.">:active</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>1+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>5+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>4+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>1+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span></div></div></div><dd>
+    <p>The <code id=pseudo-classes:selector-active><a href=#selector-active>:active</a></code> <a id=pseudo-classes:pseudo-class-3 href=https://drafts.csswg.org/selectors/#pseudo-class data-x-internal=pseudo-class>pseudo-class</a> is defined to
+    match an element
+    <q cite=https://drafts.csswg.org/selectors3/#the-user-action-pseudo-classes-hover-act>while an
+    element is <dfn id=concept-selector-active><i>being activated</i></dfn> by the user</q>.</p>
+
+    <p>To determine whether a particular element is <i id=pseudo-classes:concept-selector-active><a href=#concept-selector-active>being activated</a></i> for the purposes of
+    defining the <code id=pseudo-classes:selector-active-2><a href=#selector-active>:active</a></code> <a id=pseudo-classes:pseudo-class-4 href=https://drafts.csswg.org/selectors/#pseudo-class data-x-internal=pseudo-class>pseudo-class</a> only, an
+    HTML user agent must use the first relevant entry in the following list.</p>
+
+    <dl><dt>If the element has a descendant that is currently matching the <code id=pseudo-classes:selector-active-3><a href=#selector-active>:active</a></code> <a id=pseudo-classes:pseudo-class-5 href=https://drafts.csswg.org/selectors/#pseudo-class data-x-internal=pseudo-class>pseudo-class</a><dd><p>The element is <i id=pseudo-classes:concept-selector-active-2><a href=#concept-selector-active>being activated</a></i>.<dt>If the element is the <a id=pseudo-classes:labeled-control href=forms.html#labeled-control>labeled control</a> of a <code id=pseudo-classes:the-label-element><a href=forms.html#the-label-element>label</a></code> element that is
+     currently matching <code id=pseudo-classes:selector-active-4><a href=#selector-active>:active</a></code><dd><p>The element is <i id=pseudo-classes:concept-selector-active-3><a href=#concept-selector-active>being activated</a></i>.<dt>If the element is a <code id=pseudo-classes:the-button-element><a href=form-elements.html#the-button-element>button</a></code> element<dt>If the element is an <code id=pseudo-classes:the-input-element><a href=input.html#the-input-element>input</a></code> element whose <code id=pseudo-classes:attr-input-type><a href=input.html#attr-input-type>type</a></code> attribute is in the <a href="input.html#submit-button-state-(type=submit)" id="pseudo-classes:submit-button-state-(type=submit)">Submit Button</a>, <a href="input.html#image-button-state-(type=image)" id="pseudo-classes:image-button-state-(type=image)">Image Button</a>, <a href="input.html#reset-button-state-(type=reset)" id="pseudo-classes:reset-button-state-(type=reset)">Reset
+     Button</a>, or <a href="input.html#button-state-(type=button)" id="pseudo-classes:button-state-(type=button)">Button</a> state<dd>
+      <p>The element is <i id=pseudo-classes:concept-selector-active-4><a href=#concept-selector-active>being activated</a></i> if it is <a href=#in-a-formal-activation-state id=pseudo-classes:in-a-formal-activation-state>in a formal activation state</a>
+      and it is not <a href=form-control-infrastructure.html#concept-fe-disabled id=pseudo-classes:concept-fe-disabled>disabled</a>.</p>
+
+      <p class=example>For example, if the user is using a keyboard to push a <code id=pseudo-classes:the-button-element-2><a href=form-elements.html#the-button-element>button</a></code>
+      element by pressing the space bar, the element would match this <a id=pseudo-classes:pseudo-class-6 href=https://drafts.csswg.org/selectors/#pseudo-class data-x-internal=pseudo-class>pseudo-class</a> in
+      between the time that the element received the <code id=pseudo-classes:event-keydown><a data-x-internal=event-keydown href=https://w3c.github.io/uievents/#event-type-keydown>keydown</a></code>
+      event and the time the element received the <code id=pseudo-classes:event-keyup><a data-x-internal=event-keyup href=https://w3c.github.io/uievents/#event-type-keyup>keyup</a></code> event.</p>
+     <dt>If the element is an <code id=pseudo-classes:the-a-element-2><a href=text-level-semantics.html#the-a-element>a</a></code> element that has an <code id=pseudo-classes:attr-hyperlink-href-3><a href=links.html#attr-hyperlink-href>href</a></code> attribute<dt>If the element is an <code id=pseudo-classes:the-area-element-2><a href=image-maps.html#the-area-element>area</a></code> element that has an <code id=pseudo-classes:attr-hyperlink-href-4><a href=links.html#attr-hyperlink-href>href</a></code> attribute<dt>If the element is a <code id=pseudo-classes:link-元素-2><a href=semantics.html#link-元素>link</a></code> element that has an <code id=pseudo-classes:attr-link-href-2><a href=semantics.html#attr-link-href>href</a></code> attribute<dt>If the element is <a id=pseudo-classes:focusable href=interaction.html#focusable>focusable</a><dd><p>The element is <i id=pseudo-classes:concept-selector-active-5><a href=#concept-selector-active>being activated</a></i> if it is <a href=#in-a-formal-activation-state id=pseudo-classes:in-a-formal-activation-state-2>in a formal activation
+     state</a>.<dt>If the element is <a href=#being-actively-pointed-at id=pseudo-classes:being-actively-pointed-at>being actively pointed at</a><dd><p>The element is <i id=pseudo-classes:concept-selector-active-6><a href=#concept-selector-active>being activated</a></i>.</dl>
+
+    <p>An element is said to be <dfn id=in-a-formal-activation-state>in a formal activation state</dfn> between the time the user
+    begins to indicate an intent to trigger the element's <a id=pseudo-classes:activation-behaviour href=https://dom.spec.whatwg.org/#eventtarget-activation-behavior data-x-internal=activation-behaviour>activation behavior</a> and
+    either the time the user stops indicating an intent to trigger the element's <a id=pseudo-classes:activation-behaviour-2 href=https://dom.spec.whatwg.org/#eventtarget-activation-behavior data-x-internal=activation-behaviour>activation
+    behavior</a>, or the time the element's <a id=pseudo-classes:activation-behaviour-3 href=https://dom.spec.whatwg.org/#eventtarget-activation-behavior data-x-internal=activation-behaviour>activation behavior</a> has finished
+    running, which ever comes first.</p>
+
+    <p>An element is said to be <dfn id=being-actively-pointed-at>being actively pointed at</dfn> while the user indicates the
+    element using a pointing device while that pointing device is in the "down" state (e.g. for a
+    mouse, between the time the mouse button is pressed and the time it is depressed; for a finger
+    in a multitouch environment, while the finger is touching the display surface).</p>
+   <dt><dfn id=selector-hover data-noexport=""><code>:hover</code></dfn><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/CSS/:hover title="The :hover CSS pseudo-class matches when the user interacts with an element with a pointing device, but does not necessarily activate it. It is generally triggered when the user hovers over an element with the cursor (mouse pointer).">:hover</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>2+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>4+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>4+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>37+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span></div></div></div><dd>
+    <p>The <code id=pseudo-classes:selector-hover><a href=#selector-hover>:hover</a></code> <a id=pseudo-classes:pseudo-class-7 href=https://drafts.csswg.org/selectors/#pseudo-class data-x-internal=pseudo-class>pseudo-class</a> is defined to match
+    an element <q cite=https://drafts.csswg.org/selectors3/#the-user-action-pseudo-classes-hover-act>while the
+    user <i>designates</i> an element with a pointing device</q>. For the purposes of defining the
+    <code id=pseudo-classes:selector-hover-2><a href=#selector-hover>:hover</a></code> <a id=pseudo-classes:pseudo-class-8 href=https://drafts.csswg.org/selectors/#pseudo-class data-x-internal=pseudo-class>pseudo-class</a> only, an HTML user agent
+    must consider an element as being one that the user <i>designates</i> if it is:</p>
+
+    <ul><li>
+      <p>An element that the user indicates using a pointing device.</p>
+     <li>
+      <p>An element that has a descendant that the user indicates using a pointing device.</p>
+     <li>
+      <p>An element that is the <a id=pseudo-classes:labeled-control-2 href=forms.html#labeled-control>labeled control</a> of a <code id=pseudo-classes:the-label-element-2><a href=forms.html#the-label-element>label</a></code> element that is
+      currently matching <code id=pseudo-classes:selector-hover-3><a href=#selector-hover>:hover</a></code>.</p>
+     </ul>
+
+
+    <div class=example>
+     <p>Consider in particular a fragment such as:</p>
+
+     <pre><code class=html>&lt;p> &lt;label for=c> &lt;input id=a> &lt;/label> &lt;span id=b> &lt;input id=c> &lt;/span> &lt;/p></code></pre>
+
+     <p>If the user designates the element with ID "<code>a</code>" with their pointing
+     device, then the <code id=pseudo-classes:the-p-element><a href=grouping-content.html#the-p-element>p</a></code> element (and all its ancestors not shown in the snippet above),
+     the <code id=pseudo-classes:the-label-element-3><a href=forms.html#the-label-element>label</a></code> element, the element with ID "<code>a</code>", and the element
+     with ID "<code>c</code>" will match the <code id=pseudo-classes:selector-hover-4><a href=#selector-hover>:hover</a></code>
+     <a id=pseudo-classes:pseudo-class-9 href=https://drafts.csswg.org/selectors/#pseudo-class data-x-internal=pseudo-class>pseudo-class</a>. The element with ID "<code>a</code>" matches it from
+     condition 1, the <code id=pseudo-classes:the-label-element-4><a href=forms.html#the-label-element>label</a></code> and <code id=pseudo-classes:the-p-element-2><a href=grouping-content.html#the-p-element>p</a></code> elements match it because of condition 2
+     (one of their descendants is designated), and the element with ID "<code>c</code>"
+     matches it through condition 3 (its <code id=pseudo-classes:the-label-element-5><a href=forms.html#the-label-element>label</a></code> element matches <code id=pseudo-classes:selector-hover-5><a href=#selector-hover>:hover</a></code>). However, the element with ID "<code>b</code>"
+     does <em>not</em> match <code id=pseudo-classes:selector-hover-6><a href=#selector-hover>:hover</a></code>: its descendant is not
+     designated, even though it matches <code id=pseudo-classes:selector-hover-7><a href=#selector-hover>:hover</a></code>.</p>
+    </div>
+   <dt><dfn id=selector-focus data-noexport=""><code>:focus</code></dfn><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/CSS/:focus title="The :focus CSS pseudo-class represents an element (such as a form input) that has received focus. It is generally triggered when the user clicks or taps on an element or selects it with the keyboard's Tab key.">:focus</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>1+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>7+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>8+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>1+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span></div></div></div><dd>
+    <p>For the purposes of the CSS <code id=pseudo-classes:selector-focus><a href=#selector-focus>:focus</a></code>
+    <a id=pseudo-classes:pseudo-class-10 href=https://drafts.csswg.org/selectors/#pseudo-class data-x-internal=pseudo-class>pseudo-class</a>, an <dfn id=element-has-the-focus>element has the focus</dfn> when:</p>
+
+    <ul><li><p>its <a id=pseudo-classes:top-level-browsing-context href=browsers.html#top-level-browsing-context>top-level browsing context</a> has the system focus;<li><p>it is not itself a <a id=pseudo-classes:browsing-context-container href=browsers.html#browsing-context-container>browsing context container</a>; and<li>
+      <p>at least one of the following is true:</p>
+      <ul><li><p>it is one of the elements listed in the <a id=pseudo-classes:focus-chain href=interaction.html#focus-chain>focus chain</a> of the <a href=interaction.html#currently-focused-area-of-a-top-level-browsing-context id=pseudo-classes:currently-focused-area-of-a-top-level-browsing-context>currently focused area of
+       the top-level browsing context</a>, or<li><p>its <a href=https://dom.spec.whatwg.org/#concept-element-shadow-root id=pseudo-classes:concept-element-shadow-root data-x-internal=concept-element-shadow-root>shadow root</a>
+       <var>shadowRoot</var> is not null and <var>shadowRoot</var> is the <a id=pseudo-classes:root href=https://dom.spec.whatwg.org/#concept-tree-root data-x-internal=root>root</a> of at
+       least one element that <a href=#element-has-the-focus id=pseudo-classes:element-has-the-focus>has the focus</a>.</ul>
+     </ul>
+   <dt><dfn id=selector-target data-noexport=""><code>:target</code></dfn><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/CSS/:target title="The :target CSS pseudo-class represents a unique element (the target element) with an id matching the URL's fragment.">:target</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>1.3+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>9.5+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>9+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>2+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>2+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span></div></div></div><dd>
+    <p>For the purposes of the CSS <code id=pseudo-classes:selector-focus-2><a href=#selector-focus>:target</a></code>
+    <a id=pseudo-classes:pseudo-class-11 href=https://drafts.csswg.org/selectors/#pseudo-class data-x-internal=pseudo-class>pseudo-class</a>, the <code id=pseudo-classes:document><a href=dom.html#document>Document</a></code>'s <i>target elements</i> are a list
+    containing the <code id=pseudo-classes:document-2><a href=dom.html#document>Document</a></code>'s <a id=pseudo-classes:target-element href=browsing-the-web.html#target-element>target element</a>, if it is
+    not null, or containing no elements, if it is. <a href=references.html#refsSELECTORS>[SELECTORS]</a></p>
+   <dt><dfn id=selector-enabled data-noexport=""><code>:enabled</code></dfn><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/CSS/:enabled title="The :enabled CSS pseudo-class represents any enabled element. An element is enabled if it can be activated (selected, clicked on, typed into, etc.) or accept focus. The element also has a disabled state, in which it can't be activated or accept focus.">:enabled</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>3.1+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>9+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>9+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>3.1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>2+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span></div></div></div><dd>
+    <p>The <code id=pseudo-classes:selector-enabled><a href=#selector-enabled>:enabled</a></code> <a id=pseudo-classes:pseudo-class-12 href=https://drafts.csswg.org/selectors/#pseudo-class data-x-internal=pseudo-class>pseudo-class</a> must match any
+    <code id=pseudo-classes:the-button-element-3><a href=form-elements.html#the-button-element>button</a></code>, <code id=pseudo-classes:the-input-element-2><a href=input.html#the-input-element>input</a></code>, <code id=pseudo-classes:the-select-element><a href=form-elements.html#the-select-element>select</a></code>, <code id=pseudo-classes:the-textarea-element><a href=form-elements.html#the-textarea-element>textarea</a></code>,
+    <code id=pseudo-classes:the-optgroup-element><a href=form-elements.html#the-optgroup-element>optgroup</a></code>, <code id=pseudo-classes:the-option-element><a href=form-elements.html#the-option-element>option</a></code>, <code id=pseudo-classes:the-fieldset-element><a href=form-elements.html#the-fieldset-element>fieldset</a></code> element, or
+    <a id=pseudo-classes:form-associated-custom-element href=custom-elements.html#form-associated-custom-element>form-associated custom element</a> that is not <a href=#concept-element-disabled id=pseudo-classes:concept-element-disabled>actually disabled</a>.</p>
+   <dt><dfn id=selector-disabled data-noexport=""><code>:disabled</code></dfn><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/CSS/:disabled title="The :disabled CSS pseudo-class represents any disabled element. An element is disabled if it can't be activated (selected, clicked on, typed into, etc.) or accept focus. The element also has an enabled state, in which it can be activated or accept focus.">:disabled</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>3.1+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>9+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>9+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>3.1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>2+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span></div></div></div><dd>
+    <p>The <code id=pseudo-classes:selector-disabled><a href=#selector-disabled>:disabled</a></code> <a id=pseudo-classes:pseudo-class-13 href=https://drafts.csswg.org/selectors/#pseudo-class data-x-internal=pseudo-class>pseudo-class</a> must match
+    any element that is <a href=#concept-element-disabled id=pseudo-classes:concept-element-disabled-2>actually disabled</a>.</p>
+   <dt><dfn id=selector-checked data-noexport=""><code>:checked</code></dfn><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/CSS/:checked title="The :checked CSS pseudo-class selector represents any radio (<input type=&quot;radio&quot;>), checkbox (<input type=&quot;checkbox&quot;>), or option (<option> in a <select>) element that is checked or toggled to an on state.">:checked</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>3.1+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>9+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>9+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>3.1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>2+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span></div></div></div><dd>
+    <p>The <code id=pseudo-classes:selector-checked><a href=#selector-checked>:checked</a></code> <a id=pseudo-classes:pseudo-class-14 href=https://drafts.csswg.org/selectors/#pseudo-class data-x-internal=pseudo-class>pseudo-class</a> must match any
+    element falling into one of the following categories:</p>
+
+    <ul><li><code id=pseudo-classes:the-input-element-3><a href=input.html#the-input-element>input</a></code> elements whose <code id=pseudo-classes:attr-input-type-2><a href=input.html#attr-input-type>type</a></code> attribute is in
+     the <a href="input.html#checkbox-state-(type=checkbox)" id="pseudo-classes:checkbox-state-(type=checkbox)">Checkbox</a> state and whose <a href=form-control-infrastructure.html#concept-fe-checked id=pseudo-classes:concept-fe-checked>checkedness</a> state is true<li><code id=pseudo-classes:the-input-element-4><a href=input.html#the-input-element>input</a></code> elements whose <code id=pseudo-classes:attr-input-type-3><a href=input.html#attr-input-type>type</a></code> attribute is in
+     the <a href="input.html#radio-button-state-(type=radio)" id="pseudo-classes:radio-button-state-(type=radio)">Radio Button</a> state and whose <a href=form-control-infrastructure.html#concept-fe-checked id=pseudo-classes:concept-fe-checked-2>checkedness</a> state is true<li><code id=pseudo-classes:the-option-element-2><a href=form-elements.html#the-option-element>option</a></code> elements whose <a href=form-elements.html#concept-option-selectedness id=pseudo-classes:concept-option-selectedness>selectedness</a> is true</ul>
+   <dt><dfn id=selector-indeterminate data-noexport=""><code>:indeterminate</code></dfn><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/CSS/:indeterminate title="The :indeterminate CSS pseudo-class represents any form element whose state is indeterminate, such as checkboxes which have their HTML indeterminate attribute set to true, radio buttons which are members of a group in which all radio buttons are unchecked, and indeterminate <progress> elements.">:indeterminate</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>2+</span></span><span class="safari yes"><span>Safari</span><span>3+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>9+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>10+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>37+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span></div></div></div><dd>
+    <p>The <code id=pseudo-classes:selector-indeterminate><a href=#selector-indeterminate>:indeterminate</a></code> <a id=pseudo-classes:pseudo-class-15 href=https://drafts.csswg.org/selectors/#pseudo-class data-x-internal=pseudo-class>pseudo-class</a>
+    must match any element falling into one of the following categories:</p>
+
+    <ul><li><code id=pseudo-classes:the-input-element-5><a href=input.html#the-input-element>input</a></code> elements whose <code id=pseudo-classes:attr-input-type-4><a href=input.html#attr-input-type>type</a></code> attribute is in
+     the <a href="input.html#checkbox-state-(type=checkbox)" id="pseudo-classes:checkbox-state-(type=checkbox)-2">Checkbox</a> state and whose <code id=pseudo-classes:dom-input-indeterminate><a href=input.html#dom-input-indeterminate>indeterminate</a></code> IDL attribute is set to true<li><code id=pseudo-classes:the-input-element-6><a href=input.html#the-input-element>input</a></code> elements whose <code id=pseudo-classes:attr-input-type-5><a href=input.html#attr-input-type>type</a></code> attribute is in
+     the <a href="input.html#radio-button-state-(type=radio)" id="pseudo-classes:radio-button-state-(type=radio)-2">Radio Button</a> state and whose <a id=pseudo-classes:radio-button-group href=input.html#radio-button-group>radio button
+     group</a> contains no <code id=pseudo-classes:the-input-element-7><a href=input.html#the-input-element>input</a></code> elements whose <a href=form-control-infrastructure.html#concept-fe-checked id=pseudo-classes:concept-fe-checked-3>checkedness</a> state is true.<li><code id=pseudo-classes:the-progress-element><a href=form-elements.html#the-progress-element>progress</a></code> elements with no <code id=pseudo-classes:attr-progress-value><a href=form-elements.html#attr-progress-value>value</a></code>
+     content attribute</ul>
+   <dt><dfn id=selector-default data-noexport=""><code>:default</code></dfn><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/CSS/:default title="The :default CSS pseudo-class selects form elements that are the default in a group of related elements.">:default</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>4+</span></span><span class="safari yes"><span>Safari</span><span>5+</span></span><span class="chrome yes"><span>Chrome</span><span>10+</span></span><hr><span class="opera yes"><span>Opera</span><span>10+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>5+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>37+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span></div></div></div><dd>
+    <p>The <code id=pseudo-classes:selector-default><a href=#selector-default>:default</a></code> <a id=pseudo-classes:pseudo-class-16 href=https://drafts.csswg.org/selectors/#pseudo-class data-x-internal=pseudo-class>pseudo-class</a> must match any
+    element falling into one of the following categories:</p>
+
+    <ul><li><a href=forms.html#concept-submit-button id=pseudo-classes:concept-submit-button>Submit buttons</a> that are <a href=form-control-infrastructure.html#default-button id=pseudo-classes:default-button>default buttons</a> of their <a id=pseudo-classes:form-owner href=form-control-infrastructure.html#form-owner>form owner</a>.<li><code id=pseudo-classes:the-input-element-8><a href=input.html#the-input-element>input</a></code> elements to which the <code id=pseudo-classes:attr-input-checked><a href=input.html#attr-input-checked>checked</a></code>
+     attribute applies and that have a <code id=pseudo-classes:attr-input-checked-2><a href=input.html#attr-input-checked>checked</a></code>
+     attribute<li><code id=pseudo-classes:the-option-element-3><a href=form-elements.html#the-option-element>option</a></code> elements that have a <code id=pseudo-classes:attr-option-selected><a href=form-elements.html#attr-option-selected>selected</a></code>
+     attribute</ul>
+   <dt><dfn id=selector-placeholder-shown data-noexport=""><code>:placeholder-shown</code></dfn><dd>
+    <p>The <code id=pseudo-classes:selector-placeholder-shown><a href=#selector-placeholder-shown>:placeholder-shown</a></code>
+    <a id=pseudo-classes:pseudo-class-17 href=https://drafts.csswg.org/selectors/#pseudo-class data-x-internal=pseudo-class>pseudo-class</a> must match any element falling into one of the following
+    categories:</p>
+
+    <ul><li><code id=pseudo-classes:the-input-element-9><a href=input.html#the-input-element>input</a></code> elements that have a <code id=pseudo-classes:attr-input-placeholder><a href=input.html#attr-input-placeholder>placeholder</a></code> attribute whose value is currently being
+     presented to the user.<li><code id=pseudo-classes:the-textarea-element-2><a href=form-elements.html#the-textarea-element>textarea</a></code> elements that have a <code id=pseudo-classes:attr-textarea-placeholder><a href=form-elements.html#attr-textarea-placeholder>placeholder</a></code> attribute whose value is currently being
+     presented to the user.</ul>
+   <dt><dfn id=selector-valid data-noexport=""><code>:valid</code></dfn><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/CSS/:valid title="The :valid CSS pseudo-class represents any <input> or other <form> element whose contents validate successfully. This allows to easily make valid fields adopt an appearance that helps the user confirm that their data is formatted properly.">:valid</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>4+</span></span><span class="safari yes"><span>Safari</span><span>5+</span></span><span class="chrome yes"><span>Chrome</span><span>10+</span></span><hr><span class="opera yes"><span>Opera</span><span>10+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>10+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>5+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>37+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span></div></div></div><dd>
+    <p>The <code id=pseudo-classes:selector-valid><a href=#selector-valid>:valid</a></code> <a id=pseudo-classes:pseudo-class-18 href=https://drafts.csswg.org/selectors/#pseudo-class data-x-internal=pseudo-class>pseudo-class</a> must match any
+    element falling into one of the following categories:</p>
+
+    <ul><li>elements that are <a href=form-control-infrastructure.html#candidate-for-constraint-validation id=pseudo-classes:candidate-for-constraint-validation>candidates for
+     constraint validation</a> and that <a href=form-control-infrastructure.html#concept-fv-valid id=pseudo-classes:concept-fv-valid>satisfy their
+     constraints</a><li><code id=pseudo-classes:the-form-element><a href=forms.html#the-form-element>form</a></code> elements that are not the <a id=pseudo-classes:form-owner-2 href=form-control-infrastructure.html#form-owner>form owner</a> of any elements that
+     themselves are <a href=form-control-infrastructure.html#candidate-for-constraint-validation id=pseudo-classes:candidate-for-constraint-validation-2>candidates for constraint
+     validation</a> but do not <a href=form-control-infrastructure.html#concept-fv-valid id=pseudo-classes:concept-fv-valid-2>satisfy their
+     constraints</a><li><code id=pseudo-classes:the-fieldset-element-2><a href=form-elements.html#the-fieldset-element>fieldset</a></code> elements that have no descendant elements that themselves are <a href=form-control-infrastructure.html#candidate-for-constraint-validation id=pseudo-classes:candidate-for-constraint-validation-3>candidates for constraint validation</a> but do
+     not <a href=form-control-infrastructure.html#concept-fv-valid id=pseudo-classes:concept-fv-valid-3>satisfy their constraints</a></ul>
+   <dt><dfn id=selector-invalid data-noexport=""><code>:invalid</code></dfn><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid title="The :invalid CSS pseudo-class represents any <input> or other <form> element whose contents fail to validate.">:invalid</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>4+</span></span><span class="safari yes"><span>Safari</span><span>5+</span></span><span class="chrome yes"><span>Chrome</span><span>10+</span></span><hr><span class="opera yes"><span>Opera</span><span>10+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>10+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>5+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>37+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span></div></div></div><dd>
+    <p>The <code id=pseudo-classes:selector-invalid><a href=#selector-invalid>:invalid</a></code> <a id=pseudo-classes:pseudo-class-19 href=https://drafts.csswg.org/selectors/#pseudo-class data-x-internal=pseudo-class>pseudo-class</a> must match any
+    element falling into one of the following categories:</p>
+
+    <ul><li>elements that are <a href=form-control-infrastructure.html#candidate-for-constraint-validation id=pseudo-classes:candidate-for-constraint-validation-4>candidates for
+     constraint validation</a> but that do not <a href=form-control-infrastructure.html#concept-fv-valid id=pseudo-classes:concept-fv-valid-4>satisfy their
+     constraints</a><li><code id=pseudo-classes:the-form-element-2><a href=forms.html#the-form-element>form</a></code> elements that are the <a id=pseudo-classes:form-owner-3 href=form-control-infrastructure.html#form-owner>form owner</a> of one or more elements
+     that themselves are <a href=form-control-infrastructure.html#candidate-for-constraint-validation id=pseudo-classes:candidate-for-constraint-validation-5>candidates for constraint
+     validation</a> but do not <a href=form-control-infrastructure.html#concept-fv-valid id=pseudo-classes:concept-fv-valid-5>satisfy their
+     constraints</a><li><code id=pseudo-classes:the-fieldset-element-3><a href=form-elements.html#the-fieldset-element>fieldset</a></code> elements that have of one or more descendant elements that themselves
+     are <a href=form-control-infrastructure.html#candidate-for-constraint-validation id=pseudo-classes:candidate-for-constraint-validation-6>candidates for constraint
+     validation</a> but do not <a href=form-control-infrastructure.html#concept-fv-valid id=pseudo-classes:concept-fv-valid-6>satisfy their
+     constraints</a></ul>
+   <dt><dfn id=selector-in-range data-noexport=""><code>:in-range</code></dfn><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/CSS/:in-range title="The :in-range CSS pseudo-class represents an <input> element whose current value is within the range limits specified by the min and max attributes.">:in-range</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>29+</span></span><span class="safari yes"><span>Safari</span><span>5.1+</span></span><span class="chrome yes"><span>Chrome</span><span>10+</span></span><hr><span class="opera yes"><span>Opera</span><span>11+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>13+</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>16+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>5+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>2.3+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>11+</span></span></div></div></div><dd>
+    <p>The <code id=pseudo-classes:selector-in-range><a href=#selector-in-range>:in-range</a></code> <a id=pseudo-classes:pseudo-class-20 href=https://drafts.csswg.org/selectors/#pseudo-class data-x-internal=pseudo-class>pseudo-class</a> must match
+    all elements that are <a href=form-control-infrastructure.html#candidate-for-constraint-validation id=pseudo-classes:candidate-for-constraint-validation-7>candidates for
+    constraint validation</a>, <a id=pseudo-classes:have-range-limitations href=input.html#have-range-limitations>have range limitations</a>, and that are neither
+    <a id=pseudo-classes:suffering-from-an-underflow href=form-control-infrastructure.html#suffering-from-an-underflow>suffering from an underflow</a> nor <a id=pseudo-classes:suffering-from-an-overflow href=form-control-infrastructure.html#suffering-from-an-overflow>suffering from an overflow</a>.</p>
+   <dt><dfn id=selector-out-of-range data-noexport=""><code>:out-of-range</code></dfn><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/CSS/:out-of-range title="The :out-of-range CSS pseudo-class represents an <input> element whose current value is outside the range limits specified by the min and max attributes.">:out-of-range</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>29+</span></span><span class="safari yes"><span>Safari</span><span>5.1+</span></span><span class="chrome yes"><span>Chrome</span><span>10+</span></span><hr><span class="opera yes"><span>Opera</span><span>11+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>13+</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>16+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>5+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>2.3+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>11+</span></span></div></div></div><dd>
+    <p>The <code id=pseudo-classes:selector-out-of-range><a href=#selector-out-of-range>:out-of-range</a></code> <a id=pseudo-classes:pseudo-class-21 href=https://drafts.csswg.org/selectors/#pseudo-class data-x-internal=pseudo-class>pseudo-class</a> must
+    match all elements that are <a href=form-control-infrastructure.html#candidate-for-constraint-validation id=pseudo-classes:candidate-for-constraint-validation-8>candidates for
+    constraint validation</a>, <a id=pseudo-classes:have-range-limitations-2 href=input.html#have-range-limitations>have range limitations</a>, and that are either
+    <a id=pseudo-classes:suffering-from-an-underflow-2 href=form-control-infrastructure.html#suffering-from-an-underflow>suffering from an underflow</a> or <a id=pseudo-classes:suffering-from-an-overflow-2 href=form-control-infrastructure.html#suffering-from-an-overflow>suffering from an overflow</a>.</p>
+   <dt><dfn id=selector-required data-noexport=""><code>:required</code></dfn><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/CSS/:required title="The :required CSS pseudo-class represents any <input>, <select>, or <textarea> element that has the required attribute set on it.">:required</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>4+</span></span><span class="safari yes"><span>Safari</span><span>5+</span></span><span class="chrome yes"><span>Chrome</span><span>10+</span></span><hr><span class="opera yes"><span>Opera</span><span>10+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>10+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>5+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>4.4.3+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span></div></div></div><dd>
+    <p>The <code id=pseudo-classes:selector-required><a href=#selector-required>:required</a></code> <a id=pseudo-classes:pseudo-class-22 href=https://drafts.csswg.org/selectors/#pseudo-class data-x-internal=pseudo-class>pseudo-class</a> must match
+    any element falling into one of the following categories:</p>
+
+    <ul><li><code id=pseudo-classes:the-input-element-10><a href=input.html#the-input-element>input</a></code> elements that are <i id=pseudo-classes:concept-input-required><a href=input.html#concept-input-required>required</a></i><li><code id=pseudo-classes:the-select-element-2><a href=form-elements.html#the-select-element>select</a></code> elements that have a <code id=pseudo-classes:attr-select-required><a href=form-elements.html#attr-select-required>required</a></code>
+     attribute<li><code id=pseudo-classes:the-textarea-element-3><a href=form-elements.html#the-textarea-element>textarea</a></code> elements that have a <code id=pseudo-classes:attr-textarea-required><a href=form-elements.html#attr-textarea-required>required</a></code> attribute</ul>
+   <dt><dfn id=selector-optional data-noexport=""><code>:optional</code></dfn><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/CSS/:optional title="The :optional CSS pseudo-class represents any <input>, <select>, or <textarea> element that does not have the required attribute set on it.">:optional</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>4+</span></span><span class="safari yes"><span>Safari</span><span>5+</span></span><span class="chrome yes"><span>Chrome</span><span>10+</span></span><hr><span class="opera yes"><span>Opera</span><span>10+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>10+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>5+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>37+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span></div></div></div><dd>
+    <p>The <code id=pseudo-classes:selector-optional><a href=#selector-optional>:optional</a></code> <a id=pseudo-classes:pseudo-class-23 href=https://drafts.csswg.org/selectors/#pseudo-class data-x-internal=pseudo-class>pseudo-class</a> must match
+    any element falling into one of the following categories:</p>
+
+    <ul><li><code id=pseudo-classes:the-input-element-11><a href=input.html#the-input-element>input</a></code> elements to which the <code id=pseudo-classes:attr-input-required><a href=input.html#attr-input-required>required</a></code>
+     attribute applies that are not <i id=pseudo-classes:concept-input-required-2><a href=input.html#concept-input-required>required</a></i><li><code id=pseudo-classes:the-select-element-3><a href=form-elements.html#the-select-element>select</a></code> elements that do not have a <code id=pseudo-classes:attr-select-required-2><a href=form-elements.html#attr-select-required>required</a></code> attribute<li><code id=pseudo-classes:the-textarea-element-4><a href=form-elements.html#the-textarea-element>textarea</a></code> elements that do not have a <code id=pseudo-classes:attr-textarea-required-2><a href=form-elements.html#attr-textarea-required>required</a></code> attribute</ul>
+   <dt><dfn id=selector-read-only data-noexport=""><code>:read-only</code></dfn><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/CSS/:read-only title="The :read-only CSS pseudo-class represents an element (such as input or textarea) that is not editable by the user.">:read-only</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>78+</span></span><span class="safari yes"><span>Safari</span><span>4+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>9+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>13+</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span title="Requires a prefix or alternative name.">🔰 4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>3.2+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>37+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span><hr><span class=caniuse><span><a href="https://caniuse.com/#feat=css-read-only-write" title="CSS :read-only and :read-write selectors">caniuse.com table</a></span></span></div></div></div><dt><dfn id=selector-read-write data-noexport=""><code>:read-write</code></dfn><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/CSS/:read-write title="The :read-write CSS pseudo-class represents an element (such as input or textarea) that is editable by the user.">:read-write</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>78+</span></span><span class="safari yes"><span>Safari</span><span>4+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>9+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>13+</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span title="Requires a prefix or alternative name.">🔰 4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>3.2+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>37+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span></div></div></div><dd>
+    <p>The <code id=pseudo-classes:selector-read-write><a href=#selector-read-write>:read-write</a></code> <a id=pseudo-classes:pseudo-class-24 href=https://drafts.csswg.org/selectors/#pseudo-class data-x-internal=pseudo-class>pseudo-class</a> must
+    match any element falling into one of the following categories, which for the purposes of
+    Selectors are thus considered <i>user-alterable</i>: <a href=references.html#refsSELECTORS>[SELECTORS]</a></p>
+
+    <ul><li><code id=pseudo-classes:the-input-element-12><a href=input.html#the-input-element>input</a></code> elements to which the <code id=pseudo-classes:attr-input-readonly><a href=input.html#attr-input-readonly>readonly</a></code>
+     attribute applies, and that are <i id=pseudo-classes:concept-fe-mutable><a href=form-control-infrastructure.html#concept-fe-mutable>mutable</a></i> (i.e. that do not
+     have the <code id=pseudo-classes:attr-input-readonly-2><a href=input.html#attr-input-readonly>readonly</a></code> attribute specified and that are not
+     <a href=form-control-infrastructure.html#concept-fe-disabled id=pseudo-classes:concept-fe-disabled-2>disabled</a>)<li><code id=pseudo-classes:the-textarea-element-5><a href=form-elements.html#the-textarea-element>textarea</a></code> elements that do not have a <code id=pseudo-classes:attr-textarea-readonly><a href=form-elements.html#attr-textarea-readonly>readonly</a></code> attribute, and that are not <a href=form-control-infrastructure.html#concept-fe-disabled id=pseudo-classes:concept-fe-disabled-3>disabled</a><li>elements that are <a href=interaction.html#editing-host id=pseudo-classes:editing-host>editing hosts</a> or <a id=pseudo-classes:editable href=https://w3c.github.io/editing/docs/execCommand/#editable data-x-internal=editable>editable</a>
+     and are neither <code id=pseudo-classes:the-input-element-13><a href=input.html#the-input-element>input</a></code> elements nor <code id=pseudo-classes:the-textarea-element-6><a href=form-elements.html#the-textarea-element>textarea</a></code> elements</ul>
+
+    <p>The <code id=pseudo-classes:selector-read-only><a href=#selector-read-only>:read-only</a></code> <a id=pseudo-classes:pseudo-class-25 href=https://drafts.csswg.org/selectors/#pseudo-class data-x-internal=pseudo-class>pseudo-class</a> must match
+    all other <a id=pseudo-classes:html-elements href=infrastructure.html#html-elements>HTML elements</a>.</p>
+   <dt><dfn id=selector-ltr data-noexport=""><code>:dir(ltr)</code></dfn><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in one engine only." class=less-than-two-engines-flag>⚠</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/CSS/:dir title="The :dir() CSS pseudo-class matches elements based on the directionality of the text contained in them.">:dir</a><p class=less-than-two-engines-text>Support in one engine only.<div class=support><span class="firefox yes"><span>Firefox</span><span>49+</span></span><span class="safari no"><span>Safari</span><span>No</span></span><span class="chrome no"><span>Chrome</span><span>No</span></span><hr><span class="opera no"><span>Opera</span><span>No</span></span><span class="edge_blink no"><span>Edge</span><span>No</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>49+</span></span><span class="safari_ios no"><span>Safari iOS</span><span>No</span></span><span class="chrome_android no"><span>Chrome Android</span><span>No</span></span><span class="webview_android no"><span>WebView Android</span><span>No</span></span><span class="samsunginternet_android no"><span>Samsung Internet</span><span>No</span></span><span class="opera_android no"><span>Opera Android</span><span>No</span></span></div></div></div><dd>
+    <p>The <code id=pseudo-classes:selector-ltr><a href=#selector-ltr>:dir(ltr)</a></code> <a id=pseudo-classes:pseudo-class-26 href=https://drafts.csswg.org/selectors/#pseudo-class data-x-internal=pseudo-class>pseudo-class</a> must match all
+    elements whose <a href=dom.html#the-directionality id=pseudo-classes:the-directionality>directionality</a> is '<a href=dom.html#concept-ltr id=pseudo-classes:concept-ltr>ltr</a>'.</p>
+   <dt><dfn id=selector-rtl data-noexport=""><code>:dir(rtl)</code></dfn><dd>
+    <p>The <code id=pseudo-classes:selector-rtl><a href=#selector-rtl>:dir(rtl)</a></code> <a id=pseudo-classes:pseudo-class-27 href=https://drafts.csswg.org/selectors/#pseudo-class data-x-internal=pseudo-class>pseudo-class</a> must match all
+    elements whose <a href=dom.html#the-directionality id=pseudo-classes:the-directionality-2>directionality</a> is '<a href=dom.html#concept-rtl id=pseudo-classes:concept-rtl>rtl</a>'.</p>
+   </dl>
+
+  <p class=note>This specification does not define when an element matches the <code>:lang()</code> dynamic <a id=pseudo-classes:pseudo-class-28 href=https://drafts.csswg.org/selectors/#pseudo-class data-x-internal=pseudo-class>pseudo-class</a>, as it is defined in
+  sufficient detail in a language-agnostic fashion in <cite>Selectors</cite>.
+  <a href=references.html#refsSELECTORS>[SELECTORS]</a></p>
+
+  
+
+
+
+
+  <nav><a href=custom-elements.html>← 4.13 Custom elements</a> — <a href=./>Table of Contents</a> — <a href=microdata.html>5 微数据 →</a></nav>
+<script src=/html/resources/zh-cn.js></script>

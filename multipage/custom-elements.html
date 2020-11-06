@@ -1,0 +1,1507 @@
+<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/html/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Standard</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/spec.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/html/styles.css crossorigin=""><script>
+   function toggleStatus(div) {
+     div.parentNode.classList.toggle('wrapped');
+   }
+   function setLinkFragment(link) {
+     link.hash = location.hash;
+   }
+  </script><link rel=stylesheet href=/html/resources/zh-cn.css><body>
+  
+  <script async="" crossorigin="" src=/html/resources/html-dfn.js></script>
+  <script data-file-issue-url=https://github.com/whatwg/html/issues/new async="" crossorigin="" src=https://resources.whatwg.org/file-issue.js></script>
+  
+  <header id=head class="head with-buttons">
+   <a href=https://whatwg.org/ class=logo><img width=100 alt=WHATWG crossorigin="" src=https://resources.whatwg.org/logo.svg height=100></a>
+   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Living Standard — Last Updated <span class=pubdate>6 November 2020</span></h2><div data-en-date="Sat Aug 11 2018 08:00:56 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/living-standard-mdash-last-updated-date-01-jan-1901.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/living-standard-mdash-last-updated-date-01-jan-1901.zh.html?filename=living-standard-mdash-last-updated-date-01-jan-1901.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fliving-standard-mdash-last-updated-date-01-jan-1901.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div><div data-en-date="Sat Aug 11 2018 08:00:56 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/commit-snapshot-mdash-last-updated-date-01-jan-1901.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/commit-snapshot-mdash-last-updated-date-01-jan-1901.zh.html?filename=commit-snapshot-mdash-last-updated-date-01-jan-1901.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fcommit-snapshot-mdash-last-updated-date-01-jan-1901.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div><div data-en-date="Sat Aug 11 2018 08:00:56 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/review-draft-mdash-published-date-01-jan-1901.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/review-draft-mdash-published-date-01-jan-1901.zh.html?filename=review-draft-mdash-published-date-01-jan-1901.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Freview-draft-mdash-published-date-01-jan-1901.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div></hgroup>
+   
+   
+   <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-91053840-1', 'auto');
+      ga('send', 'pageview');
+   </script>
+  </header>
+
+  
+
+  
+
+
+  
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/table-of-contents.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/table-of-contents.zh.html></div>
+  
+
+
+  
+<div data-en-date="Sat Aug 11 2018 08:00:56 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/full-table-of-contents.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/full-table-of-contents.zh.html></div>
+  
+
+  
+
+  
+
+
+  <nav><a href=canvas.html>← 4.12.5 The canvas element</a> — <a href=./>Table of Contents</a> — <a href=semantics-other.html>4.14 Common idioms without dedicated elements →</a></nav><ol class=toc><li id=toc-semantics><ol><li><a href=custom-elements.html#custom-elements><span class=secno>4.13</span> Custom elements</a><ol><li><a href=custom-elements.html#custom-elements-intro><span class=secno>4.13.1</span> 概述</a><ol><li><a href=custom-elements.html#custom-elements-autonomous-example><span class=secno>4.13.1.1</span> 创建自主的 Custom Element</a><li><a href=custom-elements.html#custom-elements-face-example><span class=secno>4.13.1.2</span> Creating a form-associated custom element</a><li><a href=custom-elements.html#custom-elements-accessibility-example><span class=secno>4.13.1.3</span> Creating a custom element with default accessible roles, states, and properties</a><li><a href=custom-elements.html#custom-elements-customized-builtin-example><span class=secno>4.13.1.4</span> 创建定制的内建元素</a><li><a href=custom-elements.html#custom-elements-autonomous-drawbacks><span class=secno>4.13.1.5</span> 自主 custom element 的缺点</a><li><a href=custom-elements.html#custom-elements-upgrades-examples><span class=secno>4.13.1.6</span> 在创建之后升级元素</a></ol><li><a href=custom-elements.html#custom-element-conformance><span class=secno>4.13.2</span> Requirements for custom element constructors and
+  reactions</a><li><a href=custom-elements.html#custom-elements-core-concepts><span class=secno>4.13.3</span> 核心概念</a><li><a href=custom-elements.html#custom-elements-api><span class=secno>4.13.4</span> <code>CustomElementRegistry</code> 接口</a><li><a href=custom-elements.html#升级><span class=secno>4.13.5</span> 升级</a><li><a href=custom-elements.html#custom-element-reactions><span class=secno>4.13.6</span> Custom element reactions</a><li><a href=custom-elements.html#element-internals><span class=secno>4.13.7</span> Element internals</a><ol><li><a href=custom-elements.html#the-elementinternals-interface><span class=secno>4.13.7.1</span> The <code>ElementInternals</code> interface</a><li><a href=custom-elements.html#shadow-root-access><span class=secno>4.13.7.2</span> Shadow root access</a><li><a href=custom-elements.html#form-associated-custom-elements><span class=secno>4.13.7.3</span> Form-associated custom elements</a><li><a href=custom-elements.html#accessibility-semantics><span class=secno>4.13.7.4</span> Accessibility semantics</a></ol></ol></ol></ol><h3 id=custom-elements><span class=secno>4.13</span> Custom elements<a href=#custom-elements class=self-link></a></h3><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements title="One of the key features of the Web Components standard is the ability to create custom elements that encapsulate your functionality on an HTML page, rather than having to make do with a long, nested batch of elements that together provide a custom page feature. This article introduces the use of the Custom Elements API.">Using_custom_elements</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>63+</span></span><span class="safari yes"><span>Safari</span><span>10.1+</span></span><span class="chrome yes"><span>Chrome</span><span>54+</span></span><hr><span class="opera yes"><span>Opera</span><span>41+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>63+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>10.3+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>54+</span></span><span class="webview_android yes"><span>WebView Android</span><span>54+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>6.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>41+</span></span><hr><span class=caniuse><span><a href="https://caniuse.com/#feat=custom-elementsv1" title="Custom Elements (V1)">caniuse.com table</a></span></span></div></div></div>
+<div data-zh-date="" data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/the-elements-of-html/custom-elements/index.zh.html?filename=index.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fthe-elements-of-html%2Fcustom-elements%2Findex.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/custom-elements/index.en.html></div>
+
+
+  <h4 id=custom-elements-intro><span class=secno>4.13.1</span> 概述<a href=#custom-elements-intro class=self-link></a></h4>
+<div data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/the-elements-of-html/custom-elements/introduction/index.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/custom-elements/introduction/index.en.html></div>
+
+  <p><i>This section is non-normative.</i></p>
+
+  <p><a href=#custom-element id=custom-elements-intro:custom-element>Custom elements</a> 为作者提供了一种构建他们自己的完整特性的
+  DOM 元素的方式。即使作者们总是可以在他们的文档中使用非标准元素，
+  在生效之后使用类似脚本的方式给它们增加应用相关的行为，
+  但是这些元素由于历史原因表现并不一致，也不是很好用。
+  通过 <a href=#element-definition id=custom-elements-intro:element-definition>定义</a> custom element，
+  作者可以告知解析器如何适当地构造一个元素，以及这类元素如何响应变化。</p>
+
+  <p>Custom elements 是 "解释 Web 平台" 努力中的一部分，
+  在这一工作中，我们通过将低层的可扩展点（比如定义 Custom Element）暴露给作者，
+  来解释既有的平台特性（比如 HTML 的元素）。
+  即使现在 Custom Element 在功能和语义上都有很多能力的局限，
+  尚不能完整地解释现存 HTML 元素的行为，我们希望随着时间的推移逐渐缩小这个差异。</p>
+
+
+  <h5 id=custom-elements-autonomous-example><span class=secno>4.13.1.1</span> 创建自主的 Custom Element<a href=#custom-elements-autonomous-example class=self-link></a></h5>
+<div data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/the-elements-of-html/custom-elements/introduction/creating-an-autonomous-custom-element.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/custom-elements/introduction/creating-an-autonomous-custom-element.en.html></div>
+
+  <p><i>This section is non-normative.</i></p>
+
+  <p>为了说明如何创建 <a href=#autonomous-custom-element id=custom-elements-autonomous-example:autonomous-custom-element>autonomous custom element</a>，
+  我们定义 Custom Element 来封装一个显示国旗的小图标。
+  我们的目标是可以像这样使用它：</p>
+
+  <pre>&lt;flag-icon country="nl">&lt;/flag-icon></pre>
+
+  <p>为了实现这一效果，我们首先为该 Custom Element 声明一个类，扩展
+  <code id=custom-elements-autonomous-example:htmlelement><a href=dom.html#htmlelement>HTMLElement</a></code>：</p>
+
+  <pre>class FlagIcon extends HTMLElement {
+  constructor() {
+    super();
+    this._countryCode = null;
+  }
+
+  static get observedAttributes() { return ["country"]; }
+
+  attributeChangedCallback(name, oldValue, newValue) {
+    // name will always be "country" due to observedAttributes
+    this._countryCode = newValue;
+    this._updateRendering();
+  }
+  connectedCallback() {
+    this._updateRendering();
+  }
+
+  get country() {
+    return this._countryCode;
+  }
+  set country(v) {
+    this.setAttribute("country", v);
+  }
+
+  _updateRendering() {
+    // Left as an exercise for the reader. But, you'll probably want to
+    // check this.ownerDocument.defaultView to see if we've been
+    // inserted into a document with a browsing context, and avoid
+    // doing any work if not.
+  }
+}</pre>
+
+  <p>我们现在需要使用这个类来定义这个元素：</p>
+
+  <pre>customElements.define("flag-icon", FlagIcon);</pre>
+
+  <p>此时，上述代码生效了！解析器一旦看到 <code>flag-icon</code> 标签， 就会为我们的 <code>FlagIcon</code>
+  类构造一个新的实例，并把新的 <code>country</code> 属性告诉我们的代码，
+  接着我们用它来设置内部状态并更新渲染（在适当的时候）。</p>
+
+  <p>你也可以使用 DOM API 创建 <code>flag-icon</code> 元素：</p>
+
+  <pre>const flagIcon = document.createElement("flag-icon")
+flagIcon.country = "jp"
+document.body.appendChild(flagIcon)</pre>
+
+  <p>最后，我们还可以直接使用 <a href=#custom-element-constructor id=custom-elements-autonomous-example:custom-element-constructor>custom element 构造器</a>。
+  这就是说上述代码等效于：</p>
+
+  <pre>const flagIcon = new FlagIcon()
+flagIcon.country = "jp"
+document.body.appendChild(flagIcon)</pre>
+
+
+  <h5 id=custom-elements-face-example><span class=secno>4.13.1.2</span> Creating a form-associated custom element<a href=#custom-elements-face-example class=self-link></a></h5>
+<div data-zh-date="" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/the-elements-of-html/custom-elements/introduction/creating-a-form-associated-custom-element.zh.html?filename=creating-a-form-associated-custom-element.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fthe-elements-of-html%2Fcustom-elements%2Fintroduction%2Fcreating-a-form-associated-custom-element.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/custom-elements/introduction/creating-a-form-associated-custom-element.en.html></div>
+
+  <p><i>This section is non-normative.</i></p>
+
+  <p>Adding a static <code>formAssociated</code> property, with a true value, makes an
+  <a href=#autonomous-custom-element id=custom-elements-face-example:autonomous-custom-element>autonomous custom element</a> a <a href=#form-associated-custom-element id=custom-elements-face-example:form-associated-custom-element>form-associated custom element</a>. The
+  <code id=custom-elements-face-example:elementinternals><a href=#elementinternals>ElementInternals</a></code> interface helps you to implement functions and properties common
+  to form control elements.</p>
+
+  <pre><code class=js>class MyCheckbox extends HTMLElement {
+  static get formAssociated() { return true; }
+  static get observedAttributes() { return ['checked']; }
+
+  constructor() {
+    super();
+    this._internals = this.attachInternals();
+    this.addEventListener('click', this._onClick.bind(this));
+  }
+
+  get form() { return this._internals.form; }
+  get name() { return this.getAttribute('name'); }
+  get type() { return this.localName; }
+
+  get checked() { return this.getAttribute('checked'); }
+  set checked(flag) { this.toggleAttribute('checked', Boolean(flag)); }
+
+  attributeChangedCallback(name, oldValue, newValue) {
+    // name will always be "checked" due to observedAttributes
+    this._internals.setFormValue(this.checked ? 'on' : null);
+  }
+
+  _onClick(event) {
+    this.checked = !this.checked;
+  }
+}
+customElements.define('my-checkbox', MyCheckbox);</code></pre>
+
+  <p>You can use the custom element <code>my-checkbox</code> like a built-in
+  form-associated element. For example, putting it in <code id=custom-elements-face-example:the-form-element><a href=forms.html#the-form-element>form</a></code> or <code id=custom-elements-face-example:the-label-element><a href=forms.html#the-label-element>label</a></code>
+  associates the <code>my-checkbox</code> element with them, and submitting the
+  <code id=custom-elements-face-example:the-form-element-2><a href=forms.html#the-form-element>form</a></code> will send data provided by <code>my-checkbox</code> implementation.
+  </p>
+
+  <pre><code class=html>&lt;form action="..." method="...">
+  &lt;label>&lt;my-checkbox name="agreed">&lt;/my-checkbox> I read the agreement.&lt;/label>
+  &lt;input type="submit">
+&lt;/form>
+</code></pre>
+
+
+  <h5 id=custom-elements-accessibility-example><span class=secno>4.13.1.3</span> Creating a custom element with default accessible roles, states, and properties<a href=#custom-elements-accessibility-example class=self-link></a></h5>
+<div data-zh-date="" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/the-elements-of-html/custom-elements/introduction/creating-a-custom-element-with-default-accessible-roles-states-and-properties.zh.html?filename=creating-a-custom-element-with-default-accessible-roles-states-and-properties.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fthe-elements-of-html%2Fcustom-elements%2Fintroduction%2Fcreating-a-custom-element-with-default-accessible-roles-states-and-properties.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/custom-elements/introduction/creating-a-custom-element-with-default-accessible-roles-states-and-properties.en.html></div>
+
+  <p><i>This section is non-normative.</i></p>
+
+  <p>By using the appropriate properties of <code id=custom-elements-accessibility-example:elementinternals><a href=#elementinternals>ElementInternals</a></code>, your custom element can
+  have default accessibility semantics. The following code expands our form-associated checkbox from
+  the previous section to properly set its default role and checkedness, as viewed by accessibility
+  technology:</p>
+
+  <pre><code class=js>class MyCheckbox extends HTMLElement {
+  static get formAssociated() { return true; }
+  static get observedAttributes() { return ['checked']; }
+
+  constructor() {
+    super();
+    this._internals = this.attachInternals();
+    this.addEventListener('click', this._onClick.bind(this));
+
+<mark>    this._internals.role = 'checkbox';
+    this._internals.ariaChecked = false;</mark>
+  }
+
+  get form() { return this._internals.form; }
+  get name() { return this.getAttribute('name'); }
+  get type() { return this.localName; }
+
+  get checked() { return this.getAttribute('checked'); }
+  set checked(flag) { this.toggleAttribute('checked', Boolean(flag)); }
+
+  attributeChangedCallback(name, oldValue, newValue) {
+    // name will always be "checked" due to observedAttributes
+    this._internals.setFormValue(this.checked ? 'on' : null);
+<mark>    this._internals.ariaChecked = this.checked;</mark>
+  }
+
+  _onClick(event) {
+    this.checked = !this.checked;
+  }
+}
+customElements.define('my-checkbox', MyCheckbox);</code></pre>
+
+  <p>Note that, like for built-in elements, these are only defaults, and can be overridden by the
+  page author using the <code id=custom-elements-accessibility-example:attr-aria-role><a href=infrastructure.html#attr-aria-role>role</a></code> and <code id=custom-elements-accessibility-example:attr-aria-*><a href=infrastructure.html#attr-aria-*>aria-*</a></code> attributes:</p>
+
+  <pre class=bad><code class=html>&lt;!-- This markup is non-conforming -->
+&lt;input type="checkbox" checked role="button" aria-checked="false"></code></pre>
+
+<pre class=bad><code class=html>&lt;!-- This markup is probably not what the custom element author intended -->
+&lt;my-checkbox role="button" checked aria-checked="false"></code></pre>
+
+  <p>Custom element authors are encouraged to state what aspects of their accessibility semantics
+  are strong native semantics, i.e., should not be overriden by users of the custom element. In our
+  example, the author of the <code>my-checkbox</code> element would state that its
+  <a id=custom-elements-accessibility-example:role href=https://w3c.github.io/aria/#dfn-role data-x-internal=role>role</a> and <code id=custom-elements-accessibility-example:attr-aria-checked><a data-x-internal=attr-aria-checked href=https://w3c.github.io/aria/#aria-checked>aria-checked</a></code> values are strong
+  native semantics, thus discouraging code such as the above.</p>
+
+
+  <h5 id=custom-elements-customized-builtin-example><span class=secno>4.13.1.4</span> 创建定制的内建元素<a href=#custom-elements-customized-builtin-example class=self-link></a></h5>
+<div data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/the-elements-of-html/custom-elements/introduction/creating-a-customized-built-in-element.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/custom-elements/introduction/creating-a-customized-built-in-element.en.html></div>
+
+  <p><i>This section is non-normative.</i></p>
+
+  <p><a href=#customized-built-in-element id=custom-elements-customized-builtin-example:customized-built-in-element>定制的内建元素</a> 是一种独特的
+  <a href=#custom-element id=custom-elements-customized-builtin-example:custom-element>custom element</a>，它的定义稍有不同，但使用方式与
+  <a href=#autonomous-custom-element id=custom-elements-customized-builtin-example:autonomous-custom-element>自主的 custom elements</a> 很不一样。
+  它们的存在是为了允许通过扩展新的定制功能来复用现存 HTML 元素的行为。
+  因为如果只使用 <a href=#autonomous-custom-element id=custom-elements-customized-builtin-example:autonomous-custom-element-2>自主的 custom elements</a>
+  很多 HTML 元素的现存行为可能需要重复实现，
+  但使用 <a href=#customized-built-in-element id=custom-elements-customized-builtin-example:customized-built-in-element-2>定制的内建元素</a> 允许给既有的元素
+  安装自定义的构造行为、生命周期钩子、以及原型链。
+  本质上就是在已经有的元素上 "混入" 这些定制的功能。</p>
+
+  <p><a href=#customized-built-in-element id=custom-elements-customized-builtin-example:customized-built-in-element-3>定制的内建元素</a> 要求一种与
+  <a href=#autonomous-custom-element id=custom-elements-customized-builtin-example:autonomous-custom-element-3>自主的 custom elements</a>
+  不同的语法，因为用户代理和其他软件会提取元素的 局部名 来识别元素的语义和行为。
+  就是说建立在既有行为基础上的 <a href=#customized-built-in-element id=custom-elements-customized-builtin-example:customized-built-in-element-4>定制的内建元素</a> 的概念
+  严重依赖于被扩展的元素保持他们原有的 局部名。</p>
+
+  <p>在这个例子中，我们将会创建一个名为 <code>plastic-button</code> 的
+  <a href=#customized-built-in-element id=custom-elements-customized-builtin-example:customized-built-in-element-5>定制的内建元素</a>。它像一个普通按钮一样，但是当点击时有漂亮的动画效果。
+  就像以前一样，我们从定义一个类开始，虽然这次我们扩展的是 <code id=custom-elements-customized-builtin-example:htmlbuttonelement><a href=form-elements.html#htmlbuttonelement>HTMLButtonElement</a></code>
+  而不是 <code id=custom-elements-customized-builtin-example:htmlelement><a href=dom.html#htmlelement>HTMLElement</a></code>：</p>
+
+  <pre>class PlasticButton extends HTMLButtonElement {
+  constructor() {
+    super();
+
+    this.addEventListener("click", () => {
+      // Draw some fancy animation effects!
+    });
+  }
+}</pre>
+
+  <p>在定义我们的 custom element 时，我们必须同时声明 <code>extends</code>
+  选项：</p>
+
+  <pre>customElements.define("plastic-button", PlasticButton, { extends: "button" });</pre>
+
+  <p>通常被扩展元素的名字不能简单地通过看它扩展了什么元素接口来确定，
+  因为很多元素共用同样的接口（比如 <code id=custom-elements-customized-builtin-example:the-q-element><a href=text-level-semantics.html#the-q-element>q</a></code> 和 <code id=custom-elements-customized-builtin-example:the-blockquote-element><a href=grouping-content.html#the-blockquote-element>blockquote</a></code>
+  共用 <code id=custom-elements-customized-builtin-example:htmlquoteelement><a href=grouping-content.html#htmlquoteelement>HTMLQuoteElement</a></code>）。</p>
+
+  <p>为了使用我们的 <a href=#customized-built-in-element id=custom-elements-customized-builtin-example:customized-built-in-element-6>定制内建元素</a>，
+  我们使用 <code id=custom-elements-customized-builtin-example:the-button-element><a href=form-elements.html#the-button-element>button</a></code> 元素上的 <code id=custom-elements-customized-builtin-example:attr-is><a href=#attr-is>is</a></code> 属性：</p>
+
+  <pre>&lt;button is="plastic-button">Click Me!&lt;/button></pre>
+
+  <p>尝试将 <a href=#customized-built-in-element id=custom-elements-customized-builtin-example:customized-built-in-element-7>定制的内建元素</a> 当做
+  <a href=#autonomous-custom-element id=custom-elements-customized-builtin-example:autonomous-custom-element-4>自主 custom element</a> 使用 <em>不会</em> 奏效；
+  也就是说 <code>&lt;plastic-button>Click me?&lt;/plastic-button></code>
+  只会创建一个没有特殊行为的 <code id=custom-elements-customized-builtin-example:htmlelement-2><a href=dom.html#htmlelement>HTMLElement</a></code>。</p>
+
+  <p>如果你需要编程方式创建一个类型扩展的元素，可以使用下面的形式
+  <code id=custom-elements-customized-builtin-example:dom-document-createelement><a data-x-internal=dom-document-createelement href=https://dom.spec.whatwg.org/#dom-document-createelement>createElement()</a></code>：</p>
+
+  <pre>const plasticButton = document.createElement("button", { is: "plastic-button" });
+plasticButton.textContent = "Click me!";</pre>
+
+  <p>像以前一样，构造器也好使：</p>
+
+  <pre>const plasticButton2 = new PlasticButton();
+console.log(plasticButton2.localName);          // 将会输出 "button"
+console.log(plasticButton2.getAttribute("is")); // 将会输出 "plastic-button"</pre>
+
+  <p>值得一提的是，所有 <code id=custom-elements-customized-builtin-example:the-button-element-2><a href=form-elements.html#the-button-element>button</a></code> 的特殊行为也适用于该 "plastic buttons"：
+  获得焦点行为、参与 <a href=form-control-infrastructure.html#concept-form-submit id=custom-elements-customized-builtin-example:concept-form-submit>表单提交</a> 的能力、
+  <code id=custom-elements-customized-builtin-example:attr-fe-disabled><a href=form-control-infrastructure.html#attr-fe-disabled>disabled</a></code> 属性，等等。</p>
+
+  <p id=customized-built-in-element-restrictions><a href=#customized-built-in-element id=custom-elements-customized-builtin-example:customized-built-in-element-8>定制的内建元素</a> 设计为允许扩展既有 HTML 元素，尤其是那些用户代理提供了
+  有用行为或者 API 的元素。它们只能扩展在本标准中定义的现存 HTML 元素，不可继承遗留元素，
+  比如 <code id=custom-elements-customized-builtin-example:bgsound><a href=obsolete.html#bgsound>bgsound</a></code>， <code id=custom-elements-customized-builtin-example:blink><a href=obsolete.html#blink>blink</a></code>， <code id=custom-elements-customized-builtin-example:isindex><a href=obsolete.html#isindex>isindex</a></code>， <code id=custom-elements-customized-builtin-example:keygen><a href=obsolete.html#keygen>keygen</a></code>，
+  <code id=custom-elements-customized-builtin-example:multicol><a href=obsolete.html#multicol>multicol</a></code>， <code id=custom-elements-customized-builtin-example:nextid><a href=obsolete.html#nextid>nextid</a></code>， 或者
+  使用 <code id=custom-elements-customized-builtin-example:htmlunknownelement><a href=dom.html#htmlunknownelement>HTMLUnknownElement</a></code> 作为它们的 <a href=https://dom.spec.whatwg.org/#concept-element-interface id=custom-elements-customized-builtin-example:element-interface data-x-internal=element-interface>元素接口</a>
+  来定义的 <code id=custom-elements-customized-builtin-example:spacer><a href=obsolete.html#spacer>spacer</a></code>。</p>
+
+  <p>这一要求的一个原因是向后兼容性：如果定义了一个
+  <a href=#customized-built-in-element id=custom-elements-customized-builtin-example:customized-built-in-element-9>定制内建元素</a>，扩展了
+  一个目前未知的元素，比如 <code>combobox</code>，这将会阻止本标准在将来定义一个
+  <code>combobox</code> 元素，因为派生过
+  <a href=#customized-built-in-element id=custom-elements-customized-builtin-example:customized-built-in-element-10>定制内建元素</a> 的客户可能依赖于它们的基元素
+  没有那些有趣的用户代理提供的行为。</p>
+
+  <p>此外， <code id=custom-elements-customized-builtin-example:applet><a href=obsolete.html#applet>applet</a></code> 元素不可被扩展，因为它们正在被 Web 平台移除的过程中。</p>
+
+
+  <h5 id=custom-elements-autonomous-drawbacks><span class=secno>4.13.1.5</span> 自主 custom element 的缺点<a href=#custom-elements-autonomous-drawbacks class=self-link></a></h5>
+<div data-zh-date="Sat Mar 10 2018 18:22:55 GMT+0000 (UTC)" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/the-elements-of-html/custom-elements/introduction/drawbacks-of-autonomous-custom-elements.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/custom-elements/introduction/drawbacks-of-autonomous-custom-elements.en.html></div>
+
+  <p><i>This section is non-normative.</i></p>
+
+  <p>正如下文规定，以及上文提到的，简单地定义和使用一个称为
+  <code>taco-button</code> 不意味着这个元素代表 <a href=dom.html#represents id=custom-elements-autonomous-drawbacks:represents>represent</a> 按钮。也就是说像 Web 浏览器、搜索引擎、
+  或可访问性技术这些工具将不会自动仅仅基于它定义的名字，就把它当做一个按钮。</p>
+
+  <p>为了向不同的用户表达期望的按钮语义，在使用
+  <a href=#autonomous-custom-element id=custom-elements-autonomous-drawbacks:autonomous-custom-element>自主 custom element</a> 的时候，
+  就有必要应用下面这些技术了：</p>
+
+  <ul><li><p>添加 <code id=custom-elements-autonomous-drawbacks:attr-tabindex><a href=interaction.html#attr-tabindex>tabindex</a></code> 属性将会让
+   <code>taco-button</code> 变成 <a href=dom.html#interactive-content id=custom-elements-autonomous-drawbacks:interactive-content>交互内容</a>，
+   因此可以成为 <a href=interaction.html#focusable-area id=custom-elements-autonomous-drawbacks:focusable-area>可聚焦区域</a>。
+   注意如果 <code>taco-button</code> 如果逻辑上被 disabled，
+   <code id=custom-elements-autonomous-drawbacks:attr-tabindex-2><a href=interaction.html#attr-tabindex>tabindex</a></code> 属性就需要被移除。<li><p>添加各种 ARIA 属性帮助我们向可访问性技术表达语义。比如，
+   设置 <code id=custom-elements-autonomous-drawbacks:attr-aria-role><a href=infrastructure.html#attr-aria-role>role</a></code> 属性为
+   "<code id=custom-elements-autonomous-drawbacks:attr-aria-role-button><a data-x-internal=attr-aria-role-button href=https://w3c.github.io/aria/#button>button</a></code>" 表示这是一个按钮，
+   使得用户可以在他们的可访问性技术中使用像按钮一样的工具，成功地与这一控件进行交互。
+   设置 <code id=custom-elements-autonomous-drawbacks:attr-aria-label><a data-x-internal=attr-aria-label href=https://w3c.github.io/aria/#aria-label>aria-label</a></code> 属性很有必要，
+   这会给按钮一个 <a href=https://w3c.github.io/aria/#dfn-accessible-name id=custom-elements-autonomous-drawbacks:concept-accessible-name data-x-internal=concept-accessible-name>可访问的名字</a>，
+   而不是让可访问性技术遍历它的子文本节点并声明。
+   当按钮逻辑上被 disabled 时，
+   设置 <code id=custom-elements-autonomous-drawbacks:attr-aria-disabled><a data-x-internal=attr-aria-disabled href=https://w3c.github.io/aria/#aria-disabled>aria-disabled</a></code> 属性为 "<code>true</code>"
+   向可访问性技术表示该按钮被禁用的状态。<li><p>添加按钮常见的事件处理器来帮助向 Web 浏览器用户表达按钮的语义。
+   在这一情形下，最相关的事件处理器当数代理合适的
+   <code id=custom-elements-autonomous-drawbacks:event-keydown><a data-x-internal=event-keydown href=https://w3c.github.io/uievents/#event-type-keydown>keydown</a></code> 事件并把它变成
+   <code id=custom-elements-autonomous-drawbacks:event-click><a data-x-internal=event-click href=https://w3c.github.io/uievents/#event-type-click>click</a></code> 事件，这样你既可以用键盘也可以用鼠标来激活该按钮。<li><p>除了 <code>taco-button</code> 元素的默认视觉样式之外，
+   其视觉样式也将需要更新来反映其逻辑状态的变化，比如被禁用；
+   这就是说任何包含 <code>taco-button</code> 规则的样式表都将需要
+   包含 <code>taco-button[disabled]</code> 规则。</ul>
+
+  <p>考虑到这些点，一个全特性的 <code>taco-button</code> 想要负责表达按钮的语义
+  （包括被禁用的能力），看起来可能是这样的：</p>
+
+  <pre>class TacoButton extends HTMLElement {
+  static get observedAttributes() { return ["disabled"]; }
+
+  constructor() {
+    super();
+
+    this.addEventListener("keydown", e => {
+      if (e.keyCode === 32 || e.keyCode === 13) {
+        this.dispatchEvent(new MouseEvent("click", {
+          bubbles: true,
+          cancelable: true
+        }));
+      }
+    });
+
+    this.addEventListener("click", e => {
+      if (this.disabled) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+    });
+
+    this._observer = new MutationObserver(() => {
+      this.setAttribute("aria-label", this.textContent);
+    });
+  }
+
+  connectedCallback() {
+    this.setAttribute("role", "button");
+    this.setAttribute("tabindex", "0");
+
+    this._observer.observe(this, {
+      childList: true,
+      characterData: true,
+      subtree: true
+    });
+  }
+
+  disconnectedCallback() {
+    this._observer.disconnect();
+  }
+
+  get disabled() {
+    return this.hasAttribute("disabled");
+  }
+
+  set disabled(v) {
+    if (v) {
+      this.setAttribute("disabled", "");
+    } else {
+      this.removeAttribute("disabled");
+    }
+  }
+
+  attributeChangedCallback() {
+    // only is called for the disabled attribute due to observedAttributes
+    if (this.disabled) {
+      this.removeAttribute("tabindex");
+      this.setAttribute("aria-disabled", "true");
+    } else {
+      this.setAttribute("tabindex", "0");
+      this.setAttribute("aria-disabled", "false");
+    }
+  }
+}</pre>
+
+  <p>即使有这样复杂的元素定义，该元素对用户来讲并不好用：它不断地根据自己的意愿添加
+  <code id=custom-elements-autonomous-drawbacks:attr-tabindex-3><a href=interaction.html#attr-tabindex>tabindex</a></code> 和 <code id=custom-elements-autonomous-drawbacks:attr-aria-*><a href=infrastructure.html#attr-aria-*>aria-*</a></code> 属性。
+  这是因为现在还没有办法设置 Custom Element 的默认的可访问性语义或者获得焦点行为。
+  只能强制使用这些属性来完成这一工作（即使它们通常是保留的，只供用户来重写默认行为）。</p>
+
+  <p>相比而言，一个简单的 <a href=#customized-built-in-element id=custom-elements-autonomous-drawbacks:customized-built-in-element>定制内建元素</a>，
+  如上一节所述，将会自动继承 <code id=custom-elements-autonomous-drawbacks:the-button-element><a href=form-elements.html#the-button-element>button</a></code> 的语义和行为，不需手动实现这些行为。
+  通常对于任何有着建立在既有 HTML 元素之上的明显语义和行为的元素，
+  <a href=#customized-built-in-element id=custom-elements-autonomous-drawbacks:customized-built-in-element-2>定制内建元素</a> 更容易开发、维护，以及使用。</p>
+
+
+  <h5 id=custom-elements-upgrades-examples><span class=secno>4.13.1.6</span> 在创建之后升级元素<a href=#custom-elements-upgrades-examples class=self-link></a></h5>
+<div data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/the-elements-of-html/custom-elements/introduction/upgrading-elements-after-their-creation.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/custom-elements/introduction/upgrading-elements-after-their-creation.en.html></div>
+
+  <p><i>This section is non-normative.</i></p>
+
+  <p>因为 <a href=#element-definition id=custom-elements-upgrades-examples:element-definition>元素定义</a> 任何时候都可以发生，
+  可能会先 <a href=https://dom.spec.whatwg.org/#concept-create-element id=custom-elements-upgrades-examples:create-an-element data-x-internal=create-an-element>创建</a> 一个非 custom element，
+  在适当的 <a href=#custom-element-definition id=custom-elements-upgrades-examples:custom-element-definition>定义</a> 注册之后，
+  才变成一个 <a href=#custom-element id=custom-elements-upgrades-examples:custom-element>custom element</a>。
+  我们称这一过程为 "升级" 元素：从一个普通元素编程一个 Custom Element。</p>
+
+  <p><a href=#升级 id=custom-elements-upgrades-examples:升级>升级</a> 使得
+  <a href=#custom-element-definition id=custom-elements-upgrades-examples:custom-element-definition-2>custom element 定义</a> 可以在
+  相关元素初（比如被解析器）始创建之后再行注册。这允许渐进增强 Custom Element 的内容。
+  例如在下列 HTML 文档中，<code>img-viewer</code> 的元素定义是异步载入的：</p>
+
+  <pre>&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;title>Image viewer example&lt;/title>
+
+&lt;img-viewer filter="Kelvin">
+  &lt;img src="images/tree.jpg" alt="A beautiful tree towering over an empty savannah">
+&lt;/img-viewer>
+
+&lt;script src="js/elements/img-viewer.js" async>&lt;/script></pre>
+
+  <p><code>img-viewer</code> 元素的定义是被一个标记了
+  <code id=custom-elements-upgrades-examples:attr-script-async><a href=scripting.html#attr-script-async>async</a></code> 属性的 <code id=custom-elements-upgrades-examples:the-script-element><a href=scripting.html#the-script-element>script</a></code> 元素加载的。
+  在标记代码中该脚本放置在 <code>&lt;img-viewer></code> 标签之后。
+  当脚本正在载入时，<code>img-viewer</code> 元素将会被当做未定义元素，
+  类似 <code id=custom-elements-upgrades-examples:the-span-element><a href=text-level-semantics.html#the-span-element>span</a></code>。一旦脚本载入，它将会定义 <code>img-viewer</code> 元素，
+  并且页面中既有的 <code>img-viewer</code> 元素将会被升级，
+  应用 Custom Element 的定义（大概包括根据 "Kelvin" 字符串应用图像光栅，增强图像的视觉效果）。</p>
+
+  <hr>
+
+  <p>注意 <a href=#升级 id=custom-elements-upgrades-examples:升级-2>升级</a> 只会应用于文档树中的元素。
+  （形式化地说是 <a href=https://dom.spec.whatwg.org/#connected id=custom-elements-upgrades-examples:connected data-x-internal=connected>已连接的</a> 元素）。没有插入到文档中的元素将会保持未升级的状态。下面的例子说明了这一点：</p>
+
+  <pre>&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;title>Upgrade edge-cases example&lt;/title>
+
+&lt;example-element>&lt;/example-element>
+
+&lt;script>
+  "use strict";
+
+  const inDocument = document.querySelector("example-element");
+  const outOfDocument = document.createElement("example-element");
+
+  // Before the element definition, both are HTMLElement:
+  console.assert(inDocument instanceof HTMLElement);
+  console.assert(outOfDocument instanceof HTMLElement);
+
+  class ExampleElement extends HTMLElement {}
+  customElements.define("example-element", ExampleElement);
+
+  // After element definition, the in-document element was upgraded:
+  console.assert(inDocument instanceof ExampleElement);
+  console.assert(!(outOfDocument instanceof ExampleElement));
+
+  document.body.appendChild(outOfDocument);
+
+  // Now that we've moved the element into the document, it too was upgraded:
+  console.assert(outOfDocument instanceof ExampleElement);
+&lt;/script></pre>
+
+
+  <h4 id=custom-element-conformance><span class=secno>4.13.2</span> Requirements for custom element constructors and
+  reactions<a href=#custom-element-conformance class=self-link></a></h4>
+<div data-zh-date="" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/the-elements-of-html/custom-elements/requirements-for-custom-element-constructors-and-reactions.zh.html?filename=requirements-for-custom-element-constructors-and-reactions.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fthe-elements-of-html%2Fcustom-elements%2Frequirements-for-custom-element-constructors-and-reactions.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/custom-elements/requirements-for-custom-element-constructors-and-reactions.en.html></div>
+
+  <p>When authoring <a href=#custom-element-constructor id=custom-element-conformance:custom-element-constructor>custom element constructors</a>,
+  authors are bound by the following conformance requirements:</p>
+
+  <ul><li><p>A parameter-less call to <code>super()</code> must be the first statement in the
+   constructor body, to establish the correct prototype chain and <b>this</b> value before any
+   further code is run.<li><p>A <code>return</code> statement must not appear anywhere inside the constructor
+   body, unless it is a simple early-return (<code>return</code> or <code>return
+   this</code>).<li><p>The constructor must not use the <code id=custom-element-conformance:dom-document-write><a href=dynamic-markup-insertion.html#dom-document-write>document.write()</a></code>
+   or <code id=custom-element-conformance:dom-document-open><a href=dynamic-markup-insertion.html#dom-document-open>document.open()</a></code> methods.<li><p>The element's attributes and children must not be inspected, as in the non-<a href=#升级 id=custom-element-conformance:升级>upgrade</a> case none will be present, and relying on
+   upgrades makes the element less usable.<li><p>The element must not gain any attributes or children, as this violates the expectations of
+   consumers who use the <code id=custom-element-conformance:dom-document-createelement><a data-x-internal=dom-document-createelement href=https://dom.spec.whatwg.org/#dom-document-createelement>createElement</a></code> or <code id=custom-element-conformance:dom-document-createelementns><a data-x-internal=dom-document-createelementns href=https://dom.spec.whatwg.org/#dom-document-createelementns>createElementNS</a></code> methods.<li><p>In general, work should be deferred to <code>connectedCallback</code> as much as
+   possible—especially work involving fetching resources or rendering. However, note that <code>connectedCallback</code> can be called more than once, so any initialization work that
+   is truly one-time will need a guard to prevent it from running twice.<li><p>In general, the constructor should be used to set up initial state and default values, and
+   to set up event listeners and possibly a <a id=custom-element-conformance:shadow-root href=https://dom.spec.whatwg.org/#concept-shadow-root data-x-internal=shadow-root>shadow root</a>.</ul>
+
+  <p>Several of these requirements are checked during <a href=https://dom.spec.whatwg.org/#concept-create-element id=custom-element-conformance:create-an-element data-x-internal=create-an-element>element
+  creation</a>, either directly or indirectly, and failing to follow them will result in a custom
+  element that cannot be instantiated by the parser or DOM APIs. This is true even if the work is
+  done inside a constructor-initiated <a id=custom-element-conformance:microtask href=webappapis.html#microtask>microtask</a>, as a <a href=webappapis.html#perform-a-microtask-checkpoint id=custom-element-conformance:perform-a-microtask-checkpoint>microtask checkpoint</a> can occur immediately after construction.</p>
+
+  <p>When authoring <a href=#concept-custom-element-reaction id=custom-element-conformance:concept-custom-element-reaction>custom element reactions</a>,
+  authors should avoid manipulating the node tree as this can lead to unexpected results.</p>
+
+  <div class=example>
+   <p>An element's <code>connectedCallback</code> can be queued before the element is
+   disconnected, but as the callback queue is still processed, it results in a <code>connectedCallback</code> for an element that is no longer connected:</p>
+
+   <pre><code class=js>class CParent extends HTMLElement {
+  connectedCallback() {
+    this.firstChild.remove();
+  }
+}
+customElements.define("c-parent", CParent);
+
+class CChild extends HTMLElement {
+  connectedCallback() {
+    console.log("CChild connectedCallback: isConnected =", this.isConnected);
+  }
+}
+customElements.define("c-child", CChild);
+
+const parent = new CParent(),
+      child = new CChild();
+parent.append(child);
+document.body.append(parent);
+
+// Logs:
+// CChild connectedCallback: isConnected = false</code></pre>
+  </div>
+
+
+  <h4 id=custom-elements-core-concepts><span class=secno>4.13.3</span> 核心概念<a href=#custom-elements-core-concepts class=self-link></a></h4>
+<div data-zh-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/the-elements-of-html/custom-elements/core-concepts.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/custom-elements/core-concepts.en.html></div>
+
+  <p><dfn id=custom-element data-export="">custom element</dfn> 是 <a href=https://dom.spec.whatwg.org/#concept-element-custom id=custom-elements-core-concepts:concept-element-custom data-x-internal=concept-element-custom>自定义的</a> 元素。
+  非形式化地，这意味着它的构造器和原型链由作者而不是用户代理定义。
+  作者提供的构造函数称为 <dfn id=custom-element-constructor data-export="">custom element 构造器</dfn>。</p>
+
+  <p>可以定义两种不同的 <a href=#custom-element id=custom-elements-core-concepts:custom-element>custom elements</a>：</p>
+
+  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/is title="The is global attribute allows you to specify that a standard HTML element should behave like a defined custom built-in element (see Using custom elements for more details).">Global_attributes/is</a><div class=support><span class="firefox yes"><span>Firefox</span><span>63+</span></span><span class="safari no"><span>Safari</span><span>No</span></span><span class="chrome yes"><span>Chrome</span><span>67+</span></span><hr><span class="opera yes"><span>Opera</span><span>55+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>63+</span></span><span class="safari_ios no"><span>Safari iOS</span><span>No</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>67+</span></span><span class="webview_android yes"><span>WebView Android</span><span>67+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>9.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>48+</span></span></div></div></div><ol><li><p><dfn id=autonomous-custom-element data-export="">自主的 custom element</dfn> 定义时不包含 <code>extends</code> 选项。这类 custom elements 的 局部名 等于它们
+   <a href=#concept-custom-element-definition-name id=custom-elements-core-concepts:concept-custom-element-definition-name>定义的名称</a>。<li><p><dfn id=customized-built-in-element data-export="">定制内建元素</dfn> 定义时包含 <code>extends</code> 选项。这类 custom elements 的 局部名 等于它们
+   在 <code>extends</code> 选项中传入的值，它们的 <a href=#concept-custom-element-definition-name id=custom-elements-core-concepts:concept-custom-element-definition-name-2>定义的名称</a> 被用于
+   <dfn data-dfn-for=html-global id=attr-is data-dfn-type=element-attr><code>is</code></dfn> 属性的值，因此它必须是一个
+   <a href=#valid-custom-element-name id=custom-elements-core-concepts:valid-custom-element-name>合法的 custom element 名</a>。</ol>
+
+  <p>在 <a href=#custom-element id=custom-elements-core-concepts:custom-element-2>custom element</a> 被 <a href=https://dom.spec.whatwg.org/#concept-create-element id=custom-elements-core-concepts:create-an-element data-x-internal=create-an-element>创建</a> 后，
+  更改 <code id=custom-elements-core-concepts:attr-is><a href=#attr-is>is</a></code> 属性的值不会更改该元素的行为，因为它只是
+  保存为该元素的 <a href=https://dom.spec.whatwg.org/#concept-element-is-value id=custom-elements-core-concepts:concept-element-is-value data-x-internal=concept-element-is-value><code>is</code> 的值</a>。</p>
+
+  <p><a href=#autonomous-custom-element id=custom-elements-core-concepts:autonomous-custom-element>自主的 custom elements</a> 有下列的元素定义：</p>
+
+  <dl class=element><dt><a href=dom.html#concept-element-categories id=custom-elements-core-concepts:concept-element-categories>类别</a>：<dd><a href=dom.html#flow-content id=custom-elements-core-concepts:flow-content>流式内容</a>。<dd><a href=dom.html#phrasing-content id=custom-elements-core-concepts:phrasing-content>短语内容</a>。<dd><a href=dom.html#palpable-content-2 id=custom-elements-core-concepts:palpable-content-2>可感知内容</a>。<dd><a href=#form-associated-custom-element id=custom-elements-core-concepts:form-associated-custom-element>表单相关的 custom element</a>：<a href=forms.html#category-listed id=custom-elements-core-concepts:category-listed>在列表中的</a>, <a href=forms.html#category-label id=custom-elements-core-concepts:category-label>可加标签的</a>, <a href=forms.html#category-submit id=custom-elements-core-concepts:category-submit>可提交的</a> 和 <a href=forms.html#category-reset id=custom-elements-core-concepts:category-reset>可重置的</a> <a href=forms.html#form-associated-element id=custom-elements-core-concepts:form-associated-element>表单相关元素</a>。<dt><a href=dom.html#concept-element-contexts id=custom-elements-core-concepts:concept-element-contexts>该元素可使用的上下文</a>：<dd>应该出现 <a href=dom.html#phrasing-content id=custom-elements-core-concepts:phrasing-content-2>短语内容</a> 的地方。<dt><a href=dom.html#concept-element-content-model id=custom-elements-core-concepts:concept-element-content-model>内容模型</a>：<dd><a href=dom.html#transparent id=custom-elements-core-concepts:transparent>透明的</a>。<dt><a href=dom.html#concept-element-attributes id=custom-elements-core-concepts:concept-element-attributes>内容属性</a>：<dd>除 <code id=custom-elements-core-concepts:attr-is-2><a href=#attr-is>is</a></code> 之外的 <a href=dom.html#全局属性 id=custom-elements-core-concepts:全局属性>全局属性</a><dd><a href=#form-associated-custom-element id=custom-elements-core-concepts:form-associated-custom-element-2>表单相关元素</a> 的 <code id=custom-elements-core-concepts:attr-fae-form><a href=form-control-infrastructure.html#attr-fae-form>form</a></code> — Associates the element with a <code id=custom-elements-core-concepts:the-form-element><a href=forms.html#the-form-element>form</a></code> element<dd><a href=#form-associated-custom-element id=custom-elements-core-concepts:form-associated-custom-element-3>表单相关元素</a> 的 <code id=custom-elements-core-concepts:attr-fe-disabled><a href=form-control-infrastructure.html#attr-fe-disabled>disabled</a></code> — Whether the form control is disabled<dd><a href=#form-associated-custom-element id=custom-elements-core-concepts:form-associated-custom-element-4>表单相关元素</a> 的 <code id=custom-elements-core-concepts:attr-face-readonly><a href=#attr-face-readonly>readonly</a></code> — Affects <code id=custom-elements-core-concepts:dom-elementinternals-willvalidate><a href=form-control-infrastructure.html#dom-elementinternals-willvalidate>willValidate</a></code>, plus any behavior added by the custom element author<dd><a href=#form-associated-custom-element id=custom-elements-core-concepts:form-associated-custom-element-5>表单相关元素</a> 的 <code id=custom-elements-core-concepts:attr-fe-name><a href=form-control-infrastructure.html#attr-fe-name>name</a></code> — Name of the element to use for <a id=custom-elements-core-concepts:form-submission href=form-control-infrastructure.html#form-submission>form submission</a> and in the <code id=custom-elements-core-concepts:dom-form-elements><a href=forms.html#dom-form-elements>form.elements</a></code> API <dd>任何其他没有命名空间的属性。<dt><a href=dom.html#concept-element-accessibility-considerations id=custom-elements-core-concepts:concept-element-accessibility-considerations>可访问性相关</a>：<dd><a href=#form-associated-custom-element id=custom-elements-core-concepts:form-associated-custom-element-6>表单相关的 custom element</a>：<a href=https://w3c.github.io/html-aria/#el-form-associated-custom-element>使用方版本</a>；<a href=https://w3c.github.io/html-aam/#el-form-associated-custom-element>实现方版本</a>。<dd>其他的：<a href=https://w3c.github.io/html-aria/#el-autonomous-custom-element>使用方版本</a>；<a href=https://w3c.github.io/html-aam/#el-autonomous-custom-element>实现方版本</a>。<dt><a href=dom.html#concept-element-dom id=custom-elements-core-concepts:concept-element-dom>DOM 接口</a>：<dd>由元素作者提供（继承自 <code id=custom-elements-core-concepts:htmlelement><a href=dom.html#htmlelement>HTMLElement</a></code>）</dl>
+
+
+  <p><a href=#autonomous-custom-element id=custom-elements-core-concepts:autonomous-custom-element-2>自主的 custom element</a> 没有任何特殊含义：它
+  <a href=dom.html#represents id=custom-elements-core-concepts:represents>表示</a> 它的子节点。 <a href=#customized-built-in-element id=custom-elements-core-concepts:customized-built-in-element>定制内建元素</a> 继承了它扩展的元素的语义。</p>
+
+  <p>任何没有命名空间的并与元素功能相关的属性，都可以按照元素作者的决定添加到
+  <a href=#autonomous-custom-element id=custom-elements-core-concepts:autonomous-custom-element-3>自主的 custom element</a> 上，
+  只要该属性名是 <a href=infrastructure.html#xml-compatible id=custom-elements-core-concepts:xml-compatible>XML 兼容的</a> 其不含 <a href=https://infra.spec.whatwg.org/#ascii-upper-alpha id=custom-elements-core-concepts:uppercase-ascii-letters data-x-internal=uppercase-ascii-letters>ASCII 大写字母</a>。<code id=custom-elements-core-concepts:attr-is-3><a href=#attr-is>is</a></code> 属性较为特殊，
+  它不能声明在 <a href=#autonomous-custom-element id=custom-elements-core-concepts:autonomous-custom-element-4>自主的 custom element</a> 上（如果设置的话不会有任何效果）。</p>
+
+  <p><a href=#customized-built-in-element id=custom-elements-core-concepts:customized-built-in-element-2>定制内建元素</a> 遵循普通的属性名要求
+  （基于它们扩展的元素）。新增自定义的基于属性的行为，可使用
+  <code id=custom-elements-core-concepts:attr-data-*><a href=dom.html#attr-data-*>data-*</a></code> 属性。</p>
+
+  <hr>
+
+  <p>一个 <a href=#autonomous-custom-element id=custom-elements-core-concepts:autonomous-custom-element-5>自主的 custom element</a>，如果与一个
+  <a href=#concept-custom-element-definition-form-associated id=custom-elements-core-concepts:concept-custom-element-definition-form-associated>form-associated</a> 字段为 true
+  的 <a href=#custom-element-definition id=custom-elements-core-concepts:custom-element-definition>Custom Element 定义</a> 相关联，
+  就称为 <dfn id=form-associated-custom-element data-export="">表单相关的 custom element</dfn>。</p>
+
+  <p><code id=custom-elements-core-concepts:attr-fe-name-2><a href=form-control-infrastructure.html#attr-fe-name>name</a></code> 属性表示 <a href=#form-associated-custom-element id=custom-elements-core-concepts:form-associated-custom-element-7>表单相关的 custom element</a> 的名字。
+  <code id=custom-elements-core-concepts:attr-fe-disabled-2><a href=form-control-infrastructure.html#attr-fe-disabled>disabled</a></code> 属性用来让 <a href=#form-associated-custom-element id=custom-elements-core-concepts:form-associated-custom-element-8>表单相关的 custom element</a>
+  不可交互并阻止它的 <a href=#face-submission-value id=custom-elements-core-concepts:face-submission-value>提交数据</a> 被提交。
+  <code id=custom-elements-core-concepts:attr-fae-form-2><a href=form-control-infrastructure.html#attr-fae-form>form</a></code> 属性用来明确地把
+  <a href=#form-associated-custom-element id=custom-elements-core-concepts:form-associated-custom-element-9>表单相关的 custom element</a> 和它的 <a href=form-control-infrastructure.html#form-owner id=custom-elements-core-concepts:form-owner>表单 owner</a> 相关联。</p>
+
+  <p><dfn id=attr-face-readonly><code>readonly</code></dfn> 属性指定该元素
+  <a href=form-control-infrastructure.html#barred-from-constraint-validation id=custom-elements-core-concepts:barred-from-constraint-validation>禁止约束验证</a>。用户代理不会给这个属性提供任何其他行为，
+  但 custom element 作者应该利用它是否存在来以某种方式让控件变得不可编辑，类似内置控件的
+  <a href=input.html#attr-input-readonly id=custom-elements-core-concepts:attr-input-readonly>readonly</a> 属性那样。</p>
+
+  <p><strong>强校验</strong>：如果 <a href=#form-associated-custom-element id=custom-elements-core-concepts:form-associated-custom-element-10>表单相关的 custom element</a> 的指定了
+  <code id=custom-elements-core-concepts:attr-face-readonly-2><a href=#attr-face-readonly>readonly</a></code> 属性，该元素就 <a href=form-control-infrastructure.html#barred-from-constraint-validation id=custom-elements-core-concepts:barred-from-constraint-validation-2>禁止了约束验证</a>。</p>
+
+  <p><a href=#form-associated-custom-element id=custom-elements-core-concepts:form-associated-custom-element-11>表单相关的 custom element</a> 的 <a href=form-control-infrastructure.html#concept-form-reset-control id=custom-elements-core-concepts:concept-form-reset-control>重置算法</a>
+  是用这个元素 <a href=#enqueue-a-custom-element-callback-reaction id=custom-elements-core-concepts:enqueue-a-custom-element-callback-reaction>入队一个 Custom Element 反应</a>，回调名为 "<code>formResetCallback</code>"，参数列表为空。</p>
+
+  <hr>
+
+  <p><dfn id=valid-custom-element-name data-export="">合法的 custom element 名</dfn> 是满足以下要求的一串字符 <var>name</var>：</p>
+
+  <ul><li>
+    <p><var>name</var> 必须匹配 <code id=custom-elements-core-concepts:prod-potentialcustomelementname><a href=#prod-potentialcustomelementname>PotentialCustomElementName</a></code> 生成式：</p>
+
+    <dl><dt><code><dfn id=prod-potentialcustomelementname>PotentialCustomElementName</dfn> ::=</code><dd><code>[a-z] （<a href=#prod-pcenchar id=custom-elements-core-concepts:prod-pcenchar>PCENChar</a>）* '-'
+     （<a href=#prod-pcenchar id=custom-elements-core-concepts:prod-pcenchar-2>PCENChar</a>）*</code><dt><code><dfn id=prod-pcenchar>PCENChar</dfn> ::=</code><dd><code>"-" | "." | [0-9] | "_" | [a-z] | #xB7 | [#xC0-#xD6] | [#xD8-#xF6] |
+     [#xF8-#x37D] | [#x37F-#x1FFF] | [#x200C-#x200D] | [#x203F-#x2040] | [#x2070-#x218F] |
+     [#x2C00-#x2FEF] | [#x3001-#xD7FF] | [#xF900-#xFDCF] | [#xFDF0-#xFFFD] |
+     [#x10000-#xEFFFF]</code></dl>
+
+    <p>这使用了 <cite>XML</cite> 标准中的 <a href=https://www.w3.org/TR/xml/#sec-notation>EBNF 记法</a> 。 <a href=references.html#refsXML>[XML]</a></p>
+   <li>
+    <p><var>name</var> 不可是下列之一：</p>
+
+    <ul class=brief><li><code>annotation-xml</code><li><code>color-profile</code><li><code>font-face</code><li><code>font-face-src</code><li><code>font-face-uri</code><li><code>font-face-format</code><li><code>font-face-name</code><li><code>missing-glyph</code></ul>
+
+    <p class=note>上述名字列表总结了所有包含横线的元素名，包括
+    <cite>SVG 2</cite> 和 <cite>MathML</cite>
+    <a href=infrastructure.html#other-applicable-specifications id=custom-elements-core-concepts:other-applicable-specifications>相关标准</a>。
+    <a href=references.html#refsSVG>[SVG]</a> <a href=references.html#refsMATHML>[MATHML]</a></p>
+   </ul>
+
+  <div class=note>
+   <p>上述要求保证了 <a href=#valid-custom-element-name id=custom-elements-core-concepts:valid-custom-element-name-2>合法 custom element 名</a> 的这些目标：</p>
+
+   <ul><li><p>以 <a href=https://infra.spec.whatwg.org/#ascii-lower-alpha id=custom-elements-core-concepts:lowercase-ascii-letters data-x-internal=lowercase-ascii-letters>ASCII 小写字母</a> 起始，确保 HTML 解析器将它们当做标签而不是文本。<li><p>不包含任何 <a href=https://infra.spec.whatwg.org/#ascii-upper-alpha id=custom-elements-core-concepts:uppercase-ascii-letters-2 data-x-internal=uppercase-ascii-letters>ASCII 大写字母</a>，
+    确保用户代理总是可以将 HTML 元素当做大小写不敏感的 ASCII 来处理。<li><p>包含一个横线，用于做命名空间来确保向后兼容（因为 HTML、SVG、MathML 中新增的元素 局部名 不会包含横线）。<li><p>总是可以使用 <code id=custom-elements-core-concepts:dom-document-createelement><a data-x-internal=dom-document-createelement href=https://dom.spec.whatwg.org/#dom-document-createelement>createElement()</a></code> 和 <code id=custom-elements-core-concepts:dom-document-createelementns><a data-x-internal=dom-document-createelementns href=https://dom.spec.whatwg.org/#dom-document-createelementns>createElementNS()</a></code> 来创建它们，
+    这些 API 有着比解析器更高的限制。</ul>
+
+   <p>除这些限制之外，允许了大量的名字来给像
+   <code>&lt;math-α></code> 或 <code>&lt;emotion-😍></code> 这样的用例最大的自由。</p>
+  </div>
+
+  <p><dfn id=custom-element-definition>Custom Element 定义</dfn> 描述了一个 <a href=#custom-element id=custom-elements-core-concepts:custom-element-3>custom element</a> 的组成：</p>
+
+  <dl><dt><dfn data-dfn-for="custom element definition" id=concept-custom-element-definition-name data-export="">name</dfn><dd>一个 <a href=#valid-custom-element-name id=custom-elements-core-concepts:valid-custom-element-name-3>合法的 Custom Element 名称</a><dt><dfn data-dfn-for="custom element definition" id=concept-custom-element-definition-local-name data-export="">局部名</dfn><dd>一个 局部名<dt><dfn data-dfn-for="custom element definition" id=concept-custom-element-definition-constructor data-export="">constructor</dfn><dd>一个Web IDL <code id=custom-elements-core-concepts:idl-function><a data-x-internal=idl-function href=https://heycam.github.io/webidl/#common-Function>Function</a></code> 回调函数类型的值，包装了
+   <a href=#custom-element-constructor id=custom-elements-core-concepts:custom-element-constructor>custom element 构造器</a><dt><dfn id=concept-custom-element-definition-observed-attributes>被观察的属性</dfn>列表<dd>一个 <code>sequence&lt;DOMString></code><dt><dfn id=concept-custom-element-definition-lifecycle-callbacks>生命周期回调</dfn>列表<dd>一个映射，其键是字符串 "<code>connectedCallback</code>"，
+   "<code>disconnectedCallback</code>"，
+   "<code>adoptedCallback</code>"，
+   "<code>attributeChangedCallback</code>"，
+   "<code>formAssociatedCallback</code>"，
+   "<code>formDisabledCallback</code>",
+   "<code>formResetCallback</code>" 和 "<code>formStateRestoreCallback</code>"。
+   相应的值是 Web IDL <code id=custom-elements-core-concepts:idl-function-2><a data-x-internal=idl-function href=https://heycam.github.io/webidl/#common-Function>Function</a></code> 回调函数类型的值，或者 null。默认每一项的值都是null。<dt>一个<dfn id=concept-custom-element-definition-construction-stack>construction
+   stack</dfn><dd>一个初始为空的列表，由 <a href=#concept-upgrade-an-element id=custom-elements-core-concepts:concept-upgrade-an-element>元素升级</a> 算法和
+   和 <a href=dom.html#html-element-constructors>HTML 元素构造器</a> 操作。列表中每一项都将是一个元素或者一个
+   <dfn id=concept-already-constructed-marker><i>已经构造的</i> 标记</dfn>。<dt><dfn id=concept-custom-element-definition-form-associated>表单相关</dfn> 布尔<dd>如果为真，用户代理会把和这个 <a href=#custom-element-definition id=custom-elements-core-concepts:custom-element-definition-2>custom element 定义</a> 关联的元素当作
+   <a href=#form-associated-custom-element id=custom-elements-core-concepts:form-associated-custom-element-12>表单相关的 custom elements</a> 处理。<dt><dfn id=concept-custom-element-definition-disable-internals>disable 内部</dfn> 布尔<dd>控制 <code id=custom-elements-core-concepts:dom-attachinternals><a href=#dom-attachinternals>attachInternals()</a></code>。
+
+   <dt><dfn data-dfn-for="custom element definition" id=concept-custom-element-definition-disable-shadow data-export="">禁用 shadow</dfn> 布尔<dd>控制 <code id=custom-elements-core-concepts:dom-element-attachshadow><a data-x-internal=dom-element-attachshadow href=https://dom.spec.whatwg.org/#dom-element-attachshadow>attachShadow()</a></code>。
+  </dl>
+
+  <p>给定一个 <var>document</var>，<var>namespace</var>，<var>localName</var>，以及 <var>is</var>，
+  <dfn id=look-up-a-custom-element-definition data-export="">查找一个 custom element 的定义</dfn> 应执行下列步骤（
+  返回一个 <a href=#custom-element-definition id=custom-elements-core-concepts:custom-element-definition-3>custom element 定义</a> 或 null）：</p>
+
+  <ol><li><p>如果 <var>namespace</var> 不是 <a href=https://infra.spec.whatwg.org/#html-namespace id=custom-elements-core-concepts:html-namespace-2 data-x-internal=html-namespace-2>HTML 命名空间</a>，返回 null。<li><p>如果 <var>document</var> 的 <a href=browsers.html#concept-document-bc id=custom-elements-core-concepts:concept-document-bc>浏览环境</a> 是 null，返回 null。<li><p>令 <var>registry</var> 为 <var>document</var> 的
+   <a href=webappapis.html#concept-relevant-global id=custom-elements-core-concepts:concept-relevant-global>相关全局对象</a> 的
+   <code id=custom-elements-core-concepts:customelementregistry><a href=#customelementregistry>CustomElementRegistry</a></code> 对象。<li><p>如果在 <var>registry</var> 中有一个 <a href=#custom-element-definition id=custom-elements-core-concepts:custom-element-definition-4>custom element 定义</a> 的
+   <a href=#concept-custom-element-definition-name id=custom-elements-core-concepts:concept-custom-element-definition-name-3>name</a> 和 <a href=#concept-custom-element-definition-local-name id=custom-elements-core-concepts:concept-custom-element-definition-local-name>局部名</a> 都等于
+   <var>localName</var>，返回该 <a href=#custom-element-definition id=custom-elements-core-concepts:custom-element-definition-5>custom element 定义</a>。<li><p>如果在 <var>registry</var> 中有一个 <a href=#custom-element-definition id=custom-elements-core-concepts:custom-element-definition-6>custom element 定义</a> 的
+   <a href=#concept-custom-element-definition-name id=custom-elements-core-concepts:concept-custom-element-definition-name-4>name</a> 等于 <var>is</var> 且
+   <a href=#concept-custom-element-definition-local-name id=custom-elements-core-concepts:concept-custom-element-definition-local-name-2>局部名</a> 等于 <var>localName</var>，返回该
+   <a href=#custom-element-definition id=custom-elements-core-concepts:custom-element-definition-7>custom element 定义</a>。<li><p>返回 null。</ol>
+
+
+  <h4 id=custom-elements-api><span class=secno>4.13.4</span> <code id=custom-elements-api:customelementregistry><a href=#customelementregistry>CustomElementRegistry</a></code> 接口<a href=#custom-elements-api class=self-link></a></h4>
+<div data-zh-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/the-elements-of-html/custom-elements/the-customelementregistry-interface.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/custom-elements/the-customelementregistry-interface.en.html></div>
+
+  <p>每个 <code id=custom-elements-api:window><a href=window-object.html#window>Window</a></code> 对象都关联是一个唯一的
+  <code id=custom-elements-api:customelementregistry-2><a href=#customelementregistry>CustomElementRegistry</a></code> 对象实例，当 <code id=custom-elements-api:window-2><a href=window-object.html#window>Window</a></code> 对象创建时分配。</p>
+
+  <p class=note>Custom element registries 与 <code id=custom-elements-api:window-3><a href=window-object.html#window>Window</a></code> 对象而不是 <code id=custom-elements-api:document><a href=dom.html#document>Document</a></code>
+  对象关联，因为每个 <a href=#custom-element-constructor id=custom-elements-api:custom-element-constructor>custom element 构造函数</a> 继承自 <code id=custom-elements-api:htmlelement><a href=dom.html#htmlelement>HTMLElement</a></code> 接口，而每个 <code id=custom-elements-api:window-4><a href=window-object.html#window>Window</a></code> 对象只有一个 <code id=custom-elements-api:htmlelement-2><a href=dom.html#htmlelement>HTMLElement</a></code> 接口。</p>
+
+  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Window/customElements title="The customElements read-only property of the Window interface returns a reference to the CustomElementRegistry object, which can be used to register new custom elements and get information about previously registered custom elements.">Window/customElements</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>63+</span></span><span class="safari yes"><span>Safari</span><span>10.1+</span></span><span class="chrome yes"><span>Chrome</span><span>54+</span></span><hr><span class="opera yes"><span>Opera</span><span>41+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>63+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>10.3+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>54+</span></span><span class="webview_android yes"><span>WebView Android</span><span>54+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>6.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>41+</span></span></div></div></div><p><code id=custom-elements-api:window-5><a href=window-object.html#window>Window</a></code> 接口的 <dfn id=dom-window-customelements><code>customElements</code></dfn>
+  属性必须返回该 <code id=custom-elements-api:window-6><a href=window-object.html#window>Window</a></code> 对象的 <code id=custom-elements-api:customelementregistry-3><a href=#customelementregistry>CustomElementRegistry</a></code> 对象。</p>
+
+  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry title="The CustomElementRegistry interface provides methods for registering custom elements and querying registered elements. To get an instance of it, use the window.customElements property.">CustomElementRegistry</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>63+</span></span><span class="safari yes"><span>Safari</span><span>10.1+</span></span><span class="chrome yes"><span>Chrome</span><span>54+</span></span><hr><span class="opera yes"><span>Opera</span><span>41+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>63+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>10.3+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>54+</span></span><span class="webview_android yes"><span>WebView Android</span><span>54+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>6.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>41+</span></span></div></div></div><pre class=idl>interface <dfn id=customelementregistry>CustomElementRegistry</dfn> {
+  [<a href=#cereactions id=custom-elements-api:cereactions>CEReactions</a>] undefined <a href=#dom-customelementregistry-define id=custom-elements-api:dom-customelementregistry-define>define</a>(DOMString name, <a href=#customelementconstructor id=custom-elements-api:customelementconstructor>CustomElementConstructor</a> constructor, optional <a href=#elementdefinitionoptions id=custom-elements-api:elementdefinitionoptions>ElementDefinitionOptions</a> options = {});
+  (<a href=#customelementconstructor id=custom-elements-api:customelementconstructor-2>CustomElementConstructor</a> or undefined) <a href=#dom-customelementregistry-get id=custom-elements-api:dom-customelementregistry-get>get</a>(DOMString name);
+  Promise&lt;<a href=#customelementconstructor id=custom-elements-api:customelementconstructor-3>CustomElementConstructor</a>> <a href=#dom-customelementregistry-whendefined id=custom-elements-api:dom-customelementregistry-whendefined>whenDefined</a>(DOMString name);
+  [<a href=#cereactions id=custom-elements-api:cereactions-2>CEReactions</a>] undefined <a href=#dom-customelementregistry-upgrade id=custom-elements-api:dom-customelementregistry-upgrade>upgrade</a>(<a id=custom-elements-api:node href=https://dom.spec.whatwg.org/#interface-node data-x-internal=node>Node</a> root);
+};
+
+callback <dfn id=customelementconstructor>CustomElementConstructor</dfn> = <a id=custom-elements-api:htmlelement-3 href=dom.html#htmlelement>HTMLElement</a> ();
+
+dictionary <dfn id=elementdefinitionoptions>ElementDefinitionOptions</dfn> {
+  DOMString extends;
+};</pre>
+
+  <p>每个 <code id=custom-elements-api:customelementregistry-4><a href=#customelementregistry>CustomElementRegistry</a></code> 有一个 <a href=#custom-element-definition id=custom-elements-api:custom-element-definition>custom element 定义</a> 的集合，初始为空。通常本标准中的算法在 registry 中通过
+  <a href=#concept-custom-element-definition-name id=custom-elements-api:concept-custom-element-definition-name>name</a>，
+  <a href=#concept-custom-element-definition-local-name id=custom-elements-api:concept-custom-element-definition-local-name>局部名</a>，
+  或 <a href=#concept-custom-element-definition-constructor id=custom-elements-api:concept-custom-element-definition-constructor>constructor</a>
+  中的任意一个进行查找。</p>
+
+  <p>每个 <code id=custom-elements-api:customelementregistry-5><a href=#customelementregistry>CustomElementRegistry</a></code> 还有一个
+  <dfn id=element-definition-is-running>element 定义正在运行</dfn> 标记，
+  用来防止 <a href=#element-definition id=custom-elements-api:element-definition>元素定义</a> 被再次调用。
+  初始未设置。</p>
+
+  <p>每个 <code id=custom-elements-api:customelementregistry-6><a href=#customelementregistry>CustomElementRegistry</a></code> 还有一个 <dfn id=when-defined-promise-map>when-defined Promise 映射</dfn>，
+  将 <a href=#valid-custom-element-name id=custom-elements-api:valid-custom-element-name>合法的 custom element 名</a> 映射为 Promise。
+  用来实现 <code id=custom-elements-api:dom-customelementregistry-whendefined-2><a href=#dom-customelementregistry-whendefined>whenDefined()</a></code> 方法。</p>
+
+  <dl class=domintro><dt><var>window</var> . <code id=custom-elements-api:dom-window-customelements><a href=#dom-window-customelements>customElements</a></code> . <code id=dom-customelementregistry-define-dev><a href=#dom-customelementregistry-define>define</a></code>(<var>name</var>，
+   <var>constructor</var>)<dd>定义一个新的 <a href=#custom-element id=custom-elements-api:custom-element>custom element</a>，作为 <a href=#autonomous-custom-element id=custom-elements-api:autonomous-custom-element>自主的 custom element</a>，并将指定的名称映射到指定的构造函数。<dt><var>window</var> . <code id=custom-elements-api:dom-window-customelements-2><a href=#dom-window-customelements>customElements</a></code> . <code id=custom-elements-api:dom-customelementregistry-define-2><a href=#dom-customelementregistry-define>define</a></code>(<var>name</var>， <var>constructor</var>，
+   { extends: <var>baseLocalName</var> })<dd>定义一个新的 <a href=#custom-element id=custom-elements-api:custom-element-2>custom element</a>，作为 <a href=#customized-built-in-element id=custom-elements-api:customized-built-in-element>定制内建元素</a>，其 <a href=infrastructure.html#element-type id=custom-elements-api:element-type>元素类型</a> 由 <var>baseLocalName</var> 标识的。
+   同时将给定的 name 映射到给定的 constructor。当尝试扩展 <a href=#custom-element id=custom-elements-api:custom-element-3>custom element</a> 或未知元素时，
+   将会抛出 <a id=custom-elements-api:notsupportederror href=https://heycam.github.io/webidl/#notsupportederror data-x-internal=notsupportederror>"<code>NotSupportedError</code>"</a> <code id=custom-elements-api:domexception><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code>。<dt><var>window</var> . <code id=custom-elements-api:dom-window-customelements-3><a href=#dom-window-customelements>customElements</a></code> . <code id=dom-customelementregistry-get-dev><a href=#dom-customelementregistry-get>get</a></code>(<var>name</var>)<dd>获取定义为 <a href=#concept-custom-element-definition-name id=custom-elements-api:concept-custom-element-definition-name-2>name</a> 的
+   <a href=#custom-element-constructor id=custom-elements-api:custom-element-constructor-2>custom element 构造函数</a> 。如果没有
+   <a href=#custom-element-definition id=custom-elements-api:custom-element-definition-2>custom element 定义</a> 拥有给定的 <a href=#concept-custom-element-definition-name id=custom-elements-api:concept-custom-element-definition-name-3>name</a> 则返回 undefined。<dt><var>window</var> . <code id=custom-elements-api:dom-window-customelements-4><a href=#dom-window-customelements>customElements</a></code> . <code id=dom-customelementregistry-whendefined-dev><a href=#dom-customelementregistry-whendefined>whenDefined</a></code>(<var>name</var>)<dd>返回一个 promise，定义给定 name 的 <a href=#custom-element id=custom-elements-api:custom-element-4>custom element</a> 时完成，值为 <a href=#custom-element id=custom-elements-api:custom-element-5>custom element</a> 的构造函数。
+   （如果这样的 <a href=#custom-element id=custom-elements-api:custom-element-6>custom element</a> 已经定义，返回的 promise 将会立即完成。）
+   如果没有给定 <a href=#valid-custom-element-name id=custom-elements-api:valid-custom-element-name-2>合法的 Custom Element 名称</a>
+   则返回一个已经以
+   <a id=custom-elements-api:syntaxerror href=https://heycam.github.io/webidl/#syntaxerror data-x-internal=syntaxerror>"<code>SyntaxError</code>"</a> <code id=custom-elements-api:domexception-2><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code> 拒绝的 Promise。</dl>
+
+  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry/define title="The define() method of the CustomElementRegistry interface defines a new custom element.">CustomElementRegistry/define</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>63+</span></span><span class="safari yes"><span>Safari</span><span>10.1+</span></span><span class="chrome yes"><span>Chrome</span><span>66+</span></span><hr><span class="opera yes"><span>Opera</span><span>53+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>63+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>10.3+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>66+</span></span><span class="webview_android yes"><span>WebView Android</span><span>66+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>9.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>47+</span></span></div></div></div><p><dfn id=element-definition>元素定义</dfn> 是向 <code id=custom-elements-api:customelementregistry-7><a href=#customelementregistry>CustomElementRegistry</a></code>
+  新增一个 <a href=#custom-element-definition id=custom-elements-api:custom-element-definition-3>custom element 定义</a> 的过程。
+  由 <code id=custom-elements-api:dom-customelementregistry-define-3><a href=#dom-customelementregistry-define>define()</a></code> 方法完成。
+  <dfn id=dom-customelementregistry-define><code>define(<var>name</var>， <var>constructor</var>，
+  <var>options</var>)</code></dfn> 方法被调用时必须运行下列步骤：</p>
+
+  <ol><li><p>如果 <a id=custom-elements-api:isconstructor href=https://tc39.es/ecma262/#sec-isconstructor data-x-internal=isconstructor>IsConstructor</a>(<var>constructor</var>) 为 false，抛出一个
+   <code id=custom-elements-api:typeerror><a data-x-internal=typeerror href=https://tc39.es/ecma262/#sec-native-error-types-used-in-this-standard-typeerror>TypeError</a></code> 并中止这些步骤。<li><p>如果 <var>name</var> 不是一个 <a href=#valid-custom-element-name id=custom-elements-api:valid-custom-element-name-3>合法的 custom element 名</a>，则抛出一个
+   <a id=custom-elements-api:syntaxerror-2 href=https://heycam.github.io/webidl/#syntaxerror data-x-internal=syntaxerror>"<code>SyntaxError</code>"</a> <code id=custom-elements-api:domexception-3><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code> 并中止这些步骤。<li><p>如果该 <code id=custom-elements-api:customelementregistry-8><a href=#customelementregistry>CustomElementRegistry</a></code> 包含 <a href=#concept-custom-element-definition-name id=custom-elements-api:concept-custom-element-definition-name-4>name</a> 值为 <var>name</var> 的项目，
+   则抛出一个 <a id=custom-elements-api:notsupportederror-2 href=https://heycam.github.io/webidl/#notsupportederror data-x-internal=notsupportederror>"<code>NotSupportedError</code>"</a> <code id=custom-elements-api:domexception-4><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code> 并中止这些步骤。<li><p>如果该 <code id=custom-elements-api:customelementregistry-9><a href=#customelementregistry>CustomElementRegistry</a></code> 包含 <a href=#concept-custom-element-definition-constructor id=custom-elements-api:concept-custom-element-definition-constructor-2>constructor</a> 值为 <var>constructor</var> 的项目，
+   则抛出一个 <a id=custom-elements-api:notsupportederror-3 href=https://heycam.github.io/webidl/#notsupportederror data-x-internal=notsupportederror>"<code>NotSupportedError</code>"</a> <code id=custom-elements-api:domexception-5><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code> 并中止这些步骤。<li><p>令 <var>localName</var> 为 <var>name</var>。<li><p>令 <var>extends</var> 为 <var>options</var> 的 <code>extends</code> 成员（没有该成员则为 null）。<li>
+    <p>如果 <var>extends</var> 不为 null，则：</p>
+
+    <ol><li><p>如果 <var>extends</var> 是一个 <a href=#valid-custom-element-name id=custom-elements-api:valid-custom-element-name-4>合法的 custom element 名</a>，则抛出
+     <a id=custom-elements-api:notsupportederror-4 href=https://heycam.github.io/webidl/#notsupportederror data-x-internal=notsupportederror>"<code>NotSupportedError</code>"</a> <code id=custom-elements-api:domexception-6><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code>。<li><p>如果 <var>extends</var> 的 <a href=https://dom.spec.whatwg.org/#concept-element-interface id=custom-elements-api:element-interface data-x-internal=element-interface>元素接口</a> 的 <a href=https://infra.spec.whatwg.org/#html-namespace id=custom-elements-api:html-namespace-2 data-x-internal=html-namespace-2>HTML 命名空间</a> 是 <code id=custom-elements-api:htmlunknownelement><a href=dom.html#htmlunknownelement>HTMLUnknownElement</a></code> （例如，如果 <var>extends</var> 表示的元素定义不在本标准中），则抛出
+     <a id=custom-elements-api:notsupportederror-5 href=https://heycam.github.io/webidl/#notsupportederror data-x-internal=notsupportederror>"<code>NotSupportedError</code>"</a> <code id=custom-elements-api:domexception-7><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code>。<li><p>设置 <var>localName</var> 为 <var>extends</var>。</ol>
+   <li><p>如果该 <code id=custom-elements-api:customelementregistry-10><a href=#customelementregistry>CustomElementRegistry</a></code> 的 <a href=#element-definition-is-running id=custom-elements-api:element-definition-is-running>元素定义正在运行</a>
+   标记被设置，则抛出一个 <a id=custom-elements-api:notsupportederror-6 href=https://heycam.github.io/webidl/#notsupportederror data-x-internal=notsupportederror>"<code>NotSupportedError</code>"</a> <code id=custom-elements-api:domexception-8><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code> 并中止这些步骤。<li><p>设置该 <code id=custom-elements-api:customelementregistry-11><a href=#customelementregistry>CustomElementRegistry</a></code> 的 <a href=#element-definition-is-running id=custom-elements-api:element-definition-is-running-2>元素定义正在运行</a>
+   标记。<li><p>令 <var>formAssociated</var> 为 false。<li><p>令 <var>disableInternals</var> 为 false。
+
+   <li><p>令 <var>disableShadow</var> 为 false。
+
+   <li><p>令 <var>observedAttributes</var> 为空 <code>sequence&lt;DOMString></code>。<li>
+    <p>运行下列子步骤并捕获所有异常：</p>
+
+    <ol><li><p>令 <var>prototype</var> 为 <a href=https://tc39.es/ecma262/#sec-get-o-p id=custom-elements-api:js-get data-x-internal=js-get>Get</a>(<var>constructor</var>，
+     "prototype")。重新抛出任何异常。<li><p>如果 <a href=https://tc39.es/ecma262/#sec-ecmascript-data-types-and-values id=custom-elements-api:js-type data-x-internal=js-type>Type</a>(<var>prototype</var>) 不是 Object，则抛出
+     <code id=custom-elements-api:typeerror-2><a data-x-internal=typeerror href=https://tc39.es/ecma262/#sec-native-error-types-used-in-this-standard-typeerror>TypeError</a></code> 异常。<li><p>令 <var>lifecycleCallbacks</var> 为生命周期回调映射，并拥有键 "<code>connectedCallback</code>"， "<code>disconnectedCallback</code>"， "<code>adoptedCallback</code>"， 和 "<code>attributeChangedCallback</code>"，
+     每一项对应的值均为 null。</p>
+
+     <li>
+      <p>对 <var>lifecycleCallbacks</var> 键中的每一项 <var>callbackName</var>，按照上一步列出的顺序：</p>
+
+      <ol><li><p>令 <var>callbackValue</var> 为 <a href=https://tc39.es/ecma262/#sec-get-o-p id=custom-elements-api:js-get-2 data-x-internal=js-get>Get</a>(<var>prototype</var>，
+       <var>callbackName</var>)。重新抛出任何异常。</p>
+
+       <li><p>如果 <var>callbackValue</var> 不是 undefined，则设置 <var>lifecycleCallbacks</var> 中键为
+       <var>callbackName</var> 的项目的值为 <var>callbackValue</var> <a href=https://heycam.github.io/webidl/#es-type-mapping id=custom-elements-api:concept-idl-convert data-x-internal=concept-idl-convert>转换</a>  为 Web IDL
+       <code id=custom-elements-api:idl-function><a data-x-internal=idl-function href=https://heycam.github.io/webidl/#common-Function>Function</a></code> 回调类型的结果。重新抛出任何转换过程中的异常。</ol>
+     <li>
+      <p>如果 <var>lifecycleCallbacks</var> 中键为 "<code>attributeChangedCallback</code>" 的项目的值不是 null，则：</p>
+
+      <ol><li><p>令 <var>observedAttributesIterable</var> 为 <a href=https://tc39.es/ecma262/#sec-get-o-p id=custom-elements-api:js-get-3 data-x-internal=js-get>Get</a>(<var>constructor</var>， "observedAttributes")。 重新抛出任何异常。<li><p>如果 <var>observedAttributesIterable</var> 不是 undefined，则设置
+       <var>observedAttributes</var> 为 <var>observedAttributesIterable</var> <a href=https://heycam.github.io/webidl/#es-type-mapping id=custom-elements-api:concept-idl-convert-2 data-x-internal=concept-idl-convert>转换</a> 为
+       <code>sequence&lt;DOMString></code> 的结果。重新抛出任何转换过程中的异常。</ol>
+
+     <li><p>令 <var>disabledFeatures</var> 为空 <code>sequence&lt;DOMString></code>。<li><p>令 <var>disabledFeaturesIterable</var> 为 <a href=https://tc39.es/ecma262/#sec-get-o-p id=custom-elements-api:js-get-4 data-x-internal=js-get>Get</a>(<var>constructor</var>, "disabledFeatures")。
+     重新抛出任何异常。<li><p>如果 <var>disabledFeaturesIterable</var> 不是 undefined，设置 <var>disabledFeatures</var> 为
+     <var>disabledFeaturesIterable</var> <a href=https://heycam.github.io/webidl/#es-type-mapping id=custom-elements-api:concept-idl-convert-3 data-x-internal=concept-idl-convert>转换为</a>
+     <code>sequence&lt;DOMString></code> 的结果。
+     重新抛出转换中的任何异常。<li><p>如果 <var>disabledFeatures</var> <a href=https://infra.spec.whatwg.org/#list-contain id=custom-elements-api:list-contains data-x-internal=list-contains>包含</a> "<code>internals</code>"，
+     设置 <var>disableInternals</var> 为 true。<li><p>如果 <var>disabledFeatures</var> <a href=https://infra.spec.whatwg.org/#list-contain id=custom-elements-api:list-contains-2 data-x-internal=list-contains>包含</a> "<code>shadow</code>"，
+     设置 <var>disableShadow</var> 为 true。<li><p>令 <var>formAssociatedValue</var> 为 <a href=https://tc39.es/ecma262/#sec-get-o-p id=custom-elements-api:js-get-5 data-x-internal=js-get>Get</a>(
+     <var>constructor</var>, "formAssociated")。重新抛出任何异常。<li><p>设置 <var>formAssociated</var> 为
+     <var>formAssociatedValue</var> <a href=https://heycam.github.io/webidl/#es-type-mapping id=custom-elements-api:concept-idl-convert-4 data-x-internal=concept-idl-convert>转换为</a> <code>boolean</code> 的结果。
+     重新抛出转换中的任何异常。<li>
+      <p>如果 <var>formAssociated</var> 为 true，对每个
+      "<code>formAssociatedCallback</code>", "<code>formResetCallback</code>",
+      "<code>formDisabledCallback</code>" 和
+      "<code>formStateRestoreCallback</code>" <var>callbackName</var>：</p>
+
+      <ol><li><p>令 <var>callbackValue</var> 为 <a href=https://tc39.es/ecma262/#sec-get-o-p id=custom-elements-api:js-get-6 data-x-internal=js-get>Get</a>(<var>prototype</var>,
+       <var>callbackName</var>)。重新抛出任何异常。<li><p>如果 <var>callbackValue</var> 不是 undefined，设置 <var>lifecycleCallbacks</var> 中键
+       <var>callbackName</var> 对应的值为
+       <var>callbackValue</var> <a href=https://heycam.github.io/webidl/#es-type-mapping id=custom-elements-api:concept-idl-convert-5 data-x-internal=concept-idl-convert>转换</a> 为 Web IDL <code id=custom-elements-api:idl-function-2><a data-x-internal=idl-function href=https://heycam.github.io/webidl/#common-Function>Function</a></code>
+       回调类型的结果。重新抛出转换中的任何异常。</ol>
+     </ol>
+
+    <p>然后执行下列的子步骤，不论上述步骤是否抛出异常：</p>
+
+    <ol><li><p>重置 <code id=custom-elements-api:customelementregistry-12><a href=#customelementregistry>CustomElementRegistry</a></code> 的 <a href=#element-definition-is-running id=custom-elements-api:element-definition-is-running-3>元素定义正在运行</a> 标记。</ol>
+
+    <p>最终，如果第一批子步骤抛出了异常，则重新抛出该异常并终止算法。否则继续。</p>
+   <li><p>令 <var>definition</var> 为一个新的 <a href=#custom-element-definition id=custom-elements-api:custom-element-definition-4>custom element 定义</a>，
+   其 <a href=#concept-custom-element-definition-name id=custom-elements-api:concept-custom-element-definition-name-5>name</a> 为 <var>name</var>，
+   其 <a href=#concept-custom-element-definition-local-name id=custom-elements-api:concept-custom-element-definition-local-name-2>局部名</a> 为 <var>localName</var>，
+   其 <a href=#concept-custom-element-definition-constructor id=custom-elements-api:concept-custom-element-definition-constructor-3>constructor</a> 为 <var>constructor</var>，
+   其 <a href=#concept-custom-element-definition-observed-attributes id=custom-elements-api:concept-custom-element-definition-observed-attributes>observed attributes</a> 为 <var>observedAttributes</var>，
+   其 <a href=#concept-custom-element-definition-lifecycle-callbacks id=custom-elements-api:concept-custom-element-definition-lifecycle-callbacks>lifecycle callbacks</a> 为 <var>lifecycleCallbacks</var>，
+   其 <a href=#concept-custom-element-definition-form-associated id=custom-elements-api:concept-custom-element-definition-form-associated>form-associated</a> 为 <var>formAssociated</var>，
+   其 <a href=#concept-custom-element-definition-disable-internals id=custom-elements-api:concept-custom-element-definition-disable-internals>disable internals</a> 为 <var>disableInternals</var>，
+   其 <a href=#concept-custom-element-definition-disable-shadow id=custom-elements-api:concept-custom-element-definition-disable-shadow>disable shadow</a> 为 <var>disableShadow</var>。<li><p>添加 <var>definition</var> 到该该 <code id=custom-elements-api:customelementregistry-13><a href=#customelementregistry>CustomElementRegistry</a></code>。<li><p>令 <var>document</var> 为该 <code id=custom-elements-api:customelementregistry-14><a href=#customelementregistry>CustomElementRegistry</a></code> 的 <a href=webappapis.html#concept-relevant-global id=custom-elements-api:concept-relevant-global>相关全局对象</a> 的 <a href=window-object.html#concept-document-window id=custom-elements-api:concept-document-window>关联的 <code>Document</code></a>。<li><p>令 <var>upgrade candidates</var> 为
+   <var>document</var> 的所有 <a href=https://dom.spec.whatwg.org/#concept-shadow-including-descendant id=custom-elements-api:shadow-including-descendant data-x-internal=shadow-including-descendant>shadow-including 后代</a> 中，
+   命名空间为 <a href=https://infra.spec.whatwg.org/#html-namespace id=custom-elements-api:html-namespace-2-2 data-x-internal=html-namespace-2>HTML 命名空间</a> 且 局部名 为 <var>localName</var> 的元素，
+   以 <a href=https://dom.spec.whatwg.org/#concept-shadow-including-tree-order id=custom-elements-api:shadow-including-tree-order data-x-internal=shadow-including-tree-order>shadow-including 树序</a>。
+   此外如果 <var>extends</var> 不是 null，则只包括 <a href=https://dom.spec.whatwg.org/#concept-element-is-value id=custom-elements-api:concept-element-is-value data-x-internal=concept-element-is-value><code>is</code>
+   的值</a> 等于 <var>name</var> 的元素。<li><p>对 <var>upgrade candidates</var> 中的每一个元素 <var>element</var>，
+   <a href=#enqueue-a-custom-element-upgrade-reaction id=custom-elements-api:enqueue-a-custom-element-upgrade-reaction>将一个 Custom Element 升级响应加入队列</a>，并指定 <var>element</var> 和
+   <var>definition</var>。<li>
+    <p>如果该 <code id=custom-elements-api:customelementregistry-15><a href=#customelementregistry>CustomElementRegistry</a></code> 的 <a href=#when-defined-promise-map id=custom-elements-api:when-defined-promise-map>when-defined Promise 映射</a>
+    包含键为 <var>name</var> 的项目：</p>
+
+    <ol><li><p>令 <var>promise</var> 为该项目的值。<li><p>以 <var>constructor</var> 完成 <var>promise</var>。<li><p>从该 <code id=custom-elements-api:customelementregistry-16><a href=#customelementregistry>CustomElementRegistry</a></code> 的 <a href=#when-defined-promise-map id=custom-elements-api:when-defined-promise-map-2>when-defined promise 映射</a>
+     中删除键为 <var>name</var> 的项目。</ol>
+   </ol>
+
+  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry/get title="The get() method of the CustomElementRegistry interface returns the constructor for a previously-defined custom element.">CustomElementRegistry/get</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>63+</span></span><span class="safari yes"><span>Safari</span><span>10.1+</span></span><span class="chrome yes"><span>Chrome</span><span>66+</span></span><hr><span class="opera yes"><span>Opera</span><span>53+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>63+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>10.3+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>66+</span></span><span class="webview_android yes"><span>WebView Android</span><span>66+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>9.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>47+</span></span></div></div></div><p><dfn id=dom-customelementregistry-get><code>get(<var>name</var>)</code></dfn> 方法被调用时必须执行这些步骤：</p>
+
+  <ol><li><p>如果该 <code id=custom-elements-api:customelementregistry-17><a href=#customelementregistry>CustomElementRegistry</a></code> 包含 <a href=#concept-custom-element-definition-name id=custom-elements-api:concept-custom-element-definition-name-6>name</a> 为 <var>name</var> 条目，则返回该条目的
+   <a href=#concept-custom-element-definition-constructor id=custom-elements-api:concept-custom-element-definition-constructor-4>构造函数</a>。<li><p>否则返回 undefined。</ol>
+
+  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry/whenDefined title="The whenDefined() method of the CustomElementRegistry interface returns a Promise that resolves when the named element is defined.">CustomElementRegistry/whenDefined</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>63+</span></span><span class="safari yes"><span>Safari</span><span>10.1+</span></span><span class="chrome yes"><span>Chrome</span><span>66+</span></span><hr><span class="opera yes"><span>Opera</span><span>53+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>63+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>10.3+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>66+</span></span><span class="webview_android yes"><span>WebView Android</span><span>66+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>9.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>47+</span></span></div></div></div><p><dfn id=dom-customelementregistry-whendefined><code>whenDefined(<var>name</var>)</code></dfn> 方法被调用时必须执行这些步骤：</p>
+
+  <ol><li><p>如果 <var>name</var> 不是一个 <a href=#valid-custom-element-name id=custom-elements-api:valid-custom-element-name-5>合法的 custom element 名称</a>，则返回一个新的
+   promise，以 <a id=custom-elements-api:syntaxerror-3 href=https://heycam.github.io/webidl/#syntaxerror data-x-internal=syntaxerror>"<code>SyntaxError</code>"</a> <code id=custom-elements-api:domexception-9><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code> 拒绝它并中止这些步骤。<li><p>如果该 <code id=custom-elements-api:customelementregistry-18><a href=#customelementregistry>CustomElementRegistry</a></code> 包含一个 <a href=#concept-custom-element-definition-name id=custom-elements-api:concept-custom-element-definition-name-7>name</a> 为 <var>name</var> 的条目，则返回一个 Promise，其值为
+   那个条目的 <a href=#concept-custom-element-definition-constructor id=custom-elements-api:concept-custom-element-definition-constructor-5>构造函数</a>。<li><p>令 <var>map</var> 为该 <code id=custom-elements-api:customelementregistry-19><a href=#customelementregistry>CustomElementRegistry</a></code> 的 <a href=#when-defined-promise-map id=custom-elements-api:when-defined-promise-map-3>when-defined promise 映射</a>。<li><p>如果 <var>map</var> 不包含键为 <var>name</var> 的条目，在 <var>map</var> 中创建一个条目，
+   其键为 <var>name</var>，值为一个新的 promise。<li><p>令 <var>promise</var> 为 <var>map</var> 中键为 <var>name</var> 的条目的值。<li><p>返回 <var>promise</var>。</ol>
+
+  <div class=example>
+   <p><code id=custom-elements-api:dom-customelementregistry-whendefined-3><a href=#dom-customelementregistry-whendefined>whenDefined()</a></code> 方法可以用来避免
+   在合适的 <a href=#custom-element id=custom-elements-api:custom-element-7>custom elements</a> <a href=https://dom.spec.whatwg.org/#concept-element-defined id=custom-elements-api:concept-element-defined data-x-internal=concept-element-defined>被定义</a> 之前执行操作。
+   这个例子中我们将它与 <code id=custom-elements-api:selector-defined><a href=semantics-other.html#selector-defined>:defined</a></code> 伪类结合，
+   来隐藏一个动态载入的文章内容，直到我们确定它使用的所有
+   <a href=#autonomous-custom-element id=custom-elements-api:autonomous-custom-element-2>自主 Custom Element </a> 已经定义。</p>
+
+   <pre><code class=js>articleContainer.hidden = true;
+
+fetch(articleURL)
+  .then(response => response.text())
+  .then(text => {
+    articleContainer.innerHTML = text;
+
+    return Promise.all(
+      [...articleContainer.querySelectorAll(":not(:defined)")]
+        .map(el => customElements.whenDefined(el.localName))
+    );
+  })
+  .then(() => {
+    articleContainer.hidden = false;
+  });</code></pre>
+  </div>
+
+  
+
+  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry/upgrade title="The upgrade() method of the CustomElementRegistry interface upgrades all shadow-containing custom elements in a Node subtree, even before they are connected to the main document.">CustomElementRegistry/upgrade</a><div class=support><span class="firefox yes"><span>Firefox</span><span>63+</span></span><span class="safari unknown"><span>Safari</span><span>?</span></span><span class="chrome yes"><span>Chrome</span><span>68+</span></span><hr><span class="opera yes"><span>Opera</span><span>55+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>63+</span></span><span class="safari_ios unknown"><span>Safari iOS</span><span>?</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>68+</span></span><span class="webview_android yes"><span>WebView Android</span><span>68+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>10.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>48+</span></span></div></div></div><p>调用 <dfn id=dom-customelementregistry-upgrade><code>upgrade(<var>root</var>)</code></dfn> 方法时必须执行以下步骤：</p>
+
+  <ol><li><p>令 <var>candidates</var> 为 <var>root</var> 中
+   <a href=https://dom.spec.whatwg.org/#concept-shadow-including-inclusive-descendant id=custom-elements-api:shadow-including-inclusive-descendant data-x-internal=shadow-including-inclusive-descendant>包括 shadow 的后代</a> 所有元素的 <a href=https://infra.spec.whatwg.org/#list id=custom-elements-api:list data-x-internal=list>列表</a>，
+   按照 <a href=https://dom.spec.whatwg.org/#concept-shadow-including-tree-order id=custom-elements-api:shadow-including-tree-order-2 data-x-internal=shadow-including-tree-order>包括 shadow 的树排序</a>。<li><p><a href=https://infra.spec.whatwg.org/#list-iterate id=custom-elements-api:list-iterate data-x-internal=list-iterate>对每一个</a> <var>candidates</var> 中的 <var>candidate</var>，
+   <a href=#concept-try-upgrade id=custom-elements-api:concept-try-upgrade>尝试升级</a> <var>candidate</var>。</ol>
+
+  
+
+  <div class=example>
+   <p><code id=custom-elements-api:dom-customelementregistry-upgrade-2><a href=#dom-customelementregistry-upgrade>upgrade()</a></code> 方法允许按需升级元素。
+   正常情况下，元素会在 <a href=https://dom.spec.whatwg.org/#connected id=custom-elements-api:connected data-x-internal=connected>连接到 DOM</a> 时自动升级，
+   但也可以在已经准备好连接到 DOM 时调用这个方法。</p>
+
+   <pre><code class=js>const el = document.createElement("spider-man");
+
+class SpiderMan extends HTMLElement {}
+customElements.define("spider-man", SpiderMan);
+
+console.assert(!(el instanceof SpiderMan)); // not yet upgraded
+
+customElements.upgrade(el);
+console.assert(el instanceof SpiderMan);    // upgraded!</code></pre>
+  </div>
+
+
+  <h4 id=升级><span class=secno>4.13.5</span> <dfn>升级</dfn><a href=#升级 class=self-link></a></h4>
+<div data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/the-elements-of-html/custom-elements/upgrades.zh.html data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/custom-elements/upgrades.en.html></div>
+
+  <p>给定输入 <a href=#custom-element-definition id=升级:custom-element-definition>custom element 定义</a> <var>definition</var> 和一个元素 <var>element</var>，<dfn id=concept-upgrade-an-element data-export="">升级元素</dfn> 应运行以下步骤：</p>
+
+  <ol><li>
+    <p>如果 <var>element</var> 是 <a href=https://dom.spec.whatwg.org/#concept-element-custom id=升级:concept-element-custom data-x-internal=concept-element-custom>自定义的</a>，中止这些步骤。</p>
+
+    <div class=example>
+     <p>这一情况在再次进入该算法时就会发生，比如下面的例子：</p>
+
+     <pre>&lt;!DOCTYPE html>
+&lt;x-foo id="a">&lt;/x-foo>
+&lt;x-foo id="b">&lt;/x-foo>
+
+&lt;script>
+// Defining enqueues upgrade reactions for both "a" and "b"
+customElements.define("x-foo"， class extends HTMLElement {
+  constructor() {
+    super();
+
+    const b = document.querySelector("#b");
+    b.remove();
+
+    // While this constructor is running for "a"， "b" is still
+    // undefined， and so inserting it into the document will enqueue a
+    // second upgrade reaction for "b" in addition to the one enqueued
+    // by defining x-foo.
+    document.body.appendChild(b);
+  }
+})
+&lt;/script></pre>
+
+     <p>这一步会使得第二次以 "<code>b</code>" 为参数调用
+       <a href=#concept-upgrade-an-element id=升级:concept-upgrade-an-element>升级元素</a> 算法时直接早退出。
+     </p>
+    </div>
+   <li><p>如果 <var>element</var> 的 <a href=https://dom.spec.whatwg.org/#concept-element-custom-element-state id=升级:custom-element-state data-x-internal=custom-element-state>custom element 状态</a> 是 <code>failed</code>"，则中止这些步骤。<li><p>对 <var>element</var> 的 <a href=https://dom.spec.whatwg.org/#concept-element-attribute id=升级:attribute-list data-x-internal=attribute-list>属性列表</a> 中每一个 <var>attribute</var>，
+   按顺序 <a href=#enqueue-a-custom-element-callback-reaction id=升级:enqueue-a-custom-element-callback-reaction>入队一个 Custom Element 反应</a>
+   （元素为 <var>element</var>，回调名为 "<code>attributeChangedCallback</code>"），
+   参数列表为 <var>attribute</var> 的 局部名，null，<var>attribute</var>的值，以及 <var>attribute</var> 的命名空间。<li><p>如果 <var>element</var> <a href=https://dom.spec.whatwg.org/#connected id=升级:connected data-x-internal=connected>已连接</a>，
+    <a href=#enqueue-a-custom-element-callback-reaction id=升级:enqueue-a-custom-element-callback-reaction-2>入队一个 Custom Element 反应</a>
+   （元素为 <var>element</var>，回调名为 "<code>attributeChangedCallback</code>"），参数列表为空。
+   <li><p>将 <var>element</var> 添加到 <var>definition</var> 的 <a href=#concept-custom-element-definition-construction-stack id=升级:concept-custom-element-definition-construction-stack>构造栈</a> 尾部。<li><p>令 <var>C</var> 为 <var>definition</var> 的 <a href=#concept-custom-element-definition-constructor id=升级:concept-custom-element-definition-constructor>构造器</a>。<li>
+    <p>运行以下子步骤的同时捕获任何异常：</p>
+
+    <ol><li>
+      <p>令 <var>constructResult</var> 为无参数 <a href=https://heycam.github.io/webidl/#construct-a-callback-function id=升级:es-constructing-callback-functions data-x-internal=es-constructing-callback-functions>构造</a>
+      <var>C</var> 的结果。</p>
+
+      <p class=note>如果 <var>C</var> <a href=#custom-element-conformance>不合规范地</a>
+      使用了以 <code id=升级:cereactions><a href=#cereactions>[CEReactions]</a></code> 扩展属性修饰的 API，
+      那么就在这一步中，在 <var>C</var> 结束前执行本算法开始时入队的回调，此后将控制返回给本算法。
+      否则，在 <var>C</var> 和其他升级过程结束后再执行它们。</p>
+     <li>
+      <p>如果 <a id=升级:samevalue href=https://tc39.es/ecma262/#sec-samevalue data-x-internal=samevalue>SameValue</a>(<var>constructResult</var>， <var>element</var>) 为 false，
+      那么抛出一个 <a id=升级:invalidstateerror href=https://heycam.github.io/webidl/#invalidstateerror data-x-internal=invalidstateerror>"<code>InvalidStateError</code>"</a> <code id=升级:domexception><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code>。</p>
+
+      <p class=note>如果 <var>C</var> 在调用 <code>super()</code> 之前构造了同一个 Custom Element 的另一个实例，
+      或者 <var>C</var> 使用了 JavaScript 的 <code>return</code>重写特性并在构造函数中返回一个任意的对象时，
+      就会发生这种情况。</p>
+     </ol>
+
+    <p>然后执行下列子步骤，无论上述步骤是否抛出了异常：</p>
+
+    <ol><li>
+      <p>从 <var>definition</var> 的 <a href=#concept-custom-element-definition-construction-stack id=升级:concept-custom-element-definition-construction-stack-2>构造栈</a> 尾部移除最后一个入口。</p>
+
+      <div class=note>
+       <p>假设 <var>C</var> 调用了 <code>super()</code> （如果它 <a href=#custom-element-conformance>符合规范</a> 就会这样做)，并且该调用是成功的，此时 this 就是
+       <a href=#concept-already-constructed-marker id=升级:concept-already-constructed-marker><i>已构造</i> 标记</a>，替换了本算法最开始推入的 <var>element</var>。
+       （就是 <a href=dom.html#html-element-constructors>HTML 元素构造器</a> 执行了这个替换。)</p>
+
+       <p>如果 <var>C</var> 没有调用 <code>super()</code> （即它不 <a href=#custom-element-conformance>符合规范</a>），或者在 <a href=dom.html#html-element-constructors>HTML 元素构造</a> 中的任何一步抛出了异常，那么这个入口仍然是 <var>element</var>。</p>
+      </div>
+     </ol>
+
+    <p>最后，如果上述步骤抛出了异常：</p>
+
+    <ol><li><p>设置 <var>element</var> 的 <a href=https://dom.spec.whatwg.org/#concept-element-custom-element-state id=升级:custom-element-state-2 data-x-internal=custom-element-state>custom element 状态</a> 为 "<code>failed</code>"。<li><p>清空 <var>element</var> 的 <a href=#custom-element-reaction-queue id=升级:custom-element-reaction-queue>custom element 反应队列</a>。</p>
+
+     <li><p>重新抛出该异常，终止本算法。</ol>
+   <li><p>设置 <var>element</var> 的 <a href=https://dom.spec.whatwg.org/#concept-element-custom-element-state id=升级:custom-element-state-3 data-x-internal=custom-element-state>custom element 状态</a> 为 "<code>custom</code>"。<li><p>设置 <var>element</var> 的 <a href=https://dom.spec.whatwg.org/#concept-element-custom-element-definition id=升级:concept-element-custom-element-definition data-x-internal=concept-element-custom-element-definition>custom
+   element 定义</a> 为 <var>definition</var>。</ol>
+
+  <p>给定输入元素 <var>element</var>，<dfn id=concept-try-upgrade data-export="">尝试升级元素</dfn>，
+   应执行下列步骤：</p>
+
+  <ol><li><p>令 <var>definition</var> 为给定 <var>element</var> 的 <a href=https://dom.spec.whatwg.org/#concept-node-document id=升级:node-document data-x-internal=node-document>节点文档</a>，
+     <var>element</var>的命名空间， <var>element</var>的 局部名，以及 <var>element</var> 的 <a href=https://dom.spec.whatwg.org/#concept-element-is-value id=升级:concept-element-is-value data-x-internal=concept-element-is-value><code>is</code> 值</a>，
+     <a href=#look-up-a-custom-element-definition id=升级:look-up-a-custom-element-definition>查找 custom element 定义</a> 的结果。<li><p>如果 <var>definition</var> 不是 null，那么 <a href=#enqueue-a-custom-element-upgrade-reaction id=升级:enqueue-a-custom-element-upgrade-reaction>入队一个 Custom Element 升级反应</a>，
+    其元素为 <var>element</var>，定义为 <var>definition</var>。</ol>
+
+
+  <h4 id=custom-element-reactions><span class=secno>4.13.6</span> Custom element reactions<a href=#custom-element-reactions class=self-link></a></h4>
+<div data-zh-date="" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/the-elements-of-html/custom-elements/custom-element-reactions.zh.html?filename=custom-element-reactions.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fthe-elements-of-html%2Fcustom-elements%2Fcustom-element-reactions.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/custom-elements/custom-element-reactions.en.html></div>
+
+  <p>A <a href=#custom-element id=custom-element-reactions:custom-element>custom element</a> possesses the ability to respond to certain occurrences by
+  running author code:</p>
+
+  <ul><li><p>When <a href=#升级 id=custom-element-reactions:升级>upgraded</a>, its <a href=#custom-element-constructor id=custom-element-reactions:custom-element-constructor>constructor</a> is run, with no arguments.<li><p>When it <a id=custom-element-reactions:becomes-connected href=infrastructure.html#becomes-connected>becomes connected</a>, its <code>connectedCallback</code> is
+   called, with no arguments.<li><p>When it <a id=custom-element-reactions:becomes-disconnected href=infrastructure.html#becomes-disconnected>becomes disconnected</a>, its <code>disconnectedCallback</code>
+   is called, with no arguments.<li><p>When it is <a href=https://dom.spec.whatwg.org/#concept-node-adopt id=custom-element-reactions:concept-node-adopt data-x-internal=concept-node-adopt>adopted</a> into a new document, its <code>adoptedCallback</code> is called, given the old document and new document as
+   arguments.<li><p>When any of its attributes are <a href=https://dom.spec.whatwg.org/#concept-element-attributes-change id=custom-element-reactions:concept-element-attributes-change data-x-internal=concept-element-attributes-change>changed</a>, <a href=https://dom.spec.whatwg.org/#concept-element-attributes-append id=custom-element-reactions:concept-element-attributes-append data-x-internal=concept-element-attributes-append>appended</a>, <a href=https://dom.spec.whatwg.org/#concept-element-attributes-remove id=custom-element-reactions:concept-element-attributes-remove data-x-internal=concept-element-attributes-remove>removed</a>, or <a href=https://dom.spec.whatwg.org/#concept-element-attributes-replace id=custom-element-reactions:concept-element-attributes-replace data-x-internal=concept-element-attributes-replace>replaced</a>, its <code>attributeChangedCallback</code> is called, given the attribute's local name, old value,
+   new value, and namespace as arguments. (An attribute's old or new value is considered to be null
+   when the attribute is added or removed, respectively.)<li><p>When the user agent <a href=form-control-infrastructure.html#reset-the-form-owner id=custom-element-reactions:reset-the-form-owner>resets the form owner</a> of a
+   <a href=#form-associated-custom-element id=custom-element-reactions:form-associated-custom-element>form-associated custom element</a> and doing so changes the form owner, its <code>formAssociatedCallback</code> is called, given the new form owner (or null if no owner)
+   as an argument.<li><p>When the form owner of a <a href=#form-associated-custom-element id=custom-element-reactions:form-associated-custom-element-2>form-associated custom element</a> is <a href=form-control-infrastructure.html#concept-form-reset id=custom-element-reactions:concept-form-reset>reset</a>, its <code>formResetCallback</code> is
+   called.<li><p>When the <a href=form-control-infrastructure.html#concept-fe-disabled id=custom-element-reactions:concept-fe-disabled>disabled</a> state of a
+   <a href=#form-associated-custom-element id=custom-element-reactions:form-associated-custom-element-3>form-associated custom element</a> is changed, its <code>formDisabledCallback</code> is called, given the new state as an
+   argument.<li><p>When user agent updates a <a href=#form-associated-custom-element id=custom-element-reactions:form-associated-custom-element-4>form-associated custom element</a>'s value on behalf of
+   a user, its <code>formStateRestoreCallback</code> is called, given the new value and a
+   string indicating a reason, "<code>restore</code>" or "<code>autocomplete</code>", as arguments.</ul>
+
+  <p>We call these reactions collectively <dfn id=concept-custom-element-reaction>custom
+  element reactions</dfn>.</p>
+
+  <p>The way in which <a href=#concept-custom-element-reaction id=custom-element-reactions:concept-custom-element-reaction>custom element reactions</a>
+  are invoked is done with special care, to avoid running author code during the middle of delicate
+  operations. Effectively, they are delayed until "just before returning to user script". This means
+  that for most purposes they appear to execute synchronously, but in the case of complicated
+  composite operations (like <a href=https://dom.spec.whatwg.org/#concept-node-clone id=custom-element-reactions:concept-node-clone data-x-internal=concept-node-clone>cloning</a>, or <a href=https://dom.spec.whatwg.org/#concept-range id=custom-element-reactions:concept-range data-x-internal=concept-range>range</a> manipulation), they will instead be delayed until after all
+  the relevant user agent processing steps have completed, and then run together as a batch.</p>
+
+  <p>Additionally, the precise ordering of these reactions is managed via a
+  somewhat-complicated stack-of-queues system, described below. The intention behind this system is
+  to guarantee that <a href=#concept-custom-element-reaction id=custom-element-reactions:concept-custom-element-reaction-2>custom element reactions</a> always are invoked in the
+  same order as their triggering actions, at least within the local context of a single <a href=#custom-element id=custom-element-reactions:custom-element-2>custom
+  element</a>. (Because <a href=#concept-custom-element-reaction id=custom-element-reactions:concept-custom-element-reaction-3>custom element
+  reaction</a> code can perform its own mutations, it is not possible to give a global ordering
+  guarantee across multiple elements.)</p>
+
+  
+
+  <hr>
+
+  <p>Each <a id=custom-element-reactions:similar-origin-window-agent href=webappapis.html#similar-origin-window-agent>similar-origin window agent</a> has a <dfn id=custom-element-reactions-stack>custom element reactions stack</dfn>,
+  which is initially empty. A <a id=custom-element-reactions:similar-origin-window-agent-2 href=webappapis.html#similar-origin-window-agent>similar-origin window agent</a>'s <dfn id=current-element-queue>current element
+  queue</dfn> is the <a href=#element-queue id=custom-element-reactions:element-queue>element queue</a> at the top of its <a href=#custom-element-reactions-stack id=custom-element-reactions:custom-element-reactions-stack>custom element reactions
+  stack</a>. Each item in the stack is an <dfn id=element-queue>element queue</dfn>, which is initially empty as
+  well. Each item in an <a href=#element-queue id=custom-element-reactions:element-queue-2>element queue</a> is an element. (The elements are not necessarily
+  <a href=https://dom.spec.whatwg.org/#concept-element-custom id=custom-element-reactions:concept-element-custom data-x-internal=concept-element-custom>custom</a> yet, since this queue is used for <a href=#升级 id=custom-element-reactions:升级-2>upgrades</a> as well.)</p>
+
+  <p>Each <a href=#custom-element-reactions-stack id=custom-element-reactions:custom-element-reactions-stack-2>custom element reactions stack</a> has an associated <dfn id=backup-element-queue>backup element
+  queue</dfn>, which an initially-empty <a href=#element-queue id=custom-element-reactions:element-queue-3>element queue</a>. Elements are pushed onto the
+  <a href=#backup-element-queue id=custom-element-reactions:backup-element-queue>backup element queue</a> during operations that affect the DOM without going through an
+  API decorated with <code id=custom-element-reactions:cereactions><a href=#cereactions>[CEReactions]</a></code>, or through the parser's
+  <a id=custom-element-reactions:create-an-element-for-the-token href=parsing.html#create-an-element-for-the-token>create an element for the token</a> algorithm. An example of this is a user-initiated
+  editing operation which modifies the descendants or attributes of an <a id=custom-element-reactions:editable href=https://w3c.github.io/editing/docs/execCommand/#editable data-x-internal=editable>editable</a>
+  element. To prevent reentrancy when processing the <a href=#backup-element-queue id=custom-element-reactions:backup-element-queue-2>backup element queue</a>, each
+  <a href=#custom-element-reactions-stack id=custom-element-reactions:custom-element-reactions-stack-3>custom element reactions stack</a> also has a <dfn id=processing-the-backup-element-queue>processing the backup element
+  queue</dfn> flag, initially unset.</p>
+
+  <p>All elements have an associated <dfn id=custom-element-reaction-queue>custom element reaction queue</dfn>, initially empty. Each
+  item in the <a href=#custom-element-reaction-queue id=custom-element-reactions:custom-element-reaction-queue>custom element reaction queue</a> is of one of two types:</p>
+
+  <ul><li><p>An <dfn id=upgrade-reaction>upgrade reaction</dfn>, which will <a href=#升级 id=custom-element-reactions:升级-3>upgrade</a> the custom element and contains a <a href=#custom-element-definition id=custom-element-reactions:custom-element-definition>custom
+   element definition</a>; or<li><p>A <dfn id=callback-reaction>callback reaction</dfn>, which will call a lifecycle callback, and contains a
+   callback function as well as a list of arguments.</ul>
+
+  <p>This is all summarized in the following schematic diagram:</p>
+
+  <p><img src=/html/images/custom-element-reactions.svg alt="A custom element reactions stack consists of a stack of element queues. Zooming in on a particular queue, we see that it contains a number of elements (in our example, <x-a>, then <x-b>, then <x-c>). Any particular element in the queue then has a custom element reaction queue. Zooming in on the custom element reaction queue, we see that it contains a variety of queued-up reactions (in our example, upgrade, then attribute changed, then another attribute changed, then connected)." style="width: 80%; max-width: 580px;"></p>
+
+  <p>To <dfn id=enqueue-an-element-on-the-appropriate-element-queue>enqueue an element on the appropriate element queue</dfn>, given an element
+  <var>element</var>, run the following steps:</p>
+
+  <ol><li><p>Let <var>reactionsStack</var> be <var>element</var>'s <a id=custom-element-reactions:relevant-agent href=webappapis.html#relevant-agent>relevant agent</a>'s
+   <a href=#custom-element-reactions-stack id=custom-element-reactions:custom-element-reactions-stack-4>custom element reactions stack</a>.<li>
+    <p>If <var>reactionsStack</var> is empty, then:</p>
+
+    <ol><li><p>Add <var>element</var> to <var>reactionsStack</var>'s <a href=#backup-element-queue id=custom-element-reactions:backup-element-queue-3>backup element
+     queue</a>.<li><p>If <var>reactionsStack</var>'s <a href=#processing-the-backup-element-queue id=custom-element-reactions:processing-the-backup-element-queue>processing the backup element queue</a> flag is
+     set, then return.<li><p>Set <var>reactionsStack</var>'s <a href=#processing-the-backup-element-queue id=custom-element-reactions:processing-the-backup-element-queue-2>processing the backup element queue</a>
+     flag.<li>
+      <p><a id=custom-element-reactions:queue-a-microtask href=webappapis.html#queue-a-microtask>Queue a microtask</a> to perform the following steps:</p>
+
+      <ol><li><p><a href=#invoke-custom-element-reactions id=custom-element-reactions:invoke-custom-element-reactions>Invoke custom element reactions</a> in <var>reactionsStack</var>'s
+       <a href=#backup-element-queue id=custom-element-reactions:backup-element-queue-4>backup element queue</a>.<li><p>Unset <var>reactionsStack</var>'s <a href=#processing-the-backup-element-queue id=custom-element-reactions:processing-the-backup-element-queue-3>processing the backup element queue</a>
+       flag.</ol>
+     </ol>
+   <li><p>Otherwise, add <var>element</var> to <var>element</var>'s <a id=custom-element-reactions:relevant-agent-2 href=webappapis.html#relevant-agent>relevant agent</a>'s
+   <a href=#current-element-queue id=custom-element-reactions:current-element-queue>current element queue</a>.</ol>
+
+  <p>To <dfn id=enqueue-a-custom-element-callback-reaction data-export="">enqueue a custom element callback reaction</dfn>, given a <a href=#custom-element id=custom-element-reactions:custom-element-3>custom
+  element</a> <var>element</var>, a callback name <var>callbackName</var>, and a list of
+  arguments <var>args</var>, run the following steps:</p>
+
+  <ol><li><p>Let <var>definition</var> be <var>element</var>'s <a href=https://dom.spec.whatwg.org/#concept-element-custom-element-definition id=custom-element-reactions:concept-element-custom-element-definition data-x-internal=concept-element-custom-element-definition>custom element definition</a>.</p>
+
+   <li><p>Let <var>callback</var> be the value of the entry in <var>definition</var>'s <a href=#concept-custom-element-definition-lifecycle-callbacks id=custom-element-reactions:concept-custom-element-definition-lifecycle-callbacks>lifecycle callbacks</a> with
+   key <var>callbackName</var>.<li><p>If <var>callback</var> is null, then return<li>
+    <p>If <var>callbackName</var> is "<code>attributeChangedCallback</code>", then:</p>
+
+    <ol><li><p>Let <var>attributeName</var> be the first element of <var>args</var>.<li><p>If <var>definition</var>'s <a href=#concept-custom-element-definition-observed-attributes id=custom-element-reactions:concept-custom-element-definition-observed-attributes>observed attributes</a> does
+     not contain <var>attributeName</var>, then return.</ol>
+   <li><p>Add a new <a href=#callback-reaction id=custom-element-reactions:callback-reaction>callback reaction</a> to <var>element</var>'s <a href=#custom-element-reaction-queue id=custom-element-reactions:custom-element-reaction-queue-2>custom element
+   reaction queue</a>, with callback function <var>callback</var> and arguments
+   <var>args</var>.<li><p><a href=#enqueue-an-element-on-the-appropriate-element-queue id=custom-element-reactions:enqueue-an-element-on-the-appropriate-element-queue>Enqueue an element on the appropriate element queue</a> given
+   <var>element</var>.</ol>
+
+  <p>To <dfn id=enqueue-a-custom-element-upgrade-reaction data-export="">enqueue a custom element upgrade reaction</dfn>, given an element
+  <var>element</var> and <a href=#custom-element-definition id=custom-element-reactions:custom-element-definition-2>custom element definition</a> <var>definition</var>, run the
+  following steps:</p>
+
+  <ol><li><p>Add a new <a href=#upgrade-reaction id=custom-element-reactions:upgrade-reaction>upgrade reaction</a> to <var>element</var>'s <a href=#custom-element-reaction-queue id=custom-element-reactions:custom-element-reaction-queue-3>custom element
+   reaction queue</a>, with <a href=#custom-element-definition id=custom-element-reactions:custom-element-definition-3>custom element definition</a>
+   <var>definition</var>.<li><p><a href=#enqueue-an-element-on-the-appropriate-element-queue id=custom-element-reactions:enqueue-an-element-on-the-appropriate-element-queue-2>Enqueue an element on the appropriate element queue</a> given
+   <var>element</var>.</ol>
+
+  <p>To <dfn id=invoke-custom-element-reactions>invoke custom element reactions</dfn> in an <a href=#element-queue id=custom-element-reactions:element-queue-4>element queue</a>
+  <var>queue</var>, run the following steps:</p>
+
+  <ol><li>
+    <p>For each <a href=#custom-element id=custom-element-reactions:custom-element-4>custom element</a> <var>element</var> in <var>queue</var>:</p>
+
+    <ol><li><p>Let <var>reactions</var> be <var>element</var>'s <a href=#custom-element-reaction-queue id=custom-element-reactions:custom-element-reaction-queue-4>custom element reaction
+     queue</a>.<li>
+      <p>Repeat until <var>reactions</var> is empty:</p>
+
+      <ol><li>
+        <p>Remove the first element of <var>reactions</var>, and let <var>reaction</var> be that
+        element. Switch on <var>reaction</var>'s type:</p>
+
+        <dl class=switch><dt><a href=#upgrade-reaction id=custom-element-reactions:upgrade-reaction-2>upgrade reaction</a><dd><a href=#concept-upgrade-an-element id=custom-element-reactions:concept-upgrade-an-element>Upgrade</a> <var>element</var> using
+         <var>reaction</var>'s <a href=#custom-element-definition id=custom-element-reactions:custom-element-definition-4>custom element definition</a>.<dt><a href=#callback-reaction id=custom-element-reactions:callback-reaction-2>callback reaction</a><dd><a href=https://heycam.github.io/webidl/#invoke-a-callback-function id=custom-element-reactions:es-invoking-callback-functions data-x-internal=es-invoking-callback-functions>Invoke</a> <var>reaction</var>'s
+         callback function with <var>reaction</var>'s arguments, and with <var>element</var> as the
+         <a href=https://heycam.github.io/webidl/#dfn-callback-this-value id=custom-element-reactions:dfn-callback-this-value data-x-internal=dfn-callback-this-value>callback this value</a>.</dl>
+
+        <p>If this throws an exception, catch it, and <a id=custom-element-reactions:report-the-exception href=webappapis.html#report-the-exception>report the exception</a>.</p>
+       </ol>
+     </ol>
+   </ol>
+
+  <hr>
+
+  <p>To ensure <a href=#concept-custom-element-reaction id=custom-element-reactions:concept-custom-element-reaction-4>custom element reactions</a> are
+  triggered appropriately, we introduce the <dfn id=cereactions data-dfn-type=extended-attribute data-lt=CEReactions><code>[CEReactions]</code></dfn> IDL <a id=custom-element-reactions:extended-attribute href=https://heycam.github.io/webidl/#dfn-extended-attribute data-x-internal=extended-attribute>extended attribute</a>. It
+  indicates that the relevant algorithm is to be supplemented with additional steps in order to
+  appropriately track and invoke <a href=#concept-custom-element-reaction id=custom-element-reactions:concept-custom-element-reaction-5>custom element
+  reactions</a>.</p>
+
+  <p>The <code id=custom-element-reactions:cereactions-2><a href=#cereactions>[CEReactions]</a></code> extended attribute must take no
+  arguments, and must not appear on anything other than an operation, attribute, setter, or deleter.
+  Additionally, it must not appear on readonly attributes.</p>
+
+  <p>Operations, attributes, setters, or deleters annotated with the <code id=custom-element-reactions:cereactions-3><a href=#cereactions>[CEReactions]</a></code> extended attribute must run the following steps in place
+  of the ones specified in their description:</p>
+
+  <ol><li><p><a href=https://infra.spec.whatwg.org/#stack-push id=custom-element-reactions:stack-push data-x-internal=stack-push>Push</a> a new <a href=#element-queue id=custom-element-reactions:element-queue-5>element queue</a> onto this object's
+   <a id=custom-element-reactions:relevant-agent-3 href=webappapis.html#relevant-agent>relevant agent</a>'s <a href=#custom-element-reactions-stack id=custom-element-reactions:custom-element-reactions-stack-5>custom element reactions stack</a>.<li><p>Run the originally-specified steps for this construct, catching any exceptions. If the
+   steps return a value, let <var>value</var> be the returned value. If they throw an exception, let
+   <var>exception</var> be the thrown exception.<li><p>Let <var>queue</var> be the result of <a href=https://infra.spec.whatwg.org/#stack-pop id=custom-element-reactions:stack-pop data-x-internal=stack-pop>popping</a> from this
+   object's <a id=custom-element-reactions:relevant-agent-4 href=webappapis.html#relevant-agent>relevant agent</a>'s <a href=#custom-element-reactions-stack id=custom-element-reactions:custom-element-reactions-stack-6>custom element reactions stack</a>.<li><p><a href=#invoke-custom-element-reactions id=custom-element-reactions:invoke-custom-element-reactions-2>Invoke custom element reactions</a> in <var>queue</var>.<li><p>If an exception <var>exception</var> was thrown by the original steps, rethrow
+   <var>exception</var>.<li><p>If a value <var>value</var> was returned from the original steps, return
+   <var>value</var>.</ol>
+
+  <div class=note>
+   <p>The intent behind this extended attribute is somewhat subtle. One way of accomplishing its
+   goals would be to say that every operation, attribute, setter, and deleter on the platform
+   must have these steps inserted, and to allow implementers to optimize away
+   unnecessary cases (where no DOM mutation is possible that could cause <a href=#concept-custom-element-reaction id=custom-element-reactions:concept-custom-element-reaction-6>custom element reactions</a> to occur).</p>
+
+   <p>However, in practice this imprecision could lead to non-interoperable implementations of <a href=#concept-custom-element-reaction id=custom-element-reactions:concept-custom-element-reaction-7>custom element reactions</a>, as some implementations
+   might forget to invoke these steps in some cases. Instead, we settled on the approach of
+   explicitly annotating all relevant IDL constructs, as a way of ensuring interoperable behavior
+   and helping implementations easily pinpoint all cases where these steps are necessary.</p>
+  </div>
+
+  <p>Any nonstandard APIs introduced by the user agent that could modify the DOM in such a way as to
+  cause <a href=#enqueue-a-custom-element-callback-reaction id=custom-element-reactions:enqueue-a-custom-element-callback-reaction>enqueuing a custom element
+  callback reaction</a> or <a href=#enqueue-a-custom-element-upgrade-reaction id=custom-element-reactions:enqueue-a-custom-element-upgrade-reaction>enqueuing a
+  custom element upgrade reaction</a>, for example by modifying any attributes or child elements,
+  must also be decorated with the <code id=custom-element-reactions:cereactions-4><a href=#cereactions>[CEReactions]</a></code> attribute.</p>
+
+  <div class=note>
+   <p>As of the time of this writing, the following nonstandard or not-yet-standardized APIs are
+   known to fall into this category:</p>
+
+   <ul><li><p><code id=custom-element-reactions:htmlelement><a href=dom.html#htmlelement>HTMLElement</a></code>'s <code>outerText</code> IDL attribute<li><p><code id=custom-element-reactions:htmlinputelement><a href=input.html#htmlinputelement>HTMLInputElement</a></code>'s <code>webkitdirectory</code> and <code>incremental</code> IDL attributes<li><p><code id=custom-element-reactions:htmllinkelement><a href=semantics.html#htmllinkelement>HTMLLinkElement</a></code>'s <code>scope</code> IDL attribute<li><p><code id=custom-element-reactions:shadowroot><a data-x-internal=shadowroot href=https://dom.spec.whatwg.org/#interface-shadowroot>ShadowRoot</a></code>'s <code>innerHTML</code> IDL attribute</ul>
+  </div>
+
+  
+
+
+  <h4 id=element-internals><span class=secno>4.13.7</span> Element internals<a href=#element-internals class=self-link></a></h4>
+<div data-zh-date="" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/the-elements-of-html/custom-elements/element-internals/index.zh.html?filename=index.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fthe-elements-of-html%2Fcustom-elements%2Felement-internals%2Findex.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/custom-elements/element-internals/index.en.html></div>
+
+  <p>Certain capabilities are meant to be available to a custom element author, but not to a custom
+  element consumer. These are provided by the <code id=element-internals:dom-attachinternals><a href=#dom-attachinternals>element.attachInternals()</a></code> method, which returns an instance of
+  <code id=element-internals:elementinternals><a href=#elementinternals>ElementInternals</a></code>. The properties and methods of <code id=element-internals:elementinternals-2><a href=#elementinternals>ElementInternals</a></code> allow
+  control over internal features which the user agent provides to all elements.</p>
+
+  <dl class=domintro><dt><var>element</var> . <code id=dom-attachinternals-dev><a href=#dom-attachinternals>attachInternals()</a></code><dd><p>Returns an <code id=element-internals:elementinternals-3><a href=#elementinternals>ElementInternals</a></code> object targeting the <a href=#custom-element id=element-internals:custom-element>custom element</a>
+   <var>element</var>. Throws an exception if <var>element</var> is not a <a href=#custom-element id=element-internals:custom-element-2>custom
+   element</a>, if the "<code>internals</code>" feature was disabled as part of the
+   element definition, or if it is called twice on the same element.</dl>
+
+  
+
+  <p>Each <code id=element-internals:htmlelement><a href=dom.html#htmlelement>HTMLElement</a></code> has an <dfn id=attached-internals>attached internals</dfn> boolean, initially
+  false.</p>
+
+  <p>The <dfn id=dom-attachinternals><code>attachInternals()</code></dfn> method steps
+  are:</p>
+
+  <ol><li><p>If <a id=element-internals:this href=https://heycam.github.io/webidl/#this data-x-internal=this>this</a>'s <a href=https://dom.spec.whatwg.org/#concept-element-is-value id=element-internals:concept-element-is-value data-x-internal=concept-element-is-value><code>is</code>
+   value</a> is not null, then throw a <a id=element-internals:notsupportederror href=https://heycam.github.io/webidl/#notsupportederror data-x-internal=notsupportederror>"<code>NotSupportedError</code>"</a>
+   <code id=element-internals:domexception><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code>.<li><p>Let <var>definition</var> be the result of <a href=#look-up-a-custom-element-definition id=element-internals:look-up-a-custom-element-definition>looking up a custom element definition</a> given this's <a id=element-internals:node-document href=https://dom.spec.whatwg.org/#concept-node-document data-x-internal=node-document>node
+   document</a>, its namespace, its local name, and null as the <a href=https://dom.spec.whatwg.org/#concept-element-is-value id=element-internals:concept-element-is-value-2 data-x-internal=concept-element-is-value><code>is</code> value</a>.<li><p>If <var>definition</var> is null, then throw an
+   <a id=element-internals:notsupportederror-2 href=https://heycam.github.io/webidl/#notsupportederror data-x-internal=notsupportederror>"<code>NotSupportedError</code>"</a> <code id=element-internals:domexception-2><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code>.<li><p>If <var>definition</var>'s <a href=#concept-custom-element-definition-disable-internals id=element-internals:concept-custom-element-definition-disable-internals>disable internals</a> is true,
+   then throw a <a id=element-internals:notsupportederror-3 href=https://heycam.github.io/webidl/#notsupportederror data-x-internal=notsupportederror>"<code>NotSupportedError</code>"</a> <code id=element-internals:domexception-3><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code>.<li><p>If <a id=element-internals:this-2 href=https://heycam.github.io/webidl/#this data-x-internal=this>this</a>'s <a href=#attached-internals id=element-internals:attached-internals>attached internals</a> is true, then throw an
+   <a id=element-internals:notsupportederror-4 href=https://heycam.github.io/webidl/#notsupportederror data-x-internal=notsupportederror>"<code>NotSupportedError</code>"</a> <code id=element-internals:domexception-4><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code>.<li><p>If <a id=element-internals:this-3 href=https://heycam.github.io/webidl/#this data-x-internal=this>this</a>'s <a id=element-internals:custom-element-state href=https://dom.spec.whatwg.org/#concept-element-custom-element-state data-x-internal=custom-element-state>custom element state</a> is not "<code>precustomized</code>" or "<code>custom</code>", then throw a
+   <a id=element-internals:notsupportederror-5 href=https://heycam.github.io/webidl/#notsupportederror data-x-internal=notsupportederror>"<code>NotSupportedError</code>"</a> <code id=element-internals:domexception-5><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code>.<li><p>Set <a id=element-internals:this-4 href=https://heycam.github.io/webidl/#this data-x-internal=this>this</a>'s <a href=#attached-internals id=element-internals:attached-internals-2>attached internals</a> to true.<li><p>Return a new <code id=element-internals:elementinternals-4><a href=#elementinternals>ElementInternals</a></code> instance whose <a href=#internals-target id=element-internals:internals-target>target element</a> is <a id=element-internals:this-5 href=https://heycam.github.io/webidl/#this data-x-internal=this>this</a>.</ol>
+
+
+  <h5 id=the-elementinternals-interface><span class=secno>4.13.7.1</span> The <code id=the-elementinternals-interface:elementinternals><a href=#elementinternals>ElementInternals</a></code> interface<a href=#the-elementinternals-interface class=self-link></a></h5>
+<div data-zh-date="" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/the-elements-of-html/custom-elements/element-internals/the-elementinternals-interface.zh.html?filename=the-elementinternals-interface.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fthe-elements-of-html%2Fcustom-elements%2Felement-internals%2Fthe-elementinternals-interface.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/custom-elements/element-internals/the-elementinternals-interface.en.html></div>
+
+  <p>The IDL for the <code id=the-elementinternals-interface:elementinternals-2><a href=#elementinternals>ElementInternals</a></code> interface is as follows, with the various operations and attributes
+  defined in the following sections:</p>
+
+  <pre><code class=idl>[Exposed=Window]
+interface <dfn id=elementinternals>ElementInternals</dfn> {
+  // <a href=#shadow-root-access>Shadow root access</a>
+  readonly attribute <code id=the-elementinternals-interface:shadowroot><a data-x-internal=shadowroot href=https://dom.spec.whatwg.org/#interface-shadowroot>ShadowRoot</a></code>? <a href=#dom-elementinternals-shadowroot id=the-elementinternals-interface:dom-elementinternals-shadowroot>shadowRoot</a>;
+
+  // <a href=#form-associated-custom-elements>Form-associated custom elements</a>
+  undefined <a href=#dom-elementinternals-setformvalue id=the-elementinternals-interface:dom-elementinternals-setformvalue>setFormValue</a>((<a id=the-elementinternals-interface:file href=https://w3c.github.io/FileAPI/#dfn-file data-x-internal=file>File</a> or <a href=https://heycam.github.io/webidl/#idl-USVString id=the-elementinternals-interface:idl-usvstring data-x-internal=idl-usvstring>USVString</a> or <a id=the-elementinternals-interface:formdata href=https://xhr.spec.whatwg.org/#formdata data-x-internal=formdata>FormData</a>)? value,
+                         optional (<a id=the-elementinternals-interface:file-2 href=https://w3c.github.io/FileAPI/#dfn-file data-x-internal=file>File</a> or <a href=https://heycam.github.io/webidl/#idl-USVString id=the-elementinternals-interface:idl-usvstring-2 data-x-internal=idl-usvstring>USVString</a> or <a id=the-elementinternals-interface:formdata-2 href=https://xhr.spec.whatwg.org/#formdata data-x-internal=formdata>FormData</a>)? state);
+
+  readonly attribute <a id=the-elementinternals-interface:htmlformelement href=forms.html#htmlformelement>HTMLFormElement</a>? <a href=form-control-infrastructure.html#dom-elementinternals-form id=the-elementinternals-interface:dom-elementinternals-form>form</a>;
+
+  undefined <a href=#dom-elementinternals-setvalidity id=the-elementinternals-interface:dom-elementinternals-setvalidity>setValidity</a>(optional <a href=#validitystateflags id=the-elementinternals-interface:validitystateflags>ValidityStateFlags</a> flags = {},
+                        optional DOMString message,
+                        optional <a id=the-elementinternals-interface:htmlelement href=dom.html#htmlelement>HTMLElement</a> anchor);
+  readonly attribute boolean <a href=form-control-infrastructure.html#dom-elementinternals-willvalidate id=the-elementinternals-interface:dom-elementinternals-willvalidate>willValidate</a>;
+  readonly attribute <a id=the-elementinternals-interface:validitystate href=form-control-infrastructure.html#validitystate>ValidityState</a> <a href=form-control-infrastructure.html#dom-elementinternals-validity id=the-elementinternals-interface:dom-elementinternals-validity>validity</a>;
+  readonly attribute DOMString <a href=#dom-elementinternals-validationmessage id=the-elementinternals-interface:dom-elementinternals-validationmessage>validationMessage</a>;
+  boolean <a href=form-control-infrastructure.html#dom-elementinternals-checkvalidity id=the-elementinternals-interface:dom-elementinternals-checkvalidity>checkValidity</a>();
+  boolean <a href=form-control-infrastructure.html#dom-elementinternals-reportvalidity id=the-elementinternals-interface:dom-elementinternals-reportvalidity>reportValidity</a>();
+
+  readonly attribute <a id=the-elementinternals-interface:nodelist href=https://dom.spec.whatwg.org/#interface-nodelist data-x-internal=nodelist>NodeList</a> <a href=forms.html#dom-elementinternals-labels id=the-elementinternals-interface:dom-elementinternals-labels>labels</a>;
+};
+
+// <a href=#accessibility-semantics>Accessibility semantics</a>
+ElementInternals includes <a id=the-elementinternals-interface:ariamixin href=https://w3c.github.io/aria/#ARIAMixin data-x-internal=ariamixin>ARIAMixin</a>;
+
+dictionary <dfn id=validitystateflags>ValidityStateFlags</dfn> {
+  boolean valueMissing = false;
+  boolean typeMismatch = false;
+  boolean patternMismatch = false;
+  boolean tooLong = false;
+  boolean tooShort = false;
+  boolean rangeUnderflow = false;
+  boolean rangeOverflow = false;
+  boolean stepMismatch = false;
+  boolean badInput = false;
+  boolean customError = false;
+};</code></pre>
+
+  <p>Each <code id=the-elementinternals-interface:elementinternals-3><a href=#elementinternals>ElementInternals</a></code> has a <dfn id=internals-target>target element</dfn>,
+  which is a <a href=#custom-element id=the-elementinternals-interface:custom-element>custom element</a>.</p>
+
+  
+
+
+  <h5 id=shadow-root-access><span class=secno>4.13.7.2</span> Shadow root access<a href=#shadow-root-access class=self-link></a></h5>
+<div data-zh-date="" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/the-elements-of-html/custom-elements/element-internals/shadow-root-access.zh.html?filename=shadow-root-access.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fthe-elements-of-html%2Fcustom-elements%2Felement-internals%2Fshadow-root-access.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/custom-elements/element-internals/shadow-root-access.en.html></div>
+
+  <dl class=domintro><dt><var>internals</var> . <code id=shadow-root-access:dom-elementinternals-shadowroot><a href=#dom-elementinternals-shadowroot>shadowRoot</a></code><dd><p>Returns the <code id=shadow-root-access:shadowroot><a data-x-internal=shadowroot href=https://dom.spec.whatwg.org/#interface-shadowroot>ShadowRoot</a></code> for <var>internals</var>'s
+   <a href=#internals-target id=shadow-root-access:internals-target>target element</a>, if the
+   <a href=#internals-target id=shadow-root-access:internals-target-2>target element</a> is a <a id=shadow-root-access:shadow-host href=https://dom.spec.whatwg.org/#element-shadow-host data-x-internal=shadow-host>shadow host</a>, or null
+   otherwise.</dl>
+
+  
+  <p>The <dfn id=dom-elementinternals-shadowroot><code>shadowRoot</code></dfn> getter steps
+  are:</p>
+
+  <ol><li><p>Let <var>target</var> be <a id=shadow-root-access:this href=https://heycam.github.io/webidl/#this data-x-internal=this>this</a>'s <a href=#internals-target id=shadow-root-access:internals-target-3>target
+   element</a>.<li><p>If <var>target</var> is not a <a id=shadow-root-access:shadow-host-2 href=https://dom.spec.whatwg.org/#element-shadow-host data-x-internal=shadow-host>shadow host</a>, then return null.<li><p>Let <var>shadow</var> be <var>target</var>'s <a href=https://dom.spec.whatwg.org/#concept-element-shadow-root id=shadow-root-access:concept-element-shadow-root data-x-internal=concept-element-shadow-root>shadow root</a>.<li><p>If <var>shadow</var>'s <a id=shadow-root-access:available-to-element-internals href=https://dom.spec.whatwg.org/#shadowroot-available-to-element-internals data-x-internal=available-to-element-internals>available to element internals</a> is false, then return
+   null.<li><p>Return <var>shadow</var>.</ol>
+  
+
+
+  <h5 id=form-associated-custom-elements><span class=secno>4.13.7.3</span> Form-associated custom elements<a href=#form-associated-custom-elements class=self-link></a></h5>
+<div data-zh-date="" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/the-elements-of-html/custom-elements/element-internals/form-associated-custom-elements.zh.html?filename=form-associated-custom-elements.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fthe-elements-of-html%2Fcustom-elements%2Felement-internals%2Fform-associated-custom-elements.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/custom-elements/element-internals/form-associated-custom-elements.en.html></div>
+
+  <dl class=domintro><dt><var>internals</var> . <code id=form-associated-custom-elements:dom-elementinternals-setformvalue><a href=#dom-elementinternals-setformvalue>setFormValue</a></code>(<var>value</var>)<dd>
+    <p>Sets both the <a href=#face-state id=form-associated-custom-elements:face-state>state</a> and
+    <a href=#face-submission-value id=form-associated-custom-elements:face-submission-value>submission value</a> of <var>internals</var>'s
+    <a href=#internals-target id=form-associated-custom-elements:internals-target>target element</a> to <var>value</var>.</p>
+
+    <p>If <var>value</var> is null, the element won't participate in form submission.</p>
+   <dt><var>internals</var> . <code id=form-associated-custom-elements:dom-elementinternals-setformvalue-2><a href=#dom-elementinternals-setformvalue>setFormValue</a></code>(<var>value</var>,
+   <var>state</var>)<dd>
+    <p>Sets the <a href=#face-submission-value id=form-associated-custom-elements:face-submission-value-2>submission value</a> of
+    <var>internals</var>'s <a href=#internals-target id=form-associated-custom-elements:internals-target-2>target element</a> to
+    <var>value</var>, and its <a href=#face-state id=form-associated-custom-elements:face-state-2>state</a> to <var>state</var>.</p>
+
+    <p>If <var>value</var> is null, the element won't participate in form submission.</p>
+   <dt><var>internals</var> . <code id=form-associated-custom-elements:dom-elementinternals-form><a href=form-control-infrastructure.html#dom-elementinternals-form>form</a></code><dd><p>Returns the <a id=form-associated-custom-elements:form-owner href=form-control-infrastructure.html#form-owner>form owner</a> of <var>internals</var>'s
+   <a href=#internals-target id=form-associated-custom-elements:internals-target-3>target element</a>.<dt><var>internals</var> . <code id=form-associated-custom-elements:dom-elementinternals-setvalidity><a href=#dom-elementinternals-setvalidity>setValidity</a></code>(<var>flags</var>,
+   <var>message</var> [, <var>anchor</var> ])<dd><p>Marks <var>internals</var>'s <a href=#internals-target id=form-associated-custom-elements:internals-target-4>target element</a> as
+   suffering from the constraints indicated by the <var>flags</var> argument, and sets the element's
+   validation message to <var>message</var>. If <var>anchor</var> is specified, the user agent might
+   use it to indicate problems with the constraints of <var>internals</var>'s <a href=#internals-target id=form-associated-custom-elements:internals-target-5>target element</a> when the <a id=form-associated-custom-elements:form-owner-2 href=form-control-infrastructure.html#form-owner>form owner</a> is validated
+   interactively or <code id=form-associated-custom-elements:dom-elementinternals-reportvalidity><a href=form-control-infrastructure.html#dom-elementinternals-reportvalidity>reportValidity()</a></code> is
+   called.<dt><var>internals</var> . <code id=form-associated-custom-elements:dom-elementinternals-setvalidity-2><a href=#dom-elementinternals-setvalidity>setValidity</a></code>({})<dd><p>Marks <var>internals</var>'s <a href=#internals-target id=form-associated-custom-elements:internals-target-6>target element</a> as
+   <a href=form-control-infrastructure.html#concept-fv-valid id=form-associated-custom-elements:concept-fv-valid>satisfying its constraints</a>.<dt><var>internals</var> .
+   <code id=form-associated-custom-elements:dom-elementinternals-willvalidate><a href=form-control-infrastructure.html#dom-elementinternals-willvalidate>willValidate</a></code><dd><p>Returns true if <var>internals</var>'s
+   <a href=#internals-target id=form-associated-custom-elements:internals-target-7>target element</a> will be validated when the form is
+   submitted; false otherwise.<dt><var>internals</var> . <code id=form-associated-custom-elements:dom-elementinternals-validity><a href=form-control-infrastructure.html#dom-elementinternals-validity>validity</a></code><dd><p>Returns the <code id=form-associated-custom-elements:validitystate><a href=form-control-infrastructure.html#validitystate>ValidityState</a></code> object for <var>internals</var>'s
+   <a href=#internals-target id=form-associated-custom-elements:internals-target-8>target element</a>.<dt><var>internals</var> .
+   <code id=form-associated-custom-elements:dom-elementinternals-validationmessage><a href=#dom-elementinternals-validationmessage>validationMessage</a></code><dd><p>Returns the error message that would be shown to the user if <var>internals</var>'s
+   <a href=#internals-target id=form-associated-custom-elements:internals-target-9>target element</a> was to be checked for validity.<dt><var>valid</var> = <var>internals</var> .
+   <code id=form-associated-custom-elements:dom-elementinternals-checkvalidity><a href=form-control-infrastructure.html#dom-elementinternals-checkvalidity>checkValidity()</a></code><dd><p>Returns true if <var>internals</var>'s <a href=#internals-target id=form-associated-custom-elements:internals-target-10>target
+   element</a> has no validity problems; false otherwise. Fires an <code id=form-associated-custom-elements:event-invalid><a href=indices.html#event-invalid>invalid</a></code> event at the element in the latter case.<dt><var>valid</var> = <var>internals</var> .
+   <code id=form-associated-custom-elements:dom-elementinternals-reportvalidity-2><a href=form-control-infrastructure.html#dom-elementinternals-reportvalidity>reportValidity()</a></code><dd><p>Returns true if <var>internals</var>'s <a href=#internals-target id=form-associated-custom-elements:internals-target-11>target
+   element</a> has no validity problems; otherwise, returns false, fires an <code id=form-associated-custom-elements:event-invalid-2><a href=indices.html#event-invalid>invalid</a></code> event at the element, and (if the event isn't canceled)
+   reports the problem to the user.<dt><var>internals</var> . <code id=form-associated-custom-elements:dom-elementinternals-labels><a href=forms.html#dom-elementinternals-labels>labels</a></code><dd><p>Returns a <code id=form-associated-custom-elements:nodelist><a data-x-internal=nodelist href=https://dom.spec.whatwg.org/#interface-nodelist>NodeList</a></code> of all the <code id=form-associated-custom-elements:the-label-element><a href=forms.html#the-label-element>label</a></code> elements that
+   <var>internals</var>'s <a href=#internals-target id=form-associated-custom-elements:internals-target-12>target element</a> is associated
+   with.</dl>
+
+  <p>Each <a href=#form-associated-custom-element id=form-associated-custom-elements:form-associated-custom-element>form-associated custom element</a> has <dfn id=face-submission-value>submission value</dfn>. It is used to provide one or more
+  <a href=https://xhr.spec.whatwg.org/#concept-formdata-entry id=form-associated-custom-elements:formdata-entry data-x-internal=formdata-entry>entries</a> on form submission.
+  The initial value of <a href=#face-submission-value id=form-associated-custom-elements:face-submission-value-3>submission value</a> is null, and
+  <a href=#face-submission-value id=form-associated-custom-elements:face-submission-value-4>submission value</a> can be null, a string, a
+  <code id=form-associated-custom-elements:file><a data-x-internal=file href=https://w3c.github.io/FileAPI/#dfn-file>File</a></code>, or a <a id=form-associated-custom-elements:list href=https://infra.spec.whatwg.org/#list data-x-internal=list>list</a> of <a href=https://xhr.spec.whatwg.org/#concept-formdata-entry id=form-associated-custom-elements:formdata-entry-2 data-x-internal=formdata-entry>entries</a>.</p>
+
+  <p>Each <a href=#form-associated-custom-element id=form-associated-custom-elements:form-associated-custom-element-2>form-associated custom element</a> has <dfn id=face-state>state</dfn>.
+  It is information with which the user agent can restore a user's input for the element.
+  The initial value of <a href=#face-state id=form-associated-custom-elements:face-state-3>state</a> is null, and <a href=#face-state id=form-associated-custom-elements:face-state-4>state</a> can be null, a string, a <code id=form-associated-custom-elements:file-2><a data-x-internal=file href=https://w3c.github.io/FileAPI/#dfn-file>File</a></code>, or a
+  <a id=form-associated-custom-elements:list-2 href=https://infra.spec.whatwg.org/#list data-x-internal=list>list</a> of <a href=https://xhr.spec.whatwg.org/#concept-formdata-entry id=form-associated-custom-elements:formdata-entry-3 data-x-internal=formdata-entry>entries</a>.</p>
+
+  <p>The <code id=form-associated-custom-elements:dom-elementinternals-setformvalue-3><a href=#dom-elementinternals-setformvalue>setFormValue()</a></code> method is used by
+  the custom element author to set the element's <a href=#face-submission-value id=form-associated-custom-elements:face-submission-value-5>submission
+  value</a> and <a href=#face-state id=form-associated-custom-elements:face-state-5>state</a>, thus communicating these to the user
+  agent.</p>
+
+  <p>When the user agent believes it is a good idea to restore a <a href=#form-associated-custom-element id=form-associated-custom-elements:form-associated-custom-element-3>form-associated custom
+  element</a>'s <a href=#face-state id=form-associated-custom-elements:face-state-6>state</a>, for example after navigation or
+  restarting the user agent, they may <a href=#enqueue-a-custom-element-callback-reaction id=form-associated-custom-elements:enqueue-a-custom-element-callback-reaction>enqueue a custom element callback reaction</a> with
+  that element, callback name "<code>formStateRestoreCallback</code>", and an argument
+  list containing the state to be restored, and <code>"restore"</code>.</p>
+
+  <p>If the user agent has a form-filling assist feature, then when the feature is invoked,
+  it may <a href=#enqueue-a-custom-element-callback-reaction id=form-associated-custom-elements:enqueue-a-custom-element-callback-reaction-2>enqueue a custom element callback reaction</a> with
+  a <a href=#form-associated-custom-element id=form-associated-custom-elements:form-associated-custom-element-4>form-associated custom element</a>, callback name
+  "<code>formStateRestoreCallback</code>", and an argument list containing the state value
+  determined by history of state value and some heuristics, and
+  <code>"autocomplete"</code>.</p>
+
+  <p>In general, the <a href=#face-state id=form-associated-custom-elements:face-state-7>state</a> is information specified by a user, and
+  the <a href=#face-submission-value id=form-associated-custom-elements:face-submission-value-6>submission value</a> is a value after canonicalization
+  or sanitization, suitable for submission to the server. The following examples makes this
+  concrete:</p>
+
+  <p class=example>Suppose that we have a <a href=#form-associated-custom-element id=form-associated-custom-elements:form-associated-custom-element-5>form-associated custom element</a> which asks a
+  user to specify a date. The user specifies <kbd>"3/15/2019"</kbd>, but the control wishes to
+  submit <code>"2019-03-15"</code> to the server. <kbd>"3/15/2019"</kbd> would be a <a href=#face-state id=form-associated-custom-elements:face-state-8>state</a> of the element, and <code>"2019-03-15"</code> would be
+  a <a href=#face-submission-value id=form-associated-custom-elements:face-submission-value-7>submission value</a>.</p>
+
+  <p class=example>Suppose you develop a custom element emulating a the behavior of the existing
+  <a href="input.html#checkbox-state-(type=checkbox)" id="form-associated-custom-elements:checkbox-state-(type=checkbox)">checkbox</a> <code id=form-associated-custom-elements:the-input-element><a href=input.html#the-input-element>input</a></code> type. Its <a href=#face-submission-value id=form-associated-custom-elements:face-submission-value-8>submission value</a> would be the value of its <code>value</code> content attribute, or the string <code>"on"</code>. Its <a href=#face-state id=form-associated-custom-elements:face-state-9>state</a> would be one of <code>"checked"</code>, <code>"unchecked"</code>, <code>"checked/indeterminate"</code>, or <code>"unchecked/indeterminate"</code>.</p>
+
+  
+
+  <p>The <dfn id=dom-elementinternals-setformvalue><code>setFormValue(<var>value</var>,
+  <var>state</var>)</code></dfn> method steps are:</p>
+
+  <ol><li><p>Let <var>element</var> be <a id=form-associated-custom-elements:this href=https://heycam.github.io/webidl/#this data-x-internal=this>this</a>'s <a href=#internals-target id=form-associated-custom-elements:internals-target-13>target
+   element</a>.<li><p>If <var>element</var> is not a <a href=#form-associated-custom-element id=form-associated-custom-elements:form-associated-custom-element-6>form-associated custom element</a>, then throw a
+   <a id=form-associated-custom-elements:notsupportederror href=https://heycam.github.io/webidl/#notsupportederror data-x-internal=notsupportederror>"<code>NotSupportedError</code>"</a> <code id=form-associated-custom-elements:domexception><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code>.<li><p>Set <a href=#internals-target id=form-associated-custom-elements:internals-target-14>target element</a>'s <a href=#face-submission-value id=form-associated-custom-elements:face-submission-value-9>submission value</a> to <var>value</var> if <var>value</var> is
+   not a <code id=form-associated-custom-elements:formdata><a data-x-internal=formdata href=https://xhr.spec.whatwg.org/#formdata>FormData</a></code> object, or to a <a href=https://infra.spec.whatwg.org/#list-clone id=form-associated-custom-elements:list-clone data-x-internal=list-clone>clone</a> of the
+   entry list associated with <var>value</var> otherwise.<li><p>If the <var>state</var> argument of the function is omitted, set <var>element</var>'s
+   <a href=#face-state id=form-associated-custom-elements:face-state-10>state</a> to its <a href=#face-submission-value id=form-associated-custom-elements:face-submission-value-10>submission
+   value</a>.
+
+   <li><p>Otherwise, if <var>state</var> is a <code id=form-associated-custom-elements:formdata-2><a data-x-internal=formdata href=https://xhr.spec.whatwg.org/#formdata>FormData</a></code> object, set <var>element</var>'s
+   <a href=#face-state id=form-associated-custom-elements:face-state-11>state</a> to <a href=https://infra.spec.whatwg.org/#list-clone id=form-associated-custom-elements:list-clone-2 data-x-internal=list-clone>clone</a> of the
+   entry list associated with <var>state</var>.<li><p>Otherwise, set <var>element</var>'s <a href=#face-state id=form-associated-custom-elements:face-state-12>state</a> to
+   <var>state</var>.</ol>
+
+  <hr>
+
+  <p>Each <a href=#form-associated-custom-element id=form-associated-custom-elements:form-associated-custom-element-7>form-associated custom element</a> has validity flags named
+  <code>valueMissing</code>, <code>typeMismatch</code>,
+  <code>patternMismatch</code>, <code>tooLong</code>,
+  <code>tooShort</code>, <code>rangeUnderflow</code>,
+  <code>rangeOverflow</code>, <code>stepMismatch</code>, and
+  <code>customError</code>. They are false initially.</p>
+
+  <p>Each <a href=#form-associated-custom-element id=form-associated-custom-elements:form-associated-custom-element-8>form-associated custom element</a> has a
+  <dfn id=face-validation-message>validation message</dfn> string. It is the empty string
+  initially.</p>
+
+  <p>Each <a href=#form-associated-custom-element id=form-associated-custom-elements:form-associated-custom-element-9>form-associated custom element</a> has a
+  <dfn id=face-validation-anchor>validation anchor</dfn> element. It is null initially.</p>
+
+  <p>The <dfn id=dom-elementinternals-setvalidity><code>setValidity(<var>flags</var>,
+  <var>message</var>, <var>anchor</var>)</code></dfn> method steps are:</p>
+
+  <ol><li><p>Let <var>element</var> be <a id=form-associated-custom-elements:this-2 href=https://heycam.github.io/webidl/#this data-x-internal=this>this</a>'s <a href=#internals-target id=form-associated-custom-elements:internals-target-15>target
+   element</a>.<li><p>If <var>element</var> is not a <a href=#form-associated-custom-element id=form-associated-custom-elements:form-associated-custom-element-10>form-associated custom element</a>, then throw a
+   <a id=form-associated-custom-elements:notsupportederror-2 href=https://heycam.github.io/webidl/#notsupportederror data-x-internal=notsupportederror>"<code>NotSupportedError</code>"</a> <code id=form-associated-custom-elements:domexception-2><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code>.<li><p>If <var>flags</var> contains one or more true values and <var>message</var> is not given
+   or is the empty string, then throw a <code id=form-associated-custom-elements:typeerror><a data-x-internal=typeerror href=https://tc39.es/ecma262/#sec-native-error-types-used-in-this-standard-typeerror>TypeError</a></code>.<li><p>For each entry <var>flag</var> → <var>value</var> of <var>flags</var>, set
+   <var>element</var>'s validity flag with the name <var>flag</var> to <var>value</var>.<li><p>Set <var>element</var>'s <a href=#face-validation-message id=form-associated-custom-elements:face-validation-message>validation message</a>
+   to the empty string if <var>message</var> is not given or all of <var>element</var>'s validity
+   flags are false, or to <var>message</var> otherwise.<li><p>If <var>element</var>'s <code>customError</code> validity flag is true, then set
+   <var>element</var>'s <a id=form-associated-custom-elements:custom-validity-error-message href=form-control-infrastructure.html#custom-validity-error-message>custom validity error message</a> to <var>element</var>'s
+   <a href=#face-validation-message id=form-associated-custom-elements:face-validation-message-2>validation message</a>. Otherwise, set
+   <var>element</var>'s <a id=form-associated-custom-elements:custom-validity-error-message-2 href=form-control-infrastructure.html#custom-validity-error-message>custom validity error message</a> to the empty string.<li><p>Set <var>element</var>'s <a href=#face-validation-anchor id=form-associated-custom-elements:face-validation-anchor>validation anchor</a> to
+   null if <var>anchor</var> is not given. Otherwise, if <var>anchor</var> is not a
+   <a id=form-associated-custom-elements:shadow-including-descendant href=https://dom.spec.whatwg.org/#concept-shadow-including-descendant data-x-internal=shadow-including-descendant>shadow-including descendant</a> of <var>element</var>, then throw a
+   <a id=form-associated-custom-elements:notfounderror href=https://heycam.github.io/webidl/#notfounderror data-x-internal=notfounderror>"<code>NotFoundError</code>"</a> <code id=form-associated-custom-elements:domexception-3><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code>. Otherwise, set
+   <var>element</var>'s <a href=#face-validation-anchor id=form-associated-custom-elements:face-validation-anchor-2>validation anchor</a> to
+   <var>anchor</var>.</ol>
+
+  <p>The <dfn id=dom-elementinternals-validationmessage><code>validationMessage</code></dfn>
+  getter steps are to return the <a href=#face-validation-message id=form-associated-custom-elements:face-validation-message-3>validation message</a> of
+  <a id=form-associated-custom-elements:this-3 href=https://heycam.github.io/webidl/#this data-x-internal=this>this</a>'s <a href=#internals-target id=form-associated-custom-elements:internals-target-16>target element</a>.</p>
+
+  <p>The <dfn id=face-entry-construction>entry construction algorithm</dfn> for a
+  <a href=#form-associated-custom-element id=form-associated-custom-elements:form-associated-custom-element-11>form-associated custom element</a>, given an element <var>element</var> and a
+  list <var>entry list</var>, consists of the following steps:</p>
+
+  <ol><li>
+    <p>If <var>element</var>'s <a href=#face-submission-value id=form-associated-custom-elements:face-submission-value-11>submission value</a> is a
+    <a id=form-associated-custom-elements:list-3 href=https://infra.spec.whatwg.org/#list data-x-internal=list>list</a> of <a href=https://xhr.spec.whatwg.org/#concept-formdata-entry id=form-associated-custom-elements:formdata-entry-4 data-x-internal=formdata-entry>entries</a>, then <a href=https://infra.spec.whatwg.org/#list-append id=form-associated-custom-elements:list-append data-x-internal=list-append>append</a> each item of <var>element</var>'s <a href=#face-submission-value id=form-associated-custom-elements:face-submission-value-12>submission value</a> to <var>entry list</var>, and return.</p>
+
+    <p class=note>In this case, user agent does not refer to the
+    <code id=form-associated-custom-elements:attr-fe-name><a href=form-control-infrastructure.html#attr-fe-name>name</a></code> content attribute value. An implementation of
+    <a href=#form-associated-custom-element id=form-associated-custom-elements:form-associated-custom-element-12>form-associated custom element</a> is responsible to decide names of
+    <a href=https://xhr.spec.whatwg.org/#concept-formdata-entry id=form-associated-custom-elements:formdata-entry-5 data-x-internal=formdata-entry>entries</a>. They can be the
+    <code id=form-associated-custom-elements:attr-fe-name-2><a href=form-control-infrastructure.html#attr-fe-name>name</a></code> content attribute value, they can be strings based on
+    the <code id=form-associated-custom-elements:attr-fe-name-3><a href=form-control-infrastructure.html#attr-fe-name>name</a></code> content attribute value, or they can be unrelated
+    to the <code id=form-associated-custom-elements:attr-fe-name-4><a href=form-control-infrastructure.html#attr-fe-name>name</a></code> content attribute.</p>
+   <li><p>If the element does not have a <code id=form-associated-custom-elements:attr-fe-name-5><a href=form-control-infrastructure.html#attr-fe-name>name</a></code> attribute
+   specified, or its <code id=form-associated-custom-elements:attr-fe-name-6><a href=form-control-infrastructure.html#attr-fe-name>name</a></code> attribute's value is the empty string,
+   then return.<li><p>If the element's <a href=#face-submission-value id=form-associated-custom-elements:face-submission-value-13>submission value</a> is not
+   null, <a id=form-associated-custom-elements:append-an-entry href=form-control-infrastructure.html#append-an-entry>append an entry</a> to <var>entry list</var> with the
+   <code id=form-associated-custom-elements:attr-fe-name-7><a href=form-control-infrastructure.html#attr-fe-name>name</a></code> attribute value and the
+   <a href=#face-submission-value id=form-associated-custom-elements:face-submission-value-14>submission value</a>.</ol>
+
+  
+
+
+  <h5 id=accessibility-semantics><span class=secno>4.13.7.4</span> Accessibility semantics<a href=#accessibility-semantics class=self-link></a></h5>
+<div data-zh-date="" data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-file="https://github.com/whatwg-cn/html/new/master/src/the-elements-of-html/custom-elements/element-internals/accessibility-semantics.zh.html?filename=accessibility-semantics.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fthe-elements-of-html%2Fcustom-elements%2Felement-internals%2Faccessibility-semantics.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/the-elements-of-html/custom-elements/element-internals/accessibility-semantics.en.html></div>
+
+  <dl class=domintro><dt><var>internals</var> . <code><a href=#dom-ElementInternals-accessibility-idl-get>role</a></code> [ = <var>value</var> ]<dd><p>Sets or retrieves the default ARIA role for <var>internals</var>'s <a href=#internals-target id=accessibility-semantics:internals-target>target element</a>, which will be used unless the page author
+   overrides it using the <code id=accessibility-semantics:attr-aria-role><a href=infrastructure.html#attr-aria-role>role</a></code> attribute.<dt><var>internals</var> . <code><a href=#dom-ElementInternals-accessibility-idl-get>aria*</a></code> [ = <var>value</var> ]<dd><p>Sets or retrieves various default ARIA states or property values for
+   <var>internals</var>'s <a href=#internals-target id=accessibility-semantics:internals-target-2>target element</a>, which will be used
+   unless the page author overrides them using the <code id=accessibility-semantics:attr-aria-*><a href=infrastructure.html#attr-aria-*>aria-*</a></code>
+   attributes.</dl>
+
+  
+
+  
+
+  <p>Each <a href=#custom-element id=accessibility-semantics:custom-element>custom element</a> has a <dfn id=native-accessibility-semantics-map>native accessibility semantics map</dfn>, which is
+  a <a id=accessibility-semantics:the-map-element href=image-maps.html#the-map-element>map</a>, initially empty. See the <a href=dom.html#wai-aria>Requirements related to ARIA and
+  to platform accessibility APIs</a> section for information on how this impacts platform
+  accessibility APIs.</p>
+
+  <p><code id=accessibility-semantics:elementinternals><a href=#elementinternals>ElementInternals</a></code> includes the <code id=accessibility-semantics:ariamixin><a data-x-internal=ariamixin href=https://w3c.github.io/aria/#ARIAMixin>ARIAMixin</a></code> mixin. The accessors provided
+  by this mixin are used to manipulate the <a href=#internals-target id=accessibility-semantics:internals-target-3>target element</a>'s
+  <a href=#native-accessibility-semantics-map id=accessibility-semantics:native-accessibility-semantics-map>native accessibility semantics map</a>, as follows:</p>
+
+  <p id=dom-ElementInternals-accessibility-idl>The <a id=accessibility-semantics:ariamixin-getter-steps href=https://w3c.github.io/aria/#dfn-ariamixin-getter-steps data-x-internal=ariamixin-getter-steps><code>ARIAMixin</code> getter
+  steps</a> for <code id=accessibility-semantics:elementinternals-2><a href=#elementinternals>ElementInternals</a></code>, given <var>internals</var>,
+  <var>idlAttribute</var>, and <var>contentAttribute</var>, are:</p>
+
+  <ol><li><p>Let <var>map</var> be <var>internals</var>'s <a href=#internals-target id=accessibility-semantics:internals-target-4>target
+   element</a>'s <a href=#native-accessibility-semantics-map id=accessibility-semantics:native-accessibility-semantics-map-2>native accessibility semantics map</a>.<li><p>If <var>map</var>[<var>contentAttribute</var>] <a href=https://infra.spec.whatwg.org/#map-exists id=accessibility-semantics:map-exists data-x-internal=map-exists>exists</a>,
+   then return it.<li><p>Return null.</ol>
+
+  <p>The <a id=accessibility-semantics:ariamixin-setter-steps href=https://w3c.github.io/aria/#dfn-ariamixin-setter-steps data-x-internal=ariamixin-setter-steps><code>ARIAMixin</code> setter steps</a> for <code id=accessibility-semantics:elementinternals-3><a href=#elementinternals>ElementInternals</a></code>, given
+  <var>internals</var>, <var>idlAttribute</var>, <var>contentAttribute</var>, and
+  <var>value</var>, are:</p>
+
+  <ol><li><p>Let <var>map</var> be <var>internals</var>'s <a href=#internals-target id=accessibility-semantics:internals-target-5>target
+   element</a>'s <a href=#native-accessibility-semantics-map id=accessibility-semantics:native-accessibility-semantics-map-3>native accessibility semantics map</a>.<li><p>If <var>value</var> is null, then <a href=https://infra.spec.whatwg.org/#map-remove id=accessibility-semantics:map-remove data-x-internal=map-remove>remove</a>
+   <var>map</var>[<var>contentAttribute</var>].<li><p>Otherwise, <a href=https://infra.spec.whatwg.org/#map-set id=accessibility-semantics:map-set data-x-internal=map-set>set</a> <var>map</var>[<var>contentAttribute</var>]
+   to <var>value</var>.</ol>
+
+  
+
+
+  <nav><a href=canvas.html>← 4.12.5 The canvas element</a> — <a href=./>Table of Contents</a> — <a href=semantics-other.html>4.14 Common idioms without dedicated elements →</a></nav>
+<script src=/html/resources/zh-cn.js></script>

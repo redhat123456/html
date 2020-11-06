@@ -1,0 +1,1542 @@
+<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Standard, Developer's Edition</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/dev/styles.css crossorigin=""><script>
+   function toggleStatus(div) {
+     div.parentNode.classList.toggle('wrapped');
+   }
+   function setLinkFragment(link) {
+     link.hash = location.hash;
+   }
+  </script><body>
+  <script async="" src=/dev/search.js></script>
+  
+  
+  
+  <header id=head class="head with-buttons">
+   <a href=https://whatwg.org/ class=logo><img width=100 alt=WHATWG crossorigin="" src=https://resources.whatwg.org/logo.svg height=100></a>
+   
+   <hgroup><h1><a rel=home href=/dev/>HTML: The Living Standard</a></h1><h2 id="developer's-edition-—-last-updated-date:-01-jan-1901" class="no-num no-toc">Developer's Edition — Last Updated <span class=pubdate>6 November 2020</span></h2><div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/developers-edition-mdash-last-updated-date-01-jan-1901.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/developers-edition-mdash-last-updated-date-01-jan-1901.zh.html></div></hgroup>
+   
+   <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-91053840-1', 'auto');
+      ga('send', 'pageview');
+   </script>
+  </header>
+
+  
+
+  
+
+
+  
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/table-of-contents.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/table-of-contents.zh.html></div>
+  
+
+
+  
+<div data-en-date="Sat Aug 11 2018 08:00:56 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/full-table-of-contents.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/full-table-of-contents.zh.html></div>
+  
+
+  
+
+  
+
+
+  <h2 id=about-dev-edition class="no-num no-toc">关于本标准</h2>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/about-this-specification.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/about-this-specification.zh.html></div>
+
+  <p>本标准与其他标准不同，它的处理完全考虑到了 Web 开发者。</p>
+
+  <p>本标准关注可读性和可访问性，不像 <a href=/multipage/>完整的 HTML 标准</a>，"开发者版本" 移除了
+  只有浏览器厂商需要知道的信息。它个版本是用我们的构建工具从完整的规范自动产出的，
+  因此总会与最新开发的 HTML 保持同步。</p>
+
+  <p>其概念、构造，以及未来可参考 <a href=http://web.archive.org/web/20150220020906/http://archive.germanforblack.com:80/articles/html5-for-web-developers>
+  原始出版发行</a>，以及 <a href=https://blog.whatwg.org/developers-edition-comeback>关于重启该版本的博文</a>。</p>
+
+  <p>最后，欢迎 <a href=https://github.com/whatwg/html/labels/dev%20edition>在 GitHub 贡献</a> 来改进该版本！</p>
+
+  
+
+
+  <nav><a href=web-messaging.html>← 9.4 跨文档通信</a> — <a href=./>Table of Contents</a> — <a href=worklets.html>11 Worklets →</a></nav><ol class=toc><li><a href=workers.html#workers><span class=secno>10</span> Web 工作线程</a><ol><li><a href=workers.html#概述-7><span class=secno>10.1</span> 概述</a><ol><li><a href=workers.html#涵盖范围><span class=secno>10.1.1</span> 涵盖范围</a><li><a href=workers.html#示例-2><span class=secno>10.1.2</span> 示例</a><ol><li><a href=workers.html#数字密集型计算的后台-worker><span class=secno>10.1.2.1</span> 数字密集型计算的后台 worker</a><li><a href=workers.html#module-worker-example><span class=secno>10.1.2.2</span> 使用 JavaScript 模块作为 worker</a><li><a href=workers.html#shared-workers-introduction><span class=secno>10.1.2.3</span> 共享 worker 概述</a><li><a href=workers.html#通过共享-worker-来共享状态><span class=secno>10.1.2.4</span> 通过共享 Worker 来共享状态</a><li><a href=workers.html#委托><span class=secno>10.1.2.5</span> 委托</a><li><a href=workers.html#providing-libraries><span class=secno>10.1.2.6</span> Providing libraries</a></ol><li><a href=workers.html#教程><span class=secno>10.1.3</span> 教程</a><ol><li><a href=workers.html#创建专用工作线程><span class=secno>10.1.3.1</span> 创建专用工作线程</a><li><a href=workers.html#与专用-worker-通信><span class=secno>10.1.3.2</span> 与专用 Worker 通信</a><li><a href=workers.html#共享工作线程><span class=secno>10.1.3.3</span> 共享工作线程</a></ol></ol><li><a href=workers.html#基础设施><span class=secno>10.2</span> 基础设施</a><ol><li><a href=workers.html#全局作用域><span class=secno>10.2.1</span> 全局作用域</a><ol><li><a href=workers.html#workerglobalscope-通用接口><span class=secno>10.2.1.1</span> <code>WorkerGlobalScope</code> 通用接口</a><li><a href=workers.html#专用-worker-与-dedicatedworkerglobalscope-接口><span class=secno>10.2.1.2</span> 专用 Worker 与 <code>DedicatedWorkerGlobalScope</code> 接口</a><li><a href=workers.html#共享-worker-与-sharedworkerglobalscope-接口><span class=secno>10.2.1.3</span> 共享 worker 与 <code>SharedWorkerGlobalScope</code> 接口</a></ol><li><a href=workers.html#worker-event-loop><span class=secno>10.2.2</span> 事件循环</a><li><a href=workers.html#runtime-script-errors><span class=secno>10.2.3</span> Runtime script errors</a><li><a href=workers.html#创建-worker><span class=secno>10.2.4</span> 创建 Worker</a><ol><li><a href=workers.html#properties-present-on-both-worker-and-sharedworker><span class=secno>10.2.4.1</span> Properties present on both <code>Worker</code> and <code>SharedWorker</code></a><li><a href=workers.html#dedicated-workers-and-the-worker-interface><span class=secno>10.2.4.2</span> Dedicated workers and the <code>Worker</code> interface</a><li><a href=workers.html#shared-workers-and-the-sharedworker-interface><span class=secno>10.2.4.3</span> Shared workers and the <code>SharedWorker</code> interface</a></ol><li><a href=workers.html#navigator.hardwareconcurrency><span class=secno>10.2.5</span> Concurrent hardware capabilities</a></ol><li><a href=workers.html#worker-中可用的-api><span class=secno>10.3</span> Worker 中可用的 API</a><ol><li><a href=workers.html#the-workernavigator-object><span class=secno>10.3.1</span> The <code>WorkerNavigator</code> interface</a><li><a href=workers.html#worker-locations><span class=secno>10.3.2</span> The <code>WorkerLocation</code> interface</a></ol></ol></ol><h2 data-lt="web worker" id=workers data-dfn-type=dfn><span class=secno>10</span> Web 工作线程<a href=#workers class=self-link></a></h2><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API title="Web Workers makes it possible to run a script operation in a background thread separate from the main execution thread of a web application. The advantage of this is that laborious processing can be performed in a separate thread, allowing the main (usually the UI) thread to run without being blocked/slowed down.">Web_Workers_API</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>3.5+</span></span><span class="safari yes"><span>Safari</span><span>4+</span></span><span class="chrome yes"><span>Chrome</span><span>4+</span></span><hr><span class="opera yes"><span>Opera</span><span>10.6+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>10+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>5.1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>4+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>11+</span></span></div></div><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers title="Web Workers are a simple means for web content to run scripts in background threads. The worker thread can perform tasks without interfering with the user interface. In addition, they can perform I/O using XMLHttpRequest (although the responseXML and channel attributes are always null). Once created, a worker can send messages to the JavaScript code that created it by posting messages to an event handler specified by that code (and vice versa).">Web_Workers_API/Using_web_workers</a></div></div>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/web-workers/index.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/web-workers/index.zh.html></div>
+
+  <h3 id=概述-7><span class=secno>10.1</span> 概述<a href=#概述-7 class=self-link></a></h3>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/web-workers/introduction/index.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/web-workers/introduction/index.zh.html></div>
+
+
+  <h4 id=涵盖范围><span class=secno>10.1.1</span> 涵盖范围<a href=#涵盖范围 class=self-link></a></h4>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/web-workers/introduction/scope.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/web-workers/introduction/scope.zh.html></div>
+
+  
+
+  <p>本标准定义了独立于任何 UI 脚本在后台运行脚本的 API。</p>
+
+  <p>这使得长时间运行的脚本成为可能，它们不会因响应用户点击或其他交互而中断。
+  也使得耗时任务成为可能，它们不必为了保持页面可响应而立即返回。</p>
+
+  <p>Workers （这里指这些后台脚本）相对重量级，不适合大量使用。
+  例如，为400万像素图片的每一像素启动一个 Worker 就可能不太合适。
+  下面的例子演示了一些合适的 workers 使用方式。</p>
+
+  <p>通常 workers 应该有较长的生命期，较高的启动性能消耗，而且每个实例都会产生较高的内存消耗。</p>
+
+
+
+  <h4 id=示例-2><span class=secno>10.1.2</span> 示例<a href=#示例-2 class=self-link></a></h4>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/web-workers/introduction/examples/index.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/web-workers/introduction/examples/index.zh.html></div>
+
+  
+
+  <p>Worker 有着广泛的用途，下面的几节展示了其中的一些。</p>
+
+
+  <h5 id=数字密集型计算的后台-worker><span class=secno>10.1.2.1</span> 数字密集型计算的后台 worker<a href=#数字密集型计算的后台-worker class=self-link></a></h5>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/web-workers/introduction/examples/a-background-number-crunching-worker.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/web-workers/introduction/examples/a-background-number-crunching-worker.zh.html></div>
+
+  
+
+  <p>workers 最简单的使用方式是在不打断 UI 的情况下执行计算密集型的任务。</p>
+
+  <p>本例子中，主文档启动（spawns ）了一个 worker 来（naïvely）计算质数，
+  然后逐渐地显示新发现的质数。</p>
+
+  <p>主页面如下：</p>
+
+  <pre>&lt;!DOCTYPE HTML>
+&lt;html lang="en">
+ &lt;head>
+  &lt;meta charset="utf-8">
+  &lt;title>Worker example: One-core computation&lt;/title>
+ &lt;/head>
+ &lt;body>
+  &lt;p>The highest prime number discovered so far is: &lt;output id="result">&lt;/output>&lt;/p>
+  &lt;script>
+   var worker = new Worker('worker.js');
+   worker.onmessage = function (event) {
+     document.getElementById('result').textContent = event.data;
+   };
+  &lt;/script>
+ &lt;/body>
+&lt;/html>
+</pre>
+
+  <p>对 <code id=数字密集型计算的后台-worker:dom-worker><a href=#dom-worker>Worker()</a></code> 构造函数的调用创建了一个 worker，
+  并返回一个表示该 worker 的 <code id=数字密集型计算的后台-worker:worker-2><a href=#worker-2>Worker</a></code> 对象，该对象用来与 worker 进行通信。
+  该对象的 <code id=数字密集型计算的后台-worker:handler-worker-onmessage><a href=#handler-worker-onmessage>onmessage</a></code> 事件处理函数允许
+  从 worker 接受消息。</p>
+
+  <p>worker 本身如下：</p>
+
+  <pre>var n = 1;
+search: while (true) {
+  n += 1;
+  for (var i = 2; i &lt;= Math.sqrt(n); i += 1)
+    if (n % i == 0)
+     continue search;
+  // found a prime!
+  postMessage(n);
+}
+</pre>
+
+  <p>这些代码就是未经优化的寻找质数算法。找到质数时使用 <code id=数字密集型计算的后台-worker:dom-dedicatedworkerglobalscope-postmessage><a href=#dom-dedicatedworkerglobalscope-postmessage>postMessage()</a></code> 方法来
+  向页面发送消息。</p>
+
+  <p><a href=/demos/workers/primes/page.html>在线浏览该示例</a>。</p>
+
+
+
+
+
+  <h5 id=module-worker-example><span class=secno>10.1.2.2</span> 使用 JavaScript 模块作为 worker<a href=#module-worker-example class=self-link></a></h5>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/web-workers/introduction/examples/using-a-javascript-module-as-a-worker.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/web-workers/introduction/examples/using-a-javascript-module-as-a-worker.zh.html></div>
+
+  
+
+  <p>目前我们所有例子的 workers 都在运行 <span>经典脚本
+  </span>。Workers 也可以用 <span>模块脚本</span> 实例化，
+  通常有如下好处：使用 JavaScript <code>import</code> 声明来引入其他模块的能力；
+  默认的严格模式；顶层声明不会污染 worker 的全局作用域。</p>
+
+  <p>注意相比于经典脚本，基于模块的 workers 遵循不同的跨域内容限制，
+  不同于经典 workers，模块 workers 可以使用跨域脚本实例化，只要使用
+  <a href=https://fetch.spec.whatwg.org/#http-cors-protocol id=module-worker-example:cors-protocol data-x-internal=cors-protocol>CORS 协议</a>把该脚本暴露出来。
+  另外，在模块 worker 中 <code id=module-worker-example:dom-workerglobalscope-importscripts><a href=#dom-workerglobalscope-importscripts>importScripts()</a></code>
+  方法将自动失效；JavaScript <code>import</code> 声明通常是更好的选择。</p>
+
+  <p>本例子中，主文档使用了一个 worker 来做主线程外的图像操作。
+  它引入了另一个模块中的过滤器。</p>
+
+  <p>主页面如下：</p>
+
+  <pre>&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;meta charset="utf-8">
+&lt;title>Worker example: image decoding&lt;/title>
+
+&lt;p>
+  &lt;label>
+    Type an image URL to decode
+    &lt;input type="url" id="image-url" list="image-list">
+    &lt;datalist id="image-list">
+      &lt;option value="https://html.spec.whatwg.org/images/drawImage.png">
+      &lt;option value="https://html.spec.whatwg.org/images/robots.jpeg">
+      &lt;option value="https://html.spec.whatwg.org/images/arcTo2.png">
+    &lt;/datalist>
+  &lt;/label>
+&lt;/p>
+
+&lt;p>
+  &lt;label>
+    Choose a filter to apply
+    &lt;select id="filter">
+      &lt;option value="none">none&lt;/option>
+      &lt;option value="grayscale">grayscale&lt;/option>
+      &lt;option value="brighten">brighten by 20%&lt;/option>
+    &lt;/select>
+  &lt;/label>
+&lt;/p>
+
+&lt;canvas id="output">&lt;/canvas>
+
+&lt;script type="module">
+  const worker = new Worker("worker.js", { type: "module" });
+  worker.onmessage = receiveFromWorker;
+
+  const url = document.querySelector("#image-url");
+  const filter = document.querySelector("#filter");
+  const output = document.querySelector("#output");
+
+  url.oninput = updateImage;
+  filter.oninput = sendToWorker;
+
+  let imageData, context;
+
+  function updateImage() {
+    const img = new Image();
+    img.src = url.value;
+
+    img.onload = () => {
+      output.innerHTML = "";
+
+      const canvas = document.createElement("canvas");
+      canvas.width = img.width;
+      canvas.height = img.height;
+
+      context = canvas.getContext("2d");
+      context.drawImage(img, 0, 0);
+      imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+
+      sendToWorker();
+      output.appendChild(canvas);
+    };
+  }
+
+  function sendToWorker() {
+    worker.postMessage({ imageData, filter: filter.value });
+  }
+
+  function receiveFromWorker(e) {
+    context.putImageData(e.data, 0, 0);
+  }
+&lt;/script>
+</pre>
+
+  <p>worker 文件如下：</p>
+
+  <pre>import * as filters from "./filters.js";
+
+self.onmessage = e => {
+  const { imageData, filter } = e.data;
+  filters[filter](imageData);
+  self.postMessage(imageData, [imageData.data.buffer]);
+};
+</pre>
+
+  <p>它引入了文件 <code>filters.js</code>：</p>
+
+  <pre>export function none() {}
+
+export function grayscale({ data: d }) {
+  for (let i = 0; i &lt; d.length; i += 4) {
+    const [r, g, b] = [d[i], d[i + 1], d[i + 2]];
+
+    // CIE luminance for the RGB
+    // The human eye is bad at seeing red and blue, so we de-emphasize them.
+    d[i] = d[i + 1] = d[i + 2] = 0.2126 * r + 0.7152 * g + 0.0722 * b;
+  }
+};
+
+export function brighten({ data: d }) {
+  for (let i = 0; i &lt; d.length; ++i) {
+    d[i] *= 1.2;
+  }
+};
+</pre>
+
+  <p><a href=/demos/workers/modules/page.html>在线浏览该示例</a>。</p>
+
+
+
+  <h5 id=shared-workers-introduction><span class=secno>10.1.2.3</span> 共享 worker 概述<a href=#shared-workers-introduction class=self-link></a></h5><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker title="The SharedWorker interface represents a specific kind of worker that can be accessed from several browsing contexts, such as several windows, iframes or even workers. They implement an interface different than dedicated workers and have a different global scope, SharedWorkerGlobalScope.">SharedWorker</a><div class=support><span class="firefox yes"><span>Firefox</span><span>29+</span></span><span class="safari no"><span>Safari</span><span>5–6.1</span></span><span class="chrome yes"><span>Chrome</span><span>4+</span></span><hr><span class="opera yes"><span>Opera</span><span>10.6+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>33+</span></span><span class="safari_ios no"><span>Safari iOS</span><span>5.1–7</span></span><span class="chrome_android no"><span>Chrome Android</span><span>No</span></span><span class="webview_android no"><span>WebView Android</span><span>No</span></span><span class="samsunginternet_android no"><span>Samsung Internet</span><span>4.0–5.0</span></span><span class="opera_android no"><span>Opera Android</span><span>11–14</span></span><hr><span class=caniuse><span><a href="https://caniuse.com/#feat=sharedworkers" title="Shared Web Workers">caniuse.com table</a></span></span></div></div></div>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/web-workers/introduction/examples/shared-workers-introduction.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/web-workers/introduction/examples/shared-workers-introduction.zh.html></div>
+
+  
+
+  <p>这一节通过一个 Hello World 例子来介绍共享 Worker。由于每个 Worker 可以有多个连接，
+  共享 Worker 的 API 略有不同。</p>
+
+  <p>第一个例子展示了如何连接到 worker 以及 worker 如何向连接的页面发回消息。
+  收到的消息显示在日志中。</p>
+
+  <p>这是 HTML 页面：</p>
+
+  <pre>&lt;!DOCTYPE HTML>
+&lt;html lang="en">
+&lt;meta charset="utf-8">
+&lt;title>Shared workers: demo 1&lt;/title>
+&lt;pre id="log">Log:&lt;/pre>
+&lt;script>
+  var worker = new SharedWorker('test.js');
+  var log = document.getElementById('log');
+  worker.port.onmessage = function(e) { // note: not worker.onmessage!
+    log.textContent += '\n' + e.data;
+  }
+&lt;/script>
+</pre>
+
+  <p>这是 JavaScript worker：</p>
+
+  <pre>onconnect = function(e) {
+  var port = e.ports[0];
+  port.postMessage('Hello World!');
+}
+</pre>
+
+  <p><a href=/demos/workers/shared/001/test.html>在线查看本示例</a>。</p>
+
+  <hr>
+
+  <p>第二个例子在两方面扩展了上一个例子：首先使用 <code>addEventListener()</code>
+  来接收事件，取代了 <a href=webappapis.html#event-handler-idl-attributes id=shared-workers-introduction:event-handler-idl-attributes>事件处理函数 IDL 属性</a>。
+  其次，<em>向 Worder 发送</em> 一个事件使得 Worker 以另一个事件回复。
+  收到的消息仍然显示在日志中。</p>
+
+  <p>这是 HTML 页面：</p>
+
+  <pre>&lt;!DOCTYPE HTML>
+&lt;html lang="en">
+&lt;meta charset="utf-8">
+&lt;title>Shared workers: demo 2&lt;/title>
+&lt;pre id="log">Log:&lt;/pre>
+&lt;script>
+  var worker = new SharedWorker('test.js');
+  var log = document.getElementById('log');
+  worker.port.addEventListener('message', function(e) {
+    log.textContent += '\n' + e.data;
+  }, false);
+  worker.port.start(); // note: need this when using addEventListener
+  worker.port.postMessage('ping');
+&lt;/script>
+</pre>
+
+  <p>这是 JavaScript worker：</p>
+
+  <pre>onconnect = function(e) {
+  var port = e.ports[0];
+  port.postMessage('Hello World!');
+  port.onmessage = function(e) {
+    port.postMessage('pong'); // not e.ports[0].postMessage!
+    // e.target.postMessage('pong'); would work also
+  }
+}
+</pre>
+
+  <p><a href=/demos/workers/shared/002/test.html>在线查看本示例</a>。</p>
+
+  <hr>
+
+  <p>最后这个例子展示两个页面如何连接到同一个 Worker；
+  这里第二个页面仅仅是第一个页面中的 <code id=shared-workers-introduction:the-iframe-element><a href=iframe-embed-object.html#the-iframe-element>iframe</a></code>，但同样的原则对
+  一个 <a href=browsers.html#top-level-browsing-context id=shared-workers-introduction:top-level-browsing-context>顶级浏览环境</a> 中的完全独立的页面仍然适用。</p>
+
+  <p>这是外部 HTML 页面：</p>
+
+  <pre>&lt;!DOCTYPE HTML>
+&lt;html lang="en">
+&lt;meta charset="utf-8">
+&lt;title>Shared workers: demo 3&lt;/title>
+&lt;pre id="log">Log:&lt;/pre>
+&lt;script>
+  var worker = new SharedWorker('test.js');
+  var log = document.getElementById('log');
+  worker.port.addEventListener('message', function(e) {
+    log.textContent += '\n' + e.data;
+  }, false);
+  worker.port.start();
+  worker.port.postMessage('ping');
+&lt;/script>
+&lt;iframe src="inner.html">&lt;/iframe>
+</pre>
+
+  <p>这是内部 HTML 页面：</p>
+
+  <pre>&lt;!DOCTYPE HTML>
+&lt;html lang="en">
+&lt;meta charset="utf-8">
+&lt;title>Shared workers: demo 3 inner frame&lt;/title>
+&lt;pre id=log>Inner log:&lt;/pre>
+&lt;script>
+  var worker = new SharedWorker('test.js');
+  var log = document.getElementById('log');
+  worker.port.onmessage = function(e) {
+   log.textContent += '\n' + e.data;
+  }
+&lt;/script>
+</pre>
+
+  <p>这是 JavaScript worker：</p>
+
+  <pre>var count = 0;
+onconnect = function(e) {
+  count += 1;
+  var port = e.ports[0];
+  port.postMessage('Hello World! You are connection #' + count);
+  port.onmessage = function(e) {
+    port.postMessage('pong');
+  }
+}
+</pre>
+
+  <p><a href=/demos/workers/shared/003/test.html>在线查看本示例</a>。</p>
+
+
+
+  <h5 id=通过共享-worker-来共享状态><span class=secno>10.1.2.4</span> 通过共享 Worker 来共享状态<a href=#通过共享-worker-来共享状态 class=self-link></a></h5>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/web-workers/introduction/examples/shared-state-using-a-shared-worker.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/web-workers/introduction/examples/shared-state-using-a-shared-worker.zh.html></div>
+
+  
+
+  <p>本例子中，可以同时打开多个窗口（查看器）来浏览同一个地图。
+  在一个 Worker 的协调下，所有窗口共享同样的地图信息。
+  每个查看器都可以独立地随意移动，一旦在地图上设置了任何数据，其他查看器也都会更新。</p>
+
+  <p>主页面很普通，只是提供了打开查看器的入口：</p>
+
+  <pre>&lt;!DOCTYPE HTML>
+&lt;html lang="en">
+ &lt;head>
+  &lt;meta charset="utf-8">
+  &lt;title>Workers example: Multiviewer&lt;/title>
+  &lt;script>
+   function openViewer() {
+     window.open('viewer.html');
+   }
+  &lt;/script>
+ &lt;/head>
+ &lt;body>
+  &lt;p>&lt;button type=button onclick="openViewer()">Open a new
+  viewer&lt;/button>&lt;/p>
+  &lt;p>Each viewer opens in a new window. You can have as many viewers
+  as you like, they all view the same data.&lt;/p>
+ &lt;/body>
+&lt;/html>
+</pre>
+
+  <p>查看器就有些意思了：</p>
+
+  <pre>&lt;!DOCTYPE HTML>
+&lt;html lang="en">
+ &lt;head>
+  &lt;meta charset="utf-8">
+  &lt;title>Workers example: Multiviewer viewer&lt;/title>
+  &lt;script>
+   var worker = new SharedWorker('worker.js', 'core');
+
+   // CONFIGURATION
+   function configure(event) {
+     if (event.data.substr(0, 4) != 'cfg ') return;
+     var name = event.data.substr(4).split(' ', 1)[0];
+     // update display to mention our name is name
+     document.getElementsByTagName('h1')[0].textContent += ' ' + name;
+     // no longer need this listener
+     worker.port.removeEventListener('message', configure, false);
+   }
+   worker.port.addEventListener('message', configure, false);
+
+   // MAP
+   function paintMap(event) {
+     if (event.data.substr(0, 4) != 'map ') return;
+     var data = event.data.substr(4).split(',');
+     // display tiles data[0] .. data[8]
+     var canvas = document.getElementById('map');
+     var context = canvas.getContext('2d');
+     for (var y = 0; y &lt; 3; y += 1) {
+       for (var x = 0; x &lt; 3; x += 1) {
+         var tile = data[y * 3 + x];
+         if (tile == '0')
+           context.fillStyle = 'green';
+         else
+           context.fillStyle = 'maroon';
+         context.fillRect(x * 50, y * 50, 50, 50);
+       }
+     }
+   }
+   worker.port.addEventListener('message', paintMap, false);
+
+   // PUBLIC CHAT
+   function updatePublicChat(event) {
+     if (event.data.substr(0, 4) != 'txt ') return;
+     var name = event.data.substr(4).split(' ', 1)[0];
+     var message = event.data.substr(4 + name.length + 1);
+     // display "&lt;name> message" in public chat
+     var public = document.getElementById('public');
+     var p = document.createElement('p');
+     var n = document.createElement('button');
+     n.textContent = '&lt;' + name + '> ';
+     n.onclick = function () { worker.port.postMessage('msg ' + name); };
+     p.appendChild(n);
+     var m = document.createElement('span');
+     m.textContent = message;
+     p.appendChild(m);
+     public.appendChild(p);
+   }
+   worker.port.addEventListener('message', updatePublicChat, false);
+
+   // PRIVATE CHAT
+   function startPrivateChat(event) {
+     if (event.data.substr(0, 4) != 'msg ') return;
+     var name = event.data.substr(4).split(' ', 1)[0];
+     var port = event.ports[0];
+     // display a private chat UI
+     var ul = document.getElementById('private');
+     var li = document.createElement('li');
+     var h3 = document.createElement('h3');
+     h3.textContent = 'Private chat with ' + name;
+     li.appendChild(h3);
+     var div = document.createElement('div');
+     var addMessage = function(name, message) {
+       var p = document.createElement('p');
+       var n = document.createElement('strong');
+       n.textContent = '&lt;' + name + '> ';
+       p.appendChild(n);
+       var t = document.createElement('span');
+       t.textContent = message;
+       p.appendChild(t);
+       div.appendChild(p);
+     };
+     port.onmessage = function (event) {
+       addMessage(name, event.data);
+     };
+     li.appendChild(div);
+     var form = document.createElement('form');
+     var p = document.createElement('p');
+     var input = document.createElement('input');
+     input.size = 50;
+     p.appendChild(input);
+     p.appendChild(document.createTextNode(' '));
+     var button = document.createElement('button');
+     button.textContent = 'Post';
+     p.appendChild(button);
+     form.onsubmit = function () {
+       port.postMessage(input.value);
+       addMessage('me', input.value);
+       input.value = '';
+       return false;
+     };
+     form.appendChild(p);
+     li.appendChild(form);
+     ul.appendChild(li);
+   }
+   worker.port.addEventListener('message', startPrivateChat, false);
+
+   worker.port.start();
+  &lt;/script>
+ &lt;/head>
+ &lt;body>
+  &lt;h1>Viewer&lt;/h1>
+  &lt;h2>Map&lt;/h2>
+  &lt;p>&lt;canvas id="map" height=150 width=150>&lt;/canvas>&lt;/p>
+  &lt;p>
+   &lt;button type=button onclick="worker.port.postMessage('mov left')">Left&lt;/button>
+   &lt;button type=button onclick="worker.port.postMessage('mov up')">Up&lt;/button>
+   &lt;button type=button onclick="worker.port.postMessage('mov down')">Down&lt;/button>
+   &lt;button type=button onclick="worker.port.postMessage('mov right')">Right&lt;/button>
+   &lt;button type=button onclick="worker.port.postMessage('set 0')">Set 0&lt;/button>
+   &lt;button type=button onclick="worker.port.postMessage('set 1')">Set 1&lt;/button>
+  &lt;/p>
+  &lt;h2>Public Chat&lt;/h2>
+  &lt;div id="public">&lt;/div>
+  &lt;form onsubmit="worker.port.postMessage('txt ' + message.value); message.value = ''; return false;">
+   &lt;p>
+    &lt;input type="text" name="message" size="50">
+    &lt;button>Post&lt;/button>
+   &lt;/p>
+  &lt;/form>
+  &lt;h2>Private Chat&lt;/h2>
+  &lt;ul id="private">&lt;/ul>
+ &lt;/body>
+&lt;/html>
+</pre>
+
+  <p>关于查看器的写法有几个值得一提的关键点。</p>
+
+  <p><strong>多监听器</strong>。
+  上述代码加载了多个事件监听器，每个都会检查该消息是否和它相关。
+  本例子中没太大差别，但如果多个作者都希望使用同一接口与 Worker 通信，
+  该设计将产生较为独立的代码，否则所有的变更都得在同一事件处理函数中进行。</p>
+
+  <p>以这种方式注册事件处理函数也让你可以在处理完后注销特定的监听器，
+  就像本例子中的 <code>configure()</code> 方法一样。</p>
+
+  <p>这是最终的 Worker：</p>
+
+  <pre>var nextName = 0;
+function getNextName() {
+  // this could use more friendly names
+  // but for now just return a number
+  return nextName++;
+}
+
+var map = [
+ [0, 0, 0, 0, 0, 0, 0],
+ [1, 1, 0, 1, 0, 1, 1],
+ [0, 1, 0, 1, 0, 0, 0],
+ [0, 1, 0, 1, 0, 1, 1],
+ [0, 0, 0, 1, 0, 0, 0],
+ [1, 0, 0, 1, 1, 1, 1],
+ [1, 1, 0, 1, 1, 0, 1],
+];
+
+function wrapX(x) {
+  if (x &lt; 0) return wrapX(x + map[0].length);
+  if (x >= map[0].length) return wrapX(x - map[0].length);
+  return x;
+}
+
+function wrapY(y) {
+  if (y &lt; 0) return wrapY(y + map.length);
+  if (y >= map[0].length) return wrapY(y - map.length);
+  return y;
+}
+
+function wrap(val, min, max) {
+  if (val &lt; min)
+    return val + (max-min)+1;
+  if (val > max)
+    return val - (max-min)-1;
+  return val;
+}
+
+function sendMapData(viewer) {
+  var data = '';
+  for (var y = viewer.y-1; y &lt;= viewer.y+1; y += 1) {
+    for (var x = viewer.x-1; x &lt;= viewer.x+1; x += 1) {
+      if (data != '')
+        data += ',';
+      data += map[wrap(y, 0, map[0].length-1)][wrap(x, 0, map.length-1)];
+    }
+  }
+  viewer.port.postMessage('map ' + data);
+}
+
+var viewers = {};
+onconnect = function (event) {
+  var name = getNextName();
+  event.ports[0]._data = { port: event.ports[0], name: name, x: 0, y: 0, };
+  viewers[name] = event.ports[0]._data;
+  event.ports[0].postMessage('cfg ' + name);
+  event.ports[0].onmessage = getMessage;
+  sendMapData(event.ports[0]._data);
+};
+
+function getMessage(event) {
+  switch (event.data.substr(0, 4)) {
+    case 'mov ':
+      var direction = event.data.substr(4);
+      var dx = 0;
+      var dy = 0;
+      switch (direction) {
+        case 'up': dy = -1; break;
+        case 'down': dy = 1; break;
+        case 'left': dx = -1; break;
+        case 'right': dx = 1; break;
+      }
+      event.target._data.x = wrapX(event.target._data.x + dx);
+      event.target._data.y = wrapY(event.target._data.y + dy);
+      sendMapData(event.target._data);
+      break;
+    case 'set ':
+      var value = event.data.substr(4);
+      map[event.target._data.y][event.target._data.x] = value;
+      for (var viewer in viewers)
+        sendMapData(viewers[viewer]);
+      break;
+    case 'txt ':
+      var name = event.target._data.name;
+      var message = event.data.substr(4);
+      for (var viewer in viewers)
+        viewers[viewer].port.postMessage('txt ' + name + ' ' + message);
+      break;
+    case 'msg ':
+      var party1 = event.target._data;
+      var party2 = viewers[event.data.substr(4).split(' ', 1)[0]];
+      if (party2) {
+        var channel = new MessageChannel();
+        party1.port.postMessage('msg ' + party2.name, [channel.port1]);
+        party2.port.postMessage('msg ' + party1.name, [channel.port2]);
+      }
+      break;
+  }
+}
+</pre>
+
+  <p><strong>连接到多个页面</strong>。
+  脚本中使用 <code id=通过共享-worker-来共享状态:handler-sharedworkerglobalscope-onconnect><a href=#handler-sharedworkerglobalscope-onconnect>onconnect</a></code>
+  时间监听器来监听多个连接。</p>
+
+  <p><strong>直接通道</strong>。
+  当 Worker 从查看器收到一条带有另一个查看器名称的"msg"消息时，
+  它会在这两者之间建立一个直接的连接，使得这两个查看器可以不经由 Worker 代理而直接通信。</p>
+
+  <p><a href=/demos/workers/multiviewer/page.html>在线查看该示例</a>。</p>
+
+
+
+  <h5 id=委托><span class=secno>10.1.2.5</span> 委托<a href=#委托 class=self-link></a></h5>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/web-workers/introduction/examples/delegation.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/web-workers/introduction/examples/delegation.zh.html></div>
+
+  
+
+  <p>随着多核 CPU 的流行，可以将计算密集型任务分割到多个 Worder 中来得到更好的性能。
+  在本示例中，一个对1到10,000,000的所有数字进行操作的计算密集型的任务移交给了10个子 worker。</p>
+
+  <p>主页面如下，它只是产出结果报告：</p>
+
+  <pre>&lt;!DOCTYPE HTML>
+&lt;html lang="en">
+ &lt;head>
+  &lt;meta charset="utf-8">
+  &lt;title>Worker example: Multicore computation&lt;/title>
+ &lt;/head>
+ &lt;body>
+  &lt;p>Result: &lt;output id="result">&lt;/output>&lt;/p>
+  &lt;script>
+   var worker = new Worker('worker.js');
+   worker.onmessage = function (event) {
+     document.getElementById('result').textContent = event.data;
+   };
+  &lt;/script>
+ &lt;/body>
+&lt;/html>
+</pre>
+
+  <p>Worker 本身如下：</p>
+
+  <pre>// settings
+var num_workers = 10;
+var items_per_worker = 1000000;
+
+// start the workers
+var result = 0;
+var pending_workers = num_workers;
+for (var i = 0; i &lt; num_workers; i += 1) {
+  var worker = new Worker('core.js');
+  worker.postMessage(i * items_per_worker);
+  worker.postMessage((i+1) * items_per_worker);
+  worker.onmessage = storeResult;
+}
+
+// handle the results
+function storeResult(event) {
+  result += 1*event.data;
+  pending_workers -= 1;
+  if (pending_workers &lt;= 0)
+    postMessage(result); // finished!
+}
+</pre>
+
+  <p>它包含了一个循环来启动子 Worker，然后定义另一个等待所有子 Worker 响应的处理函数。</p>
+
+  <p>子 Worker 的实现如下：</p>
+
+  <pre>var start;
+onmessage = getStart;
+function getStart(event) {
+  start = 1*event.data;
+  onmessage = getEnd;
+}
+
+var end;
+function getEnd(event) {
+  end = 1*event.data;
+  onmessage = null;
+  work();
+}
+
+function work() {
+  var result = 0;
+  for (var i = start; i &lt; end; i += 1) {
+    // perform some complex calculation here
+    result += 1;
+  }
+  postMessage(result);
+  close();
+}
+</pre>
+
+  <p>它们在两个事件中接收到两个数字，在这两个数字指定的范围上执行计算，然后向父 Worker 报告结果。</p>
+
+  <p><a href=/demos/workers/multicore/page.html>在线查看该示例</a>。</p>
+
+  <h5 id=providing-libraries><span class=secno>10.1.2.6</span> Providing libraries<a href=#providing-libraries class=self-link></a></h5>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/web-workers/introduction/examples/providing-libraries.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/web-workers/introduction/examples/providing-libraries.zh.html?filename=providing-libraries.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fweb-workers%2Fintroduction%2Fexamples%2Fproviding-libraries.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  
+
+  <p>Suppose that a cryptography library is made available that provides three tasks:</p>
+
+  <dl><dt>Generate a public/private key pair<dd>Takes a port, on which it will send two messages, first the public key and then the private
+   key.<dt>Given a plaintext and a public key, return the corresponding ciphertext<dd>Takes a port, to which any number of messages can be sent, the first giving the public key,
+   and the remainder giving the plaintext, each of which is encrypted and then sent on that same
+   channel as the ciphertext. The user can close the port when it is done encrypting content.<dt>Given a ciphertext and a private key, return the corresponding plaintext<dd>Takes a port, to which any number of messages can be sent, the first giving the private key,
+   and the remainder giving the ciphertext, each of which is decrypted and then sent on that same
+   channel as the plaintext. The user can close the port when it is done decrypting content.</dl>
+
+  <p>The library itself is as follows:</p>
+
+  <pre><code class=js>function handleMessage(e) {
+  if (e.data == "genkeys")
+    genkeys(e.ports[0]);
+  else if (e.data == "encrypt")
+    encrypt(e.ports[0]);
+  else if (e.data == "decrypt")
+    decrypt(e.ports[0]);
+}
+
+function genkeys(p) {
+  var keys = _generateKeyPair();
+  p.postMessage(keys[0]);
+  p.postMessage(keys[1]);
+}
+
+function encrypt(p) {
+  var key, state = 0;
+  p.onmessage = function (e) {
+    if (state == 0) {
+      key = e.data;
+      state = 1;
+    } else {
+      p.postMessage(_encrypt(key, e.data));
+    }
+  };
+}
+
+function decrypt(p) {
+  var key, state = 0;
+  p.onmessage = function (e) {
+    if (state == 0) {
+      key = e.data;
+      state = 1;
+    } else {
+      p.postMessage(_decrypt(key, e.data));
+    }
+  };
+}
+
+// support being used as a shared worker as well as a dedicated worker
+if ('onmessage' in this) // dedicated worker
+  onmessage = handleMessage;
+else // shared worker
+  onconnect = function (e) { e.port.onmessage = handleMessage; }
+
+
+// the "crypto" functions:
+
+function _generateKeyPair() {
+  return [Math.random(), Math.random()];
+}
+
+function _encrypt(k, s) {
+  return 'encrypted-' + k + ' ' + s;
+}
+
+function _decrypt(k, s) {
+  return s.substr(s.indexOf(' ')+1);
+}
+</code></pre>
+
+  <p>Note that the crypto functions here are just stubs and don't do real cryptography.</p>
+
+  <p>This library could be used as follows:</p>
+
+  <pre><code class=html>&lt;!DOCTYPE HTML>
+&lt;html lang="en">
+ &lt;head>
+  &lt;meta charset="utf-8">
+  &lt;title>Worker example: Crypto library&lt;/title>
+  &lt;script>
+   const cryptoLib = new Worker('libcrypto-v1.js'); // or could use 'libcrypto-v2.js'
+   function startConversation(source, message) {
+     const messageChannel = new MessageChannel();
+     source.postMessage(message, [messageChannel.port2]);
+     return messageChannel.port1;
+   }
+   function getKeys() {
+     let state = 0;
+     startConversation(cryptoLib, "genkeys").onmessage = function (e) {
+       if (state === 0)
+         document.getElementById('public').value = e.data;
+       else if (state === 1)
+         document.getElementById('private').value = e.data;
+       state += 1;
+     };
+   }
+   function enc() {
+     const port = startConversation(cryptoLib, "encrypt");
+     port.postMessage(document.getElementById('public').value);
+     port.postMessage(document.getElementById('input').value);
+     port.onmessage = function (e) {
+       document.getElementById('input').value = e.data;
+       port.close();
+     };
+   }
+   function dec() {
+     const port = startConversation(cryptoLib, "decrypt");
+     port.postMessage(document.getElementById('private').value);
+     port.postMessage(document.getElementById('input').value);
+     port.onmessage = function (e) {
+       document.getElementById('input').value = e.data;
+       port.close();
+     };
+   }
+  &lt;/script>
+  &lt;style>
+   textarea { display: block; }
+  &lt;/style>
+ &lt;/head>
+ &lt;body onload="getKeys()">
+  &lt;fieldset>
+   &lt;legend>Keys&lt;/legend>
+   &lt;p>&lt;label>Public Key: &lt;textarea id="public">&lt;/textarea>&lt;/label>&lt;/p>
+   &lt;p>&lt;label>Private Key: &lt;textarea id="private">&lt;/textarea>&lt;/label>&lt;/p>
+  &lt;/fieldset>
+  &lt;p>&lt;label>Input: &lt;textarea id="input">&lt;/textarea>&lt;/label>&lt;/p>
+  &lt;p>&lt;button onclick="enc()">Encrypt&lt;/button> &lt;button onclick="dec()">Decrypt&lt;/button>&lt;/p>
+ &lt;/body>
+&lt;/html>
+</code></pre>
+
+  <p>A later version of the API, though, might want to offload all the crypto work onto subworkers.
+  This could be done as follows:</p>
+
+  <pre><code class=js>function handleMessage(e) {
+  if (e.data == "genkeys")
+    genkeys(e.ports[0]);
+  else if (e.data == "encrypt")
+    encrypt(e.ports[0]);
+  else if (e.data == "decrypt")
+    decrypt(e.ports[0]);
+}
+
+function genkeys(p) {
+  var generator = new Worker('libcrypto-v2-generator.js');
+  generator.postMessage('', [p]);
+}
+
+function encrypt(p) {
+  p.onmessage = function (e) {
+    var key = e.data;
+    var encryptor = new Worker('libcrypto-v2-encryptor.js');
+    encryptor.postMessage(key, [p]);
+  };
+}
+
+function encrypt(p) {
+  p.onmessage = function (e) {
+    var key = e.data;
+    var decryptor = new Worker('libcrypto-v2-decryptor.js');
+    decryptor.postMessage(key, [p]);
+  };
+}
+
+// support being used as a shared worker as well as a dedicated worker
+if ('onmessage' in this) // dedicated worker
+  onmessage = handleMessage;
+else // shared worker
+  onconnect = function (e) { e.ports[0].onmessage = handleMessage };
+</code></pre>
+
+  <p>The little subworkers would then be as follows.</p>
+
+  <p>For generating key pairs:</p>
+
+  <pre><code class=js>onmessage = function (e) {
+  var k = _generateKeyPair();
+  e.ports[0].postMessage(k[0]);
+  e.ports[0].postMessage(k[1]);
+  close();
+}
+
+function _generateKeyPair() {
+  return [Math.random(), Math.random()];
+}
+</code></pre>
+
+  <p>For encrypting:</p>
+
+  <pre><code class=js>onmessage = function (e) {
+  var key = e.data;
+  e.ports[0].onmessage = function (e) {
+    var s = e.data;
+    postMessage(_encrypt(key, s));
+  }
+}
+
+function _encrypt(k, s) {
+  return 'encrypted-' + k + ' ' + s;
+}
+</code></pre>
+
+  <p>For decrypting:</p>
+
+  <pre><code class=js>onmessage = function (e) {
+  var key = e.data;
+  e.ports[0].onmessage = function (e) {
+    var s = e.data;
+    postMessage(_decrypt(key, s));
+  }
+}
+
+function _decrypt(k, s) {
+  return s.substr(s.indexOf(' ')+1);
+}
+</code></pre>
+
+  <p>Notice how the users of the API don't have to even know that this is happening — the API
+  hasn't changed; the library can delegate to subworkers without changing its API, even though it is
+  accepting data using message channels.</p>
+
+  <p><a href=/demos/workers/crypto/page.html>View this example online</a>.</p>
+
+
+
+  <h4 id=教程><span class=secno>10.1.3</span> 教程<a href=#教程 class=self-link></a></h4>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/web-workers/introduction/tutorials/index.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/web-workers/introduction/tutorials/index.zh.html></div>
+
+
+  <h5 id=创建专用工作线程><span class=secno>10.1.3.1</span> 创建专用工作线程<a href=#创建专用工作线程 class=self-link></a></h5>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/web-workers/introduction/tutorials/creating-a-dedicated-worker.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/web-workers/introduction/tutorials/creating-a-dedicated-worker.zh.html></div>
+
+  
+
+  <p>创建专用 Worker 需要一个指向 JavaScript 文件的 URL。使用该 URL 作为唯一一个参数来调用<code id=创建专用工作线程:dom-worker><a href=#dom-worker>Worker()</a></code> 构造函数，这时会创建并返回一个 Worker：</p>
+
+  <pre>var worker = new Worker('helper.js');</pre>
+
+  <p>为了使你的 Worker 脚本被解析为 <span>模块脚本</span>
+  而不是 <span>经典脚本</span>，你需要使用一个略微不同的函数签名：</p>
+
+  <pre>var worker = new Worker('helper.js', { type: "module" });</pre>
+
+
+
+  <h5 id=与专用-worker-通信><span class=secno>10.1.3.2</span> 与专用 Worker 通信<a href=#与专用-worker-通信 class=self-link></a></h5>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/web-workers/introduction/tutorials/communicating-with-a-dedicated-worker.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/web-workers/introduction/tutorials/communicating-with-a-dedicated-worker.zh.html></div>
+
+  
+
+  <p>专用 Worker 其实是 <code id=与专用-worker-通信:messageport><a href=web-messaging.html#messageport>MessagePort</a></code> 对象，因此支持<code id=与专用-worker-通信:messageport-2><a href=web-messaging.html#messageport>MessagePort</a></code>的所有特性。
+  比如发送结构化数据、传输二进制数据、以及传输其他 Port。</p>
+
+  <p>使用 <code id=与专用-worker-通信:worker-2><a href=#worker-2>Worker</a></code> 对象上的 <code id=与专用-worker-通信:handler-worker-onmessage><a href=#handler-worker-onmessage>onmessage</a></code>
+  <a href=webappapis.html#event-handler-idl-attributes id=与专用-worker-通信:event-handler-idl-attributes>事件处理器 IDL 属性</a> 来接收专用 Worker 的消息：</p>
+
+  <pre>worker.onmessage = function (event) { ... };</pre>
+
+  <p>你也可以使用 <code id=与专用-worker-通信:dom-eventtarget-addeventlistener><a data-x-internal=dom-eventtarget-addeventlistener href=https://dom.spec.whatwg.org/#dom-eventtarget-addeventlistener>addEventListener()</a></code> 方法。</p>
+
+  <p class=note>在创建专用 Worker 时，它隐式使用的 <code id=与专用-worker-通信:messageport-3><a href=web-messaging.html#messageport>MessagePort</a></code> 的 <span>port
+  message queue</span> 会被默认开启。所以没有<code id=与专用-worker-通信:worker-2-2><a href=#worker-2>Worker</a></code> 接口上没有等价于
+  <code id=与专用-worker-通信:messageport-4><a href=web-messaging.html#messageport>MessagePort</a></code> 接口的 <code id=与专用-worker-通信:dom-messageport-start><a href=web-messaging.html#dom-messageport-start>start()</a></code> 的方法。</p>
+
+  <p>使用 <code id=与专用-worker-通信:dom-worker-postmessage><a href=#dom-worker-postmessage>postMessage()</a></code> 方法来
+  <em>向 Worker 发送</em> 数据。该通信通道可以发送结构化数据，
+  如果要高效地发送 <code id=与专用-worker-通信:idl-arraybuffer><a data-x-internal=idl-arraybuffer href=https://heycam.github.io/webidl/#idl-ArrayBuffer>ArrayBuffer</a></code> 对象
+  （通过直接传输它们而不是克隆后发送），在第二个参数上提供它们的列表。</p>
+
+  <pre>worker.postMessage({
+  operation: 'find-edges',
+  input: buffer, // an ArrayBuffer object
+  threshold: 0.6,
+}, [buffer]);</pre>
+
+  <p>使用 <code id=与专用-worker-通信:handler-dedicatedworkerglobalscope-onmessage><a href=#handler-dedicatedworkerglobalscope-onmessage>onmessage</a></code>
+  <a href=webappapis.html#event-handler-idl-attributes id=与专用-worker-通信:event-handler-idl-attributes-2>事件处理器 IDL 属性</a>在 Worker 中接受消息。</p>
+
+  <pre>onmessage = function (event) { ... };</pre>
+
+  <p>你也可以使用 <code id=与专用-worker-通信:dom-eventtarget-addeventlistener-2><a data-x-internal=dom-eventtarget-addeventlistener href=https://dom.spec.whatwg.org/#dom-eventtarget-addeventlistener>addEventListener()</a></code> 方法。</p>
+
+  <p>上述两种方式中，数据总是在事件对象的 <code id=与专用-worker-通信:dom-messageevent-data><a href=comms.html#dom-messageevent-data>data</a></code> 属性中提供。</p>
+
+  <p>使用 <code id=与专用-worker-通信:dom-dedicatedworkerglobalscope-postmessage><a href=#dom-dedicatedworkerglobalscope-postmessage>postMessage()</a></code>
+  来回复消息，它同样支持结构化数据。</p>
+
+  <pre>postMessage(event.data.input, [event.data.input]); // transfer the buffer back</pre>
+
+
+
+  <h5 id=共享工作线程 data-dfn-type=dfn data-lt="shared worker"><span class=secno>10.1.3.3</span> 共享工作线程<a href=#共享工作线程 class=self-link></a></h5>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/web-workers/introduction/tutorials/shared-workers.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/web-workers/introduction/tutorials/shared-workers.zh.html></div>
+
+  
+
+  <p>共享 worker 是通过创建时的脚本 URL 来识别的。也可以显式地指定名字，
+  这会使得共享 Worker 可以启动多个实例。</p>
+
+  <p>共享 worker 作用域限制在 <a id=共享工作线程:concept-origin href=origin.html#concept-origin>origin</a> 下。使用同一 Worker 名字的两个站点不会冲突。
+  然而同一站点中，尝试使用相同的 Worker 名来引用不同的脚本 URL 将会失败。</p>
+
+  <p>使用 <code id=共享工作线程:dom-sharedworker><a href=#dom-sharedworker>SharedWorker()</a></code> 构造函数来创建共享 Worker。
+  该构造函数使用脚本 URL 作为第一个参数， Worker 名（如果有的话）作为第二个参数。</p>
+
+  <pre>var worker = new SharedWorker('service.js');</pre>
+
+  <p>与共享 worker 通信需要显式地使用 <code id=共享工作线程:messageport><a href=web-messaging.html#messageport>MessagePort</a></code> 对象。
+  <code id=共享工作线程:dom-sharedworker-2><a href=#dom-sharedworker>SharedWorker()</a></code> 构造函数返回的对象的
+  <code id=共享工作线程:dom-sharedworker-port><a href=#dom-sharedworker-port>port</a></code>属性保有一个对 port 的引用。</p>
+
+  <pre>worker.port.onmessage = function (event) { ... };
+worker.port.postMessage('some message');
+worker.port.postMessage({ foo: 'structured', bar: ['data', 'also', 'possible']});</pre>
+
+  <p>在共享 worker 内，新的客户会使用 <code id=共享工作线程:event-workerglobalscope-connect><a href=indices.html#event-workerglobalscope-connect>connect</a></code> 事件
+  来声明，新来的客户的 port 由事件对象的 <code id=共享工作线程:dom-messageevent-source><a href=comms.html#dom-messageevent-source>source</a></code>
+  属性给出。</p>
+
+  <pre>onconnect = function (event) {
+  var newPort = event.source;
+  // set up a listener
+  newPort.onmessage = function (event) { ... };
+  // send a message back to the port
+  newPort.postMessage('ready!'); // can also send structured data, of course
+};</pre>
+
+
+
+
+
+  <h3 id=基础设施><span class=secno>10.2</span> 基础设施<a href=#基础设施 class=self-link></a></h3>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/web-workers/infrastructure/index.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/web-workers/infrastructure/index.zh.html></div>
+
+  <p>Worker 共有两种：专用 Worker 和共享 Worker。
+  前者一经创建就会链接到其创建者，但在专用 Worker 中可以使用消息端口与其他浏览环境或 Worker 进行通信。
+  然而共享 Worker 是有名字的，一经创建任何同<a href=origin.html#concept-origin id=基础设施:concept-origin>域</a>的脚本都可以获取该
+  Worker 的引用并与之通信。</p>
+
+
+
+  <h4 id=全局作用域><span class=secno>10.2.1</span> 全局作用域<a href=#全局作用域 class=self-link></a></h4>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/web-workers/infrastructure/the-global-scope/index.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/web-workers/infrastructure/the-global-scope/index.zh.html></div>
+
+  <p>全局作用域是即 worker 的内部。</p>
+
+
+  <h5 id=workerglobalscope-通用接口><span class=secno>10.2.1.1</span> <code id=workerglobalscope-通用接口:workerglobalscope><a href=#workerglobalscope>WorkerGlobalScope</a></code> 通用接口<a href=#workerglobalscope-通用接口 class=self-link></a></h5>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/web-workers/infrastructure/the-global-scope/the-workerglobalscope-common-interface.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/web-workers/infrastructure/the-global-scope/the-workerglobalscope-common-interface.zh.html></div>
+
+  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope title="The WorkerGlobalScope interface of the Web Workers API is an interface representing the scope of any worker. Workers have no browsing context; this scope contains the information usually conveyed by Window objects — in this case event handlers, the console or the associated WorkerNavigator object. Each WorkerGlobalScope has its own event loop.">WorkerGlobalScope</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>3.5+</span></span><span class="safari yes"><span>Safari</span><span>4+</span></span><span class="chrome yes"><span>Chrome</span><span>4+</span></span><hr><span class="opera yes"><span>Opera</span><span>10.6+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>10+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>3.2+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>11+</span></span></div></div></div><pre class=idl>[Exposed=Worker] 
+interface <dfn id=workerglobalscope>WorkerGlobalScope</dfn> : <a id=workerglobalscope-通用接口:eventtarget href=https://dom.spec.whatwg.org/#interface-eventtarget data-x-internal=eventtarget>EventTarget</a> {
+  readonly attribute <a href=#workerglobalscope id=workerglobalscope-通用接口:workerglobalscope-2>WorkerGlobalScope</a> <a href=#dom-workerglobalscope-self id=workerglobalscope-通用接口:dom-workerglobalscope-self>self</a>;
+  readonly attribute <a href=#workerlocation-2 id=workerglobalscope-通用接口:workerlocation-2>WorkerLocation</a> <a href=#dom-workerglobalscope-location id=workerglobalscope-通用接口:dom-workerglobalscope-location>location</a>;
+  readonly attribute <a href=#workernavigator-2 id=workerglobalscope-通用接口:workernavigator-2>WorkerNavigator</a> <a href=#dom-worker-navigator id=workerglobalscope-通用接口:dom-worker-navigator>navigator</a>;
+  undefined <a href=#dom-workerglobalscope-importscripts id=workerglobalscope-通用接口:dom-workerglobalscope-importscripts>importScripts</a>(USVString... urls);
+
+  attribute <a id=workerglobalscope-通用接口:onerroreventhandler href=webappapis.html#onerroreventhandler>OnErrorEventHandler</a> <a href=#handler-workerglobalscope-onerror id=workerglobalscope-通用接口:handler-workerglobalscope-onerror>onerror</a>;
+  attribute <a id=workerglobalscope-通用接口:eventhandler href=webappapis.html#eventhandler>EventHandler</a> <a href=#handler-workerglobalscope-onlanguagechange id=workerglobalscope-通用接口:handler-workerglobalscope-onlanguagechange>onlanguagechange</a>;
+  attribute <a id=workerglobalscope-通用接口:eventhandler-2 href=webappapis.html#eventhandler>EventHandler</a> <a href=#handler-workerglobalscope-onoffline id=workerglobalscope-通用接口:handler-workerglobalscope-onoffline>onoffline</a>;
+  attribute <a id=workerglobalscope-通用接口:eventhandler-3 href=webappapis.html#eventhandler>EventHandler</a> <a href=#handler-workerglobalscope-ononline id=workerglobalscope-通用接口:handler-workerglobalscope-ononline>ononline</a>;
+  attribute <a id=workerglobalscope-通用接口:eventhandler-4 href=webappapis.html#eventhandler>EventHandler</a> <a href=#handler-workerglobalscope-onrejectionhandled id=workerglobalscope-通用接口:handler-workerglobalscope-onrejectionhandled>onrejectionhandled</a>;
+  attribute <a id=workerglobalscope-通用接口:eventhandler-5 href=webappapis.html#eventhandler>EventHandler</a> <a href=#handler-workerglobalscope-onunhandledrejection id=workerglobalscope-通用接口:handler-workerglobalscope-onunhandledrejection>onunhandledrejection</a>;
+};</pre>
+
+  <p id="the-worker's-documents"><code id=workerglobalscope-通用接口:workerglobalscope-3><a href=#workerglobalscope>WorkerGlobalScope</a></code> 对象有一个与之关联的 <dfn id=concept-WorkerGlobalScope-owner-set data-for=WorkerGlobalScope data-export="">owner
+  set</dfn> （<code id=workerglobalscope-通用接口:document><a href=dom.html#document>Document</a></code> 和 <code id=workerglobalscope-通用接口:workerglobalscope-4><a href=#workerglobalscope>WorkerGlobalScope</a></code> 对象的 <a href=https://infra.spec.whatwg.org/#ordered-set id=workerglobalscope-通用接口:set data-x-internal=set>集合</a>）。
+  初始为空，当创建或获取 Worker 时填充。</p>
+
+  <p class=note>拥有者不止一个，它是一个 <a href=https://infra.spec.whatwg.org/#ordered-set id=workerglobalscope-通用接口:set-2 data-x-internal=set>集合</a> 来适应
+  <code id=workerglobalscope-通用接口:sharedworkerglobalscope><a href=#sharedworkerglobalscope>SharedWorkerGlobalScope</a></code> 对象。</p>
+
+  <p><code id=workerglobalscope-通用接口:workerglobalscope-5><a href=#workerglobalscope>WorkerGlobalScope</a></code> 对象有一个与之关联的 <dfn id=the-workers-workers data-for=WorkerGlobalScope data-export="">worker set</dfn> （
+  <code id=workerglobalscope-通用接口:workerglobalscope-6><a href=#workerglobalscope>WorkerGlobalScope</a></code> 对象的 <a href=https://infra.spec.whatwg.org/#ordered-set id=workerglobalscope-通用接口:set-3 data-x-internal=set>集合</a>）。
+  它初始为空，当创建或获取其他 Worker 时填充。</p>
+
+  <p><code id=workerglobalscope-通用接口:workerglobalscope-7><a href=#workerglobalscope>WorkerGlobalScope</a></code> 对象有一个与之关联的 <dfn data-dfn-for=WorkerGlobalScope id=concept-workerglobalscope-type data-export="">type</dfn> （"<code>classic</code>" 或 "<code>module</code>"）。在创建时设置。
+
+  <p><code id=workerglobalscope-通用接口:workerglobalscope-8><a href=#workerglobalscope>WorkerGlobalScope</a></code> 对象有一个与之关联的 <dfn data-dfn-for=WorkerGlobalScope id=concept-workerglobalscope-url data-export="">url</dfn> （null 或一个
+  <a id=workerglobalscope-通用接口:url href=https://url.spec.whatwg.org/#concept-url data-x-internal=url>URL</a>）。初始值为 null。
+
+  <p><code id=workerglobalscope-通用接口:workerglobalscope-9><a href=#workerglobalscope>WorkerGlobalScope</a></code> 对象有一个与之关联的 <dfn data-dfn-for=WorkerGlobalScope id=concept-workerglobalscope-name data-export="">名称</dfn>（一个字符串）。在创建过程中设置。
+
+  <p class=note><a href=#concept-workerglobalscope-name id=workerglobalscope-通用接口:concept-workerglobalscope-name>名称</a> 可以对每个
+  <code id=workerglobalscope-通用接口:workerglobalscope-10><a href=#workerglobalscope>WorkerGlobalScope</a></code> 的子类有不同的语义。
+  对于 <code id=workerglobalscope-通用接口:dedicatedworkerglobalscope-2><a href=#dedicatedworkerglobalscope-2>DedicatedWorkerGlobalScope</a></code> 的实例, 它就是一个简单的开发者提供的名字，主要用于调试用途。
+  对于 <code id=workerglobalscope-通用接口:sharedworkerglobalscope-2><a href=#sharedworkerglobalscope>SharedWorkerGlobalScope</a></code> 的实例，它允许通过
+  <code id=workerglobalscope-通用接口:dom-sharedworker><a href=#dom-sharedworker>SharedWorker()</a></code>
+  构造器获得一个通用共享 Worker 的引用。
+  对于 <code id=workerglobalscope-通用接口:serviceworkerglobalscope><a data-x-internal=serviceworkerglobalscope href=https://w3c.github.io/ServiceWorker/#serviceworkerglobalscope>ServiceWorkerGlobalScope</a></code> 对象，名字没有意义（同样地，它也根本没有通过 JavaScript API 暴露出来）。</p>
+
+  <p><code id=workerglobalscope-通用接口:workerglobalscope-11><a href=#workerglobalscope>WorkerGlobalScope</a></code> 对象有一个与之关联的 <dfn data-dfn-for=WorkerGlobalScope id=concept-workerglobalscope-referrer-policy data-export="">referrer
+  策略</dfn> （一个 <a href=https://w3c.github.io/webappsec-referrer-policy/#referrer-policy id=workerglobalscope-通用接口:referrer-policy data-x-internal=referrer-policy>referrer 策略</a>）。初始值为空字符串。
+
+  <p><code id=workerglobalscope-通用接口:workerglobalscope-12><a href=#workerglobalscope>WorkerGlobalScope</a></code> 对象有一个与之关联的 <dfn data-dfn-for=WorkerGlobalScope id=concept-workerglobalscope-embedder-policy data-export="">嵌入策略</dfn>
+  （一个 <a href=origin.html#embedder-policy id=workerglobalscope-通用接口:embedder-policy>嵌入策略</a>）。</p>
+
+  <p><code id=workerglobalscope-通用接口:workerglobalscope-13><a href=#workerglobalscope>WorkerGlobalScope</a></code> 对象有一个与之关联的 <dfn data-dfn-for=WorkerGlobalScope id=concept-workerglobalscope-csp-list data-export="">CSP 列表</dfn>。
+  初始值为空列表。
+
+  <p><code id=workerglobalscope-通用接口:workerglobalscope-14><a href=#workerglobalscope>WorkerGlobalScope</a></code> 对象有一个与之关联的 <dfn data-dfn-for=WorkerGlobalScope id=concept-workerglobalscope-module-map data-export="">模块映射</dfn>。
+  初始值为空的 <span>模块映射</span>。</p>
+
+  <p><code id=workerglobalscope-通用接口:workerglobalscope-15><a href=#workerglobalscope>WorkerGlobalScope</a></code> 对象有一个与之关联的 <dfn data-dfn-for=WorkerGlobalScope id=concept-workerglobalscope-cross-origin-isolated-capability data-export="">跨域隔离能力</dfn> 布尔，初始为 false。</p>
+
+  <dl class=domintro><dt><var>workerGlobal</var> . <code id=dom-workerglobalscope-self>self</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/self title="The self read-only property of the WorkerGlobalScope interface returns a reference to the WorkerGlobalScope itself. Most of the time it is a specific scope like DedicatedWorkerGlobalScope,  SharedWorkerGlobalScope, or ServiceWorkerGlobalScope.">WorkerGlobalScope/self</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>3.5+</span></span><span class="safari yes"><span>Safari</span><span>4+</span></span><span class="chrome yes"><span>Chrome</span><span>4+</span></span><hr><span class="opera yes"><span>Opera</span><span>11.5+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>Yes</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>34+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>5.1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>40+</span></span><span class="webview_android yes"><span>WebView Android</span><span>37+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>4.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div><dd>返回 <var>workerGlobal</var>。<dt><var>workerGlobal</var> . <code id=dom-workerglobalscope-location>location</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/location title="The location read-only property of the WorkerGlobalScope interface returns the WorkerLocation associated with the worker. It is a specific location object, mostly a subset of the Location for browsing scopes, but adapted to workers.">WorkerGlobalScope/location</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>3.5+</span></span><span class="safari yes"><span>Safari</span><span>4+</span></span><span class="chrome yes"><span>Chrome</span><span>4+</span></span><hr><span class="opera yes"><span>Opera</span><span>11.5+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>Yes</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>5.1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>40+</span></span><span class="webview_android yes"><span>WebView Android</span><span>37+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>4.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div><dd>返回 <var>workerGlobal</var> 的 <code id=workerglobalscope-通用接口:workerlocation-2-2><a href=#workerlocation-2>WorkerLocation</a></code> 对象。<dt><var>workerGlobal</var> . <code id=dom-worker-navigator>navigator</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/navigator title="The navigator read-only property of the WorkerGlobalScope interface returns the WorkerNavigator associated with the worker. It is a specific navigator object, mostly a subset of the Navigator for browsing scopes, but adapted to workers.">WorkerGlobalScope/navigator</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>3.5+</span></span><span class="safari yes"><span>Safari</span><span>4+</span></span><span class="chrome yes"><span>Chrome</span><span>4+</span></span><hr><span class="opera yes"><span>Opera</span><span>11.5+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>17+</span></span><span class="ie yes"><span>Internet Explorer</span><span>Yes</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>5.1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>40+</span></span><span class="webview_android yes"><span>WebView Android</span><span>37+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>4.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div><dd>返回 <var>workerGlobal</var> 的 <code id=workerglobalscope-通用接口:workernavigator-2-2><a href=#workernavigator-2>WorkerNavigator</a></code> object。<dt><var>workerGlobal</var> . <code id=dom-workerglobalscope-importscripts>importScripts</code>(<var>urls</var>...)<div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/importScripts title="The importScripts() method of the WorkerGlobalScope interface synchronously imports one or more scripts into the worker's scope.">WorkerGlobalScope/importScripts</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>4+</span></span><span class="safari yes"><span>Safari</span><span>4+</span></span><span class="chrome yes"><span>Chrome</span><span>4+</span></span><hr><span class="opera yes"><span>Opera</span><span>10.6+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>10+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>3.2+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>37+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>11+</span></span></div></div></div><dd>获取 <var>urls</var> 中的每一个 <a id=workerglobalscope-通用接口:url-2 href=https://url.spec.whatwg.org/#concept-url data-x-internal=url>URL</a>，按照传入的顺序一个接一个地执行它们并返回
+   （如果有错误则抛出异常）。</dl>
+
+  
+
+  <hr>
+
+  <p>下面是实现 <code id=workerglobalscope-通用接口:workerglobalscope-16><a href=#workerglobalscope>WorkerGlobalScope</a></code> 接口的对象必须
+  （以 <a href=webappapis.html#event-handler-idl-attributes id=workerglobalscope-通用接口:event-handler-idl-attributes>事件处理器 IDL 属性</a> 的方式）
+  支持的 <a href=webappapis.html#event-handlers id=workerglobalscope-通用接口:event-handlers>事件处理器</a>
+  （以及它们对应的<span>事件处理器事件类型</span>）：</p>
+
+  <table><thead><tr><th><a href=webappapis.html#event-handlers id=workerglobalscope-通用接口:event-handlers-2>事件处理器</a> <th><span>事件处理器事件类型</span>
+   <tbody><tr><td><dfn id=handler-workerglobalscope-onerror><code>onerror</code></dfn> <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/onerror title="The onerror property of the WorkerGlobalScope interface represents an EventHandler to be called when the error event occurs and bubbles through the Worker.">WorkerGlobalScope/onerror</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>3.5+</span></span><span class="safari yes"><span>Safari</span><span>4+</span></span><span class="chrome yes"><span>Chrome</span><span>4+</span></span><hr><span class="opera yes"><span>Opera</span><span>11.5+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>Yes</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>5.1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>40+</span></span><span class="webview_android yes"><span>WebView Android</span><span>37+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>4.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div><td> <code id=workerglobalscope-通用接口:event-error><a href=indices.html#event-error>error</a></code>
+    <tr><td><dfn id=handler-workerglobalscope-onlanguagechange><code>onlanguagechange</code></dfn> <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/onlanguagechange title="The onlanguagechange property of the WorkerGlobalScope interface represents an EventHandler to be called when the languagechange event occurs and bubbles through the Worker.">WorkerGlobalScope/onlanguagechange</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>74+</span></span><span class="safari yes"><span>Safari</span><span>4+</span></span><span class="chrome yes"><span>Chrome</span><span>4+</span></span><hr><span class="opera yes"><span>Opera</span><span>11.5+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>Yes</span></span><hr><span class="firefox_android no"><span>Firefox Android</span><span>No</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>5.1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>40+</span></span><span class="webview_android yes"><span>WebView Android</span><span>37+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>4.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div><td> <code id=workerglobalscope-通用接口:event-languagechange><a href=indices.html#event-languagechange>languagechange</a></code> 
+    <tr><td><dfn id=handler-workerglobalscope-onoffline><code>onoffline</code></dfn> <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/onoffline title="The onoffline property of the WorkerGlobalScope interface represents an EventHandler to be called when the offline event occurs and bubbles through the Worker.">WorkerGlobalScope/onoffline</a><div class=support><span class="firefox yes"><span>Firefox</span><span>29+</span></span><span class="safari unknown"><span>Safari</span><span>?</span></span><span class="chrome yes"><span>Chrome</span><span>4+</span></span><hr><span class="opera unknown"><span>Opera</span><span>?</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>29+</span></span><span class="safari_ios unknown"><span>Safari iOS</span><span>?</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>40+</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>4.0+</span></span><span class="opera_android unknown"><span>Opera Android</span><span>?</span></span></div></div></div><td> <code id=workerglobalscope-通用接口:event-offline><a href=indices.html#event-offline>offline</a></code> 
+    <tr><td><dfn id=handler-workerglobalscope-ononline><code>ononline</code></dfn> <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/ononline title="The ononline property of the WorkerGlobalScope interface represents an EventHandler to be called when the online event occurs and bubbles through the Worker.">WorkerGlobalScope/ononline</a><div class=support><span class="firefox yes"><span>Firefox</span><span>29+</span></span><span class="safari unknown"><span>Safari</span><span>?</span></span><span class="chrome yes"><span>Chrome</span><span>4+</span></span><hr><span class="opera unknown"><span>Opera</span><span>?</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>29+</span></span><span class="safari_ios unknown"><span>Safari iOS</span><span>?</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>40+</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>4.0+</span></span><span class="opera_android unknown"><span>Opera Android</span><span>?</span></span></div></div></div><td> <code id=workerglobalscope-通用接口:event-online><a href=indices.html#event-online>online</a></code> 
+    <tr><td><dfn id=handler-workerglobalscope-onrejectionhandled><code>onrejectionhandled</code></dfn> <td> <code id=workerglobalscope-通用接口:event-rejectionhandled><a href=indices.html#event-rejectionhandled>rejectionhandled</a></code>
+    <tr><td><dfn id=handler-workerglobalscope-onunhandledrejection><code>onunhandledrejection</code></dfn> <td> <code id=workerglobalscope-通用接口:event-unhandledrejection><a href=indices.html#event-unhandledrejection>unhandledrejection</a></code>
+  </table>
+
+
+
+  <h5 id=专用-worker-与-dedicatedworkerglobalscope-接口><span class=secno>10.2.1.2</span> 专用 Worker 与 <code id=dedicatedworkerglobalscope><a href=#dedicatedworkerglobalscope-2>DedicatedWorkerGlobalScope</a></code> 接口<a href=#专用-worker-与-dedicatedworkerglobalscope-接口 class=self-link></a></h5><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/DedicatedWorkerGlobalScope title="The DedicatedWorkerGlobalScope object (the Worker global scope) is accessible through the self keyword. Some additional global functions, namespaces objects, and constructors, not typically associated with the worker global scope, but available on it, are listed in the JavaScript Reference. See also: Functions available to workers.">DedicatedWorkerGlobalScope</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>3.5+</span></span><span class="safari yes"><span>Safari</span><span>4+</span></span><span class="chrome yes"><span>Chrome</span><span>4+</span></span><hr><span class="opera yes"><span>Opera</span><span>10.6+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>10+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>5.1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>11+</span></span></div></div></div>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/web-workers/infrastructure/the-global-scope/dedicated-workers-and-the-dedicatedworkerglobalscope-interface.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/web-workers/infrastructure/the-global-scope/dedicated-workers-and-the-dedicatedworkerglobalscope-interface.zh.html></div>
+
+  <pre class=idl>[Global=(Worker,DedicatedWorker),Exposed=DedicatedWorker]
+interface <dfn id=dedicatedworkerglobalscope-2>DedicatedWorkerGlobalScope</dfn> : <a href=#workerglobalscope id=专用-worker-与-dedicatedworkerglobalscope-接口:workerglobalscope>WorkerGlobalScope</a> {
+  void <a href=#dom-dedicatedworkerglobalscope-postmessage id=专用-worker-与-dedicatedworkerglobalscope-接口:dom-dedicatedworkerglobalscope-postmessage>postMessage</a>(any message, optional sequence&lt;<a href=https://heycam.github.io/webidl/#idl-object id=专用-worker-与-dedicatedworkerglobalscope-接口:idl-object data-x-internal=idl-object>object</a>> transfer = []);
+
+  void <a href=#dom-dedicatedworkerglobalscope-close id=专用-worker-与-dedicatedworkerglobalscope-接口:dom-dedicatedworkerglobalscope-close>close</a>();
+
+  attribute <a id=专用-worker-与-dedicatedworkerglobalscope-接口:eventhandler href=webappapis.html#eventhandler>EventHandler</a> <a href=#handler-dedicatedworkerglobalscope-onmessage id=专用-worker-与-dedicatedworkerglobalscope-接口:handler-dedicatedworkerglobalscope-onmessage>onmessage</a>;
+};</pre>
+
+  <p><code id=专用-worker-与-dedicatedworkerglobalscope-接口:dedicatedworkerglobalscope-2><a href=#dedicatedworkerglobalscope-2>DedicatedWorkerGlobalScope</a></code> 对象的表现就像它有一个与之关联的隐式
+  <code id=专用-worker-与-dedicatedworkerglobalscope-接口:messageport><a href=web-messaging.html#messageport>MessagePort</a></code> 一样。该端口是创建 Worker 时建立的通道的一部分，但没有暴露出来。
+  禁止在<code id=专用-worker-与-dedicatedworkerglobalscope-接口:dedicatedworkerglobalscope-2-2><a href=#dedicatedworkerglobalscope-2>DedicatedWorkerGlobalScope</a></code>之前垃圾回收该对象。</p>
+
+  <p>该端口收到的所有消息必须立即传给 <code id=专用-worker-与-dedicatedworkerglobalscope-接口:dedicatedworkerglobalscope-2-3><a href=#dedicatedworkerglobalscope-2>DedicatedWorkerGlobalScope</a></code> 对象。</p>
+
+  <dl class=domintro><dt><var>dedicatedWorkerGlobal</var> . <code id=dom-dedicatedworkerglobalscope-postmessage>postMessage</code>(<var>message</var> [,
+   <var>transfer</var> ])<div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/DedicatedWorkerGlobalScope/postMessage title="The postMessage() method of the DedicatedWorkerGlobalScope interface sends a message to the main thread that spawned it. This accepts a single parameter, which is the data to send to the worker. The data may be any value or JavaScript object handled by the structured clone algorithm, which includes cyclical references.">DedicatedWorkerGlobalScope/postMessage</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>3.5+</span></span><span class="safari yes"><span>Safari</span><span>4+</span></span><span class="chrome yes"><span>Chrome</span><span>4+</span></span><hr><span class="opera yes"><span>Opera</span><span>10.6+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>10+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>5.1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>11+</span></span></div></div></div><dd>克隆 <var>message</var> 并传送给与 <var>dedicatedWorkerGlobal</var> 关联的
+   <code id=专用-worker-与-dedicatedworkerglobalscope-接口:worker-2><a href=#worker-2>Worker</a></code> 对象。<var>transfer</var> 可以传一个不需克隆而直接传输的对象列表。<dt><var>dedicatedWorkerGlobal</var> . <code id=dom-dedicatedworkerglobalscope-close>close</code>()<div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/DedicatedWorkerGlobalScope/close title="The close() method of the DedicatedWorkerGlobalScope interface discards any tasks queued in the DedicatedWorkerGlobalScope's event loop, effectively closing this particular scope.">DedicatedWorkerGlobalScope/close</a><div class=support><span class="firefox yes"><span>Firefox</span><span>54+</span></span><span class="safari unknown"><span>Safari</span><span>?</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie unknown"><span>Internet Explorer</span><span>?</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>54+</span></span><span class="safari_ios unknown"><span>Safari iOS</span><span>?</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div><dd>终止 <var>dedicatedWorkerGlobal</var>。</dl>
+
+  
+
+  <p>下面是实现 <code id=专用-worker-与-dedicatedworkerglobalscope-接口:dedicatedworkerglobalscope-2-4><a href=#dedicatedworkerglobalscope-2>DedicatedWorkerGlobalScope</a></code> 接口的对象必须
+  （以 <a href=webappapis.html#event-handler-idl-attributes id=专用-worker-与-dedicatedworkerglobalscope-接口:event-handler-idl-attributes>事件处理器 IDL 属性</a> 的方式）
+  支持的 <a href=webappapis.html#event-handlers id=专用-worker-与-dedicatedworkerglobalscope-接口:event-handlers>事件处理器</a>
+  （以及它们对应的<span>事件处理器事件类型</span>）：</p>
+
+  <table><thead><tr><th><a href=webappapis.html#event-handlers id=专用-worker-与-dedicatedworkerglobalscope-接口:event-handlers-2>事件处理器</a> <th><span>事件处理器事件类型</span>
+   <tbody><tr><td><dfn id=handler-dedicatedworkerglobalscope-onmessage><code>onmessage</code></dfn> <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/DedicatedWorkerGlobalScope/onmessage title="The onmessage property of the DedicatedWorkerGlobalScope interface represents an EventHandler to be called when the message event occurs and bubbles through the Worker — i.e. when a message is sent to the worker using the Worker.postMessage method.">DedicatedWorkerGlobalScope/onmessage</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>3.5+</span></span><span class="safari yes"><span>Safari</span><span>4+</span></span><span class="chrome yes"><span>Chrome</span><span>4+</span></span><hr><span class="opera yes"><span>Opera</span><span>10.6+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>10+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>5.1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>37+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>11+</span></span></div></div></div><td> <code id=专用-worker-与-dedicatedworkerglobalscope-接口:event-message><a href=indices.html#event-message>message</a></code>
+    <tr><td><dfn id=handler-dedicatedworkerglobalscope-onmessageerror><code>onmessageerror</code></dfn> <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/DedicatedWorkerGlobalScope/onmessageerror title="The onmessageerror event handler of the DedicatedWorkerGlobalScope interface is an EventListener, called whenever an MessageEvent of type messageerror is fired on the worker—that is, when it receives a message that cannot be deserialized.">DedicatedWorkerGlobalScope/onmessageerror</a><div class=support><span class="firefox yes"><span>Firefox</span><span>57+</span></span><span class="safari unknown"><span>Safari</span><span>?</span></span><span class="chrome yes"><span>Chrome</span><span>60+</span></span><hr><span class="opera yes"><span>Opera</span><span>47+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie unknown"><span>Internet Explorer</span><span>?</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>57+</span></span><span class="safari_ios unknown"><span>Safari iOS</span><span>?</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>60+</span></span><span class="webview_android yes"><span>WebView Android</span><span>60+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>8.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>44+</span></span></div></div></div><td> <code id=专用-worker-与-dedicatedworkerglobalscope-接口:event-messageerror><a href=indices.html#event-messageerror>messageerror</a></code>
+  </table>
+
+  <p>出于 <span>application cache</span> 网络模型的目的，专用 worker 是
+  创建它的 <span>cache host</span> 的一个扩展。</p>
+
+
+
+
+  <h5 id=共享-worker-与-sharedworkerglobalscope-接口><span class=secno>10.2.1.3</span> 共享 worker 与 <code id=共享-worker-与-sharedworkerglobalscope-接口:sharedworkerglobalscope><a href=#sharedworkerglobalscope>SharedWorkerGlobalScope</a></code> 接口<a href=#共享-worker-与-sharedworkerglobalscope-接口 class=self-link></a></h5>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/web-workers/infrastructure/the-global-scope/shared-workers-and-the-sharedworkerglobalscope-interface.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/web-workers/infrastructure/the-global-scope/shared-workers-and-the-sharedworkerglobalscope-interface.zh.html></div>
+
+  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/SharedWorkerGlobalScope title="The SharedWorkerGlobalScope object (the SharedWorker global scope) is accessible through the self keyword. Some additional global functions, namespaces objects, and constructors, not typically associated with the worker global scope, but available on it, are listed in the JavaScript Reference. See the complete list of functions available to workers.">SharedWorkerGlobalScope</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>29+</span></span><span class="safari yes"><span>Safari</span><span>5+</span></span><span class="chrome yes"><span>Chrome</span><span>4+</span></span><hr><span class="opera yes"><span>Opera</span><span>10.6+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>7+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>11+</span></span></div></div></div><pre class=idl>[Global=(Worker,SharedWorker),Exposed=SharedWorker]
+interface <dfn id=sharedworkerglobalscope>SharedWorkerGlobalScope</dfn> : <a href=#workerglobalscope id=共享-worker-与-sharedworkerglobalscope-接口:workerglobalscope>WorkerGlobalScope</a> {
+  readonly attribute DOMString <a href=#dom-sharedworkerglobalscope-name id=共享-worker-与-sharedworkerglobalscope-接口:dom-sharedworkerglobalscope-name>name</a>;
+
+  undefined <a href=#dom-sharedworkerglobalscope-close id=共享-worker-与-sharedworkerglobalscope-接口:dom-sharedworkerglobalscope-close>close</a>();
+
+  attribute <a id=共享-worker-与-sharedworkerglobalscope-接口:eventhandler href=webappapis.html#eventhandler>EventHandler</a> <a href=#handler-sharedworkerglobalscope-onconnect id=共享-worker-与-sharedworkerglobalscope-接口:handler-sharedworkerglobalscope-onconnect>onconnect</a>;
+};</pre>
+
+  <p><code id=共享-worker-与-sharedworkerglobalscope-接口:sharedworkerglobalscope-2><a href=#sharedworkerglobalscope>SharedWorkerGlobalScope</a></code> 对象有与之相关联的
+  <dfn data-dfn-for=SharedWorkerGlobalScope id=concept-sharedworkerglobalscope-constructor-origin>构造器 origin</dfn>，
+  <dfn data-dfn-for=SharedWorkerGlobalScope id=concept-sharedworkerglobalscope-constructor-url>构造器 url</dfn>，以及
+  <dfn data-dfn-for=SharedWorkerGlobalScope id=concept-sharedworkerglobalscope-credentials>credentials</dfn>。它们在创建
+  <code id=共享-worker-与-sharedworkerglobalscope-接口:sharedworkerglobalscope-3><a href=#sharedworkerglobalscope>SharedWorkerGlobalScope</a></code> 对象时初始化，是 <span>运行 Worker</span>
+  算法的一部分。
+
+  <p>共享 worker 通过它们的 <code id=共享-worker-与-sharedworkerglobalscope-接口:sharedworkerglobalscope-4><a href=#sharedworkerglobalscope>SharedWorkerGlobalScope</a></code> 对象上的
+  <code id=共享-worker-与-sharedworkerglobalscope-接口:event-workerglobalscope-connect><a href=indices.html#event-workerglobalscope-connect>connect</a></code> 事件接受每个连接的消息端口。</p>
+
+  <dl class=domintro><dt><var>sharedWorkerGlobal</var> . <code id=dom-sharedworkerglobalscope-name>name</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/SharedWorkerGlobalScope/name title="The name read-only property of the SharedWorkerGlobalScope interface returns the name that the SharedWorker was (optionally) given when it was created. This is the name that the SharedWorker() constructor can pass to get a reference to the SharedWorkerGlobalScope.">SharedWorkerGlobalScope/name</a><div class=support><span class="firefox yes"><span>Firefox</span><span>55+</span></span><span class="safari no"><span>Safari</span><span>No</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>10.6+</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>55+</span></span><span class="safari_ios no"><span>Safari iOS</span><span>No</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>40+</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>4.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div><dd>返回 <var>sharedWorkerGlobal</var> 的 <a href=#concept-workerglobalscope-name id=共享-worker-与-sharedworkerglobalscope-接口:concept-workerglobalscope-name>name</a>，即给到 <code id=共享-worker-与-sharedworkerglobalscope-接口:sharedworker-2><a href=#sharedworker-2>SharedWorker</a></code> 构造函数的值。
+   通过复用同一个名字，多个 <code id=共享-worker-与-sharedworkerglobalscope-接口:sharedworker-2-2><a href=#sharedworker-2>SharedWorker</a></code> 对象可以对应于同一个共享工作线程（以及 <code id=共享-worker-与-sharedworkerglobalscope-接口:sharedworkerglobalscope-5><a href=#sharedworkerglobalscope>SharedWorkerGlobalScope</a></code>）。<dt><var>sharedWorkerGlobal</var> . <code id=dom-sharedworkerglobalscope-close>close</code>()<div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in one engine only." class=less-than-two-engines-flag>⚠</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/SharedWorkerGlobalScope/close title="The close() method of the SharedWorkerGlobalScope interface discards any tasks queued in the SharedWorkerGlobalScope's event loop, effectively closing this particular scope.">SharedWorkerGlobalScope/close</a><p class=less-than-two-engines-text>Support in one engine only.<div class=support><span class="firefox yes"><span>Firefox</span><span>54+</span></span><span class="safari unknown"><span>Safari</span><span>?</span></span><span class="chrome no"><span>Chrome</span><span>No</span></span><hr><span class="opera no"><span>Opera</span><span>No</span></span><span class="edge_blink no"><span>Edge</span><span>No</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>54+</span></span><span class="safari_ios unknown"><span>Safari iOS</span><span>?</span></span><span class="chrome_android no"><span>Chrome Android</span><span>No</span></span><span class="webview_android no"><span>WebView Android</span><span>No</span></span><span class="samsunginternet_android no"><span>Samsung Internet</span><span>No</span></span><span class="opera_android no"><span>Opera Android</span><span>No</span></span></div></div></div><dd>终止 <var>sharedWorkerGlobal</var>。</dl>
+
+  
+
+  <hr>
+
+  <p>下面是实现 <code id=共享-worker-与-sharedworkerglobalscope-接口:sharedworkerglobalscope-6><a href=#sharedworkerglobalscope>SharedWorkerGlobalScope</a></code> 接口的对象必须
+  （以 <a href=webappapis.html#event-handler-idl-attributes id=共享-worker-与-sharedworkerglobalscope-接口:event-handler-idl-attributes>事件处理器 IDL 属性</a> 的方式）
+  支持的 <a href=webappapis.html#event-handlers id=共享-worker-与-sharedworkerglobalscope-接口:event-handlers>事件处理器</a>
+  （以及它们对应的<span>事件处理器事件类型</span>）：</p>
+
+  <table><thead><tr><th><a href=webappapis.html#event-handlers id=共享-worker-与-sharedworkerglobalscope-接口:event-handlers-2>事件处理器</a> <th><span>事件处理器事件类型</span>
+   <tbody><tr><td><dfn id=handler-sharedworkerglobalscope-onconnect><code>onconnect</code></dfn> <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/SharedWorkerGlobalScope/onconnect title="The onconnect property of the SharedWorkerGlobalScope interface is an event handler representing the code to be called when the connect event is raised — that is, when a MessagePort connection is opened between the associated SharedWorker and the main thread.">SharedWorkerGlobalScope/onconnect</a><div class=support><span class="firefox yes"><span>Firefox</span><span>29+</span></span><span class="safari no"><span>Safari</span><span>No</span></span><span class="chrome yes"><span>Chrome</span><span>4+</span></span><hr><span class="opera yes"><span>Opera</span><span>10.6+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>29+</span></span><span class="safari_ios unknown"><span>Safari iOS</span><span>?</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div><td> <code id=共享-worker-与-sharedworkerglobalscope-接口:event-workerglobalscope-connect-2><a href=indices.html#event-workerglobalscope-connect>connect</a></code>
+  </table>
+
+
+  <h4 id=worker-event-loop><span class=secno>10.2.2</span> 事件循环<a href=#worker-event-loop class=self-link></a></h4>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/web-workers/infrastructure/the-event-loop.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/web-workers/infrastructure/the-event-loop.zh.html></div>
+
+  <p><span>工作线程事件循环</span> 的 <span>任务队列</span>
+  的 <span>任务</span> 只有事件、回调和网络活动。
+  </p>
+
+  <p>每个 <code id=worker-event-loop:workerglobalscope><a href=#workerglobalscope>WorkerGlobalScope</a></code> 对象也有一个 <dfn data-dfn-for=WorkerGlobalScope id=dom-workerglobalscope-closing data-export="">closing</dfn> 标志，初始值
+  为 false，
+  但在 worker 收到关闭请求时
+  可以  设为 true。</p>
+
+  <p>一旦 <code id=worker-event-loop:workerglobalscope-2><a href=#workerglobalscope>WorkerGlobalScope</a></code> 的 <a href=#dom-workerglobalscope-closing id=worker-event-loop:dom-workerglobalscope-closing>closing</a> 标志被设为 true，
+  <span>事件循环</span> 的 <span>任务队列</span>
+   忽略后续添加的 <span>任务</span>
+  （已经在队列中的任务不受影响，除非另有说明）。
+  也就是说一旦 <a href=#dom-workerglobalscope-closing id=worker-event-loop:dom-workerglobalscope-closing-2>closing</a> 标志位 true，
+  定时器会停止触发，所有正在进行的后台操作的通知会被扔掉。</p>
+
+
+
+  
+
+
+
+  <h4 id=runtime-script-errors><span class=secno>10.2.3</span> Runtime script errors<a href=#runtime-script-errors class=self-link></a></h4>
+<div data-en-date="Sat Aug 11 2018 08:00:56 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/web-workers/infrastructure/runtime-script-errors.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/web-workers/infrastructure/runtime-script-errors.zh.html?filename=runtime-script-errors.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fweb-workers%2Finfrastructure%2Fruntime-script-errors.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  <p>Whenever an uncaught runtime script error occurs in one of the worker's scripts, if the error
+  did not occur while handling a previous script error, the user agent 
+  <span>will</span> <span>report the error</span> for that <span>script</span>, with the position (line number and column number) where the
+  error occurred, using the <code id=runtime-script-errors:workerglobalscope><a href=#workerglobalscope>WorkerGlobalScope</a></code> object as the target.</p>
+
+  <p>For shared workers, if the error is still <i>not handled</i>
+  afterwards, the error may be reported to a developer console.</p>
+
+  <p>For dedicated workers, if the error is still <i>not
+  handled</i> afterwards, <span>the error report propagates to the <code id=runtime-script-errors:worker-2><a href=#worker-2>Worker</a></code> object,
+  then to any containing workers in the same fashion, eventually reaching the <code id=runtime-script-errors:window><a href=window-object.html#window>Window</a></code> if
+  it was never handled along the way.</span></p>
+
+  
+
+  <p class=note><span>Error</span> reports propagate up to
+  the chain of dedicated workers up to the original <code id=runtime-script-errors:document><a href=dom.html#document>Document</a></code>, even if some of the
+  workers along this chain have been terminated and garbage collected.</p>
+
+  
+
+
+
+  <h4 id=创建-worker><span class=secno>10.2.4</span> 创建 Worker<a href=#创建-worker class=self-link></a></h4>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Wed Feb 28 2018 16:23:38 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/web-workers/infrastructure/creating-workers/index.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/web-workers/infrastructure/creating-workers/index.zh.html></div>
+
+
+  
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/web-workers/infrastructure/creating-workers/the-abstractworker-mixin.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/web-workers/infrastructure/creating-workers/the-abstractworker-mixin.zh.html?filename=the-abstractworker-mixin.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fweb-workers%2Finfrastructure%2Fcreating-workers%2Fthe-abstractworker-mixin.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  <h5 id=properties-present-on-both-worker-and-sharedworker><span class=secno>10.2.4.1</span> Properties present on both <code id=properties-present-on-both-worker-and-sharedworker:worker-2><a href=#worker-2>Worker</a></code> and <code id=properties-present-on-both-worker-and-sharedworker:sharedworker-2><a href=#sharedworker-2>SharedWorker</a></code><a href=#properties-present-on-both-worker-and-sharedworker class=self-link></a></h5>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/web-workers/infrastructure/creating-workers/properties-present-on-both-worker-and-sharedworker.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/web-workers/infrastructure/creating-workers/properties-present-on-both-worker-and-sharedworker.zh.html?filename=properties-present-on-both-worker-and-sharedworker.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fweb-workers%2Finfrastructure%2Fcreating-workers%2Fproperties-present-on-both-worker-and-sharedworker.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/AbstractWorker title="The AbstractWorker interface of the Web Workers API is an abstract interface that defines properties and methods that are common to all types of worker, including not only the basic Worker, but also ServiceWorker and SharedWorker.">AbstractWorker</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>3.5+</span></span><span class="safari yes"><span>Safari</span><span>4+</span></span><span class="chrome yes"><span>Chrome</span><span>4+</span></span><hr><span class="opera yes"><span>Opera</span><span>10.6+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>10+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>5.1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>4.4+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>11+</span></span></div></div></div><pre><code class=idl>interface mixin <dfn id=abstractworker>AbstractWorker</dfn> {
+  attribute <a id=properties-present-on-both-worker-and-sharedworker:eventhandler href=webappapis.html#eventhandler>EventHandler</a> <a href=#handler-abstractworker-onerror id=properties-present-on-both-worker-and-sharedworker:handler-abstractworker-onerror>onerror</a>;
+};</code></pre>
+
+  <p>The following are the <a id=properties-present-on-both-worker-and-sharedworker:event-handlers href=webappapis.html#event-handlers>event handlers</a> (and their corresponding <span>event handler event types</span>)  supported,
+  as <a id=properties-present-on-both-worker-and-sharedworker:event-handler-idl-attributes href=webappapis.html#event-handler-idl-attributes>event handler IDL attributes</a>, by <span><code id=properties-present-on-both-worker-and-sharedworker:worker-2-2><a href=#worker-2>Worker</a></code> and
+  <code id=properties-present-on-both-worker-and-sharedworker:sharedworker-2-2><a href=#sharedworker-2>SharedWorker</a></code> objects</span>:</p>
+
+  <table><thead><tr><th><a href=webappapis.html#event-handlers id=properties-present-on-both-worker-and-sharedworker:event-handlers-2>Event handler</a> <th><span>Event handler event type</span>
+   <tbody><tr><td><dfn id=handler-abstractworker-onerror><code>onerror</code></dfn> <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/AbstractWorker/onerror title="The AbstractWorker.onerror property of the AbstractWorker interface represents an EventHandler, that is a function to be called when the error event occurs and bubbles through the Worker.">AbstractWorker/onerror</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>3.5+</span></span><span class="safari yes"><span>Safari</span><span>4+</span></span><span class="chrome yes"><span>Chrome</span><span>4+</span></span><hr><span class="opera yes"><span>Opera</span><span>10.6+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>10+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>5.1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>4.4+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>11+</span></span></div></div></div><td> <code id=properties-present-on-both-worker-and-sharedworker:event-error><a href=indices.html#event-error>error</a></code>
+  </table>
+
+
+  
+
+
+
+  <h5 id=dedicated-workers-and-the-worker-interface><span class=secno>10.2.4.2</span> Dedicated workers and the <code id=worker><a href=#worker-2>Worker</a></code> interface<a href=#dedicated-workers-and-the-worker-interface class=self-link></a></h5><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Worker title="The Worker interface of the Web Workers API represents a background task that can be created via script, which can send messages back to its creator.">Worker</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>3.5+</span></span><span class="safari yes"><span>Safari</span><span>4+</span></span><span class="chrome yes"><span>Chrome</span><span>4+</span></span><hr><span class="opera yes"><span>Opera</span><span>10.6+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>10+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>5.1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>4+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>11+</span></span></div></div></div>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/web-workers/infrastructure/creating-workers/dedicated-workers-and-the-worker-interface.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/web-workers/infrastructure/creating-workers/dedicated-workers-and-the-worker-interface.zh.html?filename=dedicated-workers-and-the-worker-interface.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fweb-workers%2Finfrastructure%2Fcreating-workers%2Fdedicated-workers-and-the-worker-interface.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  <pre><code class=idl>[Exposed=(Window,DedicatedWorker,SharedWorker)]
+interface <dfn id=worker-2>Worker</dfn> : <a id=dedicated-workers-and-the-worker-interface:eventtarget href=https://dom.spec.whatwg.org/#interface-eventtarget data-x-internal=eventtarget>EventTarget</a> {
+  <a href=#dom-worker id=dedicated-workers-and-the-worker-interface:dom-worker>constructor</a>(USVString scriptURL, optional <a href=#workeroptions id=dedicated-workers-and-the-worker-interface:workeroptions>WorkerOptions</a> options = {});
+
+  undefined <a href=#dom-worker-terminate id=dedicated-workers-and-the-worker-interface:dom-worker-terminate>terminate</a>();
+
+  undefined <a href=#dom-worker-postmessage id=dedicated-workers-and-the-worker-interface:dom-worker-postmessage>postMessage</a>(any message, sequence&lt;<a href=https://heycam.github.io/webidl/#idl-object id=dedicated-workers-and-the-worker-interface:idl-object data-x-internal=idl-object>object</a>> transfer);
+  undefined <a href=#dom-worker-postmessage-options id=dedicated-workers-and-the-worker-interface:dom-worker-postmessage-options>postMessage</a>(any message, optional <a id=dedicated-workers-and-the-worker-interface:postmessageoptions href=web-messaging.html#postmessageoptions>PostMessageOptions</a> options = {});
+  attribute <a id=dedicated-workers-and-the-worker-interface:eventhandler href=webappapis.html#eventhandler>EventHandler</a> <a href=#handler-worker-onmessage id=dedicated-workers-and-the-worker-interface:handler-worker-onmessage>onmessage</a>;
+  attribute <a id=dedicated-workers-and-the-worker-interface:eventhandler-2 href=webappapis.html#eventhandler>EventHandler</a> <a href=#handler-worker-onmessageerror id=dedicated-workers-and-the-worker-interface:handler-worker-onmessageerror>onmessageerror</a>;
+};
+
+dictionary <dfn id=workeroptions>WorkerOptions</dfn> {
+  <a href=#workertype id=dedicated-workers-and-the-worker-interface:workertype>WorkerType</a> type = "classic";
+  <a id=dedicated-workers-and-the-worker-interface:requestcredentials href=https://fetch.spec.whatwg.org/#requestcredentials data-x-internal=requestcredentials>RequestCredentials</a> credentials = "same-origin"; // credentials is only used if type is "module"
+  DOMString name = "";
+};
+
+enum <dfn id=workertype>WorkerType</dfn> { "classic", "module" };
+
+<a href=#worker-2 id=dedicated-workers-and-the-worker-interface:worker-2>Worker</a> includes <a href=#abstractworker id=dedicated-workers-and-the-worker-interface:abstractworker>AbstractWorker</a>;</code></pre>
+
+  <dl class=domintro><dt><var>worker</var> = new <code id=dom-worker>Worker</code>(<var>scriptURL</var> [, <var>options</var> ])<div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Worker/Worker title="The Worker() constructor creates a Worker object that executes the script at the specified URL. This script must obey the same-origin policy.">Worker/Worker</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>3.5+</span></span><span class="safari yes"><span>Safari</span><span>4+</span></span><span class="chrome yes"><span>Chrome</span><span>4+</span></span><hr><span class="opera yes"><span>Opera</span><span>10.6+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>10+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>5.1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>4+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>11+</span></span></div></div></div><dd>Returns a new <code id=dedicated-workers-and-the-worker-interface:worker-2-2><a href=#worker-2>Worker</a></code> object. <var>scriptURL</var> will be fetched and executed
+   in the background, creating a new global environment for which <var>worker</var> represents the
+   communication channel. <var>options</var> can be used to define the <a href=#concept-workerglobalscope-name id=dedicated-workers-and-the-worker-interface:concept-workerglobalscope-name>name</a> of that global environment via the <code>name</code> option, primarily for debugging purposes. It can also ensure this new
+   global environment supports JavaScript modules (specify <code>type: "module"</code>),
+   and if that is specified, can also be used to specify how <var>scriptURL</var> is fetched through
+   the <code>credentials</code> option.
+
+   <dt><var>worker</var> . <code id=dom-worker-terminate>terminate</code>()<div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Worker/terminate title="The terminate() method of the Worker interface immediately terminates the Worker. This does not offer the worker an opportunity to finish its operations; it is simply stopped at once.">Worker/terminate</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>3.5+</span></span><span class="safari yes"><span>Safari</span><span>4+</span></span><span class="chrome yes"><span>Chrome</span><span>4+</span></span><hr><span class="opera yes"><span>Opera</span><span>10.6+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>10+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>5.1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>4+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>11+</span></span></div></div></div><dd>Aborts <var>worker</var>'s associated global environment.<dt><var>worker</var> . <code id=dom-worker-postmessage>postMessage</code>(<var>message</var> [, <var>transfer</var> ] )
+   <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Worker/postMessage title="The postMessage() method of the Worker interface sends a message to the worker's inner scope. This accepts a single parameter, which is the data to send to the worker. The data may be any value or JavaScript object handled by the structured clone algorithm, which includes cyclical references.">Worker/postMessage</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>Yes</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>47+</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>10+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>Yes</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>44+</span></span></div></div></div><dt><var>worker</var> . <code id=dom-worker-postmessage-options>postMessage</code>(<var>message</var> [, { <code id=dedicated-workers-and-the-worker-interface:dom-postmessageoptions-transfer><a href=web-messaging.html#dom-postmessageoptions-transfer>transfer</a></code> } ] )
+   <dd>Clones <var>message</var> and transmits it to <var>worker</var>'s global environment.
+   <var>transfer</var> can be passed as a list of objects that are to be transferred rather than
+   cloned.</dl>
+
+  
+
+  <div class=example>
+
+   <p>The <code id=dedicated-workers-and-the-worker-interface:dom-worker-postmessage-2><a href=#dom-worker-postmessage>postMessage()</a></code>
+   method's first argument can be structured data:</p>
+
+   <pre><code class=js>worker.postMessage({opcode: 'activate', device: 1938, parameters: [23, 102]});</code></pre>
+
+  </div>
+
+  <p>The following are the <a id=dedicated-workers-and-the-worker-interface:event-handlers href=webappapis.html#event-handlers>event handlers</a> (and their corresponding <span>event handler event types</span>)  supported,
+  as <a id=dedicated-workers-and-the-worker-interface:event-handler-idl-attributes href=webappapis.html#event-handler-idl-attributes>event handler IDL attributes</a>, by objects implementing the <code id=dedicated-workers-and-the-worker-interface:worker-2-3><a href=#worker-2>Worker</a></code>
+  interface:</p>
+
+  <table><thead><tr><th><a href=webappapis.html#event-handlers id=dedicated-workers-and-the-worker-interface:event-handlers-2>Event handler</a> <th><span>Event handler event type</span>
+   <tbody><tr><td><dfn id=handler-worker-onmessage><code>onmessage</code></dfn> <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Worker/onmessage title="The onmessage property of the Worker interface represents an EventHandler, that is a function to be called when the message event occurs. These events are of type MessageEvent and will be called when the worker's parent receives a message (i.e. from the DedicatedWorkerGlobalScope.postMessage method).">Worker/onmessage</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>3.5+</span></span><span class="safari yes"><span>Safari</span><span>4+</span></span><span class="chrome yes"><span>Chrome</span><span>4+</span></span><hr><span class="opera yes"><span>Opera</span><span>10.6+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>10+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>5.1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>4+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>11+</span></span></div></div></div><td> <code id=dedicated-workers-and-the-worker-interface:event-message><a href=indices.html#event-message>message</a></code>
+    <tr><td><dfn id=handler-worker-onmessageerror><code>onmessageerror</code></dfn> <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Worker/onmessageerror title="The onmessageerror event handler of the Worker interface is an EventListener, called whenever an MessageEvent of type messageerror is fired on the Worker instance — that is, when it receives a message that cannot be deserialized.">Worker/onmessageerror</a><div class=support><span class="firefox yes"><span>Firefox</span><span>57+</span></span><span class="safari unknown"><span>Safari</span><span>?</span></span><span class="chrome yes"><span>Chrome</span><span>60+</span></span><hr><span class="opera yes"><span>Opera</span><span>47+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>18</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>57+</span></span><span class="safari_ios unknown"><span>Safari iOS</span><span>?</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>60+</span></span><span class="webview_android yes"><span>WebView Android</span><span>60+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>8.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>44+</span></span></div></div></div><td> <code id=dedicated-workers-and-the-worker-interface:event-messageerror><a href=indices.html#event-messageerror>messageerror</a></code>
+  </table>
+
+  
+
+
+
+  <h5 id=shared-workers-and-the-sharedworker-interface><span class=secno>10.2.4.3</span> Shared workers and the <code id=sharedworker><a href=#sharedworker-2>SharedWorker</a></code> interface<a href=#shared-workers-and-the-sharedworker-interface class=self-link></a></h5><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker title="The SharedWorker interface represents a specific kind of worker that can be accessed from several browsing contexts, such as several windows, iframes or even workers. They implement an interface different than dedicated workers and have a different global scope, SharedWorkerGlobalScope.">SharedWorker</a><div class=support><span class="firefox yes"><span>Firefox</span><span>29+</span></span><span class="safari no"><span>Safari</span><span>5–6.1</span></span><span class="chrome yes"><span>Chrome</span><span>4+</span></span><hr><span class="opera yes"><span>Opera</span><span>10.6+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>33+</span></span><span class="safari_ios no"><span>Safari iOS</span><span>5.1–7</span></span><span class="chrome_android no"><span>Chrome Android</span><span>No</span></span><span class="webview_android no"><span>WebView Android</span><span>No</span></span><span class="samsunginternet_android no"><span>Samsung Internet</span><span>4.0–5.0</span></span><span class="opera_android no"><span>Opera Android</span><span>11–14</span></span></div></div></div>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/web-workers/infrastructure/creating-workers/shared-workers-and-the-sharedworker-interface.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/web-workers/infrastructure/creating-workers/shared-workers-and-the-sharedworker-interface.zh.html?filename=shared-workers-and-the-sharedworker-interface.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fweb-workers%2Finfrastructure%2Fcreating-workers%2Fshared-workers-and-the-sharedworker-interface.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  <pre><code class=idl>[Exposed=Window]
+interface <dfn id=sharedworker-2>SharedWorker</dfn> : <a id=shared-workers-and-the-sharedworker-interface:eventtarget href=https://dom.spec.whatwg.org/#interface-eventtarget data-x-internal=eventtarget>EventTarget</a> {
+  <a href=#dom-sharedworker id=shared-workers-and-the-sharedworker-interface:dom-sharedworker>constructor</a>(USVString scriptURL, optional (DOMString or <a href=#workeroptions id=shared-workers-and-the-sharedworker-interface:workeroptions>WorkerOptions</a>) options = {});
+
+  readonly attribute <a id=shared-workers-and-the-sharedworker-interface:messageport href=web-messaging.html#messageport>MessagePort</a> <a href=#dom-sharedworker-port id=shared-workers-and-the-sharedworker-interface:dom-sharedworker-port>port</a>;
+};
+<a href=#sharedworker-2 id=shared-workers-and-the-sharedworker-interface:sharedworker-2>SharedWorker</a> includes <a href=#abstractworker id=shared-workers-and-the-sharedworker-interface:abstractworker>AbstractWorker</a>;</code></pre>
+
+  <dl class=domintro><dt><var>sharedWorker</var> = new <code id=dom-sharedworker>SharedWorker</code>(<var>scriptURL</var> [, <var>name</var> ])<div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker/SharedWorker title="The SharedWorker() constructor creates a SharedWorker object that executes the script at the specified URL. This script must obey the same-origin policy.">SharedWorker/SharedWorker</a><div class=support><span class="firefox yes"><span>Firefox</span><span>29+</span></span><span class="safari no"><span>Safari</span><span>5–6.1</span></span><span class="chrome yes"><span>Chrome</span><span>4+</span></span><hr><span class="opera yes"><span>Opera</span><span>10.6+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>33+</span></span><span class="safari_ios no"><span>Safari iOS</span><span>5.1–7</span></span><span class="chrome_android no"><span>Chrome Android</span><span>No</span></span><span class="webview_android no"><span>WebView Android</span><span>No</span></span><span class="samsunginternet_android no"><span>Samsung Internet</span><span>4.0–5.0</span></span><span class="opera_android no"><span>Opera Android</span><span>11–14</span></span></div></div></div><dd>Returns a new <code id=shared-workers-and-the-sharedworker-interface:sharedworker-2-2><a href=#sharedworker-2>SharedWorker</a></code> object. <var>scriptURL</var> will be fetched and
+   executed in the background, creating a new global environment for which <var>sharedWorker</var>
+   represents the communication channel. <var>name</var> can be used to define the <a href=#concept-workerglobalscope-name id=shared-workers-and-the-sharedworker-interface:concept-workerglobalscope-name>name</a> of that global environment.<dt><var>sharedWorker</var> = new <code id=shared-workers-and-the-sharedworker-interface:dom-sharedworker-2><a href=#dom-sharedworker>SharedWorker</a></code>(<var>scriptURL</var> [, <var>options</var> ])<dd>Returns a new <code id=shared-workers-and-the-sharedworker-interface:sharedworker-2-3><a href=#sharedworker-2>SharedWorker</a></code> object. <var>scriptURL</var> will be fetched and
+   executed in the background, creating a new global environment for which <var>sharedWorker</var>
+   represents the communication channel. <var>options</var> can be used to define the <a href=#concept-workerglobalscope-name id=shared-workers-and-the-sharedworker-interface:concept-workerglobalscope-name-2>name</a> of that global environment via the <code>name</code> option. It can also ensure this new global environment supports JavaScript
+   modules (specify <code>type: "module"</code>), and if that is specified, can also be
+   used to specify how <var>scriptURL</var> is fetched through the <code>credentials</code> option. Note that attempting to construct a shared worker with
+   <var>options</var> whose <code>type</code> or <code>credentials</code>
+   values mismatch an existing shared worker will cause the returned <var>sharedWorker</var> to
+   fire an error event and not connect to the existing shared worker.<dt><var>sharedWorker</var> . <code id=dom-sharedworker-port>port</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker/port title="The port property of the SharedWorker interface returns a MessagePort object used to communicate and control the shared worker.">SharedWorker/port</a><div class=support><span class="firefox yes"><span>Firefox</span><span>29+</span></span><span class="safari no"><span>Safari</span><span>5–6.1</span></span><span class="chrome yes"><span>Chrome</span><span>4+</span></span><hr><span class="opera yes"><span>Opera</span><span>10.6+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>33+</span></span><span class="safari_ios no"><span>Safari iOS</span><span>5.1–7</span></span><span class="chrome_android no"><span>Chrome Android</span><span>No</span></span><span class="webview_android no"><span>WebView Android</span><span>No</span></span><span class="samsunginternet_android no"><span>Samsung Internet</span><span>4.0–5.0</span></span><span class="opera_android no"><span>Opera Android</span><span>11–14</span></span></div></div></div><dd>Returns <var>sharedWorker</var>'s <code id=shared-workers-and-the-sharedworker-interface:messageport-2><a href=web-messaging.html#messageport>MessagePort</a></code> object which can be used to
+   communicate with the global environment.</dl>
+
+  
+
+
+
+  <h4 id=navigator.hardwareconcurrency><span class=secno>10.2.5</span> Concurrent hardware capabilities<a href=#navigator.hardwareconcurrency class=self-link></a></h4><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/NavigatorConcurrentHardware title="The NavigatorConcurrentHardware mixin adds to the Navigator interface features which allow Web content to determine how many logical processors the user has available, in order to let content and Web apps optimize their operations to best take advantage of the user's CPU.">NavigatorConcurrentHardware</a><div class=support><span class="firefox yes"><span>Firefox</span><span>48+</span></span><span class="safari unknown"><span>Safari</span><span>?</span></span><span class="chrome yes"><span>Chrome</span><span>37+</span></span><hr><span class="opera yes"><span>Opera</span><span>24+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>18</span></span><span class="ie unknown"><span>Internet Explorer</span><span>?</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>48+</span></span><span class="safari_ios unknown"><span>Safari iOS</span><span>?</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>37+</span></span><span class="webview_android yes"><span>WebView Android</span><span>37+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>3.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>24+</span></span><hr><span class=caniuse><span><a href="https://caniuse.com/#feat=hardwareconcurrency" title=navigator.hardwareConcurrency>caniuse.com table</a></span></span></div></div></div>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/web-workers/infrastructure/concurrent-hardware-capabilities.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/web-workers/infrastructure/concurrent-hardware-capabilities.zh.html?filename=concurrent-hardware-capabilities.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fweb-workers%2Finfrastructure%2Fconcurrent-hardware-capabilities.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  <pre><code class=idl>interface mixin <dfn id=navigatorconcurrenthardware>NavigatorConcurrentHardware</dfn> {
+  readonly attribute unsigned long long <a href=#dom-navigator-hardwareconcurrency id=navigator.hardwareconcurrency:dom-navigator-hardwareconcurrency>hardwareConcurrency</a>;
+};</code></pre>
+
+  <dl class=domintro><dt><var>self</var> . <code>navigator</code> . <code id=dom-navigator-hardwareconcurrency>hardwareConcurrency</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/NavigatorConcurrentHardware/hardwareConcurrency title="The navigator.hardwareConcurrency read-only property returns the number of logical processors available to run threads on the user's computer.">NavigatorConcurrentHardware/hardwareConcurrency</a><div class=support><span class="firefox yes"><span>Firefox</span><span>48+</span></span><span class="safari unknown"><span>Safari</span><span>?</span></span><span class="chrome yes"><span>Chrome</span><span>37+</span></span><hr><span class="opera yes"><span>Opera</span><span>24+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>15+</span></span><span class="ie unknown"><span>Internet Explorer</span><span>?</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>48+</span></span><span class="safari_ios unknown"><span>Safari iOS</span><span>?</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>37+</span></span><span class="webview_android yes"><span>WebView Android</span><span>37+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>3.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>24+</span></span></div></div></div><dd><p>Returns the number of logical processors potentially available to the user agent.</dl>
+
+  
+
+
+  <h3 id=worker-中可用的-api><span class=secno>10.3</span> Worker 中可用的 API<a href=#worker-中可用的-api class=self-link></a></h3>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Wed Feb 28 2018 16:23:38 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/web-workers/apis-available-to-workers/index.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/web-workers/apis-available-to-workers/index.zh.html></div>
+
+  
+
+
+
+  <h4 id=the-workernavigator-object><span class=secno>10.3.1</span> The <code id=workernavigator><a href=#workernavigator-2>WorkerNavigator</a></code> interface<a href=#the-workernavigator-object class=self-link></a></h4><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator title="The WorkerNavigator interface represents a subset of the Navigator interface allowed to be accessed from a Worker. Such an object is initialized for each worker and is available via the WorkerGlobalScope.navigator property obtained by calling window.self.navigator.">WorkerNavigator</a><div class=support><span class="firefox yes"><span>Firefox</span><span>3.5+</span></span><span class="safari unknown"><span>Safari</span><span>?</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie unknown"><span>Internet Explorer</span><span>?</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios unknown"><span>Safari iOS</span><span>?</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/web-workers/apis-available-to-workers/the-workernavigator-interface.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/web-workers/apis-available-to-workers/the-workernavigator-interface.zh.html?filename=the-workernavigator-interface.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fweb-workers%2Fapis-available-to-workers%2Fthe-workernavigator-interface.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  
+
+  <pre><code class=idl>[Exposed=Worker]
+interface <dfn id=workernavigator-2>WorkerNavigator</dfn> {};
+<a href=#workernavigator-2 id=the-workernavigator-object:workernavigator-2>WorkerNavigator</a> includes <a id=the-workernavigator-object:navigatorid href=system-state.html#navigatorid>NavigatorID</a>;
+<a href=#workernavigator-2 id=the-workernavigator-object:workernavigator-2-2>WorkerNavigator</a> includes <a id=the-workernavigator-object:navigatorlanguage href=system-state.html#navigatorlanguage>NavigatorLanguage</a>;
+<a href=#workernavigator-2 id=the-workernavigator-object:workernavigator-2-3>WorkerNavigator</a> includes <a id=the-workernavigator-object:navigatoronline href=offline.html#navigatoronline>NavigatorOnLine</a>;
+<a href=#workernavigator-2 id=the-workernavigator-object:workernavigator-2-4>WorkerNavigator</a> includes <a href=#navigatorconcurrenthardware id=the-workernavigator-object:navigatorconcurrenthardware>NavigatorConcurrentHardware</a>;</code></pre>
+
+  <div>
+
+  <p>The <code id=the-workernavigator-object:workernavigator-2-5><a href=#workernavigator-2>WorkerNavigator</a></code> interface implements a subset of the <code id=the-workernavigator-object:navigator><a href=system-state.html#navigator>Navigator</a></code>
+  interface, consisting of the following APIs:</p>
+
+  <ul class=brief><li><a href=system-state.html#client-identification>Client identification</a><li><a href=system-state.html#language-preferences>Language preferences</a><li><a href=offline.html#navigator.online>Browser state</a><li><a href=#navigator.hardwareconcurrency>Concurrent hardware capabilities</a></ul>
+
+  </div>
+
+
+  <h4 id=worker-locations><span class=secno>10.3.2</span> The <code id=workerlocation><a href=#workerlocation-2>WorkerLocation</a></code> interface<a href=#worker-locations class=self-link></a></h4><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/WorkerLocation title="The WorkerLocation interface defines the absolute location of the script executed by the Worker. Such an object is initialized for each worker and is available via the WorkerGlobalScope.location property obtained by calling self.location.">WorkerLocation</a><div class=support><span class="firefox yes"><span>Firefox</span><span>3.5+</span></span><span class="safari unknown"><span>Safari</span><span>?</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie unknown"><span>Internet Explorer</span><span>?</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios unknown"><span>Safari iOS</span><span>?</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/web-workers/apis-available-to-workers/the-workerlocation-interface.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/web-workers/apis-available-to-workers/the-workerlocation-interface.zh.html?filename=the-workerlocation-interface.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fweb-workers%2Fapis-available-to-workers%2Fthe-workerlocation-interface.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  <pre><code class=idl>[Exposed=Worker]
+interface <dfn id=workerlocation-2>WorkerLocation</dfn> {
+  stringifier readonly attribute USVString <span>href</span>;
+  readonly attribute USVString <span>origin</span>;
+  readonly attribute USVString <span>protocol</span>;
+  readonly attribute USVString <span>host</span>;
+  readonly attribute USVString <span>hostname</span>;
+  readonly attribute USVString <span>port</span>;
+  readonly attribute USVString <span>pathname</span>;
+  readonly attribute USVString <span>search</span>;
+  readonly attribute USVString <span>hash</span>;
+};</code></pre>
+
+  <p>The <code id=worker-locations:workerlocation-2><a href=#workerlocation-2>WorkerLocation</a></code> interface is like the <code id=worker-locations:location><a href=history.html#location>Location</a></code> interface,
+  but lacks the <code id=worker-locations:dom-location-assign><a href=history.html#dom-location-assign>assign()</a></code>, <code id=worker-locations:dom-location-replace><a href=history.html#dom-location-replace>replace()</a></code>, <code id=worker-locations:dom-location-reload><a href=history.html#dom-location-reload>reload()</a></code>,
+  and <code id=worker-locations:dom-location-ancestororigins><a href=history.html#dom-location-ancestororigins>ancestorOrigins</a></code> members.</p>
+
+  
+
+
+
+  <nav><a href=web-messaging.html>← 9.4 跨文档通信</a> — <a href=./>Table of Contents</a> — <a href=worklets.html>11 Worklets →</a></nav>

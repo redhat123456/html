@@ -1,0 +1,677 @@
+<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Standard, Developer's Edition</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/dev/styles.css crossorigin=""><script>
+   function toggleStatus(div) {
+     div.parentNode.classList.toggle('wrapped');
+   }
+   function setLinkFragment(link) {
+     link.hash = location.hash;
+   }
+  </script><body>
+  <script async="" src=/dev/search.js></script>
+  
+  
+  
+  <header id=head class="head with-buttons">
+   <a href=https://whatwg.org/ class=logo><img width=100 alt=WHATWG crossorigin="" src=https://resources.whatwg.org/logo.svg height=100></a>
+   
+   <hgroup><h1><a rel=home href=/dev/>HTML: The Living Standard</a></h1><h2 id="developer's-edition-—-last-updated-date:-01-jan-1901" class="no-num no-toc">Developer's Edition — Last Updated <span class=pubdate>6 November 2020</span></h2><div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/developers-edition-mdash-last-updated-date-01-jan-1901.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/developers-edition-mdash-last-updated-date-01-jan-1901.zh.html></div></hgroup>
+   
+   <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-91053840-1', 'auto');
+      ga('send', 'pageview');
+   </script>
+  </header>
+
+  
+
+  
+
+
+  
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/table-of-contents.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/table-of-contents.zh.html></div>
+  
+
+
+  
+<div data-en-date="Sat Aug 11 2018 08:00:56 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/full-table-of-contents.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/full-table-of-contents.zh.html></div>
+  
+
+  
+
+  
+
+
+  <h2 id=about-dev-edition class="no-num no-toc">关于本标准</h2>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/about-this-specification.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/about-this-specification.zh.html></div>
+
+  <p>本标准与其他标准不同，它的处理完全考虑到了 Web 开发者。</p>
+
+  <p>本标准关注可读性和可访问性，不像 <a href=/multipage/>完整的 HTML 标准</a>，"开发者版本" 移除了
+  只有浏览器厂商需要知道的信息。它个版本是用我们的构建工具从完整的规范自动产出的，
+  因此总会与最新开发的 HTML 保持同步。</p>
+
+  <p>其概念、构造，以及未来可参考 <a href=http://web.archive.org/web/20150220020906/http://archive.germanforblack.com:80/articles/html5-for-web-developers>
+  原始出版发行</a>，以及 <a href=https://blog.whatwg.org/developers-edition-comeback>关于重启该版本的博文</a>。</p>
+
+  <p>最后，欢迎 <a href=https://github.com/whatwg/html/labels/dev%20edition>在 GitHub 贡献</a> 来改进该版本！</p>
+
+  
+
+
+  <nav><a href=browsing-the-web.html>← 7.8 Browsing the web</a> — <a href=./>Table of Contents</a> — <a href=webappapis.html>8 Web 应用 API →</a></nav><ol class=toc><li><ol><li><a href=offline.html#offline><span class=secno>7.9</span> Offline web applications</a><ol><li><a href=offline.html#概述-3><span class=secno>7.9.1</span> 概述</a><ol><li><a href=offline.html#支持遗留应用的离线缓存><span class=secno>7.9.1.1</span> 支持遗留应用的离线缓存</a><li><a href=offline.html#appcacheevents><span class=secno>7.9.1.2</span> Events summary</a></ol><li><a href=offline.html#manifests><span class=secno>7.9.2</span> 缓存清单语法</a><ol><li><a href=offline.html#一些示例清单><span class=secno>7.9.2.1</span> 一些示例清单</a><li><a href=offline.html#writing-cache-manifests><span class=secno>7.9.2.2</span> Writing cache manifests</a></ol><li><a href=offline.html#离线应用缓存的安全问题><span class=secno>7.9.3</span>  离线应用缓存的安全问题 </a><li><a href=offline.html#application-cache-api><span class=secno>7.9.4</span> Application cache API</a><li><a href=offline.html#navigator.online><span class=secno>7.9.5</span> Browser state</a></ol></ol></ol><h3 id=offline><span class=secno>7.9</span> Offline web applications<a href=#offline class=self-link></a></h3><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/HTML/Using_the_application_cache title="HTML5 provides an application caching mechanism that lets web applications run offline. This Application Cache (AppCache) interface lists resources that browsers should cache to be available offline. Applications that are cached load and work correctly offline, even if users press the Refresh button.">Using_the_application_cache</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>3.5+</span></span><span class="safari yes"><span>Safari</span><span>4+</span></span><span class="chrome yes"><span>Chrome</span><span>4+</span></span><hr><span class="opera yes"><span>Opera</span><span>10.6+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>10+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>3.2+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>4+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>11+</span></span><hr><span class=caniuse><span><a href="https://caniuse.com/#feat=offline-apps" title="Offline web applications">caniuse.com table</a></span></span></div></div></div>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/loading-web-pages/offline-web-applications/index.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/loading-web-pages/offline-web-applications/index.zh.html?filename=index.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Floading-web-pages%2Foffline-web-applications%2Findex.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div> 
+
+  <p class=critical>This feature is in the process of being removed from the web platform. (This
+  is a long process that takes many years.) Using any of the offline web application features at
+  this time is highly discouraged. Use service workers instead. <a href=references.html#refsSW>[SW]</a></p>
+
+  
+
+
+  <h4 id=概述-3><span class=secno>7.9.1</span> 概述<a href=#概述-3 class=self-link></a></h4>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/loading-web-pages/offline-web-applications/introduction/index.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/loading-web-pages/offline-web-applications/introduction/index.zh.html></div>
+
+  
+
+  <p>为了使用户在网络连接不可用时，仍然继续与 Web 应用和文档交互 — 例如，
+  因为他们在其 ISP 覆盖外旅行时 — 作者可以提供一个清单，列出 Web 应用离线工作需要的文件列表，
+  用户的浏览器保存一份文件拷贝来供离线使用。</p>
+
+  <p>举个例子，考虑一个简单的时钟应用包括一个，HTML 页面 "<code>clock1.html</code>", 一个 CSS 样式表 "<code>clock.css</code>"，和一个
+  JavaScript 脚本 "<code>clock.js</code>"。</p>
+
+  <p>在添加清单之前，这些文件可能看起来像这样：</p>
+
+  <pre>&lt;!-- clock1.html -->
+&lt;!DOCTYPE HTML>
+&lt;html lang="en">
+ &lt;head>
+  &lt;meta charset="utf-8">
+  &lt;title>Clock&lt;/title>
+  &lt;script src="clock.js">&lt;/script>
+  &lt;link rel="stylesheet" href="clock.css">
+ &lt;/head>
+ &lt;body>
+  &lt;p>The time is: &lt;output id="clock">&lt;/output>&lt;/p>
+ &lt;/body>
+&lt;/html>
+</pre>
+  <pre>/* clock.css */
+output { font: 2em sans-serif; }
+</pre>
+  <pre>/* clock.js */
+setInterval(function () {
+    document.getElementById('clock').value = new Date();
+}, 1000);
+</pre>
+
+  <p>如果用户在离线时尝试打开 "<code>clock1.html</code>" 页面，
+  用户代理（除非恰好它仍然在本地缓存里）将会失败。</p>
+
+  <p>作者可以提供一个这3个文件的清单，比如叫 "<code>clock.appcache</code>"：</p>
+
+  <pre>CACHE MANIFEST
+clock2.html
+clock.css
+clock.js
+</pre>
+
+  <p>稍微改动一下 HTML 文件，把清单（作为 <code>text/cache-manifest</code> 服务）
+  链接到应用：</p>
+
+  <pre>&lt;!-- clock2.html -->
+&lt;!DOCTYPE HTML>
+&lt;html lang="en" manifest="clock.appcache">
+ &lt;head>
+  &lt;meta charset="utf-8">
+  &lt;title>Clock&lt;/title>
+  &lt;script src="clock.js">&lt;/script>
+  &lt;link rel="stylesheet" href="clock.css">
+ &lt;/head>
+ &lt;body>
+  &lt;p>The time is: &lt;output id="clock">&lt;/output>&lt;/p>
+ &lt;/body>
+&lt;/html>
+</pre>
+
+  <p>现在，如果用户进入这个页面，浏览器会缓存这些文件并让它们在用户离线时仍然可用。</p>
+
+  <p class=note>鼓励作者在清单文件中包含一个主页面，但实践中引用清单文件的页面会被自动缓存，
+  即使没有显式地提到它。</p>
+
+  <p class=note>除了 "no-store" 指令之外，HTTP 缓存头和
+  TLS（加密的，使用 <code id=概述-3:https-protocol><a data-x-internal=https-protocol href=https://tools.ietf.org/html/rfc7230#section-2.7.2>https:</a></code>）
+  上的页面缓存限制都会被清单覆盖。
+  因此从应用缓存来的页面在用户代理更新它之前不会过期，即使是 TLS 下的应用也可以离线工作。</p>
+
+  <p><a href=/demos/offline/clock/clock2.html>在线查看该示例</a>。</p>
+
+
+
+
+  <h5 id=支持遗留应用的离线缓存><span class=secno>7.9.1.1</span> 支持遗留应用的离线缓存<a href=#支持遗留应用的离线缓存 class=self-link></a></h5>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/loading-web-pages/offline-web-applications/introduction/supporting-offline-caching-for-legacy-applications.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/loading-web-pages/offline-web-applications/introduction/supporting-offline-caching-for-legacy-applications.zh.html></div>
+
+  
+
+  <p>应用缓存特性的最佳使用状态是应用逻辑与应用和用户数据分离，逻辑（HTML、脚本、样式、图片等）
+  列在清单里存储到应用缓存，应用的静态 HTML 页面数目是有限的。
+  应用和用户数据存储在 Web Storage 或客户端 Indexed Database 中，通过
+  Web Socket、<code id=支持遗留应用的离线缓存:xmlhttprequest><a data-x-internal=xmlhttprequest href=https://xhr.spec.whatwg.org/#xmlhttprequest>XMLHttpRequest</a></code>、服务器发送的事件、或其他类似机制动态更新。</p>
+
+  <p>利用这一模型可以为用户提供快速的体验：应用瞬间加载（并显示旧数据），网络允许时获取最新数据。</p>
+
+  <p>然而历史应用的设计倾向于把用户数据和逻辑混合在 HTML 中，每个操作会从服务器加载整个 HTML 页面。</p>
+
+  <div class=example>
+
+   <p>例如，考虑一个新闻应用。不使用应用缓存特性时，这样的应用典型的架构是，
+   用户获取主页面，服务器返回一个动态产生的页面，其中混合了当前的头条和用户界面逻辑。</p>
+
+   <p>但是为应用缓存特性设计的新闻应用会让主页面只包含逻辑，
+   在主页面中（比如使用<code id=支持遗留应用的离线缓存:xmlhttprequest-2><a data-x-internal=xmlhttprequest href=https://xhr.spec.whatwg.org/#xmlhttprequest>XMLHttpRequest</a></code>）独立地从服务器获取数据。</p>
+
+  </div>
+
+  <p>混合内容模型不适用于应用程序缓存功能：由于内容被缓存，因此用户总是会看到上次更新缓存时的旧数据。</p>
+
+  <p>虽然没办法让遗留的模型与分离模型一样快，但至少
+  <em>可以</em> 通过 <span>prefer-online</span>
+  <span>应用缓存模式</span> 让它支持离线使用。
+  为此，在 <span>拥有缓存清单</span>
+  中列出 HTML 页面中你希望离线使用的所有静态资源，
+  在 HTML 文件中通过 <code id=支持遗留应用的离线缓存:attr-html-manifest><a href=semantics.html#attr-html-manifest>manifest</a></code>
+  属性来选择清单文件，然后添加下列行到清单底部：</p>
+
+  <pre>SETTINGS:
+prefer-online
+NETWORK:
+*</pre>
+
+  <p>这会使 <span>应用缓存</span> 在用户离线时只用于 <span>主入口</span>，
+  使得应用缓存可以用作原子性的 HTTP 缓存（只对清单中列出的资源有效），
+  同时其余没列出的资源当用户在线时可正常访问。</p>
+
+
+
+
+  <h5 id=appcacheevents><span class=secno>7.9.1.2</span> Events summary<a href=#appcacheevents class=self-link></a></h5>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/loading-web-pages/offline-web-applications/introduction/events-summary.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/loading-web-pages/offline-web-applications/introduction/events-summary.zh.html?filename=events-summary.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Floading-web-pages%2Foffline-web-applications%2Fintroduction%2Fevents-summary.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  
+
+  <p>When the user visits a page that declares a manifest, the browser will try to update the cache.
+  It does this by fetching a copy of the manifest and, if the manifest has changed since the user
+  agent last saw it, redownloading all the resources it mentions and caching them anew.</p>
+
+  <p>As this is going on, a number of events get fired on the <code id=appcacheevents:applicationcache><a href=#applicationcache>ApplicationCache</a></code> object
+  to keep the script updated as to the state of the cache update, so that the user can be notified
+  appropriately. The events are as follows:</p>
+
+  <table><thead><tr><th> Event name
+     <th> Interface
+     <th> Fired when...
+     <th> Next events
+   <tbody><tr><td> <dfn data-dfn-for=ApplicationCache id=event-appcache-checking data-dfn-type=event><code>checking</code></dfn>
+     <td> <code id=appcacheevents:event><a data-x-internal=event href=https://dom.spec.whatwg.org/#interface-event>Event</a></code>
+     <td> The user agent is checking for an update, or attempting to download the manifest for the
+          first time. <strong>This is always the first event in the sequence.</strong>
+     <td> <code id=appcacheevents:event-appcache-noupdate><a href=#event-appcache-noupdate>noupdate</a></code>, <code id=appcacheevents:event-appcache-downloading><a href=#event-appcache-downloading>downloading</a></code>, <code id=appcacheevents:event-appcache-obsolete><a href=#event-appcache-obsolete>obsolete</a></code>, <code id=appcacheevents:event-appcache-error><a href=#event-appcache-error>error</a></code>
+
+    <tr><td> <dfn data-dfn-for=ApplicationCache id=event-appcache-noupdate data-dfn-type=event><code>noupdate</code></dfn>
+     <td> <code id=appcacheevents:event-2><a data-x-internal=event href=https://dom.spec.whatwg.org/#interface-event>Event</a></code>
+     <td> The manifest hadn't changed.
+     <td> Last event in sequence.
+
+    <tr><td> <dfn data-dfn-for=ApplicationCache id=event-appcache-downloading data-dfn-type=event><code>downloading</code></dfn>
+     <td> <code id=appcacheevents:event-3><a data-x-internal=event href=https://dom.spec.whatwg.org/#interface-event>Event</a></code>
+     <td> The user agent has found an update and is fetching it, or is downloading the resources
+          listed by the manifest for the first time.
+     <td> <code id=appcacheevents:event-appcache-progress><a href=#event-appcache-progress>progress</a></code>, <code id=appcacheevents:event-appcache-error-2><a href=#event-appcache-error>error</a></code>, <code id=appcacheevents:event-appcache-cached><a href=#event-appcache-cached>cached</a></code>, <code id=appcacheevents:event-appcache-updateready><a href=#event-appcache-updateready>updateready</a></code>
+
+    <tr><td> <dfn data-dfn-for=ApplicationCache id=event-appcache-progress data-dfn-type=event><code>progress</code></dfn>
+     <td> <code id=appcacheevents:progressevent><a data-x-internal=progressevent href=https://xhr.spec.whatwg.org/#interface-progressevent>ProgressEvent</a></code>
+     <td> The user agent is downloading resources listed by the manifest.
+          The event object's <code id=appcacheevents:dom-progressevent-total><a data-x-internal=dom-progressevent-total href=https://xhr.spec.whatwg.org/#dom-progressevent-total>total</a></code> attribute returns the total number of files to be downloaded.
+          The event object's <code id=appcacheevents:dom-progressevent-loaded><a data-x-internal=dom-progressevent-loaded href=https://xhr.spec.whatwg.org/#dom-progressevent-loaded>loaded</a></code> attribute returns the number of files processed so far.
+     <td> <code id=appcacheevents:event-appcache-progress-2><a href=#event-appcache-progress>progress</a></code>, <code id=appcacheevents:event-appcache-error-3><a href=#event-appcache-error>error</a></code>, <code id=appcacheevents:event-appcache-cached-2><a href=#event-appcache-cached>cached</a></code>, <code id=appcacheevents:event-appcache-updateready-2><a href=#event-appcache-updateready>updateready</a></code>
+
+    <tr><td> <dfn data-dfn-for=ApplicationCache id=event-appcache-cached data-dfn-type=event><code>cached</code></dfn>
+     <td> <code id=appcacheevents:event-4><a data-x-internal=event href=https://dom.spec.whatwg.org/#interface-event>Event</a></code>
+     <td> The resources listed in the manifest have been downloaded, and the application is now cached.
+     <td> Last event in sequence.
+
+    <tr><td> <dfn data-dfn-for=ApplicationCache id=event-appcache-updateready data-dfn-type=event><code>updateready</code></dfn>
+     <td> <code id=appcacheevents:event-5><a data-x-internal=event href=https://dom.spec.whatwg.org/#interface-event>Event</a></code>
+     <td> The resources listed in the manifest have been newly redownloaded, and the script can use
+          <code id=appcacheevents:dom-appcache-swapcache><a href=#dom-appcache-swapcache>swapCache()</a></code> to switch to the new cache.
+     <td> Last event in sequence.
+
+    <tr><td> <dfn data-dfn-for=ApplicationCache id=event-appcache-obsolete data-dfn-type=event><code>obsolete</code></dfn>
+     <td> <code id=appcacheevents:event-6><a data-x-internal=event href=https://dom.spec.whatwg.org/#interface-event>Event</a></code>
+     <td> The manifest was found to have become a 404 or 410 page, so the application cache is being deleted.
+     <td> Last event in sequence.
+
+    <tr><td rowspan=4> <dfn data-dfn-for=ApplicationCache id=event-appcache-error data-dfn-type=event><code>error</code></dfn>
+     <td rowspan=4> <code id=appcacheevents:event-7><a data-x-internal=event href=https://dom.spec.whatwg.org/#interface-event>Event</a></code>
+     <td> The manifest was a 404 or 410 page, so the attempt to cache the application has been aborted.
+     <td rowspan=3> Last event in sequence.
+
+    <tr><td> The manifest hadn't changed, but the page referencing the manifest failed to download properly.
+
+    <tr><td> A fatal error occurred while fetching the resources listed in the manifest.
+
+    <tr><td> The manifest changed while the update was being run.
+     <td> The user agent will try fetching the files again momentarily.
+
+  </table>
+
+  <p>These events are cancelable; their default action is for the user agent to show download
+  progress information. If the page shows its own update UI, canceling the events will prevent the
+  user agent from showing redundant progress information.</p>
+
+
+
+  
+
+
+
+
+  <h4 id=manifests><span class=secno>7.9.2</span> 缓存清单语法<a href=#manifests class=self-link></a></h4>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/loading-web-pages/offline-web-applications/the-cache-manifest-syntax/index.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/loading-web-pages/offline-web-applications/the-cache-manifest-syntax/index.zh.html></div>
+
+
+
+  <h5 id=一些示例清单><span class=secno>7.9.2.1</span> 一些示例清单<a href=#一些示例清单 class=self-link></a></h5>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Wed Feb 28 2018 16:23:38 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/loading-web-pages/offline-web-applications/the-cache-manifest-syntax/some-sample-manifests.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/loading-web-pages/offline-web-applications/the-cache-manifest-syntax/some-sample-manifests.zh.html></div>
+
+  
+
+  <div class=example>
+
+   <p>这个示例清单要求缓存两个图片和一个样式表，并把一个 CGI 脚本加入安全列表。</p>
+
+   <pre>CACHE MANIFEST
+# the above line is required
+
+# this is a comment
+# there can be as many of these anywhere in the file
+# they are all ignored
+  # comments can have spaces before them
+  # but must be alone on the line
+
+# blank lines are ignored too
+
+# these are files that need to be cached they can either be listed
+# first, or a "CACHE:" header could be put before them, as is done
+# lower down.
+images/sound-icon.png
+images/background.png
+# note that each file has to be put on its own line
+
+# here is a file for the online safelist -- it isn't cached, and
+# references to this file will bypass the cache, always hitting the
+# network (or trying to, if the user is offline).
+NETWORK:
+comm.cgi
+
+# here is another set of files to cache, this time just the CSS file.
+CACHE:
+style/default.css</pre>
+
+   <p>下列写法是等效的：</p>
+
+   <pre>CACHE MANIFEST
+NETWORK:
+comm.cgi
+CACHE:
+style/default.css
+images/sound-icon.png
+images/background.png</pre>
+
+  </div>
+
+  <div class=example>
+
+   <p>离线应用缓存清单可以使用绝对路径，甚至绝对 URL：</p>
+
+   <pre>CACHE MANIFEST
+
+/main/home
+/main/app.js
+/settings/home
+/settings/app.js
+https://img.example.com/logo.png
+https://img.example.com/check.png
+https://img.example.com/cross.png</pre>
+
+  </div>
+
+  <div class=example>
+
+   <p>以下清单定义了一个捕获所有错误的页面，用户离线时用于所有页面的显示。
+   还指定了<span>在线安全列表通配标志</span>
+   为 <i>open</i>，意味着不会阻止对外站资源的访问。
+   （由于捕获所有错误的 fallback 命名空间，站内资源的访问也不会被阻止）</p>
+
+   <p>只要站点的所有页面都引用这个清单，它们被获取后就会缓存到本地，
+   后续访问同一页面时就会立即从缓存加载。
+   除非清单发生了变化，那些页面不会再从服务器获取。
+   当清单改变时，所有文件都会重新下载。</p>
+
+   <p>但是子资源（比如样式表、图片等）只会使用普通的 HTTP 缓存语义进行缓存。</p>
+
+   <pre>CACHE MANIFEST
+FALLBACK:
+/ /offline.html
+NETWORK:
+*</pre>
+
+  </div>
+
+
+
+
+  <h5 id=writing-cache-manifests><span class=secno>7.9.2.2</span> Writing cache manifests<a href=#writing-cache-manifests class=self-link></a></h5>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/loading-web-pages/offline-web-applications/the-cache-manifest-syntax/writing-cache-manifests.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/loading-web-pages/offline-web-applications/the-cache-manifest-syntax/writing-cache-manifests.zh.html?filename=writing-cache-manifests.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Floading-web-pages%2Foffline-web-applications%2Fthe-cache-manifest-syntax%2Fwriting-cache-manifests.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  <p>Manifests must be served using the <code>text/cache-manifest</code> <a id=writing-cache-manifests:mime-type href=https://mimesniff.spec.whatwg.org/#mime-type data-x-internal=mime-type>MIME type</a>. All
+  resources served using the <code>text/cache-manifest</code> <a id=writing-cache-manifests:mime-type-2 href=https://mimesniff.spec.whatwg.org/#mime-type data-x-internal=mime-type>MIME type</a> must follow the
+  syntax of application cache manifests, as described in this section.</p>
+
+  <p>An application cache manifest is a text file, whose text is encoded using UTF-8. Data in
+  application cache manifests is line-based. Newlines must be represented by U+000A LINE FEED (LF)
+  characters, U+000D CARRIAGE RETURN (CR) characters, or U+000D CARRIAGE RETURN (CR) U+000A LINE
+  FEED (LF) pairs. <a href=references.html#refsENCODING>[ENCODING]</a></p>
+
+  <p class=note>This is a <a id=writing-cache-manifests:willful-violation href=introduction.html#willful-violation>willful violation</a> of RFC 2046, which requires all <code>text/*</code> types to only allow CRLF line breaks. This requirement, however, is
+  outdated; the use of CR, LF, and CRLF line breaks is commonly supported and indeed sometimes CRLF
+  is <em>not</em> supported by text editors. <a href=references.html#refsRFC2046>[RFC2046]</a></p>
+
+  <p>The first line of an application cache manifest must consist of the string "CACHE", a single
+  U+0020 SPACE character, the string "MANIFEST", and either a U+0020 SPACE character, a U+0009
+  CHARACTER TABULATION (tab) character, a U+000A LINE FEED (LF) character, or a U+000D CARRIAGE
+  RETURN (CR) character. The first line may optionally be preceded by a U+FEFF BYTE ORDER MARK (BOM)
+  character. If any other text is found on the first line, it is ignored.</p>
+
+  <p>Subsequent lines, if any, must all be one of the following:</p>
+
+  <dl><dt>A blank line
+   <dd>
+    <p>Blank lines must consist of zero or more U+0020 SPACE and
+    U+0009 CHARACTER TABULATION (tab) characters only.</p>
+
+   <dt>A comment
+   <dd>
+    <p>Comment lines must consist of zero or more U+0020 SPACE and U+0009 CHARACTER TABULATION (tab)
+    characters, followed by a single U+0023 NUMBER SIGN character (#), followed by zero or more
+    characters other than U+000A LINE FEED (LF) and U+000D CARRIAGE RETURN (CR) characters.</p>
+
+    <p class=note>Comments need to be on a line on their own. If they were to be included on a
+    line with a URL, the "#" would be mistaken for part of a <a href=https://url.spec.whatwg.org/#concept-url-fragment id=writing-cache-manifests:concept-url-fragment data-x-internal=concept-url-fragment>fragment</a>.</p>
+
+   <dt>A section header
+   <dd>
+    <p>Section headers change the current section. There are four possible section headers:
+
+    <dl><dt><code>CACHE:</code>
+     <dd>Switches to the <dfn id=concept-appcache-manifest-explicit>explicit section</dfn>.
+
+     <dt><code>FALLBACK:</code>
+     <dd>Switches to the <dfn id=concept-appcache-manifest-fallback>fallback section</dfn>.
+
+     <dt><code>NETWORK:</code>
+     <dd>Switches to the <dfn id=concept-appcache-manifest-network>online safelist section</dfn>.
+
+     <dt><code>SETTINGS:</code>
+     <dd>Switches to the <dfn id=concept-appcache-manifest-settings>settings section</dfn>.
+    </dl>
+
+    <p>Section header lines must consist of zero or more U+0020 SPACE and U+0009 CHARACTER
+    TABULATION (tab) characters, followed by one of the names above (including the U+003A COLON
+    character (:)) followed by zero or more U+0020 SPACE and U+0009 CHARACTER TABULATION (tab)
+    characters.</p>
+
+    <p>Ironically, by default, the current section is the <a href=#concept-appcache-manifest-explicit id=writing-cache-manifests:concept-appcache-manifest-explicit>explicit section</a>.</p>
+
+   <dt>Data for the current section
+   <dd>
+    <p>The format that data lines must take depends on the current section.</p>
+
+    <p>When the current section is the <a href=#concept-appcache-manifest-explicit id=writing-cache-manifests:concept-appcache-manifest-explicit-2>explicit
+    section</a>, data lines must consist of zero or more U+0020 SPACE and U+0009 CHARACTER
+    TABULATION (tab) characters, a <a id=writing-cache-manifests:valid-url-string href=https://url.spec.whatwg.org/#valid-url-string data-x-internal=valid-url-string>valid URL string</a> identifying a resource other than
+    the manifest itself, and then zero or more U+0020 SPACE and U+0009 CHARACTER TABULATION (tab)
+    characters.</p>
+
+    <p>When the current section is the <a href=#concept-appcache-manifest-fallback id=writing-cache-manifests:concept-appcache-manifest-fallback>fallback
+    section</a>, data lines must consist of zero or more U+0020 SPACE and U+0009 CHARACTER
+    TABULATION (tab) characters, a <a id=writing-cache-manifests:valid-url-string-2 href=https://url.spec.whatwg.org/#valid-url-string data-x-internal=valid-url-string>valid URL string</a> identifying a resource other than
+    the manifest itself, one or more U+0020 SPACE and U+0009 CHARACTER TABULATION (tab) characters,
+    another <a id=writing-cache-manifests:valid-url-string-3 href=https://url.spec.whatwg.org/#valid-url-string data-x-internal=valid-url-string>valid URL string</a> identifying a resource other than the manifest itself, and
+    then zero or more U+0020 SPACE and U+0009 CHARACTER TABULATION (tab) characters.</p>
+
+    <p>When the current section is the <a href=#concept-appcache-manifest-network id=writing-cache-manifests:concept-appcache-manifest-network>online
+    safelist section</a>, data lines must consist of zero or more U+0020 SPACE and U+0009
+    CHARACTER TABULATION (tab) characters, either a single U+002A ASTERISK character (*)  or a <a id=writing-cache-manifests:valid-url-string-4 href=https://url.spec.whatwg.org/#valid-url-string data-x-internal=valid-url-string>valid URL string</a> identifying a
+    resource other than the manifest itself, and then zero or more U+0020 SPACE and U+0009 CHARACTER
+    TABULATION (tab) characters.</p>
+
+    <p>When the current section is the <a href=#concept-appcache-manifest-settings id=writing-cache-manifests:concept-appcache-manifest-settings>settings
+    section</a>, data lines must consist of zero or more U+0020 SPACE and U+0009 CHARACTER
+    TABULATION (tab) characters, a <a href=#concept-appcache-manifest-setting id=writing-cache-manifests:concept-appcache-manifest-setting>setting</a>,
+    and then zero or more U+0020 SPACE and U+0009 CHARACTER TABULATION (tab) characters.</p>
+
+    <p>Currently only one <dfn id=concept-appcache-manifest-setting>setting</dfn> is
+    defined:</p>
+
+    <dl><dt>The cache mode setting<dd>This consists of the string "<code>prefer-online</code>". It sets the <span>cache mode</span> to <span>prefer-online</span>. (The <span>cache mode</span> defaults to <span>fast</span>.)</dl>
+
+    <p>Within a <a href=#concept-appcache-manifest-settings id=writing-cache-manifests:concept-appcache-manifest-settings-2>settings section</a>, each <a href=#concept-appcache-manifest-setting id=writing-cache-manifests:concept-appcache-manifest-setting-2>setting</a> must occur no more than once.</p>
+
+
+  </dl>
+
+  <p>Manifests may contain sections more than once. Sections may be empty.</p>
+
+  <p>URLs that are to be fallback pages associated with <span>fallback namespaces</span>, and those namespaces themselves,
+  must be given in <a href=#concept-appcache-manifest-fallback id=writing-cache-manifests:concept-appcache-manifest-fallback-2>fallback sections</a>, with
+  the namespace being the first URL of the data line, and the corresponding fallback page being the
+  second URL. All the other pages to be cached must be listed in <a href=#concept-appcache-manifest-explicit id=writing-cache-manifests:concept-appcache-manifest-explicit-3>explicit sections</a>.</p>
+
+  <p><span>Fallback namespaces</span> and <span>fallback entries</span> must have the <span>same origin</span>
+  as the manifest itself. <span>Fallback namespaces</span>
+  must also be in the same path as the manifest's URL.</p>
+
+  <p>A <span>fallback namespace</span> must not be listed more
+  than once.</p>
+
+  <p>Namespaces that the user agent is to put into the <span>online safelist</span> must all be specified in <a href=#concept-appcache-manifest-network id=writing-cache-manifests:concept-appcache-manifest-network-2>online safelist sections</a>. (This is needed for
+  any URL that the page is intending to use to communicate back to the server.) To specify that all
+  URLs are automatically safelisted in this way, a U+002A ASTERISK character (*) may be specified
+  as one of the URLs. </p>
+
+  <p>Authors should not include namespaces in the <span>online safelist</span> for which another namespace in
+  the <span>online safelist</span> is a <a id=writing-cache-manifests:prefix-match href=infrastructure.html#prefix-match>prefix
+  match</a>.</p>
+
+  <p><a href=https://url.spec.whatwg.org/#syntax-url-relative id=writing-cache-manifests:relative-url data-x-internal=relative-url>Relative URLs</a> must be given relative to the manifest's own
+  URL. All URLs in the manifest must have the same <a href=https://url.spec.whatwg.org/#concept-url-scheme id=writing-cache-manifests:concept-url-scheme data-x-internal=concept-url-scheme>scheme</a> as
+  the manifest itself (either explicitly or implicitly, through the use of <a href=https://url.spec.whatwg.org/#syntax-url-relative id=writing-cache-manifests:relative-url-2 data-x-internal=relative-url>relative URLs</a>). <a href=references.html#refsURL>[URL]</a></p>
+
+  <p>URLs in manifests must not have <a href=https://url.spec.whatwg.org/#concept-url-fragment id=writing-cache-manifests:concept-url-fragment-2 data-x-internal=concept-url-fragment>fragments</a> (i.e. the
+  U+0023 NUMBER SIGN character isn't allowed in URLs in manifests).</p>
+
+  <p><span>Fallback namespaces</span> and namespaces in the
+  <span>online safelist</span> are matched by <a id=writing-cache-manifests:prefix-match-2 href=infrastructure.html#prefix-match>prefix
+  match</a>.</p>
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  <h4 id=离线应用缓存的安全问题><span class=secno>7.9.3</span>  离线应用缓存的安全问题 <a href=#离线应用缓存的安全问题 class=self-link></a></h4>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/loading-web-pages/offline-web-applications/security-concerns-with-offline-applications-caches.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/loading-web-pages/offline-web-applications/security-concerns-with-offline-applications-caches.zh.html></div>
+
+  
+
+  <p>离线应用程序缓存引入的主要风险是注入攻击可以提升为持久的站点范围页面替换。 这种攻击涉及使用注入漏洞将两个文件上传到受害者站点。 第一个文件是一个应用程序缓存清单，其中只包含指向第二个文件的 Fallback 入口，该文件是一个HTML 页面，其清单声明为第一个文件。 一旦用户被定向到第二个文件，当用户或站点处于离线状态时，对给定 Fallback 命名空间内的任何文件的所有后续访问都将显示该第二个文件。 针对性的 DoS 攻击或 Cookie 炸弹攻击（客户端发送足够多的 Cookie 来导致服务器拒绝处理该请求）可用于确保该网站显示为脱机。</p>
+
+  <p>为了缓解这种情况，清单只能指定与清单本身位于相同路径的 Fallback。这意味着服务器上特定目录中的内容注入上传漏洞只能升级为接管该目录及其子目录。 如果无法将文件注入到根目录，那么就无法接管整个站点。</p>
+
+  <p>如果某个站点遭到这种方式的攻击，则只需删除恶意的清单就可以最终解决问题，因为下次更新清单时，将会得到 404 错误，然后用户代理就会清除缓存。然而，这里的“最终”是关键词。在对用户或服务器的攻击正在进行时，从受影响的用户到受影响的站点的连接已经被阻止，用户代理将简单地假定用户处于离线状态并将继续使用恶意的清单。不幸的是，如果还使用了 Cookie 炸弹攻击，那么仅仅删除清单是不够的；此外，服务器还得配置为返回 404 或 410 响应，而不是 413 “请求实体太大”响应。</p>
+
+  <p>TLS 本身不会保护网站免受此攻击，因为攻击依赖于服务器本身提供的内容。 不使用应用程序缓存也不能阻止这种攻击，因为攻击依赖于攻击者提供的清单。</p>
+
+
+
+
+  <h4 id=application-cache-api><span class=secno>7.9.4</span> Application cache API<a href=#application-cache-api class=self-link></a></h4>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/loading-web-pages/offline-web-applications/application-cache-api.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/loading-web-pages/offline-web-applications/application-cache-api.zh.html?filename=application-cache-api.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Floading-web-pages%2Foffline-web-applications%2Fapplication-cache-api.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  <pre><code class=idl>[SecureContext,
+ Exposed=Window]
+interface <dfn id=applicationcache>ApplicationCache</dfn> : <a id=application-cache-api:eventtarget href=https://dom.spec.whatwg.org/#interface-eventtarget data-x-internal=eventtarget>EventTarget</a> {
+
+  // <span>update status</span>
+  const unsigned short <a href=#dom-appcache-uncached id=application-cache-api:dom-appcache-uncached>UNCACHED</a> = 0;
+  const unsigned short <a href=#dom-appcache-idle id=application-cache-api:dom-appcache-idle>IDLE</a> = 1;
+  const unsigned short <a href=#dom-appcache-checking id=application-cache-api:dom-appcache-checking>CHECKING</a> = 2;
+  const unsigned short <a href=#dom-appcache-downloading id=application-cache-api:dom-appcache-downloading>DOWNLOADING</a> = 3;
+  const unsigned short <a href=#dom-appcache-updateready id=application-cache-api:dom-appcache-updateready>UPDATEREADY</a> = 4;
+  const unsigned short <a href=#dom-appcache-obsolete id=application-cache-api:dom-appcache-obsolete>OBSOLETE</a> = 5;
+  readonly attribute unsigned short <a href=#dom-appcache-status id=application-cache-api:dom-appcache-status>status</a>;
+
+  // updates
+  undefined <a href=#dom-appcache-update id=application-cache-api:dom-appcache-update>update</a>();
+  undefined <a href=#dom-appcache-abort id=application-cache-api:dom-appcache-abort>abort</a>();
+  undefined <a href=#dom-appcache-swapcache id=application-cache-api:dom-appcache-swapcache>swapCache</a>();
+
+  // events
+  attribute <a id=application-cache-api:eventhandler href=webappapis.html#eventhandler>EventHandler</a> <span>onchecking</span>;
+  attribute <a id=application-cache-api:eventhandler-2 href=webappapis.html#eventhandler>EventHandler</a> <span>onerror</span>;
+  attribute <a id=application-cache-api:eventhandler-3 href=webappapis.html#eventhandler>EventHandler</a> <span>onnoupdate</span>;
+  attribute <a id=application-cache-api:eventhandler-4 href=webappapis.html#eventhandler>EventHandler</a> <span>ondownloading</span>;
+  attribute <a id=application-cache-api:eventhandler-5 href=webappapis.html#eventhandler>EventHandler</a> <span>onprogress</span>;
+  attribute <a id=application-cache-api:eventhandler-6 href=webappapis.html#eventhandler>EventHandler</a> <span>onupdateready</span>;
+  attribute <a id=application-cache-api:eventhandler-7 href=webappapis.html#eventhandler>EventHandler</a> <span>oncached</span>;
+  attribute <a id=application-cache-api:eventhandler-8 href=webappapis.html#eventhandler>EventHandler</a> <span>onobsolete</span>;
+};</code></pre>
+
+  <dl class=domintro><dt><var>cache</var> = <var>window</var> . <code id=dom-applicationcache>applicationCache</code><dd>
+    <p>Returns the <code id=application-cache-api:applicationcache><a href=#applicationcache>ApplicationCache</a></code> object that applies to the <a id=application-cache-api:active-document href=browsers.html#active-document>active
+    document</a> of that <code id=application-cache-api:window><a href=window-object.html#window>Window</a></code>.</p>
+   <dt><var>cache</var> . <code id=dom-appcache-status>status</code><dd>
+    <p>Returns the current status of the application cache, as given by the constants defined
+    below.</p>
+   <dt><var>cache</var> . <code id=dom-appcache-update>update</code>()<dd>
+    <p>Invokes the <span>application cache download process</span>.</p>
+
+    <p>Throws an <a id=application-cache-api:invalidstateerror href=https://heycam.github.io/webidl/#invalidstateerror data-x-internal=invalidstateerror>"<code>InvalidStateError</code>"</a> <code id=application-cache-api:domexception><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code> if there is
+    no application cache to update.</p>
+
+    <p>Calling this method is not usually necessary, as user agents will generally take care of
+    updating <span>application caches</span> automatically.</p>
+
+    <p>The method can be useful in situations such as long-lived applications. For example, a web
+    mail application might stay open in a browser tab for weeks at a time. Such an application could
+    want to test for updates each day.</p>
+   <dt><var>cache</var> . <code id=dom-appcache-abort>abort</code>()<dd>
+    <p>Cancels the <span>application cache download process</span>.</p>
+
+    <p>This method is intended to be used by web application showing their own caching progress UI,
+    in case the user wants to stop the update (e.g. because bandwidth is limited).</p>
+   <dt><var>cache</var> . <code id=dom-appcache-swapcache>swapCache</code>()<dd>
+    <p>Switches to the most recent application cache, if there is a newer one. If there isn't,
+    throws an <a id=application-cache-api:invalidstateerror-2 href=https://heycam.github.io/webidl/#invalidstateerror data-x-internal=invalidstateerror>"<code>InvalidStateError</code>"</a> <code id=application-cache-api:domexception-2><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code>.</p>
+
+    <p>This does not cause previously-loaded resources to be reloaded; for example, images do not
+    suddenly get reloaded and style sheets and scripts do not get reparsed or reevaluated. The only
+    change is that subsequent requests for cached resources will obtain the newer copies.</p>
+
+    <p>The <code id=application-cache-api:event-appcache-updateready><a href=#event-appcache-updateready>updateready</a></code> event will fire before this
+    method can be called. Once it fires, the web application can, at its leisure, call this method
+    to switch the underlying cache to the one with the more recent updates. To make proper use of
+    this, applications have to be able to bring the new features into play; for example, reloading
+    scripts to enable new features.</p>
+
+    <p>An easier alternative to <code id=application-cache-api:dom-appcache-swapcache-2><a href=#dom-appcache-swapcache>swapCache()</a></code> is just to
+    reload the entire page at a time suitable for the user, using <code id=application-cache-api:dom-location-reload><a href=history.html#dom-location-reload>location.reload()</a></code>.</p>
+   </dl>
+
+  
+
+  <dl><dt><dfn id=dom-appcache-uncached><code>UNCACHED</code></dfn> (numeric value 0)<dd><p>The <code id=application-cache-api:applicationcache-2><a href=#applicationcache>ApplicationCache</a></code> object's <span>cache host</span> is not associated with
+   an <span>application cache</span> at this time.<dt><dfn id=dom-appcache-idle><code>IDLE</code></dfn> (numeric value 1)<dd><p>The <code id=application-cache-api:applicationcache-3><a href=#applicationcache>ApplicationCache</a></code> object's <span>cache host</span> is associated with an
+   <span>application cache</span> whose <span>application cache group</span>'s <span>update status</span> is <i>idle</i>, and that <span>application
+   cache</span> is the <span>newest</span> cache in its
+   <span>application cache group</span>, and the <span>application cache group</span> is not marked
+   as <span>obsolete</span>.<dt><dfn id=dom-appcache-checking><code>CHECKING</code></dfn> (numeric value 2)<dd><p>The <code id=application-cache-api:applicationcache-4><a href=#applicationcache>ApplicationCache</a></code> object's <span>cache host</span> is associated with an
+   <span>application cache</span> whose <span>application cache group</span>'s <span>update status</span> is <i>checking</i>.<dt><dfn id=dom-appcache-downloading><code>DOWNLOADING</code></dfn> (numeric value 3)<dd><p>The <code id=application-cache-api:applicationcache-5><a href=#applicationcache>ApplicationCache</a></code> object's <span>cache host</span> is associated with an
+   <span>application cache</span> whose <span>application cache group</span>'s <span>update status</span> is <i>downloading</i>.<dt><dfn id=dom-appcache-updateready><code>UPDATEREADY</code></dfn> (numeric value 4)<dd><p>The <code id=application-cache-api:applicationcache-6><a href=#applicationcache>ApplicationCache</a></code> object's <span>cache host</span> is associated with an
+   <span>application cache</span> whose <span>application cache group</span>'s <span>update status</span> is <i>idle</i>, and whose <span>application
+   cache group</span> is not marked as <span>obsolete</span>, but
+   that <span>application cache</span> is <em>not</em> the <span>newest</span> cache in its group.<dt><dfn id=dom-appcache-obsolete><code>OBSOLETE</code></dfn> (numeric value 5)<dd><p>The <code id=application-cache-api:applicationcache-7><a href=#applicationcache>ApplicationCache</a></code> object's <span>cache host</span> is associated with an
+   <span>application cache</span> whose <span>application cache group</span> is marked as <span>obsolete</span>.</dl>
+
+  
+
+
+
+  <h4 id=navigator.online><span class=secno>7.9.5</span> <span id=browser-state>Browser state</span><a href=#navigator.online class=self-link></a></h4><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/NavigatorOnLine title="The NavigatorOnLine interface contains methods and properties related to the connectivity status of the browser.">NavigatorOnLine</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>3.5+</span></span><span class="safari yes"><span>Safari</span><span>5+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>3+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>8+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>4.2+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>1+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span><hr><span class=caniuse><span><a href="https://caniuse.com/#feat=online-status" title="Online/offline status">caniuse.com table</a></span></span></div></div></div>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/loading-web-pages/offline-web-applications/browser-state.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/loading-web-pages/offline-web-applications/browser-state.zh.html?filename=browser-state.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Floading-web-pages%2Foffline-web-applications%2Fbrowser-state.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  <pre><code class=idl>interface mixin <dfn id=navigatoronline>NavigatorOnLine</dfn> {
+  readonly attribute boolean <a href=#dom-navigator-online id=navigator.online:dom-navigator-online>onLine</a>;
+};</code></pre>
+
+  <dl class=domintro><dt><var>self</var> . <code>navigator</code> . <code id=dom-navigator-online>onLine</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/NavigatorOnLine/onLine title="Returns the online status of the browser. The property returns a boolean value, with true meaning online and false meaning offline. The property sends updates whenever the browser's ability to connect to the network changes. The update occurs when the user follows links or when a script requests a remote page. For example, the property should return false when users click links soon after they lose internet connection.">NavigatorOnLine/onLine</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>3.5+</span></span><span class="safari yes"><span>Safari</span><span>5+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>3+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>8+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>4.2+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>1+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span></div></div></div><dd>
+    <p>Returns false if the user agent is definitely offline (disconnected from the network).
+    Returns true if the user agent might be online.</p>
+
+    <p>The events <code id=navigator.online:event-online><a href=indices.html#event-online>online</a></code> and <code id=navigator.online:event-offline><a href=indices.html#event-offline>offline</a></code> are fired when the value of this attribute changes.</p>
+   </dl>
+
+  
+
+  <p class=note>This attribute is inherently unreliable. A computer can be connected to a network
+  without having Internet access.</p>
+
+  <div class=example>
+
+   <p>In this example, an indicator is updated as the browser goes online and offline.</p>
+
+   <pre><code class=html>&lt;!DOCTYPE HTML>
+&lt;html lang="en">
+ &lt;head>
+  &lt;title>Online status&lt;/title>
+  &lt;script>
+   function updateIndicator() {
+     document.getElementById('indicator').textContent = navigator.onLine ? 'online' : 'offline';
+   }
+  &lt;/script>
+ &lt;/head>
+ &lt;body onload="updateIndicator()" ononline="updateIndicator()" onoffline="updateIndicator()">
+  &lt;p>The network is: &lt;span id="indicator">(state unknown)&lt;/span>
+ &lt;/body>
+&lt;/html></code></pre>
+
+  </div>
+
+
+
+
+
+  <nav><a href=browsing-the-web.html>← 7.8 Browsing the web</a> — <a href=./>Table of Contents</a> — <a href=webappapis.html>8 Web 应用 API →</a></nav>

@@ -1,0 +1,1767 @@
+<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Standard, Developer's Edition</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/dev/styles.css crossorigin=""><script>
+   function toggleStatus(div) {
+     div.parentNode.classList.toggle('wrapped');
+   }
+   function setLinkFragment(link) {
+     link.hash = location.hash;
+   }
+  </script><body>
+  <script async="" src=/dev/search.js></script>
+  
+  
+  
+  <header id=head class="head with-buttons">
+   <a href=https://whatwg.org/ class=logo><img width=100 alt=WHATWG crossorigin="" src=https://resources.whatwg.org/logo.svg height=100></a>
+   
+   <hgroup><h1><a rel=home href=/dev/>HTML: The Living Standard</a></h1><h2 id="developer's-edition-—-last-updated-date:-01-jan-1901" class="no-num no-toc">Developer's Edition — Last Updated <span class=pubdate>6 November 2020</span></h2><div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/developers-edition-mdash-last-updated-date-01-jan-1901.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/developers-edition-mdash-last-updated-date-01-jan-1901.zh.html></div></hgroup>
+   
+   <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-91053840-1', 'auto');
+      ga('send', 'pageview');
+   </script>
+  </header>
+
+  
+
+  
+
+
+  
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/table-of-contents.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/table-of-contents.zh.html></div>
+  
+
+
+  
+<div data-en-date="Sat Aug 11 2018 08:00:56 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/full-table-of-contents.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/full-table-of-contents.zh.html></div>
+  
+
+  
+
+  
+
+
+  <h2 id=about-dev-edition class="no-num no-toc">关于本标准</h2>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/about-this-specification.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/about-this-specification.zh.html></div>
+
+  <p>本标准与其他标准不同，它的处理完全考虑到了 Web 开发者。</p>
+
+  <p>本标准关注可读性和可访问性，不像 <a href=/multipage/>完整的 HTML 标准</a>，"开发者版本" 移除了
+  只有浏览器厂商需要知道的信息。它个版本是用我们的构建工具从完整的规范自动产出的，
+  因此总会与最新开发的 HTML 保持同步。</p>
+
+  <p>其概念、构造，以及未来可参考 <a href=http://web.archive.org/web/20150220020906/http://archive.germanforblack.com:80/articles/html5-for-web-developers>
+  原始出版发行</a>，以及 <a href=https://blog.whatwg.org/developers-edition-comeback>关于重启该版本的博文</a>。</p>
+
+  <p>最后，欢迎 <a href=https://github.com/whatwg/html/labels/dev%20edition>在 GitHub 贡献</a> 来改进该版本！</p>
+
+  
+
+
+  <nav><a href=infrastructure.html>← 2 公共基础设施</a> — <a href=./>Table of Contents</a> — <a href=semantics.html>4 HTML 元素 →</a></nav><ol class=toc><li><a href=dom.html#dom><span class=secno>3</span> HTML 文档的语义，结构，与API</a><ol><li><a href=dom.html#文档><span class=secno>3.1</span> 文档</a><ol><li><a href=dom.html#document-对象><span class=secno>3.1.1</span> <code>Document</code> 对象</a><li><a href=dom.html#the-documentorshadowroot-interface><span class=secno>3.1.2</span> The <code>DocumentOrShadowRoot</code> interface</a><li><a href=dom.html#资源元数据管理><span class=secno>3.1.3</span> 资源元数据管理</a><li><a href=dom.html#dom-树访问器><span class=secno>3.1.4</span> DOM 树访问器</a></ol><li><a href=dom.html#元素><span class=secno>3.2</span> 元素</a><ol><li><a href=dom.html#语义><span class=secno>3.2.1</span> 语义</a><li><a href=dom.html#dom-中的元素><span class=secno>3.2.2</span> DOM 中的元素</a><li><a href=dom.html#元素定义><span class=secno>3.2.3</span> 元素定义</a><ol><li><a href=dom.html#属性><span class=secno>3.2.3.1</span> 属性</a></ol><li><a href=dom.html#内容模型><span class=secno>3.2.4</span> 内容模型</a><ol><li><a href=dom.html#nothing-内容模型><span class=secno>3.2.4.1</span> "nothing" 内容模型</a><li><a href=dom.html#内容的种类><span class=secno>3.2.4.2</span> 内容的种类</a><ol><li><a href=dom.html#元数据内容><span class=secno>3.2.4.2.1</span> 元数据内容</a><li><a href=dom.html#流式内容><span class=secno>3.2.4.2.2</span> 流式内容</a><li><a href=dom.html#章节内容><span class=secno>3.2.4.2.3</span> 章节内容</a><li><a href=dom.html#标题内容><span class=secno>3.2.4.2.4</span> 标题内容</a><li><a href=dom.html#短语内容><span class=secno>3.2.4.2.5</span> 短语内容</a><li><a href=dom.html#嵌入内容><span class=secno>3.2.4.2.6</span> 嵌入内容</a><li><a href=dom.html#交互式内容><span class=secno>3.2.4.2.7</span> 交互式内容</a><li><a href=dom.html#palpable-content><span class=secno>3.2.4.2.8</span> 可感知内容</a><li><a href=dom.html#脚本支持元素><span class=secno>3.2.4.2.9</span> 脚本支持元素</a></ol><li><a href=dom.html#透明内容模型><span class=secno>3.2.4.3</span> 透明内容模型</a><li><a href=dom.html#段落><span class=secno>3.2.4.4</span> 段落</a></ol><li><a href=dom.html#全局属性><span class=secno>3.2.5</span> 全局属性</a><ol><li><a href=dom.html#title-属性><span class=secno>3.2.5.1</span> <code>title</code> 属性</a><li><a href=dom.html#lang-和-xml:lang-属性><span class=secno>3.2.5.2</span> <code>lang</code> 和 <code>xml:lang</code> 属性</a><li><a href=dom.html#translate-属性><span class=secno>3.2.5.3</span> <code>translate</code> 属性</a><li><a href=dom.html#dir-属性><span class=secno>3.2.5.4</span> <code>dir</code> 属性</a><li><a href=dom.html#style-属性><span class=secno>3.2.5.5</span> <code>style</code> 属性</a><li><a href=dom.html#使用-data-*-属性-嵌入自定义不可见数据><span class=secno>3.2.5.6</span> 使用 <code>data-*</code> 属性 嵌入自定义不可见数据</a></ol><li><a href=dom.html#the-innertext-idl-attribute><span class=secno>3.2.6</span> The <code>innerText</code> getter and
+  setter</a><li><a href=dom.html#与双向算法相关的要求><span class=secno>3.2.7</span> 与双向算法相关的要求</a></ol></ol></ol><h2 id=dom><span class=secno>3</span> HTML 文档的语义，结构，与API<a href=#dom class=self-link></a></h2>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/semantics-structure-and-apis-of-html-documents/index.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/semantics-structure-and-apis-of-html-documents/index.zh.html></div>
+
+
+  <h3 id=文档><span class=secno>3.1</span> 文档<a href=#文档 class=self-link></a></h3>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/semantics-structure-and-apis-of-html-documents/documents/index.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/semantics-structure-and-apis-of-html-documents/documents/index.zh.html></div>
+
+  <p>HTML UA 中的每个 XML 和 HTML 文档表示为一个 <code id=文档:document><a href=#document>Document</a></code> 对象。 <a href=references.html#refsDOM>[DOM]</a></p>
+
+  <p><code id=文档:document-2><a href=#document>Document</a></code> 对象的 <dfn data-x-for=Document id=the-document的-address><a href=https://dom.spec.whatwg.org/#concept-document-url>URL</a></dfn> 定义在 <cite>DOM</cite> 标准中。 It is initially set when
+  当创建 <code id=文档:document-3><a href=#document>Document</a></code> 对象时设置，但可以在 <code id=文档:document-4><a href=#document>Document</a></code> 的生命期内改变；
+  例如当用户 <span>导航</span> 到一个页面的一个 <span>片段</span>
+  并用一个新的 <a id=文档:url href=https://url.spec.whatwg.org/#concept-url data-x-internal=url>URL</a> 调用 <code id=文档:dom-history-pushstate><a href=history.html#dom-history-pushstate>pushState()</a></code> 方法时就会改变。<a href=references.html#refsDOM>[DOM]</a></p>
+  
+
+  <p class=warning>交互式用户代理通常在其用户界面中显示 <code id=文档:document-5><a href=#document>Document</a></code> 对象的 <a href=https://dom.spec.whatwg.org/#concept-document-url id=文档:the-document的-address data-x-internal=the-document的-address>URL</a>。
+  这是用户用来判断当前网站是否在冒充其他网站的主要机制。</p>
+
+  <p>在 <span>脚本</span> 中使用
+  <code id=文档:dom-domimplementation-createdocument><a data-x-internal=dom-domimplementation-createdocument href=https://dom.spec.whatwg.org/#dom-domimplementation-createdocument>createDocument()</a></code>
+  或 <code id=文档:dom-domimplementation-createhtmldocument><a data-x-internal=dom-domimplementation-createhtmldocument href=https://dom.spec.whatwg.org/#dom-domimplementation-createhtmldocument>createHTMLDocument()</a></code>
+  创建 <code id=文档:document-6><a href=#document>Document</a></code> 时，<code id=文档:document-7><a href=#document>Document</a></code> 立即 <span>准备好了执行加载后的任务</span>。</p>
+
+  <p><dfn id="the-document's-referrer" data-export="">文档的 referrer</dfn> 是一个字符串（表示一个 <a id=文档:url-2 href=https://url.spec.whatwg.org/#concept-url data-x-internal=url>URL</a>）。
+  可以在创建 <code id=文档:document-8><a href=#document>Document</a></code> 时设置，如果没有明确设置，它的值是空字符串。</p>
+
+  <h4 id=document-对象><span class=secno>3.1.1</span> <code id=document-对象:document><a href=#document>Document</a></code> 对象<a href=#document-对象 class=self-link></a></h4>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/semantics-structure-and-apis-of-html-documents/documents/the-document-object.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/semantics-structure-and-apis-of-html-documents/documents/the-document-object.zh.html></div>
+
+  <p><cite>DOM</cite> 定义了 <code id=document-对象:dom-document><a data-x-internal=dom-document href=https://dom.spec.whatwg.org/#interface-document>Document</a></code> 接口，本规范对它进行了很多扩展：</p>
+
+  <pre class=idl>enum <dfn id=documentreadystate>DocumentReadyState</dfn> { "loading"，"interactive"，"complete" };
+typedef (<span>HTMLScriptElement</span> or <a id=document-对象:svgscriptelement href=https://svgwg.org/svg2-draft/interact.html#InterfaceSVGScriptElement data-x-internal=svgscriptelement>SVGScriptElement</a>) <dfn id=htmlorsvgscriptelement>HTMLOrSVGScriptElement</dfn>;
+
+[<a id=document-对象:legacyoverridebuiltins href=https://heycam.github.io/webidl/#LegacyOverrideBuiltIns data-x-internal=legacyoverridebuiltins>LegacyOverrideBuiltIns</a>]
+partial interface <dfn data-lt="" id=document>Document</dfn> {
+  // <a href=#资源元数据管理 id=document-对象:资源元数据管理>资源元数据管理</a>
+  [PutForwards=<a href=history.html#dom-location-href id=document-对象:dom-location-href>href</a>, <a id=document-对象:legacyunforgeable href=https://heycam.github.io/webidl/#LegacyUnforgeable data-x-internal=legacyunforgeable>LegacyUnforgeable</a>] readonly attribute <a id=document-对象:location href=history.html#location>Location</a>? <a href=history.html#dom-document-location id=document-对象:dom-document-location>location</a>;
+  attribute USVString <a href=origin.html#dom-document-domain id=document-对象:dom-document-domain>domain</a>;
+  readonly attribute USVString <a href=#dom-document-referrer id=document-对象:dom-document-referrer>referrer</a>;
+  attribute USVString <a href=#dom-document-cookie id=document-对象:dom-document-cookie>cookie</a>;
+  readonly attribute DOMString <a href=#dom-document-lastmodified id=document-对象:dom-document-lastmodified>lastModified</a>;
+  readonly attribute <a href=#documentreadystate id=document-对象:documentreadystate>DocumentReadyState</a> <a href=#dom-document-readystate id=document-对象:dom-document-readystate>readyState</a>;
+
+  // <a href=#dom-树访问器 id=document-对象:dom-树访问器>DOM 树访问器</a>
+  <a href=#dom-document-nameditem>getter</a> object (DOMString name);
+  [<span>CEReactions</span>] attribute DOMString <a href=#dom-document-title id=document-对象:dom-document-title>title</a>;
+  [<span>CEReactions</span>] attribute DOMString <span>dir</span>;
+  [<span>CEReactions</span>] attribute <a href=#htmlelement id=document-对象:htmlelement>HTMLElement</a>? <a href=#dom-document-body id=document-对象:dom-document-body>body</a>;
+  readonly attribute <span>HTMLHeadElement</span>? <a href=#dom-document-head id=document-对象:dom-document-head>head</a>;
+  [SameObject] readonly attribute <a id=document-对象:htmlcollection href=https://dom.spec.whatwg.org/#interface-htmlcollection data-x-internal=htmlcollection>HTMLCollection</a> <a href=#dom-document-images id=document-对象:dom-document-images>images</a>;
+  [SameObject] readonly attribute <a id=document-对象:htmlcollection-2 href=https://dom.spec.whatwg.org/#interface-htmlcollection data-x-internal=htmlcollection>HTMLCollection</a> <a href=#dom-document-embeds id=document-对象:dom-document-embeds>embeds</a>;
+  [SameObject] readonly attribute <a id=document-对象:htmlcollection-3 href=https://dom.spec.whatwg.org/#interface-htmlcollection data-x-internal=htmlcollection>HTMLCollection</a> <a href=#dom-document-plugins id=document-对象:dom-document-plugins>plugins</a>;
+  [SameObject] readonly attribute <a id=document-对象:htmlcollection-4 href=https://dom.spec.whatwg.org/#interface-htmlcollection data-x-internal=htmlcollection>HTMLCollection</a> <a href=#dom-document-links id=document-对象:dom-document-links>links</a>;
+  [SameObject] readonly attribute <a id=document-对象:htmlcollection-5 href=https://dom.spec.whatwg.org/#interface-htmlcollection data-x-internal=htmlcollection>HTMLCollection</a> <a href=#dom-document-forms id=document-对象:dom-document-forms>forms</a>;
+  [SameObject] readonly attribute <a id=document-对象:htmlcollection-6 href=https://dom.spec.whatwg.org/#interface-htmlcollection data-x-internal=htmlcollection>HTMLCollection</a> <a href=#dom-document-scripts id=document-对象:dom-document-scripts>scripts</a>;
+  NodeList <a href=#dom-document-getelementsbyname id=document-对象:dom-document-getelementsbyname>getElementsByName</a>(DOMString elementName);
+  readonly attribute <a href=#htmlorsvgscriptelement id=document-对象:htmlorsvgscriptelement>HTMLOrSVGScriptElement</a>? <a href=#dom-document-currentscript id=document-对象:dom-document-currentscript>currentScript</a>; // classic scripts in a document tree only
+
+  // <a href=dynamic-markup-insertion.html#dynamic-markup-insertion id=document-对象:dynamic-markup-insertion>动态标记插入</a>
+  [<span>CEReactions</span>] <a href=#document id=document-对象:document-2>Document</a> <a href=dynamic-markup-insertion.html#dom-document-open id=document-对象:dom-document-open>open</a>(optional DOMString unused1, optional DOMString unused2); // both arguments are <a href=#dom-document-open-unused-arguments>ignored</a>
+  <span>WindowProxy</span>? <a href=dynamic-markup-insertion.html#dom-document-open id=document-对象:dom-document-open-2>open</a>(USVString url,DOMString name,DOMString features);
+  [<span>CEReactions</span>] undefined <a href=dynamic-markup-insertion.html#dom-document-close id=document-对象:dom-document-close>close</a>();
+  [<span>CEReactions</span>] undefined <a href=dynamic-markup-insertion.html#dom-document-write id=document-对象:dom-document-write>write</a>(DOMString..。 text);
+  [<span>CEReactions</span>] undefined <a href=dynamic-markup-insertion.html#dom-document-writeln id=document-对象:dom-document-writeln>writeln</a>(DOMString..。 text);
+
+  // <a href=interaction.html#editing id=document-对象:editing>用户交互</a>
+  readonly attribute <span>WindowProxy</span>? <a href=window-object.html#dom-document-defaultview id=document-对象:dom-document-defaultview>defaultView</a>;
+  boolean <a href=interaction.html#dom-document-hasfocus id=document-对象:dom-document-hasfocus>hasFocus</a>();
+  [<span>CEReactions</span>] attribute DOMString <a href=interaction.html#dom-document-designmode id=document-对象:dom-document-designmode>designMode</a>;
+  [<span>CEReactions</span>] boolean <span>execCommand</span>(DOMString commandId,optional boolean showUI = false,optional DOMString value = "");
+  boolean <span>queryCommandEnabled</span>(DOMString commandId);
+  boolean <span>queryCommandIndeterm</span>(DOMString commandId);
+  boolean <span>queryCommandState</span>(DOMString commandId);
+  boolean <span>queryCommandSupported</span>(DOMString commandId);
+  DOMString <span>queryCommandValue</span>(DOMString commandId);
+
+  // 只适用于 Document 对象的特殊 <a href=webappapis.html#event-handler-idl-attributes id=document-对象:event-handler-idl-attributes>事件处理器 IDL 属性</a>
+  [<a id=document-对象:legacylenientthis href=https://heycam.github.io/webidl/#LegacyLenientThis data-x-internal=legacylenientthis>LegacyLenientThis</a>] attribute <a id=document-对象:eventhandler href=webappapis.html#eventhandler>EventHandler</a> <a href=webappapis.html#handler-onreadystatechange id=document-对象:handler-onreadystatechange>onreadystatechange</a>;
+
+  // <a href=#Document-partial>also has obsolete members</a>
+};
+<a href=#document id=document-对象:document-3>Document</a> 实现了 <span>GlobalEventHandlers</span>；
+<a href=#document id=document-对象:document-4>Document</a> 实现了 <span>DocumentAndElementEventHandlers</span>；</pre>
+
+  <p><code id=document-对象:document-5><a href=#document>Document</a></code> 有一个 <dfn data-dfn-for=Document id=concept-document-referrer-policy data-export="">引荐来源策略</dfn> （一个 <a href=https://w3c.github.io/webappsec-referrer-policy/#referrer-policy id=document-对象:referrer-policy data-x-internal=referrer-policy>引荐来源策略</a>），
+  初始为空字符串，它表示由 <code id=document-对象:document-6><a href=#document>Document</a></code> 发起的 <a href=https://fetch.spec.whatwg.org/#concept-fetch id=document-对象:concept-fetch data-x-internal=concept-fetch>获取</a>
+  的默认 <a href=https://w3c.github.io/webappsec-referrer-policy/#referrer-policy id=document-对象:referrer-policy-2 data-x-internal=referrer-policy>引荐来源策略</a>。</p>
+
+  <p><code id=document-对象:document-7><a href=#document>Document</a></code> 有一个 <dfn id=concept-document-embedder-policy>嵌入策略</dfn>
+  （一个 <a href=origin.html#embedder-policy id=document-对象:embedder-policy>嵌入策略</a>)）。</p>
+
+  <p><code id=document-对象:document-8><a href=#document>Document</a></code> 有一个 <dfn data-dfn-for=Document id=concept-document-csp-list data-export="">CSP 列表</dfn>，它是一个在该上下文中活动的 <a href=https://w3c.github.io/webappsec-csp/#content-security-policy-object id=document-对象:content-security-policy data-x-internal=content-security-policy>内容安全策略</a> 对象的列表。
+  该列表在没有指定时是空的。</p>
+
+  <p id=concept-document-feature-policy><code id=document-对象:document-9><a href=#document>Document</a></code> 有一个 <dfn data-dfn-for=Document id=concept-document-permissions-policy data-export="">权限策略</dfn>，是一个
+  初始为空的 <a href=https://w3c.github.io/webappsec-feature-policy/#permissions-policy id=document-对象:concept-permissions-policy data-x-internal=concept-permissions-policy>权限策略</a>。</p>
+
+  <p><code id=document-对象:document-10><a href=#document>Document</a></code> 有一个 <dfn data-dfn-for=Document id=concept-document-module-map>模块映射</dfn>，
+  是一个初始为空的 <span>模块映射</span>。</p>
+
+  <p><code id=document-对象:document-11><a href=#document>Document</a></code> 有一个 <dfn id=concept-document-coop>跨域 opener 策略</dfn>，是一个
+  <a href=origin.html#cross-origin-opener-policy id=document-对象:cross-origin-opener-policy>跨域 opener 策略</a>，初始为 "<code id=document-对象:coop-unsafe-none><a href=origin.html#coop-unsafe-none>unsafe-none</a></code>"。</p>
+
+  <h4 id=the-documentorshadowroot-interface><span class=secno>3.1.2</span> The <code id=the-documentorshadowroot-interface:documentorshadowroot><a href=#documentorshadowroot>DocumentOrShadowRoot</a></code> interface<a href=#the-documentorshadowroot-interface class=self-link></a></h4>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/semantics-structure-and-apis-of-html-documents/documents/the-documentorshadowroot-interface.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/semantics-structure-and-apis-of-html-documents/documents/the-documentorshadowroot-interface.zh.html?filename=the-documentorshadowroot-interface.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fsemantics-structure-and-apis-of-html-documents%2Fdocuments%2Fthe-documentorshadowroot-interface.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  <p><cite>DOM</cite> defines the <code id=the-documentorshadowroot-interface:dom-documentorshadowroot><a data-x-internal=dom-documentorshadowroot href=https://dom.spec.whatwg.org/#documentorshadowroot>DocumentOrShadowRoot</a></code> mixin, which this specification
+  extends.</p>
+
+  <pre><code class=idl>partial interface mixin <dfn data-lt="" id=documentorshadowroot>DocumentOrShadowRoot</dfn> {
+  readonly attribute <a id=the-documentorshadowroot-interface:element href=https://dom.spec.whatwg.org/#interface-element data-x-internal=element>Element</a>? <a href=interaction.html#dom-documentorshadowroot-activeelement id=the-documentorshadowroot-interface:dom-documentorshadowroot-activeelement>activeElement</a>;
+};</code></pre>
+
+
+  <h4 id=资源元数据管理><span class=secno>3.1.3</span> <dfn>资源元数据管理</dfn><a href=#资源元数据管理 class=self-link></a></h4>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/semantics-structure-and-apis-of-html-documents/documents/resource-metadata-management.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/semantics-structure-and-apis-of-html-documents/documents/resource-metadata-management.zh.html></div>
+
+  <dl class=domintro><dt><var>document</var> . <code id=dom-document-referrer>referrer</code><dd>
+
+    <p>返回用户导航到此文档的那个 <code id=资源元数据管理:document><a href=#document>Document</a></code> 的 <a href=https://dom.spec.whatwg.org/#concept-document-url id=资源元数据管理:the-document的-address data-x-internal=the-document的-address>URL</a>，
+    除非它被阻止或没有这样的文档，这时返回空字符串。</p>
+
+    <p><code id=资源元数据管理:link-type-noreferrer><a href=links.html#link-type-noreferrer>noreferrer</a></code> 链接类型可用于阻止引荐来源。</p>
+
+   </dl>
+
+  
+
+  <hr>
+
+  <dl class=domintro><dt><var>document</var> . <code id=dom-document-cookie>cookie</code> [ = <var>value</var> ]<dd>
+
+    <p>返回适用于该 <code id=资源元数据管理:document-2><a href=#document>Document</a></code> 的 HTTP cookie。如果没有 Cookie 或 Cookie 不适用于该资源，
+    则返回空字符串。</p>
+
+    <p>可以被设置，用来给该元素的 HTTP Cookie 集合添加一个新的 Cookie。</p>
+
+    <p>如果内容 <a href=origin.html#sandboxed-origin-browsing-context-flag id=资源元数据管理:sandboxed-origin-browsing-context-flag>被沙盒化到一个唯一的 origin</a> 中
+    （例如有 <code id=资源元数据管理:attr-iframe-sandbox><a href=iframe-embed-object.html#attr-iframe-sandbox>sandbox</a></code> 属性的 <code id=资源元数据管理:the-iframe-element><a href=iframe-embed-object.html#the-iframe-element>iframe</a></code>），
+    当读取和设置时抛出 <a id=资源元数据管理:securityerror href=https://heycam.github.io/webidl/#securityerror data-x-internal=securityerror>"<code>SecurityError</code>"</a> <code id=资源元数据管理:domexception><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code>。</p>
+
+   </dl>
+
+  
+
+  <dl class=domintro><dt><var>document</var> . <code id=dom-document-lastmodified>lastModified</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Document/lastModified title="The lastModified property of the Document interface returns a string containing the date and time on which the current document was last modified.">Document/lastModified</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>1+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>12.1+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>4+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>1+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>12.1+</span></span></div></div></div><dd>
+    <p>根据服务器的报告返回文档的（用户的本地时区的）最后修改时间，按照这样的格式："<code>MM/DD/YYYY hh:mm:ss</code>"。</p>
+    <p>如果不知道最后修改时间，返回当前时间。</p>
+   </dl>
+
+  
+
+  <dl class=domintro><dt><var>document</var> . <code id=dom-document-readystate>readyState</code><dd>
+    <p>当 <code id=资源元数据管理:document-3><a href=#document>Document</a></code> 正在加载时返回 "<code>loading</code>"，
+    一旦结束解析但仍在加载子资源时返回 "<code>interactive</code>"，
+    一旦加载完成返回 "<code>complete</code>"。</p>
+    <p>当这个值变化时触发 <code id=资源元数据管理:document-4><a href=#document>Document</a></code> 对象上的
+    <code id=资源元数据管理:event-readystatechange><a href=indices.html#event-readystatechange>readystatechange</a></code> 事件。</p>
+   </dl>
+
+  
+
+
+
+
+  <h4 id=dom-树访问器><span class=secno>3.1.4</span> <dfn>DOM 树访问器</dfn><a href=#dom-树访问器 class=self-link></a></h4>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/semantics-structure-and-apis-of-html-documents/documents/dom-tree-accessors.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/semantics-structure-and-apis-of-html-documents/documents/dom-tree-accessors.zh.html></div>
+
+  <p>如果文档是一个 <code id=dom-树访问器:the-html-element><a href=semantics.html#the-html-element>html</a></code> 元素，
+  它的 <dfn id=the-html-element-2><code>html</code> 元素</dfn> 就是它的 <a href=https://dom.spec.whatwg.org/#document-element id=dom-树访问器:document-element data-x-internal=document-element>文档元素</a>，
+  否则就是 null。</p>
+
+  <hr>
+
+  <dl class=domintro><dt><var>document</var> . <code id=dom-document-head>head</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Document/head title="The head read-only property of the Document interface returns the <head> element of the current document.">Document/head</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>4+</span></span><span class="safari yes"><span>Safari</span><span>5+</span></span><span class="chrome yes"><span>Chrome</span><span>4+</span></span><hr><span class="opera yes"><span>Opera</span><span>11+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>9+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span><hr><span class=caniuse><span><a href="https://caniuse.com/#feat=documenthead" title=document.head>caniuse.com table</a></span></span></div></div></div><dd>
+    <p>返回 <a href=#the-head-element-2 id=dom-树访问器:the-head-element-2><code>head</code> 元素</a>。</p>
+   </dl>
+
+  <p>文档的 <dfn id=the-head-element-2><code>head</code> 元素</dfn> 是它的
+  <a href=#the-html-element-2 id=dom-树访问器:the-html-element-2><code>html</code> 元素</a> 的第一个 <code id=dom-树访问器:the-head-element><a href=semantics.html#the-head-element>head</a></code> 子元素。
+  如果没有这样的元素，则为 null。</p>
+
+  
+
+  <hr>
+
+  <dl class=domintro><dt><var>document</var> . <code id=dom-document-title>title</code> [ = <var>value</var> ]<dd>
+
+    <p>返回文档的标题，对于 HTML 由 <a href=#the-title-element-2 id=dom-树访问器:the-title-element-2><code>title</code> 元素</a> 给出，
+    对于 SVG 由 <a href=https://svgwg.org/svg2-draft/struct.html#TitleElement id=dom-树访问器:svg-title data-x-internal=svg-title>SVG <code>title</code></a> 元素给出。</p>
+
+    <p>可以被设置来更新文档的标题。如果没有合适的元素来更新，新的值将被忽略。</p>
+
+   </dl>
+
+  <p>文档的 <dfn id=the-title-element-2><code>title</code> 元素</dfn>
+  是文档中的第一个 <code id=dom-树访问器:the-title-element><a href=semantics.html#the-title-element>title</a></code> 元素（按 <a href=https://dom.spec.whatwg.org/#concept-tree-order id=dom-树访问器:tree-order data-x-internal=tree-order>树序</a>），
+  如果没有则为 null。</p>
+
+  
+
+  <hr>
+
+  <dl class=domintro><dt><var>document</var> . <code id=dom-document-body>body</code> [ = <var>value</var> ]<div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Document/body title="The Document.body property represents the <body> or <frameset> node of the current document, or null if no such element exists.">Document/body</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>2+</span></span><span class="safari yes"><span>Safari</span><span>4+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>9.6+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>6+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>5+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>37+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span></div></div></div><dd>
+
+    <p>返回 <a href=#the-body-element-2 id=dom-树访问器:the-body-element-2>body 元素</a>。</p>
+
+    <p>被设置时替换 <a href=#the-body-element-2 id=dom-树访问器:the-body-element-2-2>body 元素</a>。</p>
+
+    <p>如果新值不是一个 <code id=dom-树访问器:the-body-element><a href=sections.html#the-body-element>body</a></code> 或 <code>frameset</code> 元素，这将会抛出一个
+    <a id=dom-树访问器:hierarchyrequesterror href=https://heycam.github.io/webidl/#hierarchyrequesterror data-x-internal=hierarchyrequesterror>"<code>HierarchyRequestError</code>"</a> <code id=dom-树访问器:domexception><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code>。</p>
+
+   </dl>
+
+  <p>文档的 <dfn id=the-body-element-2>body 元素</dfn> 是 <a href=#the-html-element-2 id=dom-树访问器:the-html-element-2-2><code>html</code> 元素</a>
+  的第一个是 <code id=dom-树访问器:the-body-element-3><a href=sections.html#the-body-element>body</a></code> 元素或 <code>frameset</code> 元素的子节点，没有的话就是 null。</p>
+
+  
+
+  <hr>
+
+  <dl class=domintro><dt><var>document</var> . <code id=dom-document-images>images</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Document/images title="The images read-only property of the Document interface returns a collection of the images in the current HTML document.">Document/images</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>1+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>12.1+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>4+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>1+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>12.1+</span></span></div></div></div><dd>
+    <p>返回一个 <code id=dom-树访问器:document><a href=#document>Document</a></code> 中的 <code id=dom-树访问器:the-img-element><a href=embedded-content.html#the-img-element>img</a></code> 元素的 <code id=dom-树访问器:htmlcollection><a data-x-internal=htmlcollection href=https://dom.spec.whatwg.org/#interface-htmlcollection>HTMLCollection</a></code>。</p>
+   <dt><var>document</var> . <code id=dom-document-embeds>embeds</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Document/embeds title="The embeds read-only property of the Document interface returns a list of the embedded <object> elements within the current document.">Document/embeds</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>2+</span></span><span class="chrome yes"><span>Chrome</span><span>45+</span></span><hr><span class="opera yes"><span>Opera</span><span>12.1+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>4+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>45+</span></span><span class="webview_android yes"><span>WebView Android</span><span>45+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>5.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>12.1+</span></span></div></div></div><dt><var>document</var> . <code id=dom-document-plugins>plugins</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Document/plugins title="The plugins read-only property of the Document interface returns an HTMLCollection object containing one or more HTMLEmbedElements representing the <embed> elements in the current document.">Document/plugins</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>3+</span></span><span class="chrome yes"><span>Chrome</span><span>45+</span></span><hr><span class="opera yes"><span>Opera</span><span>12.1+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>4+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>45+</span></span><span class="webview_android yes"><span>WebView Android</span><span>45+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>5.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>12.1+</span></span></div></div></div><dd>
+    <p>返回一个 <code id=dom-树访问器:document-2><a href=#document>Document</a></code> 中的 <code id=dom-树访问器:the-embed-element><a href=iframe-embed-object.html#the-embed-element>embed</a></code> 元素的 <code id=dom-树访问器:htmlcollection-2><a data-x-internal=htmlcollection href=https://dom.spec.whatwg.org/#interface-htmlcollection>HTMLCollection</a></code>。</p>
+   <dt><var>document</var> . <code id=dom-document-links>links</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Document/links title="The links read-only property of the Document interface returns a collection of all <area> elements and <a> elements in a document with a value for the href attribute.">Document/links</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>1+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>12.1+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>4+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>1+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>12.1+</span></span></div></div></div><dd>
+    <p>返回一个 <code id=dom-树访问器:document-3><a href=#document>Document</a></code> 中的有 <code id=dom-树访问器:attr-hyperlink-href><a href=links.html#attr-hyperlink-href>href</a></code> 属性的
+    <code id=dom-树访问器:the-a-element><a href=text-level-semantics.html#the-a-element>a</a></code> 和 <code id=dom-树访问器:the-area-element><a href=image-maps.html#the-area-element>area</a></code> 元素的 <code id=dom-树访问器:htmlcollection-3><a data-x-internal=htmlcollection href=https://dom.spec.whatwg.org/#interface-htmlcollection>HTMLCollection</a></code>。</p>
+   <dt><var>document</var> . <code id=dom-document-forms>forms</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Document/forms title="The forms read-only property of the Document interface returns an HTMLCollection listing all the <form> elements contained in the document.">Document/forms</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>1+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>12.1+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>4+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>1+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>12.1+</span></span></div></div></div><dd>
+    <p>返回一个 <code id=dom-树访问器:document-4><a href=#document>Document</a></code> 中的 <code id=dom-树访问器:the-form-element><a href=forms.html#the-form-element>form</a></code> 元素的 <code id=dom-树访问器:htmlcollection-4><a data-x-internal=htmlcollection href=https://dom.spec.whatwg.org/#interface-htmlcollection>HTMLCollection</a></code>。</p>
+   <dt><var>document</var> . <code id=dom-document-scripts>scripts</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Document/scripts title="The scripts property of the Document interface returns a list of the <script> elements in the document. The returned object is an HTMLCollection.">Document/scripts</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>9+</span></span><span class="safari yes"><span>Safari</span><span>3+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>12.1+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>4+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>9+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>1+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>12.1+</span></span></div></div></div><dd>
+    <p>返回一个 <code id=dom-树访问器:document-5><a href=#document>Document</a></code> 中的 <code id=dom-树访问器:the-script-element><a href=scripting.html#the-script-element>script</a></code> 元素的 <code id=dom-树访问器:htmlcollection-5><a data-x-internal=htmlcollection href=https://dom.spec.whatwg.org/#interface-htmlcollection>HTMLCollection</a></code>。</p>
+   </dl>
+
+  
+
+  <dl class=domintro><dt><var>collection</var> = <var>document</var> . <code id=dom-document-getelementsbyname>getElementsByName</code>(<var>name</var>)<div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByName title="The getElementsByName() method of the Document object returns a NodeList Collection of elements with a given name in the document.">Document/getElementsByName</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>1+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>5+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>5+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>1+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span></div></div></div><dd>
+
+    <p>返回一个 <code id=dom-树访问器:document-6><a href=#document>Document</a></code> 中的 <code>name</code> 属性值为 <var>name</var>
+    的 <code id=dom-树访问器:nodelist><a data-x-internal=nodelist href=https://dom.spec.whatwg.org/#interface-nodelist>NodeList</a></code>。</p>
+
+   </dl>
+
+  
+
+  <hr>
+
+  <dl class=domintro><dt><var>document</var> . <code id=dom-document-currentscript>currentScript</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Document/currentScript title="The Document.currentScript property returns the <script> element whose script is currently being processed and isn't a JavaScript module. (For modules use import.meta instead.)">Document/currentScript</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>4+</span></span><span class="safari yes"><span>Safari</span><span>8+</span></span><span class="chrome yes"><span>Chrome</span><span>29+</span></span><hr><span class="opera yes"><span>Opera</span><span>16+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>Yes</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>8+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>29+</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>2.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span><hr><span class=caniuse><span><a href="https://caniuse.com/#feat=document-currentscript" title=document.currentScript>caniuse.com table</a></span></span></div></div></div><dd>
+
+    <p>返回正在执行的 <code id=dom-树访问器:the-script-element-2><a href=scripting.html#the-script-element>script</a></code> 元素或 <a id=dom-树访问器:svg-script href=https://svgwg.org/svg2-draft/interact.html#ScriptElement data-x-internal=svg-script>SVG <code>script</code></a> 元素，
+    只要该元素表示一个 <span>经典的脚本</span>。
+    对于再次进入的脚本，返回还没结束执行的脚本中最近开始执行的那个。</p>
+
+    <p>如果 <code id=dom-树访问器:document-7><a href=#document>Document</a></code> 当前没有在执行 <code id=dom-树访问器:the-script-element-3><a href=scripting.html#the-script-element>script</a></code> 或 <a id=dom-树访问器:svg-script-2 href=https://svgwg.org/svg2-draft/interact.html#ScriptElement data-x-internal=svg-script>SVG <code>script</code></a>
+    （例如，因为运行的脚本是一个事件处理器或定时器），如果当前执行的
+    <code id=dom-树访问器:the-script-element-4><a href=scripting.html#the-script-element>script</a></code> 或 <a id=dom-树访问器:svg-script-3 href=https://svgwg.org/svg2-draft/interact.html#ScriptElement data-x-internal=svg-script>SVG <code>script</code></a> 元素表示一个 <span>module script</span> 则返回 null。</p>
+
+   </dl>
+
+  
+
+  <p class=note>实现和标准社区已经不再青睐这一 API 因为它会全局暴露
+  <code id=dom-树访问器:the-script-element-5><a href=scripting.html#the-script-element>script</a></code> 或 <a id=dom-树访问器:svg-script-4 href=https://svgwg.org/svg2-draft/interact.html#ScriptElement data-x-internal=svg-script>SVG <code>script</code></a> 元素。
+  因此它在新的环境中不再可用，比如执行 <span>module scripts</span> 时，
+  或者在 <a id=dom-树访问器:shadow-tree href=https://dom.spec.whatwg.org/#concept-shadow-tree data-x-internal=shadow-tree>shadow tree</a> 执行中执行脚本时。我们正在寻求一种解决方案，
+  在这些环境中识别正在执行的脚本，同时又不让它全局可用。参见 Issue：<a href=https://github.com/whatwg/html/issues/1013>#1013</a>。</p>
+
+  
+
+  <hr>
+
+  <p class=note><code id=dom-树访问器:document-8><a href=#document>Document</a></code> 接口上的 <code>dir</code> 属性
+  与 <code id=dom-树访问器:dir-属性><a href=#dir-属性>dir</a></code> 内容属性定义在一起。</p>
+
+
+
+
+  <h3 id=元素><span class=secno>3.2</span> 元素<a href=#元素 class=self-link></a></h3>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/semantics-structure-and-apis-of-html-documents/elements/index.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/semantics-structure-and-apis-of-html-documents/elements/index.zh.html></div>
+
+
+  <h4 id=语义><span class=secno>3.2.1</span> 语义<a href=#语义 class=self-link></a></h4>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/semantics-structure-and-apis-of-html-documents/elements/semantics.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/semantics-structure-and-apis-of-html-documents/elements/semantics.zh.html></div>
+
+  <p>HTML 中的元素、属性和属性值（由本规范）定义有确定的含义（语义）。
+  例如，<code id=语义:the-ol-element><a href=grouping-content.html#the-ol-element>ol</a></code> 元素表示一个有序列表，
+  <code id=语义:attr-lang><a href=#attr-lang>lang</a></code> 属性表示内容的语言。</p>
+
+  <p>这些定义允许诸如 Web 浏览器或搜索引擎的 HTML 处理器可能在作者不曾考虑过的
+  各种上下文中呈现和使用文档或应用。</p>
+
+  <div class=example>
+
+   <p>作为一个简单的例子，考虑一个由只考虑了桌面电脑 Web 浏览器的作者编写的 Web 页面：</p>
+
+   <pre>&lt;!DOCTYPE HTML>
+&lt;html lang="en">
+ &lt;head>
+  &lt;title>My Page&lt;/title>
+ &lt;/head>
+ &lt;body>
+  &lt;h1>Welcome to my page&lt;/h1>
+  &lt;p>I like cars and lorries and have a big Jeep!&lt;/p>
+  &lt;h2>Where I live&lt;/h2>
+  &lt;p>I live in a small hut on a mountain!&lt;/p>
+ &lt;/body>
+&lt;/html></pre>
+
+   <p>因为 HTML 表达了 <em>含义</em>，而不是呈现，同样的页面也可以用于移动电话的小浏览器而不需要改动页面。
+   比如在桌面浏览器中标题使用大号字体，但在移动浏览器中可能整页使用同样大小的字体，但标题使用粗体。</p>
+
+   <p>这不仅仅是屏幕尺寸的差异：同一页面可以通过基于语音合成的浏览器同样地被盲人使用，
+   这时就不是在屏幕上显示页面，而是将页面朗读给用户，比如使用耳机。
+   标题可能不再是大号的文本，语音浏览器可能会对它使用不同的音量或较慢的声音。</p>
+
+   <p>带来的好处不止于此。由于浏览器知道页面的哪些部分是标题，它们可以创建文档大纲来使得用户可以快速浏览文档，
+   使用“跳转到下一个标题”或“跳转到上一个标题”的快捷键。
+   这些功能在语音浏览器中尤其常见，不然用户可能很难快速浏览页面。</p>
+
+   <p>甚至除浏览器之外的软件也可以利用这些信息。
+   搜索引擎可以使用标题更有效地对页面进行索引，或者从结果中提供到页面子部分的快速链接。
+   而工具可以使用标题来创建一个目录（实际上这个规范的目录就是这样生成的）。</p>
+
+   <p>这个例子集中在标题上，但是相同的原则也适用于 HTML 中的所有语义。</p>
+
+  </div>
+
+  <p>作者不得将元素，属性或属性值用于适当的语义目的之外的其他意图，因为这样做会使软件无法正确处理页面。</p>
+
+  <div class=example>
+
+   <p>例如，以下代表公司网站标题的代码片段是不合规范的，
+   因为第二行不是子部分的标题，而是副标题（同一部分的下级标题）。</p>
+
+   <pre class=bad>&lt;body>
+ &lt;h1>ACME Corporation&lt;/h1>
+ &lt;h2>The leaders in arbitrary fast delivery since 1920&lt;/h2>
+ ...</pre>
+
+   <p><code id=语义:the-hgroup-element><a href=sections.html#the-hgroup-element>hgroup</a></code> 元素适用于这些情况：</p>
+
+   <pre>&lt;body>
+ &lt;hgroup>
+  &lt;h1>ACME Corporation&lt;/h1>
+  &lt;h2>The leaders in arbitrary fast delivery since 1920&lt;/h2>
+ &lt;/hgroup>
+ ...</pre>
+
+  </div>
+
+  <div class=example>
+
+   <p>下一个例子中的文档类似，也不合规范。尽管语法是正确的，
+   因为放在单元格中的数据显然不是表格数据，而且误用了 <code id=语义:the-cite-element><a href=text-level-semantics.html#the-cite-element>cite</a></code> 元素：</p>
+
+   <pre class=bad lang=en-GB>&lt;!DOCTYPE HTML>
+&lt;html lang="en-GB">
+ &lt;head> &lt;title> Demonstration &lt;/title> &lt;/head>
+ &lt;body>
+  &lt;table>
+   &lt;tr> &lt;td> My favourite animal is the cat. &lt;/td> &lt;/tr>
+   &lt;tr>
+    &lt;td>
+     —&lt;a href="https://example.org/~ernest/">&lt;cite>Ernest&lt;/cite>&lt;/a>,
+     in an essay from 1992
+    &lt;/td>
+   &lt;/tr>
+  &lt;/table>
+ &lt;/body>
+&lt;/html></pre>
+
+   <p>这将使得依赖于这些语义的软件出错：
+   例如支持盲人浏览文档中的表格的语音浏览器将把上述引用误报为表格，这会使用户困惑；
+   同样地，从网页中提取作品标题的工具也会将“Ernest”提取为作品的标题，即使它实际上是一个人名而不是标题。</p>
+
+   <p>这个文档的更正版本可能是：</p>
+
+   <pre lang=en-GB>&lt;!DOCTYPE HTML>
+&lt;html lang="en-GB">
+ &lt;head> &lt;title> Demonstration &lt;/title> &lt;/head>
+ &lt;body>
+  &lt;blockquote>
+   &lt;p> My favourite animal is the cat. &lt;/p>
+  &lt;/blockquote>
+  &lt;p>
+   —&lt;a href="https://example.org/~ernest/">Ernest&lt;/a>,
+   in an essay from 1992
+  &lt;/p>
+ &lt;/body>
+&lt;/html></pre>
+
+  </div>
+
+  <p>作者不得使用本规范或
+  <a href=infrastructure.html#other-applicable-specifications id=语义:other-applicable-specifications>其他适用规范</a>
+  不允许的元素，属性或属性值，因为这样做会使以后的语言扩展变得更加困难。</p>
+
+  <div class=example>
+
+   <p>下一个示例中有一个不符合规范的属性值（“carpet”）和不符合规范的属性（“texture”），这是本规范不允许的：</p>
+
+   <pre class=bad>&lt;label>Carpet: &lt;input type="carpet" name="c" texture="deep pile">&lt;/label></pre>
+
+   <p>以下是标记这一内容的正确的替代方式：</p>
+：
+
+   <pre>&lt;label>Carpet: &lt;input type="text" class="carpet" name="c" data-texture="deep pile">&lt;/label></pre>
+
+  </div>
+
+  <p id=no-browsing-context>其 <a href=https://dom.spec.whatwg.org/#concept-node-document id=语义:node-document data-x-internal=node-document>节点文档</a> 不具有
+  <a href=browsers.html#browsing-context id=语义:browsing-context>浏览环境</a> 的 DOM 节点
+  不受 <a href=syntax.html#writing>HTML 语法</a> 要求和
+  <a href=#writing-xhtml-documents>XML 语法</a> 要求之外的所有文档一致性要求的限制。</p>
+
+  <div class=example>
+
+   <p>特别地，<code id=语义:the-template-element><a href=scripting.html#the-template-element>template</a></code> 元素的 <span>模板内容</span>
+   的 <a href=https://dom.spec.whatwg.org/#concept-node-document id=语义:node-document-2 data-x-internal=node-document>节点文档</a> 没有浏览上下文。
+   例如，<a href=#concept-element-content-model id=语义:concept-element-content-model>内容模型</a> 要求
+   和属性值微语法要求不适用于
+   <code id=语义:the-template-element-2><a href=scripting.html#the-template-element>template</a></code> 元素的 <span>模板内容</span>。
+   在此示例中，<code id=语义:the-img-element><a href=embedded-content.html#the-img-element>img</a></code> 元素的属性值是占位符，如果在 <code id=语义:the-template-element-3><a href=scripting.html#the-template-element>template</a></code> 元素外就是无效的。</p>
+
+   <pre>&lt;template>
+ &lt;article>
+  &lt;img <mark>src="{{src}}" alt="{{alt}}"</mark>>
+  &lt;h1>&lt;/h1>
+ &lt;/article>
+&lt;/template></pre>
+
+   <p>但是，如果上述标记省略了 <code>&lt;/h1></code> 结束标记，将会违反
+   <a href=syntax.html#writing>HTML 语法</a>，会被符合性检查器标记为错误。</p>
+
+  </div>
+
+  <p>通过脚本和使用其他机制，在用户代理处理文档时，属性值，文本以及文档的整体结构都可能会动态变化。
+  某一时刻文档的语义由这一时刻的文档的状态来表示，因此文档的语义会随时间变化。
+  当这种情况发生时，用户代理  更新文档的显示。</p>
+
+  <p class=example>HTML 有一个表示进度条的 <code id=语义:the-progress-element><a href=form-elements.html#the-progress-element>progress</a></code> 元素。
+  如果其 “value” 属性由脚本动态地更新，那么 UA 将更新呈现以显示进度变化。</p>
+
+
+
+
+  <h4 id=dom-中的元素><span class=secno>3.2.2</span> DOM 中的元素<a href=#dom-中的元素 class=self-link></a></h4>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Thu Mar 29 2018 02:36:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/semantics-structure-and-apis-of-html-documents/elements/elements-in-the-dom.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/semantics-structure-and-apis-of-html-documents/elements/elements-in-the-dom.zh.html></div>
+
+  <p>在 DOM 中表示 <a href=infrastructure.html#html-elements id=dom-中的元素:html-elements>HTML 元素</a> 的节点 
+  实现本规范相关章节中的对应接口，并暴露给脚本。这包括
+  <a href=https://dom.spec.whatwg.org/#xml-document id=dom-中的元素:xml-documents data-x-internal=xml-documents>XML 文档</a> 中的 <a href=infrastructure.html#html-elements id=dom-中的元素:html-elements-2>HTML 元素</a>，
+  即使那些文档在另外的上下文中（比如在一个 XSLT 转换中）。</p>
+
+  <p>DOM 中的元素 <dfn id=represents>表示着</dfn> 事物；
+  也就是说它们具有内在的 <em>意义</em>，也被称为语义。</p>
+
+  <p class=example>例如一个 <code id=dom-中的元素:the-ol-element><a href=grouping-content.html#the-ol-element>ol</a></code> 元素表示一个有序列表。</p>
+
+  <p>元素可以被显式地或者隐式地 <dfn id=referenced>引用</dfn>。
+  一种显式地引用 DOM 中元素的方式是给该元素一个 <code id=dom-中的元素:the-id-attribute><a href=#the-id-attribute>id</a></code> 属性，
+  然后创建一个 <a href=links.html#hyperlink id=dom-中的元素:hyperlink>超链接</a>，
+  用那个 <code id=dom-中的元素:the-id-attribute-2><a href=#the-id-attribute>id</a></code> 属性值作为该
+  <a href=links.html#hyperlink id=dom-中的元素:hyperlink-2>超链接</a> 的 <code id=dom-中的元素:attr-hyperlink-href><a href=links.html#attr-hyperlink-href>href</a></code> 属性值的
+  <span>片段</span>。其实引用不需要超链接的存在，任何其他引用元素的方式都是足够的。</p>
+
+  <div class=example>
+   <p>考虑下面的 <code id=dom-中的元素:the-figure-element><a href=grouping-content.html#the-figure-element>figure</a></code> 元素，给了它一个 <code id=dom-中的元素:the-id-attribute-3><a href=#the-id-attribute>id</a></code> 属性：</p>
+
+   <pre>&lt;figure id="module-script-graph">
+  &lt;img src="module-script-graph.svg"
+       alt="Module A depends on module B, which depends
+            on modules C and D.">
+  &lt;figcaption>Figure 27: a simple module graph&lt;/figcaption>
+&lt;/figure></pre>
+
+   <p>可以用 <code id=dom-中的元素:the-a-element><a href=text-level-semantics.html#the-a-element>a</a></code> 元素创建基于 <a href=links.html#hyperlink id=dom-中的元素:hyperlink-3>超链接</a> 的 <a href=#referenced id=dom-中的元素:referenced>引用</a>，像这样：</p>
+
+   <pre>As we can see in &lt;a href="#module-script-graph">figure 27&lt;/a>, ...</pre>
+
+   <p>但是也有很多其他 <a href=#referenced id=dom-中的元素:referenced-2>引用</a> <code id=dom-中的元素:the-figure-element-2><a href=grouping-content.html#the-figure-element>figure</a></code> 元素的方式，比如：</p>
+
+   <ul><li><p>"As depicted in the figure of modules A, B, C, and D..."<li><p>"In Figure 27..." (without a hyperlink)<li><p>"From the contents of the 'simple module graph' figure..."<li><p>"In the figure below..." (but <a href=grouping-content.html#figure-note-about-references>this is
+    discouraged</a>)</ul>
+  </div>
+
+  <p>所有 <a href=infrastructure.html#html-elements id=dom-中的元素:html-elements-3>HTML 元素</a> 的接口都继承自一个基本接口，。这就是 <code id=dom-中的元素:htmlelement><a href=#htmlelement>HTMLElement</a></code> 接口。</p>
+
+  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement title="The HTMLElement interface represents any HTML element. Some elements directly implement this interface, while others implement it via an interface that inherits it.">HTMLElement</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>3+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>8+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>5.5+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>1+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span></div></div><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/HTMLUnknownElement title="The HTMLUnknownElement interface represents an invalid HTML element and derives from the HTMLElement interface, but without implementing any additional properties or methods.">HTMLUnknownElement</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>Yes</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>Yes</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>Yes</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div><pre class=idl>[Exposed=Window,
+ <span>HTMLConstructor</span>]
+interface <dfn id=htmlelement>HTMLElement</dfn> : <a id=dom-中的元素:element href=https://dom.spec.whatwg.org/#interface-element data-x-internal=element>Element</a> {
+  // 元数据属性
+  [<span>CEReactions</span>] attribute DOMString <span>title</span>;
+  [<span>CEReactions</span>] attribute DOMString <span>lang</span>;
+  [<span>CEReactions</span>] attribute boolean <span>translate</span>;
+  [<span>CEReactions</span>] attribute DOMString <a href=#dom-dir id=dom-中的元素:dom-dir>dir</a>;
+  [SameObject] readonly attribute <a href=#domstringmap id=dom-中的元素:domstringmap>DOMStringMap</a> <a href=#dom-dataset id=dom-中的元素:dom-dataset>dataset</a>;
+
+  // <a href=interaction.html#editing id=dom-中的元素:editing>用户交互</a>
+  [<span>CEReactions</span>] attribute boolean <span>hidden</span>;
+  void <a href=interaction.html#dom-click id=dom-中的元素:dom-click>click</a>();
+  [<span>CEReactions</span>] attribute long <span>tabIndex</span>;
+  void <a href=interaction.html#dom-focus id=dom-中的元素:dom-focus>focus</a>(optional <a id=dom-中的元素:focusoptions href=interaction.html#focusoptions>FocusOptions</a> options);
+  void <a href=interaction.html#dom-blur id=dom-中的元素:dom-blur>blur</a>();
+  [<span>CEReactions</span>] attribute DOMString <span>accessKey</span>;
+  readonly attribute DOMString <span>accessKeyLabel</span>;
+  [<span>CEReactions</span>] attribute boolean <a href=dnd.html#dom-draggable id=dom-中的元素:dom-draggable>draggable</a>;
+  [<span>CEReactions</span>] attribute boolean <a href=interaction.html#dom-spellcheck id=dom-中的元素:dom-spellcheck>spellcheck</a>;
+  [<span>CEReactions</span>] attribute DOMString <a href=interaction.html#dom-autocapitalize id=dom-中的元素:dom-autocapitalize>autocapitalize</a>;
+
+  [<span>CEReactions</span>] attribute [TreatNullAs=EmptyString] DOMString <a href=#dom-innertext id=dom-中的元素:dom-innertext>innerText</a>;
+};
+
+<a href=#htmlelement id=dom-中的元素:htmlelement-2>HTMLElement</a> includes <span>GlobalEventHandlers</span>;
+<a href=#htmlelement id=dom-中的元素:htmlelement-3>HTMLElement</a> includes <span>DocumentAndElementEventHandlers</span>;
+<a href=#htmlelement id=dom-中的元素:htmlelement-4>HTMLElement</a> includes <a id=dom-中的元素:elementcontenteditable href=interaction.html#elementcontenteditable>ElementContentEditable</a>;
+
+// 注意：<a href=custom-elements.html#customized-built-in-element-restrictions>有意</a> 不是 [<span>HTMLConstructor</span>]
+[Exposed=Window]
+interface <dfn id=htmlunknownelement>HTMLUnknownElement</dfn> : <a href=#htmlelement id=dom-中的元素:htmlelement-5>HTMLElement</a> { };</pre>
+
+  <p><code id=dom-中的元素:htmlelement-6><a href=#htmlelement>HTMLElement</a></code> 接口保存着很多不同功能的方法和属性，因此该接口的成员在本规范的不同部分中描述。</p>
+
+  
+
+  <p>HTML 和 SVG 元素共同的特性使用 <code id=dom-中的元素:htmlorsvgelement><a href=#htmlorsvgelement>HTMLOrSVGElement</a></code> 接口 mixin: <a href=references.html#refsSVG>[SVG]</a></p>
+
+  <pre class=idl>interface mixin <dfn id=htmlorsvgelement>HTMLOrSVGElement</dfn> {
+  [SameObject] readonly attribute <a href=#domstringmap id=dom-中的元素:domstringmap-2>DOMStringMap</a> <a href=#dom-dataset id=dom-中的元素:dom-dataset-2>dataset</a>;
+  attribute DOMString <a href=infrastructure.html#dom-noncedelement-nonce id=dom-中的元素:dom-noncedelement-nonce>nonce</a>;
+
+  [<span>CEReactions</span>] attribute long <span>tabIndex</span>;
+  void <a href=interaction.html#dom-focus id=dom-中的元素:dom-focus-2>focus</a>(optional <a id=dom-中的元素:focusoptions-2 href=interaction.html#focusoptions>FocusOptions</a> options);
+  void <a href=interaction.html#dom-blur id=dom-中的元素:dom-blur-2>blur</a>();
+};
+<a href=#htmlelement id=dom-中的元素:htmlelement-7>HTMLElement</a> includes <a href=#htmlorsvgelement id=dom-中的元素:htmlorsvgelement-2>HTMLOrSVGElement</a>;
+<a id=dom-中的元素:svgelement href=https://svgwg.org/svg2-draft/types.html#InterfaceSVGElement data-x-internal=svgelement>SVGElement</a> includes <a href=#htmlorsvgelement id=dom-中的元素:htmlorsvgelement-3>HTMLOrSVGElement</a>;
+</pre>
+
+  
+
+
+
+
+  <h4 id=元素定义><span class=secno>3.2.3</span> 元素定义<a href=#元素定义 class=self-link></a></h4>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/semantics-structure-and-apis-of-html-documents/elements/element-definitions/index.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/semantics-structure-and-apis-of-html-documents/elements/element-definitions/index.zh.html></div>
+
+  <p>在本规范中的每个元素都有一个定义，包含以下信息：</p>
+
+  <dl><dt><dfn id=concept-element-categories>类别</dfn><dd><p>该元素所属的 <a href=#content-categories id=元素定义:content-categories>类别</a> 列表。
+   在为每个元素定义 <a href=#内容模型 id=元素定义:内容模型>内容模型</a> 时用到。<dt><dfn id=concept-element-contexts>可以使用该元素的上下文</dfn><dd>
+    <p>该元素可以在哪里使用的 <em>非规范化的</em> 描述。
+    该信息与允许该元素为子元素的元素内容模型之间存在冗余，只是为了方便而提供。</p>
+
+    <div class=note>
+     <p>为了简单起见，只列出最具体的元素规则。</p>
+
+     <p>例如，所有 <a href=#phrasing-content id=元素定义:phrasing-content>短语内容</a> 都是 <a href=#flow-content id=元素定义:flow-content>流内容</a>。
+     因此 <a href=#phrasing-content id=元素定义:phrasing-content-2>短语内容</a> 元素只会列在 "需要是 <a href=#phrasing-content id=元素定义:phrasing-content-3>短语内容</a> 的地方"，
+     因为这样更具体。任何需要 <a href=#flow-content id=元素定义:flow-content-2>流式内容</a> 的地方也可以用 <a href=#phrasing-content id=元素定义:phrasing-content-4>短语内容</a>，
+     因为它也符合规则。</p>
+    </div>
+   <dt><dfn id=concept-element-content-model>内容模型</dfn><dd><p>必须包含哪些内容作为子元素和后代元素的规范性描述。<dt><dfn id=concept-element-tag-omission>text/html 中的标签省略</dfn><dd><p><em>非规范性的</em> 描述：在 <code>text/html</code> 语法中，
+   是否可以忽略 <a href=syntax.html#syntax-start-tag id=元素定义:syntax-start-tag>开始</a> 和 <a href=syntax.html#syntax-end-tag id=元素定义:syntax-end-tag>结束</a> 标签。
+   该信息与 <a href=syntax.html#syntax-tag-omission id=元素定义:syntax-tag-omission>可选标签</a> 部分给出的规范性要求之间存在冗余，
+   在元素定义中提供只是为了方便。<dt><dfn id=concept-element-attributes>内容属性</dfn><dd><p>可以在该元素上指定的（除了不允许的情况）一个规范性的属性列表，
+   以及对这些属性的非规范性的描述。（破折号左侧是规范性的，右侧是非规范性的。）<dt><dfn id=concept-element-accessibility-considerations>可访问性考虑</dfn><dd>
+    <p>对于使用方：遵循 <cite>ARIA in HTML</cite> 定义的
+    <cite>ARIA</cite> <code id=元素定义:attr-aria-role><a href=infrastructure.html#attr-aria-role>role</a></code> 和 <code id=元素定义:attr-aria-*><a href=infrastructure.html#attr-aria-*>aria-*</a></code> 属性的要求。
+    <a href=references.html#refsARIA>[ARIA]</a> <a href=references.html#refsARIAHTML>[ARIAHTML]</a></p>
+
+    <p>对于实现方：用户代理实现可访问性 API 语义的要求定义在 <cite>HTML Accessibility API Mappings</cite>。<a href=references.html#refsHTMLAAM>[HTMLAAM]</a></p>
+   <dt><dfn id=concept-element-dom>DOM 接口</dfn><dd><p>一个关于这样的元素必须实现的 DOM 接口的规范性的定义。</dl>
+
+  <p>之后是更多的描述：元素所 <a href=#represents id=元素定义:represents>代表</a> 的内容，
+  以及可能适用于作者 
+  的任何其他规范性的一致性标准，有时也包括实例。</p>
+
+
+
+  <h5 id=属性><span class=secno>3.2.3.1</span> 属性<a href=#属性 class=self-link></a></h5>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/semantics-structure-and-apis-of-html-documents/elements/element-definitions/attributes.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/semantics-structure-and-apis-of-html-documents/elements/element-definitions/attributes.zh.html></div>
+
+  <p id=attribute-text>一个属性值是一个字符串。
+  除非另有说明，<a href=infrastructure.html#html-elements id=属性:html-elements>HTML 元素</a> 上的属性值可以是任何字符串值，
+  包括空字符串，而且对这些属性值中可以指定的文本没有任何限制。</p>
+
+
+
+
+  <h4 id=内容模型><span class=secno>3.2.4</span> <dfn>内容模型</dfn><a href=#内容模型 class=self-link></a></h4>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/semantics-structure-and-apis-of-html-documents/elements/content-models/index.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/semantics-structure-and-apis-of-html-documents/elements/content-models/index.zh.html></div>
+
+  <p>本标准中定义的每个元素都有内容模型：描述了元素期望的 <a href=#concept-html-contents id=内容模型:concept-html-contents>内容</a>。
+  <a href=infrastructure.html#html-elements id=内容模型:html-elements>HTML 元素</a> 的内容必须匹配元素内容模型的要求。
+  元素的 <dfn id=concept-html-contents>内容</dfn> 是它在 DOM 中的子节点。</p>
+
+  <p>元素之间总是允许 <a href=https://infra.spec.whatwg.org/#ascii-whitespace id=内容模型:space-characters data-x-internal=space-characters>ASCII 空白</a>。用户代理将源码标记中元素之间的字符表示为
+  DOM 中的 <code id=内容模型:text><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>Text</a></code> 节点。 空的 <code id=内容模型:text-2><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>Text</a></code> 节点和
+  只包含那些字符序列的 <code id=内容模型:text-3><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>Text</a></code> 节点都被认为是 <dfn id=inter-element-whitespace>元素间空白</dfn>。</p>
+
+  <p>当决定元素内容是否匹配元素内容模型的要求时必须忽略
+  <a href=#inter-element-whitespace id=内容模型:inter-element-whitespace>元素间空白</a>， 注释节点，以及处理指令节点。
+  在执行定义文档和元素语义的算法时也必须忽略这些节点。</p>
+
+  <p class=note>因此，元素 <var>A</var> 与元素 <var>B</var> <i>相邻</i> 是指
+  <var>A</var> 和 <var>B</var> 有相同的父节点且它们之间没有元素节点或 <code id=内容模型:text-4><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>Text</a></code> 节点
+  （<a href=#inter-element-whitespace id=内容模型:inter-element-whitespace-2>元素间空白</a> 除外）。
+  类似地，元素的 <i>唯一子节点</i> 是指其父元素只包含 <a href=#inter-element-whitespace id=内容模型:inter-element-whitespace-3>元素箭空白</a>，
+  注释节点，以及处理指令节点。</p>
+
+  <p>作者不得随意使用 <a href=infrastructure.html#html-elements id=内容模型:html-elements-2>HTML 元素</a>，除非明确允许（每个元素都有定义），
+  或其他规范有明确要求。对于 XML 复合文档，如果这些元素定义为提供相关上下文，那么这些上下文可以位于其他命名空间的元素之内。</p>
+
+  <div class=example>
+   <p>例如 Atom 规范定义了一个 <code>content</code> 元素。当它的
+   <code>type</code> 属性值为 <code>xhtml</code> 时，Atom
+   规范要求它包含单个 HTML <code id=内容模型:the-div-element><a href=grouping-content.html#the-div-element>div</a></code> 元素。因此该上下文中允许出现一个a
+   <code id=内容模型:the-div-element-2><a href=grouping-content.html#the-div-element>div</a></code> 元素，虽然本规范没有明确地声明这一点。<a href=references.html#refsATOM>[ATOM]</a></p>
+  </div>
+
+  <p>此外，<a href=infrastructure.html#html-elements id=内容模型:html-elements-3>HTML 元素</a> 可能是孤立节点（即没有父节点）。</p>
+
+  <div class=example>
+
+   <p>例如创建一个 <code id=内容模型:the-td-element><a href=tables.html#the-td-element>td</a></code> 元素并把它存储为脚本中的全局变量是符合规范的，即使
+   <code id=内容模型:the-td-element-2><a href=tables.html#the-td-element>td</a></code> 元素只期望用于 <code id=内容模型:the-tr-element><a href=tables.html#the-tr-element>tr</a></code> 元素中。</p>
+
+   <pre>var data = {
+  name： "Banana"，
+  cell： document.createElement('td')，
+};</pre>
+
+  </div>
+
+
+
+  <h5 id=nothing-内容模型><span class=secno>3.2.4.1</span> "nothing" 内容模型<a href=#nothing-内容模型 class=self-link></a></h5>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/semantics-structure-and-apis-of-html-documents/elements/content-models/the-nothing-content-model.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/semantics-structure-and-apis-of-html-documents/elements/content-models/the-nothing-content-model.zh.html></div>
+
+  <p>当元素的内容模型是 <dfn id=concept-content-nothing>nothing</dfn> 时，
+  该元素不得包含 <code id=nothing-内容模型:text><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>Text</a></code> 节点（<a href=#inter-element-whitespace id=nothing-内容模型:inter-element-whitespace>元素间空白</a> 除外）
+  和元素节点。</p>
+
+  <p class=note>方便起见，多数内容模型为 “nothing” 的 HTML 元素同时也是 <a href=syntax.html#void-elements id=nothing-内容模型:void-elements>void 元素</a>
+  （<a href=syntax.html#syntax>HTML 语法</a> 中没有 <a href=syntax.html#syntax-end-tag id=nothing-内容模型:syntax-end-tag>结束标签</a> 的元素）。
+  但是，这些是完全独立的概念。</p>
+
+
+
+  <h5 id=内容的种类><span class=secno>3.2.4.2</span> 内容的种类<a href=#内容的种类 class=self-link></a></h5>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Fri May 18 2018 05:39:15 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/semantics-structure-and-apis-of-html-documents/elements/content-models/kinds-of-content/index.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/semantics-structure-and-apis-of-html-documents/elements/content-models/kinds-of-content/index.zh.html></div>
+
+  <p>HTML 中的每个元素都属于一个或多个 <dfn id=content-categories>类别</dfn>
+  一个类别中的元素有着相似的特点。本规范使用以下几个大类：</p>
+
+  <ul class=brief><li><a href=#metadata-content id=内容的种类:metadata-content>元数据内容</a><li><a href=#flow-content id=内容的种类:flow-content>流式内容</a><li><a href=#sectioning-content id=内容的种类:sectioning-content>章节内容</a><li><a href=#heading-content id=内容的种类:heading-content>标题内容</a><li><a href=#phrasing-content id=内容的种类:phrasing-content>短语内容</a><li><a href=#embedded-content-category id=内容的种类:embedded-content-category>嵌入内容</a><li><a href=#interactive-content id=内容的种类:interactive-content>交互式内容</a></ul>
+
+  <p class=note>有些元素属于其他类别，这些类别定义在本规范的其他部分。</p>
+
+  <p>这些类别之间的关系如下：</p>
+
+  <p><object width=1000 height=288 data=/images/content-venn.svg></object></p>
+
+  <p>章节内容，标题内容，短语内容，嵌入内容和交互式内容都是流式内容。元数据有时也是流式内容。
+  元数据和交互式内容有时是短语内容。嵌入内容也是短语内容，有时也是交互式内容。</p>
+
+  <p>有时为了特定意图也会使用其他的类别，比如为了定义通用要求，为表单控件指定了多种类别。
+  有些元素有独特的要求，不属于任何特定类别。</p>
+
+
+
+  <h6 id=元数据内容><span class=secno>3.2.4.2.1</span> 元数据内容<a href=#元数据内容 class=self-link></a></h6>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/semantics-structure-and-apis-of-html-documents/elements/content-models/kinds-of-content/metadata-content.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/semantics-structure-and-apis-of-html-documents/elements/content-models/kinds-of-content/metadata-content.zh.html></div>
+
+  <p><dfn id=metadata-content>元数据内容</dfn> 是设置其余内容的呈现或行为，
+  设置文档与其他文档的关系，传达其他“带外”信息的内容。</p>
+
+  
+  <ul class="brief category-list"><li><code id=元数据内容:base-元素><a href=semantics.html#base-元素>base</a></code><li><code id=元数据内容:link-元素><a href=semantics.html#link-元素>link</a></code><li><code id=元数据内容:the-meta-element><a href=semantics.html#the-meta-element>meta</a></code><li><code id=元数据内容:the-noscript-element><a href=scripting.html#the-noscript-element>noscript</a></code><li><code id=元数据内容:the-script-element><a href=scripting.html#the-script-element>script</a></code><li><code id=元数据内容:the-style-element><a href=semantics.html#the-style-element>style</a></code><li><code id=元数据内容:the-template-element><a href=scripting.html#the-template-element>template</a></code><li><code id=元数据内容:the-title-element><a href=semantics.html#the-title-element>title</a></code></ul>
+
+  <p>其语义主要与元数据相关的其他命名空间的元素（比如 RDF）
+  也是 <a href=#metadata-content id=元数据内容:metadata-content>元数据内容</a>。</p>
+
+  <div class=example>
+
+   <p>因此在 XML 序列化中，可以像这样使用 RDF：</p>
+
+   <pre>&lt;html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:r="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xml:lang="en">
+ &lt;head>
+  &lt;title>Hedral's Home Page&lt;/title>
+  &lt;r:RDF>
+   &lt;Person xmlns="http://www.w3.org/2000/10/swap/pim/contact#"
+           r:about="https://hedral.example.com/#">
+    &lt;fullName>Cat Hedral&lt;/fullName>
+    &lt;mailbox r:resource="mailto:hedral@damowmow.com"/>
+    &lt;personalTitle>Sir&lt;/personalTitle>
+   &lt;/Person>
+  &lt;/r:RDF>
+ &lt;/head>
+ &lt;body>
+  &lt;h1>My home page&lt;/h1>
+  &lt;p>I like playing with string, I guess. Sister says squirrels are fun
+  too so sometimes I follow her to play with them.&lt;/p>
+ &lt;/body>
+&lt;/html></pre>
+
+   <p>然而，这在 HTML 序列化中是不可能的。</p>
+
+  </div>
+
+
+
+  <h6 id=流式内容><span class=secno>3.2.4.2.2</span> 流式内容<a href=#流式内容 class=self-link></a></h6>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/semantics-structure-and-apis-of-html-documents/elements/content-models/kinds-of-content/flow-content.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/semantics-structure-and-apis-of-html-documents/elements/content-models/kinds-of-content/flow-content.zh.html></div>
+
+  <p>多数文档和应用的 body 中的元素都归类为 <dfn id=flow-content>流式内容</dfn>。</p>
+
+  
+  <ul class="brief category-list"><li><code id=流式内容:the-a-element><a href=text-level-semantics.html#the-a-element>a</a></code><li><code id=流式内容:the-abbr-element><a href=text-level-semantics.html#the-abbr-element>abbr</a></code><li><code id=流式内容:the-address-element><a href=sections.html#the-address-element>address</a></code><li><code id=流式内容:the-area-element><a href=image-maps.html#the-area-element>area</a></code> （如果是 <code id=流式内容:the-map-element><a href=image-maps.html#the-map-element>map</a></code> 元素的后代）<li><code id=流式内容:the-article-element><a href=sections.html#the-article-element>article</a></code><li><code id=流式内容:the-aside-element><a href=sections.html#the-aside-element>aside</a></code><li><code id=流式内容:the-audio-element><a href=media.html#the-audio-element>audio</a></code><li><code id=流式内容:the-b-element><a href=text-level-semantics.html#the-b-element>b</a></code><li><code id=流式内容:the-bdi-element><a href=text-level-semantics.html#the-bdi-element>bdi</a></code><li><code id=流式内容:the-bdo-element><a href=text-level-semantics.html#the-bdo-element>bdo</a></code><li><code id=流式内容:the-blockquote-element><a href=grouping-content.html#the-blockquote-element>blockquote</a></code><li><code id=流式内容:the-br-element><a href=text-level-semantics.html#the-br-element>br</a></code><li><code id=流式内容:the-button-element><a href=form-elements.html#the-button-element>button</a></code><li><code id=流式内容:the-canvas-element><a href=canvas.html#the-canvas-element>canvas</a></code><li><code id=流式内容:the-cite-element><a href=text-level-semantics.html#the-cite-element>cite</a></code><li><code id=流式内容:the-code-element><a href=text-level-semantics.html#the-code-element>code</a></code><li><code id=流式内容:the-data-element><a href=text-level-semantics.html#the-data-element>data</a></code><li><code id=流式内容:the-datalist-element><a href=form-elements.html#the-datalist-element>datalist</a></code><li><code id=流式内容:the-del-element><a href=edits.html#the-del-element>del</a></code><li><code id=流式内容:the-details-element><a href=interactive-elements.html#the-details-element>details</a></code><li><code id=流式内容:the-dfn-element><a href=text-level-semantics.html#the-dfn-element>dfn</a></code><li><code id=流式内容:the-dialog-element><a href=interactive-elements.html#the-dialog-element>dialog</a></code><li><code id=流式内容:the-div-element><a href=grouping-content.html#the-div-element>div</a></code><li><code id=流式内容:the-dl-element><a href=grouping-content.html#the-dl-element>dl</a></code><li><code id=流式内容:the-em-element><a href=text-level-semantics.html#the-em-element>em</a></code><li><code id=流式内容:the-embed-element><a href=iframe-embed-object.html#the-embed-element>embed</a></code><li><code id=流式内容:the-fieldset-element><a href=form-elements.html#the-fieldset-element>fieldset</a></code><li><code id=流式内容:the-figure-element><a href=grouping-content.html#the-figure-element>figure</a></code><li><code id=流式内容:the-footer-element><a href=sections.html#the-footer-element>footer</a></code><li><code id=流式内容:the-form-element><a href=forms.html#the-form-element>form</a></code><li><code id=流式内容:the-h1,-h2,-h3,-h4,-h5,-and-h6-elements><a href=sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements>h1</a></code><li><code id=流式内容:the-h1,-h2,-h3,-h4,-h5,-and-h6-elements-2><a href=sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements>h2</a></code><li><code id=流式内容:the-h1,-h2,-h3,-h4,-h5,-and-h6-elements-3><a href=sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements>h3</a></code><li><code id=流式内容:the-h1,-h2,-h3,-h4,-h5,-and-h6-elements-4><a href=sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements>h4</a></code><li><code id=流式内容:the-h1,-h2,-h3,-h4,-h5,-and-h6-elements-5><a href=sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements>h5</a></code><li><code id=流式内容:the-h1,-h2,-h3,-h4,-h5,-and-h6-elements-6><a href=sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements>h6</a></code><li><code id=流式内容:the-header-element><a href=sections.html#the-header-element>header</a></code><li><code id=流式内容:the-hgroup-element><a href=sections.html#the-hgroup-element>hgroup</a></code><li><code id=流式内容:the-hr-element><a href=grouping-content.html#the-hr-element>hr</a></code><li><code id=流式内容:the-i-element><a href=text-level-semantics.html#the-i-element>i</a></code><li><code id=流式内容:the-iframe-element><a href=iframe-embed-object.html#the-iframe-element>iframe</a></code><li><code id=流式内容:the-img-element><a href=embedded-content.html#the-img-element>img</a></code><li><code id=流式内容:the-input-element><a href=input.html#the-input-element>input</a></code><li><code id=流式内容:the-ins-element><a href=edits.html#the-ins-element>ins</a></code><li><code id=流式内容:the-kbd-element><a href=text-level-semantics.html#the-kbd-element>kbd</a></code><li><code id=流式内容:the-label-element><a href=forms.html#the-label-element>label</a></code><li><code id=流式内容:link-元素><a href=semantics.html#link-元素>link</a></code> （如果 <a href=semantics.html#allowed-in-the-body id=流式内容:allowed-in-the-body>在 body 中允许</a>）<li><code id=流式内容:the-main-element><a href=grouping-content.html#the-main-element>main</a></code><li><code id=流式内容:the-map-element-2><a href=image-maps.html#the-map-element>map</a></code><li><code id=流式内容:the-mark-element><a href=text-level-semantics.html#the-mark-element>mark</a></code><li><a id=流式内容:mathml-math href=https://www.w3.org/Math/draft-spec/chapter2.html#interf.toplevel data-x-internal=mathml-math>MathML <code>math</code></a><li><code id=流式内容:the-menu-element><a href=grouping-content.html#the-menu-element>menu</a></code><li><code id=流式内容:the-meta-element><a href=semantics.html#the-meta-element>meta</a></code> （如果 <code id=流式内容:names:-the-itemprop-attribute><a href=microdata.html#names:-the-itemprop-attribute>itemprop</a></code> 属性存在）<li><code id=流式内容:the-meter-element><a href=form-elements.html#the-meter-element>meter</a></code><li><code id=流式内容:the-nav-element><a href=sections.html#the-nav-element>nav</a></code><li><code id=流式内容:the-noscript-element><a href=scripting.html#the-noscript-element>noscript</a></code><li><code id=流式内容:the-object-element><a href=iframe-embed-object.html#the-object-element>object</a></code><li><code id=流式内容:the-ol-element><a href=grouping-content.html#the-ol-element>ol</a></code><li><code id=流式内容:the-output-element><a href=form-elements.html#the-output-element>output</a></code><li><code id=流式内容:the-p-element><a href=grouping-content.html#the-p-element>p</a></code><li><code id=流式内容:the-picture-element><a href=embedded-content.html#the-picture-element>picture</a></code><li><code id=流式内容:the-pre-element><a href=grouping-content.html#the-pre-element>pre</a></code><li><code id=流式内容:the-progress-element><a href=form-elements.html#the-progress-element>progress</a></code><li><code id=流式内容:the-q-element><a href=text-level-semantics.html#the-q-element>q</a></code><li><code id=流式内容:the-ruby-element><a href=text-level-semantics.html#the-ruby-element>ruby</a></code><li><code id=流式内容:the-s-element><a href=text-level-semantics.html#the-s-element>s</a></code><li><code id=流式内容:the-samp-element><a href=text-level-semantics.html#the-samp-element>samp</a></code><li><code id=流式内容:the-script-element><a href=scripting.html#the-script-element>script</a></code><li><code id=流式内容:the-section-element><a href=sections.html#the-section-element>section</a></code><li><code id=流式内容:the-select-element><a href=form-elements.html#the-select-element>select</a></code><li><code id=流式内容:the-slot-element><a href=scripting.html#the-slot-element>slot</a></code><li><code id=流式内容:the-small-element><a href=text-level-semantics.html#the-small-element>small</a></code><li><code id=流式内容:the-span-element><a href=text-level-semantics.html#the-span-element>span</a></code><li><code id=流式内容:the-strong-element><a href=text-level-semantics.html#the-strong-element>strong</a></code><li><code id=流式内容:the-sub-and-sup-elements><a href=text-level-semantics.html#the-sub-and-sup-elements>sub</a></code><li><code id=流式内容:the-sub-and-sup-elements-2><a href=text-level-semantics.html#the-sub-and-sup-elements>sup</a></code><li><a id=流式内容:svg-svg href=https://svgwg.org/svg2-draft/struct.html#SVGElement data-x-internal=svg-svg>SVG <code>svg</code></a><li><code id=流式内容:the-table-element><a href=tables.html#the-table-element>table</a></code><li><code id=流式内容:the-template-element><a href=scripting.html#the-template-element>template</a></code><li><code id=流式内容:the-textarea-element><a href=form-elements.html#the-textarea-element>textarea</a></code><li><code id=流式内容:the-time-element><a href=text-level-semantics.html#the-time-element>time</a></code><li><code id=流式内容:the-u-element><a href=text-level-semantics.html#the-u-element>u</a></code><li><code id=流式内容:the-ul-element><a href=grouping-content.html#the-ul-element>ul</a></code><li><code id=流式内容:the-var-element><a href=text-level-semantics.html#the-var-element>var</a></code><li><code id=流式内容:the-video-element><a href=media.html#the-video-element>video</a></code><li><code id=流式内容:the-wbr-element><a href=text-level-semantics.html#the-wbr-element>wbr</a></code><li><a href=custom-elements.html#autonomous-custom-element id=流式内容:autonomous-custom-element>自主的 custom element</a><li><a href=#text-content id=流式内容:text-content>文本内容</a></ul>
+
+
+
+  <h6 id=章节内容><span class=secno>3.2.4.2.3</span> 章节内容<a href=#章节内容 class=self-link></a></h6>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/semantics-structure-and-apis-of-html-documents/elements/content-models/kinds-of-content/sectioning-content.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/semantics-structure-and-apis-of-html-documents/elements/content-models/kinds-of-content/sectioning-content.zh.html></div>
+
+  <p><dfn id=sectioning-content>章节内容</dfn> 是定义了
+  <a href=#heading-content id=章节内容:heading-content>标题</a> 和 <a href=sections.html#the-footer-element id=章节内容:the-footer-element>页脚</a>
+  范围的内容。</p>
+
+  
+  <ul class="brief category-list"><li><code id=章节内容:the-article-element><a href=sections.html#the-article-element>article</a></code><li><code id=章节内容:the-aside-element><a href=sections.html#the-aside-element>aside</a></code><li><code id=章节内容:the-nav-element><a href=sections.html#the-nav-element>nav</a></code><li><code id=章节内容:the-section-element><a href=sections.html#the-section-element>section</a></code></ul>
+
+  <p>每个 <a href=#sectioning-content id=章节内容:sectioning-content>章节内容</a> 元素可能具有标题和
+  <a href=sections.html#outline id=章节内容:outline>大纲</a>。
+  有关详细信息请参阅 <a href="sections.html#Headings and sections" id="章节内容:Headings and sections">标题和章节</a>。</p>
+
+  <p class=note>有些元素属于 <a href=sections.html#sectioning-root id=章节内容:sectioning-root>章节根元素</a>。
+  它们与 <a href=#sectioning-content id=章节内容:sectioning-content-2>章节内容</a> 不同，但也可以有
+  <a href=sections.html#outline id=章节内容:outline-2>大纲</a>。</p>
+
+
+
+  <h6 id=标题内容><span class=secno>3.2.4.2.4</span> 标题内容<a href=#标题内容 class=self-link></a></h6>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/semantics-structure-and-apis-of-html-documents/elements/content-models/kinds-of-content/heading-content.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/semantics-structure-and-apis-of-html-documents/elements/content-models/kinds-of-content/heading-content.zh.html></div>
+
+  <p><dfn id=heading-content>标题内容</dfn> 定义了章节的标题
+  （可以显式地用 <a href=#sectioning-content id=标题内容:sectioning-content>章节内容</a> 元素标记，
+  也可以隐式地用标题内容自己来标记）。</p>
+
+  
+  <ul class="brief category-list"><li><code id=标题内容:the-h1,-h2,-h3,-h4,-h5,-and-h6-elements><a href=sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements>h1</a></code><li><code id=标题内容:the-h1,-h2,-h3,-h4,-h5,-and-h6-elements-2><a href=sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements>h2</a></code><li><code id=标题内容:the-h1,-h2,-h3,-h4,-h5,-and-h6-elements-3><a href=sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements>h3</a></code><li><code id=标题内容:the-h1,-h2,-h3,-h4,-h5,-and-h6-elements-4><a href=sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements>h4</a></code><li><code id=标题内容:the-h1,-h2,-h3,-h4,-h5,-and-h6-elements-5><a href=sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements>h5</a></code><li><code id=标题内容:the-h1,-h2,-h3,-h4,-h5,-and-h6-elements-6><a href=sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements>h6</a></code><li><code id=标题内容:the-hgroup-element><a href=sections.html#the-hgroup-element>hgroup</a></code></ul>
+
+
+
+  <h6 id=短语内容><span class=secno>3.2.4.2.5</span> 短语内容<a href=#短语内容 class=self-link></a></h6>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/semantics-structure-and-apis-of-html-documents/elements/content-models/kinds-of-content/phrasing-content.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/semantics-structure-and-apis-of-html-documents/elements/content-models/kinds-of-content/phrasing-content.zh.html></div>
+
+  <p><dfn id=phrasing-content>短语内容</dfn> 是文档中的文本，
+  以及标记该文本的段内级别的元素。
+  多个 <a href=#phrasing-content id=短语内容:phrasing-content>短语内容</a> 形成 <a href=#paragraph id=短语内容:paragraph>段落</a>。</p>
+
+  
+  <ul class="brief category-list"><li><code id=短语内容:the-a-element><a href=text-level-semantics.html#the-a-element>a</a></code><li><code id=短语内容:the-abbr-element><a href=text-level-semantics.html#the-abbr-element>abbr</a></code><li><code id=短语内容:the-area-element><a href=image-maps.html#the-area-element>area</a></code> （如果是 <code id=短语内容:the-map-element><a href=image-maps.html#the-map-element>map</a></code> 元素的后代）<li><code id=短语内容:the-audio-element><a href=media.html#the-audio-element>audio</a></code><li><code id=短语内容:the-b-element><a href=text-level-semantics.html#the-b-element>b</a></code><li><code id=短语内容:the-bdi-element><a href=text-level-semantics.html#the-bdi-element>bdi</a></code><li><code id=短语内容:the-bdo-element><a href=text-level-semantics.html#the-bdo-element>bdo</a></code><li><code id=短语内容:the-br-element><a href=text-level-semantics.html#the-br-element>br</a></code><li><code id=短语内容:the-button-element><a href=form-elements.html#the-button-element>button</a></code><li><code id=短语内容:the-canvas-element><a href=canvas.html#the-canvas-element>canvas</a></code><li><code id=短语内容:the-cite-element><a href=text-level-semantics.html#the-cite-element>cite</a></code><li><code id=短语内容:the-code-element><a href=text-level-semantics.html#the-code-element>code</a></code><li><code id=短语内容:the-data-element><a href=text-level-semantics.html#the-data-element>data</a></code><li><code id=短语内容:the-datalist-element><a href=form-elements.html#the-datalist-element>datalist</a></code><li><code id=短语内容:the-del-element><a href=edits.html#the-del-element>del</a></code><li><code id=短语内容:the-dfn-element><a href=text-level-semantics.html#the-dfn-element>dfn</a></code><li><code id=短语内容:the-em-element><a href=text-level-semantics.html#the-em-element>em</a></code><li><code id=短语内容:the-embed-element><a href=iframe-embed-object.html#the-embed-element>embed</a></code><li><code id=短语内容:the-i-element><a href=text-level-semantics.html#the-i-element>i</a></code><li><code id=短语内容:the-iframe-element><a href=iframe-embed-object.html#the-iframe-element>iframe</a></code><li><code id=短语内容:the-img-element><a href=embedded-content.html#the-img-element>img</a></code><li><code id=短语内容:the-input-element><a href=input.html#the-input-element>input</a></code><li><code id=短语内容:the-ins-element><a href=edits.html#the-ins-element>ins</a></code><li><code id=短语内容:the-kbd-element><a href=text-level-semantics.html#the-kbd-element>kbd</a></code><li><code id=短语内容:the-label-element><a href=forms.html#the-label-element>label</a></code><li><code id=短语内容:link-元素><a href=semantics.html#link-元素>link</a></code> （如果 <a href=semantics.html#allowed-in-the-body id=短语内容:allowed-in-the-body>在 body 中允许</a>）<li><code id=短语内容:the-map-element-2><a href=image-maps.html#the-map-element>map</a></code><li><code id=短语内容:the-mark-element><a href=text-level-semantics.html#the-mark-element>mark</a></code><li><a id=短语内容:mathml-math href=https://www.w3.org/Math/draft-spec/chapter2.html#interf.toplevel data-x-internal=mathml-math>MathML <code>math</code></a><li><code id=短语内容:the-meta-element><a href=semantics.html#the-meta-element>meta</a></code> （如果 <code id=短语内容:names:-the-itemprop-attribute><a href=microdata.html#names:-the-itemprop-attribute>itemprop</a></code> 属性存在）<li><code id=短语内容:the-meter-element><a href=form-elements.html#the-meter-element>meter</a></code><li><code id=短语内容:the-noscript-element><a href=scripting.html#the-noscript-element>noscript</a></code><li><code id=短语内容:the-object-element><a href=iframe-embed-object.html#the-object-element>object</a></code><li><code id=短语内容:the-output-element><a href=form-elements.html#the-output-element>output</a></code><li><code id=短语内容:the-picture-element><a href=embedded-content.html#the-picture-element>picture</a></code><li><code id=短语内容:the-progress-element><a href=form-elements.html#the-progress-element>progress</a></code><li><code id=短语内容:the-q-element><a href=text-level-semantics.html#the-q-element>q</a></code><li><code id=短语内容:the-ruby-element><a href=text-level-semantics.html#the-ruby-element>ruby</a></code><li><code id=短语内容:the-s-element><a href=text-level-semantics.html#the-s-element>s</a></code><li><code id=短语内容:the-samp-element><a href=text-level-semantics.html#the-samp-element>samp</a></code><li><code id=短语内容:the-script-element><a href=scripting.html#the-script-element>script</a></code><li><code id=短语内容:the-select-element><a href=form-elements.html#the-select-element>select</a></code><li><code id=短语内容:the-slot-element><a href=scripting.html#the-slot-element>slot</a></code><li><code id=短语内容:the-small-element><a href=text-level-semantics.html#the-small-element>small</a></code><li><code id=短语内容:the-span-element><a href=text-level-semantics.html#the-span-element>span</a></code><li><code id=短语内容:the-strong-element><a href=text-level-semantics.html#the-strong-element>strong</a></code><li><code id=短语内容:the-sub-and-sup-elements><a href=text-level-semantics.html#the-sub-and-sup-elements>sub</a></code><li><code id=短语内容:the-sub-and-sup-elements-2><a href=text-level-semantics.html#the-sub-and-sup-elements>sup</a></code><li><a id=短语内容:svg-svg href=https://svgwg.org/svg2-draft/struct.html#SVGElement data-x-internal=svg-svg>SVG <code>svg</code></a><li><code id=短语内容:the-template-element><a href=scripting.html#the-template-element>template</a></code><li><code id=短语内容:the-textarea-element><a href=form-elements.html#the-textarea-element>textarea</a></code><li><code id=短语内容:the-time-element><a href=text-level-semantics.html#the-time-element>time</a></code><li><code id=短语内容:the-u-element><a href=text-level-semantics.html#the-u-element>u</a></code><li><code id=短语内容:the-var-element><a href=text-level-semantics.html#the-var-element>var</a></code><li><code id=短语内容:the-video-element><a href=media.html#the-video-element>video</a></code><li><code id=短语内容:the-wbr-element><a href=text-level-semantics.html#the-wbr-element>wbr</a></code><li><a href=custom-elements.html#autonomous-custom-element id=短语内容:autonomous-custom-element>自主的 custom element</a><li><a href=#text-content id=短语内容:text-content>文本内容</a></ul>
+
+  <p class=note>多数短语内容元素只能包含短语内容元素，而不是任何流式内容元素。</p>
+
+  <p>内容模型中的 <dfn id=text-content>文本内容</dfn> 意味着什么都没有，
+  或者有 <code id=短语内容:text><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>Text</a></code> 节点。有时 <a href=#text-content id=短语内容:text-content-2>文本内容</a> 自身就是
+  一种内容模型，但它也是 <a href=#phrasing-content id=短语内容:phrasing-content-2>短语内容</a>，
+  也可以是 <a href=#inter-element-whitespace id=短语内容:inter-element-whitespace>元素间空白</a>
+  （如果 <code id=短语内容:text-2><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>Text</a></code> 节点为空或者只包含 <a href=https://infra.spec.whatwg.org/#ascii-whitespace id=短语内容:space-characters data-x-internal=space-characters>ASCII 空白</a>）。</p>
+
+  <p><code id=短语内容:text-3><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>Text</a></code> 节点和属性值必须由
+  <a href=https://infra.spec.whatwg.org/#scalar-value id=短语内容:scalar-value data-x-internal=scalar-value>标量值</a> 组成，不包含 <a href=https://infra.spec.whatwg.org/#noncharacter id=短语内容:noncharacter data-x-internal=noncharacter>非字符</a>，
+  以及除 <a href=https://infra.spec.whatwg.org/#ascii-whitespace id=短语内容:space-characters-2 data-x-internal=space-characters>ASCII 空白</a> 之外的 <a href=https://infra.spec.whatwg.org/#control id=短语内容:control data-x-internal=control>控制字符</a>。
+
+   
+  
+
+  本规范对 <code id=短语内容:text-4><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>Text</a></code> 节点的值和属性的值，基于其确切的上下文会有额外的约束。
+  
+
+  </p>
+
+
+
+
+  <h6 id=嵌入内容><span class=secno>3.2.4.2.6</span> 嵌入内容<a href=#嵌入内容 class=self-link></a></h6>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/semantics-structure-and-apis-of-html-documents/elements/content-models/kinds-of-content/embedded-content.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/semantics-structure-and-apis-of-html-documents/elements/content-models/kinds-of-content/embedded-content.zh.html></div>
+
+  <p><dfn id=embedded-content-category>嵌入内容</dfn> 是指
+  引入其他资源的内容，或插入到文档的其他词汇表的内容。</p>
+
+  
+  <ul class="brief category-list"><li><code id=嵌入内容:the-audio-element><a href=media.html#the-audio-element>audio</a></code><li><code id=嵌入内容:the-canvas-element><a href=canvas.html#the-canvas-element>canvas</a></code><li><code id=嵌入内容:the-embed-element><a href=iframe-embed-object.html#the-embed-element>embed</a></code><li><code id=嵌入内容:the-iframe-element><a href=iframe-embed-object.html#the-iframe-element>iframe</a></code><li><code id=嵌入内容:the-img-element><a href=embedded-content.html#the-img-element>img</a></code><li><a id=嵌入内容:mathml-math href=https://www.w3.org/Math/draft-spec/chapter2.html#interf.toplevel data-x-internal=mathml-math>MathML <code>math</code></a><li><code id=嵌入内容:the-object-element><a href=iframe-embed-object.html#the-object-element>object</a></code><li><code id=嵌入内容:the-picture-element><a href=embedded-content.html#the-picture-element>picture</a></code><li><a id=嵌入内容:svg-svg href=https://svgwg.org/svg2-draft/struct.html#SVGElement data-x-internal=svg-svg>SVG <code>svg</code></a><li><code id=嵌入内容:the-video-element><a href=media.html#the-video-element>video</a></code></ul>
+
+  <p>来自除 <a href=https://infra.spec.whatwg.org/#html-namespace id=嵌入内容:html-namespace-2 data-x-internal=html-namespace-2>HTML 命名空间</a> 之外的，表达内容而不是元数据的元素，
+  是 <a href=#embedded-content-category id=嵌入内容:embedded-content-category>嵌入内容</a>，用于本规范定义的内容模型
+  （例如 MathML 或 SVG。）</p>
+
+  <p>有些嵌入内容元素可以包含 <dfn id=fallback-content>fallback 内容</dfn>：
+  在不能使用外部资源时使用的内容（例如，因为它是不受支持的格式）。
+  如果有 fallback 内容的话，元素定义会加以说明。</p>
+  
+
+
+
+  <h6 id=交互式内容><span class=secno>3.2.4.2.7</span> 交互式内容<a href=#交互式内容 class=self-link></a></h6>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/semantics-structure-and-apis-of-html-documents/elements/content-models/kinds-of-content/interactive-content.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/semantics-structure-and-apis-of-html-documents/elements/content-models/kinds-of-content/interactive-content.zh.html></div>
+
+
+
+  <p><dfn id=interactive-content>交互式内容</dfn> 是专门用于用户交互的内容。</p>
+
+  
+  <ul class="brief category-list"><li><code id=交互式内容:the-a-element><a href=text-level-semantics.html#the-a-element>a</a></code> （如果 <code id=交互式内容:attr-hyperlink-href><a href=links.html#attr-hyperlink-href>href</a></code> 属性存在）<li><code id=交互式内容:the-audio-element><a href=media.html#the-audio-element>audio</a></code> （如果 <code id=交互式内容:attr-media-controls><a href=media.html#attr-media-controls>controls</a></code> 属性存在）<li><code id=交互式内容:the-button-element><a href=form-elements.html#the-button-element>button</a></code><li><code id=交互式内容:the-details-element><a href=interactive-elements.html#the-details-element>details</a></code><li><code id=交互式内容:the-embed-element><a href=iframe-embed-object.html#the-embed-element>embed</a></code><li><code id=交互式内容:the-iframe-element><a href=iframe-embed-object.html#the-iframe-element>iframe</a></code><li><code id=交互式内容:the-img-element><a href=embedded-content.html#the-img-element>img</a></code> （如果 <code id=交互式内容:attr-hyperlink-usemap><a href=image-maps.html#attr-hyperlink-usemap>usemap</a></code> 属性存在）<li><code id=交互式内容:the-input-element><a href=input.html#the-input-element>input</a></code> （如果 <code id=交互式内容:attr-input-type><a href=input.html#attr-input-type>type</a></code> 属性 <em>不处于</em> <a href="input.html#hidden-state-(type=hidden)" id="交互式内容:hidden-state-(type=hidden)">隐藏</a> 状态）<li><code id=交互式内容:the-label-element><a href=forms.html#the-label-element>label</a></code><li><code id=交互式内容:the-object-element><a href=iframe-embed-object.html#the-object-element>object</a></code> （如果 <code id=交互式内容:attr-hyperlink-usemap-2><a href=image-maps.html#attr-hyperlink-usemap>usemap</a></code> 属性存在）<li><code id=交互式内容:the-select-element><a href=form-elements.html#the-select-element>select</a></code><li><code id=交互式内容:the-textarea-element><a href=form-elements.html#the-textarea-element>textarea</a></code><li><code id=交互式内容:the-video-element><a href=media.html#the-video-element>video</a></code> （如果 <code id=交互式内容:attr-media-controls-2><a href=media.html#attr-media-controls>controls</a></code> 属性存在）</ul>
+
+  <p><code id=交互式内容:attr-tabindex><a href=interaction.html#attr-tabindex>tabindex</a></code> 属性也可以让任何元素变成 <a href=#interactive-content id=交互式内容:interactive-content>交互式内容</a>。</p>
+
+
+
+
+  <h6 id=palpable-content><span class=secno>3.2.4.2.8</span> 可感知内容<a href=#palpable-content class=self-link></a></h6>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/semantics-structure-and-apis-of-html-documents/elements/content-models/kinds-of-content/palpable-content.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/semantics-structure-and-apis-of-html-documents/elements/content-models/kinds-of-content/palpable-content.zh.html></div>
+
+  <p>作为一般规则，其内容模型允许任何 <a href=#flow-content id=palpable-content:flow-content>流式内容</a> 或
+  <a href=#phrasing-content id=palpable-content:phrasing-content>短语内容</a> 的元素应在其
+  <a href=#concept-html-contents id=palpable-content:concept-html-contents>内容</a>
+  中至少包含一个 <dfn id=palpable-content-2>可感知内容</dfn> 的节点，并且它没有指定
+  <code id=palpable-content:hidden-属性><a href=interaction.html#hidden-属性>hidden</a></code> 属性。</p>
+
+  <p class=note><a href=#palpable-content-2 id=palpable-content:palpable-content-2>可感知内容</a>
+  通过提供一些非空的后代 <a href=#text-content id=palpable-content:text-content>文本</a>，
+  可以听到（<code id=palpable-content:the-audio-element><a href=media.html#the-audio-element>audio</a></code> 元素）或看到（<code id=palpable-content:the-video-element><a href=media.html#the-video-element>video</a></code>、<code id=palpable-content:the-img-element><a href=embedded-content.html#the-img-element>img</a></code> 或 <code id=palpable-content:the-canvas-element><a href=canvas.html#the-canvas-element>canvas</a></code> 元素），
+  或可以与之交互的内容（例如可交互的表单控件）来让一个元素变得非空。</p>
+
+  <p>但这个要求并不是一个硬性要求，因为有许多情况下空元素是合理的，比如当它被用作一个占位符之后用脚本填充，
+  或者对于模板元素，大多数页面都会填充，只有某些页面表现为空白，这也无关紧要。</p>
+
+  <p>推荐一致性检查工具为作者提供工具，来定位不遵守该要求的元素，帮助作者的代码编写。</p>
+
+  <p>下列元素是可感知内容：</p>
+
+  
+  <ul class="brief category-list"><li><code id=palpable-content:the-a-element><a href=text-level-semantics.html#the-a-element>a</a></code><li><code id=palpable-content:the-abbr-element><a href=text-level-semantics.html#the-abbr-element>abbr</a></code><li><code id=palpable-content:the-address-element><a href=sections.html#the-address-element>address</a></code><li><code id=palpable-content:the-article-element><a href=sections.html#the-article-element>article</a></code><li><code id=palpable-content:the-aside-element><a href=sections.html#the-aside-element>aside</a></code><li><code id=palpable-content:the-audio-element-2><a href=media.html#the-audio-element>audio</a></code> （如果存在 <code id=palpable-content:attr-media-controls><a href=media.html#attr-media-controls>controls</a></code> 属性）<li><code id=palpable-content:the-b-element><a href=text-level-semantics.html#the-b-element>b</a></code><li><code id=palpable-content:the-bdi-element><a href=text-level-semantics.html#the-bdi-element>bdi</a></code><li><code id=palpable-content:the-bdo-element><a href=text-level-semantics.html#the-bdo-element>bdo</a></code><li><code id=palpable-content:the-blockquote-element><a href=grouping-content.html#the-blockquote-element>blockquote</a></code><li><code id=palpable-content:the-button-element><a href=form-elements.html#the-button-element>button</a></code><li><code id=palpable-content:the-canvas-element-2><a href=canvas.html#the-canvas-element>canvas</a></code><li><code id=palpable-content:the-cite-element><a href=text-level-semantics.html#the-cite-element>cite</a></code><li><code id=palpable-content:the-code-element><a href=text-level-semantics.html#the-code-element>code</a></code><li><code id=palpable-content:the-data-element><a href=text-level-semantics.html#the-data-element>data</a></code><li><code id=palpable-content:the-details-element><a href=interactive-elements.html#the-details-element>details</a></code><li><code id=palpable-content:the-dfn-element><a href=text-level-semantics.html#the-dfn-element>dfn</a></code><li><code id=palpable-content:the-div-element><a href=grouping-content.html#the-div-element>div</a></code><li><code id=palpable-content:the-dl-element><a href=grouping-content.html#the-dl-element>dl</a></code> （如果元素的子节点至少包含一个键值对）<li><code id=palpable-content:the-em-element><a href=text-level-semantics.html#the-em-element>em</a></code><li><code id=palpable-content:the-embed-element><a href=iframe-embed-object.html#the-embed-element>embed</a></code><li><code id=palpable-content:the-fieldset-element><a href=form-elements.html#the-fieldset-element>fieldset</a></code><li><code id=palpable-content:the-figure-element><a href=grouping-content.html#the-figure-element>figure</a></code><li><code id=palpable-content:the-footer-element><a href=sections.html#the-footer-element>footer</a></code><li><code id=palpable-content:the-form-element><a href=forms.html#the-form-element>form</a></code><li><code id=palpable-content:the-h1,-h2,-h3,-h4,-h5,-and-h6-elements><a href=sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements>h1</a></code><li><code id=palpable-content:the-h1,-h2,-h3,-h4,-h5,-and-h6-elements-2><a href=sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements>h2</a></code><li><code id=palpable-content:the-h1,-h2,-h3,-h4,-h5,-and-h6-elements-3><a href=sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements>h3</a></code><li><code id=palpable-content:the-h1,-h2,-h3,-h4,-h5,-and-h6-elements-4><a href=sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements>h4</a></code><li><code id=palpable-content:the-h1,-h2,-h3,-h4,-h5,-and-h6-elements-5><a href=sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements>h5</a></code><li><code id=palpable-content:the-h1,-h2,-h3,-h4,-h5,-and-h6-elements-6><a href=sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements>h6</a></code><li><code id=palpable-content:the-header-element><a href=sections.html#the-header-element>header</a></code><li><code id=palpable-content:the-hgroup-element><a href=sections.html#the-hgroup-element>hgroup</a></code><li><code id=palpable-content:the-i-element><a href=text-level-semantics.html#the-i-element>i</a></code><li><code id=palpable-content:the-iframe-element><a href=iframe-embed-object.html#the-iframe-element>iframe</a></code><li><code id=palpable-content:the-img-element-2><a href=embedded-content.html#the-img-element>img</a></code><li><code id=palpable-content:the-input-element><a href=input.html#the-input-element>input</a></code> （如果 <code id=palpable-content:attr-input-type><a href=input.html#attr-input-type>type</a></code> 属性 <em>不处于</em> <a href="input.html#hidden-state-(type=hidden)" id="palpable-content:hidden-state-(type=hidden)">隐藏</a> 状态）<li><code id=palpable-content:the-ins-element><a href=edits.html#the-ins-element>ins</a></code><li><code id=palpable-content:the-kbd-element><a href=text-level-semantics.html#the-kbd-element>kbd</a></code><li><code id=palpable-content:the-label-element><a href=forms.html#the-label-element>label</a></code><li><code id=palpable-content:the-main-element><a href=grouping-content.html#the-main-element>main</a></code><li><code id=palpable-content:the-map-element><a href=image-maps.html#the-map-element>map</a></code><li><code id=palpable-content:the-mark-element><a href=text-level-semantics.html#the-mark-element>mark</a></code><li><a id=palpable-content:mathml-math href=https://www.w3.org/Math/draft-spec/chapter2.html#interf.toplevel data-x-internal=mathml-math>MathML <code>math</code></a><li><code id=palpable-content:the-menu-element><a href=grouping-content.html#the-menu-element>menu</a></code> （如果元素的子节点至少包含一个 <code id=palpable-content:the-li-element><a href=grouping-content.html#the-li-element>li</a></code> 元素）<li><code id=palpable-content:the-meter-element><a href=form-elements.html#the-meter-element>meter</a></code><li><code id=palpable-content:the-nav-element><a href=sections.html#the-nav-element>nav</a></code><li><code id=palpable-content:the-object-element><a href=iframe-embed-object.html#the-object-element>object</a></code><li><code id=palpable-content:the-ol-element><a href=grouping-content.html#the-ol-element>ol</a></code> （如果元素的子节点至少包含一个 <code id=palpable-content:the-li-element-2><a href=grouping-content.html#the-li-element>li</a></code> 元素）<li><code id=palpable-content:the-output-element><a href=form-elements.html#the-output-element>output</a></code><li><code id=palpable-content:the-p-element><a href=grouping-content.html#the-p-element>p</a></code><li><code id=palpable-content:the-pre-element><a href=grouping-content.html#the-pre-element>pre</a></code><li><code id=palpable-content:the-progress-element><a href=form-elements.html#the-progress-element>progress</a></code><li><code id=palpable-content:the-q-element><a href=text-level-semantics.html#the-q-element>q</a></code><li><code id=palpable-content:the-ruby-element><a href=text-level-semantics.html#the-ruby-element>ruby</a></code><li><code id=palpable-content:the-s-element><a href=text-level-semantics.html#the-s-element>s</a></code><li><code id=palpable-content:the-samp-element><a href=text-level-semantics.html#the-samp-element>samp</a></code><li><code id=palpable-content:the-section-element><a href=sections.html#the-section-element>section</a></code><li><code id=palpable-content:the-select-element><a href=form-elements.html#the-select-element>select</a></code><li><code id=palpable-content:the-small-element><a href=text-level-semantics.html#the-small-element>small</a></code><li><code id=palpable-content:the-span-element><a href=text-level-semantics.html#the-span-element>span</a></code><li><code id=palpable-content:the-strong-element><a href=text-level-semantics.html#the-strong-element>strong</a></code><li><code id=palpable-content:the-sub-and-sup-elements><a href=text-level-semantics.html#the-sub-and-sup-elements>sub</a></code><li><code id=palpable-content:the-sub-and-sup-elements-2><a href=text-level-semantics.html#the-sub-and-sup-elements>sup</a></code><li><a id=palpable-content:svg-svg href=https://svgwg.org/svg2-draft/struct.html#SVGElement data-x-internal=svg-svg>SVG <code>svg</code></a><li><code id=palpable-content:the-table-element><a href=tables.html#the-table-element>table</a></code><li><code id=palpable-content:the-textarea-element><a href=form-elements.html#the-textarea-element>textarea</a></code><li><code id=palpable-content:the-time-element><a href=text-level-semantics.html#the-time-element>time</a></code><li><code id=palpable-content:the-u-element><a href=text-level-semantics.html#the-u-element>u</a></code><li><code id=palpable-content:the-ul-element><a href=grouping-content.html#the-ul-element>ul</a></code> （如果元素的子节点至少包含一个 <code id=palpable-content:the-li-element-3><a href=grouping-content.html#the-li-element>li</a></code> 元素）<li><code id=palpable-content:the-var-element><a href=text-level-semantics.html#the-var-element>var</a></code><li><code id=palpable-content:the-video-element-2><a href=media.html#the-video-element>video</a></code><li><a href=custom-elements.html#autonomous-custom-element id=palpable-content:autonomous-custom-element>自主的 Custom Element</a><li>非 <a href=#inter-element-whitespace id=palpable-content:inter-element-whitespace>元素间空白</a> 的 <a href=#text-content id=palpable-content:text-content-2>文本</a></ul>
+
+
+
+  <h6 id=脚本支持元素><span class=secno>3.2.4.2.9</span> 脚本支持元素<a href=#脚本支持元素 class=self-link></a></h6>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/semantics-structure-and-apis-of-html-documents/elements/content-models/kinds-of-content/script-supporting-elements.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/semantics-structure-and-apis-of-html-documents/elements/content-models/kinds-of-content/script-supporting-elements.zh.html></div>
+
+  <p><dfn id=script-supporting-elements>脚本支持元素</dfn> 是指那些本身不
+  <a href=#represents id=脚本支持元素:represents>表示</a> 任何东西（即它们不被渲染），但是被用于支持脚本，
+  为用户提供功能。</p>
+
+  <p>下列元素是脚本支持元素：</p>
+
+  
+  <ul class="brief category-list"><li><code id=脚本支持元素:the-script-element><a href=scripting.html#the-script-element>script</a></code><li><code id=脚本支持元素:the-template-element><a href=scripting.html#the-template-element>template</a></code></ul>
+
+
+
+
+  <h5 id=透明内容模型><span class=secno>3.2.4.3</span> 透明内容模型<a href=#透明内容模型 class=self-link></a></h5>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/semantics-structure-and-apis-of-html-documents/elements/content-models/transparent-content-models.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/semantics-structure-and-apis-of-html-documents/elements/content-models/transparent-content-models.zh.html></div>
+
+  <p>有些元素被描述为 <dfn id=transparent>透明的</dfn>；它们的内容模型描述中有 "透明" 一词。
+  <a href=#transparent id=透明内容模型:transparent>透明</a> 元素的内容模型从其父元素的内容模型派生：
+  “透明”的内容模型中某一部分所要求的元素与父元素的内容模型中对应部分所要求的元素相同。</p>
+
+  <div class=example>
+
+   <p>例如，<code id=透明内容模型:the-ruby-element><a href=text-level-semantics.html#the-ruby-element>ruby</a></code> 元素中的 <code id=透明内容模型:the-ins-element><a href=edits.html#the-ins-element>ins</a></code> 元素不可包含 <code id=透明内容模型:the-rt-element><a href=text-level-semantics.html#the-rt-element>rt</a></code> 元素，
+   因为 <code id=透明内容模型:the-ruby-element-2><a href=text-level-semantics.html#the-ruby-element>ruby</a></code> 元素的内容模型中允许 <code id=透明内容模型:the-ins-element-2><a href=edits.html#the-ins-element>ins</a></code> 元素的部分就是允许
+   <a href=#phrasing-content id=透明内容模型:phrasing-content>短语内容</a> 的那一部分，
+   <code id=透明内容模型:the-rt-element-2><a href=text-level-semantics.html#the-rt-element>rt</a></code> 元素不是 <a href=#phrasing-content id=透明内容模型:phrasing-content-2>短语内容</a>。</p>
+
+  </div>
+
+
+
+  <p class=note>在有些情况下，透明元素互相嵌套时，必须迭代地应用这个过程。</p>
+
+  <div class=example>
+
+   <p>考虑下面的标记片段：</p>
+
+   <pre>&lt;p>&lt;object>&lt;param>&lt;ins>&lt;map>&lt;a href="/">Apples&lt;/a>&lt;/map>&lt;/ins>&lt;/object>&lt;/p></pre>
+
+   <p>为了检查 <code id=透明内容模型:the-a-element><a href=text-level-semantics.html#the-a-element>a</a></code> 元素中是否允许 "Apples"，要检查内容模型。
+   <code id=透明内容模型:the-a-element-2><a href=text-level-semantics.html#the-a-element>a</a></code> 元素的内容模型是透明的，<code id=透明内容模型:the-map-element><a href=image-maps.html#the-map-element>map</a></code> 元素也是，
+   <code id=透明内容模型:the-ins-element-3><a href=edits.html#the-ins-element>ins</a></code> 元素也是，<code id=透明内容模型:the-object-element><a href=iframe-embed-object.html#the-object-element>object</a></code> 元素中 <code id=透明内容模型:the-ins-element-4><a href=edits.html#the-ins-element>ins</a></code> 元素所在的部分也是。
+   <code id=透明内容模型:the-object-element-2><a href=iframe-embed-object.html#the-object-element>object</a></code> 元素位于 <code id=透明内容模型:the-p-element><a href=grouping-content.html#the-p-element>p</a></code> 元素中，后者的内容模型是 <a href=#phrasing-content id=透明内容模型:phrasing-content-3>短语内容</a>。
+   因此 "Apples" 是允许的，因为文本是短语内容。</p>
+
+  </div>
+
+  <p>当透明元素秘佑父元素时，它的内容模型中透明的那一部分必须被当做可以接受任何
+  <a href=#flow-content id=透明内容模型:flow-content>流式内容</a>。</p>
+
+
+
+  <h5 id=段落><span class=secno>3.2.4.4</span> 段落<a href=#段落 class=self-link></a></h5>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/semantics-structure-and-apis-of-html-documents/elements/content-models/paragraphs.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/semantics-structure-and-apis-of-html-documents/elements/content-models/paragraphs.zh.html></div>
+
+  <p class=note>本小节定义的术语 <a href=#paragraph id=段落:paragraph>段落</a> 的用途不止是
+  <code id=段落:the-p-element><a href=grouping-content.html#the-p-element>p</a></code> 元素的定义。这里定义的 <a href=#paragraph id=段落:paragraph-2>段落</a> 概念用于描述如何解释文档。
+  <code id=段落:the-p-element-2><a href=grouping-content.html#the-p-element>p</a></code> 元素仅仅是标记 <a href=#paragraph id=段落:paragraph-3>段落</a> 的一种方式。</p>
+
+  
+  <p>一个 <dfn id=paragraph>段落</dfn> 通常是由一系列
+  <a href=#phrasing-content id=段落:phrasing-content>短语内容</a> 形成的一个文本块，
+  在排版中可能包含一个或多个句子，讨论一个特定的主题（也可以用于更一般的专题分组）。
+  例如，一个地址也可以是一个段落，可以是表单的一部分，一行署名，或者一首诗中的一节。</p>
+
+  <div class=example>
+
+   <p>下面的例子中，一个章节中有两段话。还有一个标题，它包含的短语内容不构成段落。
+   注意注释和 <a href=#inter-element-whitespace id=段落:inter-element-whitespace>元素间空白</a> 也不构成段落。</p>
+
+   <pre>&lt;section>
+  &lt;h1>Example of paragraphs&lt;/h1>
+  This is the &lt;em>first&lt;/em> paragraph in this example.
+  &lt;p>This is the second.&lt;/p>
+  &lt;!-- This is not a paragraph. -->
+&lt;/section></pre>
+
+  </div>
+
+  <p><a href=#flow-content id=段落:flow-content>流式内容</a> 中的段落相对于文档的样子来定义，与
+  <code id=段落:the-a-element><a href=text-level-semantics.html#the-a-element>a</a></code>，<code id=段落:the-ins-element><a href=edits.html#the-ins-element>ins</a></code>，<code id=段落:the-del-element><a href=edits.html#the-del-element>del</a></code>，和 <code id=段落:the-map-element><a href=image-maps.html#the-map-element>map</a></code> 元素造成的复杂情况无关。
+  因为那些元素的混合内容模型使它们可以跨越段落边界，就像下面两个例子那样。</p>
+
+  <p class=note>通常来讲，最好避免让元素跨越段落边界。这样的标记很难维护。</p>
+
+  <div class=example>
+
+   <p>下面的例子取自前一个例子中的标记，在某些标记处加入了 <code id=段落:the-ins-element-2><a href=edits.html#the-ins-element>ins</a></code> 和 <code id=段落:the-del-element-2><a href=edits.html#the-del-element>del</a></code> 元素，
+   用来展示文本的变更（尽管这种情况下，这一变更确实没啥意义）。注意这个例子中的段落与上一个例子完全相同，
+   尽管插入了 <code id=段落:the-ins-element-3><a href=edits.html#the-ins-element>ins</a></code> 和 <code id=段落:the-del-element-3><a href=edits.html#the-del-element>del</a></code> 元素 — <code id=段落:the-ins-element-4><a href=edits.html#the-ins-element>ins</a></code> 元素跨越了标题和第一个段落，
+   <code id=段落:the-del-element-4><a href=edits.html#the-del-element>del</a></code> 元素跨越了两个段落的边界。</p>
+
+   <pre>&lt;section>
+  &lt;ins>&lt;h1>Example of paragraphs&lt;/h1>
+  This is the &lt;em>first&lt;/em> paragraph in&lt;/ins> this example&lt;del>.
+  &lt;p>This is the second.&lt;/p>&lt;/del>
+  &lt;!-- This is not a paragraph. -->
+&lt;/section></pre>
+
+  </div>
+
+  
+
+  <p><code id=段落:the-p-element-3><a href=grouping-content.html#the-p-element>p</a></code> 元素也显式地生成了 <a href=#paragraph id=段落:paragraph-4>段落</a>。</p>
+
+  <p class=note><code id=段落:the-p-element-4><a href=grouping-content.html#the-p-element>p</a></code> 元素可以用于包裹普通的短语内容来形成相互独立的段落。</p>
+
+  <div class=example>
+
+   <p>在下面的例子中，链接横跨了半个第一个段落，分离两个段落的标题，以及半个第二个段落。它同时横跨了段落和标题。</p>
+
+   <pre>&lt;header>
+ Welcome!
+ &lt;a href="about.html">
+  This is home of...
+  &lt;h1>The Falcons!&lt;/h1>
+  The Lockheed Martin multirole jet fighter aircraft!
+ &lt;/a>
+ This page discusses the F-16 Fighting Falcon's innermost secrets.
+&lt;/header></pre>
+
+   <p>这是上述标记的另一种写法，这次显式地声明了段落，将一个链接分割成三部分：</p>
+
+   <pre>&lt;header>
+ &lt;p>Welcome! &lt;a href="about.html">This is home of...&lt;/a>&lt;/p>
+ &lt;h1>&lt;a href="about.html">The Falcons!&lt;/a>&lt;/h1>
+ &lt;p>&lt;a href="about.html">The Lockheed Martin multirole jet
+ fighter aircraft!&lt;/a> This page discusses the F-16 Fighting
+ Falcon's innermost secrets.&lt;/p>
+&lt;/header></pre>
+
+  </div>
+
+  <div class=example>
+
+   
+
+   <p>当使用某些元素来定义 fallback 内容时，段落可以重叠。例如下面的章节：</p>
+
+   <pre>&lt;section>
+ &lt;h1>My Cats&lt;/h1>
+ You can play with my cat simulator.
+ &lt;object data="cats.sim">
+  To see the cat simulator, use one of the following links:
+  &lt;ul>
+   &lt;li>&lt;a href="cats.sim">Download simulator file&lt;/a>
+   &lt;li>&lt;a href="https://sims.example.com/watch?v=LYds5xY4INU">Use online simulator&lt;/a>
+  &lt;/ul>
+  Alternatively, upgrade to the Mellblom Browser.
+ &lt;/object>
+ I'm quite proud of it.
+&lt;/section></pre>
+
+   <p>共有5个段落：</p>
+
+   <ol class=brief><li>第一段说："You can play with my cat simulator. <i>object</i> I'm
+    quite proud of it."，其中 <i>object</i> 是 <code id=段落:the-object-element><a href=iframe-embed-object.html#the-object-element>object</a></code> 元素。<li>第二段说："To see the cat simulator, use one of the following links:"。<li>第三段说："Download simulator file"。<li>第四段说："Use online simulator"。<li>第五段说："Alternatively, upgrade to the Mellblom Browser."。</ol>
+
+   <p>第一个段落与后面4个重叠。支持 "cats.sim" 资源的用户代理只会显示第一个段落，但显示 fallback 的用户代理就会
+   将第一个段落的第一句话与第二段显示为一个段落，最后一个段落会显示在第一个段落的第二个句子之前。</p>
+
+   <p>为避免困惑，可以显式地使用 <code id=段落:the-p-element-5><a href=grouping-content.html#the-p-element>p</a></code> 元素。例如：</p>
+
+   
+   <pre>&lt;section>
+ &lt;h1>My Cats&lt;/h1>
+ &lt;p>You can play with my cat simulator.&lt;/p>
+ &lt;object data="cats.sim">
+  &lt;p>To see the cat simulator, use one of the following links:&lt;/p>
+  &lt;ul>
+   &lt;li>&lt;a href="cats.sim">Download simulator file&lt;/a>
+   &lt;li>&lt;a href="https://sims.example.com/watch?v=LYds5xY4INU">Use online simulator&lt;/a>
+  &lt;/ul>
+  &lt;p>Alternatively, upgrade to the Mellblom Browser.&lt;/p>
+ &lt;/object>
+ &lt;p>I'm quite proud of it.&lt;/p>
+&lt;/section></pre>
+
+  </div>
+
+
+
+  <h4 id=全局属性><span class=secno>3.2.5</span> <dfn>全局属性</dfn><a href=#全局属性 class=self-link></a></h4>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/semantics-structure-and-apis-of-html-documents/elements/global-attributes/index.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/semantics-structure-and-apis-of-html-documents/elements/global-attributes/index.zh.html></div>
+
+  <p>下列属性是通用的，所有 <a href=infrastructure.html#html-elements id=全局属性:html-elements>HTML 元素</a> 都可以指定。
+  ：</p>
+
+  <ul class=brief><li><code id=全局属性:the-accesskey-attribute><a href=interaction.html#the-accesskey-attribute>accesskey</a></code><li><code id=全局属性:attr-autocapitalize><a href=interaction.html#attr-autocapitalize>autocapitalize</a></code><li><code id=全局属性:attr-fe-autofocus><a href=interaction.html#attr-fe-autofocus>autofocus</a></code><li><code id=全局属性:attr-contenteditable><a href=interaction.html#attr-contenteditable>contenteditable</a></code><li><code id=全局属性:dir-属性><a href=#dir-属性>dir</a></code><li><code id=全局属性:attr-draggable><a href=dnd.html#attr-draggable>draggable</a></code><li><code id=全局属性:attr-enterkeyhint><a href=interaction.html#attr-enterkeyhint>enterkeyhint</a></code><li><code id=全局属性:hidden-属性><a href=interaction.html#hidden-属性>hidden</a></code><li><code id=全局属性:attr-is><a href=custom-elements.html#attr-is>is</a></code><li><code id=全局属性:attr-itemid><a href=microdata.html#attr-itemid>itemid</a></code><li><code id=全局属性:names:-the-itemprop-attribute><a href=microdata.html#names:-the-itemprop-attribute>itemprop</a></code><li><code id=全局属性:attr-itemref><a href=microdata.html#attr-itemref>itemref</a></code><li><code id=全局属性:attr-itemscope><a href=microdata.html#attr-itemscope>itemscope</a></code><li><code id=全局属性:attr-itemtype><a href=microdata.html#attr-itemtype>itemtype</a></code><li><code id=全局属性:attr-lang><a href=#attr-lang>lang</a></code><li><code id=全局属性:attr-spellcheck><a href=interaction.html#attr-spellcheck>spellcheck</a></code><li><code id=全局属性:style-属性><a href=#style-属性>style</a></code><li><code id=全局属性:attr-tabindex><a href=interaction.html#attr-tabindex>tabindex</a></code><li><code id=全局属性:attr-title><a href=#attr-title>title</a></code><li><code id=全局属性:attr-translate><a href=#attr-translate>translate</a></code></ul>
+
+  
+
+  <hr>
+
+  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/class title="The class global attribute is a space-separated list of the case-sensitive classes of the element. Classes allow CSS and Javascript to select and access specific elements via the class selectors or functions like the DOM method document.getElementsByClassName.">Global_attributes/class</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>32+</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>Yes</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>32+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id title="The id global attribute defines an identifier (ID) which must be unique in the whole document. Its purpose is to identify the element when linking (using a fragment identifier), scripting, or styling (with CSS).">Global_attributes/id</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>32+</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>Yes</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>32+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/slot title="The slot global attribute assigns a slot in a shadow DOM shadow tree to an element: An element with a slot attribute is assigned to the slot created by the <slot> element whose name attribute's value matches that slot attribute's value.">Global_attributes/slot</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>63+</span></span><span class="safari yes"><span>Safari</span><span>10+</span></span><span class="chrome yes"><span>Chrome</span><span>53+</span></span><hr><span class="opera yes"><span>Opera</span><span>40+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie unknown"><span>Internet Explorer</span><span>?</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>63+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>10+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>53+</span></span><span class="webview_android yes"><span>WebView Android</span><span>53+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>6.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>41+</span></span></div></div></div><p>WHATWG DOM 标准为任何命名空间下的任何元素的
+  <dfn data-dfn-type=element-attr data-dfn-for=global id=classes><code>class</code></dfn>，
+  <dfn data-dfn-type=element-attr data-dfn-for=global id=the-id-attribute><code>id</code></dfn>，和
+  <dfn data-dfn-for=global id=attr-slot data-dfn-type=element-attr><code>slot</code></dfn> 属性定义了用户代理的要求。<a href=references.html#refsDOM>[DOM]</a></p>
+
+  <p><code id=全局属性:classes><a href=#classes>class</a></code>，<code id=全局属性:the-id-attribute><a href=#the-id-attribute>id</a></code>，和 <code id=全局属性:attr-slot><a href=#attr-slot>slot</a></code> 属性可以在任何 <a href=infrastructure.html#html-elements id=全局属性:html-elements-2>HTML 元素</a> 上指定。</p>
+
+  <p>当 <a href=infrastructure.html#html-elements id=全局属性:html-elements-3>HTML 元素</a> 上指定了 <code id=全局属性:classes-2><a href=#classes>class</a></code>
+  属性时，该属性的值必须是 <a href=infrastructure.html#set-of-space-separated-tokens id=全局属性:set-of-space-separated-tokens>一组空格分隔的令牌</a>，
+  表示该元素所属的各种类。</p>
+
+  <div class=note>
+
+  <p>设置元素的类会影响 CSS 选择符的匹配，DOM 的
+  <code id=全局属性:dom-document-getelementsbyclassname><a data-x-internal=dom-document-getelementsbyclassname href=https://dom.spec.whatwg.org/#dom-document-getelementsbyclassname>getElementsByClassName()</a></code> 方法，
+  以及其他这类特性。</p>
+
+  <p>作者在 <code id=全局属性:classes-3><a href=#classes>class</a></code> 属性中可以使用的令牌没有额外的限制，
+  但鼓励作者使用描述内容本质的取值，而不是描述内容表示的取值。</p>
+
+  </div>
+
+  <p>当 <a href=infrastructure.html#html-elements id=全局属性:html-elements-4>HTML 元素</a> 上指定了 <code id=全局属性:the-id-attribute-2><a href=#the-id-attribute>id</a></code> 属性时，
+  该属性的值必须在该元素所在的 <a href=https://dom.spec.whatwg.org/#concept-tree id=全局属性:tree data-x-internal=tree>树</a> 的所有 <a href=https://dom.spec.whatwg.org/#concept-id id=全局属性:concept-id data-x-internal=concept-id>IDs</a> 中是唯一的，
+  必须至少包含一个字符，且不得包含任何 <a href=https://infra.spec.whatwg.org/#ascii-whitespace id=全局属性:space-characters data-x-internal=space-characters>ASCII 空白</a>。</p>
+
+  
+
+  <div class=note>
+
+  <p><code id=全局属性:the-id-attribute-3><a href=#the-id-attribute>id</a></code> 属性指定了该元素的 <a href=https://dom.spec.whatwg.org/#concept-id id=全局属性:concept-id-2 data-x-internal=concept-id>唯一标识符（ID）</a>。</p>
+
+  <p>对 ID 的形式没有其他限制；ID 甚至可以只包含数字，以数字起始，以下划线起始，或者只包含标点等等。</p>
+
+  <p>元素的 <a href=https://dom.spec.whatwg.org/#concept-id id=全局属性:concept-id-3 data-x-internal=concept-id>唯一标识符</a> 有很多用途，
+  最值得一提的是通过 <a href=https://url.spec.whatwg.org/#concept-url-fragment id=全局属性:concept-url-fragment data-x-internal=concept-url-fragment>URL 片段</a> 链接到文档的特定部分，
+  在脚本中指向元素的一种方式，以及从 CSS 中指定特定元素的样式。</p>
+
+  </div>
+
+  
+
+  <p>对 <a href=infrastructure.html#html-elements id=全局属性:html-elements-5>HTML 元素</a> 的 <code id=全局属性:attr-slot-2><a href=#attr-slot>slot</a></code> 属性没有符合性要求。</p>
+
+  <p class=note><code id=全局属性:attr-slot-3><a href=#attr-slot>slot</a></code> 属性用于为元素
+  <a href=https://dom.spec.whatwg.org/#assign-a-slot id=全局属性:assign-a-slot data-x-internal=assign-a-slot>设置一个槽</a>：具有 <code id=全局属性:attr-slot-4><a href=#attr-slot>slot</a></code> 属性的元素会被
+  <a href=https://dom.spec.whatwg.org/#assign-a-slot id=全局属性:assign-a-slot-2 data-x-internal=assign-a-slot>指定到</a>
+  <a href=scripting.html#attr-slot-name id=全局属性:attr-slot-name>name</a> 属性值匹配该 <code id=全局属性:attr-slot-5><a href=#attr-slot>slot</a></code> 属性值的
+  <code id=全局属性:the-slot-element><a href=scripting.html#the-slot-element>slot</a></code> 元素创建的 <a href=https://dom.spec.whatwg.org/#concept-slot id=全局属性:concept-slot data-x-internal=concept-slot>slot</a> 中。
+  — 但条件是 <code id=全局属性:the-slot-element-2><a href=scripting.html#the-slot-element>slot</a></code> 元素所在的 <a id=全局属性:shadow-tree href=https://dom.spec.whatwg.org/#concept-shadow-tree data-x-internal=shadow-tree>shadow tree</a> 的
+  <a id=全局属性:root href=https://dom.spec.whatwg.org/#concept-tree-root data-x-internal=root>root</a> 的 <a href=https://dom.spec.whatwg.org/#concept-documentfragment-host id=全局属性:concept-documentfragment-host data-x-internal=concept-documentfragment-host>host</a> 有相应的 <code id=全局属性:attr-slot-6><a href=#attr-slot>slot</a></code> 属性值。</p>
+
+  <hr>
+
+  <p>为了使辅助技术产品提供相比于 HTML 元素和属性更加细粒度的界面，有一组
+  <a href=#wai-aria>用于辅助技术产品的注解</a> 可以指定
+  （ARIA <code id=全局属性:attr-aria-role><a href=infrastructure.html#attr-aria-role>role</a></code> 和 <code id=全局属性:attr-aria-*><a href=infrastructure.html#attr-aria-*>aria-*</a></code> 属性)。<a href=references.html#refsARIA>[ARIA]</a></p>
+
+  <hr>
+
+  <p>下面的 <a href=webappapis.html#event-handler-content-attributes id=全局属性:event-handler-content-attributes>事件处理器内容属性</a> 可以在任何 <a href=infrastructure.html#html-elements id=全局属性:html-elements-6>HTML 元素</a> 上指定：</p>
+
+  <ul class=brief><li><code id=全局属性:handler-onabort><a href=webappapis.html#handler-onabort>onabort</a></code><li><code id=全局属性:handler-onauxclick><a href=webappapis.html#handler-onauxclick>onauxclick</a></code><li><code id=全局属性:handler-onblur><a href=webappapis.html#handler-onblur>onblur</a></code>*<li><code id=全局属性:handler-oncancel><a href=webappapis.html#handler-oncancel>oncancel</a></code><li><code id=全局属性:handler-oncanplay><a href=webappapis.html#handler-oncanplay>oncanplay</a></code><li><code id=全局属性:handler-oncanplaythrough><a href=webappapis.html#handler-oncanplaythrough>oncanplaythrough</a></code><li><code id=全局属性:handler-onchange><a href=webappapis.html#handler-onchange>onchange</a></code><li><code id=全局属性:handler-onclick><a href=webappapis.html#handler-onclick>onclick</a></code><li><code id=全局属性:handler-onclose><a href=webappapis.html#handler-onclose>onclose</a></code><li><code id=全局属性:handler-oncontextmenu><a href=webappapis.html#handler-oncontextmenu>oncontextmenu</a></code><li><code id=全局属性:handler-oncopy><a href=webappapis.html#handler-oncopy>oncopy</a></code><li><code id=全局属性:handler-oncuechange><a href=webappapis.html#handler-oncuechange>oncuechange</a></code><li><code id=全局属性:handler-oncut><a href=webappapis.html#handler-oncut>oncut</a></code><li><code id=全局属性:handler-ondblclick><a href=webappapis.html#handler-ondblclick>ondblclick</a></code><li><code id=全局属性:handler-ondrag><a href=webappapis.html#handler-ondrag>ondrag</a></code><li><code id=全局属性:handler-ondragend><a href=webappapis.html#handler-ondragend>ondragend</a></code><li><code id=全局属性:handler-ondragenter><a href=webappapis.html#handler-ondragenter>ondragenter</a></code><li><code id=全局属性:handler-ondragleave><a href=webappapis.html#handler-ondragleave>ondragleave</a></code><li><code id=全局属性:handler-ondragover><a href=webappapis.html#handler-ondragover>ondragover</a></code><li><code id=全局属性:handler-ondragstart><a href=webappapis.html#handler-ondragstart>ondragstart</a></code><li><code id=全局属性:handler-ondrop><a href=webappapis.html#handler-ondrop>ondrop</a></code><li><code id=全局属性:handler-ondurationchange><a href=webappapis.html#handler-ondurationchange>ondurationchange</a></code><li><code id=全局属性:handler-onemptied><a href=webappapis.html#handler-onemptied>onemptied</a></code><li><code id=全局属性:handler-onended><a href=webappapis.html#handler-onended>onended</a></code><li><code id=全局属性:handler-onerror><a href=webappapis.html#handler-onerror>onerror</a></code>*<li><code id=全局属性:handler-onfocus><a href=webappapis.html#handler-onfocus>onfocus</a></code>*<li><code id=全局属性:handler-onformdata><a href=webappapis.html#handler-onformdata>onformdata</a></code><li><code id=全局属性:handler-oninput><a href=webappapis.html#handler-oninput>oninput</a></code><li><code id=全局属性:handler-oninvalid><a href=webappapis.html#handler-oninvalid>oninvalid</a></code><li><code id=全局属性:handler-onkeydown><a href=webappapis.html#handler-onkeydown>onkeydown</a></code><li><code id=全局属性:handler-onkeypress><a href=webappapis.html#handler-onkeypress>onkeypress</a></code><li><code id=全局属性:handler-onkeyup><a href=webappapis.html#handler-onkeyup>onkeyup</a></code><li><code id=全局属性:handler-onload><a href=webappapis.html#handler-onload>onload</a></code>*<li><code id=全局属性:handler-onloadeddata><a href=webappapis.html#handler-onloadeddata>onloadeddata</a></code><li><code id=全局属性:handler-onloadedmetadata><a href=webappapis.html#handler-onloadedmetadata>onloadedmetadata</a></code><li><code id=全局属性:handler-onloadstart><a href=webappapis.html#handler-onloadstart>onloadstart</a></code><li><code id=全局属性:handler-onmousedown><a href=webappapis.html#handler-onmousedown>onmousedown</a></code><li><code id=全局属性:handler-onmouseenter><a href=webappapis.html#handler-onmouseenter>onmouseenter</a></code><li><code id=全局属性:handler-onmouseleave><a href=webappapis.html#handler-onmouseleave>onmouseleave</a></code><li><code id=全局属性:handler-onmousemove><a href=webappapis.html#handler-onmousemove>onmousemove</a></code><li><code id=全局属性:handler-onmouseout><a href=webappapis.html#handler-onmouseout>onmouseout</a></code><li><code id=全局属性:handler-onmouseover><a href=webappapis.html#handler-onmouseover>onmouseover</a></code><li><code id=全局属性:handler-onmouseup><a href=webappapis.html#handler-onmouseup>onmouseup</a></code><li><code id=全局属性:handler-onpaste><a href=webappapis.html#handler-onpaste>onpaste</a></code><li><code id=全局属性:handler-onpause><a href=webappapis.html#handler-onpause>onpause</a></code><li><code id=全局属性:handler-onplay><a href=webappapis.html#handler-onplay>onplay</a></code><li><code id=全局属性:handler-onplaying><a href=webappapis.html#handler-onplaying>onplaying</a></code><li><code id=全局属性:handler-onprogress><a href=webappapis.html#handler-onprogress>onprogress</a></code><li><code id=全局属性:handler-onratechange><a href=webappapis.html#handler-onratechange>onratechange</a></code><li><code id=全局属性:handler-onreset><a href=webappapis.html#handler-onreset>onreset</a></code><li><code id=全局属性:handler-onresize><a href=webappapis.html#handler-onresize>onresize</a></code>*<li><code id=全局属性:handler-onscroll><a href=webappapis.html#handler-onscroll>onscroll</a></code>*<li><code id=全局属性:handler-onseeked><a href=webappapis.html#handler-onseeked>onseeked</a></code><li><code id=全局属性:handler-onseeking><a href=webappapis.html#handler-onseeking>onseeking</a></code><li><code id=全局属性:handler-onselect><a href=webappapis.html#handler-onselect>onselect</a></code><li><code id=全局属性:handler-onslotchange><a href=webappapis.html#handler-onslotchange>onslotchange</a></code><li><code id=全局属性:handler-onstalled><a href=webappapis.html#handler-onstalled>onstalled</a></code><li><code id=全局属性:handler-onsubmit><a href=webappapis.html#handler-onsubmit>onsubmit</a></code><li><code id=全局属性:handler-onsuspend><a href=webappapis.html#handler-onsuspend>onsuspend</a></code><li><code id=全局属性:handler-ontimeupdate><a href=webappapis.html#handler-ontimeupdate>ontimeupdate</a></code><li><code id=全局属性:handler-ontoggle><a href=webappapis.html#handler-ontoggle>ontoggle</a></code><li><code id=全局属性:handler-onvolumechange><a href=webappapis.html#handler-onvolumechange>onvolumechange</a></code><li><code id=全局属性:handler-onwaiting><a href=webappapis.html#handler-onwaiting>onwaiting</a></code><li><code id=全局属性:handler-onwheel><a href=webappapis.html#handler-onwheel>onwheel</a></code></ul>
+
+  <p class=note>用星号标记的属性在用于 <code id=全局属性:the-body-element><a href=sections.html#the-body-element>body</a></code> 元素时有不同的含义，
+  因为该元素暴露了 <code id=全局属性:window><a href=window-object.html#window>Window</a></code> 对象上同名的 <a href=webappapis.html#event-handlers id=全局属性:event-handlers>事件处理器</a>。</p>
+
+  <p class=note>虽然这些属性适用于所有元素，但并不是对所有元素都有用。
+  例如，只有 <a href=media.html#media-element id=全局属性:media-element>媒体元素</a> 才会接收到用户代理触发的
+  <code id=全局属性:event-media-volumechange><a href=media.html#event-media-volumechange>音量变化</a></code> 事件。</p>
+
+  <hr>
+
+  <p>任何 <a href=infrastructure.html#html-elements id=全局属性:html-elements-7>HTML 元素</a> 都可以指定
+  <a href=#custom-data-attribute id=全局属性:custom-data-attribute>自定义数据属性</a> （例如 <code>data-foldername</code> 或 <code>data-msgid</code>），
+  用于存储页面相关的自定义数据，状态，注解这样的东西。</p>
+
+  <hr>
+
+  <p>在 <a href=https://dom.spec.whatwg.org/#html-document id=全局属性:html-documents data-x-internal=html-documents>HTML 文档</a> 中，<a href=https://infra.spec.whatwg.org/#html-namespace id=全局属性:html-namespace-2 data-x-internal=html-namespace-2>HTML 命名空间</a>
+  中的元素可以指定一个 <code>xmlns</code> 属性，但它的值只能是
+  "<code>http://www.w3.org/1999/xhtml</code>" 。这不适用于 <a href=https://dom.spec.whatwg.org/#xml-document id=全局属性:xml-documents data-x-internal=xml-documents>XML 文档</a>。</p>
+
+  <p class=note>在 HTML 中，<code>xmlns</code> 属性完全没有效果，它只是一个标志。
+  它的存在只是为了方便 XML 与 HTML 之间的迁移。
+  被 <span>HTML 解析器</span> 解析时，该属性的结果是没有命名空间，
+  而不是像 XML 中的命名空间声明那样，解析为 "<code>http://www.w3.org/2000/xmlns/</code>" 命名空间。</p>
+
+  <p class=note>在 XML 中，<code>xmlns</code> 属性是命名空间机制的一部分，
+  没有指定命名空间时，元素不能有 <code>xmlns</code> 属性。</p>
+
+  <hr>
+
+  <p>在 <a href=https://dom.spec.whatwg.org/#xml-document id=全局属性:xml-documents-2 data-x-internal=xml-documents>XML 文档</a> 中的任何元素上，<cite>XML</cite> 也遵循
+  <a href=https://infra.spec.whatwg.org/#xml-namespace id=全局属性:xml-namespace data-x-internal=xml-namespace>XML 命名空间</a> 中的 <code id=全局属性:attr-xml-space><a data-x-internal=attr-xml-space href=https://www.w3.org/TR/xml/#sec-white-space>xml:space</a></code> 属性的使用。
+  该属性在 <a href=infrastructure.html#html-elements id=全局属性:html-elements-8>HTML 元素</a> 上没有作用，因为 HTML 的默认行为就是保留空白。 <a href=references.html#refsXML>[XML]</a></p>
+
+  <p class=note>在 <code>text/html</code> 语法中，无法序列化
+  <a href=infrastructure.html#html-elements id=全局属性:html-elements-9>HTML 元素</a> 的 <code id=全局属性:attr-xml-space-2><a data-x-internal=attr-xml-space href=https://www.w3.org/TR/xml/#sec-white-space>xml:space</a></code> 属性。</p>
+
+
+
+
+  <h5 id=title-属性><span class=secno>3.2.5.1</span> <code id=title-属性:attr-title><a href=#attr-title>title</a></code> 属性<a href=#title-属性 class=self-link></a></h5>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/semantics-structure-and-apis-of-html-documents/elements/global-attributes/the-title-attribute.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/semantics-structure-and-apis-of-html-documents/elements/global-attributes/the-title-attribute.zh.html></div>
+
+  <p><dfn id=attr-title><code>title</code></dfn> 属性 <a href=#represents id=title-属性:represents>表示</a>
+  元素的建议信息，比如适用于工具提示。
+  在链接上，这可能是目标资源的标题或描述；在图片上，它可以是图片来源或图片的描述；
+  在段落上，它可能是文本的脚注或评论；在引用上，可以是来源的进一步信息；
+  在 <a href=#interactive-content id=title-属性:interactive-content>交互式内容</a> 上，它可能是元素的标签或使用说明；
+  等等。值为文本。</p>
+
+  
+  <p class=note>目前不鼓励依赖于 <code id=title-属性:attr-title-2><a href=#attr-title>title</a></code> 属性，
+  因为许多用户代理不按照本规范中要求的可访问的方式来暴露该属性
+  （例如，要求像鼠标这样的定点设备来触发工具提示，这排除了纯键盘用户和触摸设备用户，比如手机或平板电脑的用户）。</p>
+
+  <p>如果从元素中省略此属性，则默认关联到离该元素最近的设置了 <code id=title-属性:attr-title-3><a href=#attr-title>title</a></code> 属性的
+  祖先 <a href=infrastructure.html#html-elements id=title-属性:html-elements>HTML 元素</a>。
+  设置该属性可以覆盖这一行为，显式地声明了任何祖先的建议信息与此元素无关。
+  将属性设置为空字符串表示该元素没有建议信息。</p>
+
+  <p>如果 <code id=title-属性:attr-title-4><a href=#attr-title>title</a></code> 属性值包含 U+000A LINE FEED （LF）字符，
+  其内容将被分割为多行。每个 U+000A LINE FEED （LF） 字符表示一个换行。</p>
+
+  <div class=example>
+
+   <p>在 <code id=title-属性:attr-title-5><a href=#attr-title>title</a></code> 属性中使用换行要多加小心。</p>
+
+   <p>比如下面的代码片段其实定义了一个缩写的解释，<em>其中包含一个换行</em>：</p>
+
+   <pre class=bad>&lt;p>My logs show that there was some interest in &lt;abbr title="Hypertext
+Transport Protocol">HTTP&lt;/abbr> today.&lt;/p></pre> 
+
+  </div>
+
+  <p>有些元素比如 <code id=title-属性:link-元素><a href=semantics.html#link-元素>link</a></code>， <code id=title-属性:the-abbr-element><a href=text-level-semantics.html#the-abbr-element>abbr</a></code>，和 <code id=title-属性:the-input-element><a href=input.html#the-input-element>input</a></code>
+  为 <code id=title-属性:attr-title-6><a href=#attr-title>title</a></code> 属性定义了额外的语义。</p> 
+
+  
+
+
+
+
+  <h5 id=lang-和-xml:lang-属性><span class=secno>3.2.5.2</span> <code id=lang-和-xml:lang-属性:attr-lang><a href=#attr-lang>lang</a></code> 和 <code id=lang-和-xml:lang-属性:attr-xml-lang><a href=#attr-xml-lang>xml:lang</a></code> 属性<a href=#lang-和-xml:lang-属性 class=self-link></a></h5>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/semantics-structure-and-apis-of-html-documents/elements/global-attributes/the-lang-and-xml-lang-attributes.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/semantics-structure-and-apis-of-html-documents/elements/global-attributes/the-lang-and-xml-lang-attributes.zh.html></div>
+
+  <p><dfn id=attr-lang><code>lang</code></dfn> 属性（没有命名空间）指定了该元素内容，
+  以及该元素包含文本的属性的主要语言。它的值必须是一个合法的 BCP 47 语言标签，
+  或者空字符串。将该属性设置为控制付出表示主要语言是未知的。 <a href=references.html#refsBCP47>[BCP47]</a></p>
+
+  <p>在 <a href=https://infra.spec.whatwg.org/#xml-namespace id=lang-和-xml:lang-属性:xml-namespace data-x-internal=xml-namespace>XML 命名空间</a> 中的
+  <dfn id=attr-xml-lang><code>lang</code></dfn> 属性
+  定义在 XML 中。 <a href=references.html#refsXML>[XML]</a></p>
+
+  <p>如果元素省略了这些属性，该元素的语言就是其父元素的语言（如果有的话）。</p>
+
+  <p>没有命名空间的 <code id=lang-和-xml:lang-属性:attr-lang-2><a href=#attr-lang>lang</a></code> 属性可以用于任何 <a href=infrastructure.html#html-elements id=lang-和-xml:lang-属性:html-elements>HTML 元素</a>。</p>
+
+  <p><a href=#attr-xml-lang id=lang-和-xml:lang-属性:attr-xml-lang-2>在 <span>XML 命名空间</span> 中的
+  <code>lang</code> 属性</a> 可以用于 <a href=https://dom.spec.whatwg.org/#xml-document id=lang-和-xml:lang-属性:xml-documents data-x-internal=xml-documents>XML 文档</a> 中的
+  <a href=infrastructure.html#html-elements id=lang-和-xml:lang-属性:html-elements-2>HTML 元素</a>，
+  也可以用户其他命名空间中的元素，只要相关规范允许（特别低，
+  MathML 和 SVG 允许其元素上指定 <a href=#attr-xml-lang id=lang-和-xml:lang-属性:attr-xml-lang-3><span>XML 命名空间</span>
+  中的<code>lang</code> 属性 </a>）。如果同时在同一个元素上指定了
+  无命名空间的 <code id=lang-和-xml:lang-属性:attr-lang-3><a href=#attr-lang>lang</a></code> 属性，和
+  <a href=#attr-xml-lang id=lang-和-xml:lang-属性:attr-xml-lang-4><span>XML 命名空间</span> 中的 <code>lang</code> 属性</a>，
+  它们必须有 <a href=https://infra.spec.whatwg.org/#ascii-case-insensitive id=lang-和-xml:lang-属性:ascii-case-insensitive data-x-internal=ascii-case-insensitive>ASCII 大小写不敏感的</a> 同样的值。</p>
+
+  <p>作者不得在 <a href=https://dom.spec.whatwg.org/#html-document id=lang-和-xml:lang-属性:html-documents data-x-internal=html-documents>HTML 文档</a> 中的
+  <a href=infrastructure.html#html-elements id=lang-和-xml:lang-属性:html-elements-3>HTML 元素</a> 上使用
+  <a href=#attr-xml-lang id=lang-和-xml:lang-属性:attr-xml-lang-5><span>XML 命名空间</span> 中的 <code>lang</code> 属性</a>。
+  为了便于与 XML 之间迁移，作者可以在
+  <a href=https://dom.spec.whatwg.org/#html-document id=lang-和-xml:lang-属性:html-documents-2 data-x-internal=html-documents>HTML 文档</a> 中的 <a href=infrastructure.html#html-elements id=lang-和-xml:lang-属性:html-elements-4>HTML 元素</a> 上
+  指定一个没有命名空间的，没有前缀的属性，其 localname 为 "<code>xml:lang</code>"，
+  但指定该属性时必须同时指定一个无命名空间的 <code id=lang-和-xml:lang-属性:attr-lang-4><a href=#attr-lang>lang</a></code> 属性，
+  它们必须有 <a href=https://infra.spec.whatwg.org/#ascii-case-insensitive id=lang-和-xml:lang-属性:ascii-case-insensitive-2 data-x-internal=ascii-case-insensitive>ASCII 大小写不敏感的</a> 同样的值。</p>
+
+  <p class=note>没有命名空间没有前缀的 localname 是 "<code>xml:lang</code>" 的属性对语言处理没有任何影响。</p>
+
+  
+
+
+
+
+  <h5 id=translate-属性><span class=secno>3.2.5.3</span> <code id=translate-属性:attr-translate><a href=#attr-translate>translate</a></code> 属性<a href=#translate-属性 class=self-link></a></h5>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/semantics-structure-and-apis-of-html-documents/elements/global-attributes/the-translate-attribute.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/semantics-structure-and-apis-of-html-documents/elements/global-attributes/the-translate-attribute.zh.html></div>
+
+  
+
+  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/translate title="The translate global attribute is an enumerated attribute that is used to specify whether an element's translateable attribute values and its Text node children should be translated when the page is localized, or whether to leave them unchanged.">Global_attributes/translate</a><div class=support><span class="firefox no"><span>Firefox</span><span>No</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android no"><span>Firefox Android</span><span>No</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div><p><dfn id=attr-translate><code>translate</code></dfn> 属性是一个
+  <a href=infrastructure.html#enumerated-attribute id=translate-属性:enumerated-attribute>枚举属性</a>，用于指定元素在本地化时应该翻译其属性值和
+  <code id=translate-属性:text><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>Text</a></code> 子节点的值，还是让它们保持不变。</p>
+
+  <p>该属性的关键字是空字符串，<code>yes</code>，和 <code>no</code>。
+  空字符串和 <code>yes</code> 关键字映射为 <i>yes</i> 状态。
+  <code>no</code> 关键字映射为 <i>no</i> 状态。
+  此外还有第三种状态，<i>inherit</i> 状态，这是 <i id=translate-属性:missing-value-default><a href=infrastructure.html#missing-value-default>缺失值默认</a></i>
+  （以及 <i id=translate-属性:invalid-value-default><a href=infrastructure.html#invalid-value-default>非法值默认</a></i>）。</p>
+
+  <p>每个元素（甚至非 HTML 元素）都有 <dfn id=translation-mode>翻译模式</dfn>，处于
+  <a href=#translate-enabled id=translate-属性:translate-enabled>启用翻译</a> 状态或者 <a href=#no-translate id=translate-属性:no-translate>不翻译</a> 状态。
+  如果 <a href=infrastructure.html#html-elements id=translate-属性:html-elements>HTML 元素</a> 的 <code id=translate-属性:attr-translate-2><a href=#attr-translate>translate</a></code>
+  属性处于 <i>yes</i> 状态，那么该元素的 <a href=#translation-mode id=translate-属性:translation-mode>翻译模式</a> 处于
+  <a href=#translate-enabled id=translate-属性:translate-enabled-2>启用翻译</a> 状态；否则该元素的 <code id=translate-属性:attr-translate-3><a href=#attr-translate>translate</a></code>
+  属性处于 <i>no</i> 状态，那么该元素的 <a href=#translation-mode id=translate-属性:translation-mode-2>翻译模式</a> 处于
+  <a href=#no-translate id=translate-属性:no-translate-2>不翻译</a> 状态。 否则，元素的 <code id=translate-属性:attr-translate-4><a href=#attr-translate>translate</a></code>
+  属性处于 <i>inherit</i> 状态，或者该元素不是 <a href=infrastructure.html#html-elements id=translate-属性:html-elements-2>HTML 元素</a>
+  因此没有 <code id=translate-属性:attr-translate-5><a href=#attr-translate>translate</a></code> 属性；任何一种情况下该元素的
+  <a href=#translation-mode id=translate-属性:translation-mode-3>翻译模式</a> 都将与其父元素处于同样的状态（如果有父元素的话），
+  否则该元素是一个 <a href=https://dom.spec.whatwg.org/#document-element id=translate-属性:document-element data-x-internal=document-element>文档元素</a>，则处于 <a href=#translate-enabled id=translate-属性:translate-enabled-3>启用翻译</a> 状态。</p>
+
+  <p>当元素处于 <dfn id=translate-enabled>启用翻译</dfn> 状态时，该元素的
+  <a href=#translatable-attributes id=translate-属性:translatable-attributes>可翻译的属性</a> 及其 <code id=translate-属性:text-2><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>Text</a></code> 子节点的值将会在页面本地化时进行翻译。</p>
+
+  <p>当元素处于 <dfn id=no-translate>不翻译</dfn> 状态时，该元素的属性值及其 <code id=translate-属性:text-3><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>Text</a></code>
+  子节点的值将会在页面本地化时保留原样。例如因为该元素包含人名或者计算机程序名。</p>
+
+  <p>下面的属性是 <dfn id=translatable-attributes>可翻译属性</dfn>：</p>
+
+  <ul class=brief><li><code id=translate-属性:the-th-element><a href=tables.html#the-th-element>th</a></code> 元素上的 <code id=translate-属性:attr-th-abbr><a href=tables.html#attr-th-abbr>abbr</a></code><li><code id=translate-属性:attr-area-alt><a href=image-maps.html#attr-area-alt>area</a></code>，<code id=translate-属性:attr-img-alt><a href=embedded-content.html#attr-img-alt>img</a></code>，
+     和 <code id=translate-属性:attr-input-alt><a href=input.html#attr-input-alt>input</a></code> 元素上的 <code>alt</code>
+   <li><code id=translate-属性:the-meta-element><a href=semantics.html#the-meta-element>meta</a></code> 元素上的 <code id=translate-属性:attr-meta-content><a href=semantics.html#attr-meta-content>content</a></code>，
+     如果 <code id=translate-属性:attr-meta-name><a href=semantics.html#attr-meta-name>name</a></code> 属性指定的元数据名对应的值已知可翻译的话<li><code id=translate-属性:the-a-element><a href=text-level-semantics.html#the-a-element>a</a></code> 和 <code id=translate-属性:the-area-element><a href=image-maps.html#the-area-element>area</a></code> 元素上的 <code id=translate-属性:attr-hyperlink-download><a href=links.html#attr-hyperlink-download>download</a></code> <li> <code id=translate-属性:attr-optgroup-label><a href=form-elements.html#attr-optgroup-label>optgroup</a></code>，<code id=translate-属性:attr-option-label><a href=form-elements.html#attr-option-label>option</a></code>，
+     和 <code id=translate-属性:attr-track-label><a href=media.html#attr-track-label>track</a></code> 元素上的 <code>label</code>
+   <li><a href=infrastructure.html#html-elements id=translate-属性:html-elements-3>HTML 元素</a> 上的 <code id=translate-属性:attr-lang><a href=#attr-lang>lang</a></code>；
+     必须经过 "翻译" 来匹配翻译中使用的语言<li><code id=translate-属性:attr-input-placeholder><a href=input.html#attr-input-placeholder>input</a></code> 和 <code id=translate-属性:attr-textarea-placeholder><a href=form-elements.html#attr-textarea-placeholder>textarea</a></code> 元素上的
+     <code>placeholder</code>
+   <li><code id=translate-属性:the-iframe-element><a href=iframe-embed-object.html#the-iframe-element>iframe</a></code> 元素上的 <code id=translate-属性:attr-iframe-srcdoc><a href=iframe-embed-object.html#attr-iframe-srcdoc>srcdoc</a></code>；必须进行解析和递归处理<li><a href=infrastructure.html#html-elements id=translate-属性:html-elements-4>HTML 元素</a> 上的 <code id=translate-属性:style-属性><a href=#style-属性>style</a></code>；必须进行解析和递归处理
+     （例如 <a id="translate-属性:'content'" href=https://drafts.csswg.org/css2/#content%E2%91%A0 data-x-internal="'content'">'content'</a> 属性的值）<li>所有 <a href=infrastructure.html#html-elements id=translate-属性:html-elements-5>HTML 元素</a> 上的 <code id=translate-属性:attr-title><a href=#attr-title>title</a></code><li><code id=translate-属性:attr-input-type><a href=input.html#attr-input-type>type</a></code> 属性处于 <a href="input.html#button-state-(type=button)" id="translate-属性:button-state-(type=button)">按钮</a> 状态
+     或 <a href="input.html#reset-button-state-(type=reset)" id="translate-属性:reset-button-state-(type=reset)">重置按钮</a> 状态的 <code id=translate-属性:the-input-element><a href=input.html#the-input-element>input</a></code> 元素
+     上的 <code id=translate-属性:attr-input-value><a href=input.html#attr-input-value>value</a></code></ul>
+
+  <p>其他规范可能会定义其他 <a href=#translatable-attributes id=translate-属性:translatable-attributes-2>可翻译的属性</a>。例如 ARIA 可能会把 <code id=translate-属性:attr-aria-label><a data-x-internal=attr-aria-label href=https://w3c.github.io/aria/#aria-label>aria-label</a></code> 属性定义为可翻译的。</p>
+
+  
+
+  <div class=example>
+
+   <p>在这个例子中，在本地化时文档中的所有东西都会被翻译，除了示例键盘输入和示例程序输出：</p>
+
+   <pre>&lt;!DOCTYPE HTML>
+&lt;html lang=en> &lt;!-- default on the document element is translate=yes -->
+ &lt;head>
+  &lt;title>The Bee Game&lt;/title> &lt;!-- implied translate=yes inherited from ancestors -->
+ &lt;/head>
+ &lt;body>
+  &lt;p>The Bee Game is a text adventure game in English.&lt;/p>
+  &lt;p>When the game launches，the first thing you should do is type
+  &lt;kbd <strong>translate=no</strong>>eat honey&lt;/kbd>。 The game will respond with：&lt;/p>
+  &lt;pre>&lt;samp <strong>translate=no</strong>>Yum yum! That was some good honey!&lt;/samp>&lt;/pre>
+ &lt;/body>
+&lt;/html></pre>
+
+  </div>
+
+
+
+
+  <h5 id=dir-属性><span class=secno>3.2.5.4</span> <dfn><code>dir</code></dfn> 属性<a href=#dir-属性 class=self-link></a></h5>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/semantics-structure-and-apis-of-html-documents/elements/global-attributes/the-dir-attribute.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/semantics-structure-and-apis-of-html-documents/elements/global-attributes/the-dir-attribute.zh.html></div>
+
+  <p><code id=dir-属性:dir-属性><a href=#dir-属性>dir</a></code> 属性指定了元素的文本方向。
+  该属性是一个 <a href=infrastructure.html#enumerated-attribute id=dir-属性:enumerated-attribute>枚举属性</a> 关键字和状态如下：</p>
+
+  <dl><dt><dfn id=attr-dir-ltr><code>ltr</code></dfn> 关键字，映射到 <dfn id=attr-dir-ltr-state>ltr</dfn> 状态<dd>
+
+    <p>表示该元素的内容是明确的独立方向隔离的从左到右的文本。</p>
+
+   <dt><dfn id=attr-dir-rtl><code>rtl</code></dfn> 关键字，映射到 <dfn id=attr-dir-rtl-state>rtl</dfn> 状态<dd>
+
+    <p>表示该元素的内容是明确的独立方向隔离的从右到左的文本。</p>
+
+   <dt><dfn id=attr-dir-auto><code>auto</code></dfn> 关键字，映射到 <dfn id=attr-dir-auto-state>auto</dfn> 状态<dd>
+
+    <p>表示该元素的内容是明确的方向隔离的文本，但其方向需要通过元素的内容以编程方式确定（描述如下）。</p>
+
+    <p class=note>这种状态使用的启发式是非常粗糙的（类似于双向算法中的段落级别确定，查看第一个具有较强方向性的字符）。
+    强烈建议作者只有在文本的方向是未知，并且服务器端没有更好的启发式算法的情况下才使用该值作为最后的手段。 <a href=references.html#refsBIDI>[BIDI]</a></p>
+
+    <p class=note>对于 <code id=dir-属性:the-textarea-element><a href=form-elements.html#the-textarea-element>textarea</a></code> 和 <code id=dir-属性:the-pre-element><a href=grouping-content.html#the-pre-element>pre</a></code> 元素，该启发式算法按段落级别生效。</p>
+
+   </dl>
+
+  <p>该属性没有 <i id=dir-属性:invalid-value-default><a href=infrastructure.html#invalid-value-default>非法值默认</a></i> 和 <i id=dir-属性:missing-value-default><a href=infrastructure.html#missing-value-default>缺失值默认</a></i>。</p>
+
+  <hr>
+
+  <p>元素（任意元素，不仅是 <a href=infrastructure.html#html-elements id=dir-属性:html-elements>HTML 元素</a>）的 <dfn id=the-directionality>方向</dfn>
+  或者是 '<dfn id=concept-ltr>ltr</dfn>'，或者是'<dfn id=concept-rtl>rtl</dfn>'，
+  由下列列表中第一个适用的步骤确定：</p>
+
+  <dl class=switch><dt>如果该元素的 <code id=dir-属性:dir-属性-2><a href=#dir-属性>dir</a></code> 属性处于 <a href=#attr-dir-ltr-state id=dir-属性:attr-dir-ltr-state>ltr</a> 状态<dt>如果该元素是一个 <a href=https://dom.spec.whatwg.org/#document-element id=dir-属性:document-element data-x-internal=document-element>文档元素</a> 且 <code id=dir-属性:dir-属性-3><a href=#dir-属性>dir</a></code>
+   属性不处于已定义状态（即未出现或具有非法值）<dt>如果该元素是一个 <code id=dir-属性:the-input-element><a href=input.html#the-input-element>input</a></code> 元素
+   <code id=dir-属性:attr-input-type><a href=input.html#attr-input-type>type</a></code> 属性处于 <a href="input.html#telephone-state-(type=tel)" id="dir-属性:telephone-state-(type=tel)">电话</a> 状态，
+   且 <code id=dir-属性:dir-属性-4><a href=#dir-属性>dir</a></code>
+   属性不处于已定义状态（即未出现或具有非法值）<dd><p>元素的 <a href=#the-directionality id=dir-属性:the-directionality>方向</a> 为 '<a href=#concept-ltr id=dir-属性:concept-ltr>ltr</a>'。<dt>如果该元素的 <code id=dir-属性:dir-属性-5><a href=#dir-属性>dir</a></code> 属性处于 <a href=#attr-dir-rtl-state id=dir-属性:attr-dir-rtl-state>rtl</a> 状态<dd><p>元素的 <a href=#the-directionality id=dir-属性:the-directionality-2>方向</a> 为 '<a href=#concept-rtl id=dir-属性:concept-rtl>rtl</a>'。<dt>如果该元素是 <code id=dir-属性:the-input-element-2><a href=input.html#the-input-element>input</a></code> 元素，且它的 <code id=dir-属性:attr-input-type-2><a href=input.html#attr-input-type>type</a></code> 属性处于 <a href="input.html#text-(type=text)-state-and-search-state-(type=search)" id="dir-属性:text-(type=text)-state-and-search-state-(type=search)">文本</a>，
+   <a href="input.html#text-(type=text)-state-and-search-state-(type=search)" id="dir-属性:text-(type=text)-state-and-search-state-(type=search)-2">搜索</a>，
+   <a href="input.html#telephone-state-(type=tel)" id="dir-属性:telephone-state-(type=tel)-2">电话</a>，
+   <a href="input.html#url-state-(type=url)" id="dir-属性:url-state-(type=url)">URL</a>，或
+   <a href="input.html#email-state-(type=email)" id="dir-属性:email-state-(type=email)">E-mail</a> 状态，
+   且 <code id=dir-属性:dir-属性-6><a href=#dir-属性>dir</a></code> 属性处于 <a href=#attr-dir-auto-state id=dir-属性:attr-dir-auto-state>auto</a> 状态<dt>如果该元素是 <code id=dir-属性:the-textarea-element-2><a href=form-elements.html#the-textarea-element>textarea</a></code> 元素，且它的 <code id=dir-属性:dir-属性-7><a href=#dir-属性>dir</a></code>
+   属性处于 <a href=#attr-dir-auto-state id=dir-属性:attr-dir-auto-state-2>auto</a> 状态<dd>
+
+    <p>如果该元素的 <a href=form-control-infrastructure.html#concept-fe-value id=dir-属性:concept-fe-value>value</a> 包含一个双向字符类型 AL 或 R 的字符，
+    且它之前不包含双向字符类型 L 的字符，则该元素的
+    <a href=#the-directionality id=dir-属性:the-directionality-3>方向</a> 为 '<a href=#concept-rtl id=dir-属性:concept-rtl-2>rtl</a>'。 <a href=references.html#refsBIDI>[BIDI]</a></p>
+
+    <p>否则，如果该元素的 <a href=form-control-infrastructure.html#concept-fe-value id=dir-属性:concept-fe-value-2>value</a> 不是空字符串，
+    或者该元素是一个 <a href=https://dom.spec.whatwg.org/#document-element id=dir-属性:document-element-2 data-x-internal=document-element>文档元素</a>，该元素的 <a href=#the-directionality id=dir-属性:the-directionality-4>方向</a>
+    为 '<a href=#concept-ltr id=dir-属性:concept-ltr-2>ltr</a>'。</p>
+
+    <p>否则，该元素的 <a href=#the-directionality id=dir-属性:the-directionality-5>方向</a> 与该元素的父元素的
+    <a href=#the-directionality id=dir-属性:the-directionality-6>方向</a> 相同。</p>
+
+   <dt>如果该元素的 <code id=dir-属性:dir-属性-8><a href=#dir-属性>dir</a></code> 属性处于 <a href=#attr-dir-auto-state id=dir-属性:attr-dir-auto-state-3>auto</a> 状态<dt>如果该元素是一个 <code id=dir-属性:the-bdi-element><a href=text-level-semantics.html#the-bdi-element>bdi</a></code> 元素且 <code id=dir-属性:dir-属性-9><a href=#dir-属性>dir</a></code>
+   属性不处于已定义状态（即未出现或具有非法值）<dd>
+
+    <p>找到按照 <a href=https://dom.spec.whatwg.org/#concept-tree-order id=dir-属性:tree-order data-x-internal=tree-order>树序</a> 的第一个匹配下列条件的字符：</p>
+
+    <ul><li><p>该字符来自 <code id=dir-属性:text><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>Text</a></code> 节点，其某个祖先节点的
+     <a href=#the-directionality id=dir-属性:the-directionality-7>方向</a> 正在被确定。<li><p>该字符属于双向字符类型 L，AL，或 R。 <a href=references.html#refsBIDI>[BIDI]</a><li>
+
+      <p>该字符所在的 <code id=dir-属性:text-2><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>Text</a></code> 节点的祖先元素不得是正在确定
+      <a href=#the-directionality id=dir-属性:the-directionality-8>方向</a> 的节点的后代且属于下列的节点类型：</p>
+
+      <ul class=brief><li><code id=dir-属性:the-bdi-element-2><a href=text-level-semantics.html#the-bdi-element>bdi</a></code> 元素。
+       <li><code id=dir-属性:the-script-element><a href=scripting.html#the-script-element>script</a></code> 元素。
+       <li><code id=dir-属性:the-style-element><a href=semantics.html#the-style-element>style</a></code> 元素。
+       <li><code id=dir-属性:the-textarea-element-3><a href=form-elements.html#the-textarea-element>textarea</a></code> 元素。
+       <li><code id=dir-属性:dir-属性-10><a href=#dir-属性>dir</a></code> 属性处于已定义状态。
+      </ul>
+
+     </ul>
+
+    <p>如果找到了这样的字符且它属于双向字符类型 AL 或 R，该元素的 <a href=#the-directionality id=dir-属性:the-directionality-9>方向</a> 是 <a href=#concept-rtl id=dir-属性:concept-rtl-3>rtl</a>'。</p>
+
+    <p>如果找到了这样的字符且它属于双向字符类型 L，该元素的 <a href=#the-directionality id=dir-属性:the-directionality-10>方向</a> 是 <a href=#concept-ltr id=dir-属性:concept-ltr-3>ltr</a>'。</p>
+
+    <p>否则，如果该元素是 <a href=https://dom.spec.whatwg.org/#document-element id=dir-属性:document-element-3 data-x-internal=document-element>文档元素</a>，
+    该元素的 <a href=#the-directionality id=dir-属性:the-directionality-11>方向</a> 是 <a href=#concept-ltr id=dir-属性:concept-ltr-4>ltr</a>'。</p>
+
+    <p>否则，该元素的 <a href=#the-directionality id=dir-属性:the-directionality-12>方向</a> 与该元素的父元素的
+    <a href=#the-directionality id=dir-属性:the-directionality-13>方向</a> 相同。</p>
+
+   <dt>如果有父元素且 <code id=dir-属性:dir-属性-11><a href=#dir-属性>dir</a></code> 属性处于未定义状态
+   （即未出现或具有非法值）<dd><p>该元素的 <a href=#the-directionality id=dir-属性:the-directionality-14>方向</a> 与该元素的父元素的
+    <a href=#the-directionality id=dir-属性:the-directionality-15>方向</a> 相同。</dl>
+
+  <p class=note>因为只有 <a href=infrastructure.html#html-elements id=dir-属性:html-elements-2>HTML 元素</a> 定义有 <code id=dir-属性:dir-属性-12><a href=#dir-属性>dir</a></code> 属性，
+  它不得出现在其他命名空间的元素上。所以其他命名空间的元素只从它们的父元素继承
+  <a href=#the-directionality id=dir-属性:the-directionality-16>方向</a>，如果没有父元素则默认为 '<a href=#concept-ltr id=dir-属性:concept-ltr-5>ltr</a>'。</p>
+
+  
+
+  <hr>
+
+  <p>当该属性的文本用于渲染过程时，<a href=infrastructure.html#html-elements id=dir-属性:html-elements-3>HTML 元素</a>
+  <dfn id=directionality-of-the-attribute>属性的方向</dfn> 由第一个合适的步骤决定：</p>
+
+  <dl class=switch><dt>如果该属性是一个 <a href=#directionality-capable-attribute id=dir-属性:directionality-capable-attribute>有方向的属性</a> 且该元素的 <code id=dir-属性:dir-属性-13><a href=#dir-属性>dir</a></code> 属性处于 <a href=#attr-dir-auto-state id=dir-属性:attr-dir-auto-state-4>auto</a> 状态<dd>
+
+    <p>找到该属性值中第一个属于双向字符类型 L，AL，或 R （按照逻辑顺序）的字符。 <a href=references.html#refsBIDI>[BIDI]</a></p>
+
+    <p>如果找到了这样一个字符，且它的双向字符类型是 AL 或 R，
+    <a href=#directionality-of-the-attribute id=dir-属性:directionality-of-the-attribute>该属性的方向</a> 为 '<a href=#concept-rtl id=dir-属性:concept-rtl-4>rtl</a>'。</p>
+
+    <p>否则，<a href=#directionality-of-the-attribute id=dir-属性:directionality-of-the-attribute-2>该属性的方向</a> 为 '<a href=#concept-ltr id=dir-属性:concept-ltr-6>ltr</a>'。</p>
+
+   <dt>否则<dd><a href=#directionality-of-the-attribute id=dir-属性:directionality-of-the-attribute-3>该属性的方向</a> 与该元素的
+   <a href=#the-directionality id=dir-属性:the-directionality-17>方向</a> 相同。</dl>
+
+  <p>下列属性属于 <dfn id=directionality-capable-attribute>有方向的属性</dfn>：</p>
+
+  <ul class=brief><li><code id=dir-属性:the-th-element><a href=tables.html#the-th-element>th</a></code> 元素上的 <code id=dir-属性:attr-th-abbr><a href=tables.html#attr-th-abbr>abbr</a></code><li><code id=dir-属性:attr-area-alt><a href=image-maps.html#attr-area-alt>area</a></code>，
+     <code id=dir-属性:attr-img-alt><a href=embedded-content.html#attr-img-alt>img</a></code>，和
+     <code id=dir-属性:attr-input-alt><a href=input.html#attr-input-alt>input</a></code> 元素上的 <code>alt</code><li><code id=dir-属性:the-meta-element><a href=semantics.html#the-meta-element>meta</a></code> 元素上的 <code id=dir-属性:attr-meta-content><a href=semantics.html#attr-meta-content>content</a></code>，
+     如果 <code id=dir-属性:attr-meta-name><a href=semantics.html#attr-meta-name>name</a></code> 属性的元数据名对应的值应该是人类可读的<li><code id=dir-属性:attr-optgroup-label><a href=form-elements.html#attr-optgroup-label>optgroup</a></code>， <code id=dir-属性:attr-option-label><a href=form-elements.html#attr-option-label>option</a></code>，和
+     <code id=dir-属性:attr-track-label><a href=media.html#attr-track-label>track</a></code> 元素上的 <code>label</code> <li><code id=dir-属性:attr-input-placeholder><a href=input.html#attr-input-placeholder>input</a></code> 和 <code id=dir-属性:attr-textarea-placeholder><a href=form-elements.html#attr-textarea-placeholder>textarea</a></code>
+     元素上的 <code>placeholder</code><li>所有 <a href=infrastructure.html#html-elements id=dir-属性:html-elements-4>HTML 元素</a> 上的 <code id=dir-属性:attr-title><a href=#attr-title>title</a></code></ul>
+
+  <hr>
+
+  <dl class=domintro><dt><var>document</var> . <code id=dom-dir>dir</code> [ = <var>value</var> ]<div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dir title="The HTMLElement.dir property gets or sets the text writing directionality of the content of the current element.">HTMLElement/dir</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>6+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie unknown"><span>Internet Explorer</span><span>?</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>4.4+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div><dd>
+    <p>返回 <a href=#the-html-element-2 id=dir-属性:the-html-element-2><code>html</code> 元素</a> 的 <code id=dir-属性:dir-属性-14><a href=#dir-属性>dir</a></code> 属性值，如果有的话。</p>
+    <p>可以设置为 "<code>ltr</code>"，"<code>rtl</code>"，或 "<code>auto</code>"
+    来替换掉 <a href=#the-html-element-2 id=dir-属性:the-html-element-2-2><code>html</code> 元素</a> 的 <code id=dir-属性:dir-属性-15><a href=#dir-属性>dir</a></code> 属性值。</p>
+    <p>如果不存在 <a href=#the-html-element-2 id=dir-属性:the-html-element-2-3><code>html</code> 元素</a>，则返回空字符串，忽略新的值。</p>
+   </dl>
+
+  
+
+  <p class=note>强烈建议作者使用 <code id=dir-属性:dir-属性-16><a href=#dir-属性>dir</a></code>
+  属性而不是 CSS 来指明文本方向。因为这样的话即使没有 CSS 文档也会正确地渲染。
+  （例如被搜索引擎解释时）。</p>
+
+  <div class=example>
+
+   <p>这个标记片段是关于 IM 对话的。</p>
+
+   <pre>&lt;p dir=auto class="u1">&lt;b>&lt;bdi>Student&lt;/bdi>：&lt;/b> How do you write "What的 your name?" in Arabic?&lt;/p>
+&lt;p dir=auto class="u2">&lt;b>&lt;bdi>Teacher&lt;/bdi>：&lt;/b> ما اسمك؟&lt;/p>
+&lt;p dir=auto class="u1">&lt;b>&lt;bdi>Student&lt;/bdi>：&lt;/b> Thanks.&lt;/p>
+&lt;p dir=auto class="u2">&lt;b>&lt;bdi>Teacher&lt;/bdi>：&lt;/b> That的 written "شكرًا".&lt;/p>
+&lt;p dir=auto class="u2">&lt;b>&lt;bdi>Teacher&lt;/bdi>：&lt;/b> Do you know how to write "Please"?&lt;/p>
+&lt;p dir=auto class="u1">&lt;b>&lt;bdi>Student&lt;/bdi>：&lt;/b> "من فضلك"，right?&lt;/p></pre>
+
+
+
+   <p>给定 <code id=dir-属性:the-p-element><a href=grouping-content.html#the-p-element>p</a></code> 元素合适的样式表和默认对齐样式，也就是说把文本对齐到段落 <i>起始端</i>，渲染结果可能是这样的：</p>
+
+   <p><img alt="Each paragraph rendered as a separate block，with the paragraphs left-aligned except the second paragraph and the last one，which would  be right aligned，with the usernames (的tudent' and 'Teacher' in this example) flush right，with a colon to their left，and the text first to the left of that." src=/images/im.png width=366 height=157></p>
+
+   <p>就像之前提到的，<code id=dir-属性:attr-dir-auto><a href=#attr-dir-auto>auto</a></code> 值不是万能药。
+   这个例子中最后一个段落被错误地解释为从右向左的文本，
+   因为它以一个阿拉伯字符开始，这会导致 "right?" 出现在阿拉伯文字的左边。</p>
+
+  </div>
+
+
+
+
+  <h5 id=style-属性><span class=secno>3.2.5.5</span> <dfn><code>style</code></dfn> 属性<a href=#style-属性 class=self-link></a></h5>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/semantics-structure-and-apis-of-html-documents/elements/global-attributes/the-style-attribute.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/semantics-structure-and-apis-of-html-documents/elements/global-attributes/the-style-attribute.zh.html></div>
+
+  <p>所有 <a href=infrastructure.html#html-elements id=style-属性:html-elements>HTML 元素</a> 都可以设置 <code id=style-属性:style-属性><a href=#style-属性>style</a></code> 内容属性。
+  这个 <a href=https://drafts.csswg.org/css-style-attr/#style-attribute id=style-属性:css-styling-attribute data-x-internal=css-styling-attribute>style 属性</a> 定义在
+  <cite>CSS Style Attributes</cite> 规范中。 <a href=references.html#refsCSSATTR>[CSSATTR]</a></p>
+
+  
+
+  <p>在任何元素上使用了 <code id=style-属性:style-属性-2><a href=#style-属性>style</a></code> 属性的文档必须
+  在那些属性移除之后仍然可以理解和使用。</p>
+
+  <p class=note>特别是使用 <code id=style-属性:style-属性-3><a href=#style-属性>style</a></code> 属性来隐藏和显示内容，
+  或者传达文档中本没有的含义，这些都是不合规范的。
+  （隐藏和显示内容，可以使用 <code id=style-属性:hidden-属性><a href=interaction.html#hidden-属性>hidden</a></code> 属性）</p>
+
+  <hr>
+
+  <dl class=domintro><dt><var>element</var> . <code id=dom-style-2><a data-x-internal=dom-style href=https://drafts.csswg.org/cssom/#dom-elementcssinlinestyle-style>style</a></code><dd>
+    <p>返回该元素的 <code id=style-属性:style-属性-4><a href=#style-属性>style</a></code> 属性的 <code id=style-属性:cssstyledeclaration><a data-x-internal=cssstyledeclaration href=https://drafts.csswg.org/cssom/#the-cssstyledeclaration-interface>CSSStyleDeclaration</a></code> 对象。</p>
+   </dl>
+
+  
+
+  <div class=example>
+
+   <p>下面的例子中，使用
+   <code id=style-属性:the-span-element><a href=text-level-semantics.html#the-span-element>span</a></code> 元素和 <code id=style-属性:style-属性-5><a href=#style-属性>style</a></code> 属性
+   来标记指代颜色的词，来让它们在视觉媒体中显示相关的颜色。</p>
+
+   <pre>&lt;p>My sweat suit is &lt;span style="color： green; background：
+transparent">green&lt;/span> and my eyes are &lt;span style="color： blue;
+background： transparent">blue&lt;/span>.&lt;/p></pre>
+
+  </div>
+
+
+
+
+  <h5 id=使用-data-*-属性-嵌入自定义不可见数据><span class=secno>3.2.5.6</span> 使用 <code id=使用-data-*-属性-嵌入自定义不可见数据:attr-data-*><a href=#attr-data-*>data-*</a></code> 属性 <dfn>嵌入自定义不可见数据</dfn><a href=#使用-data-*-属性-嵌入自定义不可见数据 class=self-link></a></h5>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/semantics-structure-and-apis-of-html-documents/elements/global-attributes/embedding-custom-non-visible-data-with-the-data-attributes.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/semantics-structure-and-apis-of-html-documents/elements/global-attributes/embedding-custom-non-visible-data-with-the-data-attributes.zh.html></div>
+
+  <p><dfn id=custom-data-attribute>自定义数据属性</dfn> 是一个无命名空间的属性，其名字以
+  字符串 "<dfn id=attr-data-*><code>data-</code></dfn>" 起始，连字符后有至少一个字符，
+  <a href=infrastructure.html#xml-compatible id=使用-data-*-属性-嵌入自定义不可见数据:xml-compatible>兼容于 XML</a>，且不得包含非
+  <a href=https://infra.spec.whatwg.org/#ascii-upper-alpha id=使用-data-*-属性-嵌入自定义不可见数据:uppercase-ascii-letters data-x-internal=uppercase-ascii-letters>ASCII 大写字母</a>。</p>
+
+  <p class=note><a href=https://dom.spec.whatwg.org/#html-document id=使用-data-*-属性-嵌入自定义不可见数据:html-documents data-x-internal=html-documents>HTML 文档</a> 中 <a href=infrastructure.html#html-elements id=使用-data-*-属性-嵌入自定义不可见数据:html-elements>HTML 元素</a> 上所有属性名都会被自动 ASCII 小写化，所以 ASCII 大写字母的限制不会影响这种文档。</p>
+
+  <p><a href=#custom-data-attribute id=使用-data-*-属性-嵌入自定义不可见数据:custom-data-attribute>自定义数据属性</a> 用于存储页面或应用私有的，自定义的数据、状态、注解和类似东西，只有在找不到更合适的属性或元素时才能使用。</p>
+
+  <p>这些属性不适用于所属站点管理员不知道的软件。对于很多独立工具使用的通用扩展，
+  或者需要扩展本规范来显式地提供该特性，或者应该使用类似
+  <a id=使用-data-*-属性-嵌入自定义不可见数据:microdata href=microdata.html#microdata>microdata</a> 的技术（使用标准化的词汇）。</p>
+
+  <div class=example>
+
+   <p>例如一个音乐相关的站点可能会在表示专辑音轨的列表项中，
+   使用自定义数据属性来表示每个音轨的长度。
+   用户可能会用该信息对列表进行排序，或者按照某个长度来过滤列表。</p>
+
+   <pre>&lt;ol>
+ &lt;li data-length="2m11s">Beyond The Sea&lt;/li>
+ ..。
+&lt;/ol></pre>
+
+   <p>但是用户使用与这个音乐站点不相关的通用软件来根据这个数据搜索某个长度的音轨是不合适的。</p>
+
+   <p>这是因为这些属性只适用于该站点自己的脚本，并不是一种公众可用的元数据的通用扩展机制。</p>
+
+  </div>
+
+  <div class=example>
+
+   <p>类似地，页面作者可能会编写一些标记来为他们打算使用的翻译工具提供一些信息：</p>
+
+   <pre>&lt;p>The third &lt;span data-mytrans-de="Anspruch">claim&lt;/span> covers the case of &lt;span
+translate="no">HTML&lt;/span> markup.&lt;/p></pre>
+
+   <p>这个例子中，"<code>data-mytrans-de</code>" 属性给出的文字
+   提供给 MyTrans 产品使用，把 "claim" 翻译到德语。但是标准的
+   <code id=使用-data-*-属性-嵌入自定义不可见数据:attr-translate><a href=#attr-translate>translate</a></code> 属性用于指示，
+   在所有语言环境中 "HTML" 要保持不变。当有标准属性可用时，就没必要使用
+   <a href=#custom-data-attribute id=使用-data-*-属性-嵌入自定义不可见数据:custom-data-attribute-2>自定义数据属性</a> 了。</p>
+
+  </div>
+
+  <div class=example>
+
+   <p>在这个例子中，自定义数据属性用于存储
+   <code id=使用-data-*-属性-嵌入自定义不可见数据:paymentrequest><a data-x-internal=paymentrequest href=https://w3c.github.io/payment-request/#dom-paymentrequest>PaymentRequest</a></code> 特性探测的结果，可能会用于 CSS 中，对付款页面做特殊的样式。</p>
+
+   <pre>&lt;script>
+ if ('PaymentRequest' in window) {
+   document.documentElement.dataset.hasPaymentRequest = '';
+ }
+&lt;/script></pre>
+
+   <p>这里 <code>data-has-payment-request</code> 属性被当做
+   <a href=infrastructure.html#boolean-attribute id=使用-data-*-属性-嵌入自定义不可见数据:boolean-attribute>布尔属性</a> 来使用；检查该属性是否出现就足够了。
+   但是如果作者希望，它后续也可以填充一些值，比如用来标识该特性的功能限制。</p>
+
+  </div>
+
+  <p>每个 <a href=infrastructure.html#html-elements id=使用-data-*-属性-嵌入自定义不可见数据:html-elements-2>HTML 元素</a> 都可以指定任意个 <a href=#custom-data-attribute id=使用-data-*-属性-嵌入自定义不可见数据:custom-data-attribute-3>自定义数据属性</a>，指定为任意值。</p>
+
+  <p>作者应该仔细地设计这样的扩展，当属性被忽略或者任何相关 CSS 被丢弃时，页面仍然可用。</p>
+
+  
+
+  <p>JavaScript 库可以使用 <a href=#custom-data-attribute id=使用-data-*-属性-嵌入自定义不可见数据:custom-data-attribute-4>自定义数据属性</a>，因为它们也是页面的一部分。
+  鼓励有很多人用的库的作者在属性名中包含名字，来减小冲突的风险。
+  如果可行的话，鼓励库的作者支持自定义实际在用的名字，这样不小心选了重复名字的库也可以用于同一个页面，
+  同一个库的多个版本也可以用于同一个页面，即使它们互相不兼容。</p>
+
+  <div class=example>
+
+   <p>例如一个叫做 "DoQuery" 的库可能会使用叫做 <code>data-doquery-range</code> 的属性名，
+   另一个叫做 "jJo" 的库可能会使用叫做 <code>data-jjo-range</code> 的属性名。
+   jJo 库也可以提供一个 API 来设置使用哪个前缀（例如 <code>J.setDataPrefix('j2')</code>，
+   使属性的名字变成 <code>data-j2-range</code>）。</p>
+
+  </div>
+
+  <hr>
+
+  <dl class=domintro><dt><var>element</var> . <code id=dom-dataset>dataset</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/HTMLOrForeignElement/dataset title="The dataset read-only property of the HTMLOrForeignElement interface provides read/write access to all the custom data attributes (data-*) set on the element.">HTMLOrForeignElement/dataset</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>6+</span></span><span class="safari yes"><span>Safari</span><span>5.1+</span></span><span class="chrome yes"><span>Chrome</span><span>8+</span></span><hr><span class="opera yes"><span>Opera</span><span>11+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>11</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>6+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>5.1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>4.4+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>11+</span></span></div></div><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/HTMLOrForeignElement/dataset title="The dataset read-only property of the HTMLOrForeignElement interface provides read/write access to all the custom data attributes (data-*) set on the element.">HTMLOrForeignElement/dataset</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>51+</span></span><span class="safari yes"><span>Safari</span><span>10+</span></span><span class="chrome yes"><span>Chrome</span><span>55+</span></span><hr><span class="opera yes"><span>Opera</span><span>41+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>17+</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>51+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>10+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>55+</span></span><span class="webview_android yes"><span>WebView Android</span><span>55+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>6.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>41+</span></span></div></div></div><dd>
+
+    <p>返回该元素的 <code id=使用-data-*-属性-嵌入自定义不可见数据:attr-data-*-2><a href=#attr-data-*>data-*</a></code> 属性的 <code id=使用-data-*-属性-嵌入自定义不可见数据:domstringmap><a href=#domstringmap>DOMStringMap</a></code> 对象。</p>
+
+    <p>连字符连接的名字会变成驼峰的。例如 <code>data-foo-bar=""</code>
+    变成了 <code>element.dataset.fooBar</code>。</p>
+
+   </dl>
+
+  
+
+  <p><code id=使用-data-*-属性-嵌入自定义不可见数据:domstringmap-2><a href=#domstringmap>DOMStringMap</a></code> 接口用于 <code id=使用-data-*-属性-嵌入自定义不可见数据:dom-dataset><a href=#dom-dataset>dataset</a></code> 属性。每个 <code id=使用-data-*-属性-嵌入自定义不可见数据:domstringmap-3><a href=#domstringmap>DOMStringMap</a></code> 有一个 <dfn id=concept-domstringmap-element>关联的元素</dfn>。</p>
+
+  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/DOMStringMap title="The DOMStringMap interface is used for the HTMLElement.dataset attribute, to represent data for custom attributes added to elements.">DOMStringMap</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>6+</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>11</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>Yes</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div><pre class=idl>[OverrideBuiltins]
+interface <dfn id=domstringmap>DOMStringMap</dfn> {
+  <a href=#dom-domstringmap-namedItem>getter</a> DOMString (DOMString name);
+  [<span>CEReactions</span>] <a href=#dom-domstringmap-setitem>setter</a> void (DOMString name,DOMString value);
+  [<span>CEReactions</span>] <a href=#dom-domstringmap-removeitem>deleter</a> void (DOMString name);
+};</pre>
+
+  
+
+  <div class=example>
+
+   <p>如果一个 Web 页面想要一个元素来表示宇宙飞船，比如作为游戏的一部分，他可能必须同时使用
+   <code id=使用-data-*-属性-嵌入自定义不可见数据:classes><a href=#classes>class</a></code> 属性与 <code id=使用-data-*-属性-嵌入自定义不可见数据:attr-data-*-3><a href=#attr-data-*>data-*</a></code> 属性：</p>
+
+   <pre>&lt;div class="spaceship" data-ship-id="92432"
+     data-weapons="laser 2" data-shields="50%"
+     data-x="30" data-y="10" data-z="90">
+ &lt;button class="fire"
+         onclick="spaceships[this.parentNode.dataset.shipId].fire()">
+  Fire
+ &lt;/button>
+&lt;/div></pre>
+
+   <p>注意连字符连接的属性名在 API 中变成了驼峰命名的。</p>
+
+  </div>
+
+  <div class=example>
+
+   <p>给定下面的相似构造的片段和元素：</p>
+
+   <pre>&lt;img class="tower" id="tower5" data-x="12" data-y="5"
+     data-ai="robotarget" data-hp="46" data-ability="flames"
+     src="towers/rocket.png" alt="Rocket Tower"></pre>
+
+   <p>...可能会想到用一个 <code>splashDamage()</code> 函数，它接受的第一个参数是被处理的元素：</p>
+
+   <pre>function splashDamage(node，x，y，damage) {
+  if (node.classList.contains('tower') &amp;&amp; // checking the 'class' attribute
+      node.dataset.x == x &amp;&amp; // reading the 'data-x' attribute
+      node.dataset.y == y) { // reading the 'data-y' attribute
+    var hp = parseInt(node.dataset.hp); // reading the 'data-hp' attribute
+    hp = hp - damage;
+    if (hp &lt; 0) {
+      hp = 0;
+      node.dataset.ai = 'dead'; // setting the 'data-ai' attribute
+      delete node.dataset.ability; // removing the 'data-ability' attribute
+    }
+    node.dataset.hp = hp; // setting the 'data-hp' attribute
+  }
+}</pre>
+
+  </div>
+
+
+
+  <h4 id=the-innertext-idl-attribute><span class=secno>3.2.6</span> The <code id=the-innertext-idl-attribute:dom-innertext><a href=#dom-innertext>innerText</a></code> getter and
+  setter<a href=#the-innertext-idl-attribute class=self-link></a></h4><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText title="The innerText property of the HTMLElement interface represents the &quot;rendered&quot; text content of a node and its descendants.">HTMLElement/innerText</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>45+</span></span><span class="safari yes"><span>Safari</span><span>3+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>9.6+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>5.5+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>45+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>4+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>4.4+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span><hr><span class=caniuse><span><a href="https://caniuse.com/#feat=innertext" title=HTMLElement.innerText>caniuse.com table</a></span></span></div></div></div>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/semantics-structure-and-apis-of-html-documents/elements/the-innertext-getter-and-setter.en.html data-zh-file="https://github.com/whatwg-cn/html/new/master/src/semantics-structure-and-apis-of-html-documents/elements/the-innertext-getter-and-setter.zh.html?filename=the-innertext-getter-and-setter.zh.html&amp;value=%E4%BB%8E%20https%3A%2F%2Fgithub.com%2Fwhatwg-cn%2Fhtml%2Fblob%2Fmaster%2Fsrc%2Fsemantics-structure-and-apis-of-html-documents%2Felements%2Fthe-innertext-getter-and-setter.en.html%20%E6%8B%B7%E8%B4%9D%E8%8B%B1%E6%96%87%E6%BA%90%E7%A0%81%E8%87%B3%E6%AD%A4%EF%BC%8C%E5%BC%80%E5%A7%8B%E7%BF%BB%E8%AF%91"></div>
+
+  <dl class=domintro><dt><var>element</var> . <code id=dom-innertext>innerText</code> [ = <var>value</var> ]<dd>
+    <p>Returns the element's text content "as rendered".</p>
+
+    <p>Can be set, to replace the element's children with the given value, but with line breaks
+    converted to <code id=the-innertext-idl-attribute:the-br-element><a href=text-level-semantics.html#the-br-element>br</a></code> elements.</p>
+  </dl>
+
+  
+
+
+<h4 id=与双向算法相关的要求><span class=secno>3.2.7</span> 与双向算法相关的要求<a href=#与双向算法相关的要求 class=self-link></a></h4>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/semantics-structure-and-apis-of-html-documents/elements/requirements-relating-to-the-bidirectional-algorithm/index.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/semantics-structure-and-apis-of-html-documents/elements/requirements-relating-to-the-bidirectional-algorithm/index.zh.html></div>
+
+  
+
+  <p><a href=#concept-html-contents id=与双向算法相关的要求:concept-html-contents>内容</a> 中包含 <code id=与双向算法相关的要求:text><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>Text</a></code> 节点的
+  <a href=infrastructure.html#html-elements id=与双向算法相关的要求:html-elements>HTML 元素</a> 中的 <a href=#text-content id=与双向算法相关的要求:text-content>文本内容</a>，
+  以及允许自由文本的 <a href=infrastructure.html#html-elements id=与双向算法相关的要求:html-elements-2>HTML 元素</a> 属性中的文本，
+  可以包含 U+202A 到 U+202E，和 U+2066 到 U+2069 （双向算法的格式化字符） 范围内的字符。 <a href=references.html#refsBIDI>[BIDI]</a></p>
+
+  <p class=note>鼓励作者使用 <code id=与双向算法相关的要求:dir-属性><a href=#dir-属性>dir</a></code> 属性，
+  <code id=与双向算法相关的要求:the-bdo-element><a href=text-level-semantics.html#the-bdo-element>bdo</a></code> 元素，以及 <code id=与双向算法相关的要求:the-bdi-element><a href=text-level-semantics.html#the-bdi-element>bdi</a></code> 元素，
+  而不是手动地维护双向算法字符。双向算法格式化字符与 CSS 的交互性很差。</p>
+
+
+  
+
+  
+
+
+
+
+  <nav><a href=infrastructure.html>← 2 公共基础设施</a> — <a href=./>Table of Contents</a> — <a href=semantics.html>4 HTML 元素 →</a></nav>

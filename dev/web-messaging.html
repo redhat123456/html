@@ -1,0 +1,535 @@
+<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Standard, Developer's Edition</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/dev/styles.css crossorigin=""><script>
+   function toggleStatus(div) {
+     div.parentNode.classList.toggle('wrapped');
+   }
+   function setLinkFragment(link) {
+     link.hash = location.hash;
+   }
+  </script><body>
+  <script async="" src=/dev/search.js></script>
+  
+  
+  
+  <header id=head class="head with-buttons">
+   <a href=https://whatwg.org/ class=logo><img width=100 alt=WHATWG crossorigin="" src=https://resources.whatwg.org/logo.svg height=100></a>
+   
+   <hgroup><h1><a rel=home href=/dev/>HTML: The Living Standard</a></h1><h2 id="developer's-edition-—-last-updated-date:-01-jan-1901" class="no-num no-toc">Developer's Edition — Last Updated <span class=pubdate>6 November 2020</span></h2><div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/developers-edition-mdash-last-updated-date-01-jan-1901.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/developers-edition-mdash-last-updated-date-01-jan-1901.zh.html></div></hgroup>
+   
+   <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-91053840-1', 'auto');
+      ga('send', 'pageview');
+   </script>
+  </header>
+
+  
+
+  
+
+
+  
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/table-of-contents.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/table-of-contents.zh.html></div>
+  
+
+
+  
+<div data-en-date="Sat Aug 11 2018 08:00:56 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/full-table-of-contents.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/full-table-of-contents.zh.html></div>
+  
+
+  
+
+  
+
+
+  <h2 id=about-dev-edition class="no-num no-toc">关于本标准</h2>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/about-this-specification.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/about-this-specification.zh.html></div>
+
+  <p>本标准与其他标准不同，它的处理完全考虑到了 Web 开发者。</p>
+
+  <p>本标准关注可读性和可访问性，不像 <a href=/multipage/>完整的 HTML 标准</a>，"开发者版本" 移除了
+  只有浏览器厂商需要知道的信息。它个版本是用我们的构建工具从完整的规范自动产出的，
+  因此总会与最新开发的 HTML 保持同步。</p>
+
+  <p>其概念、构造，以及未来可参考 <a href=http://web.archive.org/web/20150220020906/http://archive.germanforblack.com:80/articles/html5-for-web-developers>
+  原始出版发行</a>，以及 <a href=https://blog.whatwg.org/developers-edition-comeback>关于重启该版本的博文</a>。</p>
+
+  <p>最后，欢迎 <a href=https://github.com/whatwg/html/labels/dev%20edition>在 GitHub 贡献</a> 来改进该版本！</p>
+
+  
+
+
+  <nav><a href=web-sockets.html>← 9.3 Web sockets</a> — <a href=./>Table of Contents</a> — <a href=workers.html>10 Web 工作线程 →</a></nav><ol class=toc><li><ol><li><a href=web-messaging.html#web-messaging><span class=secno>9.4</span> 跨文档通信</a><ol><li><a href=web-messaging.html#概述-5><span class=secno>9.4.1</span> 概述</a><li><a href=web-messaging.html#security-postmsg><span class=secno>9.4.2</span> 安全</a><li><a href=web-messaging.html#发布消息><span class=secno>9.4.3</span> 发布消息</a></ol><li><a href=web-messaging.html#通道><span class=secno>9.5</span> 通道</a><ol><li><a href=web-messaging.html#概述-6><span class=secno>9.5.1</span> 概述</a><ol><li><a href=web-messaging.html#示例><span class=secno>9.5.1.1</span> 示例</a><li><a href=web-messaging.html#端口作为-web-上对象能力模型的基础><span class=secno>9.5.1.2</span> 端口作为 Web 上对象能力模型的基础</a><li><a href=web-messaging.html#端口作为抽象服务实现的基础><span class=secno>9.5.1.3</span> 端口作为抽象服务实现的基础</a></ol><li><a href=web-messaging.html#消息通道><span class=secno>9.5.2</span> 消息通道</a><li><a href=web-messaging.html#消息端口><span class=secno>9.5.3</span> 消息端口</a><li><a href=web-messaging.html#广播给多个端口><span class=secno>9.5.4</span> 广播给多个端口</a><li><a href=web-messaging.html#ports-and-garbage-collection><span class=secno>9.5.5</span> 端口与垃圾回收</a></ol><li><a href=web-messaging.html#向其他浏览上下文广播><span class=secno>9.6</span> 向其他浏览上下文广播</a></ol></ol><h3 id=web-messaging><span class=secno>9.4</span> <dfn id=crossDocumentMessages>跨文档通信</dfn><a href=#web-messaging class=self-link></a></h3><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage title="The window.postMessage() method safely enables cross-origin communication between Window objects; e.g., between a page and a pop-up that it spawned, or between a page and an iframe embedded within it.">Window/postMessage</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>8+</span></span><span class="safari yes"><span>Safari</span><span>4+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>9.5+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>10+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>8+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>3.2+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>1+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span><hr><span class=caniuse><span><a href="https://caniuse.com/#feat=x-doc-messaging" title="Cross-document messaging">caniuse.com table</a></span></span></div></div></div>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/communication/cross-document-messaging/index.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/communication/cross-document-messaging/index.zh.html></div>
+
+  <p>Web 浏览器由于安全和隐私等原因禁止不同域的文档见互相影响，也就是说不允许跨站脚本。</p>
+
+  <p>虽然这是一个非常重要的安全特性，但它也阻止了不同域的页面之间进行非恶意的通信。
+  本章引入了一个消息系统来允许不同源的文档间通信，这一设计不会引起跨站脚本攻击。</p>
+
+  <p id=fingerprint-postMessage class=note>
+  
+  <code>postMessage()</code> API 可以用作 <a href=https://infra.spec.whatwg.org/#tracking-vector id=web-messaging:tracking-vector data-x-internal=tracking-vector>跟踪向量</a>。</p>
+
+
+  <h4 id=概述-5><span class=secno>9.4.1</span> 概述<a href=#概述-5 class=self-link></a></h4>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/communication/cross-document-messaging/introduction.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/communication/cross-document-messaging/introduction.zh.html></div>
+
+  
+
+  <div class=example>
+
+   <p>例如，如果文档 A 包含一个 <code id=概述-5:the-iframe-element><a href=iframe-embed-object.html#the-iframe-element>iframe</a></code> 元素，其中包含文档 B，
+   A 中的脚本调用了 B 的 <code id=概述-5:window><a href=window-object.html#window>Window</a></code> 对象上的
+   <code>postMessage()</code>，
+   然后这个对象上会产生一个消息事件，标记为源自文档 A 的 <code id=概述-5:window-2><a href=window-object.html#window>Window</a></code>。
+   文档 A 中的脚本可能像这样：</p>
+
+   <pre>var o = document.getElementsByTagName('iframe')[0];
+o.contentWindow.postMessage('Hello world', 'https://b.example.org/');</pre>
+
+   <p>脚本通过 <code>addEventListener()</code>（或类似机制）
+   为传入的事件注册事件处理器。例如文档 B 中的脚本可能像这样：</p>
+
+   <pre>window.addEventListener('message', receiver, false);
+function receiver(e) {
+  if (e.origin == 'https://example.com') {
+    if (e.data == 'Hello world') {
+      e.source.postMessage('Hello', e.origin);
+    } else {
+      alert(e.data);
+    }
+  }
+}</pre>
+
+   <p>该脚本先检查域是否符合预期，
+   然后再检查消息，把它显示给用户或者把它发送回首先发送消息的文档。</p>
+
+  </div>
+
+
+
+
+  <h4 id=security-postmsg><span class=secno>9.4.2</span> 安全<a href=#security-postmsg class=self-link></a></h4>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/communication/cross-document-messaging/security/index.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/communication/cross-document-messaging/security/index.zh.html></div>
+
+  
+
+  <p id=security-4 class=warning>使用此 API 需要格外小心，
+  以防止恶意实体为达到自己的目的在网站上滥用。</p>
+
+  <p>作者应该检查 <code id=security-postmsg:dom-messageevent-origin><a href=comms.html#dom-messageevent-origin>origin</a></code>
+  属性以确保只从他们期望的域接收消息。否则，作者的消息处理代码中的错误可能会被恶意网站利用。</p>
+
+  <p>此外，即使在检查
+  <code id=security-postmsg:dom-messageevent-origin-2><a href=comms.html#dom-messageevent-origin>origin</a></code>
+  属性后，作者也应该检查相关数据的格式。否则，如果事件的源被跨站脚本攻击，对通过
+  <code>postMessage()</code>
+  方法发送的消息的未经检查的处理可能会把攻击传播到接收者。</p>
+
+  <p>对于任何包含机密信息的消息中，作者不应在
+  <var>targetOrigin</var> 参数中使用通配符关键字（*），否则无法保证消息仅传递给它希望的接收方。</p>
+
+  <hr>
+
+  <p>鼓励接受任何来源消息的作者考虑 DoS 攻击的风险。攻击者可能会发送大量的消息；
+  如果接收页面执行了耗时的计算或为每个此类消息产生网络流量，
+  则攻击者的消息可能会被成倍放大，从而导致 DoS 攻击。
+  鼓励作者采用速率限制（每分钟只接受一定数量的消息）以使这种攻击不可行。</p>
+
+
+  
+
+
+
+
+
+  <h4 id=发布消息><span class=secno>9.4.3</span> 发布消息<a href=#发布消息 class=self-link></a></h4>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/communication/cross-document-messaging/posting-messages.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/communication/cross-document-messaging/posting-messages.zh.html></div>
+
+  <dl class=domintro><dt><var>window</var> . <code id=dom-window-postmessage-options>postMessage</code>(<var>message</var> [, <var>options</var> ] )<dd>
+
+    <p>像指定的 window 发送消息。消息可以是结构化的对象，
+    例如嵌套对象和数组，可以包含 JavaScript 值（字符串、数字、<code id=发布消息:date><a data-x-internal=date href=https://tc39.es/ecma262/#sec-date-objects>Date</a></code>、对象等等），
+    也可以包含数据对象比如 <code id=发布消息:file><a data-x-internal=file href=https://w3c.github.io/FileAPI/#dfn-file>File</a></code> <code id=发布消息:blob><a data-x-internal=blob href=https://w3c.github.io/FileAPI/#dfn-Blob>Blob</a></code>，<code id=发布消息:filelist><a data-x-internal=filelist href=https://w3c.github.io/FileAPI/#filelist-section>FileList</a></code>，
+    以及 <code id=发布消息:idl-arraybuffer><a data-x-internal=idl-arraybuffer href=https://heycam.github.io/webidl/#idl-ArrayBuffer>ArrayBuffer</a></code> 对象。</p>
+
+    <p><var>options</var> 的 <code id=发布消息:dom-postmessageoptions-transfer><a href=#dom-postmessageoptions-transfer>transfer</a></code> 成员中的对象会被转移（不是克隆），
+    意味着它们在发送侧不再可用。</p>
+
+    <p>可以用 <var>options</var> 的 <code id=发布消息:dom-windowpostmessageoptions-targetorigin><a href=window-object.html#dom-windowpostmessageoptions-targetorigin>targetOrigin</a></code> 成员来指定目标源。
+    如果没有指定，默认为 "<code>/</code>"。这个默认值限制了消息只能发送到同源目标。</p>
+
+    <p>为避免信息泄露，如果目标窗口的源不匹配给定的源消息会被丢弃。如果要无视目标源直接发送消息，需要设置目标源为 "<code>*</code>"。</p>
+
+    <p>如果 <var>transfer</var> 数组包含重复的对象，或者 <var>message</var> 不可克隆时，
+    抛出一个 <a id=发布消息:datacloneerror href=https://heycam.github.io/webidl/#datacloneerror data-x-internal=datacloneerror>"<code>DataCloneError</code>"</a> <code id=发布消息:domexception><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code>。</p>
+
+   <dt><var>window</var> . <code>postMessage</code>(<var>message</var>, <var>targetOrigin</var> [, <var>transfer</var> ] )<dd><p>这是 <code id=发布消息:dom-window-postmessage-options><a href=#dom-window-postmessage-options>postMessage()</a></code> 的另一个版本，以目标源作为参数。调用
+   <code>window.postMessage(message, target, transfer)</code> 等价于
+   <code>window.postMessage(message, {targetOrigin, transfer})</code>。</dl>
+
+  <p class=note>给刚导航到新 <code id=发布消息:document><a href=dom.html#document>Document</a></code> 的 <a id=发布消息:browsing-context href=browsers.html#browsing-context>browsing context</a> 上的
+  <code id=发布消息:window><a href=window-object.html#window>Window</a></code> 发布消息时，消息可能无法到达接收者：
+  目标 <a href=browsers.html#browsing-context id=发布消息:browsing-context-2>浏览上下文</a> 中的脚本必须有时间设置消息监听器。
+  因此，如果要发送消息给一个刚创建的子 <code id=发布消息:the-iframe-element><a href=iframe-embed-object.html#the-iframe-element>iframe</a></code> 的 <code id=发布消息:window-2><a href=window-object.html#window>Window</a></code>，
+  建议作者在子 <code id=发布消息:document-2><a href=dom.html#document>Document</a></code> 中发送消息给父级来声明它已经准备好接收消息了，
+  父级则等待该消息到来后再开发发送消息。</p>
+
+  
+
+
+
+
+
+  <h3 id=通道><span class=secno>9.5</span> <dfn>通道</dfn><a href=#通道 class=self-link></a></h3>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/communication/channel-messaging/index.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/communication/channel-messaging/index.zh.html></div>
+
+
+  <h4 id=概述-6><span class=secno>9.5.1</span> 概述<a href=#概述-6 class=self-link></a></h4>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/communication/channel-messaging/introduction/index.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/communication/channel-messaging/introduction/index.zh.html></div>
+
+  
+
+  <p>为了使独立的代码片段之间可以相互通信（例如运行在不同
+  <a href=browsers.html#browsing-context id=概述-6:browsing-context>浏览上下文</a> 的代码直接通信），
+  作者可以使用 <a href=#通道 id=概述-6:通道>Channel 通信</a>。</p>
+
+  <p>该机制下的通信 Channel 实现为双向管道，两端各一个端口。
+  从一个端口发送的消息被传递到另一个端口，反之亦然。
+  消息被作为 DOM 事件传递，不会中断或阻塞正在执行的
+  <span>任务</span>。</p>
+
+  <p>创建连接（两个关联的端口）使用 <code>MessageChannel()</code>
+  构造函数：</p>
+
+  <pre>var channel = new MessageChannel();</pre>
+
+  <p>其中一个端口作为本地端口保存，另一个发送到了远程代码，例如
+  使用 <code>postMessage()</code>:</p>
+
+  <pre>otherWindow.postMessage('hello', 'https://example.com', [channel.port2]);</pre>
+
+  <p>发送消息使用端口上的 <code id=概述-6:dom-messageport-postmessage><a href=#dom-messageport-postmessage>postMessage()</a></code> 方法：</p>
+
+  <pre>channel.port1.postMessage('hello');</pre>
+
+  <p>接收消息需要监听 <code id=概述-6:event-message><a href=indices.html#event-message>message</a></code> 事件：</p>
+
+  <pre>channel.port1.onmessage = handleMessage;
+function handleMessage(event) {
+  // message is in event.data
+  // ...
+}</pre>
+
+  <p>发送到端口的数据可以是结构化的；例如向 <code id=概述-6:messageport><a href=#messageport>MessagePort</a></code> 传递字符串数组：</p>
+
+  <pre>port1.postMessage(['hello', 'world']);</pre>
+
+
+
+  <h5 id=示例><span class=secno>9.5.1.1</span> 示例<a href=#示例 class=self-link></a></h5>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/communication/channel-messaging/introduction/examples.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/communication/channel-messaging/introduction/examples.zh.html></div>
+
+  
+
+  <div class=example>
+
+   <p>在这个例子中，两个 JavaScript 库通过 <code id=示例:messageport><a href=#messageport>MessagePort</a></code> 相互连接。
+   这允许它们托管在不同的框架或 <code id=示例:worker-2><a href=workers.html#worker-2>Worker</a></code> 对象中而不需要改变 API。</p>
+
+   <pre>&lt;script src="contacts.js">&lt;/script> &lt;!-- exposes a contacts object -->
+&lt;script src="compose-mail.js">&lt;/script> &lt;!-- exposes a composer object -->
+&lt;script>
+ var channel = new MessageChannel();
+ composer.addContactsProvider(channel.port1);
+ contacts.registerConsumer(channel.port2);
+&lt;/script></pre>
+
+   <p>Here's what the "addContactsProvider()" function's implementation could look like:</p>
+
+   <pre>function addContactsProvider(port) {
+  port.onmessage = function (event) {
+    switch (event.data.messageType) {
+      'search-result': handleSearchResult(event.data.results); break;
+      'search-done': handleSearchDone(); break;
+      'search-error': handleSearchError(event.data.message); break;
+      // ...
+    }
+  };
+};</pre>
+
+   <p>或者也可以这样实现：</p>
+
+   <pre>function addContactsProvider(port) {
+  port.addEventListener('message', function (event) {
+    if (event.data.messageType == 'search-result')
+      handleSearchResult(event.data.results);
+  });
+  port.addEventListener('message', function (event) {
+    if (event.data.messageType == 'search-done')
+      handleSearchDone();
+  });
+  port.addEventListener('message', function (event) {
+    if (event.data.messageType == 'search-error')
+      handleSearchError(event.data.message);
+  });
+  // ...
+  port.start();
+};</pre>
+
+   <p>关键的区别在于，当使用 <code id=示例:dom-eventtarget-addeventlistener><a data-x-internal=dom-eventtarget-addeventlistener href=https://dom.spec.whatwg.org/#dom-eventtarget-addeventlistener>addEventListener()</a></code> 时，必须调用 <code id=示例:dom-messageport-start><a href=#dom-messageport-start>start()</a></code> 方法。当使用 <code>onmessage</code> 时，已经默认调用了 <code id=示例:dom-messageport-start-2><a href=#dom-messageport-start>start()</a></code>。</p>
+
+   <p>无论显式或隐式地（通过设置 <code>onmessage</code>）
+   调用 <code id=示例:dom-messageport-start-3><a href=#dom-messageport-start>start()</a></code> 方法，都会启动消息流：
+   发送到消息端口的消息初始是暂停的，这样就不会在脚本还没能建立监听器之前被丢掉。</p>
+
+  </div>
+
+
+
+  <h5 id=端口作为-web-上对象能力模型的基础><span class=secno>9.5.1.2</span> 端口作为 Web 上对象能力模型的基础<a href=#端口作为-web-上对象能力模型的基础 class=self-link></a></h5>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/communication/channel-messaging/introduction/ports-as-the-basis-of-an-object-capability-model-on-the-web.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/communication/channel-messaging/introduction/ports-as-the-basis-of-an-object-capability-model-on-the-web.zh.html></div>
+
+  
+
+  <p>可以把端口当做为系统中其他角色提供有限能力的一种方式（在对象能力模型的意义上），
+  这可能是一个弱能力的系统，用端口只是为了在源内通信的方便，
+  也可能是一个强能力的系统，由一个源 <var>provider</var> 提供，作为唯一的机制给另一个源
+  <var>consumer</var> 来从 <var>provider</var> 获取信息或造成改变。</p>
+
+  <p>例如，考虑一个社交网站嵌入了一个 <code id=端口作为-web-上对象能力模型的基础:the-iframe-element><a href=iframe-embed-object.html#the-iframe-element>iframe</a></code>
+  它是用户的邮件联系人提供者（一个联系人网站，来自第二个源），
+  以及第二个 <code id=端口作为-web-上对象能力模型的基础:the-iframe-element-2><a href=iframe-embed-object.html#the-iframe-element>iframe</a></code>（一个游戏网站，来自第三个源）
+  外面的社交网站和第二个 <code id=端口作为-web-上对象能力模型的基础:the-iframe-element-3><a href=iframe-embed-object.html#the-iframe-element>iframe</a></code> 中的游戏无法访问第一个 <code id=端口作为-web-上对象能力模型的基础:the-iframe-element-4><a href=iframe-embed-object.html#the-iframe-element>iframe</a></code> 中的任何东西；它们只能：</p>
+
+  <ul class=brief><li>把 <code id=端口作为-web-上对象能力模型的基础:the-iframe-element-5><a href=iframe-embed-object.html#the-iframe-element>iframe</a></code> <span>导航</span> 到新的 <a id=端口作为-web-上对象能力模型的基础:url href=https://url.spec.whatwg.org/#concept-url data-x-internal=url>URL</a>，
+   比如同样的 <a id=端口作为-web-上对象能力模型的基础:url-2 href=https://url.spec.whatwg.org/#concept-url data-x-internal=url>URL</a> 但有不同的 <a href=https://url.spec.whatwg.org/#concept-url-fragment id=端口作为-web-上对象能力模型的基础:concept-url-fragment data-x-internal=concept-url-fragment>fragment</a>，
+   使 <code id=端口作为-web-上对象能力模型的基础:the-iframe-element-6><a href=iframe-embed-object.html#the-iframe-element>iframe</a></code> 中的 <code id=端口作为-web-上对象能力模型的基础:window><a href=window-object.html#window>Window</a></code> 收到一个
+   <code id=端口作为-web-上对象能力模型的基础:event-hashchange><a href=indices.html#event-hashchange>hashchange</a></code> 事件。<li>改变 <code id=端口作为-web-上对象能力模型的基础:the-iframe-element-7><a href=iframe-embed-object.html#the-iframe-element>iframe</a></code> 的大小，使 <code id=端口作为-web-上对象能力模型的基础:the-iframe-element-8><a href=iframe-embed-object.html#the-iframe-element>iframe</a></code> 中的 <code id=端口作为-web-上对象能力模型的基础:window-2><a href=window-object.html#window>Window</a></code>
+   收到一个 <code id=端口作为-web-上对象能力模型的基础:event-resize><a data-x-internal=event-resize href=https://drafts.csswg.org/cssom-view/#eventdef-window-resize>resize</a></code> 事件。<li>使用 <code>window.postMessage()</code> API 发送一个
+   <code id=端口作为-web-上对象能力模型的基础:event-message><a href=indices.html#event-message>message</a></code> 事件给
+   <code id=端口作为-web-上对象能力模型的基础:the-iframe-element-9><a href=iframe-embed-object.html#the-iframe-element>iframe</a></code> 中的 <code id=端口作为-web-上对象能力模型的基础:window-3><a href=window-object.html#window>Window</a></code>。</ul>
+
+  <p>联系人提供者使用这些方法（尤其是第三个）来给其他域提供操作用户地址簿的 API。
+  例如，响应 "<code>add-contact Guillaume Tell
+  &lt;tell@pomme.example.net></code>" 时，在用户的地址簿中新增指定的人和 e-mail。</p>
+
+  <p>为了避免 Web 上任何站点都可以操作用户的地址簿，联系人提供者可能只允许确定的信任站点调用，
+  比如这个社交网站。</p>
+
+  <p>现在假设这个游戏希望添加联系人到用户的地址簿，而且这个社交网站也愿意允许它这样做，
+  实质上是“共享”联系人提供者对社交网站的信任。实现这一共享有很多方式，
+  最简单的是在游戏站点和联系人站点之间代理消息。
+  然而该方案有一些困难：它需要社交网站完全信任游戏网站不会滥用特权，
+  或者要求社交网站对每个请求进行验证来确保请求是否被允许
+  （例如添加多个联系人、读取联系人、删除联系人等）。
+  如果可能有多个游戏同时与联系人提供者通信，还需要额外的复杂性。</p>
+
+  <p>然而，使用消息 Channel 和 <code id=端口作为-web-上对象能力模型的基础:messageport><a href=#messageport>MessagePort</a></code> 对象可以解决所有这些问题。
+  当游戏告诉设计网络它需要添加联系人时，社交网站可以请求联系人提供者添加单个联系人的
+  <em>能力</em>，而非直接请求添加一个联系人。
+  然后联系人提供者提供一对 <code id=端口作为-web-上对象能力模型的基础:messageport-2><a href=#messageport>MessagePort</a></code> 对象，把其中一个返回给社交网站，
+  社交网站再把它转交给游戏。游戏和联系人提供者就有了直接的连接，
+  因此联系人提供者知道只对它开放 "添加联系人" 的请求。
+  换句话说，这个游戏被赋予了添加单个联系人的能力。</p>
+
+
+
+  <h5 id=端口作为抽象服务实现的基础><span class=secno>9.5.1.3</span> 端口作为抽象服务实现的基础<a href=#端口作为抽象服务实现的基础 class=self-link></a></h5>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/communication/channel-messaging/introduction/ports-as-the-basis-of-abstracting-out-service-implementations.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/communication/channel-messaging/introduction/ports-as-the-basis-of-abstracting-out-service-implementations.zh.html></div>
+
+  
+
+  <p>继续上一部分提到的例子，特别考虑联系人提供者。
+  初始的实现可能是简单地在服务的 <code id=端口作为抽象服务实现的基础:the-iframe-element><a href=iframe-embed-object.html#the-iframe-element>iframe</a></code> 中使用 <code id=端口作为抽象服务实现的基础:xmlhttprequest><a data-x-internal=xmlhttprequest href=https://xhr.spec.whatwg.org/#xmlhttprequest>XMLHttpRequest</a></code> 对象，
+  一个改进版本可能会使用 <a href=workers.html#sharedworker-2 id=端口作为抽象服务实现的基础:sharedworker-2>共享 worker</a>
+  和一个 <code id=端口作为抽象服务实现的基础:websocket><a href=web-sockets.html#websocket>WebSocket</a></code> 连接。</p>
+
+  <p>如果初始的设计使用了 <code id=端口作为抽象服务实现的基础:messageport><a href=#messageport>MessagePort</a></code> 对象来赋予能力，或者甚至仅仅是为了支持多个并发的独立会话，
+  这个服务的实现就可以直接从
+  "每个 <code id=端口作为抽象服务实现的基础:the-iframe-element-2><a href=iframe-embed-object.html#the-iframe-element>iframe</a></code> 中一个 <code id=端口作为抽象服务实现的基础:xmlhttprequest-2><a data-x-internal=xmlhttprequest href=https://xhr.spec.whatwg.org/#xmlhttprequest>XMLHttpRequest</a></code>" 模型迁移到
+  "共享 <code id=端口作为抽象服务实现的基础:websocket-2><a href=web-sockets.html#websocket>WebSocket</a></code>" 模型，
+  完全不需要改变 API：服务提供者一侧的端口可以全部转发到共享 Worker，完全不影响 API 的用户。</p>
+
+
+
+
+  <h4 id=消息通道><span class=secno>9.5.2</span> 消息通道<a href=#消息通道 class=self-link></a></h4>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/communication/channel-messaging/message-channels.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/communication/channel-messaging/message-channels.zh.html></div>
+
+  <pre><code class=idl>[Exposed=(Window,Worker)]
+interface <dfn id=messagechannel>MessageChannel</dfn> {
+  <a href=#dom-messagechannel id=消息通道:dom-messagechannel>constructor</a>();
+
+  readonly attribute <a href=#messageport id=消息通道:messageport>MessagePort</a> <a href=#dom-messagechannel-port1 id=消息通道:dom-messagechannel-port1>port1</a>;
+  readonly attribute <a href=#messageport id=消息通道:messageport-2>MessagePort</a> <a href=#dom-messagechannel-port2 id=消息通道:dom-messagechannel-port2>port2</a>;
+};</code></pre>
+
+  <dl class=domintro><dt><var>channel</var> = new <code id=dom-messagechannel>MessageChannel</code>()<div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/MessageChannel/MessageChannel title="The MessageChannel() constructor of the MessageChannel interface returns a new MessageChannel object with two new MessagePort objects.">MessageChannel/MessageChannel</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>41+</span></span><span class="safari yes"><span>Safari</span><span>5+</span></span><span class="chrome yes"><span>Chrome</span><span>4+</span></span><hr><span class="opera yes"><span>Opera</span><span>10.6+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>10+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>41+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>5.1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>4.4+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>11+</span></span></div></div></div><dd>
+    <p>返回有两个新的 <code id=消息通道:messageport-3><a href=#messageport>MessagePort</a></code> 对象的，一个新的 <code id=消息通道:messagechannel><a href=#messagechannel>MessageChannel</a></code> 对象。</p>
+   <dt><var>channel</var> . <code id=dom-messagechannel-port1>port1</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/MessageChannel/port1 title="The port1 read-only property of the MessageChannel interface returns the first port of the message channel — the port attached to the context that originated the channel.">MessageChannel/port1</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>41+</span></span><span class="safari yes"><span>Safari</span><span>5+</span></span><span class="chrome yes"><span>Chrome</span><span>4+</span></span><hr><span class="opera yes"><span>Opera</span><span>10.6+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>10+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>41+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>5.1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>4.4+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>11+</span></span></div></div></div><dd>
+    <p>返回第一个 <code id=消息通道:messageport-4><a href=#messageport>MessagePort</a></code> 对象。</p>
+   <dt><var>channel</var> . <code id=dom-messagechannel-port2>port2</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/MessageChannel/port2 title="The port2 read-only property of the MessageChannel interface returns the second port of the message channel — the port attached to the context at the other end of the channel, which the message is initially sent to.">MessageChannel/port2</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>41+</span></span><span class="safari yes"><span>Safari</span><span>5+</span></span><span class="chrome yes"><span>Chrome</span><span>4+</span></span><hr><span class="opera yes"><span>Opera</span><span>10.6+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>10+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>41+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>5.1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>4.4+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>11+</span></span></div></div></div><dd>
+    <p>返回第二个 <code id=消息通道:messageport-5><a href=#messageport>MessagePort</a></code> 对象。</p>
+   </dl>
+
+  
+
+
+
+
+  <h4 id=消息端口><span class=secno>9.5.3</span> 消息端口<a href=#消息端口 class=self-link></a></h4>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/communication/channel-messaging/message-ports.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/communication/channel-messaging/message-ports.zh.html></div>
+
+  <p>每个通道都有两个消息端口。从一个端口发送的数据会从另一个端口收到，反之亦然。</p>
+
+  <pre class=idl>[Exposed=(Window,Worker,AudioWorklet), <span>Transferable</span>]
+interface <dfn id=messageport>MessagePort</dfn> : <a id=消息端口:eventtarget href=https://dom.spec.whatwg.org/#interface-eventtarget data-x-internal=eventtarget>EventTarget</a> {
+  undefined <a href=#dom-messageport-postmessage id=消息端口:dom-messageport-postmessage>postMessage</a>(any message, optional sequence&lt;<a href=https://heycam.github.io/webidl/#idl-object id=消息端口:idl-object data-x-internal=idl-object>object</a>> transfer = []);
+  undefined <a href=#dom-messageport-postmessage-options id=消息端口:dom-messageport-postmessage-options>postMessage</a>(any message, optional <a href=#postmessageoptions id=消息端口:postmessageoptions>PostMessageOptions</a> options = {});
+  undefined <a href=#dom-messageport-start id=消息端口:dom-messageport-start>start</a>();
+  undefined <a href=#dom-messageport-close id=消息端口:dom-messageport-close>close</a>();
+
+  // event handlers
+  attribute <a id=消息端口:eventhandler href=webappapis.html#eventhandler>EventHandler</a> <span>onmessage</span>;
+  attribute <a id=消息端口:eventhandler-2 href=webappapis.html#eventhandler>EventHandler</a> <span>onmessageerror</span>;
+};
+
+dictionary <dfn id=postmessageoptions>PostMessageOptions</dfn> {
+  sequence&lt;<a href=https://heycam.github.io/webidl/#idl-object id=消息端口:idl-object-2 data-x-internal=idl-object>object</a>> <dfn id=dom-postmessageoptions-transfer>transfer</dfn> = [];
+};</pre>
+
+  <dl class=domintro><dt><var>port</var> . <code id=dom-messageport-postmessage>postMessage</code>(<var>message</var> [, <var>transfer</var>] )<div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/postMessage title="The postMessage() method of the MessagePort interface sends a message from the port, and optionally, transfers ownership of objects to other browsing contexts.">MessagePort/postMessage</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>Yes</span></span><span class="safari yes"><span>Safari</span><span>5+</span></span><span class="chrome yes"><span>Chrome</span><span>4+</span></span><hr><span class="opera yes"><span>Opera</span><span>10.6+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>10+</span></span><hr><span class="firefox_android no"><span>Firefox Android</span><span>No</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>5.1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>11+</span></span></div></div></div><dt><var>port</var> . <code id=dom-messageport-postmessage-options>postMessage</code>(<var>message</var> [, { <code>transfer</code> }] )<dd>
+
+    <p>通过通道发布一条消息。列在 <var>transfer</var> 中的对象已经被传输（不仅是克隆），
+    意味着在发送侧无法使用了。</p>
+
+    <p>如果 <var>transfer</var> 数组包含重复的对象、源或目标端口时，
+    或者 <var>message</var> 不可克隆，
+    抛出一个 <a id=消息端口:datacloneerror href=https://heycam.github.io/webidl/#datacloneerror data-x-internal=datacloneerror>"<code>DataCloneError</code>"</a> <code id=消息端口:domexception><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code>。</p>
+
+   <dt><var>port</var> . <code id=dom-messageport-start>start</code>()<div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/start title="The start() method of the MessagePort interface starts the sending of messages queued on the port. This method is only needed when using EventTarget.addEventListener; it is implied when using MessageChannel.onmessage.">MessagePort/start</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>Yes</span></span><span class="safari yes"><span>Safari</span><span>5+</span></span><span class="chrome yes"><span>Chrome</span><span>4+</span></span><hr><span class="opera yes"><span>Opera</span><span>10.6+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>10+</span></span><hr><span class="firefox_android no"><span>Firefox Android</span><span>No</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>5.1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>11+</span></span></div></div></div><dd>
+
+    <p>开始派发端口上收到的消息。</p>
+
+   <dt><var>port</var> . <code id=dom-messageport-close>close</code>()<div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/close title="The close() method of the MessagePort interface disconnects the port, so it is no longer active. This stops the flow of messages to that port.">MessagePort/close</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>Yes</span></span><span class="safari yes"><span>Safari</span><span>5+</span></span><span class="chrome yes"><span>Chrome</span><span>4+</span></span><hr><span class="opera yes"><span>Opera</span><span>10.6+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>10+</span></span><hr><span class="firefox_android no"><span>Firefox Android</span><span>No</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>5.1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>11+</span></span></div></div></div><dd>
+
+    <p>断开端口，端口不再处于激活状态。</p>
+
+   </dl>
+
+  
+
+
+
+  <h4 id=广播给多个端口><span class=secno>9.5.4</span> 广播给多个端口<a href=#广播给多个端口 class=self-link></a></h4>
+<div data-en-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" class=translate-info data-zh-date="Sun Feb 25 2018 17:35:57 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/communication/channel-messaging/broadcasting-to-many-ports.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/communication/channel-messaging/broadcasting-to-many-ports.zh.html></div>
+
+  
+
+  <p>B广播给多个端口原则上相对简单：维护一个要发消息的
+  <code id=广播给多个端口:messageport><a href=#messageport>MessagePort</a></code> 对象数组，发消息时遍历这个数组。
+  然而这有一个不好的效果：它会阻止端口的垃圾回收，即使另一端已经走了。
+  为了避免这个问题，实现一个简单的协议让对方确认它还存在。
+  如果它在某段时间没有确认，就假设它已经不在了，关闭
+  <code id=广播给多个端口:messageport-2><a href=#messageport>MessagePort</a></code> 对象并让它被回收。</p>
+
+
+
+  <h4 id=ports-and-garbage-collection><span class=secno>9.5.5</span> 端口与垃圾回收<a href=#ports-and-garbage-collection class=self-link></a></h4>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/communication/channel-messaging/ports-and-garbage-collection.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/communication/channel-messaging/ports-and-garbage-collection.zh.html></div>
+
+  
+
+  <p class=note>强烈鼓励作者显式地关闭 <code id=ports-and-garbage-collection:messageport><a href=#messageport>MessagePort</a></code> 对象来解关联它们，
+  这样它们的资源可以被重新回收。
+  创建很多歌 <code id=ports-and-garbage-collection:messageport-2><a href=#messageport>MessagePort</a></code> 对象并直接丢弃它们而不关闭可能导致瞬时内存使用率高，
+  因为垃圾收集不一定能够及时执行，尤其是对于垃圾收集可能涉及跨进程协调的
+  <code id=ports-and-garbage-collection:messageport-3><a href=#messageport>MessagePort</a></code> 而言。</p>
+
+
+
+
+  <h3 id=向其他浏览上下文广播><span class=secno>9.6</span> <dfn>向其他浏览上下文广播</dfn><a href=#向其他浏览上下文广播 class=self-link></a></h3>
+<div data-en-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" class=translate-info data-zh-date="Wed Nov 04 2020 06:47:17 GMT+0000 (UTC)" data-en-file=https://github.com/whatwg-cn/html/blob/master/src/communication/broadcasting-to-other-browsing-contexts.en.html data-zh-file=https://github.com/whatwg-cn/html/edit/master/src/communication/broadcasting-to-other-browsing-contexts.zh.html></div>
+
+  <p>同一个用户，同一个用户代理，同一个 <a href=origin.html#concept-origin id=向其他浏览上下文广播:concept-origin>域</a>，
+  但不同 <a href=browsers.html#browsing-context id=向其他浏览上下文广播:browsing-context>浏览上下文</a> 的页面有时需要相互发送通知，
+  例如 “嘿，用户在我这里登录了，重新检查你的信任状态”。</p>
+
+  <p>对于复杂情况，例如管理共享状态的锁定，管理服务器和多个本地客户端之间的资源同步，
+  共享与远程主机的 <code id=向其他浏览上下文广播:websocket><a href=web-sockets.html#websocket>WebSocket</a></code> 连接等等，
+  <a href=workers.html#sharedworker-2 id=向其他浏览上下文广播:sharedworker-2>共享 Worker</a> 是最合适的解决方案。</p>
+
+  <p>但对于简单情况，共享 Worker 可能是不合理的开销，
+  作者可以使用这一章描述的简单的基于通道的广播机制。</p>
+
+  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel title="The BroadcastChannel interface represents a named channel that any browsing context of a given origin can subscribe to. It allows communication between different documents (in different windows, tabs, frames or iframes) of the same origin. Messages are broadcasted via a message event fired at all BroadcastChannel objects listening to the channel.">BroadcastChannel</a><div class=support><span class="firefox yes"><span>Firefox</span><span>38+</span></span><span class="safari no"><span>Safari</span><span>No</span></span><span class="chrome yes"><span>Chrome</span><span>54+</span></span><hr><span class="opera yes"><span>Opera</span><span>41+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android unknown"><span>Firefox Android</span><span>?</span></span><span class="safari_ios no"><span>Safari iOS</span><span>No</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>54+</span></span><span class="webview_android yes"><span>WebView Android</span><span>54+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>6.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>41+</span></span></div></div></div><pre class=idl>[<a href=#dom-broadcastchannel id=向其他浏览上下文广播:dom-broadcastchannel>Constructor</a>(DOMString name), Exposed=(Window,Worker)]
+interface <dfn id=broadcastchannel>BroadcastChannel</dfn> : <a id=向其他浏览上下文广播:eventtarget href=https://dom.spec.whatwg.org/#interface-eventtarget data-x-internal=eventtarget>EventTarget</a> {
+  readonly attribute DOMString <a href=#dom-broadcastchannel-name id=向其他浏览上下文广播:dom-broadcastchannel-name>name</a>;
+  void <a href=#dom-broadcastchannel-postmessage id=向其他浏览上下文广播:dom-broadcastchannel-postmessage>postMessage</a>(any message);
+  void <a href=#dom-broadcastchannel-close id=向其他浏览上下文广播:dom-broadcastchannel-close>close</a>();
+  attribute <a id=向其他浏览上下文广播:eventhandler href=webappapis.html#eventhandler>EventHandler</a> <span>onmessage</span>;
+  attribute <a id=向其他浏览上下文广播:eventhandler-2 href=webappapis.html#eventhandler>EventHandler</a> <span>onmessageerror</span>;
+};</pre>
+
+  <dl class=domintro><dt><var>broadcastChannel</var> = new <code id=dom-broadcastchannel>BroadcastChannel</code>(<var>name</var>)<div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel/BroadcastChannel title="The BroadcastChannel() constructor creates a new BroadcastChannel and connects it to the underlying channel.">BroadcastChannel/BroadcastChannel</a><div class=support><span class="firefox yes"><span>Firefox</span><span>38+</span></span><span class="safari no"><span>Safari</span><span>No</span></span><span class="chrome yes"><span>Chrome</span><span>54+</span></span><hr><span class="opera yes"><span>Opera</span><span>41+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android unknown"><span>Firefox Android</span><span>?</span></span><span class="safari_ios no"><span>Safari iOS</span><span>No</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>54+</span></span><span class="webview_android yes"><span>WebView Android</span><span>54+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>6.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>41+</span></span></div></div></div><dd>
+
+    <p>返回一个新的 <code id=向其他浏览上下文广播:broadcastchannel><a href=#broadcastchannel>BroadcastChannel</a></code> 对象，通过它可以像指定的通道名发送和接收消息。</p>
+
+   <dt><var>broadcastChannel</var> . <code id=dom-broadcastchannel-name>name</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel/name title="The read-only BroadcastChannel.name property returns a DOMString, which uniquely identifies the given channel with its name. This name is passed to the BroadcastChannel() constructor at creation time and is therefore read-only.">BroadcastChannel/name</a><div class=support><span class="firefox yes"><span>Firefox</span><span>38+</span></span><span class="safari no"><span>Safari</span><span>No</span></span><span class="chrome yes"><span>Chrome</span><span>54+</span></span><hr><span class="opera yes"><span>Opera</span><span>41+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android unknown"><span>Firefox Android</span><span>?</span></span><span class="safari_ios no"><span>Safari iOS</span><span>No</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>54+</span></span><span class="webview_android yes"><span>WebView Android</span><span>54+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>6.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>41+</span></span></div></div></div><dd>
+
+    <p>返回通道名（传递给构造函数的）。</p>
+
+   <dt><var>broadcastChannel</var> . <code id=dom-broadcastchannel-postmessage>postMessage</code>(<var>message</var>)<div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel/postMessage title="The BroadcastChannel.postMessage() sends a message, which can be of any kind of Object, to each listener in any browsing context with the same origin. The message is transmitted as a message event targeted at each BroadcastChannel bound to the channel.">BroadcastChannel/postMessage</a><div class=support><span class="firefox yes"><span>Firefox</span><span>38+</span></span><span class="safari no"><span>Safari</span><span>No</span></span><span class="chrome yes"><span>Chrome</span><span>54+</span></span><hr><span class="opera yes"><span>Opera</span><span>41+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android unknown"><span>Firefox Android</span><span>?</span></span><span class="safari_ios no"><span>Safari iOS</span><span>No</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>54+</span></span><span class="webview_android yes"><span>WebView Android</span><span>54+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>6.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>41+</span></span></div></div></div><dd>
+
+    <p>向为这个通道建立的 <code id=向其他浏览上下文广播:broadcastchannel-2><a href=#broadcastchannel>BroadcastChannel</a></code> 对象发送给定的消息。
+    消息可以是结构化对象，例如嵌套对象和数组。</p>
+
+   <dt><var>broadcastChannel</var> . <code id=dom-broadcastchannel-close>close</code>()<div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel/close title="The BroadcastChannel.close() terminates the connection to the underlying channel, allowing the object to be garbage collected. This is a necessary step to perform as there is no other way for a browser to know that this channel is not needed anymore.">BroadcastChannel/close</a><div class=support><span class="firefox yes"><span>Firefox</span><span>38+</span></span><span class="safari no"><span>Safari</span><span>No</span></span><span class="chrome yes"><span>Chrome</span><span>54+</span></span><hr><span class="opera yes"><span>Opera</span><span>41+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android unknown"><span>Firefox Android</span><span>?</span></span><span class="safari_ios no"><span>Safari iOS</span><span>No</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>54+</span></span><span class="webview_android yes"><span>WebView Android</span><span>54+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>6.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>41+</span></span></div></div></div><dd>
+
+    <p>关闭 <code id=向其他浏览上下文广播:broadcastchannel-3><a href=#broadcastchannel>BroadcastChannel</a></code> 对象，让它可以被垃圾回收。</p>
+
+   </dl>
+
+  
+
+  <div class=example>
+
+   <p>假设一个页面想要知道用户登出，包括从其他标签页登出：</p>
+
+   <pre>var authChannel = new BroadcastChannel('auth');
+authChannel.onmessage = function (event) {
+  if (event.data == 'logout')
+    showLogout();
+}
+
+function logoutRequested() {
+  // called when the user asks us to log them out
+  doLogout();
+  showLogout();
+  authChannel.postMessage('logout');
+}
+
+function doLogout() {
+  // actually log the user out (e.g. clearing cookies)
+  // ...
+}
+
+function showLogout() {
+  // update the UI to indicate we're logged out
+  // ...
+}</pre>
+
+  </div>
+
+
+
+
+
+
+  <nav><a href=web-sockets.html>← 9.3 Web sockets</a> — <a href=./>Table of Contents</a> — <a href=workers.html>10 Web 工作线程 →</a></nav>
