@@ -72,6 +72,33 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "Isildur46",
+      "name": "Isildur46",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19759799?v=4",
+      "profile": "https://github.com/Isildur46",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "redhat123456",
+      "name": "redhat123456",
+      "avatar_url": "https://avatars.githubusercontent.com/u/57751257?v=4",
+      "profile": "https://redhat123456.github.io/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Aoy-007",
+      "name": "Papa Aoy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/71959131?v=4",
+      "profile": "https://github.com/Aoy-007",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7
